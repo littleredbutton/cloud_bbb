@@ -9,7 +9,7 @@ all: dev-setup lint build-js-production test
 build: install-composer-deps build-js
 
 # Dev env management
-dev-setup: clean clean-dev install-composer-deps-dev yarn-init
+dev-setup: clean clean-dev install-composer-deps-dev js-init
 
 composer.phar:
 	curl -sS https://getcomposer.org/installer | php
@@ -20,34 +20,34 @@ install-composer-deps: composer.phar
 install-composer-deps-dev: composer.phar
 	php composer.phar install -o
 
-yarn-init:
+js-init:
 	yarn install
 
 yarn-update:
 	yarn update
 
 # Building
-build-js:
+build-js: js-init
 	yarn run dev
 
-build-js-production:
+build-js-production: js-init
 	yarn run build
 
-watch-js:
+watch-js: js-init
 	yarn run watch
 
 # Linting
-lint:
+lint: js-init
 	yarn run lint
 
-lint-fix:
+lint-fix: js-init
 	yarn run lint:fix
 
 # Style linting
-stylelint:
+stylelint: js-init
 	yarn run stylelint
 
-stylelint-fix:
+stylelint-fix: js-init
 	yarn run stylelint:fix
 
 phplint:
@@ -62,6 +62,10 @@ clean:
 
 clean-dev:
 	rm -rf node_modules
+
+pack:
+	mkdir -p archive
+	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' -zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bigbluebutton/
 
 # Tests
 test:
