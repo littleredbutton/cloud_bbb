@@ -11,7 +11,7 @@ export interface Room {
 
 class Api {
 	public getUrl(endpoint: string): string {
-		return OC.generateUrl(`apps/bigbluebutton/${endpoint}`);
+		return OC.generateUrl(`apps/bbb/${endpoint}`);
 	}
 
 	public async getRooms(): Promise<Room[]> {

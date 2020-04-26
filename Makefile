@@ -65,7 +65,7 @@ clean-dev:
 
 pack:
 	mkdir -p archive
-	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' -zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bigbluebutton/
+	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' -zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bbb/
 
 # Tests
 test:

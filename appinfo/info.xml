@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-    <id>bigbluebutton</id>
+    <id>bbb</id>
     <name>BigBlueButton</name>
     <summary>BigBlueButton integration for Nextcloud</summary>
     <description><![CDATA[This app allows to create meetings with BigBlueButton]]></description>

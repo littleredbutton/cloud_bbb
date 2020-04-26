@@ -12,7 +12,7 @@ class Personal implements ISettings
 	 */
 	public function getForm()
 	{
-		return new TemplateResponse('bigbluebutton', 'manager');
+		return new TemplateResponse('bbb', 'manager');
 	}
 
 	/**
@@ -20,7 +20,7 @@ class Personal implements ISettings
 	 */
 	public function getSection()
 	{
-		return 'bigbluebutton';
+		return 'bbb';
 	}
 
 	/**

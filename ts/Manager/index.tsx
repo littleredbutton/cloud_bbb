@@ -8,5 +8,5 @@ import ReactDom from 'react-dom';
 window['React'] = React;
 
 $(document).ready(() => {
-	ReactDom.render( <App/>, document.getElementById('bigbluebutton-root'));
+	ReactDom.render( <App/>, document.getElementById('bbb-root'));
 });

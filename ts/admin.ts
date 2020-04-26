@@ -1,10 +1,10 @@
 declare const OCP: any;
 
 $(() => {
-    $('#bigbluebutton-settings form').submit(function (ev) {
+    $('#bbb-settings form').submit(function (ev) {
         ev.preventDefault();
 
-        OCP.AppConfig.setValue('bigbluebutton', 'api.url', this['api.url'].value);
-        OCP.AppConfig.setValue('bigbluebutton', 'api.secret', this['api.secret'].value);
+        OCP.AppConfig.setValue('bbb', 'api.url', this['api.url'].value);
+        OCP.AppConfig.setValue('bbb', 'api.secret', this['api.secret'].value);
     })
 });

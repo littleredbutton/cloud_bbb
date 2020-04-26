@@ -9,7 +9,7 @@ To install it change into your Nextcloud's apps directory:
 
 Then run:
 
-    git clone https://github.com/sualko/cloud_bbb.git bigbluebutton
+    git clone https://github.com/sualko/cloud_bbb.git bbb
 
 Then install the dependencies using:
 

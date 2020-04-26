@@ -6,7 +6,7 @@ declare const OCA: any;
 
 class BigBlueButton {
     public async getRooms(): Promise<Room[]> {
-        const response = await axios.get(OC.generateUrl('/apps/bigbluebutton/rooms'))
+        const response = await axios.get(OC.generateUrl('/apps/bbb/rooms'))
 
         return response.data
     }
@@ -41,7 +41,7 @@ $(() => {
             displayName: name,
             mime,
             permissions: OC.PERMISSION_SHARE,
-            icon: OC.imagePath('bigbluebutton', 'app-dark.svg'),
+            icon: OC.imagePath('bbb', 'app-dark.svg'),
             actionHandler: (fileName, context) => {
                 share(context.fileInfoModel.getFullPath(), fileName, uid);
             }
@@ -51,7 +51,7 @@ $(() => {
     async function share(path: string, filename: string, roomUid) {
         const id = await createShare(path);
         const shareUrl = await configureShare(id);
-        const joinUrl = generateUrl('/apps/bigbluebutton/b/{uid}?u={url}&filename={filename}', {
+        const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
             uid: roomUid,
             url: shareUrl + '/download',
             filename

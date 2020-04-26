@@ -2,10 +2,10 @@
 /** @var $l \OCP\IL10N */
 /** @var $_ array */
 
-script('bigbluebutton', 'admin');
+script('bbb', 'admin');
 ?>
 
-<div id="bigbluebutton-settings" class="section">
+<div id="bbb-settings" class="section">
         <h2>BigBlueButton</h2>
 
         <form>

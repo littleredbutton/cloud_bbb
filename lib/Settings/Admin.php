@@ -27,11 +27,11 @@ class Admin implements ISettings
 	public function getForm()
 	{
 		$parameters = [
-					'api.url'    => $this->config->getAppValue('bigbluebutton', 'api.url'),
-					'api.secret' => $this->config->getAppValue('bigbluebutton', 'api.secret'),
+					'api.url'    => $this->config->getAppValue('bbb', 'api.url'),
+					'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
 				];
 
-		return new TemplateResponse('bigbluebutton', 'admin', $parameters);
+		return new TemplateResponse('bbb', 'admin', $parameters);
 	}
 
 	/**

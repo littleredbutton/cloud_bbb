@@ -1,5 +1,5 @@
 <?php
-script('bigbluebutton', 'manager');
+script('bbb', 'manager');
 ?>
 
-<div id="bigbluebutton-root"></div>
+<div id="bbb-root"></div>

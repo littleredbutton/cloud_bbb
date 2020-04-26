@@ -1,3 +1,3 @@
 <?php
 
-OCP\Util::addScript ( 'bigbluebutton', 'filelist');
+OCP\Util::addScript ( 'bbb', 'filelist');

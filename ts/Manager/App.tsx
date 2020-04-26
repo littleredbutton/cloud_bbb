@@ -90,7 +90,7 @@ const App: React.FC<Props> = () => {
 	}
 
 	return (
-		<div id="bigbluebutton-react-root"
+		<div id="bbb-react-root"
 			onClick={() => { /* @TODO hide edit inputs */ }}>
 			<table>
 				<thead>

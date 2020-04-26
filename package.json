@@ -1,5 +1,5 @@
 {
-	"name": "bigbluebutton",
+	"name": "@sualko/cloud_bbb",
 	"description": "Nextcloud Integration for BigBlueButton",
 	"version": "0.1.0",
 	"author": "Klaus Herberth <klaus@jsxc.org>",
