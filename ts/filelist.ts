@@ -51,7 +51,7 @@ $(() => {
     async function share(path: string, filename: string, roomUid) {
         const id = await createShare(path);
         const shareUrl = await configureShare(id);
-        const joinUrl = generateUrl('/apps/bbb/{uid}?u={url}&filename={filename}', {
+        const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
             uid: roomUid,
             url: shareUrl + '/download',
             filename
