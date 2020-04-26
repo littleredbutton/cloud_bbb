@@ -7,7 +7,7 @@ use OCP\IRequest;
 use OCP\ISession;
 use OCP\IUserSession;
 use OCP\IConfig;
-use \OCP\IURLGenerator;
+use OCP\IURLGenerator;
 use OCA\BigBlueButton\Service\RoomService;
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;

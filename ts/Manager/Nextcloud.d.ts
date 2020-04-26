@@ -68,8 +68,8 @@ declare namespace OC {
 		modRewriteWorking: boolean;
 		session_keepalive: boolean;
 		session_lifetime: boolean;
-		"sharing.maxAutocompleteResults": number;
-		"sharing.minSearchStringLength": number;
+		'sharing.maxAutocompleteResults': number;
+		'sharing.minSearchStringLength': number;
 		version: string;
 		versionString: string;
 	};
@@ -87,7 +87,7 @@ declare module 'NC' {
 				statuscode: number;
 				totalitems: number;
 				itemsperpage: number;
-			}
-		}
+			};
+		};
 	}
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
 	Component, InputHTMLAttributes,
-	SyntheticEvent
+	SyntheticEvent,
 } from 'react';
 
 export interface SubmitInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -16,7 +16,7 @@ export interface SubmitInputState {
 
 export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 	state: SubmitInputState = {
-		value: ''
+		value: '',
 	};
 
 	constructor(props: SubmitInputProps) {
@@ -30,11 +30,9 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 	};
 
 	render() {
-		const {initialValue, onSubmitValue, ...props} = this.props;
-
 		return <form onSubmit={this.onSubmit}>
 			<input value={this.state.value}
-				   {...props}
+				   {...this.props}
 				   onChange={event => this.setState({value: event.currentTarget.value})}/>
 		</form>;
 	}

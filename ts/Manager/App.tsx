@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
 import RoomRow from './RoomRow';
-import { SortArrow } from "./SortArrow";
+import { SortArrow } from './SortArrow';
 import { api, Room } from './Api';
 import NewRoomForm from './NewRoomForm';
 

@@ -5,6 +5,15 @@
 
 #bbb-react-root {
 
+  .icon {
+    display: inline-block;
+    opacity: 0;
+
+    &.icon-visible {
+      opacity: 0.5;
+    }
+  }
+
   &, & > table {
     width: 100%;
   }
@@ -80,15 +89,6 @@
       &:hover::after {
         opacity: 1;
       }
-    }
-  }
-
-  .icon {
-    display: inline-block;
-    opacity: 0;
-
-    &.icon-visible {
-      opacity: 0.5;
     }
   }
 

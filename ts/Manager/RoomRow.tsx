@@ -4,18 +4,18 @@ import { SubmitInput } from './SubmitInput';
 import { Room, api } from './Api';
 
 type Props = {
-    room: Room
-    updateRoom: (room: Room) => void
-    deleteRoom: (id: number) => void
+    room: Room;
+    updateRoom: (room: Room) => void;
+    deleteRoom: (id: number) => void;
 }
 
 type EditableValueProps = {
-    setValue: (key: string, value: string|number) => void
-    setActive: (key: string) => void
-    active: string
-    field: string
-    value: string
-    type: 'text' | 'number'
+    setValue: (key: string, value: string|number) => void;
+    setActive: (key: string) => void;
+    active: string;
+    field: string;
+    value: string;
+    type: 'text' | 'number';
 }
 
 const EditableValue: React.FC<EditableValueProps> = ({ setValue, setActive, active, field, value, type }) => {

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 type Props = {
-    addRoom: (name: string) => void
+    addRoom: (name: string) => void;
 }
 
 const NewRoomForm: React.FC<Props> = (props) => {

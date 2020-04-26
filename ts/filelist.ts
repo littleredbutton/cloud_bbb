@@ -44,7 +44,7 @@ $(() => {
             icon: OC.imagePath('bbb', 'app-dark.svg'),
             actionHandler: (fileName, context) => {
                 share(context.fileInfoModel.getFullPath(), fileName, uid);
-            }
+            },
         });
     }
 
@@ -54,7 +54,7 @@ $(() => {
         const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
             uid: roomUid,
             url: shareUrl + '/download',
-            filename
+            filename,
         });
 
         window.open(joinUrl, '_blank', 'noopener,noreferrer');

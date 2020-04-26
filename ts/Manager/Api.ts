@@ -1,12 +1,12 @@
 import axios from '@nextcloud/axios';
 
 export interface Room {
-	id: number
-	uid: string
-	name: string
-	welcome: string
-	maxParticipants: number
-	record: boolean
+	id: number;
+	uid: string;
+	name: string;
+	welcome: string;
+	maxParticipants: number;
+	record: boolean;
 }
 
 class Api {
