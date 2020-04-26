@@ -29,13 +29,17 @@
 		"composer:install:dev": "php composer.phar install -o"
 	},
 	"dependencies": {
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"@commitlint/travis-cli": "^8.3.5",
 		"@nextcloud/axios": "^1.3.2",
 		"@nextcloud/router": "^1.0.2",
 		"react-copy-to-clipboard": "^5.0.2"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn lint"
+			"pre-commit": "yarn lint",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
 	"browserslist": [
