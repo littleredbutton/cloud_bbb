@@ -9,8 +9,14 @@
             "email": "klaus@jsxc.org"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sualko/bigbluebutton-api-php"
+        }
+    ],
     "require": {
-        "bigbluebutton/bigbluebutton-api-php": "~2.0.0"
+        "bigbluebutton/bigbluebutton-api-php": "dev-feat-conf"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
