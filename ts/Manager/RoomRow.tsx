@@ -73,12 +73,12 @@ const RoomRow: React.FC<Props> = (props) => {
     return (
         <tr key={room.id}>
             <td className="share icon-col">
-                <CopyToClipboard text={window.location.origin + api.getUrl(`b/${room.uid}`)}>
+                <CopyToClipboard text={window.location.origin + api.getUrl(`${room.uid}`)}>
                     <span  className="icon icon-clippy icon-visible copy-to-clipboard" ></span>
                 </CopyToClipboard>
             </td>
             <td className="start icon-col">
-                <a href={api.getUrl(`b/${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
+                <a href={api.getUrl(`${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
             </td>
             <td className="name">
                 {edit('name')}
