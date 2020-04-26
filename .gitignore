@@ -1,0 +1,6 @@
+.idea
+*.iml
+/js/
+/vendor/
+node_modules/
+.php_cs.cache

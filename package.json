@@ -1,0 +1,82 @@
+{
+	"name": "bigbluebutton",
+	"description": "Nextcloud Integration for BigBlueButton",
+	"version": "0.1.0",
+	"author": "Klaus Herberth <klaus@jsxc.org>",
+	"bugs": {
+		"url": "https://github.com/sualko/cloud_bbb/issues"
+	},
+	"repository": {
+		"url": "https://github.com/sualko/cloud_bbb",
+		"type": "git"
+	},
+	"homepage": "https://github.com/sualko/cloud_bbb",
+	"license": "agpl",
+	"private": true,
+	"scripts": {
+		"build": "NODE_ENV=production webpack --progress --hide-modules --config webpack.prod.js",
+		"dev": "NODE_ENV=development webpack --progress --config webpack.dev.js",
+		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.dev.js",
+		"lint": "eslint --ext .js,.vue src",
+		"lint:fix": "eslint --ext .js,.vue src --fix",
+		"stylelint": "stylelint src",
+		"stylelint:fix": "stylelint src --fix"
+	},
+	"dependencies": {
+		"@nextcloud/axios": "^1.3.2",
+		"@nextcloud/router": "^1.0.2",
+		"react-copy-to-clipboard": "^5.0.2"
+	},
+	"browserslist": [
+		"extends @nextcloud/browserslist-config"
+	],
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
+		"@babel/preset-env": "^7.9.0",
+		"@nextcloud/browserslist-config": "^1.0.0",
+		"@nextcloud/files": "^1.0.1",
+		"@types/bootstrap": "^4.3.2",
+		"@types/jquery": "^3.3.35",
+		"@types/node": "^13.13.2",
+		"@types/react": "^16.9.34",
+		"@types/webpack": "^4.41.12",
+		"@types/webpack-env": "^1.15.2",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^3.4.2",
+		"eslint": "^5.16.0",
+		"eslint-config-nextcloud": "0.1.1",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-import-resolver-webpack": "^0.12.1",
+		"eslint-loader": "^3.0.4",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-nextcloud": "^0.3.0",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.1",
+		"file-loader": "^6.0.0",
+		"node-sass": "^4.13.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-flip-move": "^3.0.4",
+		"react-hot-loader": "^4.12.20",
+		"react-select": "^3.1.0",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.2.0",
+		"stylelint": "^8.4.0",
+		"stylelint-config-recommended-scss": "^3.3.0",
+		"stylelint-scss": "^3.16.0",
+		"stylelint-webpack-plugin": "^0.10.5",
+		"ts-loader": "^7.0.1",
+		"typescript": "^3.8.3",
+		"url-loader": "^4.0.0",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2",
+		"webpack-node-externals": "^1.7.2"
+	}
+}

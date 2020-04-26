@@ -1,0 +1,26 @@
+{
+    "name": "sualko/bigbluebutton",
+    "description": "Nextcloud Integration for BigBlueButton",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Klaus Herberth",
+            "email": "klaus@jsxc.org"
+        }
+    ],
+    "require": {
+        "bigbluebutton/bigbluebutton-api-php": "~2.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "classmap-authoritative": true
+    },
+    "scripts": {
+        "lint": "find . -name \\*.php -not -path './vendor/*' -exec php -l \"{}\" \\;"
+    }
+}
