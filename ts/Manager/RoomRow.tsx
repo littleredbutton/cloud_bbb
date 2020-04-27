@@ -26,7 +26,7 @@ const EditableValue: React.FC<EditableValueProps> = ({ setValue, setActive, acti
 			onClick={event => event.stopPropagation()}
 			initialValue={value}
 			type={type}
-		/>
+		/>;
 	}
 
 	function onClick(ev) {
@@ -36,7 +36,7 @@ const EditableValue: React.FC<EditableValueProps> = ({ setValue, setActive, acti
 	}
 
 	return <a className="action-rename" onClick={onClick}>{value}</a>;
-}
+};
 
 const RoomRow: React.FC<Props> = (props) => {
 	const [activeEdit, setActiveEdit] = useState('');
@@ -67,7 +67,7 @@ const RoomRow: React.FC<Props> = (props) => {
 	}
 
 	function edit(field: string, type: 'text' | 'number' = 'text'){
-		return <EditableValue field={field} value={room[field]} active={activeEdit} setActive={setActiveEdit} setValue={updateRoom} type={type} />
+		return <EditableValue field={field} value={room[field]} active={activeEdit} setActive={setActiveEdit} setValue={updateRoom} type={type} />;
 	}
 
 	return (
@@ -99,7 +99,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					title="Delete" />
 			</td>
 		</tr>
-	)
-}
+	);
+};
 
 export default RoomRow;

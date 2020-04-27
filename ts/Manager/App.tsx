@@ -27,7 +27,7 @@ function sortRooms(key: SortKey, orderBy: SortOrder) {
 
 			return 0;
 		}
-	}
+	};
 }
 
 type Props = {
@@ -126,7 +126,7 @@ const App: React.FC<Props> = () => {
 				</tfoot>
 			</table>
 		</div>
-	)
-}
+	);
+};
 
 export default App;

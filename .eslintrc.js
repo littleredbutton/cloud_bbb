@@ -29,5 +29,6 @@ module.exports = {
 		'array-bracket-newline': ['error', 'consistent'],
 		'quote-props': ['error', 'as-needed'],
 		'indent': ['warn', 'tab'],
+		semi: ["error", "always"],
 	},
 }

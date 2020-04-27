@@ -6,9 +6,9 @@ declare const OCA: any;
 
 class BigBlueButton {
 	public async getRooms(): Promise<Room[]> {
-		const response = await axios.get(OC.generateUrl('/apps/bbb/rooms'))
+		const response = await axios.get(OC.generateUrl('/apps/bbb/rooms'));
 
-		return response.data
+		return response.data;
 	}
 }
 
@@ -27,12 +27,12 @@ $(() => {
 		'application/msword',
 		'application/vnd.ms-powerpoint',
 	];
-	const bbb = new BigBlueButton()
+	const bbb = new BigBlueButton();
 
 	bbb.getRooms().then(rooms => {
 		rooms.forEach(room => {
 			mimeTypes.forEach(mime => registerFileAction(mime, room.id, room.uid, room.name));
-		})
+		});
 	});
 
 	function registerFileAction(mime, id, uid, name) {

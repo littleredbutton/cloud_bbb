@@ -21,11 +21,11 @@ const NewRoomForm: React.FC<Props> = (props) => {
 				className="newgroup-name"
 				value={name}
 				placeholder="Room name"
-				onChange={(event) => {setName(event.target.value)}} />
+				onChange={(event) => {setName(event.target.value);}} />
 
 			<input type="submit" value="Create" />
 		</form>
-	)
-}
+	);
+};
 
 export default NewRoomForm;
