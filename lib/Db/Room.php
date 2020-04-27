@@ -16,6 +16,12 @@ class Room extends Entity implements JsonSerializable
 	public $record;
 	public $userId;
 
+	public function __construct()
+	{
+		$this->addType('maxParticipants', 'integer');
+		$this->addType('record', 'boolean');
+	}
+
 	public function jsonSerialize(): array
 	{
 		return [
