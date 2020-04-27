@@ -3,7 +3,16 @@
     <id>bbb</id>
     <name>BigBlueButton Integration</name>
     <summary>BigBlueButton integration for Nextcloud</summary>
-    <description><![CDATA[This app allows to create meetings with BigBlueButton]]></description>
+    <description><![CDATA[This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).
+
+* **Room setup** Create multiple room configurations with name, welcome message, ...
+* **Share guest link** Share the room link with all your guests
+* **Custom presentation** Start a room with a selected presentation from your file browser
+
+Developer wanted! If you have time it would be awesome if you could help to enhance this application.
+
+*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*
+    ]]></description>
     <version>0.1.0</version>
     <licence>agpl</licence>
     <author mail="klaus@jsxc.org">Klaus Herberth</author>
@@ -11,7 +20,12 @@
     <category>social</category>
     <category>multimedia</category>
     <category>integration</category>
+    <website>https://github.com/sualko/cloud_bbb/</website>
     <bugs>https://github.com/sualko/cloud_bbb/issues</bugs>
+    <repository>https://github.com/sualko/cloud_bbb/</repository>
+    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-file-browser.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-join.png</screenshot>
     <dependencies>
         <nextcloud min-version="18" max-version="19"/>
         <lib>curl</lib>
