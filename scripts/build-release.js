@@ -66,7 +66,7 @@ async function createRelease(appId) {
     await execa('yarn', ['build']);
     console.log(`✔ scripts built`.green);
 
-    let filePath = await createArchive(appId, appId + '-' + version);
+    let filePath = await createArchive(appId, appId + '-v' + version);
     await createNextcloudSignature(appId, filePath);
     await createGPGSignature(filePath);
     await createGPGArmorSignature(filePath);

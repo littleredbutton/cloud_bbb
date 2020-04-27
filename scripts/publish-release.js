@@ -16,10 +16,10 @@ require('dotenv').config();
 const commitMessage = `build: ${package.version}`;
 const tagName = `v${package.version}`;
 const files = [
-    path.join(__dirname, 'archives', `bbb-v${package.version}.tar.gz`),
-    path.join(__dirname, 'archives', `bbb-v${package.version}.tar.gz.asc`),
-    path.join(__dirname, 'archives', `bbb-v${package.version}.tar.gz.ncsig`),
-    path.join(__dirname, 'archives', `bbb-v${package.version}.tar.gz.sig`),
+    path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz`),
+    path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.asc`),
+    path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.ncsig`),
+    path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.sig`),
 ];
 
 async function notAlreadyTagged() {
@@ -36,7 +36,7 @@ async function isMasterBranch() {
 
 function hasChangeLogEntry() {
     return new Promise(resolve => {
-        fs.readFile(path.join(__dirname, 'CHANGELOG.md'), function (err, data) {
+        fs.readFile(path.join(__dirname, '..', 'CHANGELOG.md'), function (err, data) {
             if (err) throw err;
 
             resolve(data.includes(`[${package.version}]`));
@@ -74,7 +74,7 @@ async function keypress() {
 }
 
 function commit() {
-    return git.commit(commitMessage, ['-S']);
+    return git.commit(commitMessage, ['-S', '-n']);
 }
 
 function push() {
