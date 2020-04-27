@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>bbb</id>
     <name>BigBlueButton Integration</name>
     <summary>BigBlueButton integration for Nextcloud</summary>
@@ -27,10 +27,10 @@ Developer wanted! If you have time it would be awesome if you could help to enha
     <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-join.png</screenshot>
     <dependencies>
-        <nextcloud min-version="18" max-version="19"/>
         <lib>curl</lib>
         <lib>mbstring</lib>
         <lib>SimpleXML</lib>
+        <nextcloud min-version="18" max-version="19"/>
     </dependencies>
     <settings>
         <admin>OCA\BigBlueButton\Settings\Admin</admin>
