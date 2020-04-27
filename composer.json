@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "bigbluebutton/bigbluebutton-api-php": "dev-feat-conf"
+        "bigbluebutton/bigbluebutton-api-php": "dev-fork"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
