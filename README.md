@@ -32,4 +32,6 @@ enter the room by pointing to the arrow button
 
 ## enter a room from files
 
-(to be edited as soon as it works for me)
+use the ... menu
+
+select the correct BBB room and enter the room
