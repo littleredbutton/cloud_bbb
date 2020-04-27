@@ -12,20 +12,20 @@ enum SortOrder { DESC = -1, ASC = 1 };
 function sortRooms(key: SortKey, orderBy: SortOrder) {
 	return (a: Room, b: Room) => {
 		switch (key) {
-			case 'name':
-			case 'welcome':
-				return a[key].localeCompare(b[key]) * orderBy;
-			case 'maxParticipants':
-				return (a.maxParticipants - b.maxParticipants) * orderBy;
-			case 'record':
-				if (a.record && !b.record) {
-					return 1 * orderBy;
-				}
-				if (!a.record && b.record) {
-					return -1 * orderBy;
-				}
+		case 'name':
+		case 'welcome':
+			return a[key].localeCompare(b[key]) * orderBy;
+		case 'maxParticipants':
+			return (a.maxParticipants - b.maxParticipants) * orderBy;
+		case 'record':
+			if (a.record && !b.record) {
+				return 1 * orderBy;
+			}
+			if (!a.record && b.record) {
+				return -1 * orderBy;
+			}
 
-				return 0;
+			return 0;
 		}
 	}
 }

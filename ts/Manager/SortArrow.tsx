@@ -7,11 +7,11 @@ export interface SortArrowProps {
 }
 
 export function SortArrow({name, value, direction}: SortArrowProps) {
-    if (name === value) {
-        return (<span className='sort_arrow'>
-            {direction < 0 ? '▼' : '▲'}
-        </span>);
-    } else {
-        return <span/>;
-    }
+	if (name === value) {
+		return (<span className='sort_arrow'>
+			{direction < 0 ? '▼' : '▲'}
+		</span>);
+	} else {
+		return <span/>;
+	}
 }

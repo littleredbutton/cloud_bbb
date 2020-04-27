@@ -28,5 +28,6 @@ module.exports = {
 		'comma-dangle': ['error', 'always-multiline'],
 		'array-bracket-newline': ['error', 'consistent'],
 		'quote-props': ['error', 'as-needed'],
+		'indent': ['warn', 'tab'],
 	},
 }
