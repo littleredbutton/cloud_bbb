@@ -144,7 +144,7 @@ class JoinController extends PublicShareController
 			throw new \Exception('Can not process create request');
 		}
 
-		if ($response->failed()) {
+		if (!$response->success()) {
 			throw new \Exception('Can not create meeting');
 		}
 
