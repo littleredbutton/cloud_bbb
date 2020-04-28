@@ -92,6 +92,7 @@ class JoinController extends PublicShareController
 		} elseif (empty($displayname) || strlen($displayname) < 3) {
 			$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
 			$response = new TemplateResponse($this->appName, 'publicdisplayname', [
+				'room'             => $room->name,
 				'wrongdisplayname' => !empty($displayname) && strlen($displayname) < 3
 			], 'guest');
 

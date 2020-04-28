@@ -6,7 +6,7 @@
 ?>
 <form method="get" action="?">
 	<fieldset class="warning">
-		<!-- @TODO show room name -->
+		<h2><?php p($_['room']) ?></h2>
 		<?php if (!isset($_['wrongdisplayname']) || !$_['wrongdisplayname']): ?>
 			<p><?php p($l->t('How is your name?')); ?></p>
 		<?php endif; ?>
