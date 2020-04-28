@@ -5,6 +5,7 @@
          2,
          "always",
          [
+            "release",
             "build",
             "ci",
             "chore",
