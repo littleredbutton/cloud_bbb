@@ -123,7 +123,7 @@ class JoinController extends PublicShareController
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
 
-		$invitationUrl = $this->urlGenerator->getAbsoluteURL($this->request->getPathInfo());
+		$invitationUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $this->getToken()]);
 		$createMeetingParams->setModeratorOnlyMessage('To invite someone to the meeting, send them this link: ' . $invitationUrl);
 
 		if (!empty($room->welcome)) {
