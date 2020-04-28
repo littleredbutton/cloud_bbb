@@ -22,10 +22,18 @@ $(() => {
 		'application/pdf',
 		'application/vnd.oasis.opendocument.presentation',
 		'application/vnd.oasis.opendocument.text',
+		'application/vnd.oasis.opendocument.spreadsheet',
+		'application/vnd.oasis.opendocument.graphics',
 		'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 		'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+		'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 		'application/msword',
 		'application/vnd.ms-powerpoint',
+		'application/vnd.ms-excel',
+		'image/jpeg',
+		'image/png',
+		'text/plain',
+		'text/rtf',
 	];
 	const bbb = new BigBlueButton();
 
