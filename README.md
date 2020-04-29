@@ -38,6 +38,5 @@ select the correct BBB room and enter the room
 
 # Troubleshooting
 - before installing, make sure your BBB is running correctly
-- sameSite Cookies issue in modern chrome/chromium is to be expected. Always use the same tld.org
 - if no session opens with the ... menu of files, but a session opens in the general configuration page, look at your browser console. It will show a well hidden complaint that for sharing always a password is required. If this is the case, remove that requirement in sharing / enforce password. 
 - if the room doesn't appear in the ... menu of files, a browser/cache reload might help
