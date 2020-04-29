@@ -89,7 +89,8 @@ async function generateChangelog() {
         let issues = entry.issues.map(issue => {
             return `[#${issue}](https://github.com/sualko/cloud_bbb/issues/${issue})`;
         }).join('');
-        return `- ${issues} ${entry.description}\n`;
+
+        return `- ${issues}${issues.length > 0 ? ' ' : ''}${entry.description}\n`;
     }
 
     sections.forEach(section => {
@@ -121,6 +122,17 @@ async function generateChangelog() {
     }
 
     return changeLog;
+}
+
+async function editChangeLog(changeLog) {
+    let answers = await inquirer.prompt([{
+        type: 'editor',
+        name: 'changeLog',
+        message: 'You have now the possibility to edit the change log',
+        default: changeLog,
+    }]);
+
+    return answers.changeLog;
 }
 
 function hasChangeLogEntry() {
@@ -234,9 +246,8 @@ async function createGithubRelease(changeLog) {
         owner,
         repo,
         tag_name: tagName,
-        name: tagName,
-        body: changeLog,
-        draft: true,
+        name: `${package.name} ${tagName}`,
+        body: changeLog.replace(/^## [^\n]+\n/, ''),
         prerelease: !/^\d+\.\d+\.\d+$/.test(package.version),
     };
 
@@ -265,9 +276,7 @@ async function createGithubRelease(changeLog) {
         return 'application/octet-stream';
     }
 
-    let assetUrls = [];
-
-    files.forEach(async file => {
+    let assetUrls = await Promise.all(files.map(async file => {
         const filename = path.basename(file);
         const uploadOptions = {
             owner,
@@ -276,7 +285,7 @@ async function createGithubRelease(changeLog) {
             data: fs.createReadStream(file),
             headers: {
                 'content-type': getMimeType(filename),
-                'content-length': fs.statSync(file)[size],
+                'content-length': fs.statSync(file)['size'],
             },
             name: filename,
         };
@@ -285,8 +294,8 @@ async function createGithubRelease(changeLog) {
 
         console.log(`Asset uploaded: ${assetResponse.data.name}`.verbose);
 
-        assetUrls.push(assetResponse.data.browser_download_url);
-    });
+        return assetResponse.data.browser_download_url;
+    }));
 
     return assetUrls;
 }
@@ -362,9 +371,11 @@ async function run() {
     await isMasterBranch();
     console.log(`✔ this is the master branch`.green);
 
-    const changeLog = await generateChangelog();
-    console.log(changeLog.verbose);
+    let changeLog = await generateChangelog();
     console.log(`✔ change log generated`.green);
+
+    changeLog = await editChangeLog(changeLog);
+    console.log(`✔ change log updated`.green);
 
     console.log('Press any key to continue...');
     await keypress();
@@ -399,6 +410,7 @@ async function run() {
     console.log(`✔ released on github`.green);
 
     const archiveAssetUrl = assetUrls.find(url => url.endsWith('.tar.gz'));
+    console.log(`Asset url for Nextcloud store: ${archiveAssetUrl}`.verbose);
 
     await wantToContinue('Should I continue to upload the release to the app store?');
 
