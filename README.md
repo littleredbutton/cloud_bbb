@@ -37,12 +37,24 @@ Then install the dependencies using:
 
 
 ## :gear: Configure it
-find out your BBB secrets by '''sudo bbb-conf --secret'''
+Get your BBB API url and secret by executing `sudo bbb-conf --secret` on your
+BBB server.
 
-enter these secrets in the BigBlueButton settings on the general configuration page of your NC
+```
+$ sudo bbb-conf --secret
+
+    URL: https://bbb.your.domain/bigbluebutton/
+    Secret: abcdefghijklmnopqrstuvwxyz012345679
+
+    Link to the API-Mate:
+    https://mconf.github.io/api-mate/#server=https://...
+```
+
+Enter these values in the additional settings section on the admin
+configuration page of your Nextcloud instance.
 
 ## Create your first room
-Got to the BigBlueButton section inside your personal settings page and enter a
+Go to the BigBlueButton section inside your personal settings page and enter a
 room name. That's it. You can now distribute the room url.
 
 ## Enter a room from files
