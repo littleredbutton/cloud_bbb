@@ -1,7 +1,6 @@
 <?php
 $finder = PhpCsFixer\Finder::create()
 	->in('lib/')
-	->in('tests/')
 ;
 return PhpCsFixer\Config::create()
 	->setRules([

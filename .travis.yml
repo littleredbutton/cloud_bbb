@@ -1,0 +1,15 @@
+dist: bionic
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+before_script: phpenv global 7.3
+
+script:
+  - php -v
+  - yarn install
+  - yarn composer:install:dev
+  - yarn lint
+  - yarn commitlint-travis

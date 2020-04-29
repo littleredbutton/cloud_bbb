@@ -23,8 +23,7 @@ class RoomController extends Controller
 		IRequest $request,
 		RoomService $service,
 		$userId
-	)
-	{
+	) {
 		parent::__construct($appName, $request);
 		$this->service = $service;
 		$this->userId = $userId;
@@ -56,8 +55,7 @@ class RoomController extends Controller
 		string $welcome,
 		int $maxParticipants,
 		bool $record
-	): DataResponse
-	{
+	): DataResponse {
 		return new DataResponse($this->service->create(
 			$name,
 			$welcome,
@@ -76,8 +74,7 @@ class RoomController extends Controller
 		string $welcome,
 		int $maxParticipants,
 		bool $record
-	): DataResponse
-	{
+	): DataResponse {
 		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record) {
 			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $this->userId);
 		});
