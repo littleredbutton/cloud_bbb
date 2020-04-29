@@ -66,14 +66,18 @@ async function generateChangelog() {
         let [, type, scope, description] = log.message.match(/^([a-z]+)(?:\((\w+)\))?: (.+)/);
         let entry = { type, scope, description, issues: [] };
 
-        for (let match of log.body.match(/(?:fix|fixes|closes?|refs?) #(\d+)/g)) {
-            const [, number] = match.match(/(\d+)$/);
+        if(log.body) {
+            const matches = log.body.match(/(?:fix|fixes|closes?|refs?) #(\d+)/g) || [];
 
-            entry.issues.push(number);
+            for (let match of matches) {
+                const [, number] = match.match(/(\d+)$/);
+
+                entry.issues.push(number);
+            }
         }
 
         if (!entries[type]) {
-            entries[type] = []
+            entries[type] = [];
         }
 
         entries[type].push(entry);
@@ -142,7 +146,7 @@ async function commitChangeLog() {
 
     if (!isDryRun) {
         await git.add('CHANGELOG.md');
-        await git.commit('docs: update change log');
+        await git.commit('docs: update change log', ['-n']);
     }
 }
 
