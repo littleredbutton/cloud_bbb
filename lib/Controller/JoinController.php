@@ -121,6 +121,7 @@ class JoinController extends PublicShareController
 		$createMeetingParams->setAttendeePassword($room->attendeePassword);
 		$createMeetingParams->setModeratorPassword($room->moderatorPassword);
 		$createMeetingParams->setRecord($room->record);
+		$createMeetingParams->setAllowStartStopRecording($room->record);
 		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
 
 		$invitationUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $this->getToken()]);
