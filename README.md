@@ -8,9 +8,9 @@ This app allows to create meetings with an external installation of [BigBlueButt
 
 :clap: Developer wanted! If you have time it would be awesome if you could help to enhance this application.
 
-![Screenshot configuration](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-configuration.png)
-
 __This app uses BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.__
+
+![Screenshot configuration](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-configuration.png)
 
 ## :heart_eyes: Features
 This integration provides the following features:
@@ -60,15 +60,21 @@ room name. That's it. You can now distribute the room url.
 ## Enter a room from files
 Use the ... menu and select the desired BBB configuration to enter the room.
 Beware that if the room is already running the presentation will **not** be
-updated.
+updated. Entering a room with a defined presentation works only if link shares
+are enabled and do not require authentication. See [#1](https://github.com/sualko/cloud_bbb/issues/1)
+for details.
 
 ![Screenshot file browser](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-file-browser.png)
 
+# Notes
+- By using the [Link Editor](https://apps.nextcloud.com/apps/files_linkeditor) 
+  you can share rooms as any other file
+
 # Troubleshooting
-- before installing, make sure your BBB is running correctly
-- if no session opens with the ... menu of files, but a session opens in the
+- Before installing, make sure your BBB is running correctly
+- If no session opens with the ... menu of files, but a session opens in the
   general configuration page, look at your browser console. It will show a well
   hidden complaint that for sharing always a password is required. If this is
   the case, remove that requirement in sharing / enforce password.
-- if the room doesn't appear in the ... menu of files, a browser/cache reload
+- If the room doesn't appear in the ... menu of files, a browser/cache reload
   might help
