@@ -8,7 +8,7 @@
 	<fieldset class="warning">
 		<h2><?php p($_['room']) ?></h2>
 		<?php if (!isset($_['wrongdisplayname']) || !$_['wrongdisplayname']): ?>
-			<p><?php p($l->t('How is your name?')); ?></p>
+			<p><?php p($l->t('Please enter your name!')); ?></p>
 		<?php endif; ?>
 		<?php if (isset($_['wrongdisplayname']) && $_['wrongdisplayname']): ?>
 			<div class="warning"><?php p($l->t('The name must be at least 3 characters long.')); ?></div>
