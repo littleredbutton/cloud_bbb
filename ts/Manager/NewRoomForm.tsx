@@ -20,10 +20,10 @@ const NewRoomForm: React.FC<Props> = (props) => {
 			<input
 				className="newgroup-name"
 				value={name}
-				placeholder="Room name"
+				placeholder={t('bbb', 'Room name')}
 				onChange={(event) => {setName(event.target.value);}} />
 
-			<input type="submit" value="Create" />
+			<input type="submit" value={t('bbb', 'Create')} />
 		</form>
 	);
 };

@@ -98,16 +98,16 @@ const App: React.FC<Props> = () => {
 						<th />
 						<th />
 						<th onClick={() => onOrderBy('name')}>
-							Name <SortArrow name='name' value={orderBy} direction={sortOrder} />
+							{t('bbb', 'Name')} <SortArrow name='name' value={orderBy} direction={sortOrder} />
 						</th>
 						<th onClick={() => onOrderBy('welcome')}>
-							Welcome <SortArrow name='welcome' value={orderBy} direction={sortOrder} />
+							{t('bbb', 'Welcome')} <SortArrow name='welcome' value={orderBy} direction={sortOrder} />
 						</th>
 						<th onClick={() => onOrderBy('maxParticipants')}>
-							Max <SortArrow name='maxParticipants' value={orderBy} direction={sortOrder} />
+							{t('bbb', 'Max')} <SortArrow name='maxParticipants' value={orderBy} direction={sortOrder} />
 						</th>
 						<th onClick={() => onOrderBy('record')}>
-							Record <SortArrow name='record' value={orderBy} direction={sortOrder} />
+							{t('bbb', 'Record')} <SortArrow name='record' value={orderBy} direction={sortOrder} />
 						</th>
 						<th />
 					</tr>

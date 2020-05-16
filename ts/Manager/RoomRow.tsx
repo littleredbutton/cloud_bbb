@@ -96,7 +96,7 @@ const RoomRow: React.FC<Props> = (props) => {
 			<td className="remove icon-col">
 				<a className="icon icon-delete icon-visible"
 					onClick={deleteRow as any}
-					title="Delete" />
+					title={t('bbb', 'Delete')} />
 			</td>
 		</tr>
 	);

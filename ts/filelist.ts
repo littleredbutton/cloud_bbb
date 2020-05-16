@@ -74,8 +74,6 @@ $(() => {
 		const createResponse = await axios.post(url, {
 			path,
 			shareType: OC.Share.SHARE_TYPE_LINK,
-			note: 'foobar foobar foobar',
-			expireDate: '2020-07-01',
 		});
 
 		const { meta, data } = createResponse.data.ocs;
