@@ -1,17 +1,16 @@
 <?php
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\BigBlueButton\API;
+use OCA\BigBlueButton\BigBlueButton\Presentation;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\PublicShareController;
 use OCP\IRequest;
 use OCP\ISession;
 use OCP\IUserSession;
 use OCP\IConfig;
-use OCP\IURLGenerator;
+use OCP\Files\NotFoundException;
 use OCA\BigBlueButton\Service\RoomService;
-use BigBlueButton\BigBlueButton;
-use BigBlueButton\Parameters\CreateMeetingParameters;
-use BigBlueButton\Parameters\JoinMeetingParameters;
 use OCP\AppFramework\Http\TemplateResponse;
 
 class JoinController extends PublicShareController
@@ -25,8 +24,8 @@ class JoinController extends PublicShareController
 	/** @var IConfig */
 	private $config;
 
-	/** @var IURLGenerator */
-	private $urlGenerator;
+	/** @var API */
+	private $api;
 
 	public function __construct(
 		string $appName,
@@ -35,14 +34,14 @@ class JoinController extends PublicShareController
 		RoomService $service,
 		IUserSession $userSession,
 		IConfig $config,
-		IURLGenerator $urlGenerator
+		API $api
 	) {
 		parent::__construct($appName, $request, $session);
 
 		$this->service = $service;
 		$this->userSession = $userSession;
 		$this->config = $config;
-		$this->urlGenerator = $urlGenerator;
+		$this->api = $api;
 	}
 
 	protected function getPasswordHash(): string
@@ -73,99 +72,51 @@ class JoinController extends PublicShareController
 	 * @PublicPage
 	 * @NoCSRFRequired
 	 */
-	public function index($displayname, $u, $filename)
+	public function index($displayname, $u = '', $filename = '')
 	{
 		$room = $this->service->findByUid($this->getToken());
 
 		if ($room === null) {
-			return 'Room not found';
+			throw new NotFoundException();
 		}
 
-		$uid = null;
-		$url = null;
+		$userId = null;
+		$presentation = null;
 
 		if ($this->userSession->isLoggedIn()) {
 			$user = $this->userSession->getUser();
 			$displayname = $user->getDisplayName();
-			$uid = $user->getUID();
-			$url = $u;
+			$userId = $user->getUID();
+
+			if ($userId === $room->userId) {
+				$presentation = new Presentation($u, $filename);
+			}
 		} elseif (empty($displayname) || strlen($displayname) < 3) {
-			$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
 			$response = new TemplateResponse($this->appName, 'publicdisplayname', [
 				'room'             => $room->name,
 				'wrongdisplayname' => !empty($displayname) && strlen($displayname) < 3
 			], 'guest');
 
-			$parsedApiUrl = parse_url($apiUrl);
-
-			if ($parsedApiUrl === false) {
-				throw new \Exception('No valid api url provided');
-			}
-
-			$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
+			$this->addFormActionDomain($response);
 
 			return $response;
 		}
 
-		return $this->processPublicJoin($room, $displayname, $uid, $url, $filename);
-	}
-
-	private function processPublicJoin($room, $displayname, $uid, $presentation, $filename)
-	{
-		$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
-		$secret = $this->config->getAppValue($this->appName, 'api.secret');
-
-		$bbb = new BigBlueButton($apiUrl, $secret);
-
-		$createMeetingParams = new CreateMeetingParameters($room->uid, $room->name);
-		$createMeetingParams->setAttendeePassword($room->attendeePassword);
-		$createMeetingParams->setModeratorPassword($room->moderatorPassword);
-		$createMeetingParams->setRecord($room->record);
-		$createMeetingParams->setAllowStartStopRecording($room->record);
-		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
-
-		$invitationUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $this->getToken()]);
-		$createMeetingParams->setModeratorOnlyMessage('To invite someone to the meeting, send them this link: ' . $invitationUrl);
-
-		if (!empty($room->welcome)) {
-			$createMeetingParams->setWelcomeMessage($room->welcome);
-		}
-
-		if ($room->maxParticipants > 0) {
-			$createMeetingParams->setMaxParticipants($room->maxParticipants);
-		}
-
-		if ($presentation) {
-			$createMeetingParams->addPresentation($presentation, null, $filename);
-		}
-
-		try {
-			$response = $bbb->createMeeting($createMeetingParams);
-		} catch (\Exception $e) {
-			throw $e;
-			throw new \Exception('Can not process create request');
-		}
-
-		if (!$response->success()) {
-			throw new \Exception('Can not create meeting');
-		}
-
-		$password = $uid === $room->userId ? $room->moderatorPassword : $room->attendeePassword;
-
-
-		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
-
-		$joinMeetingParams->setCreationTime($response->getCreationTime());
-		$joinMeetingParams->setJoinViaHtml5(true);
-
-		if ($uid) {
-			$joinMeetingParams->setUserId($uid);
-			// $joinMeetingParams->setAvatarURL();
-		}
-
-		$joinMeetingParams->setRedirect(true);
-		$joinUrl = $bbb->getJoinMeetingURL($joinMeetingParams);
+		$creationDate = $this->api->createMeeting($room, $presentation);
+		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $userId);
 
 		return new RedirectResponse($joinUrl);
+	}
+
+	private function addFormActionDomain($response)
+	{
+		$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
+		$parsedApiUrl = parse_url($apiUrl);
+
+		if ($parsedApiUrl === false) {
+			throw new \Exception('No valid api url provided');
+		}
+
+		$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
 	}
 }
