@@ -1,6 +1,12 @@
-#bbb-react-root, #bbb-root {
-  height: 100%;
-  min-height: calc(100vh - 50px);
+#bbb-warning {
+  margin: 3em;
+  padding: 1em;
+  background-color: rgb(255, 255, 123);
+  display: inline-block;
+
+  .icon {
+    display: inline-block;
+  }
 }
 
 #bbb-react-root {

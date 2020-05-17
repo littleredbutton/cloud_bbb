@@ -8,7 +8,7 @@ use OCP\Settings\ISettings;
 class Admin implements ISettings
 {
 
-		/** @var IConfig */
+	/** @var IConfig */
 	private $config;
 
 	/**
