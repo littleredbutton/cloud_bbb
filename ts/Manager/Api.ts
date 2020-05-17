@@ -9,6 +9,19 @@ export interface Room {
 	record: boolean;
 }
 
+export type Recording = {
+	id: string;
+	name: string;
+	published: boolean;
+	state: 'processing' | 'processed' | 'published' | 'unpublished' | 'deleted';
+	startTime: number;
+	participants: number;
+	type: string;
+	length: number;
+	url: string;
+	meta: any;
+}
+
 class Api {
 	public getUrl(endpoint: string): string {
 		return OC.generateUrl(`apps/bbb/${endpoint}`);
@@ -39,6 +52,26 @@ class Api {
 
 	public async deleteRoom(id: number) {
 		const response = await axios.delete( this.getUrl(`rooms/${id}`));
+
+		return response.data;
+	}
+
+	public async getRecordings(uid: string) {
+		const response = await axios.get(this.getUrl(`server/${uid}/records`));
+
+		return response.data;
+	}
+
+	public async deleteRecording(id: string) {
+		const response = await axios.delete(this.getUrl(`server/record/${id}`));
+
+		return response.data;
+	}
+
+	public async storeRecording(recording: Recording, path: string) {
+		const startDate = new Date(recording.startTime);
+		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
+		const response = await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
 
 		return response.data;
 	}

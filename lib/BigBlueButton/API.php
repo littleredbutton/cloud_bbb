@@ -5,6 +5,9 @@ namespace OCA\BigBlueButton\BigBlueButton;
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use BigBlueButton\Parameters\JoinMeetingParameters;
+use BigBlueButton\Parameters\GetRecordingsParameters;
+use BigBlueButton\Core\Record;
+use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use OCA\BigBlueButton\Db\Room;
 use OCP\IConfig;
 use OCP\IURLGenerator;
@@ -111,5 +114,70 @@ class API
 		}
 
 		return $createMeetingParams;
+	}
+
+	public function getRecording(string $recordId)
+	{
+		$recordingParams = new GetRecordingsParameters();
+		$recordingParams->setRecordId($recordId);
+		$recordingParams->setState('any');
+
+		$response = $this->getServer()->getRecordings($recordingParams);
+
+		if (!$response->success()) {
+			throw new \Exception('Could not process get recording request');
+		}
+
+		$records = $response->getRecords();
+
+		if (count($records) === 0) {
+			throw new \Exception('Found no record with given id');
+		}
+
+		return $this->recordToArray($records[0]);
+	}
+
+	public function getRecordings(Room $room)
+	{
+		$recordingParams = new GetRecordingsParameters();
+		$recordingParams->setMeetingId($room->uid);
+		$recordingParams->setState('processing,processed,published,unpublished');
+
+		$response = $this->getServer()->getRecordings($recordingParams);
+
+		if (!$response->success()) {
+			throw new \Exception('Could not process get recordings request');
+		}
+
+		$records = $response->getRecords();
+
+		return array_map(function ($record) {
+			return $this->recordToArray($record);
+		}, $records);
+	}
+
+	public function deleteRecording(string $recordingId): bool
+	{
+		$deleteParams = new DeleteRecordingsParameters($recordingId);
+
+		$response = $this->getServer()->deleteRecordings($deleteParams);
+
+		return $response->isDeleted();
+	}
+
+	private function recordToArray(Record $record)
+	{
+		return [
+			'id'           => $record->getRecordId(),
+			'name'         => $record->getName(),
+			'published'    => $record->isPublished(),
+			'state'        => $record->getState(),
+			'startTime'    => $record->getStartTime(),
+			'participants' => $record->getParticipantCount(),
+			'type'         => $record->getPlaybackType(),
+			'length'       => $record->getPlaybackLength(),
+			'url'          => $record->getPlaybackUrl(),
+			'metas'        => $record->getMetas(),
+		];
 	}
 }

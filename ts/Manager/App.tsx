@@ -109,6 +109,9 @@ const App: React.FC<Props> = () => {
 						<th onClick={() => onOrderBy('record')}>
 							{t('bbb', 'Record')} <SortArrow name='record' value={orderBy} direction={sortOrder} />
 						</th>
+						<th>
+							{t('bbb', 'Recordings')}
+						</th>
 						<th />
 					</tr>
 				</thead>

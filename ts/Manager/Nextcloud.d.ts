@@ -10,6 +10,8 @@ declare namespace OC {
 	}
 
 	namespace dialogs {
+		function alert(text: string, title: string, callback: () => void, modal?: boolean): void;
+
 		function info(text: string, title: string, callback: () => void, modal?: boolean): void;
 
 		function confirm(text: string, title: string, callback: (result: boolean) => void, modal?: boolean): void;
@@ -61,6 +63,8 @@ declare namespace OC {
 	const PERMISSION_SHARE = 16;
 	const PERMISSION_ALL = 31;
 
+	const currentUser: string;
+
 	const config: {
 		blacklist_files_regex: string;
 		enable_avatars: boolean;
@@ -76,6 +80,8 @@ declare namespace OC {
 }
 
 declare function t(app: string, string: string, vars?: { [key: string]: string }, count?: number, options?: EscapeOptions): string;
+
+declare function n(app: string, singular: string, plural: string, number: number, vars?: { [key: string]: string }): string;
 
 declare module 'NC' {
 	export interface OCSResult<T> {

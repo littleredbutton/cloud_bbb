@@ -102,4 +102,25 @@
       background-color: rgba(0, 128, 0, 0.445);
     }
   }
+
+  .selected-row,
+  .recordings-row {
+    border-left: 3px solid #888;
+  }
+
+  .selected-row {
+    background-color: #f0f0f0;
+  }
+
+  .recordings-row {
+    background-color: #f7f7f7;
+
+    &> td {
+      padding: 0;
+    }
+
+    table {
+      width: 100%;
+    }
+  }
 }
