@@ -18,6 +18,7 @@ This integration provides the following features:
 * **Room setup** Create multiple room configurations with name, welcome message, ...
 * **Share guest link** Share the room link with all your guests
 * **Custom presentation** Start a room with a selected presentation from your file browser
+* **Manage recordings** View, share and delete recordings for your rooms
 
 ## :rocket: Install it
 The easiest way to install this app is by using the [Nextcloud app store](https://apps.nextcloud.com/apps/bbb).
@@ -66,11 +67,11 @@ for details.
 
 ![Screenshot file browser](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-file-browser.png)
 
-# :notebook: Notes
+## :notebook: Notes
 - By using the [Link Editor](https://apps.nextcloud.com/apps/files_linkeditor)
   you can share rooms as any other file
 
-# :pick: Troubleshooting
+## :pick: Troubleshooting
 - Before installing, make sure your BBB is running correctly
 - If no session opens with the ... menu of files, but a session opens in the
   general configuration page, look at your browser console. It will show a well
@@ -79,7 +80,7 @@ for details.
 - If the room doesn't appear in the ... menu of files, a browser/cache reload
   might help
 
-# :heart: Sponsors
+## :heart: Sponsors
 Writing such an application is a lot of work and therefore we are specially
 thankful for people and organisations who are sponsoring features or bug fixes:
 
