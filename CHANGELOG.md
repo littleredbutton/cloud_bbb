@@ -6,6 +6,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.2.0 (2020-05-17)
+### Added
+- add option to store room url as shortcut
+- add api check
+- show warning if api is not configured
+- show spinner while rooms are loading
+- [#19](https://github.com/sualko/cloud_bbb/issues/19) manage recordings
+
+### Fixed
+- auto complete for api secret
+
+### Misc
+- skip merge commits
+- use same code style for scripts
+- enhance publish script
+- update app description
+- add contributing guidelines
+- add code of conduct
+- use adapter for bbb
+- [#2](https://github.com/sualko/cloud_bbb/issues/2) prepare translation
+
 ## 0.1.2 (2020-04-29)
 ### Added
 - show room name on join page
