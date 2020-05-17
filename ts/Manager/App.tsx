@@ -120,7 +120,9 @@ const App: React.FC<Props> = () => {
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colSpan={2} />
+						<td colSpan={2}>
+							{!areRoomsLoaded && <span className="icon icon-loading-small icon-visible"></span>}
+						</td>
 						<td>
 							<NewRoomForm addRoom={addRoom} />
 						</td>
