@@ -8,6 +8,7 @@ use BigBlueButton\Parameters\JoinMeetingParameters;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Core\Record;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
+use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use OCA\BigBlueButton\Db\Room;
 use OCP\IConfig;
 use OCP\IURLGenerator;
@@ -179,5 +180,35 @@ class API
 			'url'          => $record->getPlaybackUrl(),
 			'metas'        => $record->getMetas(),
 		];
+	}
+
+	public function check($url, $secret)
+	{
+		$server = new BigBlueButton($url, $secret);
+
+		$meetingParams = new IsMeetingRunningParameters('foobar');
+
+		try {
+			$response = $server->isMeetingRunning($meetingParams);
+
+			if (!$response->success() && !$response->failed()) {
+				return 'invalid-url';
+			}
+
+			if (!$response->success()) {
+				return 'invalid-secret';
+			}
+
+			return 'success';
+		} catch (\Exception $e) {
+			return 'invalid-url';
+		}
+	}
+
+	public function getVersion($url = null)
+	{
+		$server = $url === null ? $this->getServer() : new BigBlueButton($url, '');
+
+		return $server->getApiVersion()->getVersion();
 	}
 }

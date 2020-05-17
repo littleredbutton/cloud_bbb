@@ -76,4 +76,28 @@ class ServerController extends Controller
 
 		return new DataResponse($success);
 	}
+
+	public function check(string $url, string $secret)
+	{
+		if ($url === null || empty($url) || $secret === null || empty($secret)) {
+			return new DataResponse(false);
+		}
+
+		return new DataResponse($this->server->check($url, $secret));
+	}
+
+	public function version(string $url)
+	{
+		if ($url === null || empty($url)) {
+			return new DataResponse(false, Http::STATUS_NOT_FOUND);
+		}
+
+		try {
+			$version = $this->server->getVersion($url);
+		} catch (\Exception $e) {
+			return new DataResponse(false, Http::STATUS_NOT_FOUND);
+		}
+
+		return new DataResponse($version);
+	}
 }

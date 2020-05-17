@@ -75,6 +75,15 @@ class Api {
 
 		return response.data;
 	}
+
+	public async checkServer(url: string, secret: string): Promise<'success'|'invalid-url'|'invalid:secret'> {
+		const response = await axios.post(this.getUrl('server/check'), {
+			url,
+			secret,
+		});
+
+		return response.data;
+	}
 }
 
 export const api = new Api();

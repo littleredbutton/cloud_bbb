@@ -46,6 +46,12 @@ declare namespace OC {
 		}
 	}
 
+	namespace PasswordConfirmation {
+		function requiresPasswordConfirmation(): boolean;
+
+		function requirePasswordConfirmation(cb: () => void): void;
+	}
+
 	function generateUrl(url: string, parameters?: { [key: string]: string }, options?: EscapeOptions)
 
 	function linkToOCS(service: string, version: number): string;

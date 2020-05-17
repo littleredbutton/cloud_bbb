@@ -1,5 +1,4 @@
 #bbb-warning {
-  margin: 3em;
   padding: 1em;
   background-color: rgb(255, 255, 123);
   display: inline-block;
@@ -9,7 +8,37 @@
   }
 }
 
+#bbb-success {
+  padding: 1em;
+  background-color: rgb(176, 252, 132);
+  display: inline-block;
+
+  .icon {
+    display: inline-block;
+  }
+}
+
+#bbb-settings {
+  #bbb-warning,
+  #bbb-success {
+    margin: 1em 0;
+  }
+
+  [type="url"],
+  [type="password"] {
+    width: 250px;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
 #bbb-react-root {
+  #bbb-warning,
+  #bbb-success {
+    margin: 3em;
+  }
 
   .icon {
     display: inline-block;
