@@ -106,12 +106,32 @@ const RoomRow: React.FC<Props> = (props) => {
 		);
 	}
 
+	function storeRoom() {
+		OC.dialogs.filepicker(t('bbb', 'Select target folder'), (path: string) => {
+			api.storeRoom(room, path).then((filename) => {
+				OC.dialogs.info(
+					t('bbb', 'Room URL was stored in "{path}" as "{filename}".', { path: path + '/', filename }),
+					t('bbb', 'Link stored'),
+					() => undefined,
+				);
+			}).catch(err => {
+				console.warn('Could not store room', err);
+
+				OC.dialogs.alert(
+					t('bbb', 'URL to room could not be stored.'),
+					t('bbb', 'Error'),
+					() => undefined
+				);
+			});
+		}, undefined, 'httpd/unix-directory');
+	}
+
 	function storeRecording(recording: Recording) {
 		OC.dialogs.filepicker(t('bbb', 'Select target folder'), (path: string) => {
-			api.storeRecording(recording, path).then(() => {
+			api.storeRecording(recording, path).then((filename) => {
 				OC.dialogs.info(
-					t('bbb', 'URL to presentation was stored in "{path}"', { path: path + '/' }),
-					t('bbb', 'File stored'),
+					t('bbb', 'URL to presentation was stored in "{path}" as "{filename}".', { path: path + '/', filename }),
+					t('bbb', 'Link stored'),
 					() => undefined,
 				);
 			}).catch(err => {
@@ -178,6 +198,9 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td className="start icon-col">
 					<a href={api.getUrl(`b/${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
 				</td>
+				<td className="store icon-col">
+					<a onClick={() => storeRoom()} className="icon icon-download icon-visible"></a>
+				</td>
 				<td className="name">
 					{edit('name')}
 				</td>
@@ -199,7 +222,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">
-				<td colSpan={8}>
+				<td colSpan={9}>
 					<table>
 						<tbody>
 							{recordings?.map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}

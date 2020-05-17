@@ -97,6 +97,7 @@ const App: React.FC<Props> = () => {
 					<tr>
 						<th />
 						<th />
+						<th />
 						<th onClick={() => onOrderBy('name')}>
 							{t('bbb', 'Name')} <SortArrow name='name' value={orderBy} direction={sortOrder} />
 						</th>
@@ -120,7 +121,7 @@ const App: React.FC<Props> = () => {
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colSpan={2}>
+						<td colSpan={3}>
 							{!areRoomsLoaded && <span className="icon icon-loading-small icon-visible"></span>}
 						</td>
 						<td>

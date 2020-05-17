@@ -27,6 +27,10 @@ class Api {
 		return OC.generateUrl(`apps/bbb/${endpoint}`);
 	}
 
+	public getRoomUrl(room: Room) {
+		return window.location.origin + api.getUrl(`b/${room.uid}`);
+	}
+
 	public async getRooms(): Promise<Room[]> {
 		const response = await axios.get(this.getUrl('rooms'));
 
@@ -70,10 +74,21 @@ class Api {
 
 	public async storeRecording(recording: Recording, path: string) {
 		const startDate = new Date(recording.startTime);
-		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
-		const response = await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
+		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
+		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${filename}`;
 
-		return response.data;
+		await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
+
+		return filename;
+	}
+
+	public async storeRoom(room: Room, path: string) {
+		const filename = `${encodeURIComponent(room.name)}.url`;
+		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${filename}`;
+
+		await axios.put(url, `[InternetShortcut]\nURL=${this.getRoomUrl(room)}`);
+
+		return filename;
 	}
 
 	public async checkServer(url: string, secret: string): Promise<'success'|'invalid-url'|'invalid:secret'> {
