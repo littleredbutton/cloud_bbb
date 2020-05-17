@@ -64,7 +64,13 @@ async function generateChangelog() {
 	const entries = {};
 
 	logs.all.forEach(log => {
-		const [, type, scope, description] = log.message.match(/^([a-z]+)(?:\((\w+)\))?: (.+)/);
+		const match = log.message.match(/^([a-z]+)(?:\((\w+)\))?: (.+)/);
+
+		if (!match) {
+			return;
+		}
+
+		const [, type, scope, description] = match;
 		const entry = { type, scope, description, issues: [] };
 
 		if(log.body) {
