@@ -66,11 +66,11 @@ for details.
 
 ![Screenshot file browser](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-file-browser.png)
 
-# Notes
-- By using the [Link Editor](https://apps.nextcloud.com/apps/files_linkeditor) 
+# :notebook: Notes
+- By using the [Link Editor](https://apps.nextcloud.com/apps/files_linkeditor)
   you can share rooms as any other file
 
-# Troubleshooting
+# :pick: Troubleshooting
 - Before installing, make sure your BBB is running correctly
 - If no session opens with the ... menu of files, but a session opens in the
   general configuration page, look at your browser console. It will show a well
@@ -78,3 +78,15 @@ for details.
   the case, remove that requirement in sharing / enforce password.
 - If the room doesn't appear in the ... menu of files, a browser/cache reload
   might help
+
+# :heart: Sponsors
+Writing such an application is a lot of work and therefore we are specially
+thankful for people and organisations who are sponsoring features or bug fixes:
+
+- [Medienwerkstatt Minden-Lübbecke e.V.](https://www.medienwerkstatt.org) manage recordings ([#19])
+
+If you are looking for other ways to contribute to this project, you are welcome
+to look at our [contributor guidelines]. Every contribution is valuable :tada:.
+
+[contributor guidelines]: https://github.com/sualko/cloud_bbb/blob/master/.github/contributing.md
+[#19]: https://github.com/sualko/cloud_bbb/issues/19
