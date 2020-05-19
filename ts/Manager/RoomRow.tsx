@@ -95,7 +95,7 @@ const RoomRow: React.FC<Props> = (props) => {
 		ev.preventDefault();
 
 		OC.dialogs.confirm(
-			t('bbb', 'Are you sure you want to delete "{name}"? This operation can not be undone', { name: room.name }),
+			t('bbb', 'Are you sure you want to delete "{name}"? This operation can not be undone.', { name: room.name }),
 			t('bbb', 'Delete "{name}"?', { name: room.name }),
 			confirmed => {
 				if (confirmed) {
