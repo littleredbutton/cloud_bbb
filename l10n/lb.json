@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "Späicheren",
+    "Name" : "Numm",
+    "Create" : "Erstellen",
+    "Delete" : "Läschen",
+    "Error" : "Fehler"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

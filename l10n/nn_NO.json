@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "Lagre",
+    "Name" : "Namn",
+    "Create" : "Lag",
+    "Delete" : "Ta bort",
+    "Error" : "Feil"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

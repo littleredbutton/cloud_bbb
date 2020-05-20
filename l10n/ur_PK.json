@@ -1,0 +1,7 @@
+{ "translations": {
+    "Save" : "حفظ",
+    "Name" : "اسم",
+    "Delete" : "حذف کریں",
+    "Error" : "ایرر"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

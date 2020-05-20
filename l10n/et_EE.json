@@ -1,0 +1,10 @@
+{ "translations": {
+    "Save" : "Salvesta",
+    "Name" : "Nimi",
+    "Create" : "Loo",
+    "Delete" : "Kustuta",
+    "Error" : "Viga",
+    "Server error" : "Serveri tõrge",
+    "Settings saved" : "Seaded salvestatud"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

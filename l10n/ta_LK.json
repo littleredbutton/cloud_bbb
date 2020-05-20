@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "சேமிக்க ",
+    "Name" : "பெயர்",
+    "Create" : "உருவாக்குக",
+    "Delete" : "நீக்குக",
+    "Error" : "வழு"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

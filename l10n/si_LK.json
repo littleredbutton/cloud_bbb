@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "සුරකින්න",
+    "Name" : "නම",
+    "Create" : "තනන්න",
+    "Delete" : "ඉවත් කරන්න",
+    "Error" : "දෝෂයක්"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

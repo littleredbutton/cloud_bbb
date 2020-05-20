@@ -1,0 +1,10 @@
+{ "translations": {
+    "Save" : "Stoor",
+    "Name" : "Naam",
+    "Create" : "Skep",
+    "Delete" : "Skrap",
+    "Error" : "Fout",
+    "Server error" : "Bedienerfout",
+    "Settings saved" : "Instellings gestoor"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

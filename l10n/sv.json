@@ -1,0 +1,12 @@
+{ "translations": {
+    "Save" : "Spara",
+    "Name" : "Namn",
+    "Welcome" : "Välkommen",
+    "Room name" : "Rumsnamn",
+    "Create" : "Skapa",
+    "Delete" : "Radera",
+    "Error" : "Fel",
+    "Server error" : "Serverfel",
+    "Settings saved" : "Inställningar sparade"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

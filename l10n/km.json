@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "រក្សាទុក",
+    "Name" : "ឈ្មោះ",
+    "Create" : "បង្កើត",
+    "Delete" : "លុប",
+    "Error" : "កំហុស"
+},"pluralForm" :"nplurals=1; plural=0;"
+}

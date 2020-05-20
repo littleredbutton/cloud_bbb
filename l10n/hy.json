@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "Պահպանել",
+    "Name" : "Անուն",
+    "Create" : "Ստեղծել",
+    "Delete" : "հեռացնել",
+    "Error" : "Սխալ"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,9 @@
+{ "translations": {
+    "Save" : "Salveguardar",
+    "Name" : "Nomine",
+    "Create" : "Crear",
+    "Delete" : "Deler",
+    "Error" : "Error",
+    "Settings saved" : "Configurationes salveguardate"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

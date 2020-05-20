@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "Saxla",
+    "Name" : "Ad",
+    "Create" : "Yarat",
+    "Delete" : "Sil",
+    "Error" : "Səhv"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

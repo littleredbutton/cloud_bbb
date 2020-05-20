@@ -1,0 +1,11 @@
+{ "translations": {
+    "Save" : "Gem",
+    "Name" : "Navn",
+    "Welcome" : "Velkommen",
+    "Create" : "Opret",
+    "Delete" : "Slet",
+    "Error" : "Fejl",
+    "Server error" : "Serverfejl",
+    "Settings saved" : "Indstillinger gemt"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

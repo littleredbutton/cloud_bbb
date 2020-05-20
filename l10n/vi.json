@@ -1,0 +1,9 @@
+{ "translations": {
+    "Save" : "Lưu",
+    "Name" : "Tên",
+    "Create" : "Tạo mới",
+    "Delete" : "Xóa",
+    "Error" : "Lỗi",
+    "Settings saved" : "Cấu hình đã được lưu"
+},"pluralForm" :"nplurals=1; plural=0;"
+}

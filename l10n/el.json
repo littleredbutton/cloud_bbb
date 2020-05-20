@@ -1,0 +1,11 @@
+{ "translations": {
+    "Save" : "Αποθήκευση",
+    "Name" : "Όνομα",
+    "Welcome" : "Καλώς ήλθατε",
+    "Create" : "Δημιουργία",
+    "Delete" : "Διαγραφή",
+    "Error" : "Σφάλμα",
+    "Server error" : "Σφάλμα διακομιστή",
+    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

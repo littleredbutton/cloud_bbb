@@ -1,0 +1,8 @@
+{ "translations": {
+    "Save" : "সংরক্ষণ",
+    "Name" : "নাম",
+    "Create" : "তৈরী কর",
+    "Delete" : "মুছে",
+    "Error" : "সমস্যা"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

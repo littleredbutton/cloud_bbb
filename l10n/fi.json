@@ -1,0 +1,12 @@
+{ "translations": {
+    "Save" : "Tallenna",
+    "Name" : "Nimi",
+    "Welcome" : "Tervetuloa",
+    "Room name" : "Huoneen nimi",
+    "Create" : "Luo",
+    "Delete" : "Poista",
+    "Error" : "Virhe",
+    "Server error" : "Palvelinvirhe",
+    "Settings saved" : "Asetukset tallennettu"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
