@@ -8,6 +8,7 @@ OC.L10N.register(
     "API secret" : "API sekretua",
     "Save" : "Gorde",
     "Please enter your name!" : "Mesedez sartu zure izena!",
+    "The name must be at least 3 characters long." : "Izenak 3 karaktere behar ditu gutxienez.",
     "Name" : "Izena",
     "Welcome" : "Ongi etorri",
     "Max" : "Maximoa",
@@ -17,6 +18,7 @@ OC.L10N.register(
     "Create" : "Sortu",
     "_%n participant_::_%n participants_" : ["Parte-hartzaile %n","%n parte-hartzaile"],
     "Delete" : "Ezabatu",
+    "Delete \"{name}\"?" : "\"{name}\" ezabatu?",
     "Select target folder" : "Hautatu helburuko karpeta",
     "Link stored" : "Esteka biltegiratuta",
     "Error" : "Errorea",
@@ -25,6 +27,7 @@ OC.L10N.register(
     "Server error" : "Zerbitzari akatsa",
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",
+    "API url is invalid" : "API url-a baliogabea da",
     "API secret is invalid" : "API sekretua baliogabea da"
 },
 "nplurals=2; plural=(n != 1);");
