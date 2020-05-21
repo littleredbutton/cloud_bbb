@@ -34,7 +34,7 @@ class Personal implements ISettings
 		$warning = '';
 
 		if (empty($this->config->getAppValue('bbb', 'api.url')) || empty($this->config->getAppValue('bbb', 'api.secret'))) {
-			$warning = $this->l->t('API url or secret not configured. Please contact your administrator.');
+			$warning = $this->l->t('API URL or secret not configured. Please contact your administrator.');
 		}
 
 		return new TemplateResponse('bbb', 'manager', ['warning' => $warning]);
