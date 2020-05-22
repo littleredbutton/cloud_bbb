@@ -11,13 +11,13 @@ type Props = {
 const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecording}) => {
 	return (
 		<tr key={recording.id}>
+			<td className="start icon-col">
+				<a href={recording.url} className="icon icon-external icon-visible" target="_blank" rel="noopener noreferrer"></a>
+			</td>
 			<td className="share icon-col">
 				<CopyToClipboard text={recording.url}>
 					<span className="icon icon-clippy icon-visible copy-to-clipboard" ></span>
 				</CopyToClipboard>
-			</td>
-			<td className="start icon-col">
-				<a href={recording.url} className="icon icon-external icon-visible" target="_blank" rel="noopener noreferrer"></a>
 			</td>
 			<td className="icon-col">
 				<a onClick={() => storeRecording(recording)} className="icon icon-add-shortcut icon-visible"></a>

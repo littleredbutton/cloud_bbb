@@ -190,13 +190,13 @@ const RoomRow: React.FC<Props> = (props) => {
 	return (
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
+				<td className="start icon-col">
+					<a href={api.getUrl(`b/${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
+				</td>
 				<td className="share icon-col">
 					<CopyToClipboard text={window.location.origin + api.getUrl(`b/${room.uid}`)}>
 						<span className="icon icon-clippy icon-visible copy-to-clipboard" ></span>
 					</CopyToClipboard>
-				</td>
-				<td className="start icon-col">
-					<a href={api.getUrl(`b/${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
 				</td>
 				<td className="store icon-col">
 					<a onClick={() => storeRoom()} className="icon icon-add-shortcut icon-visible"></a>
