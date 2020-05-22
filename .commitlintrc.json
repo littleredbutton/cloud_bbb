@@ -5,6 +5,7 @@
          2,
          "always",
          [
+            "l10n",
             "release",
             "build",
             "ci",
