@@ -12,11 +12,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/sualko/bigbluebutton-api-php"
+            "url": "https://github.com/littleredbutton/bigbluebutton-api-php/"
         }
     ],
     "require": {
-        "bigbluebutton/bigbluebutton-api-php": "dev-fork"
+        "bigbluebutton/bigbluebutton-api-php": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",

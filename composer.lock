@@ -4,34 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca15263e9773823e1e0db22a23774625",
+    "content-hash": "36066ac704418191a14ede152a1f91c6",
     "packages": [
         {
             "name": "bigbluebutton/bigbluebutton-api-php",
-            "version": "dev-fork",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sualko/bigbluebutton-api-php.git",
-                "reference": "3b8da2e1b9469deebe2713bb679e9c88e258ec9b"
+                "url": "https://github.com/littleredbutton/bigbluebutton-api-php.git",
+                "reference": "9d65e377199f3262605685c87483f249357ab55e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sualko/bigbluebutton-api-php/zipball/3b8da2e1b9469deebe2713bb679e9c88e258ec9b",
-                "reference": "3b8da2e1b9469deebe2713bb679e9c88e258ec9b",
+                "url": "https://api.github.com/repos/littleredbutton/bigbluebutton-api-php/zipball/9d65e377199f3262605685c87483f249357ab55e",
+                "reference": "9d65e377199f3262605685c87483f249357ab55e",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-mbstring": "*",
                 "ext-simplexml": "*",
-                "php": ">=5.4"
+                "php": "^7.2"
             },
             "require-dev": {
                 "composer/composer": "1.7.*@dev",
-                "ext-mbstring": "*",
                 "friendsofphp/php-cs-fixer": "2.*",
                 "fzaninotto/faker": "~1.8.0",
-                "php": ">=7.0",
                 "php-coveralls/php-coveralls": "2.1.*",
                 "phpunit/phpunit": "6.*",
                 "squizlabs/php_codesniffer": "3.*"
@@ -60,9 +58,10 @@
                 "bigbluebutton"
             ],
             "support": {
-                "source": "https://github.com/sualko/bigbluebutton-api-php/tree/fork"
+                "source": "https://github.com/littleredbutton/bigbluebutton-api-php/tree/master",
+                "issues": "https://github.com/littleredbutton/bigbluebutton-api-php/issues"
             },
-            "time": "2020-05-17T08:37:02+00:00"
+            "time": "2020-05-21T12:16:07+00:00"
         }
     ],
     "packages-dev": [
