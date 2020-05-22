@@ -51,14 +51,13 @@ $(() => {
 			permissions: OC.PERMISSION_SHARE,
 			icon: OC.imagePath('bbb', 'app-dark.svg'),
 			actionHandler: (fileName, context) => {
-				share(context.fileInfoModel.getFullPath(), fileName, uid);
+				share(context.fileInfoModel.id, fileName, uid);
 			},
 		});
 	}
 
-	async function share(path: string, filename: string, roomUid) {
-		const id = await createShare(path);
-		const shareUrl = await configureShare(id);
+	async function share(fileId: number, filename: string, roomUid) {
+		const shareUrl = await createDirectShare(fileId);
 		const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
 			uid: roomUid,
 			url: shareUrl + '/download',
@@ -68,40 +67,12 @@ $(() => {
 		window.open(joinUrl, '_blank', 'noopener,noreferrer');
 	}
 
-	async function createShare(path: string): Promise<number> {
-		const url = generateOcsUrl('apps/files_sharing/api/v1', 2) + 'shares';
-
+	async function createDirectShare(fileId: number): Promise<string> {
+		const url = generateOcsUrl('apps/dav/api/v1', 1) + 'direct';
 		const createResponse = await axios.post(url, {
-			path,
-			shareType: OC.Share.SHARE_TYPE_LINK,
+			fileId,
 		});
 
-		const { meta, data } = createResponse.data.ocs;
-
-		if (meta.statuscode !== 200) {
-			throw new Error('Failed to create share');
-		}
-
-		return data.id;
-	}
-
-	async function configureShare(id: number): Promise<string> {
-		const url = generateOcsUrl('apps/files_sharing/api/v1', 2) + 'shares/' + id;
-
-		const tomorrow = new Date();
-		tomorrow.setDate(new Date().getDate() + 1);
-
-		const updateResponse = await axios.put(url, {
-			expireDate: tomorrow.toISOString().split('T')[0],
-			note: 'BigBlueButton',
-		});
-
-		const { meta, data } = updateResponse.data.ocs;
-
-		if (meta.statuscode !== 200) {
-			throw new Error('Failed to configure share');
-		}
-
-		return data.url;
+		return createResponse.data?.ocs?.data?.url;
 	}
 });
