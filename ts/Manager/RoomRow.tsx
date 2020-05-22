@@ -199,7 +199,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					<a href={api.getUrl(`b/${room.uid}`)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
 				</td>
 				<td className="store icon-col">
-					<a onClick={() => storeRoom()} className="icon icon-download icon-visible"></a>
+					<a onClick={() => storeRoom()} className="icon icon-add-shortcut icon-visible"></a>
 				</td>
 				<td className="name">
 					{edit('name')}

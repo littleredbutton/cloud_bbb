@@ -20,7 +20,7 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 				<a href={recording.url} className="icon icon-external icon-visible" target="_blank" rel="noopener noreferrer"></a>
 			</td>
 			<td className="icon-col">
-				<a onClick={() => storeRecording(recording)} className="icon icon-download icon-visible"></a>
+				<a onClick={() => storeRecording(recording)} className="icon icon-add-shortcut icon-visible"></a>
 			</td>
 			<td>
 				{(new Date(recording.startTime)).toLocaleString()}
