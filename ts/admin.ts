@@ -57,7 +57,7 @@ $(() => {
 			let message = t('bbb', 'Unexpected error occurred');
 
 			if (err === 'invalid-url') {
-				message = t('bbb', 'API url is invalid');
+				message = t('bbb', 'API URL is invalid');
 			} else if (err === 'invalid-secret') {
 				message = t('bbb', 'API secret is invalid');
 			}
