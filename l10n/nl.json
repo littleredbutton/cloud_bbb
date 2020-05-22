@@ -1,5 +1,5 @@
 { "translations": {
-    "API url or secret not configured. Please contact your administrator." : "API url of geheim niet geconfigureerd. Neem contact met uw beheerder.",
+    "API url or secret not configured. Please contact your administrator." : "API url of geheim niet geconfigureerd. Neem contact op met uw beheerder.",
     "BigBlueButton Integration" : "BigBlueButton Integratie",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integratie voor Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Deze app maakt het mogelijk om vergaderingen te creëren met een extern geïnstalleerde versie van [BigBlueButton] (https://bigbluebutton.org) .\n\n* ** Kameropstelling ** Maak meerdere kamerconfiguraties met naam, welkomstbericht, ...\n\n* ** Deel gastlink ** Deel de kamerlink met al je gasten\n* ** Aangepaste presentatie ** Start een kamer met een geselecteerde presentatie vanuit je bestandsbrowser\n* ** Beheer opnames ** Bekijk, deel en verwijder opnames voor je kamers\n\nOntwikkelaar gezocht! Als je tijd hebt, zou het geweldig zijn als je zou kunnen helpen met het verbeteren van deze applicatie.\n\n* Deze app integreert BigBlueButton en is niet goedgekeurd of gecertificeerd door BigBlueButton Inc. BigBlueButton en het BigBlueButton-logo zijn handelsmerken van BigBlueButton Inc. *",
@@ -19,6 +19,7 @@
     "Create" : "Creëren",
     "_%n participant_::_%n participants_" : ["%n deelnemer","%n deelnemers"],
     "Delete" : "Verwijderen",
+    "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Weet je zeker dat je \"{name}\" wilt verwijderen? Deze handeling kan niet ongedaan worden gemaakt.",
     "Delete \"{name}\"?" : "Verwijderen \"{name}\"?",
     "Select target folder" : "Selecteer doelmap",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "Kamer URL werd opgeslagen in \"{path}\" als \"{filename}\".",
@@ -27,6 +28,7 @@
     "Error" : "Fout",
     "URL to presentation was stored in \"{path}\" as \"{filename}\"." : "URL naar presentatie werd opgeslagen in \"{path}\" als \"{filename}\".",
     "URL to presentation could not be stored." : "URL naar presentatie kon niet worden opgeslagen.",
+    "Are you sure you want to delete the recording from \"{startDate}\"? This operation can not be undone." : "Weet je zeker dat je de opname van \"{startDate}\" wilt verwijderen? Deze bewerking kan niet ongedaan worden gemaakt.",
     "Delete?" : "Verwijderen?",
     "Could not delete record" : "Kon record niet verwijderen",
     "Server error" : "Serverfout",
