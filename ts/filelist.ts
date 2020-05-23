@@ -60,7 +60,7 @@ $(() => {
 		const shareUrl = await createDirectShare(fileId);
 		const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
 			uid: roomUid,
-			url: shareUrl + '/download',
+			url: shareUrl,
 			filename,
 		});
 
