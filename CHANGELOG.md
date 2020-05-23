@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.3.1 (2020-05-23)
+### Fixed
+- fix regression which prevents start with presentation
+
 ## 0.3.0 (2020-05-23)
 ### Added
 - [#1](https://github.com/sualko/cloud_bbb/issues/1) use direct share for presentation (bypass password requirement for shares)
