@@ -32,7 +32,7 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 	render() {
 		return <form onSubmit={this.onSubmit}>
 			<input value={this.state.value}
-				   {...this.props}
+				   type={this.props.type}
 				   onChange={event => this.setState({value: event.currentTarget.value})}/>
 		</form>;
 	}
