@@ -3,12 +3,10 @@ OC.L10N.register(
     {
     "BigBlueButton Integration" : "Integracion BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integracion Nextcloud per BigBlueButton",
-    "API url" : "Url API",
     "API secret" : "Secret API",
     "Save" : "Salvar",
     "Please enter your name!" : "Picatz vòstre nom !",
     "The name must be at least 3 characters long." : "Lo nom deu almens fa 3 caractèrs.",
-    "displayname" : "escais-nom",
     "Name" : "Nom",
     "Welcome" : "Benvengut",
     "Max" : "Max",
@@ -24,7 +22,6 @@ OC.L10N.register(
     "Could not delete record" : "Supression de l’enregistrament impossibla",
     "Server error" : "Error del servidor",
     "Settings saved" : "Paramètres enregistrats",
-    "API url is invalid" : "Ulr API invalida",
     "API secret is invalid" : "Secret API invalid"
 },
 "nplurals=2; plural=(n > 1);");

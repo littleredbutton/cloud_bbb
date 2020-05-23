@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Запазване",
+    "Display name" : "Вписване като",
     "Name" : "Име",
     "Room name" : "Име на стаята",
     "Create" : "Създай",

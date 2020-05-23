@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "저장",
+    "Display name" : "표시 이름",
     "Name" : "이름",
     "Welcome" : "환영합니다",
     "Room name" : "방 번호",

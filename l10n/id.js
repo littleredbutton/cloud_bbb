@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Simpan",
+    "Display name" : "Nama tampilan",
     "Name" : "Nama",
     "Create" : "Buat",
     "Delete" : "Hapus",

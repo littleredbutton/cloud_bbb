@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Vista",
+    "Display name" : "Birtingarnafn",
     "Name" : "Nafn",
     "Welcome" : "Velkomin",
     "Create" : "Búa til",

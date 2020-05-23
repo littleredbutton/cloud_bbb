@@ -1,14 +1,13 @@
 OC.L10N.register(
     "bbb",
     {
-    "API url or secret not configured. Please contact your administrator." : "API url edo sekretua ez dago konfiguratuta. Mesedez jarri zure administratzailearekin harremanetan.",
     "BigBlueButton Integration" : "BigBlueButton integrazioa",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrazioa Nextclouderako",
-    "API url" : "API url-a",
     "API secret" : "API sekretua",
     "Save" : "Gorde",
     "Please enter your name!" : "Mesedez sartu zure izena!",
     "The name must be at least 3 characters long." : "Izenak 3 karaktere behar ditu gutxienez.",
+    "Display name" : "Erakutsi izena",
     "Name" : "Izena",
     "Welcome" : "Ongi etorri",
     "Max" : "Maximoa",
@@ -27,7 +26,6 @@ OC.L10N.register(
     "Server error" : "Zerbitzari akatsa",
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",
-    "API url is invalid" : "API url-a baliogabea da",
     "API secret is invalid" : "API sekretua baliogabea da"
 },
 "nplurals=2; plural=(n != 1);");

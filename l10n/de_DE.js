@@ -1,17 +1,14 @@
 OC.L10N.register(
     "bbb",
     {
-    "API url or secret not configured. Please contact your administrator." : "API-URL oder Geheimnis nicht konfiguriert. Bitte wenden Sie sich an Ihren Administrator.",
     "BigBlueButton Integration" : "BigBlueButton-Integration",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton-Integration für Nextcloud",
-    "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Diese App ermöglicht das Erstellen von Meetings mit einer externen Installation von [BigBlueButton] (https://bigbluebutton.org).\n\n* ** Raumeinrichtung ** Erstellen Sie mehrere Raumkonfigurationen mit Name, Begrüßungsnachricht, ...\n* ** Gast-Link teilen ** Teilen Sie den Raum-Link mit all Ihren Gästen\n* ** Benutzerdefinierte Präsentation ** Starten Sie einen Raum mit einer ausgewählten Präsentation in Ihrem Dateibrowser\n* ** Aufzeichnungen verwalten ** Bildschirm für Ihre Räume anzeigen, freigeben und löschen\n\nEntwickler gesucht! Wenn Sie Zeit haben, wäre es fantastisch, wenn Sie helfen könnten, diese Anwendung zu verbessern.\n\n* Diese App integriert BigBlueButton und ist nicht von BigBlueButton Inc. unterstützt oder zertifiziert. BigBlueButton und das BigBlueButton-Logo sind Marken von BigBlueButton Inc. *",
-    "Get your API url and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Besorgen Sie sich Ihre API-URL und Ihr Geheimnis, indem Sie \"sudo bbb-conf --secret\" auf Ihrem BigBlueButton-Server ausführen.",
-    "API url" : "API-URL",
+    "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Diese App ermöglicht das Erstellen von Meetings mit einer externen Installation von [BigBlueButton] (https://bigbluebutton.org).\n\n* ** Raumeinrichtung ** Erstellen Sie mehrere Raumkonfigurationen mit Name, Begrüßungsnachricht, ...\n* ** Gast-Link teilen ** Teilen Sie den Raum-Link mit all Ihren Gästen\n* ** Benutzerdefinierte Präsentation ** Öffnen Sie einen Raum mit einer ausgewählten Präsentation in Ihrem Dateibrowser\n* ** Aufzeichnungen verwalten ** Aufzeichnungen für Ihre Räume anzeigen, freigeben und löschen\n\nEntwickler gesucht! Wenn Sie Zeit haben, wäre es fantastisch, wenn Sie helfen könnten, diese Anwendung zu verbessern.\n\n* Diese App integriert BigBlueButton und ist nicht von BigBlueButton Inc. unterstützt oder zertifiziert. BigBlueButton und das BigBlueButton-Logo sind Marken von BigBlueButton Inc. *",
     "API secret" : "API-Geheimnis",
     "Save" : "Speichern",
     "Please enter your name!" : "Bitte geben Sie Ihren Namen ein!",
     "The name must be at least 3 characters long." : "Der Name muss mindestens 3 Zeichen lang sein.",
-    "displayname" : "Anzeigename",
+    "Display name" : "Anzeigename",
     "Name" : "Name",
     "Welcome" : "Willkommen",
     "Max" : "Max",
@@ -36,7 +33,6 @@ OC.L10N.register(
     "Server error" : "Serverfehler",
     "Settings saved" : "Einstellungen gespeichert",
     "Unexpected error occurred" : "Es ist ein unerwarteter Fehler aufgetreten",
-    "API url is invalid" : "API-URL ist ungültig",
     "API secret is invalid" : "API-Geheimnis ist ungültig"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,16 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
-    "API url or secret not configured. Please contact your administrator." : "לא הוגדר סוד ל־API. נא ליצור קשר עם ההנהלה.",
     "BigBlueButton Integration" : "שילוב עם BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "שילוב של BigBlueButton עם Nextcloud",
-    "Get your API url and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "ניתן לקבל את כתובת ה־API ואת הסוד שלך על ידי הפעלת „sudo bbb-conf --secret” בשרת ה־BigBlueButton שלך.",
-    "API url" : "כתובת API",
     "API secret" : "סוד API",
     "Save" : "שמור",
     "Please enter your name!" : "נא למלא את שמך!",
     "The name must be at least 3 characters long." : "אורך השם חייב להיות למעלה מ־3 תווים.",
-    "displayname" : "שם תצוגה",
     "Name" : "שם",
     "Welcome" : "ברוך בואך",
     "Max" : "מרבי",
@@ -35,7 +31,6 @@ OC.L10N.register(
     "Server error" : "שגיאת שרת",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
-    "API url is invalid" : "כתובת ה־API שגויה",
     "API secret is invalid" : "סוד ה־API שגוי"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");

@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Lagre",
+    "Display name" : "Visningsnavn",
     "Name" : "Navn",
     "Welcome" : "Velkommen",
     "Room name" : "Romnavn",

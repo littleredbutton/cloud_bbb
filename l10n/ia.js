@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Salveguardar",
+    "Display name" : "Monstrar nomine",
     "Name" : "Nomine",
     "Create" : "Crear",
     "Delete" : "Deler",

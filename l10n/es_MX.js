@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Guardar",
+    "Display name" : "Nombre a desplegar",
     "Name" : "Nombre",
     "Welcome" : "Bienvenido",
     "Room name" : "Nombre del cuarto",

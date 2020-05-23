@@ -1,15 +1,12 @@
 { "translations": {
-    "API url or secret not configured. Please contact your administrator." : "API saite vai slepenais kods nav uzstādīts. Lūdzu sazinieties ar administratoru.",
     "BigBlueButton Integration" : "BigBlueButton Integrācija",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrācija priekš Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Šī programma ļauj veidot video sapulces ar attālinātu [BigBlueButton](https://bigbluebutton.org) instalāciju.\n\n* **Sapulču telpu iestatīšana** Veidojiet sapulču telpu konfigurācijas ar nosaukumiem, sveicieniem, ...\n* **Kopīgo viesa saiti** Kopīgo sapulču telpu saiti jebkuram dalībniekam\n* **Pielāgotas prezentācijas** Startēt istabu ar īpaši izvēlētu jūsu prezentāciju\n* **Pārvaldīt ierakstus** Skati, kopīgo vai dzēs istabu ierakstus.\n\nVajag izstrādātājus! Ja tev ir laiks un vēlies palīdzēt uzlabot šo programmu.\n\n*Š\"i programma integrē BigBlueButton un tā nav atbalstīta vai sertificēta no BigBlueButton Inc. BigBlueButton un BigBlueButton Logo ir BigBlueButton Inc. preču zīmes.",
-    "Get your API url and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Iegūstiet API saitu slepeno kodu zipildot \"sudo bbb-conf --secret\" jūsu BigBlueButton serverī.",
-    "API url" : "API saite",
     "API secret" : "API slepenais kods",
     "Save" : "Saglabāt",
     "Please enter your name!" : "Ludzu ieraksties savu vārdu@",
     "The name must be at least 3 characters long." : "Vārdam jābūt vismaz 3 rakstzīmes garam.",
-    "displayname" : "parādāmais vārds",
+    "Display name" : "Ekrāna vārds",
     "Name" : "Vārds",
     "Welcome" : "Laipni lūdzam!",
     "Max" : "Maksimāli",
@@ -32,7 +29,6 @@
     "Server error" : "Servera kļūda",
     "Settings saved" : "Iestatījumi saglabāti",
     "Unexpected error occurred" : "Neparedzēta kļūda",
-    "API url is invalid" : "API saite nav pareiza",
     "API secret is invalid" : "API slepenais kods nav pareizs"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }

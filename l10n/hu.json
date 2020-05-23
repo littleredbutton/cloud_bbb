@@ -1,14 +1,11 @@
 { "translations": {
-    "API url or secret not configured. Please contact your administrator." : "API link vagy titok nincs konfigurálva. Kérem vegye fel a kapcsolatot rendszergazdájával.",
     "BigBlueButton Integration" : "BigBlueButton integráció",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integráció Nextcoud-hoz",
-    "Get your API url and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "API link és titok beszerzéséhez futtassa az alábbi parancsot BigBlueButton szerverén. \"sudo bbb-conf --secret\" ",
-    "API url" : "API link",
     "API secret" : "API titok",
     "Save" : "Mentés",
     "Please enter your name!" : "Kérlek add meg a neved!",
     "The name must be at least 3 characters long." : "A név legalább 3 karakter hosszúságú kell legyen.",
-    "displayname" : "névmegjelenítés",
+    "Display name" : "Név megjelenítés",
     "Name" : "Név",
     "Welcome" : "Üdvözöljük",
     "Max" : "Maximum",
@@ -18,6 +15,7 @@
     "Create" : "Létrehozás",
     "_%n participant_::_%n participants_" : ["%n résztvevő","%n résztvevő"],
     "Delete" : "Törlés",
+    "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Biztos benne hogy törli a \"{name}\"-t? Ezt nem lehet visszavonni.",
     "Delete \"{name}\"?" : "\"{name}\" törlése?",
     "Select target folder" : "Célmappa kiválasztása",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "Szoba URL tárolva itt \"{path}\", mint \"{filename}\".",
@@ -26,12 +24,12 @@
     "Error" : "Hiba",
     "URL to presentation was stored in \"{path}\" as \"{filename}\"." : "Prezentáció URL-je tárolva itt \"{path}\", mint \"{filename}\".",
     "URL to presentation could not be stored." : "Prezentáció URL-t nem lehet tárolni.",
+    "Are you sure you want to delete the recording from \"{startDate}\"? This operation can not be undone." : "Biztosan töröli szeretné a felvételt innen \"{startDate}\"? Ezt nem lehet visszavonni.",
     "Delete?" : "Törlés?",
     "Could not delete record" : "Nem lehet a felvételt törölni",
     "Server error" : "Kiszolgálóhiba",
     "Settings saved" : "Beállítások elmentve",
     "Unexpected error occurred" : "Váratlan hiba történt",
-    "API url is invalid" : "API link érvénytelen",
     "API secret is invalid" : "API titok érvénytelen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

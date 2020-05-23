@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Konservi",
+    "Display name" : "Vidiga nomo",
     "Name" : "Nomo",
     "Create" : "Krei",
     "Delete" : "Forigi",

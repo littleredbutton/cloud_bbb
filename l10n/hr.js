@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Spremi",
+    "Display name" : "Ime za prikaz",
     "Name" : "Naziv",
     "Welcome" : "Dobrodošli",
     "Create" : "Stvori",

@@ -1,14 +1,11 @@
 { "translations": {
-    "API url or secret not configured. Please contact your administrator." : "Посилання на API або пароль не налаштовано. Будь ласка, сконтактуйте з вашим адміністратором.",
     "BigBlueButton Integration" : "Інтеграція BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Інтеграція BigBlueButton для Nextcloud",
-    "Get your API url and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Щоб отримати ваше посилання на API або пароль, будь ласка, виконайте \"sudo bbb-conf --secret\" на вашому сервері BigBlueButton.",
-    "API url" : "Посилання на API",
     "API secret" : "Пароль API",
     "Save" : "Зберегти",
     "Please enter your name!" : "Будь ласка, зазначте ваше ім'я!",
     "The name must be at least 3 characters long." : "Ім'я має містити щонайменше 3 символи.",
-    "displayname" : "ім'я на екрані",
+    "Display name" : "Ім'я для відображення",
     "Name" : "Ім'я",
     "Welcome" : "Вітання",
     "Max" : "Щонайбільше",
@@ -33,7 +30,6 @@
     "Server error" : "Помилка серверу",
     "Settings saved" : "Налаштування збережено",
     "Unexpected error occurred" : "Неочікувана помилка",
-    "API url is invalid" : "Неправильне посилання на API",
     "API secret is invalid" : "Неправильний пароль API"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }

@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Ruaj",
+    "Display name" : "Shfaq emrin",
     "Name" : "Emri",
     "Welcome" : "Mirëseerdhët",
     "Room name" : "Emri i dhomës",

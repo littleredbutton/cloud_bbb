@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Salvesta",
+    "Display name" : "Kuvatav nimi",
     "Name" : "Nimi",
     "Create" : "Loo",
     "Delete" : "Kustuta",

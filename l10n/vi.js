@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Lưu",
+    "Display name" : "Tên hiển thị",
     "Name" : "Tên",
     "Create" : "Tạo mới",
     "Delete" : "Xóa",

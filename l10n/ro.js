@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Salvează",
+    "Display name" : "Nume afișat",
     "Name" : "Nume",
     "Welcome" : "Bun venit",
     "Create" : "Creează",

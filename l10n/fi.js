@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Tallenna",
+    "Display name" : "Näyttönimi",
     "Name" : "Nimi",
     "Welcome" : "Tervetuloa",
     "Room name" : "Huoneen nimi",
