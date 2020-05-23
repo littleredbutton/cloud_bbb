@@ -386,6 +386,8 @@ async function run() {
 	changeLog = await editChangeLog(changeLog);
 	console.log('✔ change log updated'.green);
 
+	console.log(changeLog);
+
 	console.log('Press any key to continue...');
 	await keypress();
 
