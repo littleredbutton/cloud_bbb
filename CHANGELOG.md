@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.3.0 (2020-05-23)
+### Added
+- [#1](https://github.com/sualko/cloud_bbb/issues/1) use direct share for presentation (bypass password requirement for shares)
+- [#2](https://github.com/sualko/cloud_bbb/issues/2) add translations (a big thank you to the awesome Nextcloud community)
+
+### Fixed
+- fix submit input field
+- [#34](https://github.com/sualko/cloud_bbb/issues/34) update bbb library
+
+### Misc
+- update screenshots
+- change icon order
+- change shortcut icon
+
 ## 0.2.0 (2020-05-17)
 ### Added
 - add option to store room url as shortcut
