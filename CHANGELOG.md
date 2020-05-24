@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.3.2 (2020-05-24)
+### Fix
+- add lang files to build
+
+### Misc
+- change title for Github release
+
 ## 0.3.1 (2020-05-23)
 ### Fixed
 - fix regression which prevents start with presentation
