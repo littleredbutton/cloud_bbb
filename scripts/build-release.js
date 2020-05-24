@@ -107,6 +107,7 @@ function createArchive(appId, fileBaseName) {
 	addDirectory('appinfo');
 	addDirectory('img');
 	addDirectory('js'),
+	addDirectory('l10n'),
 	addDirectory('lib');
 	addDirectory('templates');
 	addFile('COPYING');
