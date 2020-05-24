@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Stoor",
+    "Display name" : "Vertoonnaam",
     "Name" : "Naam",
     "Create" : "Skep",
     "Delete" : "Skrap",

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save" : "Сохранить",
     "Please enter your name!" : "Пожалуйста, введите ваше имя!",
     "The name must be at least 3 characters long." : "Имя должно быть длиной не менее трех символов.",
+    "Display name" : "Отображаемое имя",
     "Name" : "Название",
     "Welcome" : "Добро пожаловать",
     "Max" : "Макс",

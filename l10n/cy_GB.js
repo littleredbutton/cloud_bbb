@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Cadw",
+    "Display name" : "Enw Dangos",
     "Name" : "Enw",
     "Create" : "Creu",
     "Delete" : "Dileu",

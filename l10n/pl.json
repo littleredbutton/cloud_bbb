@@ -1,11 +1,15 @@
 { "translations": {
+    "API URL or secret not configured. Please contact your administrator." : "Adres URL interfejsu API lub klucz sekretny nie jest skonfigurowany. Skontaktuj się z administratorem.",
     "BigBlueButton Integration" : "BigBlueButton Integration",
     "BigBlueButton integration for Nextcloud" : "Integracja BigBlueButton dla Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Ta aplikacja pozwala na tworzenie spotkań z zewnętrzną instalacją [BigBlueButton](https://bigbluebutton.org).\n\n* **Konfiguracja pokoju** Utwórz wiele konfiguracji pokoju z nazwą, wiadomością powitalną...\n* **Udostępnij link dla gościa** Udostępnij link do pokoju wszystkim swoim gościom\n* **Prezentacja niestandardowa** Rozpocznij pokój z wybraną prezentacją w przeglądarce plików\n* **Zarządzaj nagraniami** Przeglądaj, udostępniaj i usuwaj nagrania do swoich pokoi\n\nDeweloper poszukuje! Jeśli masz czas, byłoby wspaniale, gdybyś mógł ulepszyć tę aplikację.\n\n*Ta aplikacja integruje BigBlueButton i nie jest zatwierdzona ani certyfikowana przez BigBlueButton Inc. BigBlueButton i logo BigBlueButton są znakami towarowymi firmy BigBlueButton Inc.*",
+    "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Uzyskaj adres URL interfejsu API i klucz sekretny, wykonując polecenie \"sudo bbb-conf --secret\" na serwerze BigBlueButton.",
+    "API URL" : "Adres URL interfejsu API",
     "API secret" : "Tajny interfejs API",
     "Save" : "Zapisz",
     "Please enter your name!" : "Wpisz swoją nazwę!",
     "The name must be at least 3 characters long." : "Nazwa musi zawierać co najmniej 3 znaki.",
+    "Display name" : "Nazwa wyświetlana",
     "Name" : "Nazwa",
     "Welcome" : "Witaj",
     "Max" : "Maks.",
@@ -30,6 +34,7 @@
     "Server error" : "Błąd serwera",
     "Settings saved" : "Zapisano ustawienia",
     "Unexpected error occurred" : "Wystąpił nieoczekiwany błąd",
+    "API URL is invalid" : "Adres URL interfejsu API jest nieprawidłowy",
     "API secret is invalid" : "Tajny interfejs API jest nieprawidłowy"
 },"pluralForm" :"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);"
 }

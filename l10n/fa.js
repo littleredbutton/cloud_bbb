@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "ذخیره",
+    "Display name" : "نام جهت نمایش",
     "Name" : "نام",
     "Welcome" : "خوش آمدی",
     "Create" : "ایجاد شده",

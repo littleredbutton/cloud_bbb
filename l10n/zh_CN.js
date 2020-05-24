@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "保存",
+    "Display name" : "显示名称",
     "Name" : "名称",
     "Welcome" : "欢迎",
     "Room name" : "房间名",

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save" : "Enregistrer",
     "Please enter your name!" : "Veuillez saisir votre nom !",
     "The name must be at least 3 characters long." : "Le nom doit contenir au moins 3 caractères.",
+    "Display name" : "Nom à afficher",
     "Name" : "Nom",
     "Welcome" : "Bienvenue",
     "Max" : "Max",

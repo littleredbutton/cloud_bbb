@@ -1,9 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "API URL or secret not configured. Please contact your administrator." : "Není nastavená URL adresa aplikačního programového rozhraní (API) nebo tajemství. Obraťte se na svého správce.",
     "BigBlueButton Integration" : "Napojení na BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Napojení na BigBlueButton pro Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Tato aplikace umožňuje vytvářet schůzky v externí instalaci [BigBlueButton](https://bigbluebutton.org).\n\n* **Vytvoření místnosti** Vytvářejte vícero nastavení pro místnosti s názvem, uvítací zprávou, …\n* **Sdílení odkazem pro hosta** Sdílejte odkaz na místnost se všemi vašimi hosty\n* **Uživatelsky určená prezentace** Zahajte místnost s vybranou prezentací z prohlížeče souborů\n* **Správa nahrávek** Zobrazujte, sdílejte a mažte nahrávky z vašich místnosti\n\nHledáme vývojáře! Pokud máte čas, bylo by skvělé pokud byste pomohli s vylepšováním této aplikace.\n\n*Tato aplikace napojuje na BigBlueButton a není doporučována ani ceritfikována BigBlueButton Inc. BigBlueButton a logo BigBlueButton jsou registrované obchodní značky společnosti BigBlueButton Inc.*",
+    "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "URL adresu API rozhraní a tajemství k němu získáte spuštěním příkazu „sudo bbb-conf --secret“ na serveru s BigBlueButton, který využíváte.",
+    "API URL" : "URL adresa API rozhraní",
     "API secret" : "Tajemství k API",
     "Save" : "Uložit",
     "Please enter your name!" : "Zadejte své jméno!",
@@ -33,6 +36,7 @@ OC.L10N.register(
     "Server error" : "Chyba serveru",
     "Settings saved" : "Nastavení uložena",
     "Unexpected error occurred" : "Došlo k neočekávané chybě",
+    "API URL is invalid" : "URL adresa aplikačního program. rozhraní (API) není platná",
     "API secret is invalid" : "Tajemství k API není platné"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

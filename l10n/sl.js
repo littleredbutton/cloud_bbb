@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save" : "Shrani",
     "Please enter your name!" : "Vpišite ime",
     "The name must be at least 3 characters long." : "Ime mora vsebovati vsaj 3 znake.",
+    "Display name" : "Prikazno ime",
     "Name" : "Ime",
     "Welcome" : "Dobrodošli",
     "Max" : "Največ",

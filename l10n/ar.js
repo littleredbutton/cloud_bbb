@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "حفظ",
+    "Display name" : "الاسم المعروض",
     "Name" : "الاسم",
     "Welcome" : "مرحباً",
     "Create" : "إنشاء",

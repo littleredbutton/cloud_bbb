@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "Įrašyti",
     "Please enter your name!" : "Įveskite savo vardą!",
+    "Display name" : "Rodomas vardas",
     "Name" : "Pavadinimas",
     "Welcome" : "Sveiki",
     "Room name" : "Kambario pavadinimas",

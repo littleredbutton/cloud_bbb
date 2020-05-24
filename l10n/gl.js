@@ -1,13 +1,17 @@
 OC.L10N.register(
     "bbb",
     {
+    "API URL or secret not configured. Please contact your administrator." : "URL ou secreto da API  sen configurar. Póñase en contacto co seu administrador.",
     "BigBlueButton Integration" : "Integración co BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integración para o Nextcloud co BigBlueButton",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Esta aplicación permite crear xuntanzas cunha instalación externa de [BigBlueButton] (https://bigbluebutton.org).\n\n* **Configuración de salas* Crear múltiples configuracións de salas con nome, mensaxe de benvida, ...\n* **Compartir a ligazón de convidados** Compartir a ligazón da sala con todos os teus convidados\n* **Presentación personalizada** Inicie unha sala cunha presentación seleccionada dende o seu navegadorr de ficheiros\n* **Xestionar as gravacións** Ver, compartir e eliminar as gravacións das súas salas\n\nBúscase desenvolvedor! Se tes tempo, sería fantástico se puideses axudar a mellorar esta aplicación.\n\n*Esta aplicación integra BigBlueButton e non está avaliada nin certificada por BigBlueButton Inc. BigBlueButton e o logotipo de BigBlueButton son marcas comerciais de BigBlueButton Inc.*",
+    "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Obter o URL e o secreto da API executando «sudo bbb-conf --secret» no servidor BigBlueButton.",
+    "API URL" : "URL da API",
     "API secret" : "Secreto da API",
     "Save" : "Gardar",
     "Please enter your name!" : "Introduza o seu nome",
     "The name must be at least 3 characters long." : "O nome debe ter como mínimo 3 caracteres.",
+    "Display name" : "Nome a amosar",
     "Name" : "Nome",
     "Welcome" : "Benvido",
     "Max" : "Máx",
@@ -32,6 +36,7 @@ OC.L10N.register(
     "Server error" : "Produciuse un erro de servidor",
     "Settings saved" : "Axustes gardados",
     "Unexpected error occurred" : "Produciuse un erro non agardado",
+    "API URL is invalid" : "O URL da API é incorrecto",
     "API secret is invalid" : "O secreto da API é incorrecto"
 },
 "nplurals=2; plural=(n != 1);");
