@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "BigBlueButton Integration" : "BigBlueButton integrazioa",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrazioa Nextclouderako",
+    "API URL" : "API URLa",
     "API secret" : "API sekretua",
     "Save" : "Gorde",
     "Please enter your name!" : "Mesedez sartu zure izena!",
@@ -26,6 +27,7 @@ OC.L10N.register(
     "Server error" : "Zerbitzari akatsa",
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",
+    "API URL is invalid" : "API URLa baliogabea da",
     "API secret is invalid" : "API sekretua baliogabea da"
 },
 "nplurals=2; plural=(n != 1);");

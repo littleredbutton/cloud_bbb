@@ -1,9 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "API URL or secret not configured. Please contact your administrator." : "URL ou senha da API não configurada. Entre em contato com o administrador.",
     "BigBlueButton Integration" : "Integração BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integração BigBlueButton para Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Este aplicativo permite criar reuniões com uma instalação externa do [BigBlueButton] (https://bigbluebutton.org).\n\n* **Configuração da Sala** Crie várias configurações de sala com nome, mensagens de boas vindas, ...\n* **Compartilhe o link para convidados** Compartilhe o link da sala com todos os seus convidados\n* **Apresentações personalizadas** Inicie uma sala com uma apresentação selecionada do navegador de arquivos\n* **Gerencie gravações** Veja, compartilhe e exclua gravações das suas salas\n\nProcura-se desenvolvedores! Se você tiver tempo, sua ajuda para melhorar este aplicativo seria incrível!\n\n*Este aplicativo integra o BigBlueButton e não é endossado ou certificado pela BigBlueButton Inc. BigBlueButton e seu logotipo são marcas comerciais da BigBlueButton Inc.*",
+    "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Obtenha a URL e a senha da API executando \"sudo bbb-conf --secret\" no servidor BigBlueButton.",
+    "API URL" : "URL da API",
     "API secret" : "Senha da API",
     "Save" : "Salvar",
     "Please enter your name!" : "Digite seu nome!",
@@ -18,6 +21,7 @@ OC.L10N.register(
     "Create" : "Criar",
     "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
     "Delete" : "Excluir",
+    "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Quer realmente excluir \"{name}\"? Esta operação não pode ser desfeita.",
     "Delete \"{name}\"?" : "Excluir \"{name}\"?",
     "Select target folder" : "Selecione a pasta destino",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "A URL da sala foi guardada em \"{path}\" como \"{filename}\".",
@@ -26,11 +30,13 @@ OC.L10N.register(
     "Error" : "Erro",
     "URL to presentation was stored in \"{path}\" as \"{filename}\"." : "A URL da apresentação foi guardada em \"{path}\" como \"{filename}\".",
     "URL to presentation could not be stored." : "A URL da apresentação não pôde ser guardada.",
+    "Are you sure you want to delete the recording from \"{startDate}\"? This operation can not be undone." : "Quer realmente excluir a gravação de \"{startDate}\"? Esta operação não pode ser desfeita.",
     "Delete?" : "Excluir?",
     "Could not delete record" : "Não foi possível excluir a gravação",
     "Server error" : "Erro no servidor",
     "Settings saved" : "Configurações salvas",
     "Unexpected error occurred" : "Ocorreu um erro inesperado",
+    "API URL is invalid" : "URL da API inválida",
     "API secret is invalid" : "A senha da API é inválida"
 },
 "nplurals=2; plural=(n > 1);");

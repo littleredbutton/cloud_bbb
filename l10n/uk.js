@@ -1,8 +1,10 @@
 OC.L10N.register(
     "bbb",
     {
+    "API URL or secret not configured. Please contact your administrator." : "Не налаштовано посилання API або пароль. Будь ласка, сконтактуйте з адміністратором.",
     "BigBlueButton Integration" : "Інтеграція BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Інтеграція BigBlueButton для Nextcloud",
+    "API URL" : "Посилання API",
     "API secret" : "Пароль API",
     "Save" : "Зберегти",
     "Please enter your name!" : "Будь ласка, зазначте ваше ім'я!",
@@ -32,6 +34,7 @@ OC.L10N.register(
     "Server error" : "Помилка серверу",
     "Settings saved" : "Налаштування збережено",
     "Unexpected error occurred" : "Неочікувана помилка",
+    "API URL is invalid" : "Посилання API недійсне",
     "API secret is invalid" : "Неправильний пароль API"
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");
