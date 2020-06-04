@@ -3,18 +3,21 @@ namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\BigBlueButton\Presentation;
+use OCA\BigBlueButton\NotFoundException;
 use OCP\AppFramework\Http\RedirectResponse;
-use OCP\AppFramework\PublicShareController;
 use OCP\IRequest;
 use OCP\ISession;
 use OCP\IUserSession;
 use OCP\IConfig;
-use OCP\Files\NotFoundException;
 use OCA\BigBlueButton\Service\RoomService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
 
-class JoinController extends PublicShareController
+class JoinController extends Controller
 {
+	/** @var string */
+	protected $token;
+
 	/** @var RoomService */
 	private $service;
 
@@ -44,28 +47,16 @@ class JoinController extends PublicShareController
 		$this->api = $api;
 	}
 
-	protected function getPasswordHash(): string
+	public function setToken(string $token)
 	{
-		return '';
+		$this->token = $token;
 	}
 
-	/**
-	* Validate the token of this share. If the token is invalid this controller
-	* will return a 404.
-	*/
 	public function isValidToken(): bool
 	{
-		$room = $this->service->findByUid($this->getToken());
+		$room = $this->service->findByUid($this->token);
 
 		return $room !== null;
-	}
-
-	/**
-	 * Allows you to specify if this share is password protected
-	 */
-	protected function isPasswordProtected(): bool
-	{
-		return false;
 	}
 
 	/**
@@ -74,7 +65,7 @@ class JoinController extends PublicShareController
 	 */
 	public function index($displayname, $u = '', $filename = '')
 	{
-		$room = $this->service->findByUid($this->getToken());
+		$room = $this->service->findByUid($this->token);
 
 		if ($room === null) {
 			throw new NotFoundException();
