@@ -75,15 +75,20 @@ class RoomService
 		return $this->mapper->insert($room);
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $userId)
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $userId)
 	{
 		try {
 			$room = $this->mapper->find($id, $userId);
+
+			if ($room->access !== $access) {
+				$room->setPassword($access === Room::ACCESS_PASSWORD ? $this->humanReadableRandom(8) : null);
+			}
 
 			$room->setName($name);
 			$room->setWelcome($welcome);
 			$room->setMaxParticipants($maxParticipants);
 			$room->setRecord($record);
+			$room->setAccess($access);
 			$room->setUserId($userId);
 
 			return $this->mapper->update($room);
@@ -101,5 +106,10 @@ class RoomService
 		} catch (Exception $e) {
 			$this->handleException($e);
 		}
+	}
+
+	private function humanReadableRandom($length)
+	{
+		return \OC::$server->getSecureRandom()->generate($length, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE);
 	}
 }

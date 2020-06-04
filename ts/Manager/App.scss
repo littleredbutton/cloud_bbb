@@ -168,8 +168,14 @@
   min-width: 300px;
   margin: 2em 0;
 
-  input:not([type="checkbox"]) {
+  input:not([type="checkbox"]),
+  select {
     width: 100%;
+    display: block;
+  }
+
+  [readonly] {
+    background-color: #f1f1f1;
   }
 
   em {

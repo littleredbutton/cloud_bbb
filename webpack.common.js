@@ -11,6 +11,9 @@ module.exports = {
 		manager: [
 			path.join(__dirname, 'ts', 'Manager', 'index.tsx'),
 		],
+		join: [
+			path.join(__dirname, 'ts', 'join.ts'),
+		]
 	},
 	output: {
 		path: path.resolve(__dirname, './js'),

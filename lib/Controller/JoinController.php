@@ -8,6 +8,7 @@ use OCA\BigBlueButton\NotFoundException;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IRequest;
 use OCP\ISession;
+use OCP\IURLGenerator;
 use OCP\IUserSession;
 use OCP\IConfig;
 use OCA\BigBlueButton\Service\RoomService;
@@ -25,6 +26,9 @@ class JoinController extends Controller
 	/** @var RoomService */
 	private $service;
 
+	/** @var IURLGenerator */
+	private $urlGenerator;
+
 	/** @var IUserSession */
 	private $userSession;
 
@@ -39,6 +43,7 @@ class JoinController extends Controller
 		IRequest $request,
 		ISession $session,
 		RoomService $service,
+		IURLGenerator $urlGenerator,
 		IUserSession $userSession,
 		IConfig $config,
 		API $api
@@ -46,6 +51,7 @@ class JoinController extends Controller
 		parent::__construct($appName, $request, $session);
 
 		$this->service = $service;
+		$this->urlGenerator = $urlGenerator;
 		$this->userSession = $userSession;
 		$this->config = $config;
 		$this->api = $api;
@@ -68,7 +74,7 @@ class JoinController extends Controller
 	 * @PublicPage
 	 * @NoCSRFRequired
 	 */
-	public function index($displayname, $u = '', $filename = '')
+	public function index($displayname, $u = '', $filename = '', $password = '')
 	{
 		$room = $this->getRoom();
 
@@ -87,10 +93,21 @@ class JoinController extends Controller
 			if ($userId === $room->userId) {
 				$presentation = new Presentation($u, $filename);
 			}
-		} elseif (empty($displayname) || strlen($displayname) < 3) {
-			$response = new TemplateResponse($this->appName, 'publicdisplayname', [
+		} elseif ($room->access === Room::ACCESS_INTERNAL) {
+			return new RedirectResponse(
+				$this->urlGenerator->linkToRoute('core.login.showLoginForm', [
+					'redirect_url' => $this->urlGenerator->linkToRoute(
+						'bbb.join.index',
+						['token' => $this->token]
+					),
+				])
+			);
+		} elseif (empty($displayname) || strlen($displayname) < 3 || ($room->access === Room::ACCESS_PASSWORD && $password !== $room->password)) {
+			$response = new TemplateResponse($this->appName, 'join', [
 				'room'             => $room->name,
-				'wrongdisplayname' => !empty($displayname) && strlen($displayname) < 3
+				'wrongdisplayname' => !empty($displayname) && strlen($displayname) < 3,
+				'passwordRequired' => $room->access === Room::ACCESS_PASSWORD,
+				'wrongPassword'    => $password !== $room->password && $password !== '',
 			], 'guest');
 
 			$this->addFormActionDomain($response);
@@ -116,7 +133,7 @@ class JoinController extends Controller
 		$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
 	}
 
-	private function getRoom(): Room
+	private function getRoom(): ?Room
 	{
 		if ($this->room === null) {
 			$this->room = $this->service->findByUid($this->token);

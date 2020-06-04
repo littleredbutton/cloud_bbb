@@ -1,5 +1,13 @@
 import axios from '@nextcloud/axios';
 
+export enum Access {
+	Public = 'public',
+	Password = 'password',
+	WaitingRoom = 'waiting_room',
+	Internal = 'internal',
+	InternalRestricted = 'internal_restricted',
+}
+
 export interface Room {
 	id: number;
 	uid: string;
@@ -7,6 +15,8 @@ export interface Room {
 	welcome: string;
 	maxParticipants: number;
 	record: boolean;
+	access: Access;
+	password?: string;
 }
 
 export type Recording = {

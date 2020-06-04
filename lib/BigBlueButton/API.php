@@ -58,6 +58,7 @@ class API
 		$joinMeetingParams->setCreationTime($creationTime);
 		$joinMeetingParams->setJoinViaHtml5(true);
 		$joinMeetingParams->setRedirect(true);
+		$joinMeetingParams->setGuest($uid === null);
 
 		if ($uid) {
 			$joinMeetingParams->setUserId($uid);
@@ -112,6 +113,10 @@ class API
 
 		if ($presentation !== null && $presentation->isValid()) {
 			$createMeetingParams->addPresentation($presentation->getUrl(), null, $presentation->getFilename());
+		}
+
+		if ($room->access === Room::ACCESS_WAITING_ROOM) {
+			$createMeetingParams->setGuestPolicyAskModerator();
 		}
 
 		return $createMeetingParams;
