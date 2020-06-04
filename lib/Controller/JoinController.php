@@ -3,6 +3,7 @@ namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\BigBlueButton\Presentation;
+use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\NotFoundException;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IRequest;
@@ -17,6 +18,9 @@ class JoinController extends Controller
 {
 	/** @var string */
 	protected $token;
+
+	/** @var Room */
+	protected $room;
 
 	/** @var RoomService */
 	private $service;
@@ -50,11 +54,12 @@ class JoinController extends Controller
 	public function setToken(string $token)
 	{
 		$this->token = $token;
+		$this->room = null;
 	}
 
 	public function isValidToken(): bool
 	{
-		$room = $this->service->findByUid($this->token);
+		$room = $this->getRoom();
 
 		return $room !== null;
 	}
@@ -65,7 +70,7 @@ class JoinController extends Controller
 	 */
 	public function index($displayname, $u = '', $filename = '')
 	{
-		$room = $this->service->findByUid($this->token);
+		$room = $this->getRoom();
 
 		if ($room === null) {
 			throw new NotFoundException();
@@ -109,5 +114,14 @@ class JoinController extends Controller
 		}
 
 		$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
+	}
+
+	private function getRoom(): Room
+	{
+		if ($this->room === null) {
+			$this->room = $this->service->findByUid($this->token);
+		}
+
+		return $this->room;
 	}
 }
