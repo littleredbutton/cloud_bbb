@@ -72,7 +72,7 @@ const App: React.FC<Props> = () => {
 	}
 
 	function updateRoom(room: Room) {
-		api.updateRoom(room).then(updatedRoom => {
+		return api.updateRoom(room).then(updatedRoom => {
 			setRooms(rooms.map(room => {
 				if (room.id === updatedRoom.id) {
 					return updatedRoom;
@@ -101,9 +101,6 @@ const App: React.FC<Props> = () => {
 						<th onClick={() => onOrderBy('name')}>
 							{t('bbb', 'Name')} <SortArrow name='name' value={orderBy} direction={sortOrder} />
 						</th>
-						<th onClick={() => onOrderBy('welcome')}>
-							{t('bbb', 'Welcome')} <SortArrow name='welcome' value={orderBy} direction={sortOrder} />
-						</th>
 						<th onClick={() => onOrderBy('maxParticipants')}>
 							{t('bbb', 'Max')} <SortArrow name='maxParticipants' value={orderBy} direction={sortOrder} />
 						</th>
@@ -113,6 +110,7 @@ const App: React.FC<Props> = () => {
 						<th>
 							{t('bbb', 'Recordings')}
 						</th>
+						<th />
 						<th />
 					</tr>
 				</thead>

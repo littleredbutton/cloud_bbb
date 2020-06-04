@@ -7,7 +7,9 @@ import {
 export interface SubmitInputProps extends InputHTMLAttributes<HTMLInputElement> {
 	type?: 'text' | 'number';
 	initialValue?: string;
+	name: string;
 	onSubmitValue: (value: string) => void;
+	focus?: boolean;
 }
 
 export interface SubmitInputState {
@@ -21,7 +23,7 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 
 	constructor(props: SubmitInputProps) {
 		super(props);
-		this.state.value = props.initialValue || '';
+		this.state.value = props.initialValue ?? '';
 	}
 
 	onSubmit = (event: SyntheticEvent<any>) => {
@@ -33,7 +35,12 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 		return <form onSubmit={this.onSubmit}>
 			<input value={this.state.value}
 				   type={this.props.type}
-				   onChange={event => this.setState({value: event.currentTarget.value})}/>
+				   id={`bbb-${this.props.name}`}
+				   name={this.props.name}
+				   onChange={event => this.setState({value: event.currentTarget.value})}
+				   onBlur={() => this.props.onSubmitValue(this.state.value)}
+				   autoFocus={this.props.focus}
+				   />
 		</form>;
 	}
 }

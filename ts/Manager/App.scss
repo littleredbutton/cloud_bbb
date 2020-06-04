@@ -163,3 +163,16 @@
     }
   }
 }
+
+.bbb-form-element {
+  min-width: 300px;
+  margin: 2em 0;
+
+  input:not([type="checkbox"]) {
+    width: 100%;
+  }
+
+  em {
+    white-space: normal;
+  }
+}
