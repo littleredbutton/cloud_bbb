@@ -4,42 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36066ac704418191a14ede152a1f91c6",
+    "content-hash": "e47f0ae5a3ec5052804c34fe2fe1d186",
     "packages": [
         {
-            "name": "bigbluebutton/bigbluebutton-api-php",
-            "version": "dev-master",
+            "name": "littleredbutton/bigbluebutton-api-php",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/littleredbutton/bigbluebutton-api-php.git",
-                "reference": "9d65e377199f3262605685c87483f249357ab55e"
+                "reference": "73d2875efabf38e9023dbda3dae1dec99400e7fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/littleredbutton/bigbluebutton-api-php/zipball/9d65e377199f3262605685c87483f249357ab55e",
-                "reference": "9d65e377199f3262605685c87483f249357ab55e",
+                "url": "https://api.github.com/repos/littleredbutton/bigbluebutton-api-php/zipball/73d2875efabf38e9023dbda3dae1dec99400e7fc",
+                "reference": "73d2875efabf38e9023dbda3dae1dec99400e7fc",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-simplexml": "*",
                 "php": "^7.2"
             },
             "require-dev": {
-                "composer/composer": "1.7.*@dev",
+                "brainmaestro/composer-git-hooks": "^2.8",
+                "composer/composer": "^1.10.0",
                 "friendsofphp/php-cs-fixer": "2.*",
-                "fzaninotto/faker": "~1.8.0",
-                "php-coveralls/php-coveralls": "2.1.*",
-                "phpunit/phpunit": "6.*",
+                "fzaninotto/faker": "~1.9.0",
+                "php-coveralls/php-coveralls": "~2.2.0",
+                "phpunit/phpunit": "^8",
                 "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "vendor/bin/php-cs-fixer fix --dry-run --allow-risky=yes"
+                    ],
+                    "pre-push": [
+                        "vendor/bin/phpunit"
+                    ],
+                    "post-merge": "composer install",
+                    "post-checkout": "composer install"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "BigBlueButton\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -47,6 +62,31 @@
                 {
                     "name": "Ghazi Triki",
                     "email": "ghazi.nocturne@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Klaus Herberth",
+                    "email": "klaus@jsxc.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Samuel Weirich",
+                    "email": "samuel@coding-space.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jignesh Joisar",
+                    "email": "jigneshjoisar@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Pablo Ogando",
+                    "email": "pablo.ogando@teltek.es",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alfonso Rodríguez",
+                    "email": "arodriguez@teltek.es",
                     "role": "Developer"
                 }
             ],
@@ -57,11 +97,7 @@
                 "bbb",
                 "bigbluebutton"
             ],
-            "support": {
-                "source": "https://github.com/littleredbutton/bigbluebutton-api-php/tree/master",
-                "issues": "https://github.com/littleredbutton/bigbluebutton-api-php/issues"
-            },
-            "time": "2020-05-21T12:16:07+00:00"
+            "time": "2020-05-26T07:11:31+00:00"
         }
     ],
     "packages-dev": [
@@ -3023,9 +3059,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "bigbluebutton/bigbluebutton-api-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
