@@ -63,10 +63,10 @@ const App: React.FC<Props> = () => {
 
 	function addRoom(name: string) {
 		if (!name) {
-			return;
+			return Promise.resolve();
 		}
 
-		api.createRoom(name).then(room => {
+		return api.createRoom(name).then(room => {
 			setRooms(rooms.concat([room]));
 		});
 	}
