@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Spremi",
     "Display name" : "Ime za prikaz",
+    "Password" : "Zaporka",
+    "Join" : "Pridruži se",
     "Name" : "Naziv",
+    "Edit" : "Uredi",
     "Welcome" : "Dobrodošli",
+    "Access" : "Pristup",
+    "Public" : "Javna",
     "Create" : "Stvori",
     "Delete" : "Izbriši",
     "Error" : "Pogreška",

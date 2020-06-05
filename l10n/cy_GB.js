@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Save" : "Cadw",
     "Display name" : "Enw Dangos",
+    "Password" : "Cyfrinair",
     "Name" : "Enw",
+    "Edit" : "Golygu",
     "Create" : "Creu",
     "Delete" : "Dileu",
     "Error" : "Gwall"

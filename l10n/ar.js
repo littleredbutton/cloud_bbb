@@ -3,8 +3,12 @@ OC.L10N.register(
     {
     "Save" : "حفظ",
     "Display name" : "الاسم المعروض",
+    "Password" : "كلمة السر",
     "Name" : "الاسم",
+    "Edit" : "تعديل",
     "Welcome" : "مرحباً",
+    "Access" : "النفاذ",
+    "Public" : "للعامة",
     "Create" : "إنشاء",
     "Delete" : "حذف ",
     "Error" : "خطأ",

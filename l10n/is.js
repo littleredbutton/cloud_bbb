@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Vista",
     "Display name" : "Birtingarnafn",
+    "Password" : "Lykilorð",
+    "Join" : "Taka þátt",
     "Name" : "Nafn",
+    "Edit" : "Breyta",
     "Welcome" : "Velkomin",
+    "Access" : "Aðgangur",
+    "Public" : "Opinbert",
     "Create" : "Búa til",
     "Delete" : "Eyða",
     "Error" : "Villa",

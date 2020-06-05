@@ -3,8 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Guardar",
     "Display name" : "Nombre para mostrar",
+    "Password" : "Contraseña",
     "Name" : "Nombre",
+    "Edit" : "Editar",
     "Welcome" : "Bienvenido",
+    "Public" : "Público",
     "Create" : "Crear",
     "Delete" : "Eliminar",
     "Error" : "Error",

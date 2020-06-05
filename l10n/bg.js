@@ -3,7 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Запазване",
     "Display name" : "Вписване като",
+    "Password" : "Парола",
+    "Join" : "Влез",
     "Name" : "Име",
+    "Edit" : "Променяне",
+    "Public" : "Публично",
     "Room name" : "Име на стаята",
     "Create" : "Създай",
     "Delete" : "Изтриване",

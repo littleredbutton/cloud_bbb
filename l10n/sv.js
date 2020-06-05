@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Spara",
     "Display name" : "Visningsnamn",
+    "Password" : "Lösenord",
+    "Join" : "Gå med",
     "Name" : "Namn",
+    "Edit" : "Redigera",
     "Welcome" : "Välkommen",
+    "Access" : "Åtkomst",
+    "Public" : "Offentlig",
     "Room name" : "Rumsnamn",
     "Create" : "Skapa",
     "Delete" : "Radera",

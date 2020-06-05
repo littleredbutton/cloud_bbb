@@ -3,7 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Salvesta",
     "Display name" : "Kuvatav nimi",
+    "Password" : "Parool",
     "Name" : "Nimi",
+    "Edit" : "Redigeeri",
+    "Access" : "Ligipääs",
+    "Public" : "Avalik",
     "Create" : "Loo",
     "Delete" : "Kustuta",
     "Error" : "Viga",

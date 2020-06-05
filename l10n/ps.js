@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "ساتل",
+    "Password" : "پاسورډ",
     "Name" : "نوم",
     "Delete" : "ړنګول",
     "Error" : "شسیب"

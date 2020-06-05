@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Save" : "Guardar",
     "Display name" : "Nome",
+    "Password" : "Password",
     "Name" : "Nome",
+    "Edit" : "Editar",
     "Welcome" : "Afáyate",
     "Create" : "Crear",
     "Delete" : "Desaniciar",

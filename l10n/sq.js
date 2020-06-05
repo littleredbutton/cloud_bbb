@@ -3,8 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Ruaj",
     "Display name" : "Shfaq emrin",
+    "Password" : "Fjalëkalim",
     "Name" : "Emri",
+    "Edit" : "Përpuno",
     "Welcome" : "Mirëseerdhët",
+    "Public" : "Publik",
     "Room name" : "Emri i dhomës",
     "Create" : "Krijo",
     "Delete" : "Delete",

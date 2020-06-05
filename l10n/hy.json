@@ -1,6 +1,8 @@
 { "translations": {
     "Save" : "Պահպանել",
+    "Password" : "Գաղտնաբառ",
     "Name" : "Անուն",
+    "Edit" : "մշակել",
     "Create" : "Ստեղծել",
     "Delete" : "հեռացնել",
     "Error" : "Սխալ"

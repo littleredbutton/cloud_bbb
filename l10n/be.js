@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Save",
+    "Password" : "Password",
     "Delete" : "Delete",
     "Error" : "Памылка"
 },
