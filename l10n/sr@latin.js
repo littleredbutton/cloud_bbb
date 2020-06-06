@@ -2,7 +2,9 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Sačuvaj",
+    "Password" : "Lozinka",
     "Name" : "Ime",
+    "Edit" : "Izmeni",
     "Welcome" : "Dobro došli",
     "Create" : "Napravi",
     "Delete" : "Obriši",

@@ -3,8 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Хадгалах",
     "Display name" : "Харагдах нэр",
+    "Password" : "Нууц үг",
     "Name" : "Нэр",
+    "Edit" : "засварлах",
     "Welcome" : "Тавтай морил",
+    "Public" : "Нийтийн",
     "Create" : "Үүсгэх",
     "Delete" : "Устгах",
     "Error" : "Алдаа",

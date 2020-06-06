@@ -2,7 +2,10 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Spremi",
+    "Password" : "Lozinka",
     "Name" : "Ime",
+    "Edit" : "Izmjeni",
+    "Public" : "Javno",
     "Create" : "Ustvari",
     "Delete" : "Obriši",
     "Error" : "Greška"

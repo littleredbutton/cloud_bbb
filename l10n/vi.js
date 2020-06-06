@@ -3,7 +3,10 @@ OC.L10N.register(
     {
     "Save" : "Lưu",
     "Display name" : "Tên hiển thị",
+    "Password" : "Mật khẩu",
     "Name" : "Tên",
+    "Edit" : "Chỉnh sửa",
+    "Public" : "Công khai",
     "Create" : "Tạo mới",
     "Delete" : "Xóa",
     "Error" : "Lỗi",

@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Lagre",
     "Display name" : "Visningsnavn",
+    "Password" : "Passord",
+    "Join" : "Bli med",
     "Name" : "Navn",
+    "Edit" : "Rediger",
     "Welcome" : "Velkommen",
+    "Access" : "Tilgang",
+    "Public" : "Offentlig",
     "Room name" : "Romnavn",
     "Create" : "Ny",
     "Delete" : "Slett",

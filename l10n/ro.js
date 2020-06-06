@@ -3,8 +3,11 @@ OC.L10N.register(
     {
     "Save" : "Salvează",
     "Display name" : "Nume afișat",
+    "Password" : "Parolă",
     "Name" : "Nume",
+    "Edit" : "Editare",
     "Welcome" : "Bun venit",
+    "Public" : "Public",
     "Create" : "Creează",
     "Delete" : "Șterge",
     "Error" : "Eroare",

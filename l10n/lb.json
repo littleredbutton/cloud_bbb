@@ -1,6 +1,8 @@
 { "translations": {
     "Save" : "Späicheren",
+    "Password" : "Passwuert",
     "Name" : "Numm",
+    "Edit" : "Änneren",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
     "Error" : "Fehler"

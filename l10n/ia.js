@@ -3,7 +3,10 @@ OC.L10N.register(
     {
     "Save" : "Salveguardar",
     "Display name" : "Monstrar nomine",
+    "Password" : "Contrasigno",
     "Name" : "Nomine",
+    "Edit" : "Modificar",
+    "Public" : "Public",
     "Create" : "Crear",
     "Delete" : "Deler",
     "Error" : "Error",

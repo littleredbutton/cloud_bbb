@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "保存",
     "Display name" : "显示名称",
+    "Password" : "密码",
+    "Join" : "加入",
     "Name" : "名称",
+    "Edit" : "编辑",
     "Welcome" : "欢迎",
+    "Access" : "投票范围",
+    "Public" : "公开",
     "Room name" : "房间名",
     "Create" : "创建",
     "Delete" : "删除",

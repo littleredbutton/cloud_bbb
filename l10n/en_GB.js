@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Save",
     "Display name" : "Display name",
+    "Password" : "Password",
+    "Join" : "Join",
     "Name" : "Name",
+    "Edit" : "Edit",
     "Welcome" : "Welcome",
+    "Access" : "Access",
+    "Public" : "Public",
     "Room name" : "Room name",
     "Create" : "Create",
     "Delete" : "Delete",

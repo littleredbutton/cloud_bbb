@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Gem",
     "Display name" : "Vist navn",
+    "Password" : "Adgangskode",
+    "Join" : "Deltag",
     "Name" : "Navn",
+    "Edit" : "Rediger",
     "Welcome" : "Velkommen",
+    "Access" : "Adgang",
+    "Public" : "Offentlig",
     "Create" : "Opret",
     "Delete" : "Slet",
     "Error" : "Fejl",

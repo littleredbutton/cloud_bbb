@@ -1,8 +1,10 @@
 { "translations": {
     "Save" : "ساقلا",
+    "Password" : "ئىم",
     "Name" : "ئاتى",
+    "Edit" : "تەھرىر",
     "Create" : "قۇر",
     "Delete" : "ئۆچۈر",
     "Error" : "خاتالىق"
-},"pluralForm" :"nplurals=1; plural=0;"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

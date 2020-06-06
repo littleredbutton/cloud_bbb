@@ -1,8 +1,12 @@
 { "translations": {
     "Save" : "შენახვა",
     "Display name" : "დისპლეი სახელი",
+    "Password" : "პაროლი",
     "Name" : "სახელი",
+    "Edit" : "ცვლილება",
     "Welcome" : "კეთილი იყოს თქვენი მობრძანება",
+    "Access" : "წვდომა",
+    "Public" : "ღია",
     "Room name" : "ოთახის სახელი",
     "Create" : "შექმნა",
     "Delete" : "წაშლა",

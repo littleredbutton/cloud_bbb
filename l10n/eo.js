@@ -3,7 +3,12 @@ OC.L10N.register(
     {
     "Save" : "Konservi",
     "Display name" : "Vidiga nomo",
+    "Password" : "Pasvorto",
+    "Join" : "Aliĝi",
     "Name" : "Nomo",
+    "Edit" : "Modifi",
+    "Access" : "Aliro",
+    "Public" : "Publika",
     "Create" : "Krei",
     "Delete" : "Forigi",
     "Error" : "Eraro",

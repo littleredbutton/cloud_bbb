@@ -1,7 +1,10 @@
 { "translations": {
     "Save" : "Stoor",
     "Display name" : "Vertoonnaam",
+    "Password" : "Wagwoord",
+    "Join" : "Sluit aan",
     "Name" : "Naam",
+    "Edit" : "Wysig",
     "Create" : "Skep",
     "Delete" : "Skrap",
     "Error" : "Fout",

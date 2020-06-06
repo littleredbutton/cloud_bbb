@@ -3,8 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Сачувај",
     "Display name" : "Име за приказ",
+    "Password" : "Лозинка",
+    "Join" : "Придружи се",
     "Name" : "Име",
+    "Edit" : "Измени",
     "Welcome" : "Добро дошли",
+    "Access" : "Приступ",
+    "Public" : "Јавно",
     "Room name" : "Име собе",
     "Create" : "Направи",
     "Delete" : "Избриши",
