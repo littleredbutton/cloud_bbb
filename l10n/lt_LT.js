@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "BigBlueButton Integration" : "BigBlueButton integracija",
+    "API URL" : "API URL",
     "Save" : "Įrašyti",
     "Please enter your name!" : "Įveskite savo vardą!",
     "Display name" : "Rodomas vardas",
