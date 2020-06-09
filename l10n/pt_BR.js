@@ -22,6 +22,7 @@ OC.L10N.register(
     "Welcome" : "Bem-vindo",
     "Access" : "Acesso",
     "Public" : "Público",
+    "Internal" : "Interno",
     "Room name" : "Nome da sala",
     "Create" : "Criar",
     "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
