@@ -12,4 +12,5 @@ script:
   - yarn install
   - yarn composer:install:dev
   - yarn lint
+  - yarn test
   - yarn commitlint-travis
