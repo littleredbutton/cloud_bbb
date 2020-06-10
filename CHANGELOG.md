@@ -6,6 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.4.0 (2020-06-10)
+### Added
+- [#10](https://github.com/sualko/cloud_bbb/issues/10)[#24](https://github.com/sualko/cloud_bbb/issues/24) add access policy
+- move room settings to dialog
+
+### Fixed
+- log failing api request
+- [#14](https://github.com/sualko/cloud_bbb/issues/14) room creation error handling
+- [#20](https://github.com/sualko/cloud_bbb/issues/20) remove dependency on shares
+
+### Misc
+- run tests before push
+- add yarn test
+- update phpunit
+- update bbb api
+- ignore tx-robot commits if linting
+- reduce db requests
+
 ## 0.3.2 (2020-05-24)
 ### Fix
 - add lang files to build
