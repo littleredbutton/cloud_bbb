@@ -76,12 +76,12 @@ class API
 	public function createMeeting(Room $room, Presentation $presentation = null)
 	{
 		$bbb = $this->getServer();
+		$meetingParams = $this->buildMeetingParams($room, $presentation);
 
 		try {
-			$response = $bbb->createMeeting($this->buildMeetingParams($room, $presentation));
+			$response = $bbb->createMeeting($meetingParams);
 		} catch (\Exception $e) {
-			throw $e;
-			throw new \Exception('Can not process create request');
+			throw new \Exception('Can not process create request: ' . $bbb->getCreateMeetingUrl($meetingParams));
 		}
 
 		if (!$response->success()) {
@@ -91,7 +91,7 @@ class API
 		return $response->getCreationTime();
 	}
 
-	private function buildMeetingParams(Room $room, Presentation $presentation = null)
+	private function buildMeetingParams(Room $room, Presentation $presentation = null): CreateMeetingParameters
 	{
 		$createMeetingParams = new CreateMeetingParameters($room->uid, $room->name);
 		$createMeetingParams->setAttendeePassword($room->attendeePassword);
