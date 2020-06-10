@@ -13,7 +13,7 @@
         "littleredbutton/bigbluebutton-api-php": "^3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.5",
+        "phpunit/phpunit": "^8",
         "friendsofphp/php-cs-fixer": "^2.16"
     },
     "config": {
