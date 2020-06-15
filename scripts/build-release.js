@@ -71,6 +71,9 @@ async function createRelease(appId) {
 	await createNextcloudSignature(appId, filePath);
 	await createGPGSignature(filePath);
 	await createGPGArmorSignature(filePath);
+
+	await execa('yarn', ['composer:install:dev']);
+	console.log('✔ composer dev dependencies installed'.green);
 }
 
 
