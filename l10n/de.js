@@ -40,7 +40,7 @@ OC.L10N.register(
     "Delete" : "Löschen",
     "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Möchtst Du \"{name}\" wirklich löschen? Dieser Vorgang kann nicht rückgängig gemacht werden.",
     "Delete \"{name}\"?" : "\"{name}\" löschen?",
-    "Select target folder" : "Ziel-Ordner auswählen",
+    "Select target folder" : "Zielordner auswählen",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "Die Raum-URL wurde in \"{path}\" als \"{filename}\" gespeichert.",
     "Link stored" : "Link gespeichert",
     "URL to room could not be stored." : "Die URL zum Raum konnte nicht gespeichert werden.",
