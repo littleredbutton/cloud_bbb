@@ -2,6 +2,7 @@
 return [
     'resources' => [
         'room' => ['url' => '/rooms'],
+        'roomShare' => ['url' => '/roomShares'],
         'room_api' => ['url' => '/api/0.1/rooms'],
     ],
     'routes' => [

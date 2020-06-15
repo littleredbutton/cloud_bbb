@@ -24,6 +24,8 @@ declare namespace OC {
 	}
 
 	namespace Share {
+		const SHARE_TYPE_USER = 0;
+		const SHARE_TYPE_GROUP = 1;
 		const SHARE_TYPE_LINK = 3;
 	}
 
@@ -52,7 +54,7 @@ declare namespace OC {
 		function requirePasswordConfirmation(cb: () => void): void;
 	}
 
-	function generateUrl(url: string, parameters?: { [key: string]: string }, options?: EscapeOptions)
+	function generateUrl(url: string, parameters?: { [key: string]: string|number }, options?: EscapeOptions)
 
 	function linkToOCS(service: string, version: number): string;
 
@@ -70,6 +72,10 @@ declare namespace OC {
 	const PERMISSION_ALL = 31;
 
 	const currentUser: string;
+
+	function getCurrentUser(): {uid: string; displayName: string}
+
+	const requestToken: string;
 
 	const config: {
 		blacklist_files_regex: string;

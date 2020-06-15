@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Access, Room } from './Api';
 import Dialog from './Dialog';
-import { Room, Access } from './Api';
+import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
 
 const descriptions: { [key: string]: string } = {
@@ -74,6 +75,15 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty }) => {
 					updateProperty('access', value);
 				})}
 
+				<div className="bbb-form-element">
+					<label htmlFor={'bbb-moderator'}>
+						<h3>Moderator</h3>
+					</label>
+
+					<ShareWith room={room} />
+				</div>
+
+				<h3>{t('bbb', 'Miscellaneous')}</h3>
 				<div>
 					<div>
 						<input id={`bbb-record-${room.id}`}
