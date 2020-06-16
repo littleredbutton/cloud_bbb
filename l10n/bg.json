@@ -11,6 +11,8 @@
     "Delete" : "Изтриване",
     "Error" : "Грешка",
     "Server error" : "Сървърна грешка",
+    "Group" : "Група",
+    "Loading" : "Зареждане",
     "Settings saved" : "Настройките са запазени"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

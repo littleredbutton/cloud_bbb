@@ -10,10 +10,13 @@ OC.L10N.register(
     "Welcome" : "خوش آمدی",
     "Access" : "دسترسی",
     "Public" : "عمومی",
+    "Miscellaneous" : "متفرقه",
     "Create" : "ایجاد شده",
     "Delete" : "حذف",
     "Error" : "خطا",
     "Server error" : "خطای سرور",
+    "Group" : "گروه",
+    "Loading" : "در حال بار گزاری",
     "Settings saved" : "تنظیمات ذخیره شد"
 },
 "nplurals=2; plural=(n > 1);");

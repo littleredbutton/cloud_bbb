@@ -10,11 +10,14 @@ OC.L10N.register(
     "Welcome" : "Velkommen",
     "Access" : "Tilgang",
     "Public" : "Offentlig",
+    "Miscellaneous" : "Diverse",
     "Room name" : "Romnavn",
     "Create" : "Ny",
     "Delete" : "Slett",
     "Error" : "Feil",
     "Server error" : "Tjenerfeil",
+    "Group" : "Gruppe",
+    "Loading" : "Laster",
     "Settings saved" : "Innstillinger lagret"
 },
 "nplurals=2; plural=(n != 1);");

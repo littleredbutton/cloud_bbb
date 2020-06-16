@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "մշակել",
     "Create" : "Ստեղծել",
     "Delete" : "հեռացնել",
-    "Error" : "Սխալ"
+    "Error" : "Սխալ",
+    "Group" : "Խումբ",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

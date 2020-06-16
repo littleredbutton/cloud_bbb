@@ -13,6 +13,8 @@ OC.L10N.register(
     "Delete" : "Borrar",
     "Error" : "Error",
     "Server error" : "Se presentó un error en el servidor",
+    "Group" : "Grupo",
+    "Loading" : "Cargando",
     "Settings saved" : "Se han guardado las configuraciones "
 },
 "nplurals=2; plural=(n != 1);");

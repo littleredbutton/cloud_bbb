@@ -5,6 +5,8 @@
     "Edit" : "Änneren",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
-    "Error" : "Fehler"
+    "Error" : "Fehler",
+    "Group" : "Grupp",
+    "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

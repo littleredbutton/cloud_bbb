@@ -13,6 +13,8 @@ OC.L10N.register(
     "Delete" : "Изтриване",
     "Error" : "Грешка",
     "Server error" : "Сървърна грешка",
+    "Group" : "Група",
+    "Loading" : "Зареждане",
     "Settings saved" : "Настройките са запазени"
 },
 "nplurals=2; plural=(n != 1);");

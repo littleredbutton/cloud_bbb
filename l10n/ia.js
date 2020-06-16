@@ -10,6 +10,8 @@ OC.L10N.register(
     "Create" : "Crear",
     "Delete" : "Deler",
     "Error" : "Error",
+    "Group" : "Gruppo",
+    "Loading" : "Loading",
     "Settings saved" : "Configurationes salveguardate"
 },
 "nplurals=2; plural=(n != 1);");

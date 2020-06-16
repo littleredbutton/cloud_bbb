@@ -22,6 +22,8 @@ OC.L10N.register(
     "Are you sure you want to delete the recording from \"{startDate}\"? This operation can not be undone." : "정말 {startDate}기록을 지우시겠습니까? 복원할  수 없습니다",
     "Could not delete record" : "기록을 지울 수 없습니다",
     "Server error" : "서버 오류",
+    "Group" : "그룹",
+    "Loading" : "불러오는 중",
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",
     "API URL is invalid" : "무효한 API URL"

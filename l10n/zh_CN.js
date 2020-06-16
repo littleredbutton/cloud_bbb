@@ -10,11 +10,14 @@ OC.L10N.register(
     "Welcome" : "欢迎",
     "Access" : "投票范围",
     "Public" : "公开",
+    "Miscellaneous" : "杂项",
     "Room name" : "房间名",
     "Create" : "创建",
     "Delete" : "删除",
     "Error" : "错误",
     "Server error" : "服务器错误",
+    "Group" : "群组",
+    "Loading" : "正在加载",
     "Settings saved" : "设置已保存"
 },
 "nplurals=1; plural=0;");

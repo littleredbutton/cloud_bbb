@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "Änneren",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
-    "Error" : "Fehler"
+    "Error" : "Fehler",
+    "Group" : "Grupp",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

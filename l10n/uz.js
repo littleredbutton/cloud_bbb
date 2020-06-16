@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password" : "Parol",
     "Name" : "Ism...",
     "Delete" : "O'chir",
-    "Error" : "Xato"
+    "Error" : "Xato",
+    "Loading" : "Yuklanmoqda"
 },
 "nplurals=1; plural=0;");

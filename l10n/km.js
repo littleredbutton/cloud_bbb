@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "កែប្រែ",
     "Create" : "បង្កើត",
     "Delete" : "លុប",
-    "Error" : "កំហុស"
+    "Error" : "កំហុស",
+    "Group" : "Group",
+    "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

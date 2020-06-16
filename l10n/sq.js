@@ -13,6 +13,8 @@ OC.L10N.register(
     "Delete" : "Delete",
     "Error" : "Error",
     "Server error" : "Gabim shërbyesi",
+    "Group" : "Grup",
+    "Loading" : "Duke ngarkuar",
     "Settings saved" : "Opsjonet u Ruajtën."
 },
 "nplurals=2; plural=(n != 1);");

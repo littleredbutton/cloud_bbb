@@ -33,6 +33,8 @@ OC.L10N.register(
     "Delete?" : "Dzēst?",
     "Could not delete record" : "Nevar dzēst ierakstu",
     "Server error" : "Servera kļūda",
+    "Group" : "Grupa",
+    "Loading" : "Ielādē",
     "Settings saved" : "Iestatījumi saglabāti",
     "Unexpected error occurred" : "Neparedzēta kļūda",
     "API secret is invalid" : "API slepenais kods nav pareizs"

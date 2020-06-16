@@ -7,9 +7,12 @@ OC.L10N.register(
     "Name" : "Tên",
     "Edit" : "Chỉnh sửa",
     "Public" : "Công khai",
+    "Miscellaneous" : "Hỗn hợp",
     "Create" : "Tạo mới",
     "Delete" : "Xóa",
     "Error" : "Lỗi",
+    "Group" : "N",
+    "Loading" : "Đang tải",
     "Settings saved" : "Cấu hình đã được lưu"
 },
 "nplurals=1; plural=0;");

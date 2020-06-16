@@ -15,6 +15,8 @@ OC.L10N.register(
     "Delete" : "Delete",
     "Error" : "Error",
     "Server error" : "Server error",
+    "Group" : "Group",
+    "Loading" : "Loading",
     "Settings saved" : "Settings saved"
 },
 "nplurals=2; plural=(n != 1);");
