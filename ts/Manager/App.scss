@@ -2,6 +2,11 @@
   background-image: url('../../img/chain-plus.svg');
 }
 
+.oc-dialog.bbb-dialog {
+  max-height: calc(100% - 70px);
+  margin-top: 25px;
+}
+
 #bbb-warning {
   padding: 1em;
   background-color: rgb(255, 255, 123);

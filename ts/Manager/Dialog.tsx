@@ -15,7 +15,7 @@ const Dialog: React.FC<Props> = ({open, title, children, onClose = () => undefin
 	return (
 		<>
 			<div className="oc-dialog-dim"> </div>
-			<div className="oc-dialog" tabIndex={-1} role="dialog" style={{display:'inline-block', position: 'fixed'}}>
+			<div className="oc-dialog bbb-dialog" tabIndex={-1} role="dialog" style={{display:'inline-block', position: 'fixed'}}>
 				<h2 className="oc-dialog-title">{title}</h2>
 				<a className="oc-dialog-close" onClick={ev => {ev.preventDefault(); onClose();}}></a>
 
