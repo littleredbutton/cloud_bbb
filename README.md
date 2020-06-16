@@ -73,10 +73,6 @@ for details.
 
 ## :pick: Troubleshooting
 - Before installing, make sure your BBB is running correctly
-- If no session opens with the ... menu of files, but a session opens in the
-  general configuration page, look at your browser console. It will show a well
-  hidden complaint that for sharing always a password is required. If this is
-  the case, remove that requirement in sharing / enforce password.
 - If the room doesn't appear in the ... menu of files, a browser/cache reload
   might help
 
