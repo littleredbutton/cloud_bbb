@@ -4,7 +4,9 @@ namespace OCA\BigBlueButton\Controller;
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\BigBlueButton\Presentation;
 use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NotFoundException;
+use OCA\BigBlueButton\Permission;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IRequest;
 use OCP\ISession;
@@ -38,6 +40,9 @@ class JoinController extends Controller
 	/** @var API */
 	private $api;
 
+	/** @var Permission */
+	private $permission;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
@@ -46,7 +51,8 @@ class JoinController extends Controller
 		IURLGenerator $urlGenerator,
 		IUserSession $userSession,
 		IConfig $config,
-		API $api
+		API $api,
+		Permission $permission
 	) {
 		parent::__construct($appName, $request, $session);
 
@@ -55,6 +61,7 @@ class JoinController extends Controller
 		$this->userSession = $userSession;
 		$this->config = $config;
 		$this->api = $api;
+		$this->permission = $permission;
 	}
 
 	public function setToken(string $token)
@@ -90,10 +97,14 @@ class JoinController extends Controller
 			$displayname = $user->getDisplayName();
 			$userId = $user->getUID();
 
+			if ($room->access == Room::ACCESS_INTERNAL_RESTRICTED && !$this->permission->isUser($room, $userId)) {
+				throw new NoPermissionException();
+			}
+
 			if ($userId === $room->userId) {
 				$presentation = new Presentation($u, $filename);
 			}
-		} elseif ($room->access === Room::ACCESS_INTERNAL) {
+		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access == Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse(
 				$this->urlGenerator->linkToRoute('core.login.showLoginForm', [
 					'redirect_url' => $this->urlGenerator->linkToRoute(

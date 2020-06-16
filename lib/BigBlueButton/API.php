@@ -11,6 +11,7 @@ use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\IConfig;
 use OCP\IURLGenerator;
@@ -24,11 +25,8 @@ class API
 	/** @var IURLGenerator */
 	private $urlGenerator;
 
-	/** @var IGroupManager */
-	private $groupManager;
-
-	/** @var RoomShareService */
-	private $roomShareService;
+	/** @var Permission */
+	private $permission;
 
 	/** @var BigBlueButton */
 	private $server;
@@ -36,13 +34,11 @@ class API
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
-		IGroupManager $groupManager,
-		RoomShareService $roomShareService
+		Permission $permission
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
-		$this->groupManager = $groupManager;
-		$this->roomShareService = $roomShareService;
+		$this->permission = $permission;
 	}
 
 	private function getServer()
@@ -64,7 +60,7 @@ class API
 	 */
 	public function createJoinUrl(Room $room, int $creationTime, string $displayname, string $uid = null)
 	{
-		$password = $this->isModerator($room, $uid) ? $room->moderatorPassword : $room->attendeePassword;
+		$password = $this->permission->isModerator($room, $uid) ? $room->moderatorPassword : $room->attendeePassword;
 
 		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
 
@@ -79,38 +75,6 @@ class API
 		}
 
 		return $this->getServer()->getJoinMeetingURL($joinMeetingParams);
-	}
-
-	private function isModerator(Room $room, string $uid): bool
-	{
-		if ($uid === null) {
-			return false;
-		}
-
-		if ($uid === $room->userId) {
-			return true;
-		}
-
-		$shares = $this->roomShareService->findAll($room->id);
-
-		/** @var RoomShare $share */
-		foreach ($shares as $share) {
-			if (!$share->hasModeratorPermission()) {
-				continue;
-			}
-
-			if ($share->getShareType() === RoomShare::SHARE_TYPE_USER) {
-				if ($share->getShareWith() === $uid) {
-					return true;
-				}
-			} elseif ($share->getShareType() === RoomShare::SHARE_TYPE_GROUP) {
-				if ($this->groupManager->isInGroup($uid, $share->getShareWith())) {
-					return true;
-				}
-			}
-		}
-
-		return false;
 	}
 
 	/**

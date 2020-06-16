@@ -2,6 +2,8 @@
 namespace OCA\BigBlueButton\Middleware;
 
 use OCA\BigBlueButton\Controller\JoinController;
+use OCA\BigBlueButton\NoPermissionException;
+use OCA\BigBlueButton\NoPermissionResponse;
 use OCA\BigBlueButton\NotFoundException;
 use OCP\AppFramework\Middleware;
 use OCP\AppFramework\Http\NotFoundResponse;
@@ -45,6 +47,10 @@ class JoinMiddleware extends Middleware
 
 		if ($exception instanceof NotFoundException) {
 			return new NotFoundResponse();
+		}
+
+		if ($exception instanceof NoPermissionException) {
+			return new NoPermissionResponse();
 		}
 
 		throw $exception;

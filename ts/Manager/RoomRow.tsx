@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { api, Recording, Room } from './Api';
-import EditRoomDialog from './EditRoomDialog';
+import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
 
@@ -184,7 +184,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				<td><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
 				<td className="edit icon-col">
-					<EditRoomDialog room={props.room} updateProperty={updateRoom} />
+					<EditRoom room={props.room} updateProperty={updateRoom} />
 				</td>
 				<td className="remove icon-col">
 					<a className="icon icon-delete icon-visible"

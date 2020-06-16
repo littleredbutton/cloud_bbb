@@ -46,14 +46,20 @@ class RoomShareService
 
 	public function create(int $roomId, int $shareType, string $shareWith, int $permission): RoomShare
 	{
-		$roomShare = new RoomShare();
+		try {
+			$roomShare = $this->mapper->findByRoomAndEntity($roomId, $shareWith, $shareType);
 
-		$roomShare->setRoomId($roomId);
-		$roomShare->setShareType($shareType);
-		$roomShare->setShareWith($shareWith);
-		$roomShare->setPermission($permission);
+			return $this->update($roomShare->getId(), $roomId, $shareType, $shareWith, $permission);
+		} catch (DoesNotExistException $e) {
+			$roomShare = new RoomShare();
 
-		return $this->mapper->insert($roomShare);
+			$roomShare->setRoomId($roomId);
+			$roomShare->setShareType($shareType);
+			$roomShare->setShareWith($shareWith);
+			$roomShare->setPermission($permission);
+
+			return $this->mapper->insert($roomShare);
+		}
 	}
 
 	public function update(int $id, int $roomId, int $shareType, string $shareWith, int $permission): RoomShare

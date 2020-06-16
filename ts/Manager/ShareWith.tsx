@@ -3,28 +3,23 @@ import { api, ShareWith, ShareType, RoomShare, Room, Permission } from './Api';
 import './ShareWith.scss';
 
 type Props = {
-    room: Room;
+	room: Room;
+	permission: Permission.User | Permission.Moderator;
+	shares: RoomShare[] | undefined;
+	setShares: (shares: RoomShare[]) => void;
 }
 
-const SearchInput: React.FC<Props> = ({ room }) => {
+const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setShares }) => {
 	const [search, setSearch] = useState<string>('');
 	const [hasFocus, setFocus] = useState<boolean>(false);
 	const [recommendations, setRecommendations] = useState<ShareWith>();
 	const [searchResults, setSearchResults] = useState<ShareWith>();
-	const [shares, setShares] = useState<RoomShare[]>();
 
-	const userShares = shares ? shares.filter(share => share.shareType === ShareType.User).map(share => share.shareWith) : [];
-	const groupShares = shares ? shares.filter(share => share.shareType === ShareType.Group).map(share => share.shareWith) : [];
+	const shares = (allShares && permission === Permission.Moderator) ?
+		allShares.filter(share => share.permission !== Permission.User) : allShares;
 
-	useEffect(() => {
-		api.getRoomShares(room.id).then(roomShares => {
-			setShares(roomShares);
-		}).catch(err => {
-			console.warn('Could not load room shares.', err);
-
-			setShares([]);
-		});
-	}, [room.id]);
+	const sharedUserIds = shares ? shares.filter(share => share.shareType === ShareType.User).map(share => share.shareWith) : [];
+	const sharedGroupIds = shares ? shares.filter(share => share.shareType === ShareType.Group).map(share => share.shareWith) : [];
 
 	useEffect(() => {
 		api.searchShareWith(search).then(result => {
@@ -37,25 +32,40 @@ const SearchInput: React.FC<Props> = ({ room }) => {
 	}, []);
 
 	async function addRoomShare(shareWith: string, shareType: number, displayName: string) {
-		const roomShare = await api.createRoomShare(room.id, shareType, shareWith, Permission.Moderator);
+		const roomShare = await api.createRoomShare(room.id, shareType, shareWith, permission);
 
 		roomShare.shareWithDisplayName = displayName;
 
-		setShares([...(shares || []), roomShare]);
+		console.log('addRoomShare', allShares, roomShare);
+
+		const newShares = allShares ? [...allShares] : [];
+		const index = newShares.findIndex(share => share.id === roomShare.id);
+
+		if (index > -1) {
+			newShares[index] = roomShare;
+		} else {
+			newShares.push(roomShare);
+		}
+
+		console.log('newroomshares', newShares);
+
+		setShares(newShares);
 	}
 
 	async function deleteRoomShare(id: number) {
+		console.log('deleteRoomShare', id);
+
 		await api.deleteRoomShare(id);
 
-		setShares(shares?.filter(share => share.id !== id));
+		setShares((allShares ? [...allShares] : []).filter(share => share.id !== id));
 	}
 
 	function renderSearchResults(options: ShareWith) {
 		return (
 			<ul className="bbb-selection">
 				{[
-					...options.users.filter(user => !userShares.includes(user.value.shareWith)),
-					...options.groups.filter(group => !groupShares.includes(group.value.shareWith)),
+					...options.users.filter(user => !sharedUserIds.includes(user.value.shareWith)),
+					...options.groups.filter(group => !sharedGroupIds.includes(group.value.shareWith)),
 				].map(option => {
 					return (<li key={option.value.shareWith} onClick={() => addRoomShare(option.value.shareWith, option.value.shareType, option.label)}>
 						{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
@@ -90,9 +100,10 @@ const SearchInput: React.FC<Props> = ({ room }) => {
 						<li key={share.id} className="bbb-shareWith__item">
 							<div className="avatardiv">
 								{avatarUrl && <img src={avatarUrl} alt={`Avatar from ${displayName}`} />}
+								{share.shareType === ShareType.Group && <span className="icon-group-white"></span>}
 							</div>
 							<div className="bbb-shareWith__item__label">
-								<h5>{displayName}{share.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}</h5>
+								<h5>{displayName}{(share.permission === Permission.Moderator && permission === Permission.User) ? ` (${t('bbb', 'moderator')})` : ''}</h5>
 							</div>
 							{share.id > -1 && <div className="bbb-shareWith__item__action">
 								<a className="icon icon-delete icon-visible"
@@ -126,4 +137,4 @@ const SearchInput: React.FC<Props> = ({ room }) => {
 	);
 };
 
-export default SearchInput;
+export default ShareWith;

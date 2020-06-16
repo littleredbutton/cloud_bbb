@@ -15,6 +15,7 @@ use OCA\BigBlueButton\Controller\JoinController;
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\Permission;
 
 class JoinControllerTest extends TestCase
 {
@@ -25,6 +26,7 @@ class JoinControllerTest extends TestCase
 	private $urlGenerator;
 	private $controller;
 	private $api;
+	private $permission;
 	private $room;
 
 	public function setUp(): void
@@ -38,6 +40,7 @@ class JoinControllerTest extends TestCase
 		$this->config = $this->createMock(IConfig::class);
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->api = $this->createMock(API::class);
+		$this->permission = $this->createMock(Permission::class);
 
 		$this->controller = new JoinController(
 			'bbb',
@@ -47,7 +50,8 @@ class JoinControllerTest extends TestCase
 			$this->urlGenerator,
 			$this->userSession,
 			$this->config,
-			$this->api
+			$this->api,
+			$this->permission
 		);
 
 		$this->room = new Room();

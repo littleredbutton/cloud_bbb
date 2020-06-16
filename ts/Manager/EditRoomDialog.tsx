@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Access, Room } from './Api';
+import React, { useState, useEffect } from 'react';
+import { Access, Room, Permission, RoomShare, api } from './Api';
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
@@ -13,12 +13,29 @@ const descriptions: { [key: string]: string } = {
 };
 
 type Props = {
-    room: Room;
-    updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
+	room: Room;
+	updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
+	open: boolean;
+	setOpen: (open: boolean) => void;
 }
 
-const EditRoomDialog: React.FC<Props> = ({ room, updateProperty }) => {
-	const [open, setOpen] = useState<boolean>(false);
+const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }) => {
+	const [shares, setShares] = useState<RoomShare[]>();
+
+	useEffect(() => {
+		if (!open) {
+			return;
+		}
+
+		api.getRoomShares(room.id).then(roomShares => {
+			console.log(room.name, roomShares);
+			setShares(roomShares);
+		}).catch(err => {
+			console.warn('Could not load room shares.', err);
+
+			setShares([]);
+		});
+	}, [room.id, open]);
 
 	function inputElement(label: string, field: string, type: 'text' | 'number' = 'text') {
 		return (
@@ -33,7 +50,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty }) => {
 		);
 	}
 
-	function selectElement(label: string, field: string, value: string, options: {[key: string]: string}, onChange: (value: string) => void) {
+	function selectElement(label: string, field: string, value: string, options: { [key: string]: string }, onChange: (value: string) => void) {
 		return (
 			<div className="bbb-form-element">
 				<label htmlFor={`bbb-${field}`}>
@@ -54,49 +71,47 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty }) => {
 	}
 
 	return (
-		<>
-			<a className="icon icon-edit icon-visible"
-				onClick={ev => { ev.preventDefault(), setOpen(true); }}
-				title={t('bbb', 'Edit')} />
+		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
+			{inputElement(t('bbb', 'Name'), 'name')}
+			{inputElement(t('bbb', 'Welcome'), 'welcome')}
+			{inputElement(t('bbb', 'Participant limit'), 'maxParticipants', 'number')}
 
-			<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
-				{inputElement(t('bbb', 'Name'), 'name')}
-				{inputElement(t('bbb', 'Welcome'), 'welcome')}
-				{inputElement(t('bbb', 'Participant limit'), 'maxParticipants', 'number')}
+			{selectElement(t('bbb', 'Access'), 'access', room.access, {
+				[Access.Public]: t('bbb', 'Public'),
+				[Access.Password]: t('bbb', 'Internal + Password protection for guests'),
+				[Access.WaitingRoom]: t('bbb', 'Internal + Waiting room for guests'),
+				[Access.Internal]: t('bbb', 'Internal'),
+				[Access.InternalRestricted]: t('bbb', 'Internal restricted'),
+			}, (value) => {
+				console.log('access', value);
+				updateProperty('access', value);
+			})}
 
-				{selectElement(t('bbb', 'Access'), 'access', room.access, {
-					[Access.Public]: t('bbb', 'Public'),
-					[Access.Password]: t('bbb', 'Internal + Password protection for guests'),
-					[Access.WaitingRoom]: t('bbb', 'Internal + Waiting room for guests'),
-					[Access.Internal]: t('bbb', 'Internal'),
-					// [Access.InternalRestricted]: t('bbb', 'Restricted'),
-				}, (value) => {
-					console.log('access', value);
-					updateProperty('access', value);
-				})}
+			{room.access === Access.InternalRestricted && <div className="bbb-form-element bbb-form-shareWith">
+				<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />
+			</div>}
 
-				<div className="bbb-form-element">
-					<label htmlFor={'bbb-moderator'}>
-						<h3>Moderator</h3>
-					</label>
+			<div className="bbb-form-element">
+				<label htmlFor={'bbb-moderator'}>
+					<h3>Moderator</h3>
+				</label>
 
-					<ShareWith room={room} />
-				</div>
+				<ShareWith permission={Permission.Moderator} room={room} shares={shares} setShares={setShares}  />
+			</div>
 
-				<h3>{t('bbb', 'Miscellaneous')}</h3>
+			<h3>{t('bbb', 'Miscellaneous')}</h3>
+			<div>
 				<div>
-					<div>
-						<input id={`bbb-record-${room.id}`}
-							type="checkbox"
-							className="checkbox"
-							checked={room.record}
-							onChange={(event) => updateProperty('record', event.target.checked)} />
-						<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
-					</div>
-					<em>{descriptions.recording}</em>
+					<input id={`bbb-record-${room.id}`}
+						type="checkbox"
+						className="checkbox"
+						checked={room.record}
+						onChange={(event) => updateProperty('record', event.target.checked)} />
+					<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
 				</div>
-			</Dialog>
-		</>
+				<em>{descriptions.recording}</em>
+			</div>
+		</Dialog>
 	);
 };
 
