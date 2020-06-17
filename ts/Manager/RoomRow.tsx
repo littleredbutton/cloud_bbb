@@ -181,17 +181,17 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td className="name">
 					{edit('name')}
 				</td>
-				<td>
+				<td className="bbb-shrink">
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
 				</td>
-				<td className="max-participants">
+				<td className="max-participants bbb-shrink">
 					{edit('maxParticipants', 'number')}
 				</td>
-				<td className="record">
+				<td className="record bbb-shrink">
 					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
 					<label htmlFor={`bbb-record-${room.id}`}></label>
 				</td>
-				<td><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
+				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
 				<td className="edit icon-col">
 					<EditRoom room={props.room} updateProperty={updateRoom} />
 				</td>

@@ -108,10 +108,10 @@ const App: React.FC<Props> = () => {
 							{t('bbb', 'Name')} <SortArrow name='name' value={orderBy} direction={sortOrder} />
 						</th>
 						<th />
-						<th onClick={() => onOrderBy('maxParticipants')}>
+						<th onClick={() => onOrderBy('maxParticipants')} className="bbb-shrink">
 							{t('bbb', 'Max')} <SortArrow name='maxParticipants' value={orderBy} direction={sortOrder} />
 						</th>
-						<th onClick={() => onOrderBy('record')}>
+						<th onClick={() => onOrderBy('record')} className="bbb-shrink">
 							{t('bbb', 'Record')} <SortArrow name='record' value={orderBy} direction={sortOrder} />
 						</th>
 						<th>

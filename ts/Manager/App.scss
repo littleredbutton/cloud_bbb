@@ -74,6 +74,11 @@
     width: 100%;
   }
 
+  .bbb-shrink {
+    width: 44px;
+    white-space: nowrap;
+  }
+
   tr {
     min-height: 62px;
   }
@@ -83,7 +88,7 @@
     cursor: pointer;
 
     .sort_arrow {
-      float: right;
+      display: inline-block;
       color: #888;
     }
   }
