@@ -36,6 +36,7 @@ type Props = {
 
 const App: React.FC<Props> = () => {
 	const [areRoomsLoaded, setRoomsLoaded] = useState(false);
+	const [error, setError] = useState<string>('');
 	const [rooms, setRooms] = useState<Room[]>([]);
 	const [orderBy, setOrderBy] = useState<SortKey>('name');
 	const [sortOrder, setSortOrder] = useState(SortOrder.ASC);
@@ -48,8 +49,13 @@ const App: React.FC<Props> = () => {
 		}
 
 		api.getRooms().then(rooms => {
-			setRoomsLoaded(true);
 			setRooms(rooms);
+		}).catch((err) => {
+			console.warn('Could not load rooms', err);
+
+			setError(t('bbb', 'Server error'));
+		}).then(() => {
+			setRoomsLoaded(true);
 		});
 	}, [areRoomsLoaded]);
 
@@ -120,6 +126,7 @@ const App: React.FC<Props> = () => {
 				<tfoot>
 					<tr>
 						<td colSpan={3}>
+							{error && <><span className="icon icon-error icon-visible"></span> {error}</>}
 							{!areRoomsLoaded && <span className="icon icon-loading-small icon-visible"></span>}
 						</td>
 						<td>
