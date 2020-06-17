@@ -62,3 +62,11 @@
 .bbb-form-shareWith {
   margin-top: -1.5em;
 }
+
+.bbb-icon-unselected {
+  opacity: 0.2 !important;
+
+  &:hover {
+    opacity: 0.5 !important;
+  }
+}

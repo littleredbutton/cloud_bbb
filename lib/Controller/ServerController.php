@@ -3,6 +3,7 @@
 namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\BigBlueButton\API;
+use OCA\BigBlueButton\Permission;
 use OCP\IRequest;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
@@ -18,6 +19,9 @@ class ServerController extends Controller
 	/** @var API */
 	private $server;
 
+	/** @var Permission */
+	private $permission;
+
 	/** @var string */
 	private $userId;
 
@@ -26,12 +30,14 @@ class ServerController extends Controller
 		IRequest $request,
 		RoomService $service,
 		API $server,
+		Permission $permission,
 		$UserId
 	) {
 		parent::__construct($appName, $request);
 
 		$this->service = $service;
 		$this->server = $server;
+		$this->permission = $permission;
 		$this->userId = $UserId;
 	}
 
@@ -46,7 +52,7 @@ class ServerController extends Controller
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
 		}
 
-		if ($room->userId !== $this->userId) {
+		if (!$this->permission->isAdmin($room, $this->userId)) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
@@ -68,7 +74,7 @@ class ServerController extends Controller
 			return new DataResponse(false, Http::STATUS_NOT_FOUND);
 		}
 
-		if ($room->userId !== $this->userId) {
+		if (!$this->permission->isAdmin($room, $this->userId)) {
 			return new DataResponse(false, Http::STATUS_FORBIDDEN);
 		}
 

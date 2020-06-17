@@ -143,9 +143,9 @@ class RoomShareController extends Controller
 	private function isUserAllowed(int $roomId): bool
 	{
 		try {
-			$room = $this->roomService->find($roomId, $this->userId);
+			$room = $this->roomService->find($roomId);
 
-			return $room !== null;
+			return $room->getUserId() === $this->userId;
 		} catch (RoomShareNotFound $e) {
 			return false;
 		}

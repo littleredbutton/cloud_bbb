@@ -158,6 +158,12 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} />;
 	}
 
+	const avatarUrl = OC.generateUrl('/avatar/' + encodeURIComponent(room.userId) + '/' + 24, {
+		user: room.userId,
+		size: 24,
+		requesttoken: OC.requestToken,
+	});
+
 	return (
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
@@ -174,6 +180,9 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				<td className="name">
 					{edit('name')}
+				</td>
+				<td>
+					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
 				</td>
 				<td className="max-participants">
 					{edit('maxParticipants', 'number')}
@@ -193,7 +202,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">
-				<td colSpan={9}>
+				<td colSpan={10}>
 					<table>
 						<tbody>
 							{recordings?.map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}

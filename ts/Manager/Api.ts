@@ -15,6 +15,7 @@ export enum Access {
 export interface Room {
 	id: number;
 	uid: string;
+	userId: string;
 	name: string;
 	welcome: string;
 	maxParticipants: number;

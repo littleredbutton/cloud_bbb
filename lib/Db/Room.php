@@ -37,6 +37,7 @@ class Room extends Entity implements JsonSerializable
 		return [
 			'id'                  => $this->id,
 			'uid'                 => $this->uid,
+			'userId'              => $this->userId,
 			'name'                => $this->name,
 			'welcome'             => $this->welcome,
 			'maxParticipants'     => (int) $this->maxParticipants,

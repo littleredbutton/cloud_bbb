@@ -21,6 +21,8 @@ class RoomShareControllerTest extends TestCase
 	private $userManager;
 	private $controller;
 
+	private $userId = 'user_foo';
+
 	public function setUp(): void
 	{
 		parent::setUp();
@@ -36,7 +38,7 @@ class RoomShareControllerTest extends TestCase
 			$this->service,
 			$this->userManager,
 			$this->roomService,
-			'user_foo'
+			$this->userId
 		);
 	}
 
@@ -55,10 +57,14 @@ class RoomShareControllerTest extends TestCase
 			->with('id')
 			->willReturn(1234);
 
+		$room = new Room();
+		$room->setUserId('user_bar');
+
 		$this->roomService
 			->expects($this->once())
 			->method('find')
-			->will($this->throwException(new RoomShareNotFound));
+			->with(1234)
+			->willReturn($room);
 
 		$response = $this->controller->index();
 
@@ -74,10 +80,13 @@ class RoomShareControllerTest extends TestCase
 			->with('id')
 			->willReturn($roomId);
 
+		$room = new Room();
+		$room->setUserId($this->userId);
+
 		$this->roomService
 			->expects($this->once())
 			->method('find')
-			->willReturn(new Room());
+			->willReturn($room);
 
 		$this->service
 			->expects($this->once())
@@ -100,10 +109,13 @@ class RoomShareControllerTest extends TestCase
 			->with('id')
 			->willReturn($roomId);
 
+		$room = new Room();
+		$room->setUserId($this->userId);
+
 		$this->roomService
 			->expects($this->once())
 			->method('find')
-			->willReturn(new Room());
+			->willReturn($room);
 
 		$this->service
 			->expects($this->once())

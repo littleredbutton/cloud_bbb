@@ -107,6 +107,7 @@ const App: React.FC<Props> = () => {
 						<th onClick={() => onOrderBy('name')}>
 							{t('bbb', 'Name')} <SortArrow name='name' value={orderBy} direction={sortOrder} />
 						</th>
+						<th />
 						<th onClick={() => onOrderBy('maxParticipants')}>
 							{t('bbb', 'Max')} <SortArrow name='maxParticipants' value={orderBy} direction={sortOrder} />
 						</th>

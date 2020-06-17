@@ -15,6 +15,8 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 	const [recommendations, setRecommendations] = useState<ShareWith>();
 	const [searchResults, setSearchResults] = useState<ShareWith>();
 
+	const isOwner = room.userId === OC.currentUser;
+
 	const shares = (allShares && permission === Permission.Moderator) ?
 		allShares.filter(share => share.permission !== Permission.User) : allShares;
 
@@ -31,7 +33,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		api.getRecommendedShareWith().then(result => setRecommendations(result));
 	}, []);
 
-	async function addRoomShare(shareWith: string, shareType: number, displayName: string) {
+	async function addRoomShare(shareWith: string, shareType: number, displayName: string, permission: Permission) {
 		const roomShare = await api.createRoomShare(room.id, shareType, shareWith, permission);
 
 		roomShare.shareWithDisplayName = displayName;
@@ -60,6 +62,12 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		setShares((allShares ? [...allShares] : []).filter(share => share.id !== id));
 	}
 
+	async function toggleAdminShare(share: RoomShare) {
+		const newPermission = share.permission === Permission.Admin ? Permission.Moderator : Permission.Admin;
+
+		return addRoomShare(share.shareWith, share.shareType, share.shareWithDisplayName || share.shareWith, newPermission);
+	}
+
 	function renderSearchResults(options: ShareWith) {
 		return (
 			<ul className="bbb-selection">
@@ -67,7 +75,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					...options.users.filter(user => !sharedUserIds.includes(user.value.shareWith)),
 					...options.groups.filter(group => !sharedGroupIds.includes(group.value.shareWith)),
 				].map(option => {
-					return (<li key={option.value.shareWith} onClick={() => addRoomShare(option.value.shareWith, option.value.shareType, option.label)}>
+					return (<li key={option.value.shareWith} onClick={() => addRoomShare(option.value.shareWith, option.value.shareType, option.label, permission)}>
 						{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
 					</li>);
 				})}
@@ -103,9 +111,16 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 								{share.shareType === ShareType.Group && <span className="icon-group-white"></span>}
 							</div>
 							<div className="bbb-shareWith__item__label">
-								<h5>{displayName}{(share.permission === Permission.Moderator && permission === Permission.User) ? ` (${t('bbb', 'moderator')})` : ''}</h5>
+								<h5>{displayName}
+									{(share.permission === Permission.Moderator && permission === Permission.User) && ` (${t('bbb', 'moderator')})`}
+									{(share.permission === Permission.Admin) && ` (${t('bbb', 'admin')})`}</h5>
 							</div>
-							{share.id > -1 && <div className="bbb-shareWith__item__action">
+							{(share.id > -1 && permission === Permission.Moderator && isOwner) && <div className="bbb-shareWith__item__action">
+								<a className={`icon icon-shared icon-visible ${share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected'}`}
+									onClick={ev => {ev.preventDefault(); toggleAdminShare(share);}}
+									title={t('bbb', 'Share')} />
+							</div>}
+							{(share.id > -1 && isOwner) && <div className="bbb-shareWith__item__action">
 								<a className="icon icon-delete icon-visible"
 									onClick={ev => {ev.preventDefault(); deleteRoomShare(share.id);}}
 									title={t('bbb', 'Delete')} />
@@ -124,13 +139,14 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 			{shares ? renderShares(shares) : loading}
 
 			<div className="bbb-selection-container">
-				<input
+				{isOwner ? <input
 					type="text"
 					value={search}
 					onChange={ev => setSearch(ev.currentTarget.value)}
 					onFocus={() => setFocus(true)}
 					onBlur={() => setTimeout(() => setFocus(false), 100)}
-					placeholder={t('bbb', 'Name, group, ...')} />
+					placeholder={t('bbb', 'Name, group, ...')} /> :
+					<em><span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to change this option, because this room is shared with you.')}</em>}
 				{hasFocus && (searchResults ? renderSearchResults(searchResults) : (recommendations ? renderSearchResults(recommendations) : loading))}
 			</div>
 		</>

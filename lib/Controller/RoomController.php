@@ -2,16 +2,28 @@
 
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\Service\RoomService;
+use OCA\BigBlueButton\Permission;
 use OCP\IRequest;
+use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Controller;
-
-use OCA\BigBlueButton\Service\RoomService;
+use OCP\IGroupManager;
+use OCP\IUserManager;
 
 class RoomController extends Controller
 {
 	/** @var RoomService */
 	private $service;
+
+	/** @var IUserManager */
+	private $userManager;
+
+	/** @var IGroupManager */
+	private $groupManager;
+
+	/** @var Permission */
+	private $permission;
 
 	/** @var string */
 	private $userId;
@@ -22,10 +34,16 @@ class RoomController extends Controller
 		$appName,
 		IRequest $request,
 		RoomService $service,
+		IUserManager $userManager,
+		IGroupManager $groupManager,
+		Permission $permission,
 		$userId
 	) {
 		parent::__construct($appName, $request);
 		$this->service = $service;
+		$this->userManager = $userManager;
+		$this->groupManager = $groupManager;
+		$this->permission = $permission;
 		$this->userId = $userId;
 	}
 
@@ -34,17 +52,10 @@ class RoomController extends Controller
 	 */
 	public function index(): DataResponse
 	{
-		return new DataResponse($this->service->findAll($this->userId));
-	}
+		$user = $this->userManager->get($this->userId);
+		$groupIds = $this->groupManager->getUserGroupIds($user);
 
-	/**
-	 * @NoAdminRequired
-	 */
-	public function show(int $id): DataResponse
-	{
-		return $this->handleNotFound(function () use ($id) {
-			return $this->service->find($id, $this->userId);
-		});
+		return new DataResponse($this->service->findAll($this->userId, $groupIds));
 	}
 
 	/**
@@ -77,8 +88,14 @@ class RoomController extends Controller
 		string $access,
 		bool $everyoneIsModerator
 	): DataResponse {
+		$room = $this->service->find($id);
+
+		if (!$this->permission->isAdmin($room, $this->userId)) {
+			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+		}
+
 		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $everyoneIsModerator, $access) {
-			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $this->userId);
+			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator);
 		});
 	}
 
@@ -87,8 +104,15 @@ class RoomController extends Controller
 	 */
 	public function destroy(int $id): DataResponse
 	{
+		$room = $this->service->find($id);
+
+		if (!$this->permission->isAdmin($room, $this->userId)) {
+			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+		}
+
 		return $this->handleNotFound(function () use ($id) {
-			return $this->service->delete($id, $this->userId);
+			//@TODO delete shares
+			return $this->service->delete($id);
 		});
 	}
 }

@@ -8,6 +8,7 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomMapper;
+use OCA\BigBlueButton\NoPermissionException;
 
 class RoomService
 {
@@ -20,9 +21,9 @@ class RoomService
 		$this->mapper = $mapper;
 	}
 
-	public function findAll(string $userId): array
+	public function findAll(string $userId, array $groupIds): array
 	{
-		return $this->mapper->findAll($userId);
+		return $this->mapper->findAll($userId, $groupIds);
 	}
 
 	private function handleException(Exception $e): void
@@ -35,10 +36,10 @@ class RoomService
 		}
 	}
 
-	public function find($id, $userId)
+	public function find($id): Room
 	{
 		try {
-			return $this->mapper->find($id, $userId);
+			return $this->mapper->find($id);
 
 			// in order to be able to plug in different storage backends like files
 		// for instance it is a good idea to turn storage related exceptions
@@ -75,10 +76,10 @@ class RoomService
 		return $this->mapper->insert($room);
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $userId)
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator)
 	{
 		try {
-			$room = $this->mapper->find($id, $userId);
+			$room = $this->mapper->find($id);
 
 			if ($room->access !== $access) {
 				$room->setPassword($access === Room::ACCESS_PASSWORD ? $this->humanReadableRandom(8) : null);
@@ -90,7 +91,6 @@ class RoomService
 			$room->setRecord($record);
 			$room->setAccess($access);
 			$room->setEveryoneIsModerator($everyoneIsModerator);
-			$room->setUserId($userId);
 
 			return $this->mapper->update($room);
 		} catch (Exception $e) {
@@ -98,10 +98,10 @@ class RoomService
 		}
 	}
 
-	public function delete($id, $userId)
+	public function delete($id)
 	{
 		try {
-			$room = $this->mapper->find($id, $userId);
+			$room = $this->mapper->find($id);
 			$this->mapper->delete($room);
 			return $room;
 		} catch (Exception $e) {
