@@ -89,6 +89,7 @@ class JoinController extends Controller
 			throw new NotFoundException();
 		}
 
+		$displayname = trim($displayname);
 		$userId = null;
 		$presentation = null;
 

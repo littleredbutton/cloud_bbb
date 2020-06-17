@@ -16,6 +16,8 @@ use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Permission;
+use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\TemplateResponse;
 
 class JoinControllerTest extends TestCase
 {
@@ -104,6 +106,7 @@ class JoinControllerTest extends TestCase
 		$this->api
 			->expects($this->once())
 			->method('createJoinUrl')
+			->with($this->room, 12345, 'User Bar', 'user_bar')
 			->willReturn($url);
 
 		$result = $this->controller->index(null);
@@ -112,23 +115,133 @@ class JoinControllerTest extends TestCase
 		$this->assertEquals($url, $result->getRedirectURL());
 	}
 
-	public function testUserNeedsToAuthenticate()
+	public function testUserNeedsToAuthenticateForInternal()
 	{
-		$this->markTestIncomplete();
+		$this->room->setAccess(Room::ACCESS_INTERNAL);
+
+		$this->controller->setToken($this->room->uid);
+		$this->service
+			->expects($this->once())
+			->method('findByUID')
+			->willReturn($this->room);
+
+		$this->userSession
+			->expects($this->once())
+			->method('isLoggedIn')
+			->willReturn(false);
+
+		$this->urlGenerator
+			->expects($this->exactly(2))
+			->method('linkToRoute')
+			->will($this->returnValueMap([
+				['core.login.showLoginForm', ['redirect_url' => 'https://join'], 'https://login'],
+				['bbb.join.index', ['token' => $this->room->uid], 'https://join'],
+			]));
+
+		$result = $this->controller->index(null);
+
+		$this->assertInstanceOf(RedirectResponse::class, $result);
+		$this->assertEquals(Http::STATUS_SEE_OTHER, $result->getStatus());
 	}
 
-	public function testInvalidDisplayname()
+	public function testUserNeedsToAuthenticateForInternalRestricted()
 	{
-		$this->markTestIncomplete();
+		$this->room->setAccess(Room::ACCESS_INTERNAL_RESTRICTED);
+
+		$this->controller->setToken($this->room->uid);
+		$this->service
+			->expects($this->once())
+			->method('findByUID')
+			->willReturn($this->room);
+
+		$this->userSession
+			->expects($this->once())
+			->method('isLoggedIn')
+			->willReturn(false);
+
+		$this->urlGenerator
+			->expects($this->exactly(2))
+			->method('linkToRoute')
+			->will($this->returnValueMap([
+				['core.login.showLoginForm', ['redirect_url' => 'https://join'], 'https://login'],
+				['bbb.join.index', ['token' => $this->room->uid], 'https://join'],
+			]));
+
+		$result = $this->controller->index(null);
+
+		$this->assertInstanceOf(RedirectResponse::class, $result);
+		$this->assertEquals(Http::STATUS_SEE_OTHER, $result->getStatus());
+	}
+
+	public function testDisplaynames()
+	{
+		$this->controller->setToken($this->room->uid);
+		$this->service
+			->expects($this->once())
+			->method('findByUID')
+			->willReturn($this->room);
+
+		$this->api
+			->expects($this->once())
+			->method('createMeeting')
+			->willReturn(12345);
+
+		$url = 'https://foobar';
+		$this->api
+			->expects($this->once())
+			->method('createJoinUrl')
+			->with($this->room, 12345, 'Foo Bar', null)
+			->willReturn($url);
+
+		$this->invalidDisplayname('a');
+		$this->invalidDisplayname('    a');
+		$this->invalidDisplayname('aa');
+
+		$response = $this->controller->index('Foo Bar');
+
+		$this->assertInstanceOf(RedirectResponse::class, $response);
+	}
+
+	private function invalidDisplayname($displayname)
+	{
+		$response = $this->controller->index($displayname);
+
+		$this->assertInstanceOf(TemplateResponse::class, $response);
+		$this->assertEquals('join', $response->getTemplateName());
+		$this->assertTrue($response->getParams()['wrongdisplayname']);
 	}
 
 	public function testPasswordRequired()
 	{
-		$this->markTestIncomplete();
-	}
+		$this->room->setAccess(Room::ACCESS_PASSWORD);
+		$this->room->setPassword('asdf');
 
-	public function testFormActionAllowed()
-	{
-		$this->markTestIncomplete();
+		$this->controller->setToken($this->room->uid);
+		$this->service
+			->method('findByUID')
+			->willReturn($this->room);
+
+		$this->api
+			->expects($this->once())
+			->method('createMeeting')
+			->willReturn(12345);
+
+		$url = 'https://foobar';
+		$this->api
+			->expects($this->once())
+			->method('createJoinUrl')
+			->willReturn($url);
+
+		$response = $this->controller->index('Foo Bar', '', '', 'qwert');
+
+		$this->assertInstanceOf(TemplateResponse::class, $response);
+		$this->assertEquals('join', $response->getTemplateName());
+		$this->assertTrue($response->getParams()['passwordRequired']);
+		$this->assertTrue($response->getParams()['wrongPassword']);
+
+		$response = $this->controller->index('Foo Bar', '', '', 'asdf');
+
+		$this->assertInstanceOf(RedirectResponse::class, $response);
+		$this->assertEquals($url, $response->getRedirectURL());
 	}
 }
