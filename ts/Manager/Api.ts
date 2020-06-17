@@ -21,6 +21,7 @@ export interface Room {
 	record: boolean;
 	access: Access;
 	password?: string;
+	everyoneIsModerator: boolean;
 }
 
 export interface RoomShare {

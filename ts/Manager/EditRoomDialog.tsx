@@ -10,6 +10,7 @@ const descriptions: { [key: string]: string } = {
 	maxParticipants: t('bbb', 'Sets a limit on the number of participants for this room. Zero means there is no limit.'),
 	recording: t('bbb', 'If enabled, the moderator is able to start the recording.'),
 	access: t('bbb', 'Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join.'),
+	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
 };
 
 type Props = {
@@ -96,7 +97,17 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }
 					<h3>Moderator</h3>
 				</label>
 
-				<ShareWith permission={Permission.Moderator} room={room} shares={shares} setShares={setShares}  />
+				{!room.everyoneIsModerator && <ShareWith permission={Permission.Moderator} room={room} shares={shares} setShares={setShares} />}
+
+				<div className="bbb-mt-1">
+					<input id={`bbb-everyoneIsModerator-${room.id}`}
+						type="checkbox"
+						className="checkbox"
+						checked={room.everyoneIsModerator}
+						onChange={(event) => updateProperty('everyoneIsModerator', event.target.checked)} />
+					<label htmlFor={`bbb-everyoneIsModerator-${room.id}`}>{t('bbb', 'Every participant is moderator')}</label>
+				</div>
+				<em>{descriptions.moderator}</em>
 			</div>
 
 			<h3>{t('bbb', 'Miscellaneous')}</h3>

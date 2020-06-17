@@ -34,6 +34,10 @@ class Permission
 
 	public function isModerator(Room $room, string $uid)
 	{
+		if ($room->everyoneIsModerator) {
+			return true;
+		}
+
 		return $this->hasPermission($room, $uid, function (RoomShare $share) {
 			return $share->hasModeratorPermission();
 		});

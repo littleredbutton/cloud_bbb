@@ -74,10 +74,11 @@ class RoomController extends Controller
 		string $welcome,
 		int $maxParticipants,
 		bool $record,
-		string $access
+		string $access,
+		bool $everyoneIsModerator
 	): DataResponse {
-		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access) {
-			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $this->userId);
+		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $everyoneIsModerator, $access) {
+			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $this->userId);
 		});
 	}
 

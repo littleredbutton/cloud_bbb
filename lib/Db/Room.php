@@ -23,24 +23,27 @@ class Room extends Entity implements JsonSerializable
 	public $userId;
 	public $access;
 	public $password;
+	public $everyoneIsModerator;
 
 	public function __construct()
 	{
 		$this->addType('maxParticipants', 'integer');
 		$this->addType('record', 'boolean');
+		$this->addType('everyoneIsModerator', 'boolean');
 	}
 
 	public function jsonSerialize(): array
 	{
 		return [
-			'id'              => $this->id,
-			'uid'             => $this->uid,
-			'name'            => $this->name,
-			'welcome'         => $this->welcome,
-			'maxParticipants' => (int) $this->maxParticipants,
-			'record'          => boolval($this->record),
-			'access'          => $this->access,
-			'password'        => $this->password,
+			'id'                  => $this->id,
+			'uid'                 => $this->uid,
+			'name'                => $this->name,
+			'welcome'             => $this->welcome,
+			'maxParticipants'     => (int) $this->maxParticipants,
+			'record'              => boolval($this->record),
+			'access'              => $this->access,
+			'password'            => $this->password,
+			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
 		];
 	}
 }

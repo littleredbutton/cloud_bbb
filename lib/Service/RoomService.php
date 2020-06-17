@@ -75,7 +75,7 @@ class RoomService
 		return $this->mapper->insert($room);
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $userId)
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $userId)
 	{
 		try {
 			$room = $this->mapper->find($id, $userId);
@@ -89,6 +89,7 @@ class RoomService
 			$room->setMaxParticipants($maxParticipants);
 			$room->setRecord($record);
 			$room->setAccess($access);
+			$room->setEveryoneIsModerator($everyoneIsModerator);
 			$room->setUserId($userId);
 
 			return $this->mapper->update($room);
