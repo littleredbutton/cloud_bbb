@@ -37,6 +37,7 @@ OC.L10N.register(
     "Could not delete record" : "Tallennetta ei voitu poistaa",
     "Server error" : "Palvelinvirhe",
     "Group" : "Ryhmä",
+    "moderator" : "moderaattori",
     "Loading" : "Ladataan",
     "Settings saved" : "Asetukset tallennettu",
     "Unexpected error occurred" : "Tapahtui odottamaton virhe",

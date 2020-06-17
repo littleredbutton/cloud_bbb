@@ -28,6 +28,9 @@ OC.L10N.register(
     "URL to room could not be stored." : "Não foi possível guardar o URL para a sala.",
     "Error" : "Erro",
     "Server error" : "Erro do servidor",
+    "Group" : "Grupo",
+    "moderator" : "moderador",
+    "Loading" : "A carregar",
     "Settings saved" : "Definições guardadas"
 },
 "nplurals=2; plural=(n != 1);");

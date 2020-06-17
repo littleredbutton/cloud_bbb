@@ -12,6 +12,8 @@
     "Delete" : "Slet",
     "Error" : "Fejl",
     "Server error" : "Serverfejl",
+    "Group" : "Gruppe",
+    "Loading" : "Indlæser",
     "Settings saved" : "Indstillinger gemt"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

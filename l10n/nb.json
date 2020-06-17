@@ -15,6 +15,7 @@
     "Error" : "Feil",
     "Server error" : "Tjenerfeil",
     "Group" : "Gruppe",
+    "moderator" : "moderator",
     "Loading" : "Laster",
     "Settings saved" : "Innstillinger lagret"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

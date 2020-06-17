@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "編輯",
     "Create" : "新增",
     "Delete" : "刪除",
-    "Error" : "錯誤"
+    "Error" : "錯誤",
+    "Group" : "群組",
+    "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

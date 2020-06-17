@@ -10,6 +10,8 @@
     "Delete" : "Kustuta",
     "Error" : "Viga",
     "Server error" : "Serveri tõrge",
+    "Group" : "Grupp",
+    "Loading" : "Laadimine",
     "Settings saved" : "Seaded salvestatud"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

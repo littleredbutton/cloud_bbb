@@ -11,6 +11,8 @@ OC.L10N.register(
     "Delete" : "Desaniciar",
     "Error" : "Fallu",
     "Server error" : "Fallu de sirvidor",
+    "Group" : "Group",
+    "Loading" : "Cargando",
     "Settings saved" : "Axustes guardaos"
 },
 "nplurals=2; plural=(n != 1);");

@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "Dəyişiklik et",
     "Create" : "Yarat",
     "Delete" : "Sil",
-    "Error" : "Səhv"
+    "Error" : "Səhv",
+    "Group" : "Qrup",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

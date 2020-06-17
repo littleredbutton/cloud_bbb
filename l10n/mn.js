@@ -12,6 +12,8 @@ OC.L10N.register(
     "Delete" : "Устгах",
     "Error" : "Алдаа",
     "Server error" : "серверийн алдаа",
+    "Group" : "Бүлэг",
+    "Loading" : "Loading",
     "Settings saved" : "Тохиргоо хадгалагдлаа"
 },
 "nplurals=2; plural=(n != 1);");

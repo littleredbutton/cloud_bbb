@@ -18,6 +18,7 @@ OC.L10N.register(
     "Welcome" : "ברוך בואך",
     "Access" : "גישה",
     "Public" : "ציבורי",
+    "Miscellaneous" : "שונות",
     "Room name" : "שם החדר",
     "Create" : "יצירה",
     "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים","%n משתתפים"],
@@ -35,6 +36,8 @@ OC.L10N.register(
     "Delete?" : "למחוק?",
     "Could not delete record" : "לא ניתן למחוק רשומה",
     "Server error" : "שגיאת שרת",
+    "Group" : "קבוצה",
+    "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
     "API secret is invalid" : "סוד ה־API שגוי"

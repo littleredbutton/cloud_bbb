@@ -19,6 +19,7 @@ OC.L10N.register(
     "Welcome" : "Добро пожаловать",
     "Access" : "Доступ",
     "Public" : "Общедоступный",
+    "Miscellaneous" : "Разное",
     "Room name" : "Название комнаты",
     "Create" : "Создать",
     "_%n participant_::_%n participants_" : ["%n участник","%n участников","%n участников","%n участник"],
@@ -34,6 +35,9 @@ OC.L10N.register(
     "Delete?" : "Удалить?",
     "Could not delete record" : "Не возможно удалить запись.",
     "Server error" : "Ошибка сервера",
+    "Group" : "Группа",
+    "moderator" : "модератор",
+    "Loading" : "Загружается",
     "Settings saved" : "Настройки сохранены",
     "Unexpected error occurred" : "Произошла неожиданная ошибка",
     "API secret is invalid" : "API секрет недействительный"

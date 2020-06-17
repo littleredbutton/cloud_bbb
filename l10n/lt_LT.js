@@ -13,6 +13,7 @@ OC.L10N.register(
     "Welcome" : "Sveiki",
     "Access" : "Prieiga",
     "Public" : "Vieša",
+    "Miscellaneous" : "Įvairūs",
     "Room name" : "Kambario pavadinimas",
     "Create" : "Sukurti",
     "Delete" : "Ištrinti",
@@ -21,6 +22,9 @@ OC.L10N.register(
     "Error" : "Klaida",
     "Delete?" : "Ištrinti?",
     "Server error" : "Serverio klaida",
+    "Group" : "Grupė",
+    "moderator" : "moderatorius",
+    "Loading" : "Įkeliama",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"
 },

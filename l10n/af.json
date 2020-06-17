@@ -9,6 +9,8 @@
     "Delete" : "Skrap",
     "Error" : "Fout",
     "Server error" : "Bedienerfout",
+    "Group" : "Groep",
+    "Loading" : "Laai tans..",
     "Settings saved" : "Instellings gestoor"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

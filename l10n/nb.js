@@ -17,6 +17,7 @@ OC.L10N.register(
     "Error" : "Feil",
     "Server error" : "Tjenerfeil",
     "Group" : "Gruppe",
+    "moderator" : "moderator",
     "Loading" : "Laster",
     "Settings saved" : "Innstillinger lagret"
 },

@@ -10,6 +10,8 @@
     "Delete" : "Устгах",
     "Error" : "Алдаа",
     "Server error" : "серверийн алдаа",
+    "Group" : "Бүлэг",
+    "Loading" : "Loading",
     "Settings saved" : "Тохиргоо хадгалагдлаа"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

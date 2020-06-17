@@ -14,6 +14,8 @@ OC.L10N.register(
     "Delete" : "Slet",
     "Error" : "Fejl",
     "Server error" : "Serverfejl",
+    "Group" : "Gruppe",
+    "Loading" : "Indlæser",
     "Settings saved" : "Indstillinger gemt"
 },
 "nplurals=2; plural=(n != 1);");

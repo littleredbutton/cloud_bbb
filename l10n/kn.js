@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "ಸಂಪಾದಿಸು",
     "Create" : "ಸೃಷ್ಟಿಸಿ",
     "Delete" : "﻿ಅಳಿಸಿ",
-    "Error" : "﻿ತಪ್ಪಾಗಿದೆ"
+    "Error" : "﻿ತಪ್ಪಾಗಿದೆ",
+    "Group" : "﻿ಗುಂಪು",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n > 1);");

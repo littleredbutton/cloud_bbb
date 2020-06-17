@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "Sunting",
     "Create" : "Buat",
     "Delete" : "Padam",
-    "Error" : "Ralat"
+    "Error" : "Ralat",
+    "Group" : "Group",
+    "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

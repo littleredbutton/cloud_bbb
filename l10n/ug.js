@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "تەھرىر",
     "Create" : "قۇر",
     "Delete" : "ئۆچۈر",
-    "Error" : "خاتالىق"
+    "Error" : "خاتالىق",
+    "Group" : "Group",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

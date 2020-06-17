@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "সম্পাদনা",
     "Create" : "তৈরী কর",
     "Delete" : "মুছে",
-    "Error" : "সমস্যা"
+    "Error" : "সমস্যা",
+    "Group" : "গোষ্ঠীসমূহ",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

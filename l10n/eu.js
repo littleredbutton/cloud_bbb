@@ -32,6 +32,7 @@ OC.L10N.register(
     "Could not delete record" : "Ezin izan da grabaketa ezabatu",
     "Server error" : "Zerbitzari akatsa",
     "Group" : "Taldea",
+    "moderator" : "moderatzailea",
     "Loading" : "Kargatzen",
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",

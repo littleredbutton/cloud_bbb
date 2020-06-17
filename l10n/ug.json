@@ -5,6 +5,8 @@
     "Edit" : "تەھرىر",
     "Create" : "قۇر",
     "Delete" : "ئۆچۈر",
-    "Error" : "خاتالىق"
+    "Error" : "خاتالىق",
+    "Group" : "Group",
+    "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

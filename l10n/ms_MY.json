@@ -5,6 +5,8 @@
     "Edit" : "Sunting",
     "Create" : "Buat",
     "Delete" : "Padam",
-    "Error" : "Ralat"
+    "Error" : "Ralat",
+    "Group" : "Group",
+    "Loading" : "Loading"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

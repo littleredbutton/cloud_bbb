@@ -13,6 +13,8 @@ OC.L10N.register(
     "Delete" : "Forigi",
     "Error" : "Eraro",
     "Server error" : "Eraro pri servilo",
+    "Group" : "Grupo",
+    "Loading" : "Ŝargado",
     "Settings saved" : "Agordoj konservitaj"
 },
 "nplurals=2; plural=(n != 1);");

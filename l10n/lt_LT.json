@@ -11,6 +11,7 @@
     "Welcome" : "Sveiki",
     "Access" : "Prieiga",
     "Public" : "Vieša",
+    "Miscellaneous" : "Įvairūs",
     "Room name" : "Kambario pavadinimas",
     "Create" : "Sukurti",
     "Delete" : "Ištrinti",
@@ -19,6 +20,9 @@
     "Error" : "Klaida",
     "Delete?" : "Ištrinti?",
     "Server error" : "Serverio klaida",
+    "Group" : "Grupė",
+    "moderator" : "moderatorius",
+    "Loading" : "Įkeliama",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"

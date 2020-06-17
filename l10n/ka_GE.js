@@ -14,6 +14,9 @@ OC.L10N.register(
     "Delete" : "წაშლა",
     "Error" : "შეცდომა",
     "Server error" : "სერვერის შეცდომა",
+    "Group" : "ჯგუფი",
+    "moderator" : "მოდერატორი",
+    "Loading" : "იტვირთება",
     "Settings saved" : "პარამეტრები შენახულია"
 },
 "nplurals=2; plural=(n!=1);");

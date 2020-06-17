@@ -12,6 +12,7 @@ OC.L10N.register(
     "Delete" : "Избриши",
     "Error" : "Грешка",
     "Group" : "Група",
+    "moderator" : "модератор",
     "Loading" : "Се вчитува",
     "Settings saved" : "Параматрите се зачувани"
 },

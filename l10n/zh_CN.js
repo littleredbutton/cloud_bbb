@@ -17,6 +17,7 @@ OC.L10N.register(
     "Error" : "错误",
     "Server error" : "服务器错误",
     "Group" : "群组",
+    "moderator" : "主持人",
     "Loading" : "正在加载",
     "Settings saved" : "设置已保存"
 },

@@ -11,6 +11,8 @@ OC.L10N.register(
     "Delete" : "Skrap",
     "Error" : "Fout",
     "Server error" : "Bedienerfout",
+    "Group" : "Groep",
+    "Loading" : "Laai tans..",
     "Settings saved" : "Instellings gestoor"
 },
 "nplurals=2; plural=(n != 1);");

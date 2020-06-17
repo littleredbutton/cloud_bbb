@@ -10,10 +10,14 @@ OC.L10N.register(
     "Welcome" : "Benvingut",
     "Access" : "Accés",
     "Public" : "Públic",
+    "Miscellaneous" : "Miscel·lània ",
     "Create" : "Crea",
     "Delete" : "Eliminar",
     "Error" : "Error",
     "Server error" : "Error del servidor",
+    "Group" : "Grup",
+    "moderator" : "moderador",
+    "Loading" : "Carregant",
     "Settings saved" : "S'han desat els paràmetres"
 },
 "nplurals=2; plural=(n != 1);");

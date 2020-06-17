@@ -12,6 +12,8 @@ OC.L10N.register(
     "Delete" : "Kustuta",
     "Error" : "Viga",
     "Server error" : "Serveri tõrge",
+    "Group" : "Grupp",
+    "Loading" : "Laadimine",
     "Settings saved" : "Seaded salvestatud"
 },
 "nplurals=2; plural=(n != 1);");

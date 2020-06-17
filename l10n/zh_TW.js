@@ -14,6 +14,9 @@ OC.L10N.register(
     "Delete" : "刪除",
     "Error" : "錯誤",
     "Server error" : "伺服器錯誤",
+    "Group" : "群組",
+    "moderator" : "主持人",
+    "Loading" : "載入中",
     "Settings saved" : "設定已儲存"
 },
 "nplurals=1; plural=0;");

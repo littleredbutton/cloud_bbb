@@ -5,6 +5,8 @@
     "Edit" : "Dəyişiklik et",
     "Create" : "Yarat",
     "Delete" : "Sil",
-    "Error" : "Səhv"
+    "Error" : "Səhv",
+    "Group" : "Qrup",
+    "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

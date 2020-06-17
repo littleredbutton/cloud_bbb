@@ -7,6 +7,8 @@ OC.L10N.register(
     "Edit" : "Endra",
     "Create" : "Lag",
     "Delete" : "Ta bort",
-    "Error" : "Feil"
+    "Error" : "Feil",
+    "Group" : "Gruppe",
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");
