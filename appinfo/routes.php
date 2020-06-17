@@ -3,7 +3,6 @@ return [
     'resources' => [
         'room' => ['url' => '/rooms'],
         'roomShare' => ['url' => '/roomShares'],
-        'room_api' => ['url' => '/api/0.1/rooms'],
     ],
     'routes' => [
         ['name' => 'server#records', 'url' => '/server/{roomUid}/records', 'verb' => 'GET'],
@@ -11,7 +10,5 @@ return [
         ['name' => 'server#version', 'url' => '/server/version', 'verb' => 'GET'],
         ['name' => 'server#delete_record', 'url' => '/server/record/{recordId}', 'verb' => 'DELETE'],
         ['name' => 'join#index', 'url' => '/b/{token}', 'verb' => 'GET'],
-        ['name' => 'room_api#preflighted_cors', 'url' => '/api/0.1/{path}',
-         'verb' => 'OPTIONS', 'requirements' => ['path' => '.+']]
     ]
 ];
