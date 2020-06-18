@@ -44,7 +44,7 @@ matrix:
 cache:
   yarn: true
   directories:
-    - node_modules
+    - "$HOME/core/apps/bbb/node_modules"
     - "$HOME/.composer/cache/files"
     - "$HOME/.npm"
 
