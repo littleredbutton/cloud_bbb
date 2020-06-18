@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/sualko/cloud_bbb.svg?branch=master)](https://travis-ci.org/sualko/cloud_bbb)
 ![Downloads](https://img.shields.io/github/downloads/sualko/cloud_bbb/total.svg)
 ![GitHub release](https://img.shields.io/github/release/sualko/cloud_bbb.svg)
+
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sualko)
 
 This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).
@@ -82,7 +83,7 @@ Writing such an application is a lot of work and therefore we are specially
 thankful for people and organisations who are sponsoring features or bug fixes:
 
 - [Medienwerkstatt Minden-Lübbecke e.V.](https://www.medienwerkstatt.org) manage recordings ([#19])
-- [Deutscher Bundesjugendring](https://www.dbjr.de) version [0.4.0]
+- [Deutscher Bundesjugendring](https://www.dbjr.de) version [0.4.0], version [0.5.0]
 
 If you are looking for other ways to contribute to this project, you are welcome
 to look at our [contributor guidelines]. Every contribution is valuable :tada:.
@@ -90,3 +91,4 @@ to look at our [contributor guidelines]. Every contribution is valuable :tada:.
 [contributor guidelines]: https://github.com/sualko/cloud_bbb/blob/master/.github/contributing.md
 [#19]: https://github.com/sualko/cloud_bbb/issues/19
 [0.4.0]: https://github.com/sualko/cloud_bbb/releases/tag/v0.4.0
+[0.5.0]: https://github.com/sualko/cloud_bbb/releases/tag/v0.5.0
