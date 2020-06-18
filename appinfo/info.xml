@@ -26,6 +26,7 @@ Developer wanted! If you have time it would be awesome if you could help to enha
     <repository>https://github.com/sualko/cloud_bbb/</repository>
     <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-file-browser.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration2.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-join.png</screenshot>
     <dependencies>
         <lib>curl</lib>
