@@ -70,7 +70,7 @@ class RoomMapper extends QBMapper
 					$qb->expr()->andX(
 						$qb->expr()->eq('s.permission', $qb->createNamedParameter(RoomShare::PERMISSION_ADMIN, IQueryBuilder::PARAM_INT)),
 						$qb->expr()->eq('s.share_type', $qb->createNamedParameter(RoomShare::SHARE_TYPE_GROUP, IQueryBuilder::PARAM_INT)),
-						$qb->expr()->in('s.share_with', $groupIds)
+						$qb->expr()->in('s.share_with', $qb->createNamedParameter($groupIds, IQueryBuilder::PARAM_STR_ARRAY))
 					)
 				)
 			)
