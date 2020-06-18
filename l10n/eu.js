@@ -33,6 +33,7 @@ OC.L10N.register(
     "Server error" : "Zerbitzari akatsa",
     "Group" : "Taldea",
     "moderator" : "moderatzailea",
+    "Share" : "Partekatu",
     "Loading" : "Kargatzen",
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",

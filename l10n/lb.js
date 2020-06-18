@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Läschen",
     "Error" : "Fehler",
     "Group" : "Grupp",
+    "Share" : "Deelen",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

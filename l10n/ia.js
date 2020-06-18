@@ -11,6 +11,7 @@ OC.L10N.register(
     "Delete" : "Deler",
     "Error" : "Error",
     "Group" : "Gruppo",
+    "Share" : "Compartir",
     "Loading" : "Loading",
     "Settings saved" : "Configurationes salveguardate"
 },

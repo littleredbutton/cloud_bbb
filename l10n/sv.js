@@ -18,6 +18,7 @@ OC.L10N.register(
     "Server error" : "Serverfel",
     "Group" : "Grupp",
     "moderator" : "moderator",
+    "Share" : "Dela",
     "Loading" : "Läser in",
     "Settings saved" : "Inställningar sparade"
 },

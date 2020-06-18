@@ -37,6 +37,7 @@ OC.L10N.register(
     "Could not delete record" : "לא ניתן למחוק רשומה",
     "Server error" : "שגיאת שרת",
     "Group" : "קבוצה",
+    "moderator" : "מפקח/ת",
     "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",

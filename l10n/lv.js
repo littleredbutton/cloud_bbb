@@ -34,6 +34,8 @@ OC.L10N.register(
     "Could not delete record" : "Nevar dzēst ierakstu",
     "Server error" : "Servera kļūda",
     "Group" : "Grupa",
+    "moderator" : "moderators",
+    "Share" : "Koplietot",
     "Loading" : "Ielādē",
     "Settings saved" : "Iestatījumi saglabāti",
     "Unexpected error occurred" : "Neparedzēta kļūda",

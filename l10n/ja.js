@@ -17,6 +17,7 @@ OC.L10N.register(
     "Server error" : "サーバーエラー",
     "Group" : "グループ",
     "moderator" : "モデレータ",
+    "Share" : "共有",
     "Loading" : "読み込み中",
     "Settings saved" : "設定を保存しました"
 },

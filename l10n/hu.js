@@ -42,6 +42,7 @@ OC.L10N.register(
     "Server error" : "Kiszolgálóhiba",
     "Group" : "Csoport",
     "moderator" : "moderátor",
+    "Share" : "Megosztás",
     "Loading" : "Betöltés",
     "Settings saved" : "Beállítások elmentve",
     "Unexpected error occurred" : "Váratlan hiba történt",

@@ -33,6 +33,7 @@ OC.L10N.register(
     "Internal + Password protection for guests" : "Interní + Ochrana heslem vůči hostům.",
     "Internal + Waiting room for guests" : "interní + Čekárna pro hosty",
     "Internal" : "Vnitřní",
+    "Internal restricted" : "Vnitřní omezené",
     "Miscellaneous" : "Různé",
     "Recording" : "Zaznamenávání",
     "Room name" : "Název místnosti",

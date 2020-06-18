@@ -12,6 +12,7 @@ OC.L10N.register(
     "Delete" : "Xóa",
     "Error" : "Lỗi",
     "Group" : "N",
+    "moderator" : "Người kiểm duyệt",
     "Loading" : "Đang tải",
     "Settings saved" : "Cấu hình đã được lưu"
 },

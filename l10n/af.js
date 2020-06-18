@@ -12,6 +12,7 @@ OC.L10N.register(
     "Error" : "Fout",
     "Server error" : "Bedienerfout",
     "Group" : "Groep",
+    "Share" : "Deel",
     "Loading" : "Laai tans..",
     "Settings saved" : "Instellings gestoor"
 },

@@ -1,5 +1,7 @@
 { "translations": {
+    "API URL" : "API 連結位址",
     "Save" : "儲存",
+    "Please enter your name!" : "請輸入您的名稱!",
     "Display name" : "顯示名稱",
     "Password" : "密碼",
     "Join" : "加入",
@@ -14,6 +16,7 @@
     "Server error" : "伺服器錯誤",
     "Group" : "群組",
     "moderator" : "主持人",
+    "Share" : "分享",
     "Loading" : "載入中",
     "Settings saved" : "設定已儲存"
 },"pluralForm" :"nplurals=1; plural=0;"

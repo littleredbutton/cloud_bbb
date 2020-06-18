@@ -13,6 +13,8 @@
     "Error" : "Fejl",
     "Server error" : "Serverfejl",
     "Group" : "Gruppe",
+    "moderator" : "moderator",
+    "Share" : "Del",
     "Loading" : "Indlæser",
     "Settings saved" : "Indstillinger gemt"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

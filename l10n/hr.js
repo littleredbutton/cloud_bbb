@@ -16,6 +16,7 @@ OC.L10N.register(
     "Error" : "Pogreška",
     "Server error" : "Greška poslužitelja",
     "Group" : "Grupa",
+    "moderator" : "moderator",
     "Loading" : "Učitavanje",
     "Settings saved" : "Postavke spremljene"
 },

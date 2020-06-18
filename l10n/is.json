@@ -14,6 +14,7 @@
     "Error" : "Villa",
     "Server error" : "Villa frá þjóni",
     "Group" : "Hópur",
+    "moderator" : "umsjónarmaður",
     "Loading" : "Hleð inn",
     "Settings saved" : "Stillingar vistaðar"
 },"pluralForm" :"nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);"

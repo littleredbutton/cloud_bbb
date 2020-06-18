@@ -53,6 +53,7 @@ OC.L10N.register(
     "Could not delete record" : "Impossible de supprimer l'enregistrement",
     "Server error" : "Erreur du serveur",
     "Group" : "Groupe",
+    "moderator" : "modérateur",
     "Loading" : "Chargement",
     "Settings saved" : "Paramètres sauvegardés",
     "Unexpected error occurred" : "Une erreur est survenue",

@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "ඉවත් කරන්න",
     "Error" : "දෝෂයක්",
     "Group" : "Group",
+    "Share" : "බෙදා හදා ගන්න",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

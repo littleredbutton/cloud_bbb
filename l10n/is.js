@@ -16,6 +16,7 @@ OC.L10N.register(
     "Error" : "Villa",
     "Server error" : "Villa frá þjóni",
     "Group" : "Hópur",
+    "moderator" : "umsjónarmaður",
     "Loading" : "Hleð inn",
     "Settings saved" : "Stillingar vistaðar"
 },

@@ -16,6 +16,7 @@ OC.L10N.register(
     "Error" : "خطا",
     "Server error" : "خطای سرور",
     "Group" : "گروه",
+    "Share" : "هم‌رسانی",
     "Loading" : "در حال بار گزاری",
     "Settings saved" : "تنظیمات ذخیره شد"
 },

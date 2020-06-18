@@ -17,6 +17,7 @@ OC.L10N.register(
     "Server error" : "Error del servidor",
     "Group" : "Grup",
     "moderator" : "moderador",
+    "Share" : "Compartir",
     "Loading" : "Carregant",
     "Settings saved" : "S'han desat els paràmetres"
 },

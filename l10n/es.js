@@ -54,6 +54,7 @@ OC.L10N.register(
     "Server error" : "Error en el servidor",
     "Group" : "Grupo",
     "moderator" : "moderador",
+    "Share" : "Compartir",
     "Loading" : "Cargando",
     "Name, group, ..." : "Nombre, grupo, ...",
     "Settings saved" : "Ajustes guardados",

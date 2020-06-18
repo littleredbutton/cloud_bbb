@@ -16,6 +16,7 @@ OC.L10N.register(
     "Server error" : "სერვერის შეცდომა",
     "Group" : "ჯგუფი",
     "moderator" : "მოდერატორი",
+    "Share" : "გაზიარება",
     "Loading" : "იტვირთება",
     "Settings saved" : "პარამეტრები შენახულია"
 },
