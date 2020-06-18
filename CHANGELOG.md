@@ -6,6 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.5.0 (2020-06-18)
+### Added
+- [#33](https://github.com/sualko/cloud_bbb/issues/33) add option to share room
+- add option to set everyone as moderator
+- [#25](https://github.com/sualko/cloud_bbb/issues/25) restrict room access to user and groups
+- [#33](https://github.com/sualko/cloud_bbb/issues/33) allow to define user and groups as moderator
+
+### Fixed
+- trim user supplied displayname
+- show room loading error
+- max dialog height
+
+### Misc
+- update screenshots
+- add integration test for room mapper
+- expand name cell
+- remove unused controller
+
 ## 0.4.0 (2020-06-10)
 ### Added
 - [#10](https://github.com/sualko/cloud_bbb/issues/10)[#24](https://github.com/sualko/cloud_bbb/issues/24) add access policy
