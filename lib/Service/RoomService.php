@@ -32,6 +32,9 @@ class RoomService {
 		}
 	}
 
+	/**
+	 * @throws RoomNotFound
+	 */
 	public function find($id): Room {
 		try {
 			return $this->mapper->find($id);

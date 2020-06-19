@@ -6,6 +6,19 @@ use JsonSerializable;
 
 use OCP\AppFramework\Db\Entity;
 
+/**
+ * @method int getRoomId()
+ * @method int getShareType()
+ * @method string getShareWith()
+ * @method string|null getShareWithDisplayName()
+ * @method int getPermission()
+ * @method void setShareWithDisplayName(string $displayName)
+ * @method void setRoomId(int $id)
+ * @method void setShareType(int $type)
+ * @method void setShareWith(string $with)
+ * @method void setShareWithDisplayName(string $displayName)
+ * @method void setPermission(int $permission)
+ */
 class RoomShare extends Entity implements JsonSerializable {
 	public const PERMISSION_ADMIN = 0;
 	public const PERMISSION_MODERATOR = 1;

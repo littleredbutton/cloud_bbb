@@ -5,7 +5,6 @@ namespace OCA\BigBlueButton\Tests\Controller;
 use PHPUnit\Framework\TestCase;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IURLGenerator;
-use OCP\ISession;
 use OCP\IUserSession;
 use OCP\IConfig;
 use OCP\IRequest;
@@ -34,7 +33,6 @@ class JoinControllerTest extends TestCase {
 		parent::setUp();
 
 		$this->request = $this->createMock(IRequest::class);
-		$this->session = $this->createMock(ISession::class);
 		$this->service = $this->createMock(RoomService::class);
 		$this->userSession = $this->createMock(IUserSession::class);
 		$this->config = $this->createMock(IConfig::class);
@@ -45,7 +43,6 @@ class JoinControllerTest extends TestCase {
 		$this->controller = new JoinController(
 			'bbb',
 			$this->request,
-			$this->session,
 			$this->service,
 			$this->urlGenerator,
 			$this->userSession,

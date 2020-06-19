@@ -10,7 +10,6 @@ use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IRequest;
-use OCP\ISession;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
 use OCP\IConfig;
@@ -22,7 +21,7 @@ class JoinController extends Controller {
 	/** @var string */
 	protected $token;
 
-	/** @var Room */
+	/** @var Room|null */
 	protected $room;
 
 	/** @var RoomService */
@@ -46,7 +45,6 @@ class JoinController extends Controller {
 	public function __construct(
 		string $appName,
 		IRequest $request,
-		ISession $session,
 		RoomService $service,
 		IURLGenerator $urlGenerator,
 		IUserSession $userSession,
@@ -54,7 +52,7 @@ class JoinController extends Controller {
 		API $api,
 		Permission $permission
 	) {
-		parent::__construct($appName, $request, $session);
+		parent::__construct($appName, $request);
 
 		$this->service = $service;
 		$this->urlGenerator = $urlGenerator;

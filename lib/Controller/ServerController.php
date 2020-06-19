@@ -80,7 +80,7 @@ class ServerController extends Controller {
 		return new DataResponse($success);
 	}
 
-	public function check(string $url, string $secret) {
+	public function check(?string $url, ?string $secret) {
 		if ($url === null || empty($url) || $secret === null || empty($secret)) {
 			return new DataResponse(false);
 		}
@@ -88,7 +88,7 @@ class ServerController extends Controller {
 		return new DataResponse($this->server->check($url, $secret));
 	}
 
-	public function version(string $url) {
+	public function version(?string $url) {
 		if ($url === null || empty($url)) {
 			return new DataResponse(false, Http::STATUS_NOT_FOUND);
 		}

@@ -24,7 +24,7 @@ class API {
 	/** @var Permission */
 	private $permission;
 
-	/** @var BigBlueButton */
+	/** @var BigBlueButton|null */
 	private $server;
 
 	public function __construct(

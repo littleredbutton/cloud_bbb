@@ -3,7 +3,6 @@
 namespace OCA\BigBlueButton\Db;
 
 use OCP\AppFramework\Db\DoesNotExistException;
-use OCP\AppFramework\Db\Entity;
 use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
@@ -14,9 +13,6 @@ class RoomMapper extends QBMapper {
 	}
 
 	/**
-	 * @param int $id
-	 * @param string $userId
-	 * @return Entity|Room
 	 * @throws \OCP\AppFramework\Db\MultipleObjectsReturnedException
 	 * @throws DoesNotExistException
 	 */
@@ -26,12 +22,12 @@ class RoomMapper extends QBMapper {
 		$qb->select('*')
 			->from($this->tableName)
 			->where($qb->expr()->eq('id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT)));
+
+		/** @var Room */
 		return $this->findEntity($qb);
 	}
 
 	/**
-	 * @param string $uid
-	 * @return Entity|Room
 	 * @throws \OCP\AppFramework\Db\MultipleObjectsReturnedException
 	 * @throws DoesNotExistException
 	 */
@@ -41,13 +37,13 @@ class RoomMapper extends QBMapper {
 		$qb->select('*')
 			->from($this->tableName)
 			->where($qb->expr()->eq('uid', $qb->createNamedParameter($uid)));
+
+		/** @var Room */
 		return $this->findEntity($qb);
 	}
 
 	/**
-	 * @param int $userId
-	 * @param array $groupIds
-	 * @return array
+	 * @return array<Room>
 	 */
 	public function findAll(string $userId, array $groupIds): array {
 		/* @var $qb IQueryBuilder */
@@ -71,6 +67,8 @@ class RoomMapper extends QBMapper {
 				)
 			)
 			->groupBy('r.id');
+
+		/** @var array<Room> */
 		return $this->findEntities($qb);
 	}
 }

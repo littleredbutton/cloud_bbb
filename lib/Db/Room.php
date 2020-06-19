@@ -6,6 +6,30 @@ use JsonSerializable;
 
 use OCP\AppFramework\Db\Entity;
 
+/**
+ * @method string getUid()
+ * @method string getName()
+ * @method string getAttendeePassword()
+ * @method string getModeratorPassword()
+ * @method string getWelcome()
+ * @method int getMaxParticipants()
+ * @method bool getRecord()
+ * @method string getUserId()
+ * @method string getAccess()
+ * @method string getPassword()
+ * @method bool getEveryoneIsModerator()
+ * @method void setUid(string $uid)
+ * @method void setName(string $name)
+ * @method void setAttendeePassword(string $pw)
+ * @method void setModeratorPassword(string $pw)
+ * @method void setWelcome(string $welcome)
+ * @method void setMaxParticipants(int $max)
+ * @method void setRecord(bool $record)
+ * @method void setUserId(string $userId)
+ * @method void setAccess(string $access)
+ * @method void setPassword(string $pw)
+ * @method void setEveryoneIsModerator(bool $everyone)
+ */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
 	public const ACCESS_PASSWORD = 'password';
