@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.5.1 (2020-06-19)
+### Fixed
+- allow admin to start room with presentation
+- [#50](https://github.com/sualko/cloud_bbb/issues/50) fix error which prevents guests from joining a room
+
+### Misc
+- use Nextcloud coding standard
+
 ## 0.5.0 (2020-06-18)
 ### Added
 - [#33](https://github.com/sualko/cloud_bbb/issues/33) add option to share room
