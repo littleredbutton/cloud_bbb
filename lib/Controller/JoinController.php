@@ -99,7 +99,7 @@ class JoinController extends Controller {
 				throw new NoPermissionException();
 			}
 
-			if ($userId === $room->userId) {
+			if ($this->permission->isAdmin($room, $userId)) {
 				$presentation = new Presentation($u, $filename);
 			}
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access == Room::ACCESS_INTERNAL_RESTRICTED) {
