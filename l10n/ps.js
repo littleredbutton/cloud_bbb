@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password" : "پاسورډ",
     "Name" : "نوم",
     "Delete" : "ړنګول",
-    "Error" : "شسیب"
+    "Error" : "شسیب",
+    "Share" : "شریکول"
 },
 "nplurals=2; plural=(n != 1);");

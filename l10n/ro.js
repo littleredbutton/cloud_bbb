@@ -13,6 +13,7 @@ OC.L10N.register(
     "Error" : "Eroare",
     "Server error" : "Eroare server",
     "Group" : "Grup",
+    "Share" : "Partajează",
     "Loading" : "Loading",
     "Settings saved" : "Setările au fost salvate"
 },

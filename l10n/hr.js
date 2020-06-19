@@ -17,6 +17,7 @@ OC.L10N.register(
     "Server error" : "Greška poslužitelja",
     "Group" : "Grupa",
     "moderator" : "moderator",
+    "Share" : "Dijeli",
     "Loading" : "Učitavanje",
     "Settings saved" : "Postavke spremljene"
 },

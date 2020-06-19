@@ -54,6 +54,7 @@ OC.L10N.register(
     "Server error" : "Napaka strežnika",
     "Group" : "Skupina",
     "moderator" : "moderator",
+    "Share" : "Souporaba",
     "Loading" : "Poteka nalaganje ...",
     "Settings saved" : "Nastavitve so shranjene.",
     "Unexpected error occurred" : "Prišlo je do nepričakovane napake",

@@ -14,6 +14,7 @@ OC.L10N.register(
     "Error" : "Грешка",
     "Server error" : "Сървърна грешка",
     "Group" : "Група",
+    "Share" : "Сподели",
     "Loading" : "Зареждане",
     "Settings saved" : "Настройките са запазени"
 },

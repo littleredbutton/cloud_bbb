@@ -14,6 +14,7 @@ OC.L10N.register(
     "Error" : "Error",
     "Server error" : "Gabim shërbyesi",
     "Group" : "Grup",
+    "Share" : "Shpërndaje",
     "Loading" : "Duke ngarkuar",
     "Settings saved" : "Opsjonet u Ruajtën."
 },

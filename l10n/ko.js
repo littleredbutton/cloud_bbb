@@ -24,6 +24,7 @@ OC.L10N.register(
     "Server error" : "서버 오류",
     "Group" : "그룹",
     "moderator" : "중재자",
+    "Share" : "공유",
     "Loading" : "불러오는 중",
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",

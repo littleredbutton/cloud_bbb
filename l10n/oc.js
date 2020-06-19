@@ -25,6 +25,7 @@ OC.L10N.register(
     "Could not delete record" : "Supression de l’enregistrament impossibla",
     "Server error" : "Error del servidor",
     "Group" : "Grop",
+    "Share" : "Partejar",
     "Loading" : "Loading",
     "Settings saved" : "Paramètres enregistrats",
     "API secret is invalid" : "Secret API invalid"

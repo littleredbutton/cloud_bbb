@@ -13,6 +13,7 @@ OC.L10N.register(
     "Error" : "Алдаа",
     "Server error" : "серверийн алдаа",
     "Group" : "Бүлэг",
+    "Share" : "Түгээх",
     "Loading" : "Loading",
     "Settings saved" : "Тохиргоо хадгалагдлаа"
 },

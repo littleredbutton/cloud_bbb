@@ -12,6 +12,7 @@
     "Error" : "Грешка",
     "Server error" : "Сървърна грешка",
     "Group" : "Група",
+    "Share" : "Сподели",
     "Loading" : "Зареждане",
     "Settings saved" : "Настройките са запазени"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

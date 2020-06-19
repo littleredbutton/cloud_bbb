@@ -12,6 +12,7 @@ OC.L10N.register(
     "Error" : "Fallu",
     "Server error" : "Fallu de sirvidor",
     "Group" : "Group",
+    "Share" : "Share",
     "Loading" : "Cargando",
     "Settings saved" : "Axustes guardaos"
 },

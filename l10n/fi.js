@@ -38,6 +38,7 @@ OC.L10N.register(
     "Server error" : "Palvelinvirhe",
     "Group" : "Ryhmä",
     "moderator" : "moderaattori",
+    "Share" : "Jaa",
     "Loading" : "Ladataan",
     "Settings saved" : "Asetukset tallennettu",
     "Unexpected error occurred" : "Tapahtui odottamaton virhe",

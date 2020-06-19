@@ -13,6 +13,7 @@ OC.L10N.register(
     "Error" : "Грешка",
     "Group" : "Група",
     "moderator" : "модератор",
+    "Share" : "Сподели",
     "Loading" : "Се вчитува",
     "Settings saved" : "Параматрите се зачувани"
 },

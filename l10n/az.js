@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Sil",
     "Error" : "Səhv",
     "Group" : "Qrup",
+    "Share" : "Paylaş",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

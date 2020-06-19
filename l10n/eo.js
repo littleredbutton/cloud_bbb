@@ -14,6 +14,7 @@ OC.L10N.register(
     "Error" : "Eraro",
     "Server error" : "Eraro pri servilo",
     "Group" : "Grupo",
+    "Share" : "Kunhavigi",
     "Loading" : "Ŝargado",
     "Settings saved" : "Agordoj konservitaj"
 },

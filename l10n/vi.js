@@ -13,6 +13,7 @@ OC.L10N.register(
     "Error" : "Lỗi",
     "Group" : "N",
     "moderator" : "Người kiểm duyệt",
+    "Share" : "Chia sẻ",
     "Loading" : "Đang tải",
     "Settings saved" : "Cấu hình đã được lưu"
 },

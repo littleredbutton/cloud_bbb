@@ -8,6 +8,7 @@ OC.L10N.register(
     "Delete" : "حذف کریں",
     "Error" : "ایرر",
     "Group" : "Group",
+    "Share" : "تقسیم",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

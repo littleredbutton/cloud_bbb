@@ -13,6 +13,7 @@ OC.L10N.register(
     "Error" : "Viga",
     "Server error" : "Serveri tõrge",
     "Group" : "Grupp",
+    "Share" : "Jaga",
     "Loading" : "Laadimine",
     "Settings saved" : "Seaded salvestatud"
 },

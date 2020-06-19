@@ -14,6 +14,7 @@ OC.L10N.register(
     "Error" : "خطأ",
     "Server error" : "خطا في الخادم",
     "Group" : "الفريق",
+    "Share" : "شارك",
     "Loading" : "Loading",
     "Settings saved" : "تم حفظ الإعدادات"
 },

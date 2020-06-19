@@ -54,6 +54,7 @@ OC.L10N.register(
     "Server error" : "Serverfout",
     "Group" : "Groep",
     "moderator" : "moderator",
+    "Share" : "Delen",
     "Loading" : "Laden",
     "Settings saved" : "Instellingen bewaard",
     "Unexpected error occurred" : "Onverwachte fout opgetreden",

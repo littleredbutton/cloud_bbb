@@ -38,6 +38,7 @@ OC.L10N.register(
     "Server error" : "שגיאת שרת",
     "Group" : "קבוצה",
     "moderator" : "מפקח/ת",
+    "Share" : "שיתוף",
     "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",

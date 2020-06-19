@@ -37,6 +37,7 @@ OC.L10N.register(
     "Server error" : "Ошибка сервера",
     "Group" : "Группа",
     "moderator" : "модератор",
+    "Share" : "Публикация",
     "Loading" : "Загружается",
     "Settings saved" : "Настройки сохранены",
     "Unexpected error occurred" : "Произошла неожиданная ошибка",

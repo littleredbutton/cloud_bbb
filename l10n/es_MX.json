@@ -14,6 +14,7 @@
     "Server error" : "Se presentó un error en el servidor",
     "Group" : "Grupo",
     "moderator" : "moderador",
+    "Share" : "Compartir",
     "Loading" : "Cargando",
     "Settings saved" : "Se han guardado las configuraciones "
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

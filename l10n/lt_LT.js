@@ -24,6 +24,7 @@ OC.L10N.register(
     "Server error" : "Serverio klaida",
     "Group" : "Grupė",
     "moderator" : "moderatorius",
+    "Share" : "Bendrinti",
     "Loading" : "Įkeliama",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"

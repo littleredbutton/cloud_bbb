@@ -9,6 +9,7 @@ OC.L10N.register(
     "Delete" : "Padam",
     "Error" : "Ralat",
     "Group" : "Group",
+    "Share" : "Kongsi",
     "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

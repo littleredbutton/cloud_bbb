@@ -10,6 +10,7 @@ OC.L10N.register(
     "Error" : "ข้อผิดพลาด",
     "Server error" : "ข้อผิดพลาดของเซิร์ฟเวอร์",
     "Group" : "กลุ่ม",
+    "Share" : "แชร์",
     "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

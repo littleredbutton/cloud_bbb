@@ -39,6 +39,7 @@ OC.L10N.register(
     "Could not delete record" : "Tidak dapat menghapus rekaman",
     "Server error" : "Galat peladen",
     "Group" : "Grup",
+    "Share" : "Bagikan",
     "Loading" : "Memuat",
     "Settings saved" : "Setelan tersimpan",
     "Unexpected error occurred" : "Terjadi galat tak terduga",
