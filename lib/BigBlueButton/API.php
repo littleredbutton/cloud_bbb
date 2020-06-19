@@ -58,7 +58,7 @@ class API
 	 *
 	 * @return string join url
 	 */
-	public function createJoinUrl(Room $room, int $creationTime, string $displayname, string $uid = null)
+	public function createJoinUrl(Room $room, int $creationTime, string $displayname, ?string $uid = null)
 	{
 		$password = $this->permission->isModerator($room, $uid) ? $room->moderatorPassword : $room->attendeePassword;
 

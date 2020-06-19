@@ -25,14 +25,14 @@ class Permission
 		$this->roomShareService = $roomShareService;
 	}
 
-	public function isUser(Room $room, string $uid)
+	public function isUser(Room $room, ?string $uid)
 	{
 		return $this->hasPermission($room, $uid, function (RoomShare $share) {
 			return $share->hasUserPermission();
 		});
 	}
 
-	public function isModerator(Room $room, string $uid)
+	public function isModerator(Room $room, ?string $uid)
 	{
 		if ($room->everyoneIsModerator) {
 			return true;
@@ -43,14 +43,14 @@ class Permission
 		});
 	}
 
-	public function isAdmin(Room $room, string $uid)
+	public function isAdmin(Room $room, ?string $uid)
 	{
 		return $this->hasPermission($room, $uid, function (RoomShare $share) {
 			return $share->hasAdminPermission();
 		});
 	}
 
-	private function hasPermission(Room $room, string $uid, Closure $hasPermission): bool
+	private function hasPermission(Room $room, ?string $uid, Closure $hasPermission): bool
 	{
 		if ($uid === null) {
 			return false;
