@@ -1,7 +1,7 @@
 <?php
 
 if (!($ncRoot = getenv('NEXTCLOUD_ROOT'))) {
-    $ncRoot =  __DIR__ . '/../../..';
+	$ncRoot = __DIR__ . '/../../..';
 }
 
 echo "Using ".realpath($ncRoot)." as Nextcloud root.\n\n";

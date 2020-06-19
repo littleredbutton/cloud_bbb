@@ -6,15 +6,13 @@ use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\Settings\IIconSection;
 
-class Section implements IIconSection
-{
+class Section implements IIconSection {
 	/** @var IL10N */
 	private $l;
 	/** @var IURLGenerator */
 	private $url;
 
-	public function __construct(IL10N $l, IURLGenerator $url)
-	{
+	public function __construct(IL10N $l, IURLGenerator $url) {
 		$this->l = $l;
 		$this->url = $url;
 	}
@@ -25,8 +23,7 @@ class Section implements IIconSection
 	 *
 	 * @returns string
 	 */
-	public function getID()
-	{
+	public function getID() {
 		return 'bbb';
 	}
 
@@ -36,8 +33,7 @@ class Section implements IIconSection
 	 *
 	 * @return string
 	 */
-	public function getName()
-	{
+	public function getName() {
 		return "BigBlueButton";
 	}
 
@@ -48,16 +44,14 @@ class Section implements IIconSection
 	 *
 	 * E.g.: 70
 	 */
-	public function getPriority()
-	{
+	public function getPriority() {
 		return 50;
 	}
 
 	/**
 	 * {@inheritdoc}
 	 */
-	public function getIcon()
-	{
+	public function getIcon() {
 		return $this->url->imagePath('bbb', 'app-dark.svg');
 	}
 }

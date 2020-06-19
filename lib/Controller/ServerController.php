@@ -11,8 +11,7 @@ use OCP\AppFramework\Controller;
 
 use OCA\BigBlueButton\Service\RoomService;
 
-class ServerController extends Controller
-{
+class ServerController extends Controller {
 	/** @var RoomService */
 	private $service;
 
@@ -42,10 +41,9 @@ class ServerController extends Controller
 	}
 
 	/**
-	* @NoAdminRequired
-	*/
-	public function records(string $roomUid): DataResponse
-	{
+	 * @NoAdminRequired
+	 */
+	public function records(string $roomUid): DataResponse {
 		$room = $this->service->findByUid($roomUid);
 
 		if ($room === null) {
@@ -62,10 +60,9 @@ class ServerController extends Controller
 	}
 
 	/**
-	* @NoAdminRequired
-	*/
-	public function deleteRecord(string $recordId): DataResponse
-	{
+	 * @NoAdminRequired
+	 */
+	public function deleteRecord(string $recordId): DataResponse {
 		$record = $this->server->getRecording($recordId);
 
 		$room = $this->service->findByUid($record['metas']['meetingId']);
@@ -83,8 +80,7 @@ class ServerController extends Controller
 		return new DataResponse($success);
 	}
 
-	public function check(string $url, string $secret)
-	{
+	public function check(string $url, string $secret) {
 		if ($url === null || empty($url) || $secret === null || empty($secret)) {
 			return new DataResponse(false);
 		}
@@ -92,8 +88,7 @@ class ServerController extends Controller
 		return new DataResponse($this->server->check($url, $secret));
 	}
 
-	public function version(string $url)
-	{
+	public function version(string $url) {
 		if ($url === null || empty($url)) {
 			return new DataResponse(false, Http::STATUS_NOT_FOUND);
 		}

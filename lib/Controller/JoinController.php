@@ -1,4 +1,5 @@
 <?php
+
 namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\BigBlueButton\API;
@@ -17,8 +18,7 @@ use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
 
-class JoinController extends Controller
-{
+class JoinController extends Controller {
 	/** @var string */
 	protected $token;
 
@@ -64,14 +64,12 @@ class JoinController extends Controller
 		$this->permission = $permission;
 	}
 
-	public function setToken(string $token)
-	{
+	public function setToken(string $token) {
 		$this->token = $token;
 		$this->room = null;
 	}
 
-	public function isValidToken(): bool
-	{
+	public function isValidToken(): bool {
 		$room = $this->getRoom();
 
 		return $room !== null;
@@ -81,8 +79,7 @@ class JoinController extends Controller
 	 * @PublicPage
 	 * @NoCSRFRequired
 	 */
-	public function index($displayname, $u = '', $filename = '', $password = '')
-	{
+	public function index($displayname, $u = '', $filename = '', $password = '') {
 		$room = $this->getRoom();
 
 		if ($room === null) {
@@ -133,8 +130,7 @@ class JoinController extends Controller
 		return new RedirectResponse($joinUrl);
 	}
 
-	private function addFormActionDomain($response)
-	{
+	private function addFormActionDomain($response) {
 		$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
 		$parsedApiUrl = parse_url($apiUrl);
 
@@ -145,8 +141,7 @@ class JoinController extends Controller
 		$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
 	}
 
-	private function getRoom(): ?Room
-	{
+	private function getRoom(): ?Room {
 		if ($this->room === null) {
 			$this->room = $this->service->findByUid($this->token);
 		}

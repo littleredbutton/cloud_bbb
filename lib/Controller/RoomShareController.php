@@ -13,8 +13,7 @@ use OCP\AppFramework\Controller;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\IUserManager;
 
-class RoomShareController extends Controller
-{
+class RoomShareController extends Controller {
 	/** @var RoomShareService */
 	private $service;
 
@@ -47,8 +46,7 @@ class RoomShareController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function index(): DataResponse
-	{
+	public function index(): DataResponse {
 		$roomId = $this->request->getParam('id');
 
 		if ($roomId === null) {
@@ -127,8 +125,7 @@ class RoomShareController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function destroy(int $id): DataResponse
-	{
+	public function destroy(int $id): DataResponse {
 		return $this->handleNotFound(function () use ($id) {
 			$roomShare = $this->service->find($id);
 
@@ -140,8 +137,7 @@ class RoomShareController extends Controller
 		});
 	}
 
-	private function isUserAllowed(int $roomId): bool
-	{
+	private function isUserAllowed(int $roomId): bool {
 		try {
 			$room = $this->roomService->find($roomId);
 

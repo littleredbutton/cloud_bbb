@@ -1,12 +1,12 @@
 <?php
+
 namespace OCA\BigBlueButton\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
 
-class Admin implements ISettings
-{
+class Admin implements ISettings {
 
 	/** @var IConfig */
 	private $config;
@@ -16,20 +16,18 @@ class Admin implements ISettings
 	 *
 	 * @param IConfig $config
 	 */
-	public function __construct(IConfig $config)
-	{
+	public function __construct(IConfig $config) {
 		$this->config = $config;
 	}
 
 	/**
 	 * @return TemplateResponse
 	 */
-	public function getForm()
-	{
+	public function getForm() {
 		$parameters = [
-					'api.url'    => $this->config->getAppValue('bbb', 'api.url'),
-					'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
-				];
+			'api.url'    => $this->config->getAppValue('bbb', 'api.url'),
+			'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
+		];
 
 		return new TemplateResponse('bbb', 'admin', $parameters);
 	}
@@ -37,8 +35,7 @@ class Admin implements ISettings
 	/**
 	 * @return string the section ID, e.g. 'sharing'
 	 */
-	public function getSection()
-	{
+	public function getSection() {
 		return 'additional';
 	}
 
@@ -47,8 +44,7 @@ class Admin implements ISettings
 	 * the admin section. The forms are arranged in ascending order of the
 	 * priority values. It is required to return a value between 0 and 100.
 	 */
-	public function getPriority()
-	{
+	public function getPriority() {
 		return 50;
 	}
 }

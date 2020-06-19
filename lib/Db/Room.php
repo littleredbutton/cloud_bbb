@@ -1,17 +1,17 @@
 <?php
+
 namespace OCA\BigBlueButton\Db;
 
 use JsonSerializable;
 
 use OCP\AppFramework\Db\Entity;
 
-class Room extends Entity implements JsonSerializable
-{
-	const ACCESS_PUBLIC = 'public';
-	const ACCESS_PASSWORD = 'password';
-	const ACCESS_WAITING_ROOM = 'waiting_room';
-	const ACCESS_INTERNAL = 'internal';
-	const ACCESS_INTERNAL_RESTRICTED = 'internal_restricted';
+class Room extends Entity implements JsonSerializable {
+	public const ACCESS_PUBLIC = 'public';
+	public const ACCESS_PASSWORD = 'password';
+	public const ACCESS_WAITING_ROOM = 'waiting_room';
+	public const ACCESS_INTERNAL = 'internal';
+	public const ACCESS_INTERNAL_RESTRICTED = 'internal_restricted';
 
 	public $uid;
 	public $name;
@@ -25,15 +25,13 @@ class Room extends Entity implements JsonSerializable
 	public $password;
 	public $everyoneIsModerator;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
 		$this->addType('record', 'boolean');
 		$this->addType('everyoneIsModerator', 'boolean');
 	}
 
-	public function jsonSerialize(): array
-	{
+	public function jsonSerialize(): array {
 		return [
 			'id'                  => $this->id,
 			'uid'                 => $this->uid,

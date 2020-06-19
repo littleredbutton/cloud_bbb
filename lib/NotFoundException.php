@@ -2,6 +2,5 @@
 
 namespace OCA\BigBlueButton;
 
-class NotFoundException extends \Exception
-{
+class NotFoundException extends \Exception {
 }

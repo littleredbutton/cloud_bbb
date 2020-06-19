@@ -1,4 +1,5 @@
 <?php
+
 namespace OCA\BigBlueButton\Db;
 
 use OCP\AppFramework\Db\DoesNotExistException;
@@ -7,10 +8,8 @@ use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 
-class RoomMapper extends QBMapper
-{
-	public function __construct(IDBConnection $db)
-	{
+class RoomMapper extends QBMapper {
+	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'bbb_rooms', Room::class);
 	}
 
@@ -21,8 +20,7 @@ class RoomMapper extends QBMapper
 	 * @throws \OCP\AppFramework\Db\MultipleObjectsReturnedException
 	 * @throws DoesNotExistException
 	 */
-	public function find(int $id): Room
-	{
+	public function find(int $id): Room {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
 		$qb->select('*')
@@ -37,8 +35,7 @@ class RoomMapper extends QBMapper
 	 * @throws \OCP\AppFramework\Db\MultipleObjectsReturnedException
 	 * @throws DoesNotExistException
 	 */
-	public function findByUid(string $uid): Room
-	{
+	public function findByUid(string $uid): Room {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
 		$qb->select('*')
@@ -52,8 +49,7 @@ class RoomMapper extends QBMapper
 	 * @param array $groupIds
 	 * @return array
 	 */
-	public function findAll(string $userId, array $groupIds): array
-	{
+	public function findAll(string $userId, array $groupIds): array {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
 		$qb->select('r.*')

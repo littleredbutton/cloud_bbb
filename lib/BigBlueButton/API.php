@@ -10,15 +10,11 @@ use BigBlueButton\Core\Record;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use OCA\BigBlueButton\Db\Room;
-use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Permission;
-use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\IConfig;
 use OCP\IURLGenerator;
-use OCP\IGroupManager;
 
-class API
-{
+class API {
 	/** @var IConfig */
 	private $config;
 
@@ -41,8 +37,7 @@ class API
 		$this->permission = $permission;
 	}
 
-	private function getServer()
-	{
+	private function getServer() {
 		if (!$this->server) {
 			$apiUrl = $this->config->getAppValue('bbb', 'api.url');
 			$secret = $this->config->getAppValue('bbb', 'api.secret');
@@ -58,8 +53,7 @@ class API
 	 *
 	 * @return string join url
 	 */
-	public function createJoinUrl(Room $room, int $creationTime, string $displayname, ?string $uid = null)
-	{
+	public function createJoinUrl(Room $room, int $creationTime, string $displayname, ?string $uid = null) {
 		$password = $this->permission->isModerator($room, $uid) ? $room->moderatorPassword : $room->attendeePassword;
 
 		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
@@ -82,8 +76,7 @@ class API
 	 *
 	 * @return int creation time
 	 */
-	public function createMeeting(Room $room, Presentation $presentation = null)
-	{
+	public function createMeeting(Room $room, Presentation $presentation = null) {
 		$bbb = $this->getServer();
 		$meetingParams = $this->buildMeetingParams($room, $presentation);
 
@@ -100,8 +93,7 @@ class API
 		return $response->getCreationTime();
 	}
 
-	private function buildMeetingParams(Room $room, Presentation $presentation = null): CreateMeetingParameters
-	{
+	private function buildMeetingParams(Room $room, Presentation $presentation = null): CreateMeetingParameters {
 		$createMeetingParams = new CreateMeetingParameters($room->uid, $room->name);
 		$createMeetingParams->setAttendeePassword($room->attendeePassword);
 		$createMeetingParams->setModeratorPassword($room->moderatorPassword);
@@ -131,8 +123,7 @@ class API
 		return $createMeetingParams;
 	}
 
-	public function getRecording(string $recordId)
-	{
+	public function getRecording(string $recordId) {
 		$recordingParams = new GetRecordingsParameters();
 		$recordingParams->setRecordId($recordId);
 		$recordingParams->setState('any');
@@ -152,8 +143,7 @@ class API
 		return $this->recordToArray($records[0]);
 	}
 
-	public function getRecordings(Room $room)
-	{
+	public function getRecordings(Room $room) {
 		$recordingParams = new GetRecordingsParameters();
 		$recordingParams->setMeetingId($room->uid);
 		$recordingParams->setState('processing,processed,published,unpublished');
@@ -171,8 +161,7 @@ class API
 		}, $records);
 	}
 
-	public function deleteRecording(string $recordingId): bool
-	{
+	public function deleteRecording(string $recordingId): bool {
 		$deleteParams = new DeleteRecordingsParameters($recordingId);
 
 		$response = $this->getServer()->deleteRecordings($deleteParams);
@@ -180,8 +169,7 @@ class API
 		return $response->isDeleted();
 	}
 
-	private function recordToArray(Record $record)
-	{
+	private function recordToArray(Record $record) {
 		return [
 			'id'           => $record->getRecordId(),
 			'name'         => $record->getName(),
@@ -196,8 +184,7 @@ class API
 		];
 	}
 
-	public function check($url, $secret)
-	{
+	public function check($url, $secret) {
 		$server = new BigBlueButton($url, $secret);
 
 		$meetingParams = new IsMeetingRunningParameters('foobar');
@@ -219,8 +206,7 @@ class API
 		}
 	}
 
-	public function getVersion($url = null)
-	{
+	public function getVersion($url = null) {
 		$server = $url === null ? $this->getServer() : new BigBlueButton($url, '');
 
 		return $server->getApiVersion()->getVersion();

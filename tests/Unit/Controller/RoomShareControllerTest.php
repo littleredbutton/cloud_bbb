@@ -1,6 +1,6 @@
 <?php
-namespace OCA\BigBlueButton\Tests\Controller;
 
+namespace OCA\BigBlueButton\Tests\Controller;
 
 use PHPUnit\Framework\TestCase;
 use OCP\IRequest;
@@ -8,13 +8,11 @@ use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Controller\RoomShareController;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
-use OCA\BigBlueButton\Service\RoomShareNotFound;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\AppFramework\Http;
 use OCP\IUserManager;
 
-class RoomShareControllerTest extends TestCase
-{
+class RoomShareControllerTest extends TestCase {
 	private $request;
 	private $service;
 	private $roomService;
@@ -23,8 +21,7 @@ class RoomShareControllerTest extends TestCase
 
 	private $userId = 'user_foo';
 
-	public function setUp(): void
-	{
+	public function setUp(): void {
 		parent::setUp();
 
 		$this->request = $this->createMock(IRequest::class);
@@ -42,15 +39,13 @@ class RoomShareControllerTest extends TestCase
 		);
 	}
 
-	public function testIndexWithoutRoomId()
-	{
+	public function testIndexWithoutRoomId() {
 		$response = $this->controller->index();
 
 		$this->assertEquals(Http::STATUS_BAD_REQUEST, $response->getStatus());
 	}
 
-	public function testIndexWithoutPermission()
-	{
+	public function testIndexWithoutPermission() {
 		$this->request
 			->expects($this->once())
 			->method('getParam')
@@ -71,8 +66,7 @@ class RoomShareControllerTest extends TestCase
 		$this->assertEquals(Http::STATUS_FORBIDDEN, $response->getStatus());
 	}
 
-	public function testIndexWithoutShares()
-	{
+	public function testIndexWithoutShares() {
 		$roomId = 1234;
 		$this->request
 			->expects($this->once())
@@ -100,8 +94,7 @@ class RoomShareControllerTest extends TestCase
 		$this->assertEquals([], $response->getData());
 	}
 
-	public function testIndexWithShares()
-	{
+	public function testIndexWithShares() {
 		$roomId = 1234;
 		$this->request
 			->expects($this->once())

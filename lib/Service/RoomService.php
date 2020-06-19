@@ -1,4 +1,5 @@
 <?php
+
 namespace OCA\BigBlueButton\Service;
 
 use Exception;
@@ -8,26 +9,21 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomMapper;
-use OCA\BigBlueButton\NoPermissionException;
 
-class RoomService
-{
+class RoomService {
 
 	/** @var RoomMapper */
 	private $mapper;
 
-	public function __construct(RoomMapper $mapper)
-	{
+	public function __construct(RoomMapper $mapper) {
 		$this->mapper = $mapper;
 	}
 
-	public function findAll(string $userId, array $groupIds): array
-	{
+	public function findAll(string $userId, array $groupIds): array {
 		return $this->mapper->findAll($userId, $groupIds);
 	}
 
-	private function handleException(Exception $e): void
-	{
+	private function handleException(Exception $e): void {
 		if ($e instanceof DoesNotExistException ||
 			$e instanceof MultipleObjectsReturnedException) {
 			throw new RoomNotFound($e->getMessage());
@@ -36,8 +32,7 @@ class RoomService
 		}
 	}
 
-	public function find($id): Room
-	{
+	public function find($id): Room {
 		try {
 			return $this->mapper->find($id);
 
@@ -50,8 +45,7 @@ class RoomService
 		}
 	}
 
-	public function findByUid($uid)
-	{
+	public function findByUid($uid) {
 		try {
 			return $this->mapper->findByUid($uid);
 		} catch (Exception $e) {
@@ -60,8 +54,7 @@ class RoomService
 		}
 	}
 
-	public function create($name, $welcome, $maxParticipants, $record, $userId)
-	{
+	public function create($name, $welcome, $maxParticipants, $record, $userId) {
 		$room = new Room();
 
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
@@ -76,8 +69,7 @@ class RoomService
 		return $this->mapper->insert($room);
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator)
-	{
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -98,8 +90,7 @@ class RoomService
 		}
 	}
 
-	public function delete($id)
-	{
+	public function delete($id) {
 		try {
 			$room = $this->mapper->find($id);
 			$this->mapper->delete($room);
@@ -109,8 +100,7 @@ class RoomService
 		}
 	}
 
-	private function humanReadableRandom($length)
-	{
+	private function humanReadableRandom($length) {
 		return \OC::$server->getSecureRandom()->generate($length, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE);
 	}
 }

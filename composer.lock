@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67b538bdf36cbd6464297b3d9257bb3c",
+    "content-hash": "a5f7d2fab7db00ef99eb9468c2fa9a0a",
     "packages": [
         {
             "name": "littleredbutton/bigbluebutton-api-php",
@@ -579,6 +579,43 @@
                 "object graph"
             ],
             "time": "2020-01-17T21:11:47+00:00"
+        },
+        {
+            "name": "nextcloud/coding-standard",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nextcloud/coding-standard.git",
+                "reference": "4f5cd012760f8293e19e602651a0ecaa265e4db9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nextcloud/coding-standard/zipball/4f5cd012760f8293e19e602651a0ecaa265e4db9",
+                "reference": "4f5cd012760f8293e19e602651a0ecaa265e4db9",
+                "shasum": ""
+            },
+            "require": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nextcloud\\CodingStandard\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Wurst",
+                    "email": "christoph@winzerhof-wurst.at"
+                }
+            ],
+            "description": "Nextcloud coding standards for the php cs fixer",
+            "time": "2020-04-10T14:57:18+00:00"
         },
         {
             "name": "paragonie/random_compat",

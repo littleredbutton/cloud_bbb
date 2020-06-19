@@ -1,4 +1,5 @@
 <?php
+
 namespace OCA\BigBlueButton\Service;
 
 use Exception;
@@ -9,24 +10,20 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Db\RoomShareMapper;
 
-class RoomShareService
-{
+class RoomShareService {
 
 	/** @var RoomShareMapper */
 	private $mapper;
 
-	public function __construct(RoomShareMapper $mapper)
-	{
+	public function __construct(RoomShareMapper $mapper) {
 		$this->mapper = $mapper;
 	}
 
-	public function findAll(int $roomId): array
-	{
+	public function findAll(int $roomId): array {
 		return $this->mapper->findAll($roomId);
 	}
 
-	private function handleException(Exception $e): void
-	{
+	private function handleException(Exception $e): void {
 		if ($e instanceof DoesNotExistException ||
 			$e instanceof MultipleObjectsReturnedException) {
 			throw new RoomShareNotFound($e->getMessage());
@@ -35,8 +32,7 @@ class RoomShareService
 		}
 	}
 
-	public function find($id): RoomShare
-	{
+	public function find($id): RoomShare {
 		try {
 			return $this->mapper->find($id);
 		} catch (Exception $e) {
@@ -44,8 +40,7 @@ class RoomShareService
 		}
 	}
 
-	public function create(int $roomId, int $shareType, string $shareWith, int $permission): RoomShare
-	{
+	public function create(int $roomId, int $shareType, string $shareWith, int $permission): RoomShare {
 		try {
 			$roomShare = $this->mapper->findByRoomAndEntity($roomId, $shareWith, $shareType);
 
@@ -62,8 +57,7 @@ class RoomShareService
 		}
 	}
 
-	public function update(int $id, int $roomId, int $shareType, string $shareWith, int $permission): RoomShare
-	{
+	public function update(int $id, int $roomId, int $shareType, string $shareWith, int $permission): RoomShare {
 		try {
 			$roomShare = $this->mapper->find($id);
 
@@ -78,8 +72,7 @@ class RoomShareService
 		}
 	}
 
-	public function delete(int $id): RoomShare
-	{
+	public function delete(int $id): RoomShare {
 		try {
 			$roomShare = $this->mapper->find($id);
 			$this->mapper->delete($roomShare);

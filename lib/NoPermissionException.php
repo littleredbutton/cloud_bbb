@@ -2,6 +2,5 @@
 
 namespace OCA\BigBlueButton;
 
-class NoPermissionException extends \Exception
-{
+class NoPermissionException extends \Exception {
 }

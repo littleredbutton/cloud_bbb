@@ -2,6 +2,5 @@
 
 namespace OCA\BigBlueButton\Service;
 
-class RoomNotFound extends \Exception
-{
+class RoomNotFound extends \Exception {
 }

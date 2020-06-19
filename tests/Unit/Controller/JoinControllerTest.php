@@ -1,6 +1,6 @@
 <?php
-namespace OCA\BigBlueButton\Tests\Controller;
 
+namespace OCA\BigBlueButton\Tests\Controller;
 
 use PHPUnit\Framework\TestCase;
 use OCP\AppFramework\Http\RedirectResponse;
@@ -19,8 +19,7 @@ use OCA\BigBlueButton\Permission;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\TemplateResponse;
 
-class JoinControllerTest extends TestCase
-{
+class JoinControllerTest extends TestCase {
 	private $request;
 	private $service;
 	private $userSession;
@@ -31,8 +30,7 @@ class JoinControllerTest extends TestCase
 	private $permission;
 	private $room;
 
-	public function setUp(): void
-	{
+	public function setUp(): void {
 		parent::setUp();
 
 		$this->request = $this->createMock(IRequest::class);
@@ -64,8 +62,7 @@ class JoinControllerTest extends TestCase
 		$this->room->password = 'password_foo';
 	}
 
-	public function testNonExistingRoom()
-	{
+	public function testNonExistingRoom() {
 		$this->expectException(NotFoundException::class);
 		$this->service
 			->expects($this->once())
@@ -75,8 +72,7 @@ class JoinControllerTest extends TestCase
 		$this->controller->index(null);
 	}
 
-	public function testUserIsLoggedIn()
-	{
+	public function testUserIsLoggedIn() {
 		$this->controller->setToken($this->room->uid);
 		$this->service
 			->expects($this->once())
@@ -115,8 +111,7 @@ class JoinControllerTest extends TestCase
 		$this->assertEquals($url, $result->getRedirectURL());
 	}
 
-	public function testUserNeedsToAuthenticateForInternal()
-	{
+	public function testUserNeedsToAuthenticateForInternal() {
 		$this->room->setAccess(Room::ACCESS_INTERNAL);
 
 		$this->controller->setToken($this->room->uid);
@@ -144,8 +139,7 @@ class JoinControllerTest extends TestCase
 		$this->assertEquals(Http::STATUS_SEE_OTHER, $result->getStatus());
 	}
 
-	public function testUserNeedsToAuthenticateForInternalRestricted()
-	{
+	public function testUserNeedsToAuthenticateForInternalRestricted() {
 		$this->room->setAccess(Room::ACCESS_INTERNAL_RESTRICTED);
 
 		$this->controller->setToken($this->room->uid);
@@ -173,8 +167,7 @@ class JoinControllerTest extends TestCase
 		$this->assertEquals(Http::STATUS_SEE_OTHER, $result->getStatus());
 	}
 
-	public function testDisplaynames()
-	{
+	public function testDisplaynames() {
 		$this->controller->setToken($this->room->uid);
 		$this->service
 			->expects($this->once())
@@ -202,8 +195,7 @@ class JoinControllerTest extends TestCase
 		$this->assertInstanceOf(RedirectResponse::class, $response);
 	}
 
-	private function invalidDisplayname($displayname)
-	{
+	private function invalidDisplayname($displayname) {
 		$response = $this->controller->index($displayname);
 
 		$this->assertInstanceOf(TemplateResponse::class, $response);
@@ -211,8 +203,7 @@ class JoinControllerTest extends TestCase
 		$this->assertTrue($response->getParams()['wrongdisplayname']);
 	}
 
-	public function testPasswordRequired()
-	{
+	public function testPasswordRequired() {
 		$this->room->setAccess(Room::ACCESS_PASSWORD);
 		$this->room->setPassword('asdf');
 

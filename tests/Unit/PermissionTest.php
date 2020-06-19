@@ -1,4 +1,5 @@
 <?php
+
 namespace OCA\BigBlueButton\Tests;
 
 use OCA\BigBlueButton\Db\Room;
@@ -9,8 +10,7 @@ use OCP\IGroupManager;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
-class PermissionTest extends TestCase
-{
+class PermissionTest extends TestCase {
 	/** @var Permission */
 	private $permission;
 
@@ -20,8 +20,7 @@ class PermissionTest extends TestCase
 	/** @var RoomShareService|MockObject */
 	private $roomShareService;
 
-	public function setUp(): void
-	{
+	public function setUp(): void {
 		parent::setUp();
 
 		/** @var IGroupManager|MockObject */
@@ -36,8 +35,7 @@ class PermissionTest extends TestCase
 		);
 	}
 
-	public function testIsUser()
-	{
+	public function testIsUser() {
 		$room = $this->createRoom(1, 'foo');
 
 		$this->roomShareService
@@ -67,8 +65,7 @@ class PermissionTest extends TestCase
 		$this->assertTrue($this->permission->isUser($room, 'group_user'));
 	}
 
-	private function createRoom(int $id, string $userId): Room
-	{
+	private function createRoom(int $id, string $userId): Room {
 		$room = new Room();
 
 		$room->setId($id);
@@ -77,8 +74,7 @@ class PermissionTest extends TestCase
 		return $room;
 	}
 
-	private function createRoomShare(int $type, string $with, int $permission): RoomShare
-	{
+	private function createRoomShare(int $type, string $with, int $permission): RoomShare {
 		$share = new RoomShare();
 
 		$share->setShareType($type);

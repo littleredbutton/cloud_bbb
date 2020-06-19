@@ -2,6 +2,5 @@
 
 namespace OCA\BigBlueButton\Service;
 
-class RoomShareNotFound extends \Exception
-{
+class RoomShareNotFound extends \Exception {
 }

@@ -7,8 +7,7 @@ use OCP\Settings\ISettings;
 use OCP\IConfig;
 use \OCP\IL10N;
 
-class Personal implements ISettings
-{
+class Personal implements ISettings {
 	/** @var IConfig */
 	private $config;
 
@@ -20,8 +19,7 @@ class Personal implements ISettings
 	 *
 	 * @param IConfig $config
 	 */
-	public function __construct(IConfig $config, IL10N $l)
-	{
+	public function __construct(IConfig $config, IL10N $l) {
 		$this->config = $config;
 		$this->l = $l;
 	}
@@ -29,8 +27,7 @@ class Personal implements ISettings
 	/**
 	 * @return TemplateResponse
 	 */
-	public function getForm()
-	{
+	public function getForm() {
 		$warning = '';
 
 		if (empty($this->config->getAppValue('bbb', 'api.url')) || empty($this->config->getAppValue('bbb', 'api.secret'))) {
@@ -43,8 +40,7 @@ class Personal implements ISettings
 	/**
 	 * @return string the section ID, e.g. 'sharing'
 	 */
-	public function getSection()
-	{
+	public function getSection() {
 		return 'bbb';
 	}
 
@@ -55,8 +51,7 @@ class Personal implements ISettings
 	 *
 	 * E.g.: 70
 	 */
-	public function getPriority()
-	{
+	public function getPriority() {
 		return 50;
 	}
 }

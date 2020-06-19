@@ -10,10 +10,8 @@ use OCP\AppFramework\Http\DataResponse;
 use OCA\BigBlueButton\Service\RoomNotFound;
 use OCA\BigBlueButton\Service\RoomShareNotFound;
 
-trait Errors
-{
-	protected function handleNotFound(Closure $callback): DataResponse
-	{
+trait Errors {
+	protected function handleNotFound(Closure $callback): DataResponse {
 		try {
 			$return = $callback();
 			return ($return instanceof DataResponse) ? $return : new DataResponse($return);

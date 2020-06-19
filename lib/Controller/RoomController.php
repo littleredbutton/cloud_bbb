@@ -11,8 +11,7 @@ use OCP\AppFramework\Controller;
 use OCP\IGroupManager;
 use OCP\IUserManager;
 
-class RoomController extends Controller
-{
+class RoomController extends Controller {
 	/** @var RoomService */
 	private $service;
 
@@ -50,8 +49,7 @@ class RoomController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function index(): DataResponse
-	{
+	public function index(): DataResponse {
 		$user = $this->userManager->get($this->userId);
 		$groupIds = $this->groupManager->getUserGroupIds($user);
 
@@ -102,8 +100,7 @@ class RoomController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function destroy(int $id): DataResponse
-	{
+	public function destroy(int $id): DataResponse {
 		$room = $this->service->find($id);
 
 		if (!$this->permission->isAdmin($room, $this->userId)) {
