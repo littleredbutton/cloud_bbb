@@ -58,7 +58,7 @@ OC.L10N.register(
     "Group" : "Gruppe",
     "moderator" : "Moderator",
     "admin" : "Administrator",
-    "Share" : "Benötigt keine Übersetzung. Für Android wird nur die formelle Übersetzung verwendet (de_DE). ",
+    "Share" : "Teilen",
     "Loading" : "Lade",
     "Name, group, ..." : "Name, Gruppe, …",
     "You are not allowed to change this option, because this room is shared with you." : "Du kannst diese Einstellung nicht ändern, da dieser Raum mit Dir geteilt wurde.",

@@ -33,6 +33,7 @@ OC.L10N.register(
     "Internal + Password protection for guests" : "Interno + Proteção por senha para convidados",
     "Internal + Waiting room for guests" : "Interno + Sala de espera para convidados",
     "Internal" : "Interno",
+    "Every participant is moderator" : "Todo participante é moderador",
     "Miscellaneous" : "Diversos",
     "Recording" : "Gravação",
     "Room name" : "Nome da sala",
