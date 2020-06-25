@@ -7,6 +7,7 @@ OC.L10N.register(
     "Name" : "Nume",
     "Edit" : "Editare",
     "Welcome" : "Bun venit",
+    "Access" : "Acces",
     "Public" : "Public",
     "Create" : "Creează",
     "Delete" : "Șterge",
