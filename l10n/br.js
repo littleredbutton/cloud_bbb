@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Password" : "Ger-tremen",
     "Name" : "Anv",
+    "Edit" : "Cheñch",
     "Delete" : "Dilemel",
     "Error" : "Fazi",
     "Share" : "Rannan"
