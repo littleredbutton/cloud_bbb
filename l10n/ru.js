@@ -19,6 +19,7 @@ OC.L10N.register(
     "Welcome" : "Добро пожаловать",
     "Access" : "Доступ",
     "Public" : "Общедоступный",
+    "Internal" : "Внутренние",
     "Miscellaneous" : "Разное",
     "Room name" : "Название комнаты",
     "Create" : "Создать",
