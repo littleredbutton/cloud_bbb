@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password" : "Ger-tremen",
     "Name" : "Anv",
     "Edit" : "Cheñch",
+    "Public" : "Publik",
     "Create" : "Krouiñ",
     "Delete" : "Dilemel",
     "Error" : "Fazi",
