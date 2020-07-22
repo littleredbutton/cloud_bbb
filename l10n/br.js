@@ -11,6 +11,7 @@ OC.L10N.register(
     "Delete" : "Dilemel",
     "Error" : "Fazi",
     "Group" : "Stollad",
+    "moderator" : "habaskaer",
     "admin" : "administratour",
     "Share" : "Rannan",
     "Loading" : "Kargañ",
