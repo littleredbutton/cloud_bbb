@@ -1,7 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
-    "Save" : "Entilañ",
+    "Save" : "Enrollañ",
     "Display name" : "Anv ardivink",
     "Password" : "Ger-tremen",
     "Name" : "Anv",
