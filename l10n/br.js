@@ -4,6 +4,7 @@ OC.L10N.register(
     "Save" : "Enrollañ",
     "Display name" : "Anv ardivink",
     "Password" : "Ger-tremen",
+    "Join" : "Kejañ",
     "Name" : "Anv",
     "Edit" : "Cheñch",
     "Public" : "Publik",
