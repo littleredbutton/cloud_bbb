@@ -117,26 +117,19 @@ class JoinController extends Controller {
 				'wrongPassword'    => $password !== $room->password && $password !== '',
 			], 'guest');
 
-			$this->addFormActionDomain($response);
-
 			return $response;
 		}
 
 		$creationDate = $this->api->createMeeting($room, $presentation);
 		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $userId);
 
-		return new RedirectResponse($joinUrl);
-	}
+		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
 
-	private function addFormActionDomain($response) {
-		$apiUrl = $this->config->getAppValue($this->appName, 'api.url');
-		$parsedApiUrl = parse_url($apiUrl);
-
-		if ($parsedApiUrl === false) {
-			throw new \Exception('No valid api url provided');
-		}
-
-		$response->getContentSecurityPolicy()->addAllowedFormActionDomain(($parsedApiUrl['scheme'] ?: 'https') . '://' . $parsedApiUrl['host']);
+		return new TemplateResponse($this->appName, 'forward', [
+			'room'             => $room->name,
+			'url' => $joinUrl,
+		], 'guest');
+		;
 	}
 
 	private function getRoom(): ?Room {

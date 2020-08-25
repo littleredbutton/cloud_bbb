@@ -104,8 +104,9 @@ class JoinControllerTest extends TestCase {
 
 		$result = $this->controller->index(null);
 
-		$this->assertInstanceOf(RedirectResponse::class, $result);
-		$this->assertEquals($url, $result->getRedirectURL());
+		$this->assertInstanceOf(TemplateResponse::class, $result);
+		$this->assertEquals('forward', $result->getTemplateName());
+		$this->assertEquals($url, $result->getParams()['url']);
 	}
 
 	public function testUserNeedsToAuthenticateForInternal() {
@@ -189,7 +190,9 @@ class JoinControllerTest extends TestCase {
 
 		$response = $this->controller->index('Foo Bar');
 
-		$this->assertInstanceOf(RedirectResponse::class, $response);
+		$this->assertInstanceOf(TemplateResponse::class, $response);
+		$this->assertEquals('forward', $response->getTemplateName());
+		$this->assertEquals($url, $response->getParams()['url']);
 	}
 
 	private function invalidDisplayname($displayname) {
@@ -229,7 +232,8 @@ class JoinControllerTest extends TestCase {
 
 		$response = $this->controller->index('Foo Bar', '', '', 'asdf');
 
-		$this->assertInstanceOf(RedirectResponse::class, $response);
-		$this->assertEquals($url, $response->getRedirectURL());
+		$this->assertInstanceOf(TemplateResponse::class, $response);
+		$this->assertEquals('forward', $response->getTemplateName());
+		$this->assertEquals($url, $response->getParams()['url']);
 	}
 }
