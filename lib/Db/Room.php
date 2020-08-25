@@ -45,7 +45,7 @@ class Room extends Entity implements JsonSerializable {
 	public $maxParticipants;
 	public $record;
 	public $userId;
-	public $access;
+	public $access = self::ACCESS_PUBLIC;
 	public $password;
 	public $everyoneIsModerator;
 
