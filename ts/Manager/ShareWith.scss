@@ -49,12 +49,17 @@
   box-shadow: 0 5px 10px -5px var(--color-box-shadow);
 
   li {
+    color: var(--color-text-lighter);
     padding: 0 1em;
-    cursor: pointer;
     line-height: 44px;
 
-    &:hover {
-      background-color: var(--color-background-hover);
+    &.suggestion {
+      color: var(--color-main-text);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-background-hover);
+      }
     }
   }
 }

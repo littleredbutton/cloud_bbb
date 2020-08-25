@@ -47,21 +47,17 @@ export type Recording = {
 	meta: any;
 }
 
+export interface ShareWithOption {
+	label: string;
+	value: {
+		shareType: ShareType;
+		shareWith: string;
+	};
+}
+
 export interface ShareWith {
-	users: {
-		label: string;
-		value: {
-			shareType: ShareType;
-			shareWith: string;
-		};
-	}[];
-	groups: {
-		label: string;
-		value: {
-			shareType: ShareType;
-			shareWith: string;
-		};
-	}[];
+	users: ShareWithOption[];
+	groups: ShareWithOption[];
 }
 
 class Api {

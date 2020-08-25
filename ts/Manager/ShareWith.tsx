@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { api, ShareWith, ShareType, RoomShare, Room, Permission } from './Api';
+import { api, ShareWith, ShareType, RoomShare, Room, Permission, ShareWithOption } from './Api';
 import './ShareWith.scss';
 
 type Props = {
@@ -12,6 +12,7 @@ type Props = {
 const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setShares }) => {
 	const [search, setSearch] = useState<string>('');
 	const [hasFocus, setFocus] = useState<boolean>(false);
+	const [showSearchResults, setShowSearchResults] = useState<boolean>(false);
 	const [recommendations, setRecommendations] = useState<ShareWith>();
 	const [searchResults, setSearchResults] = useState<ShareWith>();
 
@@ -24,14 +25,23 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 	const sharedGroupIds = shares ? shares.filter(share => share.shareType === ShareType.Group).map(share => share.shareWith) : [];
 
 	useEffect(() => {
-		api.searchShareWith(search).then(result => {
-			setSearchResults(result);
+		setSearchResults(undefined);
+		const searchQuery = search;
+
+		api.searchShareWith(searchQuery).then(result => {
+			if (searchQuery === search) {
+				setSearchResults(result);
+			}
 		});
 	}, [search]);
 
 	useEffect(() => {
 		api.getRecommendedShareWith().then(result => setRecommendations(result));
 	}, []);
+
+	useEffect(() => {
+		setTimeout(() => setShowSearchResults(hasFocus), 100);
+	}, [hasFocus]);
 
 	async function addRoomShare(shareWith: string, shareType: number, displayName: string, permission: Permission) {
 		const roomShare = await api.createRoomShare(room.id, shareType, shareWith, permission);
@@ -68,17 +78,25 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		return addRoomShare(share.shareWith, share.shareType, share.shareWithDisplayName || share.shareWith, newPermission);
 	}
 
-	function renderSearchResults(options: ShareWith) {
+	function renderSearchResults(options: ShareWith|undefined) {
+		const results = options ? [
+			...options.users.filter(user => !sharedUserIds.includes(user.value.shareWith)),
+			...options.groups.filter(group => !sharedGroupIds.includes(group.value.shareWith)),
+		] : [];
+
+		const renderOption = (option: ShareWithOption) => {
+			return (<li key={option.value.shareWith} className="suggestion" onClick={() => addRoomShare(option.value.shareWith, option.value.shareType, option.label, permission)}>
+				{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
+			</li>);
+		};
+
 		return (
 			<ul className="bbb-selection">
-				{[
-					...options.users.filter(user => !sharedUserIds.includes(user.value.shareWith)),
-					...options.groups.filter(group => !sharedGroupIds.includes(group.value.shareWith)),
-				].map(option => {
-					return (<li key={option.value.shareWith} onClick={() => addRoomShare(option.value.shareWith, option.value.shareType, option.label, permission)}>
-						{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
-					</li>);
-				})}
+				{!options ?
+					<li><span className="icon icon-loading-small icon-visible"></span> {t('bbb', 'Searching')}</li> :
+					(
+						(results.length === 0 && search) ? <li>{t('bbb', 'No matches')}</li> : results.map(renderOption)
+					)}
 			</ul>
 		);
 	}
@@ -144,10 +162,10 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					value={search}
 					onChange={ev => setSearch(ev.currentTarget.value)}
 					onFocus={() => setFocus(true)}
-					onBlur={() => setTimeout(() => setFocus(false), 100)}
+					onBlur={() => setFocus(false)}
 					placeholder={t('bbb', 'Name, group, ...')} /> :
 					<em><span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to change this option, because this room is shared with you.')}</em>}
-				{hasFocus && (searchResults ? renderSearchResults(searchResults) : (recommendations ? renderSearchResults(recommendations) : loading))}
+				{showSearchResults && renderSearchResults((search && searchResults) ? searchResults : ((recommendations && !search) ? recommendations : undefined))}
 			</div>
 		</>
 	);
