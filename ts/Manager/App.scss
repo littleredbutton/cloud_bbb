@@ -19,6 +19,10 @@
   border-radius: 50%;
 }
 
+#bbb-root {
+  width: 100%;
+}
+
 #bbb-warning {
   padding: 1em;
   background-color: rgb(255, 255, 123);
@@ -52,6 +56,10 @@
 
   p {
     margin-bottom: 1em;
+  }
+
+  form {
+    margin-bottom: 2em;
   }
 }
 

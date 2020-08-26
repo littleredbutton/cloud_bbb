@@ -27,6 +27,7 @@ class Admin implements ISettings {
 		$parameters = [
 			'api.url'    => $this->config->getAppValue('bbb', 'api.url'),
 			'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
+			'app.navigation' => $this->config->getAppValue('bbb', 'app.navigation') === 'true' ? 'checked' : '',
 		];
 
 		return new TemplateResponse('bbb', 'admin', $parameters);

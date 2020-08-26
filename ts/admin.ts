@@ -71,4 +71,12 @@ $(() => {
 			$('#bbb-result').append(warningElement);
 		});
 	});
+
+	$<HTMLInputElement>('#bbb-settings [name="app.navigation"]').change((ev) => {
+		ev.preventDefault();
+
+		console.log('checkbox changed to', ev.target.checked);
+
+		OCP.AppConfig.setValue('bbb', 'app.navigation', ev.target.checked);
+	});
 });

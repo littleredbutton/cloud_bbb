@@ -36,7 +36,5 @@ Developer wanted! If you have time it would be awesome if you could help to enha
     </dependencies>
     <settings>
         <admin>OCA\BigBlueButton\Settings\Admin</admin>
-        <personal>OCA\BigBlueButton\Settings\Personal</personal>
-        <personal-section>OCA\BigBlueButton\Settings\Section</personal-section>
     </settings>
 </info>

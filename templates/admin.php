@@ -17,4 +17,9 @@ script('bbb', 'admin');
 
             <div id="bbb-result"></div>
         </form>
+
+        <p>
+            <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox" value="1" <?php p($_['app.navigation']); ?>>
+            <label for="bbb-app-navigation"><?php p($l->t('Show room manager in app navigation instead of settings page.')); ?></label>
+        </p>
 </div>

@@ -6,6 +6,7 @@ return [
 		'roomShare' => ['url' => '/roomShares'],
 	],
 	'routes' => [
+		['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
 		['name' => 'server#records', 'url' => '/server/{roomUid}/records', 'verb' => 'GET'],
 		['name' => 'server#check', 'url' => '/server/check', 'verb' => 'POST'],
 		['name' => 'server#version', 'url' => '/server/version', 'verb' => 'GET'],
