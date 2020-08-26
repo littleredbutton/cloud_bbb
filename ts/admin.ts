@@ -52,6 +52,10 @@ $(() => {
 		saveSettings(this['api.url'].value, this['api.secret'].value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
 
+			setTimeout(() => {
+				$('#bbb-result').empty();
+			}, 3000);
+
 			$('#bbb-result').append(successElement);
 		}).catch(err => {
 			let message = t('bbb', 'Unexpected error occurred');
