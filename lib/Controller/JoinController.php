@@ -12,7 +12,6 @@ use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
-use OCP\IConfig;
 use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
@@ -33,9 +32,6 @@ class JoinController extends Controller {
 	/** @var IUserSession */
 	private $userSession;
 
-	/** @var IConfig */
-	private $config;
-
 	/** @var API */
 	private $api;
 
@@ -48,7 +44,6 @@ class JoinController extends Controller {
 		RoomService $service,
 		IURLGenerator $urlGenerator,
 		IUserSession $userSession,
-		IConfig $config,
 		API $api,
 		Permission $permission
 	) {
@@ -57,7 +52,6 @@ class JoinController extends Controller {
 		$this->service = $service;
 		$this->urlGenerator = $urlGenerator;
 		$this->userSession = $userSession;
-		$this->config = $config;
 		$this->api = $api;
 		$this->permission = $permission;
 	}

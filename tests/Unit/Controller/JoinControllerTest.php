@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
-use OCP\IConfig;
 use OCP\IRequest;
 use OCP\IUser;
 use OCA\BigBlueButton\Service\RoomService;
@@ -22,7 +21,6 @@ class JoinControllerTest extends TestCase {
 	private $request;
 	private $service;
 	private $userSession;
-	private $config;
 	private $urlGenerator;
 	private $controller;
 	private $api;
@@ -35,7 +33,6 @@ class JoinControllerTest extends TestCase {
 		$this->request = $this->createMock(IRequest::class);
 		$this->service = $this->createMock(RoomService::class);
 		$this->userSession = $this->createMock(IUserSession::class);
-		$this->config = $this->createMock(IConfig::class);
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->api = $this->createMock(API::class);
 		$this->permission = $this->createMock(Permission::class);
@@ -46,7 +43,6 @@ class JoinControllerTest extends TestCase {
 			$this->service,
 			$this->urlGenerator,
 			$this->userSession,
-			$this->config,
 			$this->api,
 			$this->permission
 		);
