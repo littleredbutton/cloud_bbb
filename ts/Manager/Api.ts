@@ -192,9 +192,11 @@ class Api {
 			},
 		});
 
+		const data = response.data.ocs.data;
+
 		return {
-			users: response.data.ocs.data.users,
-			groups: response.data.ocs.data.groups,
+			users: [...data.users, ...data.exact.users],
+			groups: [...data.groups, ...data.exact.groups],
 		};
 	}
 }
