@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Ezin izan da grabazioa ezabatu",
     "Server error" : "Zerbitzari akatsa",
     "Group" : "Taldea",
+    "No matches" : "Ez dago bat datorrenik",
     "moderator" : "moderatzailea",
     "admin" : "admin",
     "Share" : "Partekatu",

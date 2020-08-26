@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Zapis nije moguće izbrisati",
     "Server error" : "Greška poslužitelja",
     "Group" : "Grupa",
+    "No matches" : "Nema podudaranja",
     "moderator" : "moderator",
     "admin" : "admin",
     "Share" : "Dijeli",

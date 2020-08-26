@@ -41,6 +41,7 @@ OC.L10N.register(
     "Could not delete record" : "Не возможно удалить запись.",
     "Server error" : "Ошибка сервера",
     "Group" : "Группа",
+    "No matches" : "Соответствий не найдено",
     "moderator" : "модератор",
     "Share" : "Публикация",
     "Loading" : "Загружается",

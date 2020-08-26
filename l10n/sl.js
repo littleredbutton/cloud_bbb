@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Zapisa ni mogoče izbrisati",
     "Server error" : "Napaka strežnika",
     "Group" : "Skupina",
+    "No matches" : "Ni zadetkov",
     "moderator" : "moderator",
     "admin" : "skrbnik",
     "Share" : "Souporaba",

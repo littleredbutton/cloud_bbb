@@ -17,6 +17,7 @@ OC.L10N.register(
     "Error" : "Fel",
     "Server error" : "Serverfel",
     "Group" : "Grupp",
+    "No matches" : "Inga träffar",
     "moderator" : "moderator",
     "Share" : "Dela",
     "Loading" : "Läser in",

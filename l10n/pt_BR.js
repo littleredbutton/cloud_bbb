@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Não foi possível excluir a gravação",
     "Server error" : "Erro no servidor",
     "Group" : "Grupo",
+    "No matches" : "Sem correspondência",
     "moderator" : "moderador",
     "admin" : "admin",
     "Share" : "Compartilhar",

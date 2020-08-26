@@ -15,6 +15,7 @@ OC.L10N.register(
     "Error" : "Fejl",
     "Server error" : "Serverfejl",
     "Group" : "Gruppe",
+    "No matches" : "Ingen matches",
     "moderator" : "moderator",
     "Share" : "Del",
     "Loading" : "Indlæser",

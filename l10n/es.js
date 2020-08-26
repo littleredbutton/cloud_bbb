@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "No se ha podido eliminar el registro",
     "Server error" : "Error en el servidor",
     "Group" : "Grupo",
+    "No matches" : "Sin coincidencias",
     "moderator" : "moderador",
     "admin" : "administrador",
     "Share" : "Compartir",

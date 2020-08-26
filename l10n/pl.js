@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Nie można usunąć nagrania",
     "Server error" : "Błąd serwera",
     "Group" : "Grupa",
+    "No matches" : "Nie pasuje",
     "moderator" : "moderator",
     "admin" : "administrator",
     "Share" : "Udostępnij",

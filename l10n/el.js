@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Η ηχογράφηση δεν μπορεί να διαγραφή",
     "Server error" : "Σφάλμα διακομιστή",
     "Group" : "Ομάδα",
+    "No matches" : "Καμιά αντιστοιχία",
     "moderator" : "συντονιστής",
     "admin" : "διαχειριστής",
     "Share" : "Κοινή χρήση",

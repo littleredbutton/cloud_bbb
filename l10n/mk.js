@@ -12,6 +12,7 @@ OC.L10N.register(
     "Delete" : "Избриши",
     "Error" : "Грешка",
     "Group" : "Група",
+    "No matches" : "Нема совпаѓања",
     "moderator" : "модератор",
     "Share" : "Сподели",
     "Loading" : "Се вчитува",

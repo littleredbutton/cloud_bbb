@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "記録を削除できませんでした",
     "Server error" : "サーバーエラー",
     "Group" : "グループ",
+    "No matches" : "一致なし",
     "moderator" : "モデレータ",
     "admin" : "管理者",
     "Share" : "共有",

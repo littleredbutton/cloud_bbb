@@ -37,6 +37,7 @@ OC.L10N.register(
     "Could not delete record" : "Tallennetta ei voitu poistaa",
     "Server error" : "Palvelinvirhe",
     "Group" : "Ryhmä",
+    "No matches" : "Ei täsmääviä",
     "moderator" : "moderaattori",
     "Share" : "Jaa",
     "Loading" : "Ladataan",

@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Kayıt silinemedi",
     "Server error" : "Sunucu sorunu",
     "Group" : "Grup",
+    "No matches" : "Eşleşme yok",
     "moderator" : "sorumlu",
     "admin" : "yönetici",
     "Share" : "Paylaş",

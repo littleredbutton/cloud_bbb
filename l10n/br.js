@@ -12,6 +12,7 @@ OC.L10N.register(
     "Delete" : "Dilemel",
     "Error" : "Fazi",
     "Group" : "Stollad",
+    "No matches" : "Kejadenn ebet",
     "moderator" : "habaskaer",
     "admin" : "administratour",
     "Share" : "Rannan",

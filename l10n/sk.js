@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Záznam sa nepodarilo odstrániť",
     "Server error" : "Chyba servera",
     "Group" : "Skupina",
+    "No matches" : "Žiadne zhody",
     "moderator" : "moderátor",
     "admin" : "správca",
     "Share" : "Sprístupňovať",

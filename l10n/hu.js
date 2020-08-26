@@ -41,6 +41,7 @@ OC.L10N.register(
     "Could not delete record" : "A felvétel törlése sikertelen",
     "Server error" : "Kiszolgálóhiba",
     "Group" : "Csoport",
+    "No matches" : "Nincs egyezés",
     "moderator" : "moderátor",
     "Share" : "Megosztás",
     "Loading" : "Betöltés",

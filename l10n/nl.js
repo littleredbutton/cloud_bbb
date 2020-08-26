@@ -56,6 +56,7 @@ OC.L10N.register(
     "Could not delete record" : "Kon record niet verwijderen",
     "Server error" : "Serverfout",
     "Group" : "Groep",
+    "No matches" : "Geen overeenkomsten",
     "moderator" : "moderator",
     "admin" : "admin",
     "Share" : "Delen",
