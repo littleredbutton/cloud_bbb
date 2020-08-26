@@ -62,6 +62,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		console.log('newroomshares', newShares);
 
 		setShares(newShares);
+		setSearch('');
 	}
 
 	async function deleteRoomShare(id: number) {
