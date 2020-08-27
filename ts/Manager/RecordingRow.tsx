@@ -1,6 +1,6 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Recording } from './Api';
+import { Recording } from '../Common/Api';
 
 type Props = {
     recording: Recording;

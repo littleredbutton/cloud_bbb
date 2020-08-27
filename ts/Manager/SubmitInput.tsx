@@ -40,6 +40,8 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 				   onChange={event => this.setState({value: event.currentTarget.value})}
 				   onBlur={() => this.props.onSubmitValue(this.state.value)}
 				   autoFocus={this.props.focus}
+				   min={this.props.min}
+				   max={this.props.max}
 				   />
 		</form>;
 	}

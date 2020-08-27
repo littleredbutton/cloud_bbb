@@ -57,16 +57,17 @@ class RoomService {
 		}
 	}
 
-	public function create($name, $welcome, $maxParticipants, $record, $userId) {
+	public function create($name, $welcome, $maxParticipants, $record, $access, $userId) {
 		$room = new Room();
 
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
 		$room->setName($name);
 		$room->setWelcome($welcome);
-		$room->setMaxParticipants($maxParticipants);
+		$room->setMaxParticipants(\max($maxParticipants, 0));
 		$room->setAttendeePassword(\OC::$server->getSecureRandom()->generate(32, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
 		$room->setModeratorPassword(\OC::$server->getSecureRandom()->generate(32, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
 		$room->setRecord($record);
+		$room->setAccess($access);
 		$room->setUserId($userId);
 
 		return $this->mapper->insert($room);
@@ -82,7 +83,7 @@ class RoomService {
 
 			$room->setName($name);
 			$room->setWelcome($welcome);
-			$room->setMaxParticipants($maxParticipants);
+			$room->setMaxParticipants(\max($maxParticipants, 0));
 			$room->setRecord($record);
 			$room->setAccess($access);
 			$room->setEveryoneIsModerator($everyoneIsModerator);

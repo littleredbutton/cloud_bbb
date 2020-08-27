@@ -6,9 +6,14 @@ type EditableValueProps = {
 	setValue: (key: string, value: string | number) => Promise<void>;
 	field: string;
 	type: 'text' | 'number';
+	options?: {
+		min?: number;
+		max?: number;
+		disabled?: boolean;
+	};
 }
 
-const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: currentValue, type }) => {
+const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: currentValue, type, options }) => {
 	const [active, setActive] = useState<boolean>(false);
 
 	const submit = (value: string | number) => {
@@ -31,6 +36,8 @@ const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: c
 			initialValue={currentValue}
 			type={type}
 			focus={true}
+			min={options?.min}
+			max={options?.max}
 		/>;
 	}
 
@@ -38,6 +45,10 @@ const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: c
 		ev.stopPropagation();
 
 		setActive(true);
+	}
+
+	if (options?.disabled) {
+		return <span>{currentValue}</span>;
 	}
 
 	return <a className="action-rename" onClick={onClick}>{currentValue}</a>;

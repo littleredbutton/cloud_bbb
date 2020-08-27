@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.scss';
 import RoomRow from './RoomRow';
 import { SortArrow } from './SortArrow';
-import { api, Room } from './Api';
+import { api, Room, Restriction, Access } from '../Common/Api';
 import NewRoomForm from './NewRoomForm';
 
 export type SortKey = 'name' | 'welcome' | 'maxParticipants' | 'record';
@@ -37,16 +37,19 @@ type Props = {
 const App: React.FC<Props> = () => {
 	const [areRoomsLoaded, setRoomsLoaded] = useState(false);
 	const [error, setError] = useState<string>('');
+	const [restriction, setRestriction] = useState<Restriction>();
 	const [rooms, setRooms] = useState<Room[]>([]);
 	const [orderBy, setOrderBy] = useState<SortKey>('name');
 	const [sortOrder, setSortOrder] = useState(SortOrder.ASC);
 
-	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} />);
+	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} />);
 
 	useEffect(() => {
-		if (areRoomsLoaded) {
-			return;
-		}
+		api.getRestriction().then(restriction => {
+			setRestriction(restriction);
+		}).catch(err => {
+			console.warn('Could not load restriction', err);
+		});
 
 		api.getRooms().then(rooms => {
 			setRooms(rooms);
@@ -57,7 +60,7 @@ const App: React.FC<Props> = () => {
 		}).then(() => {
 			setRoomsLoaded(true);
 		});
-	}, [areRoomsLoaded]);
+	}, []);
 
 	function onOrderBy(key: SortKey) {
 		if (orderBy === key) {
@@ -72,7 +75,16 @@ const App: React.FC<Props> = () => {
 			return Promise.resolve();
 		}
 
-		return api.createRoom(name).then(room => {
+		let access = Access.Public;
+
+		const disabledRoomTypes = restriction?.roomTypes || [];
+		if (disabledRoomTypes.length > 0 && disabledRoomTypes.indexOf(access) > -1) {
+			access = Object.values(Access).filter(a => disabledRoomTypes.indexOf(a) < 0)[0] as Access;
+		}
+
+		const maxParticipants = restriction?.maxParticipants || 0;
+
+		return api.createRoom(name, access, maxParticipants).then(room => {
 			setRooms(rooms.concat([room]));
 		});
 	}
@@ -94,6 +106,8 @@ const App: React.FC<Props> = () => {
 			setRooms(rooms.filter(room => room.id !== deletedRoom.id));
 		});
 	}
+
+	const maxRooms = restriction?.maxRooms || 0;
 
 	return (
 		<div id="bbb-react-root"
@@ -131,7 +145,12 @@ const App: React.FC<Props> = () => {
 							{!areRoomsLoaded && <span className="icon icon-loading-small icon-visible"></span>}
 						</td>
 						<td>
-							<NewRoomForm addRoom={addRoom} />
+							{(maxRooms > rows.length || maxRooms < 0) ?
+								<NewRoomForm addRoom={addRoom} /> :
+								<p className="text-muted">{maxRooms === 0 ?
+									t('bbb', 'You are not permitted to create a room.') :
+									t('bbb', 'You exceeded the maximum number of rooms.')
+								}</p>}
 						</td>
 						<td colSpan={4} />
 					</tr>

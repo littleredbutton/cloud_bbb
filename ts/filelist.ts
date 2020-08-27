@@ -1,6 +1,6 @@
 import axios from '@nextcloud/axios';
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
-import { Room } from './Manager/Api';
+import { Room } from './Common/Api';
 
 declare const OCA: any;
 

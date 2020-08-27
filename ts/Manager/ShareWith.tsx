@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { api, ShareWith, ShareType, RoomShare, Room, Permission, ShareWithOption } from './Api';
+import { api, ShareWith, ShareType, RoomShare, Room, Permission, ShareWithOption } from '../Common/Api';
 import './ShareWith.scss';
 
 type Props = {
