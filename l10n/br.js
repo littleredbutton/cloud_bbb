@@ -14,7 +14,7 @@ OC.L10N.register(
     "Group" : "Stollad",
     "No matches" : "Kejadenn ebet",
     "moderator" : "habaskaer",
-    "admin" : "administratour",
+    "admin" : "merour",
     "Share" : "Rannan",
     "Loading" : "Kargañ",
     "Settings saved" : "Stummoù enrollet"
