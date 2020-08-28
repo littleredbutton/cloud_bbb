@@ -48,9 +48,7 @@ class RestrictionService {
 			}
 
 			$rRoomTypes = \json_decode($r->getRoomTypes());
-			if (count($rRoomTypes) > 0) {
-				$roomTypes = \array_merge($roomTypes, $rRoomTypes);
-			}
+			$roomTypes = array_intersect($roomTypes, $rRoomTypes);
 
 			if ($restriction->getMaxParticipants() > -1 && ($r->getMaxParticipants() === -1 || $restriction->getMaxParticipants() < $r->getMaxParticipants())) {
 				$restriction->setMaxParticipants($r->getMaxParticipants());
@@ -63,7 +61,7 @@ class RestrictionService {
 
 		$restriction->setId(0);
 		$restriction->setGroupId('__cumulative');
-		$restriction->setRoomTypes(\json_encode(\array_values(\array_unique($roomTypes))));
+		$restriction->setRoomTypes(\json_encode(\array_values($roomTypes)));
 
 		return $restriction;
 	}

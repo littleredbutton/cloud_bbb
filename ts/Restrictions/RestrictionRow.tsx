@@ -48,7 +48,13 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 			</td>
 
 			<td>
-				<EditableSelection field="roomTypes" values={restriction.roomTypes} options={AccessOptions} setValue={updateRestriction} placeholder={t('bbb', 'No restriction')} />
+				<EditableSelection
+					field="roomTypes"
+					values={restriction.roomTypes}
+					options={AccessOptions}
+					setValue={updateRestriction}
+					invert={true}
+					placeholder={t('bbb', 'All')} />
 			</td>
 
 			<td className="max-participants bbb-shrink">

@@ -64,7 +64,7 @@ const App: React.FC<Props> = () => {
 							{t('bbb', 'Max. rooms')}
 						</th>
 						<th>
-							{t('bbb', 'Forbidden room types')}
+							{t('bbb', 'Access options')}
 						</th>
 						<th>
 							{t('bbb', 'Max. participants')}
