@@ -9,6 +9,7 @@ OC.L10N.register(
     "API URL" : "URL da API",
     "API secret" : "Segredo da API",
     "Save" : "Gardar",
+    "Show room manager in app navigation instead of settings page." : "Amosar o xestor de sala na navegación da aplicación no canto de na páxina de axustes.",
     "You will be forwarded to the room in the next few seconds." : "Serán enviados á sala nos próximos segundos.",
     "Let's go!" : "Imos!",
     "Please enter your name!" : "Introduza o seu nome",

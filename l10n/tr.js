@@ -9,6 +9,7 @@ OC.L10N.register(
     "API URL" : "API adresi",
     "API secret" : "API parolası",
     "Save" : "Kaydet",
+    "Show room manager in app navigation instead of settings page." : "Uygulama gezinmesinde ayarlar sayfası yerine oda yöneticisi görüntülensin.",
     "You will be forwarded to the room in the next few seconds." : "Bir kaç saniye içinde odaya yönlendirileceksiniz.",
     "Let's go!" : "Haydi başlayalım!",
     "Please enter your name!" : "Lütfen adınızı yazın!",

@@ -9,6 +9,7 @@ OC.L10N.register(
     "API URL" : "Adres URL interfejsu API",
     "API secret" : "Tajny interfejs API",
     "Save" : "Zapisz",
+    "Show room manager in app navigation instead of settings page." : "Pokaż menedżera pokoju w nawigacji aplikacji zamiast na stronie ustawień.",
     "You will be forwarded to the room in the next few seconds." : "W ciągu kilku sekund zostaniesz przekierowany do pokoju.",
     "Let's go!" : "Zaczynajmy!",
     "Please enter your name!" : "Wpisz swoją nazwę!",
