@@ -18,6 +18,8 @@ use OCP\AppFramework\Db\Entity;
  * @method string getAccess()
  * @method string getPassword()
  * @method bool getEveryoneIsModerator()
+ * @method bool getRequireModerator()
+ * @method bool getEveryoneIsModerator()
  * @method void setUid(string $uid)
  * @method void setName(string $name)
  * @method void setAttendeePassword(string $pw)
@@ -29,6 +31,7 @@ use OCP\AppFramework\Db\Entity;
  * @method void setAccess(string $access)
  * @method void setPassword(string $pw)
  * @method void setEveryoneIsModerator(bool $everyone)
+ * @method void setRequireModerator(bool $require)
  */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
@@ -50,11 +53,13 @@ class Room extends Entity implements JsonSerializable {
 	public $access = self::ACCESS_PUBLIC;
 	public $password;
 	public $everyoneIsModerator;
+	public $requireModerator = false;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
 		$this->addType('record', 'boolean');
 		$this->addType('everyoneIsModerator', 'boolean');
+		$this->addType('requireModerator', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
@@ -69,6 +74,7 @@ class Room extends Entity implements JsonSerializable {
 			'access'              => $this->access,
 			'password'            => $this->password,
 			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
+			'requireModerator' => boolval($this->requireModerator),
 		];
 	}
 }

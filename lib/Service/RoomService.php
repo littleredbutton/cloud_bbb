@@ -73,7 +73,7 @@ class RoomService {
 		return $this->mapper->insert($room);
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator) {
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -87,6 +87,7 @@ class RoomService {
 			$room->setRecord($record);
 			$room->setAccess($access);
 			$room->setEveryoneIsModerator($everyoneIsModerator);
+			$room->setRequireModerator($requireModerator);
 
 			return $this->mapper->update($room);
 		} catch (Exception $e) {

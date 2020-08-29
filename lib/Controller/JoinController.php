@@ -114,6 +114,13 @@ class JoinController extends Controller {
 			return $response;
 		}
 
+		if ($room->requireModerator && ($userId === null || !$this->permission->isModerator($room, $userId)) && !$this->api->isRunning($room)) {
+			return new TemplateResponse($this->appName, 'waiting', [
+				'room' => $room->name,
+				'name' => $displayname,
+			], 'guest');
+		}
+
 		$creationDate = $this->api->createMeeting($room, $presentation);
 		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $userId);
 

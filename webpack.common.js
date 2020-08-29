@@ -16,6 +16,9 @@ module.exports = {
 		],
 		join: [
 			path.join(__dirname, 'ts', 'join.ts'),
+		],
+		waiting: [
+			path.join(__dirname, 'ts', 'waiting.ts'),
 		]
 	},
 	output: {

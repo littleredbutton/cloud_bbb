@@ -211,4 +211,12 @@ class API {
 
 		return $server->getApiVersion()->getVersion();
 	}
+
+	public function isRunning(Room $room): bool {
+		$isMeetingRunningParams = new IsMeetingRunningParameters($room->getUid());
+
+		$response = $this->getServer()->isMeetingRunning($isMeetingRunningParams);
+
+		return $response->success() && $response->isRunning();
+	}
 }

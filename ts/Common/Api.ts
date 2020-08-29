@@ -36,6 +36,7 @@ export interface Room {
 	access: Access;
 	password?: string;
 	everyoneIsModerator: boolean;
+	requireModerator: boolean;
 }
 
 export interface RoomShare {

@@ -12,6 +12,7 @@ const descriptions: { [key: string]: string } = {
 	recording: t('bbb', 'If enabled, the moderator is able to start the recording.'),
 	access: t('bbb', 'Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join.'),
 	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
+	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
 };
 
 type Props = {
@@ -127,7 +128,18 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						onChange={(event) => updateProperty('record', event.target.checked)} />
 					<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
 				</div>
-				<em>{descriptions.recording}</em>
+				<p><em>{descriptions.recording}</em></p>
+			</div>
+			<div>
+				<div>
+					<input id={`bbb-requireModerator-${room.id}`}
+						type="checkbox"
+						className="checkbox"
+						checked={room.requireModerator}
+						onChange={(event) => updateProperty('requireModerator', event.target.checked)} />
+					<label htmlFor={`bbb-requireModerator-${room.id}`}>{t('bbb', 'Require moderator to start room')}</label>
+				</div>
+				<p><em>{descriptions.requireModerator}</em></p>
 			</div>
 		</Dialog>
 	);
