@@ -152,7 +152,10 @@ const App: React.FC<Props> = () => {
 									t('bbb', 'You exceeded the maximum number of rooms.')
 								}</p>}
 						</td>
-						<td colSpan={4} />
+						<td />
+						<td colSpan={3}>
+							<p className="text-muted">{t('bbb', 'Room quota:')} {rooms.filter(room => room.userId === OC.currentUser).length} / {maxRooms}</p>
+						</td>
 					</tr>
 				</tfoot>
 			</table>
