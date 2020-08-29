@@ -108,6 +108,7 @@ const App: React.FC<Props> = () => {
 	}
 
 	const maxRooms = restriction?.maxRooms || 0;
+	const quota = maxRooms < 0 ? t('bbb', 'unlimited') : rooms.filter(room => room.userId === OC.currentUser).length + ' / ' + maxRooms;
 
 	return (
 		<div id="bbb-react-root"
@@ -154,7 +155,7 @@ const App: React.FC<Props> = () => {
 						</td>
 						<td />
 						<td colSpan={3}>
-							<p className="text-muted">{t('bbb', 'Room quota:')} {rooms.filter(room => room.userId === OC.currentUser).length} / {maxRooms}</p>
+							<p className="text-muted">{t('bbb', 'Room quota:')} {quota}</p>
 						</td>
 					</tr>
 				</tfoot>
