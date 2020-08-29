@@ -1,36 +1,36 @@
 .bbb {
 
-    #displayname,
-    #password {
-        margin: 5px 0;
-        padding-right: 45px;
-        height: 45px;
-        box-sizing: border-box;
-        flex: 1 1 auto;
-        width: 100% !important;
-        min-width: 0;
-    }
+  #displayname,
+  #password {
+    margin: 5px 0;
+    padding-right: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    width: 100% !important;
+    min-width: 0;
+  }
 
-    button {
-        width: 100%;
-        margin-top: 1em;
-    }
+  button {
+    width: 100%;
+    margin-top: 1em;
+  }
 
-    .submit-icon {
-        float: right;
-    }
+  .submit-icon {
+    float: right;
+  }
 
-    .bbb-container {
-        position: relative;
-        margin-top: 1em;
-    }
+  .bbb-container {
+    position: relative;
+    margin-top: 1em;
+  }
 
-    input[type='submit'].icon-confirm {
-        position: absolute;
-        top: 0px;
-        right: -5px;
-        width: 45px !important;
-        height: 45px;
-        background-color: transparent !important;
-    }
+  input[type='submit'].icon-confirm {
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    width: 45px !important;
+    height: 45px;
+    background-color: transparent !important;
+  }
 }
