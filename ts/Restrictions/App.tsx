@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../Manager/App.scss';
 import { api, Restriction, ShareType } from '../Common/Api';
 import RestrictionRow from './RestrictionRow';
-import ShareSelection from './ShareSelection';
+import ShareSelection from '../Common/ShareSelection';
 
 type Props = {
 
@@ -52,8 +52,7 @@ const App: React.FC<Props> = () => {
 	}
 
 	return (
-		<div id="bbb-react-root"
-			onClick={() => { /* @TODO hide edit inputs */ }}>
+		<div id="bbb-react-root">
 			<table>
 				<thead>
 					<tr>

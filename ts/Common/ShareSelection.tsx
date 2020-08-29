@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api, ShareWith, ShareType, ShareWithOption } from '../Common/Api';
-import './ShareWith.scss';
+import './ShareSelection.scss';
 
 type Props = {
 	selectShare: (selection: ShareWithOption) => void;
