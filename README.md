@@ -84,11 +84,17 @@ thankful for people and organisations who are sponsoring features or bug fixes:
 
 - [Medienwerkstatt Minden-Lübbecke e.V.](https://www.medienwerkstatt.org) manage recordings ([#19])
 - [Deutscher Bundesjugendring](https://www.dbjr.de) version [0.4.0], version [0.5.0]
+- [Graz University of Technology](https://www.tugraz.at) form action ([#47]), navigation entry ([#31]), restrictions ([#43], [#53]), circles ([#61])
 
 If you are looking for other ways to contribute to this project, you are welcome
 to look at our [contributor guidelines]. Every contribution is valuable :tada:.
 
 [contributor guidelines]: https://github.com/sualko/cloud_bbb/blob/master/.github/contributing.md
 [#19]: https://github.com/sualko/cloud_bbb/issues/19
+[#47]: https://github.com/sualko/cloud_bbb/issues/47
+[#31]: https://github.com/sualko/cloud_bbb/issues/31
+[#43]: https://github.com/sualko/cloud_bbb/issues/43
+[#53]: https://github.com/sualko/cloud_bbb/issues/53
+[#61]: https://github.com/sualko/cloud_bbb/issues/61
 [0.4.0]: https://github.com/sualko/cloud_bbb/releases/tag/v0.4.0
 [0.5.0]: https://github.com/sualko/cloud_bbb/releases/tag/v0.5.0
