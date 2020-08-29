@@ -18,6 +18,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 
 	const sharedUserIds = shares ? shares.filter(share => share.shareType === ShareType.User).map(share => share.shareWith) : [];
 	const sharedGroupIds = shares ? shares.filter(share => share.shareType === ShareType.Group).map(share => share.shareWith) : [];
+	const sharedCircleIds = shares ? shares.filter(share => share.shareType === ShareType.Circle).map(share => share.shareWith) : [];
 
 	async function addRoomShare(shareWith: string, shareType: number, displayName: string, permission: Permission) {
 		const roomShare = await api.createRoomShare(room.id, shareType, shareWith, permission);
@@ -80,6 +81,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 							<div className="avatardiv">
 								{avatarUrl && <img src={avatarUrl} alt={`Avatar from ${displayName}`} />}
 								{share.shareType === ShareType.Group && <span className="icon-group-white"></span>}
+								{share.shareType === ShareType.Circle && <span className="icon-circle-white"></span>}
 							</div>
 							<div className="bbb-shareWith__item__label">
 								<h5>{displayName}
@@ -115,7 +117,8 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 			{isOwner ?
 				<ShareSelection
 					selectShare={(shareOption) => addRoomShare(shareOption.value.shareWith, shareOption.value.shareType, shareOption.label, permission)}
-					excluded={{userIds: sharedUserIds, groupIds: sharedGroupIds}}/> :
+					excluded={{userIds: sharedUserIds, groupIds: sharedGroupIds, circleIds: sharedCircleIds}}
+					shareType={[ShareType.User, ShareType.Group, ShareType.Circle]}/> :
 				<em>
 					<span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to change this option, because this room is shared with you.')}
 				</em>

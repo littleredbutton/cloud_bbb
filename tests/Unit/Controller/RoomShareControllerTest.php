@@ -9,6 +9,7 @@ use OCA\BigBlueButton\Controller\RoomShareController;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Service\RoomShareService;
+use OCA\BigBlueButton\CircleHelper;
 use OCP\AppFramework\Http;
 use OCP\IUserManager;
 
@@ -16,6 +17,7 @@ class RoomShareControllerTest extends TestCase {
 	private $request;
 	private $service;
 	private $roomService;
+	private $circleHelper;
 	private $userManager;
 	private $controller;
 
@@ -28,6 +30,7 @@ class RoomShareControllerTest extends TestCase {
 		$this->service = $this->createMock(RoomShareService::class);
 		$this->userManager = $this->createMock(IUserManager::class);
 		$this->roomService = $this->createMock(RoomService::class);
+		$this->circleHelper = $this->createMock(CircleHelper::class);
 
 		$this->controller = new RoomShareController(
 			'bbb',
@@ -35,6 +38,7 @@ class RoomShareControllerTest extends TestCase {
 			$this->service,
 			$this->userManager,
 			$this->roomService,
+			$this->circleHelper,
 			$this->userId
 		);
 	}

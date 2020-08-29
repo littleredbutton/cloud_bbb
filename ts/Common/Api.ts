@@ -1,6 +1,10 @@
 import axios from '@nextcloud/axios';
 
-export enum ShareType { User, Group };
+export enum ShareType {
+	User = OC.Share.SHARE_TYPE_USER,
+	Group = OC.Share.SHARE_TYPE_GROUP,
+	Circle = OC.Share.SHARE_TYPE_CIRCLE
+};
 
 export enum Permission { Admin, Moderator, User };
 
@@ -67,6 +71,7 @@ export interface ShareWithOption {
 export interface ShareWith {
 	users: ShareWithOption[];
 	groups: ShareWithOption[];
+	circles: ShareWithOption[];
 }
 
 class Api {
@@ -228,6 +233,7 @@ class Api {
 		return {
 			users: response.data.ocs.data.exact.users,
 			groups: response.data.ocs.data.exact.groups,
+			circles: response.data.ocs.data.exact.circles || [],
 		};
 	}
 
@@ -248,6 +254,7 @@ class Api {
 		return {
 			users: [...data.users, ...data.exact.users],
 			groups: [...data.groups, ...data.exact.groups],
+			circles: [...(data.circles || []), ...(data.exact.circles || [])],
 		};
 	}
 }

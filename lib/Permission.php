@@ -29,18 +29,23 @@ class Permission {
 	/** @var RoomShareService */
 	private $roomShareService;
 
+	/** @var CircleHelper */
+	private $circleHelper;
+
 	public function __construct(
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		RoomService $roomService,
 		RestrictionService $restrictionService,
-		RoomShareService $roomShareService
+		RoomShareService $roomShareService,
+		CircleHelper $circleHelper
 	) {
 		$this->userManager = $userManager;
 		$this->groupManager = $groupManager;
 		$this->roomService = $roomService;
 		$this->restrictionService = $restrictionService;
 		$this->roomShareService = $roomShareService;
+		$this->circleHelper = $circleHelper;
 	}
 
 	public function getRestriction(string $uid): Restriction {
@@ -51,7 +56,7 @@ class Permission {
 	}
 
 	public function isAllowedToCreateRoom(string $uid) {
-		$numberOfCreatedRooms = count($this->roomService->findAll($uid, []));
+		$numberOfCreatedRooms = count($this->roomService->findAll($uid, [], []));
 		$restriction = $this->getRestriction($uid);
 
 		return $restriction->getMaxRooms() < 0 || $restriction->getMaxRooms() > $numberOfCreatedRooms;
@@ -102,6 +107,10 @@ class Permission {
 				}
 			} elseif ($share->getShareType() === RoomShare::SHARE_TYPE_GROUP) {
 				if ($this->groupManager->isInGroup($uid, $share->getShareWith())) {
+					return true;
+				}
+			} elseif ($share->getShareType() === RoomShare::SHARE_TYPE_CIRCLE) {
+				if ($this->circleHelper->isInCircle($uid, $share->getShareWith())) {
 					return true;
 				}
 			}

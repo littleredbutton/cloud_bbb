@@ -9,6 +9,7 @@ use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCA\BigBlueButton\Service\RestrictionService;
+use OCA\BigBlueButton\CircleHelper;
 use OCP\IUserManager;
 use OCP\IGroupManager;
 use OCP\IUser;
@@ -34,6 +35,9 @@ class PermissionTest extends TestCase {
 	/** @var RestrictionService|MockObject */
 	private $restrictionService;
 
+	/** @var CircleHelper|MockObject */
+	private $circleHelper;
+
 	public function setUp(): void {
 		parent::setUp();
 
@@ -52,12 +56,16 @@ class PermissionTest extends TestCase {
 		/** @var RoomShareService|MockObject */
 		$this->roomShareService = $this->createMock(RoomShareService::class);
 
+		/** @var CircleHelper|MockObject */
+		$this->circleHelper = $this->createMock(CircleHelper::class);
+
 		$this->permission = new Permission(
 			$this->userManager,
 			$this->groupManager,
 			$this->roomService,
 			$this->restrictionService,
-			$this->roomShareService
+			$this->roomShareService,
+			$this->circleHelper
 		);
 	}
 
@@ -96,12 +104,13 @@ class PermissionTest extends TestCase {
 		$room = $this->createRoom(1, 'foo');
 
 		$this->roomShareService
-			->expects($this->exactly(4))
+			->expects($this->exactly(5))
 			->method('findAll')
 			->will($this->returnValueMap([
 				[1, [
 					$this->createRoomShare(RoomShare::SHARE_TYPE_USER, 'user', RoomShare::PERMISSION_ADMIN),
 					$this->createRoomShare(RoomShare::SHARE_TYPE_GROUP, 'group', RoomShare::PERMISSION_MODERATOR),
+					$this->createRoomShare(RoomShare::SHARE_TYPE_CIRCLE, 'circle', RoomShare::PERMISSION_USER),
 				]],
 				[2, []],
 			]));
@@ -113,6 +122,13 @@ class PermissionTest extends TestCase {
 				['group_user', 'group', true],
 			]));
 
+		$this->circleHelper
+			->method('isInCircle')
+			->will($this->returnValueMap([
+				['bar', 'circle', false],
+				['circle_user', 'circle', true],
+			]));
+
 		$this->assertFalse($this->permission->isUser($room, null), 'Test guest user');
 		$this->assertFalse($this->permission->isUser($room, 'bar'), 'Test no matching share');
 		$this->assertFalse($this->permission->isUser($this->createRoom(2, 'foo'), 'bar'), 'Test empty shares');
@@ -120,6 +136,7 @@ class PermissionTest extends TestCase {
 		$this->assertTrue($this->permission->isUser($room, 'foo'), 'Test room owner');
 		$this->assertTrue($this->permission->isUser($room, 'user'));
 		$this->assertTrue($this->permission->isUser($room, 'group_user'));
+		$this->assertTrue($this->permission->isUser($room, 'circle_user'));
 	}
 
 	private function createRoom(int $id, string $userId): Room {

@@ -80,18 +80,20 @@ class RoomMapperTest extends TestCase {
 		$foreignRoom2 = $this->insert($this->getRandomString(), $this->getRandomString());
 		$foreignRoom3 = $this->insert($this->getRandomString(), $this->getRandomString());
 
-		$this->assertCount(1, $this->mapper->findAll($this->userId, []));
+		$this->assertCount(1, $this->mapper->findAll($this->userId, [], []));
 
 		$shares = [];
 		$shares[] = $this->insertShare($foreignRoom1->getId(), RoomShare::SHARE_TYPE_USER, $this->userId);
 		$shares[] = $this->insertShare($foreignRoom1->getId(), RoomShare::SHARE_TYPE_GROUP, 'foo bar');
 		$shares[] = $this->insertShare($foreignRoom2->getId(), RoomShare::SHARE_TYPE_GROUP, 'foo bar');
 		$shares[] = $this->insertShare($foreignRoom3->getId(), RoomShare::SHARE_TYPE_USER, $this->getRandomString());
+		$shares[] = $this->insertShare($foreignRoom3->getId(), RoomShare::SHARE_TYPE_CIRCLE, 'c1');
+		$shares[] = $this->insertShare($foreignRoom3->getId(), RoomShare::SHARE_TYPE_CIRCLE, 'c2');
 		$shares[] = $this->insertShare($foreignRoom3->getId(), RoomShare::SHARE_TYPE_USER, $this->userId, RoomShare::PERMISSION_MODERATOR);
 		$shares[] = $this->insertShare($foreignRoom3->getId(), RoomShare::SHARE_TYPE_GROUP, 'foo bar', RoomShare::PERMISSION_USER);
 
-		$rooms = $this->mapper->findAll($this->userId, ['foo bar']);
-		$this->assertCount(3, $rooms);
+		$rooms = $this->mapper->findAll($this->userId, ['foo bar'], ['c1']);
+		$this->assertCount(4, $rooms);
 
 		$this->mapper->delete($room);
 		$this->mapper->delete($foreignRoom1);

@@ -27,6 +27,7 @@ declare namespace OC {
 		const SHARE_TYPE_USER = 0;
 		const SHARE_TYPE_GROUP = 1;
 		const SHARE_TYPE_LINK = 3;
+		const SHARE_TYPE_CIRCLE = 7;
 	}
 
 	interface Plugin<T> {

@@ -5,6 +5,7 @@ namespace OCA\BigBlueButton\Db;
 use JsonSerializable;
 
 use OCP\AppFramework\Db\Entity;
+use OCP\Share\IShare;
 
 /**
  * @method int getRoomId()
@@ -24,8 +25,9 @@ class RoomShare extends Entity implements JsonSerializable {
 	public const PERMISSION_MODERATOR = 1;
 	public const PERMISSION_USER = 2;
 
-	public const SHARE_TYPE_USER = 0;
-	public const SHARE_TYPE_GROUP = 1;
+	public const SHARE_TYPE_USER = IShare::TYPE_USER;
+	public const SHARE_TYPE_GROUP = IShare::TYPE_GROUP;
+	public const SHARE_TYPE_CIRCLE = IShare::TYPE_CIRCLE;
 
 	protected $roomId;
 	protected $shareType;

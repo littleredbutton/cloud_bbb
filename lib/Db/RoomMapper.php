@@ -45,7 +45,7 @@ class RoomMapper extends QBMapper {
 	/**
 	 * @return array<Room>
 	 */
-	public function findAll(string $userId, array $groupIds): array {
+	public function findAll(string $userId, array $groupIds, array $circleIds): array {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
 		$qb->select('r.*')
@@ -63,6 +63,11 @@ class RoomMapper extends QBMapper {
 						$qb->expr()->eq('s.permission', $qb->createNamedParameter(RoomShare::PERMISSION_ADMIN, IQueryBuilder::PARAM_INT)),
 						$qb->expr()->eq('s.share_type', $qb->createNamedParameter(RoomShare::SHARE_TYPE_GROUP, IQueryBuilder::PARAM_INT)),
 						$qb->expr()->in('s.share_with', $qb->createNamedParameter($groupIds, IQueryBuilder::PARAM_STR_ARRAY))
+					),
+					$qb->expr()->andX(
+						$qb->expr()->eq('s.permission', $qb->createNamedParameter(RoomShare::PERMISSION_ADMIN, IQueryBuilder::PARAM_INT)),
+						$qb->expr()->eq('s.share_type', $qb->createNamedParameter(RoomShare::SHARE_TYPE_CIRCLE, IQueryBuilder::PARAM_INT)),
+						$qb->expr()->in('s.share_with', $qb->createNamedParameter($circleIds, IQueryBuilder::PARAM_STR_ARRAY))
 					)
 				)
 			)

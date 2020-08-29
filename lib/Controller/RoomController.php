@@ -5,6 +5,7 @@ namespace OCA\BigBlueButton\Controller;
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\CircleHelper;
 use OCP\IRequest;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
@@ -25,6 +26,9 @@ class RoomController extends Controller {
 	/** @var Permission */
 	private $permission;
 
+	/** @var CircleHelper */
+	private $circleHelper;
+
 	/** @var string */
 	private $userId;
 
@@ -37,6 +41,7 @@ class RoomController extends Controller {
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		Permission $permission,
+		CircleHelper $circleHelper,
 		$userId
 	) {
 		parent::__construct($appName, $request);
@@ -44,6 +49,7 @@ class RoomController extends Controller {
 		$this->userManager = $userManager;
 		$this->groupManager = $groupManager;
 		$this->permission = $permission;
+		$this->circleHelper = $circleHelper;
 		$this->userId = $userId;
 	}
 
@@ -53,8 +59,9 @@ class RoomController extends Controller {
 	public function index(): DataResponse {
 		$user = $this->userManager->get($this->userId);
 		$groupIds = $this->groupManager->getUserGroupIds($user);
+		$circleIds = $this->circleHelper->getCircleIds($this->userId);
 
-		return new DataResponse($this->service->findAll($this->userId, $groupIds));
+		return new DataResponse($this->service->findAll($this->userId, $groupIds, $circleIds));
 	}
 
 	/**

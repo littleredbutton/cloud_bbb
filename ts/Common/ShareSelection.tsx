@@ -8,6 +8,7 @@ type Props = {
 	excluded?: {
 		groupIds?: string[];
 		userIds?: string[];
+		circleIds?: string[];
 	};
 	placeholder?: string;
 }
@@ -23,6 +24,7 @@ const ShareSelection: React.FC<Props> = (props) => {
 	const excluded = {
 		userIds: props.excluded?.userIds || [],
 		groupIds: props.excluded?.groupIds || [],
+		circleIds: props.excluded?.circleIds || [],
 	};
 	const placeholder = props.placeholder || t('bbb', 'Name, group, ...');
 
@@ -59,6 +61,7 @@ const ShareSelection: React.FC<Props> = (props) => {
 		const results = options ? [
 			...options.users.filter(user => !excluded.userIds.includes(user.value.shareWith)),
 			...options.groups.filter(group => !excluded.groupIds.includes(group.value.shareWith)),
+			...options.circles.filter(circle => !excluded.circleIds.includes(circle.value.shareWith)),
 		] : [];
 
 		const renderOption = (option: ShareWithOption) => {

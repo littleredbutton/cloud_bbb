@@ -19,8 +19,8 @@ class RoomService {
 		$this->mapper = $mapper;
 	}
 
-	public function findAll(string $userId, array $groupIds): array {
-		return $this->mapper->findAll($userId, $groupIds);
+	public function findAll(string $userId, array $groupIds, array $circleIds): array {
+		return $this->mapper->findAll($userId, $groupIds, $circleIds);
 	}
 
 	private function handleException(Exception $e): void {

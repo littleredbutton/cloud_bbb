@@ -5,6 +5,7 @@ namespace OCA\BigBlueButton\Controller;
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Service\RoomShareNotFound;
+use OCA\BigBlueButton\CircleHelper;
 use OCP\IRequest;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
@@ -26,6 +27,9 @@ class RoomShareController extends Controller {
 	/** @var RoomService */
 	private $roomService;
 
+	/** @var CircleHelper */
+	private $circleHelper;
+
 	use Errors;
 
 	public function __construct(
@@ -34,12 +38,14 @@ class RoomShareController extends Controller {
 		RoomShareService $service,
 		IUserManager $userManager,
 		RoomService $roomService,
+		CircleHelper $circleHelper,
 		$userId
 	) {
 		parent::__construct($appName, $request);
 		$this->service = $service;
 		$this->userManager = $userManager;
 		$this->roomService = $roomService;
+		$this->circleHelper = $circleHelper;
 		$this->userId = $userId;
 	}
 
@@ -58,17 +64,38 @@ class RoomShareController extends Controller {
 		}
 
 		$roomShares = $this->service->findAll($roomId);
+		$shares = [];
+
+		$circleAPI = $this->circleHelper->getCircleAPI();
 
 		/** @var RoomShare $roomShare */
 		foreach ($roomShares as $roomShare) {
-			$shareWithUser = $this->userManager->get($roomShare->getShareWith());
+			if ($roomShare->getShareType() === RoomShare::SHARE_TYPE_USER) {
+				$shareWithUser = $this->userManager->get($roomShare->getShareWith());
 
-			if ($shareWithUser !== null) {
+				if ($shareWithUser === null) {
+					continue;
+				}
+
 				$roomShare->setShareWithDisplayName($shareWithUser->getDisplayName());
+			} elseif ($roomShare->getShareType() === RoomShare::SHARE_TYPE_CIRCLE) {
+				if ($circleAPI === false) {
+					continue;
+				}
+
+				$circle = $circleAPI->detailsCircle($roomShare->getShareWith());
+
+				if ($circle === null) {
+					continue;
+				}
+
+				$roomShare->setShareWithDisplayName($circle->getName());
 			}
+
+			$shares[] = $roomShare;
 		}
 
-		return new DataResponse($roomShares);
+		return new DataResponse($shares);
 	}
 
 	/**
