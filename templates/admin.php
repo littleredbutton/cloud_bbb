@@ -3,6 +3,7 @@
 /** @var $_ array */
 
 script('bbb', 'admin');
+script('bbb', 'restrictions');
 ?>
 
 <div id="bbb-settings" class="section">
@@ -19,7 +20,11 @@ script('bbb', 'admin');
         </form>
 
         <p>
-            <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox" value="1" <?php p($_['app.navigation']); ?>>
+            <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox" value="1" <?php p($_['app.navigation']); ?> />
             <label for="bbb-app-navigation"><?php p($l->t('Show room manager in app navigation instead of settings page.')); ?></label>
         </p>
+
+		<h3>Restrictions</h3>
+		<div id="bbb-restrictions">
+		</div>
 </div>

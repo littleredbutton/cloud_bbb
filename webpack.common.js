@@ -11,6 +11,9 @@ module.exports = {
 		manager: [
 			path.join(__dirname, 'ts', 'Manager', 'index.tsx'),
 		],
+		restrictions: [
+			path.join(__dirname, 'ts', 'Restrictions', 'index.tsx'),
+		],
 		join: [
 			path.join(__dirname, 'ts', 'join.ts'),
 		]

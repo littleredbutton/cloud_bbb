@@ -120,10 +120,9 @@ class JoinController extends Controller {
 		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
 
 		return new TemplateResponse($this->appName, 'forward', [
-			'room'             => $room->name,
-			'url' => $joinUrl,
+			'room' => $room->name,
+			'url'  => $joinUrl,
 		], 'guest');
-		;
 	}
 
 	private function getRoom(): ?Room {

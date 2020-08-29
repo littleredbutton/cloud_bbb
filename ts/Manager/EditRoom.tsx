@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Room } from './Api';
+import { Room, Restriction } from '../Common/Api';
 import EditRoomDialog from './EditRoomDialog';
 
 type Props = {
-    room: Room;
-    updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
+	room: Room;
+	restriction?: Restriction;
+	updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
 }
 
-const EditRoom: React.FC<Props> = ({ room, updateProperty }) => {
+const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {
 	const [open, setOpen] = useState<boolean>(false);
 
 	return (
@@ -16,7 +17,7 @@ const EditRoom: React.FC<Props> = ({ room, updateProperty }) => {
 				onClick={ev => { ev.preventDefault(), setOpen(true); }}
 				title={t('bbb', 'Edit')} />
 
-			<EditRoomDialog room={room} updateProperty={updateProperty} open={open} setOpen={setOpen} />
+			<EditRoomDialog room={room} restriction={restriction} updateProperty={updateProperty} open={open} setOpen={setOpen} />
 		</>
 	);
 };

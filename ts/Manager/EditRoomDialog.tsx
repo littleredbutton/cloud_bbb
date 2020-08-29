@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Access, Room, Permission, RoomShare, api } from './Api';
+import { Access, Room, Permission, RoomShare, api, Restriction } from '../Common/Api';
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
+import { AccessOptions } from '../Common/Translation';
 
 const descriptions: { [key: string]: string } = {
 	name: t('bbb', 'Descriptive name of this room.'),
@@ -15,13 +16,17 @@ const descriptions: { [key: string]: string } = {
 
 type Props = {
 	room: Room;
+	restriction?: Restriction;
 	updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
 	open: boolean;
 	setOpen: (open: boolean) => void;
 }
 
-const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }) => {
+const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, open, setOpen }) => {
 	const [shares, setShares] = useState<RoomShare[]>();
+
+	const maxParticipantsLimit = (restriction?.maxParticipants || 0) < 0 ? undefined : restriction?.maxParticipants;
+	const minParticipantsLimit = (restriction?.maxParticipants || -1) < 1 ? 0 : 1;
 
 	useEffect(() => {
 		if (!open) {
@@ -45,7 +50,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }
 					<h3>{label}</h3>
 				</label>
 
-				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} />
+				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} min={minParticipantsLimit} max={maxParticipantsLimit} />
 				{descriptions[field] && <em>{descriptions[field]}</em>}
 			</div>
 		);
@@ -71,19 +76,20 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }
 		);
 	}
 
+	const accessOptions = {...AccessOptions};
+	for(const roomType of restriction?.roomTypes || []) {
+		if (roomType !== room.access) {
+			delete accessOptions[roomType];
+		}
+	}
+
 	return (
 		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
 			{inputElement(t('bbb', 'Name'), 'name')}
 			{inputElement(t('bbb', 'Welcome'), 'welcome')}
 			{inputElement(t('bbb', 'Participant limit'), 'maxParticipants', 'number')}
 
-			{selectElement(t('bbb', 'Access'), 'access', room.access, {
-				[Access.Public]: t('bbb', 'Public'),
-				[Access.Password]: t('bbb', 'Internal + Password protection for guests'),
-				[Access.WaitingRoom]: t('bbb', 'Internal + Waiting room for guests'),
-				[Access.Internal]: t('bbb', 'Internal'),
-				[Access.InternalRestricted]: t('bbb', 'Internal restricted'),
-			}, (value) => {
+			{selectElement(t('bbb', 'Access'), 'access', room.access, accessOptions, (value) => {
 				console.log('access', value);
 				updateProperty('access', value);
 			})}
@@ -117,6 +123,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, updateProperty, open, setOpen }
 						type="checkbox"
 						className="checkbox"
 						checked={room.record}
+						disabled={!restriction?.allowRecording}
 						onChange={(event) => updateProperty('record', event.target.checked)} />
 					<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
 				</div>

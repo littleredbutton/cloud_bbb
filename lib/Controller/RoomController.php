@@ -4,6 +4,7 @@ namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Db\Room;
 use OCP\IRequest;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
@@ -63,13 +64,34 @@ class RoomController extends Controller {
 		string $name,
 		string $welcome,
 		int $maxParticipants,
-		bool $record
+		bool $record,
+		string $access
 	): DataResponse {
+		if (!$this->permission->isAllowedToCreateRoom($this->userId)) {
+			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+		}
+
+		$restriction = $this->permission->getRestriction($this->userId);
+
+		if ($restriction->getMaxParticipants() > -1 && ($maxParticipants > $restriction->getMaxParticipants() || $maxParticipants <= 0)) {
+			return new DataResponse('Max participants limit exceeded.', Http::STATUS_BAD_REQUEST);
+		}
+
+		if (!$restriction->getAllowRecording() && $record) {
+			return new DataResponse('Not allowed to enable recordings.', Http::STATUS_BAD_REQUEST);
+		}
+
+		$disabledRoomTypes = \json_decode($restriction->getRoomTypes());
+		if (in_array($access, $disabledRoomTypes) || !in_array($access, Room::ACCESS)) {
+			return new DataResponse('Access type not allowed.', Http::STATUS_BAD_REQUEST);
+		}
+
 		return new DataResponse($this->service->create(
 			$name,
 			$welcome,
 			$maxParticipants,
 			$record,
+			$access,
 			$this->userId
 		));
 	}
@@ -90,6 +112,21 @@ class RoomController extends Controller {
 
 		if (!$this->permission->isAdmin($room, $this->userId)) {
 			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+		}
+
+		$restriction = $this->permission->getRestriction($this->userId);
+
+		if ($restriction->getMaxParticipants() > -1 && $maxParticipants !== $room->getMaxParticipants() && ($maxParticipants > $restriction->getMaxParticipants() || $maxParticipants <= 0)) {
+			return new DataResponse('Max participants limit exceeded.', Http::STATUS_BAD_REQUEST);
+		}
+
+		if (!$restriction->getAllowRecording() && $record !== $room->getRecord()) {
+			return new DataResponse('Not allowed to enable recordings.', Http::STATUS_BAD_REQUEST);
+		}
+
+		$disabledRoomTypes = \json_decode($restriction->getRoomTypes());
+		if ((in_array($access, $disabledRoomTypes) && $access !== $room->getAccess()) || !in_array($access, Room::ACCESS)) {
+			return new DataResponse('Access type not allowed.', Http::STATUS_BAD_REQUEST);
 		}
 
 		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $everyoneIsModerator, $access) {

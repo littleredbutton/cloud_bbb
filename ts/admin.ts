@@ -1,4 +1,4 @@
-import {api} from './Manager/Api';
+import {api} from './Common/Api';
 import './Manager/App.scss';
 
 declare const OCP: any;

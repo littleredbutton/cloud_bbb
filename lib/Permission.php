@@ -3,25 +3,58 @@
 namespace OCA\BigBlueButton;
 
 use Closure;
+use OCA\BigBlueButton\Service\RoomService;
+use OCA\BigBlueButton\Service\RestrictionService;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCA\BigBlueButton\Db\Restriction;
+use OCP\IUserManager;
 use OCP\IGroupManager;
 
 class Permission {
 
+	/** @var IUserManager */
+	private $userManager;
+
 	/** @var IGroupManager */
 	private $groupManager;
+
+	/** @var RoomService */
+	private $roomService;
+
+	/** @var RestrictionService */
+	private $restrictionService;
 
 	/** @var RoomShareService */
 	private $roomShareService;
 
 	public function __construct(
+		IUserManager $userManager,
 		IGroupManager $groupManager,
+		RoomService $roomService,
+		RestrictionService $restrictionService,
 		RoomShareService $roomShareService
 	) {
+		$this->userManager = $userManager;
 		$this->groupManager = $groupManager;
+		$this->roomService = $roomService;
+		$this->restrictionService = $restrictionService;
 		$this->roomShareService = $roomShareService;
+	}
+
+	public function getRestriction(string $uid): Restriction {
+		$user = $this->userManager->get($uid);
+		$groupIds = $this->groupManager->getUserGroupIds($user);
+
+		return $this->restrictionService->findByGroupIds($groupIds);
+	}
+
+	public function isAllowedToCreateRoom(string $uid) {
+		$numberOfCreatedRooms = count($this->roomService->findAll($uid, []));
+		$restriction = $this->getRestriction($uid);
+
+		return $restriction->getMaxRooms() < 0 || $restriction->getMaxRooms() > $numberOfCreatedRooms;
 	}
 
 	public function isUser(Room $room, ?string $uid) {

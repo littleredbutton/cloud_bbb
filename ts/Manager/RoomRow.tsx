@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { api, Recording, Room } from './Api';
+import { api, Recording, Room, Restriction } from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
 
 type Props = {
 	room: Room;
+	restriction?: Restriction;
 	updateRoom: (room: Room) => Promise<void>;
 	deleteRoom: (id: number) => void;
 }
@@ -154,8 +155,8 @@ const RoomRow: React.FC<Props> = (props) => {
 		);
 	}
 
-	function edit(field: string, type: 'text' | 'number' = 'text') {
-		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} />;
+	function edit(field: string, type: 'text' | 'number' = 'text', options?) {
+		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />;
 	}
 
 	const avatarUrl = OC.generateUrl('/avatar/' + encodeURIComponent(room.userId) + '/' + 24, {
@@ -163,6 +164,9 @@ const RoomRow: React.FC<Props> = (props) => {
 		size: 24,
 		requesttoken: OC.requestToken,
 	});
+
+	const maxParticipantsLimit = props.restriction?.maxParticipants || -1;
+	const minParticipantsLimit = (props.restriction?.maxParticipants || -1) < 1 ? 0 : 1;
 
 	return (
 		<>
@@ -185,15 +189,15 @@ const RoomRow: React.FC<Props> = (props) => {
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
 				</td>
 				<td className="max-participants bbb-shrink">
-					{edit('maxParticipants', 'number')}
+					{edit('maxParticipants', 'number', {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
 				</td>
 				<td className="record bbb-shrink">
-					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
+					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
 					<label htmlFor={`bbb-record-${room.id}`}></label>
 				</td>
 				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
 				<td className="edit icon-col">
-					<EditRoom room={props.room} updateProperty={updateRoom} />
+					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
 				</td>
 				<td className="remove icon-col">
 					<a className="icon icon-delete icon-visible"

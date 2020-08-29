@@ -12,6 +12,15 @@ export enum Access {
 	InternalRestricted = 'internal_restricted',
 }
 
+export interface Restriction {
+	id: number;
+	groupId: string;
+	maxRooms: number;
+	roomTypes: string[];
+	maxParticipants: number;
+	allowRecording: boolean;
+}
+
 export interface Room {
 	id: number;
 	uid: string;
@@ -65,6 +74,46 @@ class Api {
 		return OC.generateUrl(`apps/bbb/${endpoint}`);
 	}
 
+	public async getRestriction(): Promise<Restriction> {
+		const response = await axios.get(this.getUrl('restrictions/user'));
+
+		return response.data;
+	}
+
+	public async getRestrictions(): Promise<Restriction[]> {
+		const response = await axios.get(this.getUrl('restrictions'));
+
+		return response.data;
+	}
+
+	public async createRestriction(groupId: string) {
+		const response = await axios.post(this.getUrl('restrictions'), {
+			groupId,
+		});
+
+		return response.data;
+	}
+
+	public async updateRestriction(restriction: Restriction) {
+		if (!restriction.id) {
+			const newRestriction = await this.createRestriction(
+				restriction.groupId
+			);
+
+			restriction.id = newRestriction.id;
+		}
+
+		const response = await axios.put(this.getUrl(`restrictions/${restriction.id}`), restriction);
+
+		return response.data;
+	}
+
+	public async deleteRestriction(id: number) {
+		const response = await axios.delete(this.getUrl(`restrictions/${id}`));
+
+		return response.data;
+	}
+
 	public getRoomUrl(room: Room) {
 		return window.location.origin + api.getUrl(`b/${room.uid}`);
 	}
@@ -75,12 +124,13 @@ class Api {
 		return response.data;
 	}
 
-	public async createRoom(name: string) {
+	public async createRoom(name: string, access: Access = Access.Public, maxParticipants = 0) {
 		const response = await axios.post(this.getUrl('rooms'), {
 			name,
 			welcome: '',
-			maxParticipants: 0,
+			maxParticipants,
 			record: false,
+			access,
 		});
 
 		return response.data;
@@ -165,10 +215,11 @@ class Api {
 		return response.data;
 	}
 
-	public async getRecommendedShareWith(): Promise<ShareWith> {
+	public async getRecommendedShareWith(shareType: ShareType[] = [OC.Share.SHARE_TYPE_USER, OC.Share.SHARE_TYPE_GROUP]): Promise<ShareWith> {
 		const url = OC.linkToOCS('apps/files_sharing/api/v1', 1) + 'sharees_recommended';
 		const response = await axios.get(url, {
 			params: {
+				shareType,
 				itemType: 'room',
 				format: 'json',
 			},
@@ -180,12 +231,12 @@ class Api {
 		};
 	}
 
-	public async searchShareWith(search = ''): Promise<ShareWith> {
+	public async searchShareWith(search = '', shareType: ShareType[] = [OC.Share.SHARE_TYPE_USER, OC.Share.SHARE_TYPE_GROUP]): Promise<ShareWith> {
 		const url = OC.linkToOCS('apps/files_sharing/api/v1', 1) + 'sharees';
 		const response = await axios.get(url, {
 			params: {
 				search,
-				shareType: [OC.Share.SHARE_TYPE_USER, OC.Share.SHARE_TYPE_GROUP],
+				shareType,
 				itemType: 'room',
 				format: 'json',
 				lookup: false,
