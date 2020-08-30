@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "រក្សាទុក",
     "Password" : "ពាក្យសម្ងាត់",
+    "Group" : "Group",
     "Name" : "ឈ្មោះ",
     "Edit" : "កែប្រែ",
     "Create" : "បង្កើត",
     "Delete" : "លុប",
     "Error" : "កំហុស",
-    "Group" : "Group",
     "Share" : "ចែក​រំលែក",
     "Loading" : "Loading"
 },

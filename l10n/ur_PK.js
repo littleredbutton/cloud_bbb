@@ -3,11 +3,11 @@ OC.L10N.register(
     {
     "Save" : "حفظ",
     "Password" : "پاسورڈ",
+    "Group" : "Group",
     "Name" : "اسم",
     "Edit" : "تدوین کریں",
     "Delete" : "حذف کریں",
     "Error" : "ایرر",
-    "Group" : "Group",
     "Share" : "تقسیم",
     "Loading" : "Loading"
 },

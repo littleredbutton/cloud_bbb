@@ -3,13 +3,14 @@ OC.L10N.register(
     {
     "Save" : "Sačuvaj",
     "Password" : "Lozinka",
+    "Hello %s" : "Здраво %s",
+    "Group" : "Group",
     "Name" : "Ime",
     "Edit" : "Izmeni",
     "Welcome" : "Dobro došli",
     "Create" : "Napravi",
     "Delete" : "Obriši",
     "Error" : "Error",
-    "Group" : "Group",
     "Share" : "Podeli",
     "Loading" : "Loading"
 },

@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "ساتل",
     "Password" : "پاسورډ",
+    "Hello %s" : "سلامونه %s",
     "Name" : "نوم",
     "Delete" : "ړنګول",
     "Error" : "شسیب",

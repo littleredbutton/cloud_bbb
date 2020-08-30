@@ -3,12 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Lagre",
     "Password" : "Passord",
+    "Hello %s" : "Hei %s",
+    "Group" : "Gruppe",
     "Name" : "Namn",
     "Edit" : "Endra",
     "Create" : "Lag",
     "Delete" : "Ta bort",
     "Error" : "Feil",
-    "Group" : "Gruppe",
     "Share" : "Del",
     "Loading" : "Loading"
 },

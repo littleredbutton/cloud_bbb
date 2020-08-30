@@ -1,12 +1,12 @@
 { "translations": {
     "Save" : "Späicheren",
     "Password" : "Passwuert",
+    "Group" : "Grupp",
     "Name" : "Numm",
     "Edit" : "Änneren",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
     "Error" : "Fehler",
-    "Group" : "Grupp",
     "Share" : "Deelen",
     "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

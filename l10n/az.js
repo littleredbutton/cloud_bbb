@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "Saxla",
     "Password" : "Şifrə",
+    "Group" : "Qrup",
     "Name" : "Ad",
     "Edit" : "Dəyişiklik et",
     "Create" : "Yarat",
     "Delete" : "Sil",
     "Error" : "Səhv",
-    "Group" : "Qrup",
     "Share" : "Paylaş",
     "Loading" : "Loading"
 },

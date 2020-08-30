@@ -3,12 +3,13 @@ OC.L10N.register(
     {
     "Save" : "Simpan",
     "Password" : "Kata laluan",
+    "Hello %s" : "Hai %s",
+    "Group" : "Group",
     "Name" : "Nama",
     "Edit" : "Sunting",
     "Create" : "Buat",
     "Delete" : "Padam",
     "Error" : "Ralat",
-    "Group" : "Group",
     "Share" : "Kongsi",
     "Loading" : "Loading"
 },

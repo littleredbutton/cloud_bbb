@@ -2,7 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Password" : "Loyniorð",
-    "Public" : "Alment",
+    "Hello %s" : "Hey %s",
     "Delete" : "Strika",
     "Settings saved" : "Stillingar eru goymd"
 },

@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "﻿ಉಳಿಸಿ",
     "Password" : "ಗುಪ್ತ ಪದ",
+    "Group" : "﻿ಗುಂಪು",
     "Name" : "﻿ಹೆಸರು",
     "Edit" : "ಸಂಪಾದಿಸು",
     "Create" : "ಸೃಷ್ಟಿಸಿ",
     "Delete" : "﻿ಅಳಿಸಿ",
     "Error" : "﻿ತಪ್ಪಾಗಿದೆ",
-    "Group" : "﻿ಗುಂಪು",
     "Share" : "﻿ಹಂಚಿಕೊಳ್ಳಿ",
     "Loading" : "Loading"
 },

@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "சேமிக்க ",
     "Password" : "கடவுச்சொல்",
+    "Group" : "Group",
     "Name" : "பெயர்",
     "Edit" : "தொகுக்க",
     "Create" : "உருவாக்குக",
     "Delete" : "நீக்குக",
     "Error" : "வழு",
-    "Group" : "Group",
     "Share" : "பகிர்வு",
     "Loading" : "Loading"
 },

@@ -1,6 +1,6 @@
 { "translations": {
     "Password" : "Loyniorð",
-    "Public" : "Alment",
+    "Hello %s" : "Hey %s",
     "Delete" : "Strika",
     "Settings saved" : "Stillingar eru goymd"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

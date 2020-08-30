@@ -1,12 +1,12 @@
 { "translations": {
     "Save" : "Պահպանել",
     "Password" : "Գաղտնաբառ",
+    "Group" : "Խումբ",
     "Name" : "Անուն",
     "Edit" : "մշակել",
     "Create" : "Ստեղծել",
     "Delete" : "հեռացնել",
     "Error" : "Սխալ",
-    "Group" : "Խումբ",
     "Share" : "Կիսվել",
     "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

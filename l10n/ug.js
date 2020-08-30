@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "ساقلا",
     "Password" : "ئىم",
+    "Group" : "Group",
     "Name" : "ئاتى",
     "Edit" : "تەھرىر",
     "Create" : "قۇر",
     "Delete" : "ئۆچۈر",
     "Error" : "خاتالىق",
-    "Group" : "Group",
     "Share" : "ھەمبەھىر",
     "Loading" : "Loading"
 },

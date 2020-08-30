@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "Späicheren",
     "Password" : "Passwuert",
+    "Group" : "Grupp",
     "Name" : "Numm",
     "Edit" : "Änneren",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
     "Error" : "Fehler",
-    "Group" : "Grupp",
     "Share" : "Deelen",
     "Loading" : "Loading"
 },

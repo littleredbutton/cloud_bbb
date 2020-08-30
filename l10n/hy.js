@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Save" : "Պահպանել",
     "Password" : "Գաղտնաբառ",
+    "Group" : "Խումբ",
     "Name" : "Անուն",
     "Edit" : "մշակել",
     "Create" : "Ստեղծել",
     "Delete" : "հեռացնել",
     "Error" : "Սխալ",
-    "Group" : "Խումբ",
     "Share" : "Կիսվել",
     "Loading" : "Loading"
 },

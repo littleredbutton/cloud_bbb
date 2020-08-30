@@ -3,13 +3,12 @@ OC.L10N.register(
     {
     "Save" : "Spremi",
     "Password" : "Lozinka",
+    "Group" : "Grupa",
     "Name" : "Ime",
     "Edit" : "Izmjeni",
-    "Public" : "Javno",
     "Create" : "Ustvari",
     "Delete" : "Obriši",
     "Error" : "Greška",
-    "Group" : "Grupa",
     "Share" : "Podjeli",
     "Loading" : "Loading"
 },

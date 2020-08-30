@@ -4,12 +4,12 @@ OC.L10N.register(
     "Save" : "Cadw",
     "Display name" : "Enw Dangos",
     "Password" : "Cyfrinair",
+    "Group" : "Grŵp",
     "Name" : "Enw",
     "Edit" : "Golygu",
     "Create" : "Creu",
     "Delete" : "Dileu",
     "Error" : "Gwall",
-    "Group" : "Grŵp",
     "Share" : "Rhannu",
     "Loading" : "Llwytho"
 },

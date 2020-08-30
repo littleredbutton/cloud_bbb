@@ -1,12 +1,12 @@
 { "translations": {
     "Save" : "Saxla",
     "Password" : "Şifrə",
+    "Group" : "Qrup",
     "Name" : "Ad",
     "Edit" : "Dəyişiklik et",
     "Create" : "Yarat",
     "Delete" : "Sil",
     "Error" : "Səhv",
-    "Group" : "Qrup",
     "Share" : "Paylaş",
     "Loading" : "Loading"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

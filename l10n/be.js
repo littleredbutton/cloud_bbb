@@ -3,9 +3,9 @@ OC.L10N.register(
     {
     "Save" : "Save",
     "Password" : "Password",
+    "Group" : "Group",
     "Delete" : "Delete",
     "Error" : "Памылка",
-    "Group" : "Group",
     "Share" : "Падзяліцца",
     "Loading" : "Loading"
 },

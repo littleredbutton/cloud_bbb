@@ -4,6 +4,8 @@ OC.L10N.register(
     "Save" : "Guardar",
     "Display name" : "Nome",
     "Password" : "Password",
+    "Hello %s" : "%sHola ",
+    "Group" : "Group",
     "Name" : "Nome",
     "Edit" : "Editar",
     "Welcome" : "Afáyate",
@@ -11,7 +13,6 @@ OC.L10N.register(
     "Delete" : "Desaniciar",
     "Error" : "Fallu",
     "Server error" : "Fallu de sirvidor",
-    "Group" : "Group",
     "Share" : "Share",
     "Loading" : "Cargando",
     "Settings saved" : "Axustes guardaos"
