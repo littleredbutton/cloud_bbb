@@ -8,7 +8,7 @@
 	<fieldset class="warning bbb">
 		<h2><?php p($_['room']) ?></h2>
 		<?php if (!isset($_['wrongdisplayname']) || !$_['wrongdisplayname']): ?>
-			<p><?php p($l->t('Please enter your name!')); ?></p>
+			<p class="warning-info"><?php p($l->t('Please enter your name!')); ?></p>
 		<?php endif; ?>
 		<?php if (isset($_['wrongdisplayname']) && $_['wrongdisplayname']): ?>
 			<div class="warning"><?php p($l->t('The name must be at least 3 characters long.')); ?></div>
@@ -32,7 +32,7 @@
 				<input type="submit" id="displayname-submit"
 					class="svg icon-confirm input-button-inline" value="" />
 			<?php endif; ?>
-
+			<p class="login"><a href="<?php print_unescaped($_['loginUrl']); ?>"><?php p($l->t('Have an account? Log in.')); ?></a></p>
 		</div>
 	</fieldset>
 </form>
