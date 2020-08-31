@@ -6,8 +6,8 @@ use OCA\BigBlueButton\Controller\JoinController;
 use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NoPermissionResponse;
 use OCA\BigBlueButton\NotFoundException;
+use OCA\BigBlueButton\NotFoundResponse;
 use OCP\AppFramework\Middleware;
-use OCP\AppFramework\Http\NotFoundResponse;
 use OCP\IRequest;
 
 class JoinMiddleware extends Middleware {
