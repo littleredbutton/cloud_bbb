@@ -11,7 +11,7 @@ class NoPermissionResponse extends Response {
 		parent::__construct();
 
 		$this->setContentSecurityPolicy(new ContentSecurityPolicy());
-		$this->setStatus(404);
+		$this->setStatus(403);
 	}
 
 	public function render() {
