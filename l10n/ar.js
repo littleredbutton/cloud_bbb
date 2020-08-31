@@ -4,6 +4,7 @@ OC.L10N.register(
     "Save" : "حفظ",
     "Display name" : "الاسم المعروض",
     "Password" : "كلمة السر",
+    "Hello %s" : "أهلاً %s",
     "Group" : "الفريق",
     "Name" : "الاسم",
     "Edit" : "تعديل",

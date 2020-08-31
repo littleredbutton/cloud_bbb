@@ -60,6 +60,7 @@
     "Share" : "Teilen",
     "Loading" : "Lade",
     "You are not allowed to change this option, because this room is shared with you." : "Du kannst diese Einstellung nicht ändern, da dieser Raum mit Dir geteilt wurde.",
+    "Group, ..." : "Gruppe, …",
     "Settings saved" : "Einstellungen gespeichert",
     "Unexpected error occurred" : "Es ist ein unerwarteter Fehler aufgetreten",
     "API URL is invalid" : "API-URL ist ungültig",

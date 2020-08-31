@@ -62,6 +62,8 @@ OC.L10N.register(
     "Share" : "Partager",
     "Loading" : "Chargement",
     "You are not allowed to change this option, because this room is shared with you." : "Vous n'êtes pas autorisé à changer cette option car cette salle est partagée avec vous.",
+    "Max. participants" : "Nombre maximum de participants",
+    "Group, ..." : "Groupe, ...",
     "Settings saved" : "Paramètres sauvegardés",
     "Unexpected error occurred" : "Une erreur est survenue",
     "API URL is invalid" : "L'adresse de l'API n'est pas valable",

@@ -25,6 +25,9 @@
     "Max" : "En fazla",
     "Record" : "Kaydet",
     "Recordings" : "Kayıtlar",
+    "You are not permitted to create a room." : "Oda oluşturma izniniz yok.",
+    "You exceeded the maximum number of rooms." : "İzin verilen en fazla oda oluşturma sayısını aştınız.",
+    "Room quota:" : "Oda kotası:",
     "Edit" : "Düzenle",
     "Descriptive name of this room." : "Odayı açıklayan ad.",
     "This message is shown to all users in the chat area after they joined." : "Katılan tüm kullanıcılara sohbet alanında bu ileti görüntülenir.",
@@ -32,6 +35,7 @@
     "If enabled, the moderator is able to start the recording." : "Bu seçenek etkinleştirildiğinde, sorumlu toplantıyı kaydedebilir.",
     "Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join." : "Herkese açık: Bağlantıyı bilen herkes toplantıya katılabilir. Parola: Toplantıya katılabilmek için konukların parolayı bilmesi gerekir. Bekleme odası: Konukların toplantıya katılabilmesi için sorumlu tarafından kabul edilmeleri gerekir. İç: Toplantıya yalnız Nextcloud kullanıcıları katılabilir.",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "Bir sorunlu, katılımcıları çıkarma, sessize alma ya da sunucu olarak atama gibi işlemleri yapabilir. Sorumlu rolündeki kullanıcılar br toplantıyı bitirebilir ya da varsayılan ayarlarını değiştirebilir.",
+    "If enabled, normal users have to wait until a moderator is in the room." : "Bu seçenek etkinleştirildiğinde, odaya bir sorumlu gelene kadar kullanıcıların beklemesi gerekir.",
     "Edit \"{room}\"" : "“{room}” düzenle",
     "Welcome" : "Hoş geldiniz",
     "Participant limit" : "Katılımcı sınırı",
@@ -39,6 +43,7 @@
     "Every participant is moderator" : "Her katılımcı sorumlu olur",
     "Miscellaneous" : "Çeşitli",
     "Recording" : "Kayıt ediliyor",
+    "Require moderator to start room" : "Odayı ancak sorumlu başlatabilsin",
     "Room name" : "Oda adı",
     "Create" : "Ekle",
     "_%n participant_::_%n participants_" : ["%n katılımcı","%n katılımcı"],
@@ -61,9 +66,16 @@
     "Share" : "Paylaş",
     "Loading" : "Yükleniyor",
     "You are not allowed to change this option, because this room is shared with you." : "Bu oda sizinle paylaşılmış olduğundan bu ayarı değiştiremezsiniz.",
+    "Max. rooms" : "En fazla oda sayısı",
+    "Max. participants" : "En fazla katılımcı sayısı",
+    "Group, ..." : "Grup, ...",
+    "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Kısıtlamalar var olan odaları etkilemez. Eksi bir değeri, kısıtlama olmadığı anlamına gelir. Birden fazla kısıtlama uygulanıyorsa her kullanıcı için en az kısıtlayıcı seçenek kullanılır.",
+    "Are you sure you want to delete the restrictions for group \"{name}\"? This operation can not be undone." : "\"{name}\" grubunun kısıtlamalarını silmek istediğinize emin misiniz? Bu işlem geri alınamaz",
+    "Delete restrictions for \"{name}\"?" : "\"{name}\" için kısıtlamalar silinsin mi?",
     "Settings saved" : "Ayarlar kaydedildi",
     "Unexpected error occurred" : "Beklenmeyen bir sorun çıktı",
     "API URL is invalid" : "API adresi geçersiz",
-    "API secret is invalid" : "API parolası geçersiz"
+    "API secret is invalid" : "API parolası geçersiz",
+    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Bu oda henüz açılmamış. {sec} saniye sonra yeniden deneyeceğiz. Lütfen bekleyin."
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
