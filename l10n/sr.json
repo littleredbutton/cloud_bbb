@@ -1,4 +1,5 @@
 { "translations": {
+    "Back to %s" : "Назад на %s",
     "Save" : "Сачувај",
     "Display name" : "Име за приказ",
     "Password" : "Лозинка",

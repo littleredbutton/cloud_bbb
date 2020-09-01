@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "بېرته %s ته",
     "Save" : "ساتل",
     "Password" : "پاسورډ",
     "Hello %s" : "سلامونه %s",

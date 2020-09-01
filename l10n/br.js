@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "Distro da %s",
     "Save" : "Enrollañ",
     "Display name" : "Anv ardivink",
     "Password" : "Ger-tremen",

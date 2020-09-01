@@ -3,6 +3,7 @@
     "BigBlueButton Integration" : "BigBlueButton統合",
     "BigBlueButton integration for Nextcloud" : "Nextcould向けBigBlueButton統合",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "このアプリは、[BigBlueButton](https://bigbluebutton.org)を外部インストールして会議を作成することができます。\n\n* **会議室の設定** 会議室の名前やウェルカムメッセージなどを入力して、複数の会議室の設定を行うことができます。\n* **ゲストリンクを共有** ゲスト全員と部屋のリンクを共有します。\n* **カスタムプレゼンテーション** ファイルブラウザから選択したプレゼンテーションで会議室を起動します。\n* **記録を管理** あなたの会議室記録を表示、共有、削除することができます。\n\n開発者募集! もし時間があれば、このアプリケーションを強化するのに協力してくれたら最高です。\n\n*このアプリはBigBlueButtonを統合したものであり、BigBlueButton Inc.の承認や認定を受けたものではありません。BigBlueButtonとBigBlueButtonロゴはBigBlueButton Inc.の商標です。",
+    "Back to %s" : "%s に戻る",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "BigBlueButtonサーバーで \"sudo bbb-conf -secret \"を実行してAPIのURLとシークレットを取得します。",
     "API URL" : "APIのURL",
     "API secret" : "APIシークレット",

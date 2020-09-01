@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
     "Display name" : "Visningsnamn",
     "Password" : "Lösenord",

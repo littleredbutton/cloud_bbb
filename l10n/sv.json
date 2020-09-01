@@ -1,4 +1,5 @@
 { "translations": {
+    "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
     "Display name" : "Visningsnamn",
     "Password" : "Lösenord",

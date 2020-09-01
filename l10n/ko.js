@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "%s(으)로 돌아가기",
     "Save" : "저장",
     "Please enter your name!" : "이름을 입력하시오!",
     "Display name" : "표시 이름",

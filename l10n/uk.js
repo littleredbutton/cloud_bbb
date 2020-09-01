@@ -4,6 +4,7 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "Не налаштовано посилання API або пароль. Будь ласка, сконтактуйте з адміністратором.",
     "BigBlueButton Integration" : "Інтеграція BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Інтеграція BigBlueButton для Nextcloud",
+    "Back to %s" : "Назад до %s",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Отримайте посилання на API та пароль шляхом виконання команди \"sudo bbb-conf --secret\" на вашому сервері BigBlueButton.",
     "API URL" : "Посилання API",
     "API secret" : "Пароль API",

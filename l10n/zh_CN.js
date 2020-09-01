@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "返回 %s",
     "Save" : "保存",
     "Display name" : "显示名称",
     "Password" : "密码",

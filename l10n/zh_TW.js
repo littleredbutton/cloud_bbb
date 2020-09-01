@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "回到 %s",
     "API URL" : "API 連結位址",
     "Save" : "儲存",
     "Please enter your name!" : "請輸入您的名稱!",

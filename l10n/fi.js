@@ -4,6 +4,7 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "Rajapinnan URL-osoitetta tai salaisuutta ei ole määritetty. Ota yhteys ylläpitäjään.",
     "BigBlueButton Integration" : "BigBlueButton-integraatio",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton-integraatio Nextcloudiin",
+    "Back to %s" : "Takaisin kohtaan %s",
     "API URL" : "Rajapinnan URL",
     "API secret" : "Rajapinnan salaisuus",
     "Save" : "Tallenna",

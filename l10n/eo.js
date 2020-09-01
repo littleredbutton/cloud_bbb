@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "Antaŭen al %s",
     "Save" : "Konservi",
     "Display name" : "Vidiga nomo",
     "Password" : "Pasvorto",

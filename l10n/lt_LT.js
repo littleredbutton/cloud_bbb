@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "BigBlueButton Integration" : "BigBlueButton integracija",
+    "Back to %s" : "Atgal į %s",
     "API URL" : "API URL",
     "Save" : "Įrašyti",
     "You will be forwarded to the room in the next few seconds." : "Po kelių sekundžių būsite peradresuoti į kambarį.",
