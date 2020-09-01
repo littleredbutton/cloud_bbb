@@ -6,6 +6,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.0.0 (2020-09-01)
+### Added
+- add link to room page to log in into Nextcloud
+- [#23](https://github.com/sualko/cloud_bbb/issues/23) add option to require moderator to start a room
+- [#61](https://github.com/sualko/cloud_bbb/issues/61) add ability to share rooms with circles
+- [#43](https://github.com/sualko/cloud_bbb/issues/43) add admin setting to restrict rooms
+- [#31](https://github.com/sualko/cloud_bbb/issues/31) add option to show manager in app navigation
+
+### Fixed
+- use custom 404 page
+- fix no permission status code
+- reset search field after selection
+- [#65](https://github.com/sualko/cloud_bbb/issues/65) fix user/group selection with exact match
+- hide success message after 3 sec in admin settings
+- [#58](https://github.com/sualko/cloud_bbb/issues/58)[#49](https://github.com/sualko/cloud_bbb/issues/49) fix multiple issues with user/group dropdown
+- [#64](https://github.com/sualko/cloud_bbb/issues/64) fix room configuration after room creation
+- [#47](https://github.com/sualko/cloud_bbb/issues/47) bypass form action error
+
+### Misc
+- update feature list
+- add TU Graz as sponsor
+- update js dependencies
+- fix scss style
+- remove obsolete config injection
+
 ## 0.5.1 (2020-06-19)
 ### Fixed
 - allow admin to start room with presentation
