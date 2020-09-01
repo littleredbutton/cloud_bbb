@@ -7,7 +7,7 @@ import NewRoomForm from './NewRoomForm';
 
 export type SortKey = 'name' | 'welcome' | 'maxParticipants' | 'record';
 
-enum SortOrder { DESC = -1, ASC = 1 };
+enum SortOrder { DESC = -1, ASC = 1 }
 
 function sortRooms(key: SortKey, orderBy: SortOrder) {
 	return (a: Room, b: Room) => {

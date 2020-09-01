@@ -26,12 +26,12 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 		this.state.value = props.initialValue ?? '';
 	}
 
-	onSubmit = (event: SyntheticEvent<any>) => {
+	private onSubmit = (event: SyntheticEvent<any>) => {
 		event.preventDefault();
 		this.props.onSubmitValue(this.state.value);
 	};
 
-	render() {
+	public render(): JSX.Element {
 		return <form onSubmit={this.onSubmit}>
 			<input value={this.state.value}
 				   type={this.props.type}

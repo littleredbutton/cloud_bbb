@@ -6,7 +6,7 @@ export interface SortArrowProps {
     direction: number;
 }
 
-export function SortArrow({name, value, direction}: SortArrowProps) {
+export function SortArrow({name, value, direction}: SortArrowProps): JSX.Element {
 	if (name === value) {
 		return (<span className='sort_arrow'>
 			{direction < 0 ? '▼' : '▲'}

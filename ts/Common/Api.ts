@@ -4,9 +4,9 @@ export enum ShareType {
 	User = OC.Share.SHARE_TYPE_USER,
 	Group = OC.Share.SHARE_TYPE_GROUP,
 	Circle = OC.Share.SHARE_TYPE_CIRCLE
-};
+}
 
-export enum Permission { Admin, Moderator, User };
+export enum Permission { Admin, Moderator, User }
 
 export enum Access {
 	Public = 'public',

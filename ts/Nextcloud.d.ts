@@ -2,6 +2,7 @@ interface EscapeOptions {
 	escape?: boolean;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare namespace OC {
 	namespace Util {
 		function humanFileSize(size: number): string;
