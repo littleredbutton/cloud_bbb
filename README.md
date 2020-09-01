@@ -19,8 +19,10 @@ This integration provides the following features:
 
 * **Room setup** Create multiple room configurations with name, welcome message, ...
 * **Share guest link** Share the room link with all your guests
+* **Share rooms** Share rooms with members, groups or circles
 * **Custom presentation** Start a room with a selected presentation from your file browser
 * **Manage recordings** View, share and delete recordings for your rooms
+* **Restrictions** Restrict room creation to certain groups
 
 ## :rocket: Install it
 The easiest way to install this app is by using the [Nextcloud app store](https://apps.nextcloud.com/apps/bbb).
