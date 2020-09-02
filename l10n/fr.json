@@ -2,7 +2,8 @@
     "API URL or secret not configured. Please contact your administrator." : "L'adresse ou le secret de l'API n'est pas configuré. Veuillez contacter votre administrateur.",
     "BigBlueButton Integration" : "Intégration de BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Intégration de BigBlueButton pour Nextcloud",
-    "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Cette application permet de créer des réunions avec une installation externe de [BigBlueButton] (https://bigbluebutton.org).\n\n* ** Configuration du salon de discussion ** Créez plusieurs configurations de salon de discussion avec nom, message de bienvenue, ...\n* ** Partager le lien invité ** Partagez le lien de votre salon de discussion avec tous vos invités\n* ** Présentation personnalisée ** Démarrer la conversation avec votre présentation sélectionnée depuis le navigateur de fichiers\n* ** Gérez les enregistrements ** Affichez, partagez et supprimez les enregistrements de vos salons de discussions\n\nDeveloper wanted! Si vous avez le temps, ce serait génial si vous pouviez aider à améliorer cette application.\n\n* Cette application intègre BigBlueButton et n'est ni approuvée ni certifiée par BigBlueButton Inc. BigBlueButton et le logo BigBlueButton sont des marques déposées de BigBlueButton Inc. *",
+    "Room not found" : "Salle non trouvée",
+    "The room could not be found. Maybe it was deleted?" : "Impossible de trouver cette salle. Peut-être a t'elle été supprimée ?",
     "Back to %s" : "Retourner à %s",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Vous pouvez obtenir l'adresse et le secret de l'API en exécutant \"sudo bbb-conf --secret\" sur votre serveur BigBlueButton.",
     "API URL" : "adresse de l'API",
@@ -16,6 +17,7 @@
     "Display name" : "Nom à afficher",
     "Password" : "Mot de passe",
     "Join" : "Rejoindre",
+    "Have an account? Log in." : "Vous avez déjà un compte ? Connectez-vous.",
     "Hello %s" : "Bonjour %s,",
     "Name, group, ..." : "Nom, groupe, ...",
     "Group" : "Groupe",
@@ -25,6 +27,8 @@
     "Max" : "Max",
     "Record" : "Enregistrer",
     "Recordings" : "Enregistrements",
+    "You are not permitted to create a room." : "Vous n'êtes pas autorisé à créer une salle.",
+    "You exceeded the maximum number of rooms." : "Vous avez dépassé le nombre maximum de salles.",
     "Edit" : "Modifier",
     "Descriptive name of this room." : "Nom descriptif de cette salle",
     "This message is shown to all users in the chat area after they joined." : "Ce message est montré à tous les utilisateurs dans la discussion une fois qu'ils l'ont rejoint",
@@ -66,6 +70,7 @@
     "Settings saved" : "Paramètres sauvegardés",
     "Unexpected error occurred" : "Une erreur est survenue",
     "API URL is invalid" : "L'adresse de l'API n'est pas valable",
-    "API secret is invalid" : "Le secret de l'API n'est pas valable"
+    "API secret is invalid" : "Le secret de l'API n'est pas valable",
+    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Cette salle n'est pas encore ouverte. Nous ré-essayerons dans {sec} secondes. Veuillez patientez."
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
