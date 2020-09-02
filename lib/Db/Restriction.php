@@ -27,9 +27,9 @@ class Restriction extends Entity implements JsonSerializable {
 	protected $allowRecording = true;
 
 	public function __construct() {
-		$this->addType('max_rooms', 'integer');
-		$this->addType('max_participants', 'integer');
-		$this->addType('allow_recording', 'boolean');
+		$this->addType('maxRooms', 'integer');
+		$this->addType('maxParticipants', 'integer');
+		$this->addType('allowRecording', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
