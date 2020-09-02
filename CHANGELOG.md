@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.0.1 (2020-09-02)
+### Fixed
+- fix restrictions on postgres
+- [#68](https://github.com/sualko/cloud_bbb/issues/68) fix missing personal settings section on some instances
+
+### Misc
+- add RestrictionService test
+- use identical comparision
+
 ## 1.0.0 (2020-09-01)
 ### Added
 - add link to room page to log in into Nextcloud
