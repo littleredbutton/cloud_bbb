@@ -6,12 +6,6 @@ use OCA\BigBlueButton\AppInfo\Application;
 use OCP\App\IAppManager;
 
 class CircleHelper {
-	public const LEVEL_NONE = 0;
-	public const LEVEL_MEMBER = 1;
-	public const LEVEL_MODERATOR = 4;
-	public const LEVEL_ADMIN = 8;
-	public const LEVEL_OWNER = 9;
-
 	private $api;
 
 	/** @var Application */
@@ -41,7 +35,8 @@ class CircleHelper {
 			$api = $this->getCircleAPI();
 
 			if ($api !== false) {
-				$circles = $api->listCircles(\OCA\Circles\Api\v1\Circles::CIRCLES_ALL, '', \OCA\Circles\Api\v1\Circles::LEVEL_MEMBER);
+				// since v0.19.x \OCA\Circles\Api\v1\Circles can be used
+				$circles = $api->listCircles(\OCA\Circles\Model\Circle::CIRCLES_ALL, '', \OCA\Circles\Model\Member::LEVEL_MEMBER);
 
 				foreach ($circles as $circle) {
 					$this->cache[$userId][] = $circle->getUniqueId();
