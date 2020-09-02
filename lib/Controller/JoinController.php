@@ -87,14 +87,14 @@ class JoinController extends Controller {
 			$displayname = $user->getDisplayName();
 			$userId = $user->getUID();
 
-			if ($room->access == Room::ACCESS_INTERNAL_RESTRICTED && !$this->permission->isUser($room, $userId)) {
+			if ($room->access === Room::ACCESS_INTERNAL_RESTRICTED && !$this->permission->isUser($room, $userId)) {
 				throw new NoPermissionException();
 			}
 
 			if ($this->permission->isAdmin($room, $userId)) {
 				$presentation = new Presentation($u, $filename);
 			}
-		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access == Room::ACCESS_INTERNAL_RESTRICTED) {
+		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse($this->getLoginUrl());
 		} elseif (empty($displayname) || strlen($displayname) < 3 || ($room->access === Room::ACCESS_PASSWORD && $password !== $room->password)) {
 			$response = new TemplateResponse($this->appName, 'join', [
