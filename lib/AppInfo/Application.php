@@ -3,6 +3,7 @@
 namespace OCA\BigBlueButton\AppInfo;
 
 use \OCP\IConfig;
+use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\AppFramework\App;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 
@@ -30,8 +31,7 @@ class Application extends App {
 	private function registerAsPersonalSetting() {
 		$settingsManager = $this->getContainer()->getServer()->getSettingsManager();
 
-		$settingsManager->registerSection('personal', \OCA\BigBlueButton\Settings\Section::class);
-		$settingsManager->registerSetting('personal', \OCA\BigBlueButton\Settings\Personal::class);
+		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}
 
 	private function registerAsNavigationEntry() {
