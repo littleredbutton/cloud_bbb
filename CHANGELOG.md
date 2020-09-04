@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.0.2 (2020-09-04)
+### Fixed
+- [#70](https://github.com/sualko/cloud_bbb/issues/70) incompatibility with circle v0.18.x
+
+### Misc
+- update languages
+
 ## 1.0.1 (2020-09-02)
 ### Fixed
 - fix restrictions on postgres
