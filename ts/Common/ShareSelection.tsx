@@ -26,7 +26,7 @@ const ShareSelection: React.FC<Props> = (props) => {
 		groupIds: props.excluded?.groupIds || [],
 		circleIds: props.excluded?.circleIds || [],
 	};
-	const placeholder = props.placeholder || t('bbb', 'Name, group, ...');
+	const placeholder = props.placeholder || t('bbb', 'Name, group ...');
 
 	useEffect(() => {
 		setSearchResults(undefined);
