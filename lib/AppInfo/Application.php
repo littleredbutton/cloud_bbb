@@ -5,23 +5,33 @@ namespace OCA\BigBlueButton\AppInfo;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\AppFramework\App;
+use \OCP\EventDispatcher\IEventDispatcher;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCA\BigBlueButton\Event\RoomCreatedEvent;
+use \OCA\BigBlueButton\Activity\RoomListener;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
 }
 
 class Application extends App {
+	public const ID = 'bbb';
+
 	public function __construct(array $urlParams = []) {
-		parent::__construct('bbb', $urlParams);
+		parent::__construct(self::ID, $urlParams);
 
 		$container = $this->getContainer();
+
+		/* @var IEventDispatcher $eventDispatcher */
+		$dispatcher = $container->query(IEventDispatcher::class);
+		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
+		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
 
 		$container->registerMiddleWare(JoinMiddleware::class);
 
 		$config = $container->query(IConfig::class);
 
-		if ($config->getAppValue('bbb', 'app.navigation') === 'true') {
+		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
 			$this->registerAsNavigationEntry();
 		} else {
 			$this->registerAsPersonalSetting();
@@ -39,7 +49,7 @@ class Application extends App {
 
 		$server->getNavigationManager()->add(function () use ($server) {
 			return [
-				'id' => 'bbb',
+				'id' => self::ID,
 				'order' => 80,
 				'href' => $server->getURLGenerator()->linkToRoute('bbb.page.index'),
 				'icon' => $server->getURLGenerator()->imagePath('bbb', 'app.svg'),
