@@ -6,17 +6,26 @@ use Exception;
 
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\EventDispatcher\IEventDispatcher;
 
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomMapper;
+use OCA\BigBlueButton\Event\RoomCreatedEvent;
+use OCA\BigBlueButton\Event\RoomDeletedEvent;
 
 class RoomService {
 
 	/** @var RoomMapper */
 	private $mapper;
 
-	public function __construct(RoomMapper $mapper) {
+	/** @var IEventDispatcher */
+	private $eventDispatcher;
+
+	public function __construct(
+		RoomMapper $mapper,
+		IEventDispatcher $eventDispatcher) {
 		$this->mapper = $mapper;
+		$this->eventDispatcher = $eventDispatcher;
 	}
 
 	public function findAll(string $userId, array $groupIds, array $circleIds): array {
@@ -70,7 +79,11 @@ class RoomService {
 		$room->setAccess($access);
 		$room->setUserId($userId);
 
-		return $this->mapper->insert($room);
+		$createdRoom = $this->mapper->insert($room);
+
+		$this->eventDispatcher->dispatch(RoomCreatedEvent::class, new RoomCreatedEvent($createdRoom));
+
+		return $createdRoom;
 	}
 
 	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator) {
@@ -99,6 +112,9 @@ class RoomService {
 		try {
 			$room = $this->mapper->find($id);
 			$this->mapper->delete($room);
+
+			$this->eventDispatcher->dispatch(RoomDeletedEvent::class, new RoomDeletedEvent($room));
+
 			return $room;
 		} catch (Exception $e) {
 			$this->handleException($e);
