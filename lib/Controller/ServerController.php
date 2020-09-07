@@ -65,7 +65,7 @@ class ServerController extends Controller {
 	public function deleteRecord(string $recordId): DataResponse {
 		$record = $this->server->getRecording($recordId);
 
-		$room = $this->service->findByUid($record['metas']['meetingId']);
+		$room = $this->service->findByUid($record['meetingId']);
 
 		if ($room === null) {
 			return new DataResponse(false, Http::STATUS_NOT_FOUND);

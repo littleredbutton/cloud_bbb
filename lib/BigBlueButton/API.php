@@ -172,6 +172,7 @@ class API {
 	private function recordToArray(Record $record) {
 		return [
 			'id'           => $record->getRecordId(),
+			'meetingId'    => $record->getMeetingId(),
 			'name'         => $record->getName(),
 			'published'    => $record->isPublished(),
 			'state'        => $record->getState(),
