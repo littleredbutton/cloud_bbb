@@ -35,7 +35,7 @@ type Props = {
 }
 
 const App: React.FC<Props> = () => {
-	const [areRoomsLoaded, setRoomsLoaded] = useState(false);
+	const [isLoaded, setLoaded] = useState(false);
 	const [error, setError] = useState<string>('');
 	const [restriction, setRestriction] = useState<Restriction>();
 	const [rooms, setRooms] = useState<Room[]>([]);
@@ -45,22 +45,35 @@ const App: React.FC<Props> = () => {
 	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} />);
 
 	useEffect(() => {
-		api.getRestriction().then(restriction => {
+		Promise.all([
+			loadRestriction(),
+			loadRooms(),
+		]).catch(() => {
+			setError(t('bbb', 'Server error'));
+		}).then(() => {
+			setLoaded(true);
+		});
+	}, []);
+
+	function loadRestriction() {
+		return api.getRestriction().then(restriction => {
 			setRestriction(restriction);
 		}).catch(err => {
 			console.warn('Could not load restriction', err);
-		});
 
-		api.getRooms().then(rooms => {
+			throw err;
+		});
+	}
+
+	function loadRooms() {
+		return api.getRooms().then(rooms => {
 			setRooms(rooms);
 		}).catch((err) => {
 			console.warn('Could not load rooms', err);
 
-			setError(t('bbb', 'Server error'));
-		}).then(() => {
-			setRoomsLoaded(true);
+			throw err;
 		});
-	}, []);
+	}
 
 	function onOrderBy(key: SortKey) {
 		if (orderBy === key) {
@@ -143,7 +156,7 @@ const App: React.FC<Props> = () => {
 					<tr>
 						<td colSpan={3}>
 							{error && <><span className="icon icon-error icon-visible"></span> {error}</>}
-							{!areRoomsLoaded && <span className="icon icon-loading-small icon-visible"></span>}
+							{!isLoaded && <span className="icon icon-loading-small icon-visible"></span>}
 						</td>
 						<td>
 							{(maxRooms > rows.length || maxRooms < 0) ?
