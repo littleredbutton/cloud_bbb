@@ -4,7 +4,14 @@ $(() => {
 	let countdown = 30;
 
 	const interval = window.setInterval(() => {
-		$('#bbb-waiting-text').text(t('bbb', 'This room is not open yet. We will try it again in {sec} seconds. Please wait.', {sec: (--countdown).toString()}));
+		$('#bbb-waiting-text').text(
+			t(
+				'bbb',
+				'This room is not open yet. We will try it again in %n second. Please wait.',
+				'This room is not open yet. We will try it again in %n seconds. Please wait.' as any,
+				--countdown
+			)
+		);
 
 		if (countdown === 0) {
 			window.location.reload();
