@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { api, Recording, Room, Restriction } from '../Common/Api';
+import { api, Recording, Room, Restriction, Access } from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
@@ -33,8 +33,6 @@ const RecordingsNumber: React.FC<RecordingsNumberProps> = ({ recordings, showRec
 
 	return <span>0</span>;
 };
-
-
 
 const RoomRow: React.FC<Props> = (props) => {
 	const [recordings, setRecordings] = useState<Recording[] | null>(null);
@@ -155,6 +153,23 @@ const RoomRow: React.FC<Props> = (props) => {
 		);
 	}
 
+	function accessToIcon(access: string) {
+		switch(access) {
+		case Access.Public:
+			return <span className="icon icon-visible icon-link" />;
+		case Access.Password:
+			return <span className="icon icon-visible icon-password" />;
+		case Access.Internal:
+			return <span className="icon icon-visible icon-group" />;
+		case Access.InternalRestricted:
+			return <span className="icon icon-visible icon-user" />;
+		case Access.WaitingRoom:
+			return <span className="icon icon-visible icon-timezone" />;
+		}
+
+		return <span></span>;
+	}
+
 	function edit(field: string, type: 'text' | 'number' = 'text', options?) {
 		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />;
 	}
@@ -188,6 +203,9 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td className="bbb-shrink">
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
 					{(room.userId === OC.currentUser && room.shared) && <span className="icon icon-shared icon-visible"/>}
+				</td>
+				<td>
+					{accessToIcon(room.access)}
 				</td>
 				<td className="max-participants bbb-shrink">
 					{edit('maxParticipants', 'number', {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
