@@ -187,6 +187,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				<td className="bbb-shrink">
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
+					{(room.userId === OC.currentUser && room.shared) && <span className="icon icon-shared icon-visible"/>}
 				</td>
 				<td className="max-participants bbb-shrink">
 					{edit('maxParticipants', 'number', {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}

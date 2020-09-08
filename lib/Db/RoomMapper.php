@@ -19,9 +19,13 @@ class RoomMapper extends QBMapper {
 	public function find(int $id): Room {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName)
-			->where($qb->expr()->eq('id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT)));
+		$qb->select('r.*')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'bbb_room_shares', 's', $qb->expr()->eq('r.id', 's.room_id'))
+			->addSelect($qb->createFunction('count(case when "s"."permission" = 0 then 1 else null end) as shared'))
+			->where($qb->expr()->eq('r.id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT)))
+			->groupBy('r.id');
+		;
 
 		/** @var Room */
 		return $this->findEntity($qb);
@@ -34,9 +38,13 @@ class RoomMapper extends QBMapper {
 	public function findByUid(string $uid): Room {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName)
-			->where($qb->expr()->eq('uid', $qb->createNamedParameter($uid)));
+		$qb->select('r.*')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'bbb_room_shares', 's', $qb->expr()->eq('r.id', 's.room_id'))
+			->addSelect($qb->createFunction('count(case when "s"."permission" = 0 then 1 else null end) as shared'))
+			->where($qb->expr()->eq('r.uid', $qb->createNamedParameter($uid)))
+			->groupBy('r.id');
+		;
 
 		/** @var Room */
 		return $this->findEntity($qb);
@@ -51,6 +59,7 @@ class RoomMapper extends QBMapper {
 		$qb->select('r.*')
 			->from($this->tableName, 'r')
 			->leftJoin('r', 'bbb_room_shares', 's', $qb->expr()->eq('r.id', 's.room_id'))
+			->addSelect($qb->createFunction('count(case when "s"."permission" = 0 then 1 else null end) as shared'))
 			->where(
 				$qb->expr()->orX(
 					$qb->expr()->eq('r.user_id', $qb->createNamedParameter($userId)),

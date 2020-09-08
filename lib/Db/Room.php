@@ -54,12 +54,14 @@ class Room extends Entity implements JsonSerializable {
 	public $password;
 	public $everyoneIsModerator;
 	public $requireModerator = false;
+	public $shared = false;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
 		$this->addType('record', 'boolean');
 		$this->addType('everyoneIsModerator', 'boolean');
 		$this->addType('requireModerator', 'boolean');
+		$this->addType('shared', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
@@ -74,7 +76,8 @@ class Room extends Entity implements JsonSerializable {
 			'access'              => $this->access,
 			'password'            => $this->password,
 			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
-			'requireModerator' => boolval($this->requireModerator),
+			'requireModerator'    => boolval($this->requireModerator),
+			'shared'              => boolval($this->shared),
 		];
 	}
 }

@@ -44,6 +44,14 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 		});
 	}, [room.id, open]);
 
+	useEffect(() => {
+		if (!shares) {
+			return;
+		}
+
+		updateProperty('shared', shares.filter(share => share.permission === Permission.Admin).length > 0);
+	}, [shares]);
+
 	function inputElement(label: string, field: string, type: 'text' | 'number' = 'text') {
 		return (
 			<div className="bbb-form-element">
