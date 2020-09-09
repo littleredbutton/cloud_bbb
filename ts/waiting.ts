@@ -5,10 +5,10 @@ $(() => {
 
 	const interval = window.setInterval(() => {
 		$('#bbb-waiting-text').text(
-			t(
+			n(
 				'bbb',
 				'This room is not open yet. We will try it again in %n second. Please wait.',
-				'This room is not open yet. We will try it again in %n seconds. Please wait.' as any,
+				'This room is not open yet. We will try it again in %n seconds. Please wait.',
 				--countdown
 			)
 		);
