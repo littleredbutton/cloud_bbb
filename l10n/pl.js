@@ -23,11 +23,11 @@ OC.L10N.register(
     "Join" : "Dołącz",
     "Have an account? Log in." : "Posiadasz konto? Zaloguj się.",
     "Hello %s" : "Witaj %s",
-    "Name, group, ..." : "Nazwa, grupa...",
     "Group" : "Grupa",
     "Searching" : "Wyszukiwanie",
     "No matches" : "Nie pasuje",
     "Name" : "Nazwa",
+    "Access" : "Dostęp",
     "Max" : "Maks.",
     "Record" : "Nagrywać",
     "Recordings" : "Nagrania",
@@ -45,7 +45,6 @@ OC.L10N.register(
     "Edit \"{room}\"" : "Edytuj \"{room}\"",
     "Welcome" : "Witaj",
     "Participant limit" : "Limit uczestnika",
-    "Access" : "Dostęp",
     "Every participant is moderator" : "Każdy uczestnik jest moderatorem",
     "Miscellaneous" : "Różne",
     "Recording" : "Nagranie",
@@ -81,7 +80,6 @@ OC.L10N.register(
     "Settings saved" : "Zapisano ustawienia",
     "Unexpected error occurred" : "Wystąpił nieoczekiwany błąd",
     "API URL is invalid" : "Adres URL interfejsu API jest nieprawidłowy",
-    "API secret is invalid" : "Tajny interfejs API jest nieprawidłowy",
-    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Ten pokój nie jest jeszcze otwarty. Spróbujemy ponownie za {sec} sekund. Proszę czekać."
+    "API secret is invalid" : "Tajny interfejs API jest nieprawidłowy"
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

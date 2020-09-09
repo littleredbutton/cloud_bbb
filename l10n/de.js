@@ -23,11 +23,11 @@ OC.L10N.register(
     "Join" : "Beitreten",
     "Have an account? Log in." : "Hast Du ein Konto? Melde Dich an.",
     "Hello %s" : "Hallo %s",
-    "Name, group, ..." : "Name, Gruppe, …",
     "Group" : "Gruppe",
     "Searching" : "Suche",
     "No matches" : "Keine Übereinstimmungen",
     "Name" : "Name",
+    "Access" : "Zugriff",
     "Max" : "Max",
     "Record" : "Aufnahme",
     "Recordings" : "Aufnahmen",
@@ -45,7 +45,6 @@ OC.L10N.register(
     "Edit \"{room}\"" : "\"{room}\" bearbeiten",
     "Welcome" : "Willkommen",
     "Participant limit" : "Teilnehmerbegrenzung",
-    "Access" : "Zugriff",
     "Every participant is moderator" : "Alle Teilnehmer haben Moderatorenrechte",
     "Miscellaneous" : "Verschiedenes",
     "Recording" : "Aufnahme",
@@ -81,7 +80,6 @@ OC.L10N.register(
     "Settings saved" : "Einstellungen gespeichert",
     "Unexpected error occurred" : "Es ist ein unerwarteter Fehler aufgetreten",
     "API URL is invalid" : "API-URL ist ungültig",
-    "API secret is invalid" : "API-Geheimnis ist ungültig",
-    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Dieser Raum ist noch nicht geöffnet. Wir werden es in {sec} Sekunden noch einmal versuchen. Bitte warten."
+    "API secret is invalid" : "API-Geheimnis ist ungültig"
 },
 "nplurals=2; plural=(n != 1);");

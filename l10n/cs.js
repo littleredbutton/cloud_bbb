@@ -23,11 +23,11 @@ OC.L10N.register(
     "Join" : "Připojit se",
     "Have an account? Log in." : "Máte uživatelský účet? Přihlaste se.",
     "Hello %s" : "Zdravím %s",
-    "Name, group, ..." : "Jméno, skupina, …",
     "Group" : "Group",
     "Searching" : "Hledá se",
     "No matches" : "Žádné výsledky",
     "Name" : "Název",
+    "Access" : "Přístup",
     "Max" : "Nejvýše",
     "Record" : "Záznam",
     "Recordings" : "Nahrávky",
@@ -45,7 +45,6 @@ OC.L10N.register(
     "Edit \"{room}\"" : "Upravit „{room}“",
     "Welcome" : "Vítejte",
     "Participant limit" : "Limit počtu účastníků",
-    "Access" : "Přístup",
     "Every participant is moderator" : "Každý z účastníků má práva moderátora",
     "Miscellaneous" : "Různé",
     "Recording" : "Zaznamenávání",
@@ -81,7 +80,6 @@ OC.L10N.register(
     "Settings saved" : "Nastavení uložena",
     "Unexpected error occurred" : "Došlo k neočekávané chybě",
     "API URL is invalid" : "URL adresa aplikačního program. rozhraní (API) není platná",
-    "API secret is invalid" : "Tajemství k API není platné",
-    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za {sec} sekund. Čekejte prosím."
+    "API secret is invalid" : "Tajemství k API není platné"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

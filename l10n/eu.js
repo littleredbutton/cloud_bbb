@@ -19,11 +19,11 @@ OC.L10N.register(
     "Password" : "Pasahitza",
     "Join" : "Batu",
     "Hello %s" : "Kaixo %s",
-    "Name, group, ..." : "Izena, taldea...",
     "Group" : "Taldea",
     "Searching" : "BIlatzen",
     "No matches" : "Ez dago bat datorrenik",
     "Name" : "Izena",
+    "Access" : "Sarbidea",
     "Max" : "Maximoa",
     "Record" : "Grabatu",
     "Recordings" : "Grabaketak",
@@ -41,7 +41,6 @@ OC.L10N.register(
     "Edit \"{room}\"" : "Editatu \"{room}\"",
     "Welcome" : "Ongi etorri",
     "Participant limit" : "Partaideen muga",
-    "Access" : "Sarbidea",
     "Every participant is moderator" : "Partaide guztiak dira moderatzaile",
     "Miscellaneous" : "Askotarikoa",
     "Recording" : "Grabatzea",
@@ -77,7 +76,6 @@ OC.L10N.register(
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",
     "API URL is invalid" : "API URLa baliogabea da",
-    "API secret is invalid" : "API sekretua baliogabea da",
-    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Gela hau ez dago irekita oraindik. Berriro saiatuko gara {sec} segundotan. Itxaron mesedez."
+    "API secret is invalid" : "API sekretua baliogabea da"
 },
 "nplurals=2; plural=(n != 1);");

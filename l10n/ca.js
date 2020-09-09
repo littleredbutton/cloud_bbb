@@ -23,11 +23,11 @@ OC.L10N.register(
     "Join" : "Uneix",
     "Have an account? Log in." : "Tens un compte? Inicia sessió aquí.",
     "Hello %s" : "Hola, %s",
-    "Name, group, ..." : "Nom, grup, ...",
     "Group" : "Grup",
     "Searching" : "Cerca",
     "No matches" : "Cap coincidència",
     "Name" : "Nom",
+    "Access" : "Accés",
     "Max" : "Màx",
     "Record" : "Enregistrament",
     "Recordings" : "Enregistraments",
@@ -45,7 +45,6 @@ OC.L10N.register(
     "Edit \"{room}\"" : "Edita \"{room}\"",
     "Welcome" : "Benvingut",
     "Participant limit" : "Límit de participants",
-    "Access" : "Accés",
     "Every participant is moderator" : "Cada participant és moderador",
     "Miscellaneous" : "Miscel·lània",
     "Recording" : "Enregistrament",
@@ -81,7 +80,6 @@ OC.L10N.register(
     "Settings saved" : "S'han desat els paràmetres",
     "Unexpected error occurred" : "S'ha produït un error inesperat",
     "API URL is invalid" : "URL de l'API no és vàlid",
-    "API secret is invalid" : "El secret de l'API no és vàlid",
-    "This room is not open yet. We will try it again in {sec} seconds. Please wait." : "Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segons. Si us plau esperi."
+    "API secret is invalid" : "El secret de l'API no és vàlid"
 },
 "nplurals=2; plural=(n != 1);");
