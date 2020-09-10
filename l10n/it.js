@@ -23,6 +23,7 @@ OC.L10N.register(
     "Join" : "Partecipa",
     "Have an account? Log in." : "Hai un account? Accedi.",
     "Hello %s" : "Ciao %s",
+    "Name, group ..." : "Nome, gruppo...",
     "Group" : "Gruppo",
     "Searching" : "Ricerca in corso",
     "No matches" : "Nessuna corrispondenza",
