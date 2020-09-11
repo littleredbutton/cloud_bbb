@@ -79,6 +79,7 @@
     "Settings saved" : "Nastavení uložena",
     "Unexpected error occurred" : "Došlo k neočekávané chybě",
     "API URL is invalid" : "URL adresa aplikačního program. rozhraní (API) není platná",
-    "API secret is invalid" : "Tajemství k API není platné"
+    "API secret is invalid" : "Tajemství k API není platné",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundu. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekund. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím."]
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;"
 }

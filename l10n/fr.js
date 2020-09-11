@@ -81,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "Paramètres sauvegardés",
     "Unexpected error occurred" : "Une erreur est survenue",
     "API URL is invalid" : "L'adresse de l'API n'est pas valable",
-    "API secret is invalid" : "Le secret de l'API n'est pas valable"
+    "API secret is invalid" : "Le secret de l'API n'est pas valable",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n seconde. Veuillez patienter.","Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n secondes. Veuillez patienter."]
 },
 "nplurals=2; plural=(n > 1);");

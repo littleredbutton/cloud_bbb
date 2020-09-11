@@ -81,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "Axustes gardados",
     "Unexpected error occurred" : "Produciuse un erro non agardado",
     "API URL is invalid" : "O URL da API é incorrecto",
-    "API secret is invalid" : "O segredo da API é incorrecto"
+    "API secret is invalid" : "O segredo da API é incorrecto",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala aínda non está aberta. Tentarémolo de novo en %n segundo. Agarde.","Esta sala aínda non está aberta. Tentarémolo de novo en %n segundos. Agarde."]
 },
 "nplurals=2; plural=(n != 1);");

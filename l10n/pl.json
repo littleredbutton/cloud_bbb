@@ -79,6 +79,7 @@
     "Settings saved" : "Zapisano ustawienia",
     "Unexpected error occurred" : "Wystąpił nieoczekiwany błąd",
     "API URL is invalid" : "Adres URL interfejsu API jest nieprawidłowy",
-    "API secret is invalid" : "Tajny interfejs API jest nieprawidłowy"
+    "API secret is invalid" : "Tajny interfejs API jest nieprawidłowy",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ten pokój nie jest jeszcze otwarty. Spróbujemy ponownie za %n sekundę. Proszę czekać.","Ten pokój nie jest jeszcze otwarty. Spróbujemy ponownie za %n sekundy. Proszę czekać.","Ten pokój nie jest jeszcze otwarty. Spróbujemy ponownie za %n sekund. Proszę czekać.","Ten pokój nie jest jeszcze otwarty. Spróbujemy ponownie za %n sekund. Proszę czekać."]
 },"pluralForm" :"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);"
 }

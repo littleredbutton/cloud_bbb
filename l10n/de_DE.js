@@ -81,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "Einstellungen gespeichert",
     "Unexpected error occurred" : "Es ist ein unerwarteter Fehler aufgetreten",
     "API URL is invalid" : "API-URL ist ungültig",
-    "API secret is invalid" : "API-Geheimnis ist ungültig"
+    "API secret is invalid" : "API-Geheimnis ist ungültig",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Dieser Raum ist noch geschlossen. Neuer Versuch in %n Sekunde. Bitte warten.","Dieser Raum ist noch geschlossen. Neuer Versuch in %n Sekunden. Bitte warten."]
 },
 "nplurals=2; plural=(n != 1);");

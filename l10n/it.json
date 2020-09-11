@@ -79,6 +79,7 @@
     "Settings saved" : "Impostazioni salvate",
     "Unexpected error occurred" : "Si è verificato un errore inatteso",
     "API URL is invalid" : "URL API non valido",
-    "API secret is invalid" : "Il segreto API non è valido"
+    "API secret is invalid" : "Il segreto API non è valido",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Questa stanza non è ancora aperta. Riproveremo tra %n secondo. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
