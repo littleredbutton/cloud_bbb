@@ -81,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "Configurações salvas",
     "Unexpected error occurred" : "Ocorreu um erro inesperado",
     "API URL is invalid" : "URL da API inválida",
-    "API secret is invalid" : "A senha da API é inválida"
+    "API secret is invalid" : "A senha da API é inválida",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala ainda não está aberta. Tentaremos novamente em %n segundo. Aguarde.","Esta sala ainda não está aberta. Tentaremos novamente em %n segundos. Aguarde."]
 },
 "nplurals=2; plural=(n > 1);");
