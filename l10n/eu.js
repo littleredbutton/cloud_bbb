@@ -4,6 +4,8 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "API URLa edo URL sekretua konfiguratu gabe. Jarri harremanetan zure administratzailearekin.",
     "BigBlueButton Integration" : "BigBlueButton integrazioa",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrazioa Nextclouderako",
+    "Room not found" : "Ez da gela aurkitu",
+    "The room could not be found. Maybe it was deleted?" : "Ezin izan da gela aurkitu. Agian, ezabatua izan da?",
     "Back to %s" : "%s(e)ra bueltatu",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Lortu API URLa edo URL sekretua zure BigBlueButton zerbitzarian \"sudo bbb-conf --secret\" exekutatuz.",
     "API URL" : "API URLa",
@@ -18,7 +20,9 @@ OC.L10N.register(
     "Display name" : "Erakutsi izena",
     "Password" : "Pasahitza",
     "Join" : "Batu",
+    "Have an account? Log in." : "Baduzu konturik? Erregistratu",
     "Hello %s" : "Kaixo %s",
+    "Name, group ..." : "Izena, taldea ...",
     "Group" : "Taldea",
     "Searching" : "BIlatzen",
     "No matches" : "Ez dago bat datorrenik",
@@ -76,6 +80,7 @@ OC.L10N.register(
     "Settings saved" : "Ezarpenak gordeta",
     "Unexpected error occurred" : "Ustekabeko errore bat gertatu da",
     "API URL is invalid" : "API URLa baliogabea da",
-    "API secret is invalid" : "API sekretua baliogabea da"
+    "API secret is invalid" : "API sekretua baliogabea da",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Gela hau ez dago irekita oraindik. Berriro saiatuko gara {sec} segundotan. Itxaron mesedez.","Gela hau ez dago irekita oraindik. Berriro saiatuko gara segundotan %n seconds. Please wait."]
 },
 "nplurals=2; plural=(n != 1);");
