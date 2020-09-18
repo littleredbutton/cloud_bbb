@@ -23,6 +23,7 @@ OC.L10N.register(
     "Join" : "Katıl",
     "Have an account? Log in." : "Zaten bir hesabınız var mı? Oturum açın.",
     "Hello %s" : "Merhaba %s",
+    "Name, group ..." : "Ad, grup ...",
     "Group" : "Grup",
     "Searching" : "Aranıyor",
     "No matches" : "Eşleşme yok",
@@ -80,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "Ayarlar kaydedildi",
     "Unexpected error occurred" : "Beklenmeyen bir sorun çıktı",
     "API URL is invalid" : "API adresi geçersiz",
-    "API secret is invalid" : "API parolası geçersiz"
+    "API secret is invalid" : "API parolası geçersiz",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Bu oda henüz açılmamış. %n saniye sonra yeniden deneyeceğiz. Lütfen bekleyin.","Bu oda henüz açılmamış. %n saniye sonra yeniden deneyeceğiz. Lütfen bekleyin."]
 },
 "nplurals=2; plural=(n > 1);");

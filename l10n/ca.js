@@ -23,6 +23,7 @@ OC.L10N.register(
     "Join" : "Uneix",
     "Have an account? Log in." : "Tens un compte? Inicia sessió aquí.",
     "Hello %s" : "Hola, %s",
+    "Name, group ..." : "Nom, grup, ...",
     "Group" : "Grup",
     "Searching" : "Cerca",
     "No matches" : "Cap coincidència",
@@ -80,6 +81,7 @@ OC.L10N.register(
     "Settings saved" : "S'han desat els paràmetres",
     "Unexpected error occurred" : "S'ha produït un error inesperat",
     "API URL is invalid" : "URL de l'API no és vàlid",
-    "API secret is invalid" : "El secret de l'API no és vàlid"
+    "API secret is invalid" : "El secret de l'API no és vàlid",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segon. Si us plau esperi.","Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segons. Si us plau esperi."]
 },
 "nplurals=2; plural=(n != 1);");
