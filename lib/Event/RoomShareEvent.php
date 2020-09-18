@@ -11,7 +11,7 @@ abstract class RoomShareEvent extends Event {
 	private $roomShare;
 
 	public function __construct(RoomShare $roomShare) {
-		$this->roomId = $roomShare;
+		$this->roomShare = $roomShare;
 	}
 
 	public function getRoomShare(): RoomShare {

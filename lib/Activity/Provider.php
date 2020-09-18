@@ -3,11 +3,13 @@
 namespace OCA\BigBlueButton\Activity;
 
 use OCA\BigBlueButton\AppInfo\Application;
+use OCA\BigBlueButton\Db\RoomShare;
 use OCP\Activity\IProvider;
 use OCP\Activity\IEvent;
 use OCP\Activity\IManager;
 use OCP\IL10N;
 use OCP\IUserManager;
+use OCP\IGroupManager;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
 use OCP\IUser;
@@ -20,6 +22,12 @@ class Provider implements IProvider {
 	/** @var string */
 	public const ROOM_DELETED = 'room_deleted';
 
+	/** @var string */
+	public const SHARE_CREATED = 'share_created';
+
+	/** @var string */
+	public const SHARE_DELETED = 'share_deleted';
+
 	/** @var IL10N */
 	protected $l;
 
@@ -28,6 +36,9 @@ class Provider implements IProvider {
 
 	/** @var IUserManager */
 	protected $userManager;
+
+	/** @var IGroupManager */
+	protected $groupManager;
 
 	/** @var IURLGenerator */
 	protected $url;
@@ -38,11 +49,13 @@ class Provider implements IProvider {
 	public function __construct(
 		IManager $manager,
 		IUserManager $userManager,
+		IGroupManager $groupManager,
 		IURLGenerator $url,
 		IFactory $languageFactory
 	) {
 		$this->activityManager = $manager;
 		$this->userManager = $userManager;
+		$this->groupManager = $groupManager;
 		$this->url = $url;
 		$this->languageFactory = $languageFactory;
 	}
@@ -60,8 +73,10 @@ class Provider implements IProvider {
 			$this->parseRoomCreated($event);
 		} elseif ($subject === self::ROOM_DELETED) {
 			$this->parseRoomDeleted($event);
-		} else {
-			$event->setParsedSubject('Unknown subject: ' . $subject);
+		} elseif ($subject === self::SHARE_CREATED) {
+			$this->parseShareCreated($event);
+		} elseif ($subject === self::SHARE_DELETED) {
+			$this->parseShareDeleted($event);
 		}
 
 		return $event;
@@ -89,6 +104,40 @@ class Provider implements IProvider {
 		}
 
 		$this->setIcon($event, 'room-deleted');
+	}
+
+	private function parseShareCreated(IEvent $event) {
+		$params = $event->getSubjectParameters();
+
+		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
+			$subject = $this->l->t('You shared the room %s with {shareWith}.', [$params['name']]);
+		} else {
+			$subject = $this->l->t('{user} shared the room %s with you.', [$params['name']]);
+		}
+
+		$this->setSubjects($event, $subject, [
+			'user' => $this->getUser($event->getAuthor()),
+			'shareWith' => $params['shareType'] === RoomShare::SHARE_TYPE_USER ? $this->getUser($params['shareWith']) : $this->getGroup($params['shareWith']),
+		]);
+
+		$this->setIcon($event, 'share-created');
+	}
+
+	private function parseShareDeleted(IEvent $event) {
+		$params = $event->getSubjectParameters();
+
+		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
+			$subject = $this->l->t('You unshared the room %s with {shareWith}.', [$params['name']]);
+		} else {
+			$subject = $this->l->t('{user} unshared the room %s with you.', [$params['name']]);
+		}
+
+		$this->setSubjects($event, $subject, [
+			'user' => $this->getUser($event->getAuthor()),
+			'shareWith' => $params['shareType'] === RoomShare::SHARE_TYPE_USER ? $this->getUser($params['shareWith']) : $this->getGroup($params['shareWith']),
+		]);
+
+		$this->setIcon($event, 'share-deleted');
 	}
 
 	private function setIcon(IEvent $event, string $baseName) {
@@ -130,6 +179,24 @@ class Provider implements IProvider {
 
 		return [
 			'type' => 'user',
+			'id' => $uid,
+			'name' => $uid,
+		];
+	}
+
+	protected function getGroup($uid) {
+		$group = $this->groupManager->get($uid);
+
+		if ($group !== null) {
+			return [
+				'type' => 'user-group',
+				'id' => $group->getGID(),
+				'name' => $group->getDisplayName(),
+			];
+		}
+
+		return [
+			'type' => 'user-group',
 			'id' => $uid,
 			'name' => $uid,
 		];
