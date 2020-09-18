@@ -111,6 +111,7 @@ class RoomService {
 	public function delete($id) {
 		try {
 			$room = $this->mapper->find($id);
+
 			$this->mapper->delete($room);
 
 			$this->eventDispatcher->dispatch(RoomDeletedEvent::class, new RoomDeletedEvent($room));

@@ -8,6 +8,7 @@ use \OCP\AppFramework\App;
 use \OCP\EventDispatcher\IEventDispatcher;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 use \OCA\BigBlueButton\Event\RoomCreatedEvent;
+use \OCA\BigBlueButton\Event\RoomDeletedEvent;
 use \OCA\BigBlueButton\Activity\RoomListener;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
