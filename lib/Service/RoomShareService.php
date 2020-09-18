@@ -6,17 +6,26 @@ use Exception;
 
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\EventDispatcher\IEventDispatcher;
 
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Db\RoomShareMapper;
+use OCA\BigBlueButton\Event\RoomShareCreatedEvent;
+use OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 
 class RoomShareService {
 
 	/** @var RoomShareMapper */
 	private $mapper;
 
-	public function __construct(RoomShareMapper $mapper) {
+	/** @var IEventDispatcher */
+	private $eventDispatcher;
+
+	public function __construct(
+		RoomShareMapper $mapper,
+		IEventDispatcher $eventDispatcher) {
 		$this->mapper = $mapper;
+		$this->eventDispatcher = $eventDispatcher;
 	}
 
 	public function findAll(int $roomId): array {
@@ -53,7 +62,11 @@ class RoomShareService {
 			$roomShare->setShareWith($shareWith);
 			$roomShare->setPermission($permission);
 
-			return $this->mapper->insert($roomShare);
+			$createdRoomShare = $this->mapper->insert($roomShare);
+
+			$this->eventDispatcher->dispatch(RoomShareCreatedEvent::class, new RoomShareCreatedEvent($createdRoomShare));
+
+			return $createdRoomShare;
 		}
 	}
 
@@ -76,6 +89,8 @@ class RoomShareService {
 		try {
 			$roomShare = $this->mapper->find($id);
 			$this->mapper->delete($roomShare);
+
+			$this->eventDispatcher->dispatch(RoomShareDeletedEvent::class, new RoomShareDeletedEvent($roomShare));
 
 			return $roomShare;
 		} catch (Exception $e) {
