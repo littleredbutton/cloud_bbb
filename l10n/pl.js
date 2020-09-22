@@ -37,7 +37,7 @@ OC.L10N.register(
     "Room quota:" : "Limit pokoi:",
     "Edit" : "Edytuj",
     "Descriptive name of this room." : "Opis nazwy tego pokoju.",
-    "This message is shown to all users in the chat area after they joined." : "Ta wiadomość jest wyświetlana wszystkim użytkownikom w obszarze czatu po dołączeniu.",
+    "This message is shown to all users in the chat area after they joined." : "Ta wiadomość jest wyświetlana wszystkim użytkownikom w obszarze rozmowy po dołączeniu.",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "Ustawia limit liczby uczestników w tym pokoju. Zero oznacza o braku limitu.",
     "If enabled, the moderator is able to start the recording." : "Jeśli ta opcja jest włączona, moderator może rozpocząć nagrywanie.",
     "Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join." : "Publiczny: każdy, kto zna link, może dołączyć. Hasło: Goście muszą podać hasło. Poczekalnia: moderator musi zaakceptować każdego gościa, aby mógł dołączyć. Wewnętrzny: tylko użytkownicy Nextcloud mogą dołączyć.",

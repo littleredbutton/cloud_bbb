@@ -55,7 +55,7 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
     "Delete" : "Eliminar",
     "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Confirma que quere eliminar «{name}»? Non é posíbel desfacer esta operación.",
-    "Delete \"{name}\"?" : "EWliminar «{name}»?",
+    "Delete \"{name}\"?" : "Eliminar «{name}»?",
     "Select target folder" : "Seleccionar o cartafol de destino",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "O URL da sala almacenouse en «{path}» como «{filename}\"».",
     "Link stored" : "Ligazón gardada",
