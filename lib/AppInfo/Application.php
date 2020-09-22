@@ -5,23 +5,50 @@ namespace OCA\BigBlueButton\AppInfo;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\AppFramework\App;
+use \OCP\EventDispatcher\IEventDispatcher;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCA\BigBlueButton\Middleware\HookMiddleware;
+use \OCA\BigBlueButton\Event\RoomCreatedEvent;
+use \OCA\BigBlueButton\Event\RoomDeletedEvent;
+use \OCA\BigBlueButton\Activity\RoomListener;
+use \OCA\BigBlueButton\Event\RoomShareCreatedEvent;
+use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
+use \OCA\BigBlueButton\Activity\RoomShareListener;
+use \OCA\BigBlueButton\Event\MeetingStartedEvent;
+use \OCA\BigBlueButton\Event\MeetingEndedEvent;
+use \OCA\BigBlueButton\Event\RecordingReadyEvent;
+use \OCA\BigBlueButton\Activity\MeetingListener;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
 }
 
 class Application extends App {
+	public const ID = 'bbb';
+
 	public function __construct(array $urlParams = []) {
-		parent::__construct('bbb', $urlParams);
+		parent::__construct(self::ID, $urlParams);
 
 		$container = $this->getContainer();
 
+		/* @var IEventDispatcher $eventDispatcher */
+		$dispatcher = $container->query(IEventDispatcher::class);
+		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
+		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
+
+		$dispatcher->addServiceListener(RoomShareCreatedEvent::class, RoomShareListener::class);
+		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
+
+		$dispatcher->addServiceListener(MeetingStartedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(MeetingEndedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(RecordingReadyEvent::class, MeetingListener::class);
+
 		$container->registerMiddleWare(JoinMiddleware::class);
+		$container->registerMiddleWare(HookMiddleware::class);
 
 		$config = $container->query(IConfig::class);
 
-		if ($config->getAppValue('bbb', 'app.navigation') === 'true') {
+		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
 			$this->registerAsNavigationEntry();
 		} else {
 			$this->registerAsPersonalSetting();
@@ -39,7 +66,7 @@ class Application extends App {
 
 		$server->getNavigationManager()->add(function () use ($server) {
 			return [
-				'id' => 'bbb',
+				'id' => self::ID,
 				'order' => 80,
 				'href' => $server->getURLGenerator()->linkToRoute('bbb.page.index'),
 				'icon' => $server->getURLGenerator()->imagePath('bbb', 'app.svg'),
