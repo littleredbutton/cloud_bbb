@@ -16,6 +16,7 @@ use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Crypto;
 use OCP\IConfig;
 use OCP\IURLGenerator;
+use OCP\IL10N;
 
 class API {
 	/** @var IConfig */
@@ -36,18 +37,23 @@ class API {
 	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
+	/** @var IL10N */
+	private $l10n;
+
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
 		Permission $permission,
 		Crypto $crypto,
-		IEventDispatcher $eventDispatcher
+		IEventDispatcher $eventDispatcher,
+		IL10N $l10n
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
 		$this->permission = $permission;
 		$this->crypto = $crypto;
 		$this->eventDispatcher = $eventDispatcher;
+		$this->l10n = $l10n;
 	}
 
 	private function getServer() {
@@ -127,7 +133,7 @@ class API {
 		$createMeetingParams->setRecordingReadyCallbackUrl($recordingReadyUrl);
 
 		$invitationUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $room->uid]);
-		$createMeetingParams->setModeratorOnlyMessage('To invite someone to the meeting, send them this link: ' . $invitationUrl);
+		$createMeetingParams->setModeratorOnlyMessage($this->l10n->t('To invite someone to the meeting, send them this link: %s', [$invitationUrl]));
 
 		if (!empty($room->welcome)) {
 			$createMeetingParams->setWelcomeMessage($room->welcome);
