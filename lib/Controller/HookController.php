@@ -6,7 +6,7 @@ use OCA\BigBlueButton\Db\Room;
 use OCP\IRequest;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCA\BigBlueButton\Service\RoomService;
-use OCA\BigBlueButton\Event\RoomEndedEvent;
+use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
 use OCP\AppFramework\Controller;
 
@@ -53,7 +53,7 @@ class HookController extends Controller {
 	public function meetingEnded($recordingmarks = false) {
 		$recordingmarks = \boolval($recordingmarks);
 
-		$this->eventDispatcher->dispatch(RoomEndedEvent::class, new RoomEndedEvent($this->getRoom(), $recordingmarks));
+		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($this->getRoom(), $recordingmarks));
 	}
 
 	/**
