@@ -14,5 +14,7 @@ return [
 		['name' => 'server#delete_record', 'url' => '/server/record/{recordId}', 'verb' => 'DELETE'],
 		['name' => 'join#index', 'url' => '/b/{token}', 'verb' => 'GET'],
 		['name' => 'restriction#user', 'url' => '/restrictions/user', 'verb' => 'GET'],
+		['name' => 'hook#meetingEnded', 'url' => '/hook/ended/{token}/{mac}', 'verb' => 'GET'],
+		['name' => 'hook#recordingReady', 'url' => '/hook/recording/{token}/{mac}', 'verb' => 'GET'],
 	]
 ];

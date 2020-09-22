@@ -11,6 +11,7 @@ use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Crypto;
 use OCP\IConfig;
 use OCP\IURLGenerator;
 
@@ -27,14 +28,19 @@ class API {
 	/** @var BigBlueButton|null */
 	private $server;
 
+	/** @var Crypto */
+	private $crypto;
+
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
-		Permission $permission
+		Permission $permission,
+		Crypto $crypto
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
 		$this->permission = $permission;
+		$this->crypto = $crypto;
 	}
 
 	private function getServer() {
@@ -100,6 +106,14 @@ class API {
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
 		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
+
+		$mac = $this->crypto->calculateHMAC($room->uid);
+
+		$endMeetingUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.hook.meetingEnded', ['token' => $room->uid, 'mac' => $mac]);
+		$createMeetingParams->setEndCallbackUrl($endMeetingUrl);
+
+		$recordingReadyUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.hook.recordingReady', ['token' => $room->uid, 'mac' => $mac]);
+		$createMeetingParams->setRecordingReadyCallbackUrl($recordingReadyUrl);
 
 		$invitationUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $room->uid]);
 		$createMeetingParams->setModeratorOnlyMessage('To invite someone to the meeting, send them this link: ' . $invitationUrl);

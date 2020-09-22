@@ -7,6 +7,7 @@ use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\AppFramework\App;
 use \OCP\EventDispatcher\IEventDispatcher;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Event\RoomCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomDeletedEvent;
 use \OCA\BigBlueButton\Activity\RoomListener;
@@ -35,6 +36,7 @@ class Application extends App {
 		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
 
 		$container->registerMiddleWare(JoinMiddleware::class);
+		$container->registerMiddleWare(HookMiddleware::class);
 
 		$config = $container->query(IConfig::class);
 
