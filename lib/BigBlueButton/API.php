@@ -9,6 +9,8 @@ use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Core\Record;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
+use OCP\EventDispatcher\IEventDispatcher;
+use OCA\BigBlueButton\Event\MeetingStartedEvent;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Crypto;
@@ -31,16 +33,21 @@ class API {
 	/** @var Crypto */
 	private $crypto;
 
+	/** @var IEventDispatcher */
+	private $eventDispatcher;
+
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
 		Permission $permission,
-		Crypto $crypto
+		Crypto $crypto,
+		IEventDispatcher $eventDispatcher
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
 		$this->permission = $permission;
 		$this->crypto = $crypto;
+		$this->eventDispatcher = $eventDispatcher;
 	}
 
 	private function getServer() {
@@ -94,6 +101,10 @@ class API {
 
 		if (!$response->success()) {
 			throw new \Exception('Can not create meeting');
+		}
+
+		if ($response->getMessageKey() !== 'duplicateWarning') {
+			$this->eventDispatcher->dispatch(MeetingStartedEvent::class, new MeetingStartedEvent($room));
 		}
 
 		return $response->getCreationTime();
