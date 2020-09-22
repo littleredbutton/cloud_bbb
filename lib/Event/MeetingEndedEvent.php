@@ -4,7 +4,7 @@ namespace OCA\BigBlueButton\Event;
 
 use OCA\BigBlueButton\Db\Room;
 
-abstract class MeetingEndedEvent extends RoomEvent {
+class MeetingEndedEvent extends RoomEvent {
 	private $recordingMarks = false;
 
 	public function __construct(Room $room, bool $recordingMarks) {

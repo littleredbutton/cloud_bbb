@@ -14,6 +14,10 @@ use \OCA\BigBlueButton\Activity\RoomListener;
 use \OCA\BigBlueButton\Event\RoomShareCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use \OCA\BigBlueButton\Activity\RoomShareListener;
+use \OCA\BigBlueButton\Event\MeetingStartedEvent;
+use \OCA\BigBlueButton\Event\MeetingEndedEvent;
+use \OCA\BigBlueButton\Event\RecordingReadyEvent;
+use \OCA\BigBlueButton\Activity\MeetingListener;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
@@ -34,6 +38,10 @@ class Application extends App {
 
 		$dispatcher->addServiceListener(RoomShareCreatedEvent::class, RoomShareListener::class);
 		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
+
+		$dispatcher->addServiceListener(MeetingStartedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(MeetingEndedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(RecordingReadyEvent::class, MeetingListener::class);
 
 		$container->registerMiddleWare(JoinMiddleware::class);
 		$container->registerMiddleWare(HookMiddleware::class);

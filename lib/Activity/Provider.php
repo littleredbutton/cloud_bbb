@@ -28,6 +28,15 @@ class Provider implements IProvider {
 	/** @var string */
 	public const SHARE_DELETED = 'share_deleted';
 
+	/** @var string */
+	public const MEETING_STARTED = 'meeting_started';
+
+	/** @var string */
+	public const MEETING_ENDED = 'meeting_ended';
+
+	/** @var string */
+	public const RECORDING_READY = 'recording_ready';
+
 	/** @var IL10N */
 	protected $l;
 
@@ -77,6 +86,12 @@ class Provider implements IProvider {
 			$this->parseShareCreated($event);
 		} elseif ($subject === self::SHARE_DELETED) {
 			$this->parseShareDeleted($event);
+		} elseif ($subject === self::MEETING_STARTED) {
+			$this->parseMeetingStarted($event);
+		} elseif ($subject === self::MEETING_ENDED) {
+			$this->parseMeetingEnded($event);
+		} elseif ($subject === self::RECORDING_READY) {
+			$this->parseRecordingReady($event);
 		}
 
 		return $event;
@@ -138,6 +153,38 @@ class Provider implements IProvider {
 		]);
 
 		$this->setIcon($event, 'share-deleted');
+	}
+
+	private function parseMeetingStarted(IEvent $event) {
+		$params = $event->getSubjectParameters();
+
+		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
+			$subject = $this->l->t('You started a meeting in the "%s" room.', [$params['name']]);
+		} else {
+			$subject = $this->l->t('{user} started a meeting in the "%s" room.', [$params['name']]);
+		}
+
+		$this->setSubjects($event, $subject, [
+			'user' => $this->getUser($event->getAuthor()),
+		]);
+
+		$this->setIcon($event, 'meeting-started');
+	}
+
+	private function parseMeetingEnded(IEvent $event) {
+		$params = $event->getSubjectParameters();
+
+		$event->setParsedSubject($this->l->t('The meeting in room "%s" has ended.', [$params['name']]));
+
+		$this->setIcon($event, 'meeting-ended');
+	}
+
+	private function parseRecordingReady(IEvent $event) {
+		$params = $event->getSubjectParameters();
+
+		$event->setParsedSubject($this->l->t('Recording for room "%s" is ready.', [$params['name']]));
+
+		$this->setIcon($event, 'recording-ready');
 	}
 
 	private function setIcon(IEvent $event, string $baseName) {
