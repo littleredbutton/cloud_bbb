@@ -34,7 +34,7 @@ $(() => {
 		});
 	}
 
-	async function saveSettings(url: string, secret: string) {
+	async function saveApiSettings(url: string, secret: string) {
 		url += url.endsWith('/') ? '' : '/';
 
 		await checkServer(url, secret);
@@ -44,19 +44,19 @@ $(() => {
 		OCP.AppConfig.setValue('bbb', 'api.secret', secret);
 	}
 
-	$('#bbb-settings form').submit(function (ev) {
+	$('#bbb-api').on('submit', function (ev) {
 		ev.preventDefault();
 
-		$('#bbb-result').empty();
+		const resultElement = $(this).find('.bbb-result').empty();
 
-		saveSettings(this['api.url'].value, this['api.secret'].value).then(() => {
+		saveApiSettings(this['api.url'].value, this['api.secret'].value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
 
 			setTimeout(() => {
-				$('#bbb-result').empty();
+				resultElement.empty();
 			}, 3000);
 
-			$('#bbb-result').append(successElement);
+			resultElement.append(successElement);
 		}).catch(err => {
 			let message = t('bbb', 'Unexpected error occurred');
 
@@ -68,11 +68,90 @@ $(() => {
 
 			const warningElement = generateWarningElement(message);
 
-			$('#bbb-result').append(warningElement);
+			resultElement.append(warningElement);
 		});
 	});
 
-	$<HTMLInputElement>('#bbb-settings [name="app.navigation"]').change((ev) => {
+	function generateExampleShortener(shortener: string) {
+		return shortener.replace(/</g, '&lt;').replace(/\{user\}/g, `<strong>${OC.currentUser}</strong>`).replace(/\{token\}/g, '<strong>your_room_id</strong>');
+	}
+
+	async function saveAppSettings(shortener: string) {
+		await checkPasswordConfirmation();
+
+		if (shortener.indexOf('https://') !== 0) {
+			throw 'https';
+		}
+
+		if (shortener.indexOf('{token}') < 0) {
+			throw 'token';
+		}
+
+		OCP.AppConfig.setValue('bbb', 'app.shortener', shortener);
+	}
+
+	$('#bbb-shortener').on('submit', function (ev) {
+		ev.preventDefault();
+
+		const resultElement = $(this).find('.bbb-result').empty();
+
+		saveAppSettings(this['app.shortener'].value).then(() => {
+			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
+
+			setTimeout(() => {
+				resultElement.empty();
+			}, 3000);
+
+			resultElement.append(successElement);
+		}).catch(err => {
+			let message = t('bbb', 'Unexpected error occurred');
+
+			if (err === 'https') {
+				message = t('bbb', 'URL has to start with https');
+			} else if (err === 'token') {
+				message = t('bbb', 'URL has to contain the {token} placeholder');
+			}
+
+			const warningElement = generateWarningElement(message);
+
+			console.warn('Could not save app settings', err);
+
+			resultElement.append(warningElement);
+		});
+	});
+
+	$<HTMLInputElement>('#bbb-shortener [name="app.shortener"]').on('keyup', (ev) => {
+		ev.preventDefault();
+
+		const {value} = ev.target;
+
+		if (!value || value.indexOf('https://') !== 0 || value.indexOf('{token}') < 0) {
+			$('#bbb-shortener-example').text(t('bbb', 'URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used.'));
+
+			return;
+		}
+
+		const target =  window.location.origin + OC.generateUrl('apps/bbb/b/$1');
+		const url = (new URL(value));
+		const rewritePath = '^' + url.pathname.replace(/^\//, '').replace(/%7Buser%7D/g, '.+').replace(/%7Btoken%7D/g, '(.+)');
+
+		$('#bbb-shortener-example').html(`<p>${generateExampleShortener(value)}</p>
+		<details>
+		<summary>${t('bbb', 'Example configuration for Apache and Nginx')}</summary>
+		<pre>#Apache with mod_rewrite
+ServerName    ${url.hostname}
+RewriteEngine on
+RewriteRule   "${rewritePath}"  "${target}"  [R=307,L]
+
+#Nginx config
+server_name ${url.hostname};
+rewrite ${rewritePath} ${target} last;
+return 307;</pre></details>
+		`);
+	});
+	$('#bbb-shortener [name="app.shortener"]').trigger('keyup');
+
+	$<HTMLInputElement>('#bbb-settings [name="app.navigation"]').on('change', (ev) => {
 		ev.preventDefault();
 
 		console.log('checkbox changed to', ev.target.checked);

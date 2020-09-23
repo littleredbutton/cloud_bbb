@@ -122,6 +122,12 @@ class Api {
 	}
 
 	public getRoomUrl(room: Room) {
+		const shortener = document.getElementById('bbb-root')?.getAttribute('data-shortener') || '';
+
+		if (shortener) {
+			return shortener.replace(/\{user\}/g, room.userId).replace(/\{token\}/g, room.uid);
+		}
+
 		return window.location.origin + api.getUrl(`b/${room.uid}`);
 	}
 

@@ -27,6 +27,14 @@
   width: 100%;
 }
 
+pre {
+  font-weight: normal;
+  background-color: #f1f1f1;
+  padding: 1em 2em;
+  display: inline-block;
+  font-family: monospace;
+}
+
 #bbb-warning {
   padding: 1em;
   background-color: rgb(255, 255, 123);
