@@ -5,8 +5,8 @@ namespace OCA\BigBlueButton\Tests\Integration\Service;
 use OC;
 use OCA\BigBlueButton\Db\RestrictionMapper;
 use OCA\BigBlueButton\Service\RestrictionService;
-use PHPUnit\Framework\TestCase;
 use OCP\IDBConnection;
+use PHPUnit\Framework\TestCase;
 
 class RestrictionServiceTest extends TestCase {
 	/** @var IDBConnection */

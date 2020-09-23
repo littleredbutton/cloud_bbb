@@ -2,13 +2,13 @@
 
 namespace OCA\BigBlueButton\Activity;
 
+use OCA\BigBlueButton\AppInfo\Application;
+use OCA\BigBlueButton\Event\MeetingEndedEvent;
+use OCA\BigBlueButton\Event\MeetingStartedEvent;
+use OCA\BigBlueButton\Event\RecordingReadyEvent;
+use OCP\Activity\IManager as IActivityManager;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
-use OCP\Activity\IManager as IActivityManager;
-use OCA\BigBlueButton\Event\MeetingStartedEvent;
-use OCA\BigBlueButton\Event\MeetingEndedEvent;
-use OCA\BigBlueButton\Event\RecordingReadyEvent;
-use OCA\BigBlueButton\AppInfo\Application;
 use OCP\IUserSession;
 
 class MeetingListener implements IEventListener {

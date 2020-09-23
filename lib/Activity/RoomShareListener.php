@@ -2,16 +2,16 @@
 
 namespace OCA\BigBlueButton\Activity;
 
-use OCP\EventDispatcher\Event;
-use OCP\EventDispatcher\IEventListener;
-use OCP\Activity\IManager as IActivityManager;
-use OCP\IGroupManager;
-use OCA\BigBlueButton\Event\RoomShareCreatedEvent;
-use OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCA\BigBlueButton\Event\RoomShareCreatedEvent;
+use OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use OCA\BigBlueButton\Service\RoomService;
+use OCP\Activity\IManager as IActivityManager;
+use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventListener;
+use OCP\IGroupManager;
 
 class RoomShareListener implements IEventListener {
 

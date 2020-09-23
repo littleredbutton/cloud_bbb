@@ -2,9 +2,9 @@
 
 namespace OCA\BigBlueButton;
 
-use OCP\Template;
-use OCP\AppFramework\Http\Response;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
+use OCP\AppFramework\Http\Response;
+use OCP\Template;
 
 class NotFoundResponse extends Response {
 	public function __construct() {

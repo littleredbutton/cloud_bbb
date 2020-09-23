@@ -2,15 +2,15 @@
 
 namespace OCA\BigBlueButton\Controller;
 
-use OCA\BigBlueButton\Service\RoomService;
-use OCA\BigBlueButton\Permission;
-use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\CircleHelper;
-use OCP\IRequest;
+use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Service\RoomService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
 use OCP\IGroupManager;
+use OCP\IRequest;
 use OCP\IUserManager;
 
 class RoomController extends Controller {

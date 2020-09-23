@@ -7,8 +7,8 @@ use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomMapper;
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Db\RoomShareMapper;
-use PHPUnit\Framework\TestCase;
 use OCP\IDBConnection;
+use PHPUnit\Framework\TestCase;
 
 class RoomMapperTest extends TestCase {
 	/** @var IDBConnection */

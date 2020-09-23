@@ -2,12 +2,12 @@
 
 namespace OCA\BigBlueButton\Activity;
 
-use OCP\EventDispatcher\Event;
-use OCP\EventDispatcher\IEventListener;
-use OCP\Activity\IManager as IActivityManager;
+use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Event\RoomCreatedEvent;
 use OCA\BigBlueButton\Event\RoomDeletedEvent;
-use OCA\BigBlueButton\AppInfo\Application;
+use OCP\Activity\IManager as IActivityManager;
+use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventListener;
 
 class RoomListener implements IEventListener {
 

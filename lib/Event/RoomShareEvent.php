@@ -2,8 +2,8 @@
 
 namespace OCA\BigBlueButton\Event;
 
-use OCP\EventDispatcher\Event;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCP\EventDispatcher\Event;
 
 abstract class RoomShareEvent extends Event {
 

@@ -2,16 +2,16 @@
 
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\CircleHelper;
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Service\RoomShareNotFound;
-use OCA\BigBlueButton\CircleHelper;
-use OCP\IRequest;
+use OCA\BigBlueButton\Service\RoomShareService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
 
-use OCA\BigBlueButton\Service\RoomShareService;
+use OCP\IRequest;
 use OCP\IUserManager;
 
 class RoomShareController extends Controller {

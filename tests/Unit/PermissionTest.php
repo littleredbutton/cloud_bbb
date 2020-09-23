@@ -2,17 +2,17 @@
 
 namespace OCA\BigBlueButton\Tests;
 
+use OCA\BigBlueButton\CircleHelper;
+use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
-use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Service\RestrictionService;
 use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Service\RoomShareService;
-use OCA\BigBlueButton\Service\RestrictionService;
-use OCA\BigBlueButton\CircleHelper;
-use OCP\IUserManager;
 use OCP\IGroupManager;
 use OCP\IUser;
+use OCP\IUserManager;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 

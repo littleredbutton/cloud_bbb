@@ -3,21 +3,21 @@
 namespace OCA\BigBlueButton\BigBlueButton;
 
 use BigBlueButton\BigBlueButton;
-use BigBlueButton\Parameters\CreateMeetingParameters;
-use BigBlueButton\Parameters\JoinMeetingParameters;
-use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Core\Record;
+use BigBlueButton\Parameters\CreateMeetingParameters;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
+use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
-use OCP\EventDispatcher\IEventDispatcher;
-use OCA\BigBlueButton\Event\MeetingStartedEvent;
-use OCA\BigBlueButton\Db\Room;
-use OCA\BigBlueButton\Permission;
+use BigBlueButton\Parameters\JoinMeetingParameters;
 use OCA\BigBlueButton\Crypto;
+use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\Event\MeetingStartedEvent;
+use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\UrlHelper;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
-use OCP\IURLGenerator;
 use OCP\IL10N;
+use OCP\IURLGenerator;
 
 class API {
 	/** @var IConfig */

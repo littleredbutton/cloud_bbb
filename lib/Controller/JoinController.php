@@ -8,13 +8,13 @@ use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Service\RoomService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
+use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
-use OCA\BigBlueButton\Service\RoomService;
-use OCP\AppFramework\Controller;
-use OCP\AppFramework\Http\TemplateResponse;
 
 class JoinController extends Controller {
 	/** @var string */

@@ -3,12 +3,12 @@
 namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\Db\Room;
-use OCP\IRequest;
-use OCP\EventDispatcher\IEventDispatcher;
-use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
+use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
+use OCP\EventDispatcher\IEventDispatcher;
+use OCP\IRequest;
 
 class HookController extends Controller {
 	/** @var string */

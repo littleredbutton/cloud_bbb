@@ -2,20 +2,20 @@
 
 namespace OCA\BigBlueButton\Tests\Controller;
 
-use PHPUnit\Framework\TestCase;
-use OCP\AppFramework\Http\RedirectResponse;
-use OCP\IURLGenerator;
-use OCP\IUserSession;
-use OCP\IRequest;
-use OCP\IUser;
-use OCA\BigBlueButton\Service\RoomService;
-use OCA\BigBlueButton\Controller\JoinController;
 use OCA\BigBlueButton\BigBlueButton\API;
-use OCA\BigBlueButton\NotFoundException;
+use OCA\BigBlueButton\Controller\JoinController;
 use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
+use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IRequest;
+use OCP\IURLGenerator;
+use OCP\IUser;
+use OCP\IUserSession;
+use PHPUnit\Framework\TestCase;
 
 class JoinControllerTest extends TestCase {
 	private $request;

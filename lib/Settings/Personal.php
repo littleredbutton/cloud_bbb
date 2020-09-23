@@ -2,10 +2,10 @@
 
 namespace OCA\BigBlueButton\Settings;
 
-use OCP\AppFramework\Http\TemplateResponse;
-use OCP\Settings\ISettings;
-use OCP\IConfig;
 use \OCP\IL10N;
+use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IConfig;
+use OCP\Settings\ISettings;
 
 class Personal implements ISettings {
 	/** @var IConfig */

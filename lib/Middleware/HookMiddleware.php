@@ -3,11 +3,11 @@
 namespace OCA\BigBlueButton\Middleware;
 
 use OCA\BigBlueButton\Controller\HookController;
+use OCA\BigBlueButton\Crypto;
 use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NotFoundException;
-use OCA\BigBlueButton\Crypto;
-use OCP\AppFramework\Http\JSONResponse;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\JSONResponse;
 use OCP\AppFramework\Middleware;
 use OCP\IRequest;
 

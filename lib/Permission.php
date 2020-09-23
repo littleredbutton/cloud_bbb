@@ -3,14 +3,14 @@
 namespace OCA\BigBlueButton;
 
 use Closure;
-use OCA\BigBlueButton\Service\RoomService;
-use OCA\BigBlueButton\Service\RestrictionService;
-use OCA\BigBlueButton\Service\RoomShareService;
+use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
-use OCA\BigBlueButton\Db\Restriction;
-use OCP\IUserManager;
+use OCA\BigBlueButton\Service\RestrictionService;
+use OCA\BigBlueButton\Service\RoomService;
+use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\IGroupManager;
+use OCP\IUserManager;
 
 class Permission {
 

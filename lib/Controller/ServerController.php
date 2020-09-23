@@ -4,12 +4,12 @@ namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\Permission;
-use OCP\IRequest;
+use OCA\BigBlueButton\Service\RoomService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
 
-use OCA\BigBlueButton\Service\RoomService;
+use OCP\IRequest;
 
 class ServerController extends Controller {
 	/** @var RoomService */

@@ -4,14 +4,14 @@ namespace OCA\BigBlueButton\Service;
 
 use Exception;
 
-use OCP\AppFramework\Db\DoesNotExistException;
-use OCP\AppFramework\Db\MultipleObjectsReturnedException;
-use OCP\EventDispatcher\IEventDispatcher;
-
 use OCA\BigBlueButton\Db\RoomShare;
 use OCA\BigBlueButton\Db\RoomShareMapper;
 use OCA\BigBlueButton\Event\RoomShareCreatedEvent;
+
 use OCA\BigBlueButton\Event\RoomShareDeletedEvent;
+use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\EventDispatcher\IEventDispatcher;
 
 class RoomShareService {
 

@@ -4,15 +4,15 @@ namespace OCA\BigBlueButton\Activity;
 
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Db\RoomShare;
-use OCP\Activity\IProvider;
 use OCP\Activity\IEvent;
 use OCP\Activity\IManager;
-use OCP\IL10N;
-use OCP\IUserManager;
+use OCP\Activity\IProvider;
 use OCP\IGroupManager;
+use OCP\IL10N;
 use OCP\IURLGenerator;
-use OCP\L10N\IFactory;
 use OCP\IUser;
+use OCP\IUserManager;
+use OCP\L10N\IFactory;
 
 class Provider implements IProvider {
 

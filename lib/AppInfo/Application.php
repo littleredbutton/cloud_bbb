@@ -2,22 +2,22 @@
 
 namespace OCA\BigBlueButton\AppInfo;
 
-use \OCP\IConfig;
-use \OCP\Settings\IManager as ISettingsManager;
-use \OCP\AppFramework\App;
-use \OCP\EventDispatcher\IEventDispatcher;
-use \OCA\BigBlueButton\Middleware\JoinMiddleware;
-use \OCA\BigBlueButton\Middleware\HookMiddleware;
+use \OCA\BigBlueButton\Activity\MeetingListener;
+use \OCA\BigBlueButton\Activity\RoomListener;
+use \OCA\BigBlueButton\Activity\RoomShareListener;
+use \OCA\BigBlueButton\Event\MeetingEndedEvent;
+use \OCA\BigBlueButton\Event\MeetingStartedEvent;
+use \OCA\BigBlueButton\Event\RecordingReadyEvent;
 use \OCA\BigBlueButton\Event\RoomCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomDeletedEvent;
-use \OCA\BigBlueButton\Activity\RoomListener;
 use \OCA\BigBlueButton\Event\RoomShareCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
-use \OCA\BigBlueButton\Activity\RoomShareListener;
-use \OCA\BigBlueButton\Event\MeetingStartedEvent;
-use \OCA\BigBlueButton\Event\MeetingEndedEvent;
-use \OCA\BigBlueButton\Event\RecordingReadyEvent;
-use \OCA\BigBlueButton\Activity\MeetingListener;
+use \OCA\BigBlueButton\Middleware\HookMiddleware;
+use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCP\AppFramework\App;
+use \OCP\EventDispatcher\IEventDispatcher;
+use \OCP\IConfig;
+use \OCP\Settings\IManager as ISettingsManager;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');

@@ -2,16 +2,16 @@
 
 namespace OCA\BigBlueButton\Tests\Controller;
 
-use PHPUnit\Framework\TestCase;
-use OCP\IRequest;
-use OCA\BigBlueButton\Service\RoomService;
+use OCA\BigBlueButton\CircleHelper;
 use OCA\BigBlueButton\Controller\RoomShareController;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCA\BigBlueButton\Service\RoomService;
 use OCA\BigBlueButton\Service\RoomShareService;
-use OCA\BigBlueButton\CircleHelper;
 use OCP\AppFramework\Http;
+use OCP\IRequest;
 use OCP\IUserManager;
+use PHPUnit\Framework\TestCase;
 
 class RoomShareControllerTest extends TestCase {
 	private $request;

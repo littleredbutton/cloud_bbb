@@ -3,14 +3,14 @@
 namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\Db\Restriction;
-use OCP\IRequest;
-use OCP\IGroupManager;
-use OCP\IUserManager;
+use OCA\BigBlueButton\Service\RestrictionService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
+use OCP\IGroupManager;
+use OCP\IRequest;
 
-use OCA\BigBlueButton\Service\RestrictionService;
+use OCP\IUserManager;
 
 class RestrictionController extends Controller {
 	/** @var RestrictionService */

@@ -2,13 +2,13 @@
 
 namespace OCA\BigBlueButton\Tests\Unit\Service;
 
-use PHPUnit\Framework\TestCase;
-
-
-use OCA\BigBlueButton\Service\RestrictionService;
-use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\Restriction;
+
+
 use OCA\BigBlueButton\Db\RestrictionMapper;
+use OCA\BigBlueButton\Db\Room;
+use OCA\BigBlueButton\Service\RestrictionService;
+use PHPUnit\Framework\TestCase;
 
 class RestrictionServiceTest extends TestCase {
 	protected $mapper;

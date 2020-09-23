@@ -4,11 +4,11 @@ namespace OCA\BigBlueButton\Service;
 
 use Exception;
 
-use OCP\AppFramework\Db\DoesNotExistException;
-use OCP\AppFramework\Db\MultipleObjectsReturnedException;
-
 use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Db\RestrictionMapper;
+
+use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 
 class RestrictionService {
 	/** @var RestrictionMapper */
