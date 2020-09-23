@@ -111,7 +111,7 @@ class Provider implements IProvider {
 		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
 			$event->setParsedSubject($this->l->t('You deleted the room %s.', [$params['name']]));
 		} else {
-			$subject = $this->l->t('{user} deleted the room %s', [$params['name']]);
+			$subject = $this->l->t('{user} deleted the room %s.', [$params['name']]);
 
 			$this->setSubjects($event, $subject, [
 				'user' => $this->getUser($event->getAuthor()),
