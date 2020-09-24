@@ -23,6 +23,7 @@ This integration provides the following features:
 * **Custom presentation** Start a room with a selected presentation from your file browser
 * **Manage recordings** View, share and delete recordings for your rooms
 * **Restrictions** Restrict room creation to certain groups
+* **Activities** Get an overview of your room activities
 
 ## :rocket: Install it
 The easiest way to install this app is by using the [Nextcloud app store](https://apps.nextcloud.com/apps/bbb).
