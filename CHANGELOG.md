@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.1.0-beta.1 (2020-09-24)
+### Added
+- [#57](https://github.com/sualko/cloud_bbb/issues/57) add support for URL shortener
+- [#62](https://github.com/sualko/cloud_bbb/issues/62) create meeting activities
+- show access mode in room overview
+- show room shared icon in room overview
+
+### Fixed
+- [#80](https://github.com/sualko/cloud_bbb/issues/80) clean up after user was deleted
+- [#73](https://github.com/sualko/cloud_bbb/issues/73) drop down not clickable
+- translate moderator message
+- [#78](https://github.com/sualko/cloud_bbb/issues/78) plural translation
+- quoted column names
+- unify error handling for room and restriction
+- [#76](https://github.com/sualko/cloud_bbb/issues/76) record deletion with scalelight
+
+### Misc
+- add meeting events
+- order imports
+
 ## 1.0.2 (2020-09-04)
 ### Fixed
 - [#70](https://github.com/sualko/cloud_bbb/issues/70) incompatibility with circle v0.18.x
