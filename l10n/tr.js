@@ -1,6 +1,17 @@
 OC.L10N.register(
     "bbb",
     {
+    "You created the room %s." : "%s odasını eklediniz.",
+    "You deleted the room %s." : "%s odasını sildiniz.",
+    "You shared the room %s with {shareWith}." : "%s odasını {shareWith} ile paylaştınız.",
+    "{user} shared the room %s with you." : "{user} sizinle %s odasını paylaştı.",
+    "You unshared the room %s with {shareWith}." : "%s odasını {shareWith} ile paylaşmayı bıraktınız.",
+    "{user} unshared the room %s with you." : "{user} %s odasını sizinle paylaşmayı bıraktı.",
+    "You started a meeting in the \"%s\" room." : "\"%s\" odasında bir toplantı başlattınız.",
+    "{user} started a meeting in the \"%s\" room." : "{user} \"%s\" odasında bir toplantı başlattı.",
+    "The meeting in room \"%s\" has ended." : "\"%s\" odasındaki toplantı sona erdi.",
+    "Recording for room \"%s\" is ready." : "\"%s\" odasındaki toplantı kaydı hazır.",
+    "To invite someone to the meeting, send them this link: %s" : "Görüşmeye birini çağırmak için şu bağlantıyı gönderin: %s",
     "API URL or secret not configured. Please contact your administrator." : "API adresi ya da parolası yapılandırılmamış. Lütfen BT yöneticiniz ile görüşün.",
     "BigBlueButton Integration" : "BigBlueButton Bütünleştirmesi",
     "BigBlueButton integration for Nextcloud" : "Nextcloud için BigBlueButton Bütünleştirmesi",

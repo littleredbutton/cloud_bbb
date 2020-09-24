@@ -1,4 +1,8 @@
 { "translations": {
+    "You created the room %s." : "Sie haben den Raum %s erstellt.",
+    "You deleted the room %s." : "Sie haben den Raum %s gelöscht.",
+    "You shared the room %s with {shareWith}." : "Sie haben den Raum %s mit {shareWith} geteilt.",
+    "{user} shared the room %s with you." : "{user} hat den Raum %s mit Ihnen geteilt.",
     "API URL or secret not configured. Please contact your administrator." : "API-URL oder Secret (geheime Phrase) nicht konfiguriert. Bitte wenden Sie sich an Ihren Administrator.",
     "BigBlueButton Integration" : "BigBlueButton-Integration",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton-Integration für Nextcloud",

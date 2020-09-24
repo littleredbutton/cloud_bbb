@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "To invite someone to the meeting, send them this link: %s" : "Pour inviter quelqu'un à la réunion, envoyez-lui ce lien : %s",
     "API URL or secret not configured. Please contact your administrator." : "L'adresse ou le secret de l'API n'est pas configuré. Veuillez contacter votre administrateur.",
     "BigBlueButton Integration" : "Intégration de BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Intégration de BigBlueButton pour Nextcloud",
