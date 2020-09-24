@@ -48,8 +48,12 @@ const ShareSelection: React.FC<Props> = (props) => {
 	}, []);
 
 	useEffect(() => {
-		setTimeout(() => setShowSearchResults(hasFocus), 100);
+		setShowSearchResults(hasFocus);
 	}, [hasFocus]);
+
+	function preventOnBlurEvent(ev: React.MouseEvent) {
+		ev.preventDefault();
+	}
 
 	async function selectShare(share: ShareWithOption) {
 		props.selectShare(share);
@@ -65,9 +69,14 @@ const ShareSelection: React.FC<Props> = (props) => {
 		] : [];
 
 		const renderOption = (option: ShareWithOption) => {
-			return (<li key={option.value.shareWith} className="suggestion" onClick={() => selectShare(option)}>
-				{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
-			</li>);
+			return (
+				<li
+					key={option.value.shareWith}
+					className="suggestion"
+					onMouseDown={preventOnBlurEvent}
+					onClick={() => selectShare(option)}>
+					{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
+				</li>);
 		};
 
 		return (
