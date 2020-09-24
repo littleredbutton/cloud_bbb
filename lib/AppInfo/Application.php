@@ -12,12 +12,14 @@ use \OCA\BigBlueButton\Event\RoomCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomDeletedEvent;
 use \OCA\BigBlueButton\Event\RoomShareCreatedEvent;
 use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
+use \OCA\BigBlueButton\Listener\UserDeletedListener;
 use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 use \OCP\AppFramework\App;
 use \OCP\EventDispatcher\IEventDispatcher;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
+use \OCP\User\Events\UserDeletedEvent;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
@@ -31,17 +33,9 @@ class Application extends App {
 
 		$container = $this->getContainer();
 
-		/* @var IEventDispatcher $eventDispatcher */
+		/* @var IEventDispatcher $dispatcher */
 		$dispatcher = $container->query(IEventDispatcher::class);
-		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
-		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
-
-		$dispatcher->addServiceListener(RoomShareCreatedEvent::class, RoomShareListener::class);
-		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
-
-		$dispatcher->addServiceListener(MeetingStartedEvent::class, MeetingListener::class);
-		$dispatcher->addServiceListener(MeetingEndedEvent::class, MeetingListener::class);
-		$dispatcher->addServiceListener(RecordingReadyEvent::class, MeetingListener::class);
+		$this->registerServiceListener($dispatcher);
 
 		$container->registerMiddleWare(JoinMiddleware::class);
 		$container->registerMiddleWare(HookMiddleware::class);
@@ -73,5 +67,19 @@ class Application extends App {
 				'name' => 'BigBlueButton',
 			];
 		});
+	}
+
+	private function registerServiceListener(IEventDispatcher $dispatcher) {
+		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
+		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
+
+		$dispatcher->addServiceListener(RoomShareCreatedEvent::class, RoomShareListener::class);
+		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
+
+		$dispatcher->addServiceListener(MeetingStartedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(MeetingEndedEvent::class, MeetingListener::class);
+		$dispatcher->addServiceListener(RecordingReadyEvent::class, MeetingListener::class);
+
+		$dispatcher->addServiceListener(UserDeletedEvent::class, UserDeletedListener::class);
 	}
 }

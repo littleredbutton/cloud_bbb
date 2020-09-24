@@ -44,6 +44,18 @@ class RoomShareMapper extends QBMapper {
 		return $this->findEntity($qb);
 	}
 
+	public function findByUserId(string $userId): array {
+		/* @var $qb IQueryBuilder */
+		$qb = $this->db->getQueryBuilder();
+		$qb->select('*')
+			->from('bbb_room_shares')
+			->where($qb->expr()->eq('share_with', $qb->createNamedParameter($userId)))
+			->andWhere($qb->expr()->eq('share_type', $qb->createNamedParameter(RoomShare::SHARE_TYPE_USER, IQueryBuilder::PARAM_INT)));
+
+		/** @var array<RoomShare> */
+		return $this->findEntities($qb);
+	}
+
 	/**
 	 * @return array<RoomShare>
 	 */

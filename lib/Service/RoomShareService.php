@@ -32,6 +32,10 @@ class RoomShareService {
 		return $this->mapper->findAll($roomId);
 	}
 
+	public function findByUserId(string $userId): array {
+		return $this->mapper->findByUserId($userId);
+	}
+
 	private function handleException(Exception $e): void {
 		if ($e instanceof DoesNotExistException ||
 			$e instanceof MultipleObjectsReturnedException) {
