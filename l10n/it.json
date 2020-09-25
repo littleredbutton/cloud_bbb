@@ -1,6 +1,7 @@
 { "translations": {
     "You created the room %s." : "Hai creato la stanza %s.",
     "You deleted the room %s." : "Hai eliminato la stanza %s.",
+    "{user} deleted the room %s." : "{user} ha eliminato la stanza %s.",
     "You shared the room %s with {shareWith}." : "Hai condiviso la stanza %s con {shareWith}.",
     "{user} shared the room %s with you." : "{user} ha condiviso la stanza %s con te.",
     "You unshared the room %s with {shareWith}." : "Hai rimosso la condivisione della stanza %s con {shareWith}.",
@@ -9,11 +10,10 @@
     "{user} started a meeting in the \"%s\" room." : "{user} ha iniziato un incontro nella stanza \"%s\".",
     "The meeting in room \"%s\" has ended." : "L'incontro nella stanza \"%s\" è finito.",
     "Recording for room \"%s\" is ready." : "La registrazione della stanza \"%s\" è pronta.",
-    "To invite someone to the meeting, send them this link: %s" : "Per invitare qualcuno all'incontro, inviagli questo link: %s",
+    "To invite someone to the meeting, send them this link: %s" : "Per invitare qualcuno all'incontro, inviagli questo collegamento: %s",
     "API URL or secret not configured. Please contact your administrator." : "URL API o segreto non configurato. Contatta il tuo amministratore.",
     "BigBlueButton Integration" : "Integrazione BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integrazione BigBlueButton per Nextcloud",
-    "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Questa applicazione consente di creare riunioni con un'installazione esterna di [BigBlueButton](https://bigbluebutton.org).\n\n* **Configurazione stanze** Creare configurazioni di più stanze con nome, messaggio di benvenuto, ...\n* **Condivisione collegamento con ospiti** Condividere il collegamento della stanza con tutti i propri ospiti\n* **Condivisione stanze** Condividere le stanze con membri, gruppi o cerchie\n* **Presentazione personalizzata** Avviare una stanza con una presentazione selezionata dal proprio navigatore dei file\n* **Gestire le registrazioni** Visualizzare, condividere ed eliminare le registrazioni per le proprie stanze\n\nCerchiamo uno sviluppatore! Se hai tempo, potresti aiutarci a migliorare questa applicazione.\n\n*Questa applicazione integra BigBlueButton e non è sponsorizzata o certificata da BigBlueButton Inc. BigBlueButton e il logo BigBlueButton sono marchi registrati di BigBlueButton Inc.*",
     "Room not found" : "Stanza non trovata",
     "The room could not be found. Maybe it was deleted?" : "La stanza non può essere trovata. Forse è stata eliminata?",
     "Back to %s" : "Torna a %s",
@@ -22,6 +22,8 @@
     "API secret" : "Segreto API",
     "Save" : "Salva",
     "Show room manager in app navigation instead of settings page." : "Mostra il gestore della stanza nella pagina di navigazione dell'applicazioni invece della pagina delle impostazioni.",
+    "If you like to use shorter urls, you can enter a forwarding proxy below." : "Se desideri utilizzare URL più brevi, puoi inserire un proxy di inoltro di seguito.",
+    "URL shortener" : "Abbreviatore di URL",
     "You will be forwarded to the room in the next few seconds." : "Sarai indirizzato nella stanza in pochi secondi.",
     "Let's go!" : "Andiamo!",
     "Please enter your name!" : "Digita il tuo nome!",
@@ -91,6 +93,9 @@
     "Unexpected error occurred" : "Si è verificato un errore inatteso",
     "API URL is invalid" : "URL API non valido",
     "API secret is invalid" : "Il segreto API non è valido",
+    "URL has to start with https" : "L'URL deve iniziare con https://",
+    "URL has to contain the {token} placeholder" : "L'URL deve contenere il segnaposto {token}",
+    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL deve iniziare con https: // e contenere {token}. Inoltre è possibile utilizzare il segnaposto {user}.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Questa stanza non è ancora aperta. Riproveremo tra %n secondo. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

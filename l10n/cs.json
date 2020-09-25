@@ -1,6 +1,7 @@
 { "translations": {
     "You created the room %s." : "Vytvořili jste místnost %s.",
     "You deleted the room %s." : "Smazali jste místnost %s.",
+    "{user} deleted the room %s." : "{user} smazal(a) místnost %s.",
     "You shared the room %s with {shareWith}." : "Nasdíleli jste místnost %s {shareWith}.",
     "{user} shared the room %s with you." : "{user} vám nasdílel(a) místnosti %s.",
     "You unshared the room %s with {shareWith}." : "Zrušili jste sdílení místnosti %s s {shareWith}.",
@@ -13,7 +14,6 @@
     "API URL or secret not configured. Please contact your administrator." : "Není nastavená URL adresa aplikačního programového rozhraní (API) nebo tajemství. Obraťte se na svého správce.",
     "BigBlueButton Integration" : "Napojení na BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Napojení na BigBlueButton pro Nextcloud",
-    "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message, ...\n* **Share guest link** Share the room link with all your guests\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n\nDeveloper wanted! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Tato aplikace umožňuje vytvářet schůzky v externí instalaci [BigBlueButton](https://bigbluebutton.org).\n\n* **Vytvoření místnosti** Vytvářejte vícero nastavení pro místnosti s názvem, uvítací zprávou, …\n* **Sdílení odkazem pro hosta** Sdílejte odkaz na místnost se všemi vašimi hosty\n* **Sdílení místností** Sdílejte místnosti se členy, skupinami nebo okruhy\n* **Uživatelsky určená prezentace** Zahajte místnost s vybranou prezentací z prohlížeče souborů\n* **Správa nahrávek** Zobrazujte, sdílejte a mažte nahrávky z vašich místnosti\n\n* **Omezování** Omezte vytváření místností jen na určité skupiny\n\nHledáme vývojáře! Pokud máte čas, bylo by skvělé pokud byste pomohli s vylepšováním této aplikace.\n\n*Tato aplikace napojuje na BigBlueButton a není doporučována ani ceritfikována BigBlueButton Inc. BigBlueButton a logo BigBlueButton jsou registrované obchodní značky společnosti BigBlueButton Inc.*",
     "Room not found" : "Místnost nenalezena",
     "The room could not be found. Maybe it was deleted?" : "Místnost nebyla nalezena. Možná byla smazána?",
     "Back to %s" : "Zpět na %s",
@@ -22,6 +22,8 @@
     "API secret" : "Tajemství k API",
     "Save" : "Uložit",
     "Show room manager in app navigation instead of settings page." : "Správu aplikací zobrazovat v ovládacích prvcích pro pohyb po aplikaci namísto na stránce nastavení.",
+    "If you like to use shorter urls, you can enter a forwarding proxy below." : "Pokud chcete používat kratší url, můžete níže zadat předávající proxy.",
+    "URL shortener" : "Zkracovač URL",
     "You will be forwarded to the room in the next few seconds." : "Během pár sekund budete přesměrováni do místnosti.",
     "Let's go!" : "Začněme!",
     "Please enter your name!" : "Zadejte své jméno!",
@@ -91,6 +93,9 @@
     "Unexpected error occurred" : "Došlo k neočekávané chybě",
     "API URL is invalid" : "URL adresa aplikačního program. rozhraní (API) není platná",
     "API secret is invalid" : "Tajemství k API není platné",
+    "URL has to start with https" : "Je třeba, aby URL začínalo na https",
+    "URL has to contain the {token} placeholder" : "Je třeba, aby URL obsahovalo zástupné vyjádření {token}",
+    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Je třeba, aby URL začínalo na https:// a obsahovalo {token}. Dále je možné použít také zástupné vyjádření {user}.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundu. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekund. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím."]
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;"
 }
