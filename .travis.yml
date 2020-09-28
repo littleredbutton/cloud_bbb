@@ -11,30 +11,30 @@ services:
 
 env:
   global:
-  - CORE_BRANCH=stable19
+  - CORE_BRANCH=stable20
   - DB=mysql
   - LINT=false
 
 matrix:
   include:
+    - php: 7.3
+      env: DB=sqlite
+    - php: 7.4
+      env: DB=sqlite
+    - php: 7.3
+      env: DB=pgsql
+    - php: 7.4
+      env: DB=pgsql
+    - php: 7.3
+      env: LINT=true
     - php: 7.2
-      env: "DB=sqlite"
+      env: DB=sqlite CORE_BRANCH=stable19
     - php: 7.3
-      env: "DB=sqlite"
+      env: CORE_BRANCH=stable18
     - php: 7.4
-      env: "DB=sqlite"
-    - php: 7.3
-      env: "DB=pgsql"
-    - php: 7.4
-      env: "DB=pgsql"
-    - php: 7.3
-      env: "LINT=true"
-    - php: 7.3
-      env: "CORE_BRANCH=stable18"
-    - php: 7.4
-      env: "CORE_BRANCH=master"
+      env: CORE_BRANCH=master
     - php: nightly
-      env: "DB=sqlite"
+      env: DB=sqlite
   fast_finish: true
   allow_failures:
     - php: nightly
