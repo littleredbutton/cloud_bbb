@@ -79,6 +79,10 @@ class RoomService {
 		$room->setAccess($access);
 		$room->setUserId($userId);
 
+		if ($access === Room::ACCESS_PASSWORD) {
+			$room->setPassword($this->humanReadableRandom(8));
+		}
+
 		$createdRoom = $this->mapper->insert($room);
 
 		$this->eventDispatcher->dispatch(RoomCreatedEvent::class, new RoomCreatedEvent($createdRoom));
