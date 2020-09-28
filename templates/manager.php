@@ -2,7 +2,7 @@
 script('bbb', 'manager');
 ?>
 
-<div id="bbb-root" data-shortener="<?php p($_[shortener]); ?>"></div>
+<div id="bbb-root" data-shortener="<?php p($_['shortener']); ?>"></div>
 
 <?php if (!empty($_['warning'])): ?>
     <div id="bbb-warning">
