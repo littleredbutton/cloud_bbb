@@ -35,7 +35,7 @@ Developer wanted! If you have time it would be awesome if you could help to enha
         <lib>curl</lib>
         <lib>mbstring</lib>
         <lib>SimpleXML</lib>
-        <nextcloud min-version="18" max-version="19"/>
+        <nextcloud min-version="18" max-version="20"/>
     </dependencies>
     <settings>
         <admin>OCA\BigBlueButton\Settings\Admin</admin>
