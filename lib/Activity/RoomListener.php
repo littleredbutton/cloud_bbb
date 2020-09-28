@@ -20,9 +20,9 @@ class RoomListener implements IEventListener {
 
 	public function handle(Event $event): void {
 		if ($event instanceof RoomCreatedEvent) {
-			$subject = Provider::SHARE_CREATED;
+			$subject = Provider::ROOM_CREATED;
 		} elseif ($event instanceof RoomDeletedEvent) {
-			$subject = Provider::SHARE_DELETED;
+			$subject = Provider::ROOM_DELETED;
 		} else {
 			return;
 		}
