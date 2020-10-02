@@ -1,6 +1,9 @@
 OC.L10N.register(
     "bbb",
     {
+    "You created the room %s." : "你创建了房间:%s",
+    "You deleted the room %s." : "你删除了房间:%s",
+    "{user} deleted the room %s." : "{user} 删除了房间:%s",
     "Back to %s" : "返回 %s",
     "Save" : "保存",
     "Display name" : "显示名称",
