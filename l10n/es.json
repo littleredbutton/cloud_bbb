@@ -1,4 +1,7 @@
 { "translations": {
+    "You created the room %s." : "Has creado la sala %s.",
+    "You deleted the room %s." : "Has eliminado la sala %s.",
+    "{user} deleted the room %s." : "{user} ha eliminado la sala %s.",
     "API URL or secret not configured. Please contact your administrator." : "URL de la API o secreto no configurado. Por favor, contacta con tu administrador.",
     "BigBlueButton Integration" : "Integración BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integración BigBlueButton para Nextcloud",
