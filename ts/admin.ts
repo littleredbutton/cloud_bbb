@@ -107,7 +107,7 @@ $(() => {
 			let message = t('bbb', 'Unexpected error occurred');
 
 			if (err === 'https') {
-				message = t('bbb', 'URL has to start with https');
+				message = t('bbb', 'URL has to start with HTTPS');
 			} else if (err === 'token') {
 				message = t('bbb', 'URL has to contain the {token} placeholder');
 			}
