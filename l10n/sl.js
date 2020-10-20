@@ -74,6 +74,7 @@ OC.L10N.register(
     "Settings saved" : "Nastavitve so shranjene.",
     "Unexpected error occurred" : "Prišlo je do nepričakovane napake",
     "API URL is invalid" : "Naslov URL API ni veljaven",
-    "API secret is invalid" : "Koda API ni veljavna"
+    "API secret is invalid" : "Koda API ni veljavna",
+    "URL has to start with https" : "Naslov URL se mora začeti s https"
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");
