@@ -1,9 +1,9 @@
 import axios from '@nextcloud/axios';
 
 export enum ShareType {
-	User = OC.Share.SHARE_TYPE_USER,
-	Group = OC.Share.SHARE_TYPE_GROUP,
-	Circle = OC.Share.SHARE_TYPE_CIRCLE
+	User = 0, // OC.Share.SHARE_TYPE_USER
+	Group = 1, // OC.Share.SHARE_TYPE_GROUP
+	Circle = 7, // OC.Share.SHARE_TYPE_CIRCLE
 }
 
 export enum Permission { Admin, Moderator, User }
