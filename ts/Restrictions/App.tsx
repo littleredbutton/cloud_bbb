@@ -83,7 +83,7 @@ const App: React.FC<Props> = () => {
 							{!areRestrictionsLoaded
 								? <span className="icon icon-loading-small icon-visible"></span>
 								: <ShareSelection
-									placeholder={t('bbb', 'Group, ...')}
+									placeholder={t('bbb', 'Group …')}
 									selectShare={(share) => addRestriction(share.value.shareWith)}
 									shareType={[ShareType.Group]}
 									excluded={{groupIds: restrictions.map(restriction => restriction.groupId)}} /> }
