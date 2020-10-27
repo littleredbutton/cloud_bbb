@@ -5,7 +5,7 @@
     <summary>BigBlueButton integration for Nextcloud</summary>
     <description><![CDATA[This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).
 
-* **Room setup** Create multiple room configurations with name, welcome message, ...
+* **Room setup** Create multiple room configurations with name, welcome message …
 * **Share guest link** Share the room link with all your guests
 * **Share rooms** Share rooms with members, groups or circles
 * **Custom presentation** Start a room with a selected presentation from your file browser
