@@ -33,7 +33,6 @@ OC.L10N.register(
     "moderator" : "主持人",
     "Share" : "共享",
     "Loading" : "正在加载",
-    "Settings saved" : "设置已保存",
-    "URL has to start with https" : "URL 必须以 https:// 开头"
+    "Settings saved" : "设置已保存"
 },
 "nplurals=1; plural=0;");
