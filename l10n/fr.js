@@ -36,6 +36,7 @@ OC.L10N.register(
     "Join" : "Rejoindre",
     "Have an account? Log in." : "Vous avez déjà un compte ? Connectez-vous.",
     "Hello %s" : "Bonjour %s,",
+    "Name, group …" : "Nom, groupe, ...",
     "Group" : "Groupe",
     "Searching" : "Recherche en cours",
     "No matches" : "Pas de résultas",
@@ -86,6 +87,7 @@ OC.L10N.register(
     "You are not allowed to change this option, because this room is shared with you." : "Vous n'êtes pas autorisé à changer cette option car cette salle est partagée avec vous.",
     "Max. rooms" : "Salles max.",
     "Max. participants" : "Nombre maximum de participants",
+    "Group …" : "Groupe …",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Les restrictions n'affectent pas les salles existantes. \"-1\" signifie \"aucune limite\". L'option la moins restrictive est choisie pour chaque utilisateur si plusieurs restrictions s'appliquent.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation can not be undone." : "Êtes-vous sûr de vouloir supprimer les restrictions pour le groupe \"{name}\" ? Cette opération ne peut être annulée.",
     "Delete restrictions for \"{name}\"?" : "Supprimer les restrictions pour \"{name}\" ?",
@@ -93,6 +95,7 @@ OC.L10N.register(
     "Unexpected error occurred" : "Une erreur est survenue",
     "API URL is invalid" : "L'adresse de l'API n'est pas valable",
     "API secret is invalid" : "Le secret de l'API n'est pas valable",
+    "URL has to start with HTTPS" : "L'URL doit débuter par HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL doit contenir l'espace réservé {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL doit commencer par https:// et contenir {token}. De plus, l'espace réservé de {user} peut être utilisé.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n seconde. Veuillez patienter.","Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n secondes. Veuillez patienter."]
