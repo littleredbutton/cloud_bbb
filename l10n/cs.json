@@ -34,6 +34,7 @@
     "Join" : "Připojit se",
     "Have an account? Log in." : "Máte uživatelský účet? Přihlaste se.",
     "Hello %s" : "Zdravím %s",
+    "Name, group …" : "Jméno, skupina …",
     "Group" : "Group",
     "Searching" : "Hledá se",
     "No matches" : "Žádné výsledky",
@@ -84,6 +85,7 @@
     "You are not allowed to change this option, because this room is shared with you." : "Nemáte oprávnění měnit tuto volbu, protože tato místnost je vám jen nasdílena.",
     "Max. rooms" : "Nejvýše místností",
     "Max. participants" : "Nejvýše účastníků",
+    "Group …" : "Skupina…",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Omezení neovlivní existující místnosti. Mínus 1 (-1) znamená, že hodnota je neomezená. Pokud je uplatněno vícero omezení, je pro každého uživatele zvoleno ta nejméně omezující volba.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation can not be undone." : "Opravdu chcete mazat omezení pro skupinu „{name}“? Tuto operaci nelze vzít zpět.",
     "Delete restrictions for \"{name}\"?" : "Smazat omezení pro „{name}“?",
@@ -91,6 +93,7 @@
     "Unexpected error occurred" : "Došlo k neočekávané chybě",
     "API URL is invalid" : "URL adresa aplikačního program. rozhraní (API) není platná",
     "API secret is invalid" : "Tajemství k API není platné",
+    "URL has to start with HTTPS" : "Je třeba, aby URL začínalo na HTTPS",
     "URL has to contain the {token} placeholder" : "Je třeba, aby URL obsahovalo zástupné vyjádření {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Je třeba, aby URL začínalo na https:// a obsahovalo {token}. Dále je možné použít také zástupné vyjádření {user}.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundu. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekund. Čekejte prosím.","Tato místnost ještě není otevřená. Bude to opětovně vyzkoušeno za %n sekundy. Čekejte prosím."]
