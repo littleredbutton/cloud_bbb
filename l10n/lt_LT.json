@@ -1,5 +1,10 @@
 { "translations": {
+    "You created the room %s." : "Jūs sukūrėte kambarį %s.",
+    "You deleted the room %s." : "Jūs ištrynėte kambarį %s.",
+    "{user} deleted the room %s." : "{user} ištrynė kambarį %s.",
     "BigBlueButton Integration" : "BigBlueButton integracija",
+    "Room not found" : "Kambarys nerastas",
+    "The room could not be found. Maybe it was deleted?" : "Nepavyko rasti kambario. Galbūt, jis buvo ištrintas?",
     "Back to %s" : "Atgal į %s",
     "API URL" : "API URL",
     "Save" : "Įrašyti",
@@ -10,10 +15,13 @@
     "Display name" : "Rodomas vardas",
     "Password" : "Slaptažodis",
     "Join" : "Prisijungti",
+    "Have an account? Log in." : "Turite paskyrą? Prisijunkite.",
     "Hello %s" : "Sveiki, %s",
+    "Name, group …" : "Vardas, grupė…",
     "Group" : "Grupė",
     "Name" : "Pavadinimas",
     "Access" : "Prieiga",
+    "You are not permitted to create a room." : "Jums neleidžiama sukurti kambario.",
     "Edit" : "Taisyti",
     "Welcome" : "Sveiki",
     "Miscellaneous" : "Įvairūs",
@@ -28,6 +36,7 @@
     "moderator" : "moderatorius",
     "Share" : "Bendrinti",
     "Loading" : "Įkeliama",
+    "Group …" : "Grupė…",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"
