@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.1.1 (2020-11-03)
+### Fixed
+- [#92](https://github.com/sualko/cloud_bbb/issues/92) wait for file action api
+
+### Misc
+- update languages
+
 ## 1.1.0 (2020-09-29)
 ### Added
 - [#57](https://github.com/sualko/cloud_bbb/issues/57) add support for URL shortener
