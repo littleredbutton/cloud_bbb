@@ -25,7 +25,7 @@ OC.L10N.register(
     "API secret" : "Segredo da API",
     "Save" : "Gardar",
     "Show room manager in app navigation instead of settings page." : "Amosar o xestor de sala na navegación da aplicación no canto de na páxina de axustes.",
-    "If you like to use shorter urls, you can enter a forwarding proxy below." : "Se quere usar URL máis curtos, pode introducir un proxy de reenvío a continuación.",
+    "If you like to use shorter urls, you can enter a forwarding proxy below." : "Se quere usar URL máis curtos, pode introducir un proxy de reenvío deseguido.",
     "URL shortener" : "Acurtador de URL",
     "You will be forwarded to the room in the next few seconds." : "Serán enviados á sala nos próximos segundos.",
     "Let's go!" : "Imos!",
