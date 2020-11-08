@@ -16,7 +16,7 @@ OC.L10N.register(
     "Miscellaneous" : "Diverse",
     "Room name" : "Rumsnamn",
     "Create" : "Skapa",
-    "Delete" : "Radera",
+    "Delete" : "Ta bort",
     "Error" : "Fel",
     "Server error" : "Serverfel",
     "moderator" : "moderator",
