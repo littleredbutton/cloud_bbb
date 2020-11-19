@@ -176,7 +176,7 @@ class Api {
 	public async storeRecording(recording: Recording, path: string) {
 		const startDate = new Date(recording.startTime);
 		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
-		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${filename}`;
+		const url = OC.linkToRemote(`dav/files/${OC.currentUser}${path}/${filename}`);
 
 		await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
 
@@ -185,7 +185,7 @@ class Api {
 
 	public async storeRoom(room: Room, path: string) {
 		const filename = `${encodeURIComponent(room.name)}.url`;
-		const url = `/remote.php/dav/files/${OC.currentUser}${path}/${filename}`;
+		const url = OC.linkToRemote(`dav/files/${OC.currentUser}${path}/${filename}`);
 
 		await axios.put(url, `[InternetShortcut]\nURL=${this.getRoomUrl(room)}`);
 
