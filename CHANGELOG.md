@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.1.2 (2020-11-19)
+### Fixed
+- [#102](https://github.com/sualko/cloud_bbb/issues/102) remote link generation
+- [#96](https://github.com/sualko/cloud_bbb/issues/96) app init
+
 ## 1.1.1 (2020-11-03)
 ### Fixed
 - [#92](https://github.com/sualko/cloud_bbb/issues/92) wait for file action api
