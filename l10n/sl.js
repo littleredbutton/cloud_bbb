@@ -32,6 +32,7 @@ OC.L10N.register(
     "Join" : "Pridruži se",
     "Have an account? Log in." : "Ali imate račun? Prijavite se.",
     "Hello %s" : "Pozdravljeni, %s,",
+    "Name, group …" : "Ime, skupina ...",
     "Group" : "Skupina",
     "Searching" : "Iskanje",
     "No matches" : "Ni zadetkov",
@@ -82,6 +83,7 @@ OC.L10N.register(
     "You are not allowed to change this option, because this room is shared with you." : "Za spreminjanje te možnosti nimate ustreznih dovoljenj, soba je le v souporabi.",
     "Max. rooms" : "Največ sob",
     "Max. participants" : "Največ udeležencev",
+    "Group …" : "Skupina ...",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Omejitve za obstoječe sobe ne veljajo. Vrednost -1 pomeni neomejeno. Če je uveljavljenih več omejitev, je izbrana za vsakega uporabnika najmanj omejujoča možnost.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation can not be undone." : "Ali ste prepričani, da želite izbrisati omejitve za skupino »{name}«? Opravila ni mogoče povrniti.",
     "Delete restrictions for \"{name}\"?" : "Ali želite izbrisati omejitve za skupino »{name}«? ",
@@ -89,6 +91,7 @@ OC.L10N.register(
     "Unexpected error occurred" : "Prišlo je do nepričakovane napake",
     "API URL is invalid" : "Naslov URL API ni veljaven",
     "API secret is invalid" : "Koda API ni veljavna",
+    "URL has to start with HTTPS" : "Naslov URL se mora začeti s HTTPS",
     "URL has to contain the {token} placeholder" : "Naslov URL mora vključevati vsebnik {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Naslov URL se mora začeti z https:// in mora vključevati žeton {token}. Uporabiti je mogoče tudi vsebnik {user}.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundo.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundi.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekunde.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekund."]
