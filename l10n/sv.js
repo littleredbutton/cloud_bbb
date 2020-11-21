@@ -8,6 +8,7 @@ OC.L10N.register(
     "Join" : "Gå med",
     "Hello %s" : "Hej %s",
     "Group" : "Grupp",
+    "Searching" : "Söker",
     "No matches" : "Inga träffar",
     "Name" : "Namn",
     "Access" : "Åtkomst",
