@@ -1,5 +1,9 @@
 .icon-add-shortcut {
-  background-image: url('../../img/chain-plus.svg');
+  background-image: url('../../img/chain-plus-dark.svg');
+
+  .dark & {
+    background-image: url('../../img/chain-plus.svg');
+  }
 }
 
 .oc-dialog.bbb-dialog {
@@ -37,7 +41,7 @@ pre {
 
 #bbb-warning {
   padding: 1em;
-  background-color: rgb(255, 255, 123);
+  background-color: var(--color-warning);
   display: inline-block;
 
   .icon {
@@ -47,7 +51,7 @@ pre {
 
 #bbb-success {
   padding: 1em;
-  background-color: rgb(176, 252, 132);
+  background-color: var(--color-success);
   display: inline-block;
 
   .icon {
@@ -112,7 +116,7 @@ pre {
   }
 
   th {
-    border-bottom: 1px #ddd solid;
+    border-bottom: 1px var(--color-background-darker) solid;
     cursor: pointer;
 
     .sort_arrow {
@@ -135,20 +139,12 @@ pre {
     }
 
     .action-rename {
-      &::after {
-        display: inline-block;
-        position: relative;
-        top: 2px;
-        left: 2px;
-        content: '';
-        width: 16px;
-        height: 16px;
-        background: url('../../img/rename.svg') no-repeat center;
+      .icon-rename {
         opacity: 0;
+      }
 
-        &:hover {
-          opacity: 1;
-        }
+      &:hover .icon-rename {
+        opacity: 1;
       }
     }
 
@@ -188,21 +184,17 @@ pre {
     height: 20px;
 
     &:active {
-      background-color: rgba(0, 128, 0, 0.445);
+      background-color: var(--color-success);
     }
   }
 
-  .selected-row,
-  .recordings-row {
-    border-left: 3px solid #888;
-  }
-
   .selected-row {
-    background-color: #f0f0f0;
+    background-color: var(--color-background-dark);
   }
 
   .recordings-row {
-    background-color: #f7f7f7;
+    background-color: var(--color-background-hover);
+    box-shadow: inset 0px -5px 7px -7px var(--color-box-shadow);
 
     &> td {
       padding: 0;

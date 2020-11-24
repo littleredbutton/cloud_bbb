@@ -51,7 +51,7 @@ const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: c
 		return <span>{currentValue}</span>;
 	}
 
-	return <a className="action-rename" onClick={onClick}>{currentValue}</a>;
+	return <a className="action-rename" onClick={onClick}>{currentValue} <span className="icon icon-rename icon-visible"></span></a>;
 };
 
 export default EditableValue;

@@ -9,7 +9,7 @@ $(() => {
 	}
 
 	function generateSuccessElement(message: string) {
-		return $(`<div id="bbb-success"><span class="icon icon-checkmark-color icon-visible"></span> ${message}</div>`);
+		return $(`<div id="bbb-success"><span class="icon icon-checkmark icon-visible"></span> ${message}</div>`);
 	}
 
 	async function checkServer(url: string, secret: string) {

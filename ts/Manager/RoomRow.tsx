@@ -225,7 +225,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">
-				<td colSpan={10}>
+				<td colSpan={11}>
 					<table>
 						<tbody>
 							{recordings?.map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}
