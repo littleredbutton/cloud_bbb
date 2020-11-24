@@ -79,11 +79,11 @@ $(() => {
 	async function saveAppSettings(shortener: string) {
 		await checkPasswordConfirmation();
 
-		if (shortener.indexOf('https://') !== 0) {
+		if (shortener && shortener.indexOf('https://') !== 0) {
 			throw 'https';
 		}
 
-		if (shortener.indexOf('{token}') < 0) {
+		if (shortener && shortener.indexOf('{token}') < 0) {
 			throw 'token';
 		}
 
