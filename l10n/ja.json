@@ -1,4 +1,11 @@
 { "translations": {
+    "You created the room %s." : "ルーム%sを作成しました。",
+    "You deleted the room %s." : "ルーム%sを削除しました。",
+    "{user} deleted the room %s." : "{user}はルーム%sを削除しました。",
+    "You shared the room %s with {shareWith}." : "{shareWith}とルーム%sを共有しました。",
+    "{user} shared the room %s with you." : "{user}があなたとルーム%sを共有しました。",
+    "You unshared the room %s with {shareWith}." : "{shareWith}とのルーム%s共有を解除しました。",
+    "{user} unshared the room %s with you." : "{user}があなたとのルーム%s共有を解除しました。",
     "API URL or secret not configured. Please contact your administrator." : "APIのURLまたはシークレットが設定されていません。管理者にお問い合わせください。",
     "BigBlueButton Integration" : "BigBlueButton統合",
     "BigBlueButton integration for Nextcloud" : "Nextcould向けBigBlueButton統合",
