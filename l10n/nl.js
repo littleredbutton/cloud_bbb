@@ -80,6 +80,7 @@ OC.L10N.register(
     "Settings saved" : "Instellingen bewaard",
     "Unexpected error occurred" : "Onverwachte fout opgetreden",
     "API URL is invalid" : "API URL is ongeldig",
-    "API secret is invalid" : "API secret is ongeldig"
+    "API secret is invalid" : "API secret is ongeldig",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Deze ruimte is nog niet open. We proberen het opnieuw over %n seconde. Even geduld","Deze ruimte is nog niet open. We proberen het opnieuw over  %n seconden. Even geduld."]
 },
 "nplurals=2; plural=(n != 1);");
