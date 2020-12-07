@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "You deleted the room %s." : "Je verwijderde ruimte %s.",
     "{user} deleted the room %s." : "{user} verwijderde ruimte %s.",
     "API URL or secret not configured. Please contact your administrator." : "API URL of geheim niet geconfigureerd. Neem contact op met uw beheerder.",
     "BigBlueButton Integration" : "BigBlueButton Integratie",
