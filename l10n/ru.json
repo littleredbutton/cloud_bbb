@@ -1,4 +1,5 @@
 { "translations": {
+    "You created the room %s." : "Вы создали комнату %s.",
     "API URL or secret not configured. Please contact your administrator." : "API URL или секрет не настроен. Пожалуйста, свяжитесь с вашим администратором.",
     "BigBlueButton Integration" : "Интеграция BigBlueButton (\"большая голубая кнопка\")",
     "BigBlueButton integration for Nextcloud" : "Интеграция BigBlueButton (\"большая голубая кнопка\") для Nextcloud",
