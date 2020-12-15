@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.1.3 (2020-12-15)
+### Fixed
+- [#103](https://github.com/sualko/cloud_bbb/issues/103) parameter type
+- [#98](https://github.com/sualko/cloud_bbb/issues/98) manager in dark mode
+- removal of url shortener option
+
 ## 1.1.2 (2020-11-19)
 ### Fixed
 - [#102](https://github.com/sualko/cloud_bbb/issues/102) remote link generation
