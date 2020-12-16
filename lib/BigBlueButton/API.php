@@ -83,7 +83,8 @@ class API {
 
 		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
 
-		$joinMeetingParams->setCreationTime($creationTime);
+		// ensure that float is not converted to a string in scientific notation
+		$joinMeetingParams->setCreationTime(sprintf("%.0f", $creationTime));
 		$joinMeetingParams->setJoinViaHtml5(true);
 		$joinMeetingParams->setRedirect(true);
 		$joinMeetingParams->setGuest($uid === null);
