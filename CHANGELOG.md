@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.1.4 (2020-12-16)
+### Fixed
+- room join failure for php < 7.4
+
 ## 1.1.3 (2020-12-15)
 ### Fixed
 - [#103](https://github.com/sualko/cloud_bbb/issues/103) parameter type
