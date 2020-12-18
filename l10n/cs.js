@@ -36,7 +36,7 @@ OC.L10N.register(
     "Join" : "Připojit se",
     "Have an account? Log in." : "Máte uživatelský účet? Přihlaste se.",
     "Hello %s" : "Zdravím %s",
-    "Name, group …" : "Jméno, skupina …",
+    "Name, group …" : "Jméno, skupina…",
     "Group" : "Group",
     "Searching" : "Hledá se",
     "No matches" : "Žádné výsledky",
