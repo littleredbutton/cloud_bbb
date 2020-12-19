@@ -86,6 +86,7 @@ OC.L10N.register(
     "Share" : "Teilen",
     "Loading" : "Lade",
     "You are not allowed to change this option, because this room is shared with you." : "Du kannst diese Einstellung nicht ändern, da dieser Raum mit Dir geteilt wurde.",
+    "Group name" : "Gruppe",
     "Max. rooms" : "Max. Räume",
     "Max. participants" : "Max. Teilnehmer",
     "Group …" : "Gruppe …",
