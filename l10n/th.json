@@ -1,4 +1,11 @@
 { "translations": {
+    "You created the room %s." : "คุณสร้างห้องแล้วเมื่อ %s",
+    "You deleted the room %s." : "คุณลบห้องแล้วเมื่อ %s",
+    "{user} deleted the room %s." : "{user} ลบห้องแล้วเมื่อ %s",
+    "You shared the room %s with {shareWith}." : "คุณแบ่งปันห้องกับ {shareWith} แล้วเมื่อ %s",
+    "{user} shared the room %s with you." : "{user} แบ่งปันห้องกับคุณเมื่อ %s",
+    "Room not found" : "ไม่พบห้อง",
+    "The room could not be found. Maybe it was deleted?" : "ไม่พบห้อง อาจจะถูกลบไปแล้ว",
     "Save" : "บันทึก",
     "Password" : "รหัสผ่าน",
     "Hello %s" : "สวัสดี %s",
@@ -8,6 +15,7 @@
     "Create" : "สร้าง",
     "Delete" : "ลบ",
     "Error" : "ข้อผิดพลาด",
+    "Delete?" : "ลบ",
     "Server error" : "ข้อผิดพลาดของเซิร์ฟเวอร์",
     "Share" : "แชร์",
     "Loading" : "Loading"
