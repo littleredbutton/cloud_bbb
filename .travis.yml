@@ -14,6 +14,7 @@ env:
   - CORE_BRANCH=stable20
   - DB=mysql
   - LINT=false
+  - BUILD=false
 
 matrix:
   include:
@@ -27,6 +28,7 @@ matrix:
       env: DB=pgsql
     - php: 7.3
       env: LINT=true
+      env: BUILD=true
     - php: 7.2
       env: DB=sqlite CORE_BRANCH=stable19
     - php: 7.3
@@ -82,3 +84,4 @@ script:
   - yarn test
   - if [[ "$LINT" = 'true' ]]; then yarn lint; fi
   - if [[ "$LINT" = 'true' ]]; then yarn commitlint-travis; fi
+  - if [[ "$BUILD" = 'true' ]]; then yarn build; fi
