@@ -17,6 +17,7 @@ OC.L10N.register(
     "Join" : "Pripojiť",
     "Hello %s" : "Ahoj %s",
     "Group" : "Skupina",
+    "Searching" : "Hľadanie",
     "No matches" : "Žiadne zhody",
     "Name" : "Názov",
     "Access" : "Prístup",
