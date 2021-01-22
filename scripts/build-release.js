@@ -115,6 +115,7 @@ function createArchive(appId, fileBaseName) {
 	addDirectory('templates');
 	addFile('COPYING');
 	addFile('README.md');
+	addFile('CHANGELOG.md');
 
 	archive.glob('vendor/**/*', {
 		ignore: ['.git'],
