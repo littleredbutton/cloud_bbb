@@ -5,7 +5,7 @@ import EditRoomDialog from './EditRoomDialog';
 type Props = {
 	room: Room;
 	restriction?: Restriction;
-	updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
+	updateProperty: (key: string, value: string | boolean | number | null) => Promise<void>;
 }
 
 const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {

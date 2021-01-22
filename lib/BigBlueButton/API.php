@@ -12,7 +12,6 @@ use BigBlueButton\Parameters\JoinMeetingParameters;
 use OCA\BigBlueButton\Crypto;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingStartedEvent;
-use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\UrlHelper;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
@@ -25,9 +24,6 @@ class API {
 
 	/** @var IURLGenerator */
 	private $urlGenerator;
-
-	/** @var Permission */
-	private $permission;
 
 	/** @var BigBlueButton|null */
 	private $server;
@@ -47,7 +43,6 @@ class API {
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
-		Permission $permission,
 		Crypto $crypto,
 		IEventDispatcher $eventDispatcher,
 		IL10N $l10n,
@@ -55,7 +50,6 @@ class API {
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
-		$this->permission = $permission;
 		$this->crypto = $crypto;
 		$this->eventDispatcher = $eventDispatcher;
 		$this->l10n = $l10n;
@@ -78,8 +72,8 @@ class API {
 	 *
 	 * @return string join url
 	 */
-	public function createJoinUrl(Room $room, float $creationTime, string $displayname, ?string $uid = null) {
-		$password = $this->permission->isModerator($room, $uid) ? $room->moderatorPassword : $room->attendeePassword;
+	public function createJoinUrl(Room $room, float $creationTime, string $displayname, bool $isModerator, ?string $uid = null) {
+		$password = $isModerator ? $room->moderatorPassword : $room->attendeePassword;
 
 		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
 

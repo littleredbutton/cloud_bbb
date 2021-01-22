@@ -90,12 +90,16 @@ class RoomService {
 		return $createdRoom;
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator) {
+	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken) {
 		try {
 			$room = $this->mapper->find($id);
 
 			if ($room->access !== $access) {
 				$room->setPassword($access === Room::ACCESS_PASSWORD ? $this->humanReadableRandom(8) : null);
+			}
+
+			if ($room->moderatorToken !== $moderatorToken) {
+				$room->setModeratorToken(empty($moderatorToken) ? null : $this->humanReadableRandom(16));
 			}
 
 			$room->setName($name);

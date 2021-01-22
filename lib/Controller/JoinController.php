@@ -78,6 +78,12 @@ class JoinController extends Controller {
 			throw new NotFoundException();
 		}
 
+		$moderatorToken = $this->request->getParam('moderatorToken');
+
+		if (!empty($moderatorToken) && $moderatorToken !== $room->moderatorToken) {
+			throw new NoPermissionException();
+		}
+
 		$displayname = trim($displayname);
 		$userId = null;
 		$presentation = null;
@@ -108,7 +114,9 @@ class JoinController extends Controller {
 			return $response;
 		}
 
-		if ($room->requireModerator && ($userId === null || !$this->permission->isModerator($room, $userId)) && !$this->api->isRunning($room)) {
+		$isModerator = (!empty($moderatorToken) && $moderatorToken === $room->moderatorToken) || $this->permission->isModerator($room, $userId);
+
+		if ($room->requireModerator && !$isModerator && !$this->api->isRunning($room)) {
 			return new TemplateResponse($this->appName, 'waiting', [
 				'room' => $room->name,
 				'name' => $displayname,
@@ -116,7 +124,7 @@ class JoinController extends Controller {
 		}
 
 		$creationDate = $this->api->createMeeting($room, $presentation);
-		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $userId);
+		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $isModerator, $userId);
 
 		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
 

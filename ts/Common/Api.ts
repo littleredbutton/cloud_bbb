@@ -38,6 +38,7 @@ export interface Room {
 	everyoneIsModerator: boolean;
 	requireModerator: boolean;
 	shared: boolean;
+	moderatorToken: string;
 }
 
 export interface RoomShare {
@@ -121,14 +122,17 @@ class Api {
 		return response.data;
 	}
 
-	public getRoomUrl(room: Room) {
+	public getRoomUrl(room: Room, forModerator = false) {
 		const shortener = document.getElementById('bbb-root')?.getAttribute('data-shortener') || '';
+		const token = (forModerator && room.moderatorToken) ? `${room.uid}/${room.moderatorToken}` : room.uid;
 
 		if (shortener) {
-			return shortener.replace(/\{user\}/g, room.userId).replace(/\{token\}/g, room.uid);
+			return shortener
+				.replace(/\{user\}/g, room.userId)
+				.replace(/\{token\}/g, token);
 		}
 
-		return window.location.origin + api.getUrl(`b/${room.uid}`);
+		return window.location.origin + api.getUrl(`b/${token}`);
 	}
 
 	public async getRooms(): Promise<Room[]> {

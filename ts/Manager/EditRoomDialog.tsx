@@ -13,12 +13,13 @@ const descriptions: { [key: string]: string } = {
 	access: t('bbb', 'Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join.'),
 	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
 	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
+	moderatorToken: t('bbb', 'If enabled, a moderator URL is generated which allows access with moderator permission.'),
 };
 
 type Props = {
 	room: Room;
 	restriction?: Restriction;
-	updateProperty: (key: string, value: string | boolean | number) => Promise<void>;
+	updateProperty: (key: string, value: string | boolean | number | null) => Promise<void>;
 	open: boolean;
 	setOpen: (open: boolean) => void;
 }
@@ -123,6 +124,17 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 					<label htmlFor={`bbb-everyoneIsModerator-${room.id}`}>{t('bbb', 'Every participant is moderator')}</label>
 				</div>
 				<em>{descriptions.moderator}</em>
+
+				<div className="bbb-mt-1">
+					<input id={`bbb-moderatorToken-${room.id}`}
+						type="checkbox"
+						className="checkbox"
+						checked={!!room.moderatorToken}
+						onChange={(event) => updateProperty('moderatorToken', event.target.checked ? 'true' : null)} />
+					<label htmlFor={`bbb-moderatorToken-${room.id}`}>{t('bbb', 'Moderator access via URL')}</label>
+				</div>
+				{!!room.moderatorToken && <input type="text" readOnly={true} value={api.getRoomUrl(room, true)} />}
+				<em>{descriptions.moderatorToken}</em>
 			</div>
 
 			<h3>{t('bbb', 'Miscellaneous')}</h3>

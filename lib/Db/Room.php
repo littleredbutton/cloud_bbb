@@ -20,6 +20,7 @@ use OCP\AppFramework\Db\Entity;
  * @method bool getEveryoneIsModerator()
  * @method bool getRequireModerator()
  * @method bool getEveryoneIsModerator()
+ * @method string getModeratorToken()
  * @method void setUid(string $uid)
  * @method void setName(string $name)
  * @method void setAttendeePassword(string $pw)
@@ -32,6 +33,7 @@ use OCP\AppFramework\Db\Entity;
  * @method void setPassword(string $pw)
  * @method void setEveryoneIsModerator(bool $everyone)
  * @method void setRequireModerator(bool $require)
+ * @method void setModeratorToken(string $moderatorToken)
  */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
@@ -55,6 +57,7 @@ class Room extends Entity implements JsonSerializable {
 	public $everyoneIsModerator;
 	public $requireModerator = false;
 	public $shared = false;
+	public $moderatorToken;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
@@ -78,6 +81,7 @@ class Room extends Entity implements JsonSerializable {
 			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
 			'requireModerator'    => boolval($this->requireModerator),
 			'shared'              => boolval($this->shared),
+			'moderatorToken'      => $this->moderatorToken,
 		];
 	}
 }

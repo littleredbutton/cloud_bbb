@@ -95,7 +95,7 @@ class JoinControllerTest extends TestCase {
 		$this->api
 			->expects($this->once())
 			->method('createJoinUrl')
-			->with($this->room, 12345, 'User Bar', 'user_bar')
+			->with($this->room, 12345, 'User Bar', false, 'user_bar')
 			->willReturn($url);
 
 		$result = $this->controller->index(null);
@@ -177,7 +177,7 @@ class JoinControllerTest extends TestCase {
 		$this->api
 			->expects($this->once())
 			->method('createJoinUrl')
-			->with($this->room, 12345, 'Foo Bar', null)
+			->with($this->room, 12345, 'Foo Bar', false, null)
 			->willReturn($url);
 
 		$this->invalidDisplayname('a');
