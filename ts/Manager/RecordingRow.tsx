@@ -12,15 +12,21 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 	return (
 		<tr key={recording.id}>
 			<td className="start icon-col">
-				<a href={recording.url} className="icon icon-external icon-visible" target="_blank" rel="noopener noreferrer"></a>
+				<a href={recording.url} className="action-item" target="_blank" rel="noopener noreferrer">
+					<span className="icon icon-external icon-visible"></span>
+				</a>
 			</td>
 			<td className="share icon-col">
 				<CopyToClipboard text={recording.url}>
-					<span className="icon icon-clippy icon-visible copy-to-clipboard" ></span>
+					<button className="action-item copy-to-clipboard">
+						<span className="icon icon-clippy icon-visible" ></span>
+					</button>
 				</CopyToClipboard>
 			</td>
 			<td className="icon-col">
-				<a onClick={() => storeRecording(recording)} className="icon icon-add-shortcut icon-visible"></a>
+				<button className="action-item" onClick={() => storeRecording(recording)}>
+					<span className="icon icon-add-shortcut icon-visible"></span>
+				</button>
 			</td>
 			<td>
 				{(new Date(recording.startTime)).toLocaleString()}
@@ -35,9 +41,9 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 				{recording.type}
 			</td>
 			<td className="remove icon-col">
-				<a className="icon icon-delete icon-visible"
-					onClick={() => deleteRecording(recording)}
-					title={t('bbb', 'Delete')} />
+				<button className="action-item" onClick={() => deleteRecording(recording)} title={t('bbb', 'Delete')}>
+					<span className="icon icon-delete icon-visible"></span>
+				</button>
 			</td>
 		</tr>
 	);

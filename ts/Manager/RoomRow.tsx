@@ -187,15 +187,21 @@ const RoomRow: React.FC<Props> = (props) => {
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
 				<td className="start icon-col">
-					<a href={api.getRoomUrl(room)} className="icon icon-play icon-visible" target="_blank" rel="noopener noreferrer"></a>
+					<a href={api.getRoomUrl(room)} className="action-item" target="_blank" rel="noopener noreferrer">
+						<span className="icon icon-play icon-visible"></span>
+					</a>
 				</td>
 				<td className="share icon-col">
 					<CopyToClipboard text={api.getRoomUrl(room)}>
-						<span className="icon icon-clippy icon-visible copy-to-clipboard" ></span>
+						<button className="action-item copy-to-clipboard">
+							<span className="icon icon-clippy icon-visible" ></span>
+						</button>
 					</CopyToClipboard>
 				</td>
 				<td className="store icon-col">
-					<a onClick={() => storeRoom()} className="icon icon-add-shortcut icon-visible"></a>
+					<button className="action-item" onClick={() => storeRoom()}>
+						<span className="icon icon-add-shortcut icon-visible"></span>
+					</button>
 				</td>
 				<td className="name">
 					{edit('name')}
@@ -219,9 +225,9 @@ const RoomRow: React.FC<Props> = (props) => {
 					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
 				</td>
 				<td className="remove icon-col">
-					<a className="icon icon-delete icon-visible"
-						onClick={deleteRow as any}
-						title={t('bbb', 'Delete')} />
+					<button className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>
+						<span className="icon icon-delete icon-visible"></span>
+					</button>
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">

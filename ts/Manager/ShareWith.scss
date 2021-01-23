@@ -12,7 +12,7 @@
     align-items: center;
 
     &:hover {
-      background-color: var(--color-background-dark);
+      background-color: var(--color-background-hover);
     }
 
     .avatardiv {
@@ -27,11 +27,6 @@
         width: 100%;
         background-color: #a9a9a9;
       }
-    }
-
-    .icon {
-      height: 44px;
-      width: 44px;
     }
 
     &__label {

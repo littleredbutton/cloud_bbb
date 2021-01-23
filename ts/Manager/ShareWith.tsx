@@ -89,17 +89,21 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 									{(share.permission === Permission.Admin) && ` (${t('bbb', 'admin')})`}</h5>
 							</div>
 							{(share.id > -1 && permission === Permission.Moderator && isOwner) && <div className="bbb-shareWith__item__action">
-								<a className={`icon icon-shared icon-visible ${share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected'}`}
+								<button className="action-item"
 									onClick={ev => {
 										ev.preventDefault();
 										toggleAdminShare(share);
 									}}
-									title={t('bbb', 'Share')} />
+									title={t('bbb', 'Share')}>
+									<span className={`icon icon-shared icon-visible ${share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected'}`}></span>
+								</button>
 							</div>}
 							{(share.id > -1 && isOwner) && <div className="bbb-shareWith__item__action">
-								<a className="icon icon-delete icon-visible"
+								<button className="action-item"
 									onClick={ev => {ev.preventDefault(); deleteRoomShare(share.id);}}
-									title={t('bbb', 'Delete')} />
+									title={t('bbb', 'Delete')}>
+									<span className="icon icon-delete icon-visible"></span>
+								</button>
 							</div>}
 						</li>
 					);

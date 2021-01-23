@@ -13,9 +13,10 @@ const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {
 
 	return (
 		<>
-			<a className="icon icon-edit icon-visible"
-				onClick={ev => { ev.preventDefault(), setOpen(true); }}
-				title={t('bbb', 'Edit')} />
+			<button onClick={ev => { ev.preventDefault(), setOpen(true); }}
+				title={t('bbb', 'Edit')} className="action-item">
+				<span className="icon icon-edit icon-visible"></span>
+			</button>
 
 			<EditRoomDialog room={room} restriction={restriction} updateProperty={updateProperty} open={open} setOpen={setOpen} />
 		</>

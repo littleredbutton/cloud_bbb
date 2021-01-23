@@ -98,7 +98,32 @@ pre {
     opacity: 0;
 
     &.icon-visible {
+      opacity: 0.4;
+    }
+  }
+
+  .action-item {
+    border: 0;
+    background-color: transparent;
+    padding: 14px;
+    border-radius: 50%;
+    line-height: 0;
+    display: inline-block;
+
+    .icon {
       opacity: 0.5;
+    }
+
+    &:hover {
+      background-color: var(--color-background-dark);
+
+      .icon {
+        opacity: 1;
+
+        &.icon-delete {
+          background-image: var(--icon-delete-e9322d);
+        }
+      }
     }
   }
 
@@ -111,11 +136,9 @@ pre {
     white-space: nowrap;
   }
 
-  tr {
-    min-height: 62px;
-  }
 
   th {
+    padding: 14px 6px;
     border-bottom: 1px var(--color-background-darker) solid;
     cursor: pointer;
 
@@ -125,8 +148,8 @@ pre {
     }
   }
 
-  td, th {
-    padding: 10px;
+  td {
+    padding: 0 6px;
     position: relative;
     display: table-cell;
 
@@ -149,43 +172,13 @@ pre {
     }
 
     &.icon-col {
-      width: 32px;
-    }
-
-    a.icon {
-      margin-left: 5px;
+      width: 42px;
+      padding: 0;
     }
   }
 
-  tr:hover {
-    .icon {
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .action-rename {
-      &::after {
-        opacity: 0.5;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
-    }
-  }
-
-  .copy-to-clipboard {
-    cursor: pointer;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-
-    &:active {
-      background-color: var(--color-success);
-    }
+  tfoot td {
+    padding: 14px 6px;
   }
 
   .selected-row {
@@ -202,6 +195,33 @@ pre {
 
     table {
       width: 100%;
+    }
+  }
+
+  tbody tr {
+    td:first-child {
+      padding-left: 5px;
+    }
+
+    &:hover {
+      background-color: var(--color-background-hover);
+      box-shadow: 5px 0 0 var(--color-primary-element) inset;
+
+      .action-rename {
+        &::after {
+          opacity: 0.5;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .copy-to-clipboard {
+    &:active {
+      background-color: var(--color-success) !important;
     }
   }
 }
