@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Access, Room, Permission, RoomShare, api, Restriction } from '../Common/Api';
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
@@ -80,7 +81,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						return <option key={key} value={key}>{label}</option>;
 					})}
 				</select>
-				{(value === Access.Password && room.password) && <input type="text" readOnly={true} value={room.password} />}
+				{(value === Access.Password && room.password) && <CopyToClipboard text={room.password}><input type="text" readOnly={true} className="icon-clippy" value={room.password} /></CopyToClipboard>}
 				{descriptions[field] && <em>{descriptions[field]}</em>}
 			</div>
 		);
@@ -133,7 +134,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						onChange={(event) => updateProperty('moderatorToken', event.target.checked ? 'true' : null)} />
 					<label htmlFor={`bbb-moderatorToken-${room.id}`}>{t('bbb', 'Moderator access via URL')}</label>
 				</div>
-				{!!room.moderatorToken && <input type="text" readOnly={true} value={api.getRoomUrl(room, true)} />}
+				{!!room.moderatorToken && <CopyToClipboard text={api.getRoomUrl(room, true)}><input type="text" readOnly={true} className="icon-clippy" value={api.getRoomUrl(room, true)} /></CopyToClipboard>}
 				<em>{descriptions.moderatorToken}</em>
 			</div>
 

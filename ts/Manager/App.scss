@@ -224,6 +224,12 @@ pre {
       background-color: var(--color-success) !important;
     }
   }
+
+  input.icon-clippy {
+    background-position: 8px center;
+    cursor: pointer;
+    padding-left: 32px;
+  }
 }
 
 .bbb-form-element {
