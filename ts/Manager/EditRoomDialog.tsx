@@ -15,6 +15,7 @@ const descriptions: { [key: string]: string } = {
 	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
 	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
 	moderatorToken: t('bbb', 'If enabled, a moderator URL is generated which allows access with moderator permission.'),
+	internalRestrictedShareWith: t('bbb', 'Only selected users and groups are allowed to access the room.'),
 };
 
 type Props = {
@@ -101,12 +102,12 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 			{inputElement(t('bbb', 'Participant limit'), 'maxParticipants', 'number')}
 
 			{selectElement(t('bbb', 'Access'), 'access', room.access, accessOptions, (value) => {
-				console.log('access', value);
 				updateProperty('access', value);
 			})}
 
 			{room.access === Access.InternalRestricted && <div className="bbb-form-element bbb-form-shareWith">
 				<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />
+				<em>{descriptions.internalRestrictedShareWith}</em>
 			</div>}
 
 			<div className="bbb-form-element">
