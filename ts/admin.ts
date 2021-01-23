@@ -23,7 +23,7 @@ $(() => {
 	}
 
 	function checkPasswordConfirmation() {
-		return new Promise(resolve => {
+		return new Promise<void>(resolve => {
 			if (OC.PasswordConfirmation && OC.PasswordConfirmation.requiresPasswordConfirmation()) {
 				OC.PasswordConfirmation.requirePasswordConfirmation(() => resolve());
 
