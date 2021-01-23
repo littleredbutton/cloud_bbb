@@ -4,6 +4,7 @@ import { api, Recording, Room, Restriction, Access } from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
+import { AccessOptions } from '../Common/Translation';
 
 type Props = {
 	room: Room;
@@ -156,15 +157,15 @@ const RoomRow: React.FC<Props> = (props) => {
 	function accessToIcon(access: string) {
 		switch(access) {
 		case Access.Public:
-			return <span className="icon icon-visible icon-link" />;
+			return <span className="icon icon-visible icon-link" title={AccessOptions[access]} />;
 		case Access.Password:
-			return <span className="icon icon-visible icon-password" />;
+			return <span className="icon icon-visible icon-password" title={AccessOptions[access]} />;
 		case Access.Internal:
-			return <span className="icon icon-visible icon-group" />;
+			return <span className="icon icon-visible icon-group" title={AccessOptions[access]} />;
 		case Access.InternalRestricted:
-			return <span className="icon icon-visible icon-user" />;
+			return <span className="icon icon-visible icon-user" title={AccessOptions[access]} />;
 		case Access.WaitingRoom:
-			return <span className="icon icon-visible icon-timezone" />;
+			return <span className="icon icon-visible icon-timezone" title={AccessOptions[access]} />;
 		}
 
 		return <span></span>;
@@ -187,19 +188,19 @@ const RoomRow: React.FC<Props> = (props) => {
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
 				<td className="start icon-col">
-					<a href={api.getRoomUrl(room)} className="action-item" target="_blank" rel="noopener noreferrer">
+					<a href={api.getRoomUrl(room)} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
 						<span className="icon icon-play icon-visible"></span>
 					</a>
 				</td>
 				<td className="share icon-col">
 					<CopyToClipboard text={api.getRoomUrl(room)}>
-						<button className="action-item copy-to-clipboard">
+						<button className="action-item copy-to-clipboard" title={t('bbb', 'Copy to clipboard')}>
 							<span className="icon icon-clippy icon-visible" ></span>
 						</button>
 					</CopyToClipboard>
 				</td>
 				<td className="store icon-col">
-					<button className="action-item" onClick={() => storeRoom()}>
+					<button className="action-item" onClick={() => storeRoom()} title={t('bbb', 'Save as file')}>
 						<span className="icon icon-add-shortcut icon-visible"></span>
 					</button>
 				</td>

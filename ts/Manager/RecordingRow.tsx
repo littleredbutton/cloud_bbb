@@ -12,19 +12,19 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 	return (
 		<tr key={recording.id}>
 			<td className="start icon-col">
-				<a href={recording.url} className="action-item" target="_blank" rel="noopener noreferrer">
+				<a href={recording.url} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open recording')}>
 					<span className="icon icon-external icon-visible"></span>
 				</a>
 			</td>
 			<td className="share icon-col">
 				<CopyToClipboard text={recording.url}>
-					<button className="action-item copy-to-clipboard">
+					<button className="action-item copy-to-clipboard" title={t('bbb', 'Copy to clipboard')}>
 						<span className="icon icon-clippy icon-visible" ></span>
 					</button>
 				</CopyToClipboard>
 			</td>
 			<td className="icon-col">
-				<button className="action-item" onClick={() => storeRecording(recording)}>
+				<button className="action-item" onClick={() => storeRecording(recording)} title={t('bbb', 'Save as file')}>
 					<span className="icon icon-add-shortcut icon-visible"></span>
 				</button>
 			</td>
