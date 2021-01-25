@@ -75,6 +75,11 @@ export interface ShareWith {
 	users: ShareWithOption[];
 	groups: ShareWithOption[];
 	circles: ShareWithOption[];
+	exact: {
+		users: ShareWithOption[];
+		groups: ShareWithOption[];
+		circles: ShareWithOption[];
+	}
 }
 
 class Api {
@@ -243,9 +248,14 @@ class Api {
 		});
 
 		return {
-			users: response.data.ocs.data.exact.users,
-			groups: response.data.ocs.data.exact.groups,
-			circles: response.data.ocs.data.exact.circles || [],
+			users: [],
+			groups: [],
+			circles: [],
+			exact: {
+			       users: response.data.ocs.data.exact.users,
+			       groups: response.data.ocs.data.exact.groups,
+			       circles: response.data.ocs.data.exact.circles || [],
+			},
 		};
 	}
 
@@ -264,9 +274,14 @@ class Api {
 		const data = response.data.ocs.data;
 
 		return {
-			users: [...data.users, ...data.exact.users],
-			groups: [...data.groups, ...data.exact.groups],
-			circles: [...(data.circles || []), ...(data.exact.circles || [])],
+			users: data.users,
+			groups: data.groups,
+			circles: data.circles || [],
+			exact: {
+				users: data.exact.users,
+				groups: data.exact.groups,
+				circles: data.exact.circles || [],
+			},
 		};
 	}
 }

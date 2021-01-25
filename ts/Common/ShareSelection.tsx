@@ -63,6 +63,9 @@ const ShareSelection: React.FC<Props> = (props) => {
 
 	function renderSearchResults(options: ShareWith|undefined) {
 		const results = options ? [
+			...options.exact.users.filter(user => !excluded.userIds.includes(user.value.shareWith)),
+			...options.exact.groups.filter(group => !excluded.groupIds.includes(group.value.shareWith)),
+			...options.exact.circles.filter(circle => !excluded.circleIds.includes(circle.value.shareWith)),
 			...options.users.filter(user => !excluded.userIds.includes(user.value.shareWith)),
 			...options.groups.filter(group => !excluded.groupIds.includes(group.value.shareWith)),
 			...options.circles.filter(circle => !excluded.circleIds.includes(circle.value.shareWith)),
