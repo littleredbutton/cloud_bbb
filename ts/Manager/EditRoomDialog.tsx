@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import QRCode from 'qrcode.react';
 import { Access, Room, Permission, RoomShare, api, Restriction } from '../Common/Api';
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
@@ -97,6 +98,17 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 
 	return (
 		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
+			<div className="bbb-form-element">
+				<h3>{t('bbb', 'Raum URL')}</h3>
+				<div className="bbb-input-container">
+					<CopyToClipboard text={api.getRoomUrl(room)}><input type="text" readOnly={true} className="icon-clippy" value={api.getRoomUrl(room)} /></CopyToClipboard>
+					<label className="bbb-qrcode-container">
+						<input type="checkbox" />
+						<QRCode value={api.getRoomUrl(room)} level="M" imageSettings={{src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGnSURBVFiF7de9TxRBHMbxzxG5BonRBOGsVRJfIvGFPwFKX0tjJGqsrfwvCC0YtbJSQyT4J0hB1BhtjZFCI4FoqTRCsbO43g24e+5Q3ZNsZm9+z8zzvZns7Rw9/a0jeIx1bNZ8rYe5WzuFt7CSILj9WsFwHtooADzA7XD/DG/CgDrUwHlcDZ/ncLfdtBoCn9cUGtN8yPiWd/QVikOhfZcQ4G1oD8cA8u2oa9ljyufe3vq+HYx7ph7Avv8YO4Rx2b4uy35oKqubFWhiBl+wiJf4imn0V52smxWYxc22vn7cwwHcqjJZ1RUYi4QXNYUzKQEm/1FvYCIlwEAJz/6UAB9KeN6nBFjAp13qH2VPRjKADdkr9Uek9h3XgicZwGk8wcFI7VConUoFMIZXOLGL5ySWVHgUywI08RSDJbyDwdusE+AGjpb0wjFcrxPgSoXwXJerAnScVgo63gXAaKSv49RVBFgL7dnIwN9dAMR0LrSreUfxbfgCd3BJdix/7Q/pBn5WDPuF++G+gQu4WMjq0Ii9+WPyWeFU3K4WHsm2o+7gNTwMX7SnbW0BScCZl0uGVe8AAAAASUVORK5CYII=', excavate: true, height: 32, width: 32}} />
+					</label>
+				</div>
+			</div>
+
 			{inputElement(t('bbb', 'Name'), 'name')}
 			{inputElement(t('bbb', 'Welcome'), 'welcome')}
 			{inputElement(t('bbb', 'Participant limit'), 'maxParticipants', 'number')}
