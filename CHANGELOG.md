@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- add option to invite moderators via URL (warning: if you use the URL shortener, make sure the moderator token is forwarded)
+- close edit dialog on overlay click
+- add copy-to-clipboard for readonly inputs
+- show exact match first in sharing widget
+- add room url with qr code to edit dialog
+
+### Fixed
+- add missing dark chain icon
+- fix translation of access options
+- enhance accessibility and usability
+- add missing button titles
 
 ## 1.1.4 (2020-12-16)
 ### Fixed
