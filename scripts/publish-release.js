@@ -147,7 +147,7 @@ function hasChangeLogEntry() {
 		fs.readFile(path.join(__dirname, '..', 'CHANGELOG.md'), function (err, data) {
 			if (err) throw err;
 
-			if (!data.includes(`## ${package.version}`)) {
+			if (!data.includes(`## ${package.version}`) && /^\d+\.\d+\.\d+$/.test(package.version)) {
 				throw `Found no change log entry for ${package.version}`;
 			}
 
