@@ -18,6 +18,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - enhance accessibility and usability
 - add missing button titles
 
+### Misc
+- update app description
+- update js dependencies
+- add description to share with input
+- add gitattributes
+- include changelog in build
+
 ## 1.1.4 (2020-12-16)
 ### Fixed
 - room join failure for php < 7.4
