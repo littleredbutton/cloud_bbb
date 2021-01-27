@@ -34,6 +34,7 @@
     "Join" : "Pridruži se",
     "Have an account? Log in." : "Imate račun? Prijavite se.",
     "Hello %s" : "Pozdrav %s",
+    "Name, group …" : "Ime, grupa...",
     "Group" : "Grupa",
     "Searching" : "Traženje",
     "No matches" : "Nema podudaranja",
@@ -84,6 +85,7 @@
     "You are not allowed to change this option, because this room is shared with you." : "Ne možete mijenjati ovu mogućnost jer soba nije dijeljena s vama.",
     "Max. rooms" : "Maks. soba",
     "Max. participants" : "Maks. sudionika",
+    "Group …" : "Grupa...",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Ograničenja ne utječu na postojeće sobe. Minus jedan znači da je vrijednost neograničena. Za svakog korisnika odabire se najmanje ograničavajuća mogućnost ako se primjenjuju višestruka ograničenja.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation can not be undone." : "Jeste li sigurni da želite izbrisati ograničenja za grupu „{name}“? Ova se radnja ne može poništiti.",
     "Delete restrictions for \"{name}\"?" : "Izbrisati ograničenja za „{name}“?",
@@ -91,6 +93,7 @@
     "Unexpected error occurred" : "Došlo je do neočekivane pogreške",
     "API URL is invalid" : "URL API-ja je nevažeći",
     "API secret is invalid" : "Nevažeći tajni ključ API-ja",
+    "URL has to start with HTTPS" : "URL mora počinjati s HTTPS",
     "URL has to contain the {token} placeholder" : "URL mora sadržavati privremeni {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL mora počinjati s https:// i sadržavati {token}. Također se može upotrijebiti privremeni {user}.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundu. Pričekajte.","Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundi. Pričekajte.","Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundi. Pričekajte."]
