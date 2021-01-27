@@ -99,7 +99,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 	return (
 		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
 			<div className="bbb-form-element">
-				<h3>{t('bbb', 'Raum URL')}</h3>
+				<h3>{t('bbb', 'Room URL')}</h3>
 				<div className="bbb-input-container">
 					<CopyToClipboard text={api.getRoomUrl(room)}><input type="text" readOnly={true} className="icon-clippy" value={api.getRoomUrl(room)} /></CopyToClipboard>
 					<label className="bbb-qrcode-container">
