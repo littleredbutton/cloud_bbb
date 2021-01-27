@@ -88,6 +88,8 @@ thankful for people and organisations who are sponsoring features or bug fixes:
 - [Medienwerkstatt Minden-Lübbecke e.V.](https://www.medienwerkstatt.org) manage recordings ([#19])
 - [Deutscher Bundesjugendring](https://www.dbjr.de) version [0.4.0], version [0.5.0]
 - [Graz University of Technology](https://www.tugraz.at) form action ([#47]), navigation entry ([#31]), restrictions ([#43], [#53]), circles ([#61])
+- [Arawa](https://www.arawa.fr) UX audit
+- [Niedersächsisches Landesinstitut für schulische Qualitätsentwicklung – Netzwerk Medienberatung](https://nlq.niedersachsen.de/) moderator url, UX improvements
 
 If you are looking for other ways to contribute to this project, you are welcome
 to look at our [contributor guidelines]. Every contribution is valuable :tada:.
