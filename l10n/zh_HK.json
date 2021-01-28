@@ -1,14 +1,24 @@
 { "translations": {
+    "Back to %s" : "回到 %s",
+    "API URL" : "API 連結位址",
     "Save" : "儲存",
+    "Please enter your name!" : "請輸入您的名稱!",
+    "Display name" : "顯示名稱",
     "Password" : "密碼",
-    "Hello %s" : "你好%s",
+    "Join" : "加入",
+    "Hello %s" : "%s你好",
     "Group" : "群組",
     "Name" : "名稱",
+    "Access" : "存取",
     "Edit" : "編輯",
-    "Create" : "新增",
+    "Welcome" : "歡迎",
+    "Create" : "建立",
     "Delete" : "刪除",
     "Error" : "錯誤",
+    "Server error" : "伺服器錯誤",
+    "moderator" : "主持人",
     "Share" : "分享",
-    "Loading" : "Loading"
+    "Loading" : "載入中",
+    "Settings saved" : "設定已儲存"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
