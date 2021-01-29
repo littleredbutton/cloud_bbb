@@ -65,6 +65,7 @@ OC.L10N.register(
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Jeśli ta opcja jest włączona, generowany jest adres URL moderatora, który umożliwia dostęp za jego zgodą.",
     "Only selected users and groups are allowed to access the room." : "Dostęp do pokoju mają tylko wybrani użytkownicy i grupy.",
     "Edit \"{room}\"" : "Edytuj \"{room}\"",
+    "Room URL" : "Adres URL pokoju",
     "Welcome" : "Witaj",
     "Participant limit" : "Limit uczestnika",
     "Every participant is moderator" : "Każdy uczestnik jest moderatorem",

@@ -63,6 +63,7 @@
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Se abilitata, viene generato un URL moderatore che consente l'accesso con l'autorizzazione del moderatore.",
     "Only selected users and groups are allowed to access the room." : "Solo gli utenti e i gruppi selezionati possono accedere alla stanza.",
     "Edit \"{room}\"" : "Modifica \"{room}\"",
+    "Room URL" : "URL della stanza",
     "Welcome" : "Benvenuto",
     "Participant limit" : "Limite di partecipanti",
     "Every participant is moderator" : "Ogni partecipante è moderatore",
