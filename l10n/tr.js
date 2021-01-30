@@ -64,6 +64,7 @@ OC.L10N.register(
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Bu seçenek etkinleştirildiğinde, sorumlu yetkileri ile erişilebilecek bir sorumlu adresi oluşturulur.",
     "Only selected users and groups are allowed to access the room." : "Odaya yalnız seçilmiş kullanıcı ve gruplar erişebilir.",
     "Edit \"{room}\"" : "“{room}” düzenle",
+    "Room URL" : "Oda Adresi",
     "Welcome" : "Hoş geldiniz",
     "Participant limit" : "Katılımcı sınırı",
     "Every participant is moderator" : "Her katılımcı sorumlu olur",
