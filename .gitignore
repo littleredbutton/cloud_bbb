@@ -8,3 +8,4 @@ node_modules/
 /.env
 /archives/
 .phpunit.result.cache
+.vscode/settings.json
