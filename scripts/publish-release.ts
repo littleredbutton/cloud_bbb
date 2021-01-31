@@ -1,29 +1,43 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-require('colors').setTheme({
+import colors from 'colors';
+import fs from 'fs';
+import path from 'path';
+import inquirer from 'inquirer';
+import simpleGit from 'simple-git/promise';
+import https from 'https';
+import execa from 'execa';
+import {Octokit} from '@octokit/rest';
+import dotenv from 'dotenv';
+import { getChangelogEntry, hasChangeLogEntry } from './imports/changelog';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageInfo = require('../package.json');
+
+declare global {
+    interface String {
+		error: string
+		verbose: string
+		warn: string
+		green: string
+    }
+}
+
+colors.setTheme({
 	verbose: 'cyan',
 	warn: 'yellow',
 	error: 'red',
 });
 
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
-const { Octokit } = require('@octokit/rest');
-const execa = require('execa');
-const inquirer = require('inquirer');
-const git = require('simple-git/promise')();
-const package = require('../package.json');
+dotenv.config();
 
-require('dotenv').config();
-
+const git = simpleGit();
 const isDryRun = process.argv.indexOf('--dry-run') > 1;
-const commitMessage = `release: ${package.version} :tada:`;
-const tagName = `v${package.version}`;
+const commitMessage = `release: ${packageInfo.version} :tada:`;
+const tagName = `v${packageInfo.version}`;
 const files = [
-	path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz`),
-	path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.asc`),
-	path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.ncsig`),
-	path.join(__dirname, '..', 'archives', `bbb-v${package.version}.tar.gz.sig`),
+	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz`),
+	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz.asc`),
+	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz.ncsig`),
+	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz.sig`),
 ];
 
 function pull() {
@@ -37,136 +51,11 @@ async function notAlreadyTagged() {
 }
 
 async function lastCommitNotBuild() {
-	return (await git.log(['-1'])).latest.message !== commitMessage;
+	return (await git.log(['-1'])).latest?.message !== commitMessage;
 }
 
 async function isMasterBranch() {
-	return (await git.branch()) === 'master';
-}
-
-async function generateChangelog() {
-	const latestTag = (await git.tags()).latest;
-	const title = `v${package.version}` === latestTag ? '[Unreleased]' : `${package.version} (${new Date().toISOString().split('T')[0]})`;
-
-	const logs = await git.log({
-		from: latestTag,
-		to: 'HEAD',
-	});
-
-	const sections = [{
-		type: 'feat',
-		label: 'Added',
-	}, {
-		type: 'fix',
-		label: 'Fixed',
-	}];
-
-	const entries = {};
-
-	logs.all.forEach(log => {
-		const match = log.message.match(/^([a-z]+)(?:\((\w+)\))?: (.+)/);
-
-		if (!match) {
-			return;
-		}
-
-		const [, type, scope, description] = match;
-		const entry = { type, scope, description, issues: [] };
-
-		if(log.body) {
-			const matches = log.body.match(/(?:fix|fixes|closes?|refs?) #(\d+)/g) || [];
-
-			for (const match of matches) {
-				const [, number] = match.match(/(\d+)$/);
-
-				entry.issues.push(number);
-			}
-		}
-
-		if (!entries[type]) {
-			entries[type] = [];
-		}
-
-		entries[type].push(entry);
-	});
-
-	let changeLog = `## ${title}\n`;
-
-	function stringifyEntry(entry) {
-		const issues = entry.issues.map(issue => {
-			return `[#${issue}](https://github.com/sualko/cloud_bbb/issues/${issue})`;
-		}).join('');
-
-		return `- ${issues}${issues.length > 0 ? ' ' : ''}${entry.description}\n`;
-	}
-
-	sections.forEach(section => {
-		if (!entries[section.type]) {
-			return;
-		}
-
-		changeLog += `### ${section.label}\n`;
-
-		entries[section.type].forEach(entry => {
-			changeLog += stringifyEntry(entry);
-		});
-
-		delete entries[section.type];
-
-		changeLog += '\n';
-	});
-
-	const miscKeys = Object.keys(entries);
-
-	if (miscKeys && miscKeys.length > 0) {
-		changeLog += '### Misc\n';
-
-		miscKeys.forEach(type => {
-			entries[type].forEach(entry => {
-				changeLog += stringifyEntry(entry);
-			});
-		});
-	}
-
-	return changeLog;
-}
-
-async function editChangeLog(changeLog) {
-	const answers = await inquirer.prompt([{
-		type: 'editor',
-		name: 'changeLog',
-		message: 'You have now the possibility to edit the change log',
-		default: changeLog,
-	}]);
-
-	return answers.changeLog;
-}
-
-function hasChangeLogEntry() {
-	return new Promise(resolve => {
-		fs.readFile(path.join(__dirname, '..', 'CHANGELOG.md'), function (err, data) {
-			if (err) throw err;
-
-			if (!data.includes(`## ${package.version}`) && /^\d+\.\d+\.\d+$/.test(package.version)) {
-				throw `Found no change log entry for ${package.version}`;
-			}
-
-			resolve();
-		});
-	});
-}
-
-async function commitChangeLog() {
-	const status = await git.status();
-
-	if (status.staged.length > 0) {
-		throw 'Repo not clean. Found staged files.';
-	}
-
-	if (!isDryRun) {
-		await git.add('CHANGELOG.md');
-		await git.commit('docs: update change log', ['-n']);
-	}
+	return (await git.branch()).current === 'master';
 }
 
 async function hasArchiveAndSignatures() {
@@ -180,7 +69,7 @@ async function stageAllFiles() {
 
 	const gitProcess = execa('git', ['add', '-u']);
 
-	gitProcess.stdout.pipe(process.stdout);
+	gitProcess.stdout?.pipe(process.stdout);
 
 	return gitProcess;
 }
@@ -188,7 +77,7 @@ async function stageAllFiles() {
 function showStagedDiff() {
 	const gitProcess = execa('git', ['diff', '--staged']);
 
-	gitProcess.stdout.pipe(process.stdout);
+	gitProcess.stdout?.pipe(process.stdout);
 
 	return gitProcess;
 }
@@ -240,8 +129,8 @@ async function createGithubRelease(changeLog) {
 		userAgent: 'custom releaser for sualko/cloud_bbb',
 	});
 
-	const origin = (await git.remote(['get-url', 'origin'])).trim();
-	const matches = origin.match(/^git@github\.com:(.+)\/(.+)\.git$/);
+	const origin = (await git.remote(['get-url', 'origin'])) || '';
+	const matches = origin.trim().match(/^git@github\.com:(.+)\/(.+)\.git$/);
 
 	if (!matches) {
 		throw 'Origin is not configured or no ssh url';
@@ -252,11 +141,10 @@ async function createGithubRelease(changeLog) {
 	const releaseOptions = {
 		owner,
 		repo,
-		// eslint-disable-next-line @typescript-eslint/camelcase
 		tag_name: tagName,
 		name: `BigBlueButton Integration ${tagName}`,
 		body: changeLog.replace(/^## [^\n]+\n/, ''),
-		prerelease: !/^\d+\.\d+\.\d+$/.test(package.version),
+		prerelease: !/^\d+\.\d+\.\d+$/.test(packageInfo.version),
 	};
 
 	if (isDryRun) {
@@ -289,9 +177,8 @@ async function createGithubRelease(changeLog) {
 		const uploadOptions = {
 			owner,
 			repo,
-			// eslint-disable-next-line @typescript-eslint/camelcase
 			release_id: releaseResponse.data.id,
-			data: fs.createReadStream(file),
+			data: <any> fs.createReadStream(file),
 			headers: {
 				'content-type': getMimeType(filename),
 				'content-length': fs.statSync(file)['size'],
@@ -316,7 +203,7 @@ async function uploadToNextcloudStore(archiveUrl) {
 
 	const hostname = 'apps.nextcloud.com';
 	const apiEndpoint = '/api/v1/apps/releases';
-	const signatureFile = files.find(file => file.endsWith('.ncsig'));
+	const signatureFile = <string> files.find(file => file.endsWith('.ncsig'));
 	const data = JSON.stringify({
 		download: archiveUrl,
 		signature: fs.readFileSync(signatureFile, 'utf-8'),
@@ -339,7 +226,7 @@ async function uploadToNextcloudStore(archiveUrl) {
 		return;
 	}
 
-	return new Promise((resolve, reject) => {
+	return new Promise<void>((resolve, reject) => {
 		const req = https.request(options, res => {
 			if (res.statusCode === 200) {
 				console.log('App release was updated successfully'.verbose);
@@ -383,22 +270,15 @@ async function run() {
 	await isMasterBranch();
 	console.log('✔ this is the master branch'.green);
 
-	let changeLog = await generateChangelog();
-	console.log('✔ change log generated'.green);
+	await hasChangeLogEntry(packageInfo.version);
+	console.log('✔ there is a change log entry for this version'.green);
 
-	changeLog = await editChangeLog(changeLog);
-	console.log('✔ change log updated'.green);
+	const changeLog = await getChangelogEntry(packageInfo.version);
 
 	console.log(changeLog);
 
 	console.log('Press any key to continue...');
 	await keypress();
-
-	await hasChangeLogEntry();
-	console.log('✔ there is a change log entry for this version'.green);
-
-	await commitChangeLog();
-	console.log('✔ change log commited'.green);
 
 	await hasArchiveAndSignatures();
 	console.log('✔ found archive and signatures'.green);
@@ -430,7 +310,7 @@ async function run() {
 
 	await uploadToNextcloudStore(archiveAssetUrl);
 	console.log('✔ released in Nextcloud app store'.green);
-};
+}
 
 run().catch(err => {
 	console.log(`✘ ${err.toString()}`.error);

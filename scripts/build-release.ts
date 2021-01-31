@@ -1,27 +1,45 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-require('colors').setTheme({
+import colors from 'colors';
+import fs from 'fs';
+import path from 'path';
+import inquirer from 'inquirer';
+import simpleGit from 'simple-git/promise';
+import libxml from 'libxmljs';
+import https from 'https';
+import archiver from 'archiver';
+import execa from 'execa';
+import {exec} from 'child_process';
+import { generateChangelog, hasChangeLogEntry } from './imports/changelog';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageInfo = require('../package.json');
+
+declare global {
+    interface String {
+		error: string
+		verbose: string
+		warn: string
+		green: string
+    }
+}
+
+colors.setTheme({
 	verbose: 'cyan',
 	warn: 'yellow',
 	error: 'red',
 });
 
-const fs = require('fs');
-const path = require('path');
-const libxml = require('libxmljs');
-const https = require('https');
-const archiver = require('archiver');
-const execa = require('execa');
-const git = require('simple-git/promise')();
-const package = require('../package.json');
-
+const git = simpleGit();
 const infoXmlPath = './appinfo/info.xml';
 const isStableRelease = process.argv.indexOf('--stable') > 1;
+const isDryRun = process.argv.indexOf('--dry-run') > 1;
 
 async function getVersion() {
-	return package.version + (!isStableRelease ? '-git.' + (await git.raw(['rev-parse', '--short', 'HEAD'])).trim() : '');
+	return packageInfo.version + (!isStableRelease ? '-git.' + (await git.raw(['rev-parse', '--short', 'HEAD'])).trim() : '');
 }
 
-run();
+run().catch(err => {
+	console.log(`✘ ${err.toString()}`.error);
+});
 
 async function run() {
 	const appId = await prepareInfoXml();
@@ -55,6 +73,9 @@ async function createRelease(appId) {
 	const version = await getVersion();
 	console.log(`I'm now building ${appId} in version ${version}.`.verbose);
 
+	await isRepoClean();
+	console.log('✔ repo is clean'.green);
+
 	await execa('yarn', ['composer:install:dev']);
 	console.log('✔ composer dev dependencies installed'.green);
 
@@ -67,6 +88,8 @@ async function createRelease(appId) {
 	await execa('yarn', ['build']);
 	console.log('✔ scripts built'.green);
 
+	await updateChangelog();
+
 	const filePath = await createArchive(appId, appId + '-v' + version);
 	await createNextcloudSignature(appId, filePath);
 	await createGPGSignature(filePath);
@@ -74,6 +97,64 @@ async function createRelease(appId) {
 
 	await execa('yarn', ['composer:install:dev']);
 	console.log('✔ composer dev dependencies installed'.green);
+}
+
+async function isRepoClean() {
+	const status = await git.status();
+
+	if (status.staged.length > 0) {
+		throw 'Repo not clean. Found staged files.';
+	}
+
+	if (status.modified.length > 2 || !status.modified.includes('package.json') || !status.modified.includes('appinfo/info.xml')) {
+		throw 'Repo not clean. Found modified files.';
+	}
+
+	if (status.not_added.length > 0) {
+		throw 'Repo not clean. Found not added files.';
+	}
+}
+
+async function updateChangelog() {
+	if (!isStableRelease) {
+		console.log('Skip changelog for non-stable releases.'.warn);
+		return;
+	}
+
+	const changeLog = await generateChangelog(packageInfo.version);
+	console.log('✔ change log generated'.green);
+
+	console.log(changeLog);
+
+	console.log('Press any key to continue...');
+	await keypress();
+
+	await hasChangeLogEntry(packageInfo.version);
+	console.log('✔ there is a change log entry for this version'.green);
+
+	await commitChangeLog();
+	console.log('✔ change log commited'.green);
+}
+
+async function keypress() {
+	return inquirer.prompt([{
+		type: 'input',
+		name: 'keypress',
+		message: 'Press any key to continue... (where is the any key?)',
+	}]);
+}
+
+async function commitChangeLog(): Promise<void> {
+	const status = await git.status();
+
+	if (status.staged.length > 0) {
+		throw 'Repo not clean. Found staged files.';
+	}
+
+	if (!isDryRun) {
+		await git.add('CHANGELOG.md');
+		await git.commit('docs: update change log', ['-n']);
+	}
 }
 
 
@@ -135,11 +216,7 @@ function createArchive(appId, fileBaseName) {
 }
 
 function createNextcloudSignature(appId, filePath) {
-	const {
-		exec,
-	} = require('child_process');
-
-	return new Promise((resolve, reject) => {
+	return new Promise<void>((resolve) => {
 		const sigPath = filePath + '.ncsig';
 		exec(`openssl dgst -sha512 -sign ~/.nextcloud/certificates/${appId}.key ${filePath} | openssl base64 > ${sigPath}`, (error, stdout, stderr) => {
 			if (error) {
@@ -162,11 +239,7 @@ function createNextcloudSignature(appId, filePath) {
 }
 
 function createGPGSignature(filePath) {
-	const {
-		exec,
-	} = require('child_process');
-
-	return new Promise((resolve, reject) => {
+	return new Promise<void>((resolve) => {
 		exec(`gpg --yes --detach-sign "${filePath}"`, (error, stdout, stderr) => {
 			if (error) {
 				throw error;
@@ -188,11 +261,7 @@ function createGPGSignature(filePath) {
 }
 
 function createGPGArmorSignature(filePath) {
-	const {
-		exec,
-	} = require('child_process');
-
-	return new Promise((resolve, reject) => {
+	return new Promise<void>((resolve) => {
 		exec(`gpg --yes --detach-sign --armor "${filePath}"`, (error, stdout, stderr) => {
 			if (error) {
 				throw error;
@@ -220,9 +289,10 @@ async function validateXml(xmlDoc) {
 		throw 'Found no schema location';
 	}
 
-
-	let schemaString;
+	let schemaString: string;
 	try {
+		console.log('Downloading schema file...'.verbose);
+
 		schemaString = await wget(schemaLocation);
 	} catch (err) {
 		console.log('Could not download schema. Skip validation.'.warn);
@@ -245,8 +315,8 @@ async function validateXml(xmlDoc) {
 	}
 }
 
-function wget(url) {
-	return new Promise((resolve, reject) => {
+function wget(url: string) {
+	return new Promise<string>((resolve, reject) => {
 		https.get(url, (resp) => {
 			let data = '';
 
