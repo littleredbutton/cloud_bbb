@@ -1,12 +1,13 @@
-import colors from 'colors';
-import fs from 'fs';
-import path from 'path';
-import inquirer from 'inquirer';
-import simpleGit from 'simple-git/promise';
-import https from 'https';
-import execa from 'execa';
-import {Octokit} from '@octokit/rest';
-import dotenv from 'dotenv';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require('colors');
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+const execa = require('execa');
+const simpleGit = require('simple-git/promise');
+const inquirer = require('inquirer');
+const dotenv = require('dotenv');
+const { Octokit } = require('@octokit/rest');
 import { getChangelogEntry, hasChangeLogEntry } from './imports/changelog';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -39,6 +40,8 @@ const files = [
 	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz.ncsig`),
 	path.join(__dirname, '..', 'archives', `bbb-v${packageInfo.version}.tar.gz.sig`),
 ];
+
+isDryRun && console.log('Script is executed in dry-run mode.'.verbose);
 
 function pull() {
 	return git.pull('origin', 'master');

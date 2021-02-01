@@ -1,16 +1,16 @@
-import colors from 'colors';
-import fs from 'fs';
-import path from 'path';
-import inquirer from 'inquirer';
-import simpleGit from 'simple-git/promise';
-import libxml from 'libxmljs';
-import https from 'https';
-import archiver from 'archiver';
-import execa from 'execa';
-import {exec} from 'child_process';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require('colors');
+const fs = require('fs');
+const path = require('path');
+const libxml = require('libxmljs');
+const https = require('https');
+const archiver = require('archiver');
+const execa = require('execa');
+const simpleGit = require('simple-git/promise');
+const inquirer = require('inquirer');
+const { exec } = require('child_process');
 import { generateChangelog, hasChangeLogEntry } from './imports/changelog';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageInfo = require('../package.json');
 
 declare global {

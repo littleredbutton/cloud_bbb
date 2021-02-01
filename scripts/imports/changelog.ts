@@ -1,7 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import inquirer from 'inquirer';
-import simpleGit from 'simple-git/promise';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const fs = require('fs');
+const path = require('path');
+const simpleGit = require('simple-git/promise');
+const inquirer = require('inquirer');
 
 const git = simpleGit();
 
@@ -104,14 +105,22 @@ export async function editChangeLog(changeLog: string):Promise<string> {
 }
 
 export async function hasChangeLogEntry(version: string): Promise<boolean> {
+	if (!version) {
+		return false;
+	}
+
 	const entry = await getChangelogEntry(version);
 
-	return entry.split('\n').filter(line => !!line.trim()).length > 1;
+	if (entry.split('\n').filter(line => !!line.trim()).length < 2) {
+		throw `Found no change log entry for ${version}`;
+	}
+
+	return true;
 }
 
 export function getChangelogEntry(version: string): Promise<string> {
 	return new Promise<string>(resolve => {
-		fs.readFile(path.join(__dirname, '..', 'CHANGELOG.md'), 'utf8', function (err, data) {
+		fs.readFile(path.join(__dirname, '..', '..', 'CHANGELOG.md'), 'utf8', function (err, data) {
 			if (err) throw err;
 
 			const releaseHeader = /^\d+\.\d+\.\d+$/.test(version) ? `## ${version}` : '## [Unreleased]';
