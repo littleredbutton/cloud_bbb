@@ -25,6 +25,7 @@
         "classmap-authoritative": true
     },
     "scripts": {
+        "test": "phpunit --configuration phpunit.xml --fail-on-warning",
         "cs:check": "php-cs-fixer fix --dry-run --diff",
         "cs:fix": "php-cs-fixer fix",
         "lint": "find . -name \\*.php -not -path './vendor/*' -exec php -l \"{}\" \\;",
