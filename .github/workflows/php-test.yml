@@ -44,7 +44,7 @@ jobs:
     - name: Downgrade phpunit for php7.2
       if: ${{ matrix.php-versions == '7.2' }}
       working-directory: nextcloud/apps/bbb
-      run: composer update christophwurst/nextcloud_testing -W
+      run: composer update phpunit/phpunit -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
