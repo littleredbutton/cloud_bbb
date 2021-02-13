@@ -52,6 +52,8 @@ jobs:
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
+    - name: Enable app
+      run: php -f nextcloud/occ app:enable bbb
     - name: Run tests
       working-directory: nextcloud/apps/bbb
       run: composer run test
