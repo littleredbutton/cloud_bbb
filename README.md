@@ -61,6 +61,8 @@ $ sudo bbb-conf --secret
 Enter these values in the additional settings section on the admin
 configuration page of your Nextcloud instance.
 
+![Screenshot admin section](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-admin.png)
+
 ## Create your first room
 Go to the BigBlueButton section inside your personal settings page and enter a
 room name. That's it. You can now distribute the room url.

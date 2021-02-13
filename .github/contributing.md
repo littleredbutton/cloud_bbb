@@ -62,6 +62,8 @@ If you like to sponsor a specific feature, bug fix or the project in general you
 can also contact any maintainer of this application to support open source
 development.
 
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sualko)
+
 [open a new issue]: https://github.com/sualko/cloud_bbb/issues
 [Conventional Commits]: https://www.conventionalcommits.org
 [Nextclouds Transifex]: https://www.transifex.com/nextcloud/nextcloud/
