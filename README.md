@@ -1,6 +1,8 @@
 # BigBlueButton™ integration for Nextcloud
 
-[![Build Status](https://travis-ci.org/sualko/cloud_bbb.svg?branch=master)](https://travis-ci.org/sualko/cloud_bbb)
+![Static analysis](https://github.com/sualko/cloud_bbb/workflows/Static%20analysis/badge.svg)
+![PHP Tests](https://github.com/sualko/cloud_bbb/workflows/PHP%20Tests/badge.svg)
+![Lint](https://github.com/sualko/cloud_bbb/workflows/Lint/badge.svg)
 ![Downloads](https://img.shields.io/github/downloads/sualko/cloud_bbb/total.svg)
 ![GitHub release](https://img.shields.io/github/release/sualko/cloud_bbb.svg)
 
