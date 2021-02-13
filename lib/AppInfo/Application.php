@@ -50,7 +50,8 @@ class Application extends App {
 	}
 
 	private function registerAsPersonalSetting() {
-		$settingsManager = $this->getContainer()->getServer()->getSettingsManager();
+		/** @var ISettingsManager */
+		$settingsManager = $this->getContainer()->query(ISettingsManager::class);
 
 		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}

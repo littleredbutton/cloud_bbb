@@ -12,16 +12,12 @@ jobs:
     strategy:
       matrix:
         php-versions: ['7.3', '7.4']
-        nextcloud-versions: ['stable19', 'stable20', 'stable21', 'master']
+        nextcloud-versions: ['stable19', 'stable20', 'stable21']
         include:
           - php-versions: '7.2'
             nextcloud-versions: 'stable19'
           - php-versions: '7.2'
             nextcloud-versions: 'stable20'
-          - php-versions: '8.0'
-            nextcloud-versions: 'stable21'
-          - php-versions: '8.0'
-            nextcloud-versions: 'master'
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
@@ -48,10 +44,12 @@ jobs:
     - name: Downgrade phpunit for php7.2
       if: ${{ matrix.php-versions == '7.2' }}
       working-directory: nextcloud/apps/bbb
-      run: composer update christophwurst/nextcloud_testing -W
+      run: composer update phpunit/phpunit -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
+    - name: Enable app
+      run: php -f nextcloud/occ app:enable bbb
     - name: Run tests
       working-directory: nextcloud/apps/bbb
       run: composer run test

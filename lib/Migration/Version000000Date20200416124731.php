@@ -28,7 +28,6 @@ class Version000000Date20200416124731 extends SimpleMigrationStep {
 				'notnull'       => true,
 			]);
 			$table->addColumn('uid', 'string', [
-				'unique'  => true,
 				'notnull' => true,
 				'length'  => 64
 			]);

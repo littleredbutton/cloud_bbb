@@ -31,7 +31,6 @@ class Version000000Date20200826100844 extends SimpleMigrationStep {
 				'notnull'       => true,
 			]);
 			$table->addColumn('group_id', 'string', [
-				'unique'  => true,
 				'notnull' => true,
 				'length'  => 200,
 			]);
