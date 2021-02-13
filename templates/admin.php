@@ -24,6 +24,9 @@ script('bbb', 'restrictions');
             <label for="bbb-app-navigation"><?php p($l->t('Show room manager in app navigation instead of settings page.')); ?></label>
         </p>
 
+        <h3><?php p($l->t('Community')); ?></h3>
+        <p><?php p($l->t('Are you enjoying this app? Give something back to the open source community.')); ?> <a href="https://github.com/sualko/cloud_bbb/blob/master/.github/contributing.md" target="_blank" rel="noopener noreferrer" class="button"><span class="heart"></span> <?php p($l->t('Checkout the contributor guide')); ?></a></p>
+
         <h3>URL Shortener</h3>
         <p><?php p($l->t('If you like to use shorter urls, you can enter a forwarding proxy below.')); ?></p>
 

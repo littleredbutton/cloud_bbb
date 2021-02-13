@@ -6,6 +6,14 @@
   }
 }
 
+.heart {
+  color: #ff0000;
+
+  &::before {
+    content: '\2665';
+  }
+}
+
 .oc-dialog.bbb-dialog {
   max-height: calc(100% - 70px);
   margin-top: 25px;
