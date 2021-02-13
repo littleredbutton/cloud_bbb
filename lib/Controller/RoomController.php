@@ -75,22 +75,22 @@ class RoomController extends Controller {
 		string $access
 	): DataResponse {
 		if (!$this->permission->isAllowedToCreateRoom($this->userId)) {
-			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		$restriction = $this->permission->getRestriction($this->userId);
 
 		if ($restriction->getMaxParticipants() > -1 && ($maxParticipants > $restriction->getMaxParticipants() || $maxParticipants <= 0)) {
-			return new DataResponse('Max participants limit exceeded.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Max participants limit exceeded.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		if (!$restriction->getAllowRecording() && $record) {
-			return new DataResponse('Not allowed to enable recordings.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Not allowed to enable recordings.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		$disabledRoomTypes = \json_decode($restriction->getRoomTypes());
 		if (in_array($access, $disabledRoomTypes) || !in_array($access, Room::ACCESS)) {
-			return new DataResponse('Access type not allowed.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Access type not allowed.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		return new DataResponse($this->service->create(
@@ -126,16 +126,16 @@ class RoomController extends Controller {
 		$restriction = $this->permission->getRestriction($this->userId);
 
 		if ($restriction->getMaxParticipants() > -1 && $maxParticipants !== $room->getMaxParticipants() && ($maxParticipants > $restriction->getMaxParticipants() || $maxParticipants <= 0)) {
-			return new DataResponse('Max participants limit exceeded.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Max participants limit exceeded.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		if (!$restriction->getAllowRecording() && $record !== $room->getRecord()) {
-			return new DataResponse('Not allowed to enable recordings.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Not allowed to enable recordings.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		$disabledRoomTypes = \json_decode($restriction->getRoomTypes());
 		if ((in_array($access, $disabledRoomTypes) && $access !== $room->getAccess()) || !in_array($access, Room::ACCESS)) {
-			return new DataResponse('Access type not allowed.', Http::STATUS_BAD_REQUEST);
+			return new DataResponse(['message' => 'Access type not allowed.'], Http::STATUS_BAD_REQUEST);
 		}
 
 		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken) {
@@ -150,7 +150,7 @@ class RoomController extends Controller {
 		$room = $this->service->find($id);
 
 		if (!$this->permission->isAdmin($room, $this->userId)) {
-			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		return $this->handleNotFound(function () use ($id) {

@@ -108,7 +108,7 @@ class RoomShareController extends Controller {
 		int $permission
 	): DataResponse {
 		if (!$this->isUserAllowed($roomId)) {
-			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		return new DataResponse($this->service->create(
@@ -130,7 +130,7 @@ class RoomShareController extends Controller {
 		int $permission
 	): DataResponse {
 		if (!$this->isUserAllowed($roomId)) {
-			return new DataResponse(null, Http::STATUS_FORBIDDEN);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		return $this->handleNotFound(function () use (
@@ -157,7 +157,7 @@ class RoomShareController extends Controller {
 			$roomShare = $this->service->find($id);
 
 			if (!$this->isUserAllowed($roomShare->getRoomId())) {
-				return new DataResponse(null, Http::STATUS_FORBIDDEN);
+				return new DataResponse([], Http::STATUS_FORBIDDEN);
 			}
 
 			return $this->service->delete($id);

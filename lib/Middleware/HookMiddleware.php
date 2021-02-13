@@ -57,11 +57,11 @@ class HookMiddleware extends Middleware {
 		}
 
 		if ($exception instanceof NotFoundException) {
-			return new JSONResponse(null, Http::STATUS_NOT_FOUND);
+			return new JSONResponse([], Http::STATUS_NOT_FOUND);
 		}
 
 		if ($exception instanceof NoPermissionException) {
-			return new JSONResponse(null, Http::STATUS_FORBIDDEN);
+			return new JSONResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		throw $exception;

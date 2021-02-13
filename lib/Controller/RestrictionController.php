@@ -69,7 +69,7 @@ class RestrictionController extends Controller {
 		string $groupId
 	): DataResponse {
 		if ($this->service->existsByGroupId($groupId)) {
-			return new DataResponse(null, Http::STATUS_CONFLICT);
+			return new DataResponse([], Http::STATUS_CONFLICT);
 		}
 
 		return new DataResponse($this->service->create(

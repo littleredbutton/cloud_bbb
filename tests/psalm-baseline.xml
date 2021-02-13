@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.5.1@257a1ca672a79dedc852be1285a7b97154646418">
+  <file src="lib/CircleHelper.php">
+    <UndefinedClass occurrences="3">
+      <code>\OCA\Circles\Api\v1\Circles</code>
+      <code>\OCA\Circles\Model\Circle</code>
+      <code>\OCA\Circles\Model\Member</code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Controller/RoomController.php">
+    <NullArgument occurrences="1">
+      <code>null</code>
+    </NullArgument>
+  </file>
+  <file src="lib/Controller/ServerController.php">
+    <InvalidArgument occurrences="1">
+      <code>$success</code>
+    </InvalidArgument>
+  </file>
+  <file src="lib/NoPermissionResponse.php">
+    <MissingDependency occurrences="1">
+      <code>Template</code>
+    </MissingDependency>
+  </file>
+  <file src="lib/NotFoundResponse.php">
+    <MissingDependency occurrences="1">
+      <code>Template</code>
+    </MissingDependency>
+  </file>
+  <file src="lib/Service/RestrictionService.php">
+    <InvalidReturnType occurrences="3">
+      <code>Restriction</code>
+      <code>Restriction</code>
+      <code>Restriction</code>
+    </InvalidReturnType>
+  </file>
+  <file src="lib/Service/RoomService.php">
+    <InvalidReturnType occurrences="1">
+      <code>Room</code>
+    </InvalidReturnType>
+  </file>
+  <file src="lib/Service/RoomShareService.php">
+    <InvalidReturnType occurrences="3">
+      <code>RoomShare</code>
+      <code>RoomShare</code>
+      <code>RoomShare</code>
+    </InvalidReturnType>
+  </file>
+</files>
