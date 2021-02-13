@@ -44,7 +44,7 @@ class RoomService {
 	/**
 	 * @throws RoomNotFound
 	 */
-	public function find($id): Room {
+	public function find(int $id): Room {
 		try {
 			return $this->mapper->find($id);
 
@@ -57,7 +57,7 @@ class RoomService {
 		}
 	}
 
-	public function findByUid($uid) {
+	public function findByUid(string $uid) {
 		try {
 			return $this->mapper->findByUid($uid);
 		} catch (Exception $e) {
@@ -66,7 +66,7 @@ class RoomService {
 		}
 	}
 
-	public function create($name, $welcome, $maxParticipants, $record, $access, $userId) {
+	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId) {
 		$room = new Room();
 
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
@@ -90,7 +90,10 @@ class RoomService {
 		return $createdRoom;
 	}
 
-	public function update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken) {
+	/**
+	 * @param null|string $moderatorToken
+	 */
+	public function update(int $id, string $name, string $welcome, int $maxParticipants, bool $record, string $access, bool $everyoneIsModerator, bool $requireModerator, ?string $moderatorToken) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -116,7 +119,7 @@ class RoomService {
 		}
 	}
 
-	public function delete($id) {
+	public function delete(int $id) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -130,7 +133,10 @@ class RoomService {
 		}
 	}
 
-	private function humanReadableRandom($length) {
+	/**
+	 * @param int $length
+	 */
+	private function humanReadableRandom(int $length) {
 		return \OC::$server->getSecureRandom()->generate($length, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE);
 	}
 }

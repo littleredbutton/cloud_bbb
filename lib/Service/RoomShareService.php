@@ -45,7 +45,7 @@ class RoomShareService {
 		}
 	}
 
-	public function find($id): RoomShare {
+	public function find(int $id): RoomShare {
 		try {
 			return $this->mapper->find($id);
 		} catch (Exception $e) {

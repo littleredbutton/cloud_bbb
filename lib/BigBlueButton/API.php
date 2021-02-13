@@ -217,7 +217,7 @@ class API {
 		];
 	}
 
-	public function check($url, $secret) {
+	public function check(string $url, string $secret) {
 		$server = new BigBlueButton($url, $secret);
 
 		$meetingParams = new IsMeetingRunningParameters('foobar');
@@ -239,7 +239,10 @@ class API {
 		}
 	}
 
-	public function getVersion($url = null) {
+	/**
+	 * @param null|string $url
+	 */
+	public function getVersion(?string $url = null) {
 		$server = $url === null ? $this->getServer() : new BigBlueButton($url, '');
 
 		return $server->getApiVersion()->getVersion();

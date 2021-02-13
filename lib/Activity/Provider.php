@@ -197,7 +197,7 @@ class Provider implements IProvider {
 		$event->setIcon($this->url->getAbsoluteURL($imagePath));
 	}
 
-	private function setSubjects(IEvent $event, $subject, array $parameters) {
+	private function setSubjects(IEvent $event, string $subject, array $parameters) {
 		$placeholders = $replacements = [];
 
 		foreach ($parameters as $placeholder => $parameter) {
@@ -213,7 +213,7 @@ class Provider implements IProvider {
 			->setRichSubject($subject, $parameters);
 	}
 
-	protected function getUser($uid) {
+	protected function getUser(string $uid) {
 		$user = $this->userManager->get($uid);
 
 		if ($user instanceof IUser) {

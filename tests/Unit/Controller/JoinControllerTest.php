@@ -56,6 +56,7 @@ class JoinControllerTest extends TestCase {
 	}
 
 	public function testNonExistingRoom() {
+		$this->controller->setToken('foobar');
 		$this->expectException(NotFoundException::class);
 		$this->service
 			->expects($this->once())

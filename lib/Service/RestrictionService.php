@@ -66,7 +66,7 @@ class RestrictionService {
 		return $restriction;
 	}
 
-	public function find($id): Restriction {
+	public function find(int $id): Restriction {
 		try {
 			return $this->mapper->find($id);
 		} catch (Exception $e) {

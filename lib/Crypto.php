@@ -32,7 +32,7 @@ class Crypto {
 		return $validMac === $mac;
 	}
 
-	private function encodeBase64UrlSafe($data) {
+	private function encodeBase64UrlSafe(string $data) {
 		$b64 = \base64_encode($data);
 
 		if ($b64 === false) {

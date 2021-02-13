@@ -16,13 +16,20 @@
         "phpunit/phpunit": "^8",
         "friendsofphp/php-cs-fixer": "^2.16",
         "nextcloud/coding-standard": "^0.3.0",
-        "phpstan/phpstan": "^0.12.29"
+        "phpstan/phpstan": "^0.12.29",
+        "christophwurst/nextcloud": "^20.0",
+        "vimeo/psalm": "^4.5"
     },
     "config": {
         "optimize-autoloader": true,
         "classmap-authoritative": true
     },
     "scripts": {
-        "lint": "find . -name \\*.php -not -path './vendor/*' -exec php -l \"{}\" \\;"
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "lint": "find . -name \\*.php -not -path './vendor/*' -exec php -l \"{}\" \\;",
+        "psalm": "psalm --threads=1",
+        "psalm:clear": "psalm --clear-cache && psalm --clear-global-cache",
+        "psalm:fix": "psalm --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType"
     }
 }
