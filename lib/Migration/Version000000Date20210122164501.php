@@ -29,7 +29,6 @@ class Version000000Date20210122164501 extends SimpleMigrationStep {
 			if (!$table->hasColumn('moderator_token')) {
 				$table->addColumn('moderator_token', 'string', [
 					'notnull' => false,
-					'unique'  => true,
 					'length'  => 64
 				]);
 			}
