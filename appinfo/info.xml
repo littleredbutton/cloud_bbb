@@ -26,6 +26,9 @@ Developer wanted! If you have time it would be awesome if you could help to enha
     <licence>agpl</licence>
     <author mail="klaus@jsxc.org">Klaus Herberth</author>
     <namespace>BigBlueButton</namespace>
+    <types>
+        <prevent_group_restriction/>
+    </types>
     <category>social</category>
     <category>multimedia</category>
     <category>integration</category>
