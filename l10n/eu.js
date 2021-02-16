@@ -25,6 +25,7 @@ OC.L10N.register(
     "API secret" : "API sekretua",
     "Save" : "Gorde",
     "Show room manager in app navigation instead of settings page." : "Erakutsi gela kudeatzailea nabigazio aplikazioan ezarpenen orria beharrean",
+    "Community" : "Komunitatea",
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "URL laburragoak erabili nahi badituzu, azpiko proxyan sar zaitezke.",
     "URL shortener" : "URL laburtzailea",
     "You will be forwarded to the room in the next few seconds." : "Gelara birbidalia izango zara hurrengo segunduetan",
