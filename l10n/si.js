@@ -16,7 +16,9 @@ OC.L10N.register(
     "Max" : "උපරිම",
     "Edit" : "සංස්කරණය",
     "Welcome" : "සාදරයෙන් පිළිගනිමු",
+    "Create" : "සාදන්න",
     "Error" : "දෝෂය",
-    "Share" : "බෙදාගන්න"
+    "Share" : "බෙදාගන්න",
+    "Loading" : "පූරණය වෙමින්"
 },
 "nplurals=2; plural=(n != 1);");
