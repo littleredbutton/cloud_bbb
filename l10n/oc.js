@@ -25,6 +25,7 @@ OC.L10N.register(
     "Delete?" : "Suprimir ?",
     "Could not delete record" : "Supression de l’enregistrament impossibla",
     "Server error" : "Error del servidor",
+    "moderator" : "moderator",
     "Share" : "Partejar",
     "Loading" : "Loading",
     "Settings saved" : "Paramètres enregistrats",

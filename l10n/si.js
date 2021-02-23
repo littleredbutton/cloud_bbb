@@ -12,6 +12,7 @@ OC.L10N.register(
     "Hello %s" : "ආයුබෝවන් %s",
     "Group" : "සමූහය",
     "Searching" : "සොයමින්",
+    "Public" : "පොදු",
     "Name" : "නම",
     "Max" : "උපරිම",
     "Edit" : "සංස්කරණය",
