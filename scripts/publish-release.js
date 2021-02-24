@@ -8,19 +8,10 @@ const simpleGit = require('simple-git/promise');
 const inquirer = require('inquirer');
 const dotenv = require('dotenv');
 const { Octokit } = require('@octokit/rest');
-import { getChangelogEntry, hasChangeLogEntry } from './imports/changelog';
+const { getChangelogEntry, hasChangeLogEntry } = require('./imports/changelog');
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageInfo = require('../package.json');
-
-declare global {
-    interface String {
-		error: string
-		verbose: string
-		warn: string
-		green: string
-    }
-}
 
 colors.setTheme({
 	verbose: 'cyan',
@@ -54,7 +45,9 @@ async function notAlreadyTagged() {
 }
 
 async function lastCommitNotBuild() {
-	return (await git.log(['-1'])).latest?.message !== commitMessage;
+	const latest = (await git.log(['-1'])).latest || {};
+
+	return latest.message !== commitMessage;
 }
 
 async function isMasterBranch() {
@@ -72,7 +65,7 @@ async function stageAllFiles() {
 
 	const gitProcess = execa('git', ['add', '-u']);
 
-	gitProcess.stdout?.pipe(process.stdout);
+	gitProcess.stdout.pipe(process.stdout);
 
 	return gitProcess;
 }
@@ -80,7 +73,7 @@ async function stageAllFiles() {
 function showStagedDiff() {
 	const gitProcess = execa('git', ['diff', '--staged']);
 
-	gitProcess.stdout?.pipe(process.stdout);
+	gitProcess.stdout.pipe(process.stdout);
 
 	return gitProcess;
 }
@@ -181,7 +174,7 @@ async function createGithubRelease(changeLog) {
 			owner,
 			repo,
 			release_id: releaseResponse.data.id,
-			data: <any> fs.createReadStream(file),
+			data: fs.createReadStream(file),
 			headers: {
 				'content-type': getMimeType(filename),
 				'content-length': fs.statSync(file)['size'],
@@ -206,7 +199,7 @@ async function uploadToNextcloudStore(archiveUrl) {
 
 	const hostname = 'apps.nextcloud.com';
 	const apiEndpoint = '/api/v1/apps/releases';
-	const signatureFile = <string> files.find(file => file.endsWith('.ncsig'));
+	const signatureFile = files.find(file => file.endsWith('.ncsig'));
 	const data = JSON.stringify({
 		download: archiveUrl,
 		signature: fs.readFileSync(signatureFile, 'utf-8'),
@@ -229,7 +222,7 @@ async function uploadToNextcloudStore(archiveUrl) {
 		return;
 	}
 
-	return new Promise<void>((resolve, reject) => {
+	return new Promise((resolve, reject) => {
 		const req = https.request(options, res => {
 			if (res.statusCode === 200) {
 				console.log('App release was updated successfully'.verbose);

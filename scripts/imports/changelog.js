@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 
 const git = simpleGit();
 
-export async function generateChangelog(version: string): Promise<string> {
+async function generateChangelog(version) {
 	const latestTag = (await git.tags()).latest;
 	const title = `v${version}` === latestTag ? '[Unreleased]' : `${version} (${new Date().toISOString().split('T')[0]})`;
 
@@ -33,13 +33,13 @@ export async function generateChangelog(version: string): Promise<string> {
 		}
 
 		const [, type, scope, description] = match;
-		const entry = { type, scope, description, issues: <string[]> [] };
+		const entry = { type, scope, description, issues: [] };
 
 		if(log.body) {
 			const matches = log.body.match(/(?:fix|fixes|closes?|refs?) #(\d+)/g) || [];
 
 			for (const match of matches) {
-				const [, number] = <RegExpMatchArray> match.match(/(\d+)$/);
+				const [, number] = match.match(/(\d+)$/);
 
 				entry.issues.push(number);
 			}
@@ -93,7 +93,7 @@ export async function generateChangelog(version: string): Promise<string> {
 	return changeLog;
 }
 
-export async function editChangeLog(changeLog: string):Promise<string> {
+async function editChangeLog(changeLog) {
 	const answers = await inquirer.prompt([{
 		type: 'editor',
 		name: 'changeLog',
@@ -104,7 +104,7 @@ export async function editChangeLog(changeLog: string):Promise<string> {
 	return answers.changeLog;
 }
 
-export async function hasChangeLogEntry(version: string): Promise<boolean> {
+async function hasChangeLogEntry(version) {
 	if (!version) {
 		return false;
 	}
@@ -118,14 +118,14 @@ export async function hasChangeLogEntry(version: string): Promise<boolean> {
 	return true;
 }
 
-export function getChangelogEntry(version: string): Promise<string> {
-	return new Promise<string>(resolve => {
+function getChangelogEntry(version) {
+	return new Promise(resolve => {
 		fs.readFile(path.join(__dirname, '..', '..', 'CHANGELOG.md'), 'utf8', function (err, data) {
 			if (err) throw err;
 
 			const releaseHeader = /^\d+\.\d+\.\d+$/.test(version) ? `## ${version}` : '## [Unreleased]';
 			const lines = data.split('\n');
-			const entry: string[] = [];
+			const entry = [];
 
 			let inEntry = false;
 
@@ -147,3 +147,5 @@ export function getChangelogEntry(version: string): Promise<string> {
 		});
 	});
 }
+
+exports.default = {generateChangelog, editChangeLog, hasChangeLogEntry, getChangelogEntry};

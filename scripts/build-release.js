@@ -9,18 +9,9 @@ const execa = require('execa');
 const simpleGit = require('simple-git/promise');
 const inquirer = require('inquirer');
 const { exec } = require('child_process');
-import { generateChangelog, hasChangeLogEntry } from './imports/changelog';
+const { generateChangelog, hasChangeLogEntry } = require('./imports/changelog');
 
 const packageInfo = require('../package.json');
-
-declare global {
-    interface String {
-		error: string
-		verbose: string
-		warn: string
-		green: string
-    }
-}
 
 colors.setTheme({
 	verbose: 'cyan',
@@ -144,7 +135,7 @@ async function keypress() {
 	}]);
 }
 
-async function commitChangeLog(): Promise<void> {
+async function commitChangeLog() {
 	const status = await git.status();
 
 	if (status.staged.length > 0) {
@@ -216,7 +207,7 @@ function createArchive(appId, fileBaseName) {
 }
 
 function createNextcloudSignature(appId, filePath) {
-	return new Promise<void>((resolve) => {
+	return new Promise((resolve) => {
 		const sigPath = filePath + '.ncsig';
 		exec(`openssl dgst -sha512 -sign ~/.nextcloud/certificates/${appId}.key ${filePath} | openssl base64 > ${sigPath}`, (error, stdout, stderr) => {
 			if (error) {
@@ -239,7 +230,7 @@ function createNextcloudSignature(appId, filePath) {
 }
 
 function createGPGSignature(filePath) {
-	return new Promise<void>((resolve) => {
+	return new Promise((resolve) => {
 		exec(`gpg --yes --detach-sign "${filePath}"`, (error, stdout, stderr) => {
 			if (error) {
 				throw error;
@@ -261,7 +252,7 @@ function createGPGSignature(filePath) {
 }
 
 function createGPGArmorSignature(filePath) {
-	return new Promise<void>((resolve) => {
+	return new Promise((resolve) => {
 		exec(`gpg --yes --detach-sign --armor "${filePath}"`, (error, stdout, stderr) => {
 			if (error) {
 				throw error;
@@ -289,7 +280,7 @@ async function validateXml(xmlDoc) {
 		throw 'Found no schema location';
 	}
 
-	let schemaString: string;
+	let schemaString;
 	try {
 		console.log('Downloading schema file...'.verbose);
 
@@ -315,8 +306,8 @@ async function validateXml(xmlDoc) {
 	}
 }
 
-function wget(url: string) {
-	return new Promise<string>((resolve, reject) => {
+function wget(url) {
+	return new Promise((resolve, reject) => {
 		https.get(url, (resp) => {
 			let data = '';
 
