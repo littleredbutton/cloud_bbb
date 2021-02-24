@@ -2,8 +2,6 @@ import axios from '@nextcloud/axios';
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
 import { api } from './Common/Api';
 
-declare const OCA: any;
-
 const mimeTypes = [
 	'application/pdf',
 	'application/vnd.oasis.opendocument.presentation',
@@ -42,8 +40,8 @@ async function share(fileId: number, filename: string, roomUid) {
 	window.open(joinUrl, '_blank', 'noopener,noreferrer');
 }
 
-function registerFileAction(mime, id, uid, name) {
-	OCA.Files.fileActions.registerAction({
+function registerFileAction(fileActions, mime, id, uid, name) {
+	fileActions.registerAction({
 		name: 'bbb-' + id,
 		displayName: name,
 		mime,
@@ -55,22 +53,22 @@ function registerFileAction(mime, id, uid, name) {
 	});
 }
 
-function addRoomsAsFileAction() {
-	if (!OCA?.Files?.fileActions) {
-		console.warn('[BBB] "OCA.Files.fileActions" not available');
+const BBBFileListPlugin = {
+	ignoreLists: [
+		'trashbin',
+	],
 
-		return;
-	}
+	attach(fileList) {
+		if (this.ignoreLists.includes(fileList.id) || !OC.currentUser) {
+			return;
+		}
 
-	api.getRooms().then(rooms => {
-		rooms.forEach(room => {
-			mimeTypes.forEach(mime => registerFileAction(mime, room.id, room.uid, room.name));
+		api.getRooms().then(rooms => {
+			rooms.forEach(room => {
+				mimeTypes.forEach(mime => registerFileAction(fileList.fileActions, mime, room.id, room.uid, room.name));
+			});
 		});
-	});
-}
+	},
+};
 
-if (document.readyState === 'complete') {
-	addRoomsAsFileAction();
-} else {
-	document.addEventListener('DOMContentLoaded', addRoomsAsFileAction);
-}
+OC.Plugins.register('OCA.Files.FileList', BBBFileListPlugin);
