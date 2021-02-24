@@ -43,7 +43,9 @@ class Application extends App {
 		$config = $container->query(IConfig::class);
 
 		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
-			$this->registerAsNavigationEntry();
+			$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BigBlueButton');
+
+			$this->registerAsNavigationEntry($name);
 		} else {
 			$this->registerAsPersonalSetting();
 		}
@@ -56,16 +58,16 @@ class Application extends App {
 		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}
 
-	private function registerAsNavigationEntry() {
+	private function registerAsNavigationEntry(string $name) {
 		$server = $this->getContainer()->getServer();
 
-		$server->getNavigationManager()->add(function () use ($server) {
+		$server->getNavigationManager()->add(function () use ($server, $name) {
 			return [
 				'id' => self::ID,
 				'order' => 80,
 				'href' => $server->getURLGenerator()->linkToRoute('bbb.page.index'),
 				'icon' => $server->getURLGenerator()->imagePath('bbb', 'app.svg'),
-				'name' => 'BigBlueButton',
+				'name' => $name,
 			];
 		});
 	}

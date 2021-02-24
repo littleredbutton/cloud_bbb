@@ -63,11 +63,28 @@ configuration page of your Nextcloud instance.
 
 ![Screenshot admin section](https://github.com/sualko/cloud_bbb/raw/master/docs/screenshot-admin.png)
 
-## Create your first room
+### Manual configuration (for experts)
+If you prefer not to use the web interface for configuration, you will find all
+used configuration keys in the list below. Please beware that there will be no
+check if those values are correct. Therefore this is not the recommended way.
+The syntax to set all settings is `occ config:app:set bbb KEY --value "VALUE"`.
+
+Key                   | Description
+--------------------- | ------------------------------------------------------------------------------------
+`app.navigation`      | Set to `true` to show navigation entry
+`app.navigation.name` | Defines the navigation label. Default "BigBlueButton".
+`api.url`             | URL to your BBB server. Should start with `https://`
+`api.secret`          | Secret of your BBB server
+`app.shortener`       | Value of your shortener service. Should start with `https://` and contain `{token}`.
+
+
+## :bowtie: User guide
+
+### Create your first room
 Go to the BigBlueButton section inside your personal settings page and enter a
 room name. That's it. You can now distribute the room url.
 
-## Enter a room from files
+### Enter a room from files
 Use the ... menu and select the desired BBB configuration to enter the room.
 Beware that if the room is already running the presentation will **not** be
 updated. Entering a room with a defined presentation works only if link shares
