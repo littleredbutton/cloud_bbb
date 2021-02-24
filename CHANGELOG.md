@@ -5,6 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- [#124](https://github.com/sualko/cloud_bbb/issues/124) make navigation label configurable
+- bump Nextcloud version
+
+### Fixed
+- do not register file action without authentication
+- always show missing configuration message
+- [#125](https://github.com/sualko/cloud_bbb/issues/125) prevent group restriction
+- psalm errors
+- translate settings header
+- increase qr code error correction
+
+### Misc
+- add link to contributor guide
+- use psalm
+- add admin screenshot
+- move to github actions
 
 ## 1.2.0 (2021-02-01)
 ### Added
