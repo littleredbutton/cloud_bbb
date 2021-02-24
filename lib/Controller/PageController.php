@@ -2,19 +2,18 @@
 
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\TemplateProvider;
 use OCP\AppFramework\Controller;
-use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
 use OCP\IRequest;
 
 class PageController extends Controller {
-	/** @var IConfig */
-	private $config;
+	/** @var TemplateProvider */
+	private $templateProvider;
 
-	public function __construct(string $appName, IRequest $request, IConfig $config) {
+	public function __construct(string $appName, IRequest $request, TemplateProvider $templateProvider) {
 		parent::__construct($appName, $request);
 
-		$this->config = $config;
+		$this->templateProvider = $templateProvider;
 	}
 
 	/**
@@ -22,8 +21,6 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		return new TemplateResponse($this->appName, 'manager', [
-			'shortener' => $this->config->getAppValue('bbb', 'app.shortener', ''),
-		]);
+		return $this->templateProvider->getManager();
 	}
 }

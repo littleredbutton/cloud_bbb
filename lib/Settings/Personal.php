@@ -2,42 +2,29 @@
 
 namespace OCA\BigBlueButton\Settings;
 
-use \OCP\IL10N;
+use OCA\BigBlueButton\TemplateProvider;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
 
 class Personal implements ISettings {
-	/** @var IConfig */
-	private $config;
-
-	/** @var IL10N */
-	private $l;
+	/** @var TemplateProvider */
+	private $templateProvider;
 
 	/**
 	 * Admin constructor.
 	 *
 	 * @param IConfig $config
 	 */
-	public function __construct(IConfig $config, IL10N $l) {
-		$this->config = $config;
-		$this->l = $l;
+	public function __construct(TemplateProvider $templateProvider) {
+		$this->templateProvider = $templateProvider;
 	}
 
 	/**
 	 * @return TemplateResponse
 	 */
 	public function getForm() {
-		$warning = '';
-
-		if (empty($this->config->getAppValue('bbb', 'api.url')) || empty($this->config->getAppValue('bbb', 'api.secret'))) {
-			$warning = $this->l->t('API URL or secret not configured. Please contact your administrator.');
-		}
-
-		return new TemplateResponse('bbb', 'manager', [
-			'warning' => $warning,
-			'shortener' => $this->config->getAppValue('bbb', 'app.shortener', ''),
-		]);
+		return $this->templateProvider->getManager();
 	}
 
 	/**
