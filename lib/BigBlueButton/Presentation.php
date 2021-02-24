@@ -12,15 +12,15 @@ class Presentation {
 		$this->filename = $filename;
 	}
 
-	public function getUrl() {
+	public function getUrl(): string {
 		return $this->url;
 	}
 
-	public function getFilename() {
+	public function getFilename(): string {
 		return $this->filename;
 	}
 
-	public function isValid() {
+	public function isValid(): bool {
 		return !empty($this->url) && !empty($this->filename);
 	}
 }

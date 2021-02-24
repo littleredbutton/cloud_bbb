@@ -18,6 +18,9 @@ class JoinMiddleware extends Middleware {
 		$this->request = $request;
 	}
 
+	/**
+	 * @return void
+	 */
 	public function beforeController($controller, $methodName) {
 		if (!($controller instanceof JoinController)) {
 			return;

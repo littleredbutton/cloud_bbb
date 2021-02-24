@@ -21,7 +21,7 @@ class Section implements IIconSection {
 	 * returns the ID of the section. It is supposed to be a lower case string,
 	 * e.g. 'ldap'
 	 *
-	 * @returns string
+	 * @return string
 	 */
 	public function getID() {
 		return 'bbb';
@@ -50,6 +50,8 @@ class Section implements IIconSection {
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @return string
 	 */
 	public function getIcon() {
 		return $this->url->imagePath('bbb', 'app-dark.svg');

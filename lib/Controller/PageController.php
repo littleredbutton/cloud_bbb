@@ -4,6 +4,7 @@ namespace OCA\BigBlueButton\Controller;
 
 use OCA\BigBlueButton\TemplateProvider;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
 
 class PageController extends Controller {
@@ -18,9 +19,12 @@ class PageController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 *
 	 * @NoCSRFRequired
+	 *
+	 * @return TemplateResponse
 	 */
-	public function index() {
+	public function index(): TemplateResponse {
 		return $this->templateProvider->getManager();
 	}
 }

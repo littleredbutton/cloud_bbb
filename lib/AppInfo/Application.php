@@ -51,14 +51,14 @@ class Application extends App {
 		}
 	}
 
-	private function registerAsPersonalSetting() {
+	private function registerAsPersonalSetting(): void {
 		/** @var ISettingsManager */
 		$settingsManager = $this->getContainer()->query(ISettingsManager::class);
 
 		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}
 
-	private function registerAsNavigationEntry(string $name) {
+	private function registerAsNavigationEntry(string $name): void {
 		$server = $this->getContainer()->getServer();
 
 		$server->getNavigationManager()->add(function () use ($server, $name) {
@@ -72,7 +72,7 @@ class Application extends App {
 		});
 	}
 
-	private function registerServiceListener(IEventDispatcher $dispatcher) {
+	private function registerServiceListener(IEventDispatcher $dispatcher): void {
 		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
 		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
 

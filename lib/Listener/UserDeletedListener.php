@@ -46,7 +46,7 @@ class UserDeletedListener implements IEventListener {
 		}
 	}
 
-	private function deleteSharesByRoomId(string $roomId) {
+	private function deleteSharesByRoomId(string $roomId): void {
 		$shares = $this->shareService->findAll($roomId);
 
 		foreach ($shares as $share) {
@@ -54,7 +54,7 @@ class UserDeletedListener implements IEventListener {
 		}
 	}
 
-	private function deleteSharesByUserId(string $userId) {
+	private function deleteSharesByUserId(string $userId): void {
 		$shares = $this->shareService->findByUserId($userId);
 
 		foreach ($shares as $share) {

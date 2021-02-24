@@ -56,7 +56,7 @@ class JoinController extends Controller {
 		$this->permission = $permission;
 	}
 
-	public function setToken(string $token) {
+	public function setToken(string $token): void {
 		$this->token = $token;
 		$this->room = null;
 	}
@@ -69,7 +69,10 @@ class JoinController extends Controller {
 
 	/**
 	 * @PublicPage
+	 *
 	 * @NoCSRFRequired
+	 *
+	 * @return RedirectResponse|TemplateResponse
 	 */
 	public function index($displayname, $u = '', $filename = '', $password = '') {
 		$room = $this->getRoom();

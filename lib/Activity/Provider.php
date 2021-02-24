@@ -97,7 +97,7 @@ class Provider implements IProvider {
 		return $event;
 	}
 
-	private function parseRoomCreated(IEvent $event) {
+	private function parseRoomCreated(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		$event->setParsedSubject($this->l->t('You created the room %s.', [$params['name']]));
@@ -105,7 +105,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'room-created');
 	}
 
-	private function parseRoomDeleted(IEvent $event) {
+	private function parseRoomDeleted(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
@@ -121,7 +121,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'room-deleted');
 	}
 
-	private function parseShareCreated(IEvent $event) {
+	private function parseShareCreated(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
@@ -138,7 +138,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'share-created');
 	}
 
-	private function parseShareDeleted(IEvent $event) {
+	private function parseShareDeleted(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
@@ -155,7 +155,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'share-deleted');
 	}
 
-	private function parseMeetingStarted(IEvent $event) {
+	private function parseMeetingStarted(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		if ($this->activityManager->getCurrentUserId() === $event->getAuthor()) {
@@ -171,7 +171,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'meeting-started');
 	}
 
-	private function parseMeetingEnded(IEvent $event) {
+	private function parseMeetingEnded(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		$event->setParsedSubject($this->l->t('The meeting in room "%s" has ended.', [$params['name']]));
@@ -179,7 +179,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'meeting-ended');
 	}
 
-	private function parseRecordingReady(IEvent $event) {
+	private function parseRecordingReady(IEvent $event): void {
 		$params = $event->getSubjectParameters();
 
 		$event->setParsedSubject($this->l->t('Recording for room "%s" is ready.', [$params['name']]));
@@ -187,7 +187,7 @@ class Provider implements IProvider {
 		$this->setIcon($event, 'recording-ready');
 	}
 
-	private function setIcon(IEvent $event, string $baseName) {
+	private function setIcon(IEvent $event, string $baseName): void {
 		if ($this->activityManager->getRequirePNG()) {
 			$imagePath = $this->url->imagePath(Application::ID, 'actions/'.$baseName.'.png');
 		} else {
@@ -197,7 +197,7 @@ class Provider implements IProvider {
 		$event->setIcon($this->url->getAbsoluteURL($imagePath));
 	}
 
-	private function setSubjects(IEvent $event, string $subject, array $parameters) {
+	private function setSubjects(IEvent $event, string $subject, array $parameters): void {
 		$placeholders = $replacements = [];
 
 		foreach ($parameters as $placeholder => $parameter) {
@@ -213,7 +213,12 @@ class Provider implements IProvider {
 			->setRichSubject($subject, $parameters);
 	}
 
-	protected function getUser(string $uid) {
+	/**
+	 * @return string[]
+	 *
+	 * @psalm-return array{type: string, id: string, name: string}
+	 */
+	protected function getUser(string $uid): array {
 		$user = $this->userManager->get($uid);
 
 		if ($user instanceof IUser) {
@@ -231,7 +236,12 @@ class Provider implements IProvider {
 		];
 	}
 
-	protected function getGroup($uid) {
+	/**
+	 * @return (mixed|string)[]
+	 *
+	 * @psalm-return array{type: string, id: mixed|string, name: mixed|string}
+	 */
+	protected function getGroup($uid): array {
 		$group = $this->groupManager->get($uid);
 
 		if ($group !== null) {

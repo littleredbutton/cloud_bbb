@@ -22,7 +22,7 @@ class Crypto {
 		return $this->encodeBase64UrlSafe(\sha1($this->crypto->calculateHMAC($message), true));
 	}
 
-	public function verifyHMAC(string $message, string $mac) {
+	public function verifyHMAC(string $message, string $mac): bool {
 		if ($message === null || $mac === null) {
 			return false;
 		}
@@ -32,6 +32,9 @@ class Crypto {
 		return $validMac === $mac;
 	}
 
+	/**
+	 * @return false|string
+	 */
 	private function encodeBase64UrlSafe(string $data) {
 		$b64 = \base64_encode($data);
 

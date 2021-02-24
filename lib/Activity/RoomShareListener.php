@@ -53,11 +53,14 @@ class RoomShareListener implements IEventListener {
 		}
 	}
 
-	private function shareWithUser(string $subject, Room $room, RoomShare $share) {
+	private function shareWithUser(string $subject, Room $room, RoomShare $share): void {
 		$this->createActivityEvent($subject, $room->getUserId(), $room, $share);
 		$this->createActivityEvent($subject, $share->getShareWith(), $room, $share);
 	}
 
+	/**
+	 * @return void
+	 */
 	private function shareWithGroup(string $subject, Room $room, RoomShare $share) {
 		$this->createActivityEvent($subject, $room->getUserId(), $room, $share);
 
@@ -72,7 +75,7 @@ class RoomShareListener implements IEventListener {
 		}
 	}
 
-	private function createActivityEvent(string $subject, string $affectedUser, Room $room, RoomShare $roomShare) {
+	private function createActivityEvent(string $subject, string $affectedUser, Room $room, RoomShare $roomShare): void {
 		$activityEvent = $this->activityManager->generateEvent();
 
 		$activityEvent->setApp(Application::ID);

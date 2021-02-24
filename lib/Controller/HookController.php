@@ -35,7 +35,7 @@ class HookController extends Controller {
 		$this->eventDispatcher = $eventDispatcher;
 	}
 
-	public function setToken(string $token) {
+	public function setToken(string $token): void {
 		$this->token = $token;
 		$this->room = null;
 	}
@@ -48,9 +48,12 @@ class HookController extends Controller {
 
 	/**
 	 * @PublicPage
+	 *
 	 * @NoCSRFRequired
+	 *
+	 * @return void
 	 */
-	public function meetingEnded($recordingmarks = false) {
+	public function meetingEnded($recordingmarks = false): void {
 		$recordingmarks = \boolval($recordingmarks);
 
 		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($this->getRoom(), $recordingmarks));
@@ -58,9 +61,12 @@ class HookController extends Controller {
 
 	/**
 	 * @PublicPage
+	 *
 	 * @NoCSRFRequired
+	 *
+	 * @return void
 	 */
-	public function recordingReady() {
+	public function recordingReady(): void {
 		$this->eventDispatcher->dispatch(RecordingReadyEvent::class, new RecordingReadyEvent($this->getRoom()));
 	}
 

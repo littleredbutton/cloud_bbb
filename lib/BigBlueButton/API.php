@@ -56,7 +56,7 @@ class API {
 		$this->urlHelper = $urlHelper;
 	}
 
-	private function getServer() {
+	private function getServer(): BigBlueButton {
 		if (!$this->server) {
 			$apiUrl = $this->config->getAppValue('bbb', 'api.url');
 			$secret = $this->config->getAppValue('bbb', 'api.secret');
@@ -175,7 +175,7 @@ class API {
 		return $this->recordToArray($records[0]);
 	}
 
-	public function getRecordings(Room $room) {
+	public function getRecordings(Room $room): array {
 		$recordingParams = new GetRecordingsParameters();
 		$recordingParams->setMeetingId($room->uid);
 		$recordingParams->setState('processing,processed,published,unpublished');
@@ -201,7 +201,12 @@ class API {
 		return $response->isDeleted();
 	}
 
-	private function recordToArray(Record $record) {
+	/**
+	 * @return (array|bool|int|string)[]
+	 *
+	 * @psalm-return array{id: string, meetingId: string, name: string, published: bool, state: string, startTime: string, participants: int, type: string, length: string, url: string, metas: array}
+	 */
+	private function recordToArray(Record $record): array {
 		return [
 			'id'           => $record->getRecordId(),
 			'meetingId'    => $record->getMeetingId(),
@@ -217,7 +222,7 @@ class API {
 		];
 	}
 
-	public function check(string $url, string $secret) {
+	public function check(string $url, string $secret): string {
 		$server = new BigBlueButton($url, $secret);
 
 		$meetingParams = new IsMeetingRunningParameters('foobar');

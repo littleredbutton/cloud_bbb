@@ -57,7 +57,7 @@ class RoomService {
 		}
 	}
 
-	public function findByUid(string $uid) {
+	public function findByUid(string $uid): ?Room {
 		try {
 			return $this->mapper->findByUid($uid);
 		} catch (Exception $e) {
@@ -66,7 +66,7 @@ class RoomService {
 		}
 	}
 
-	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId) {
+	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {
 		$room = new Room();
 
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
@@ -92,6 +92,8 @@ class RoomService {
 
 	/**
 	 * @param null|string $moderatorToken
+	 *
+	 * @return \OCP\AppFramework\Db\Entity|null
 	 */
 	public function update(int $id, string $name, string $welcome, int $maxParticipants, bool $record, string $access, bool $everyoneIsModerator, bool $requireModerator, ?string $moderatorToken) {
 		try {
@@ -119,6 +121,9 @@ class RoomService {
 		}
 	}
 
+	/**
+	 * @return Room|null
+	 */
 	public function delete(int $id) {
 		try {
 			$room = $this->mapper->find($id);

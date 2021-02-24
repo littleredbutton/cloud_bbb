@@ -55,20 +55,20 @@ class Permission {
 		return $this->restrictionService->findByGroupIds($groupIds);
 	}
 
-	public function isAllowedToCreateRoom(string $uid) {
+	public function isAllowedToCreateRoom(string $uid): bool {
 		$numberOfCreatedRooms = count($this->roomService->findAll($uid, [], []));
 		$restriction = $this->getRestriction($uid);
 
 		return $restriction->getMaxRooms() < 0 || $restriction->getMaxRooms() > $numberOfCreatedRooms;
 	}
 
-	public function isUser(Room $room, ?string $uid) {
+	public function isUser(Room $room, ?string $uid): bool {
 		return $this->hasPermission($room, $uid, function (RoomShare $share) {
 			return $share->hasUserPermission();
 		});
 	}
 
-	public function isModerator(Room $room, ?string $uid) {
+	public function isModerator(Room $room, ?string $uid): bool {
 		if ($room->everyoneIsModerator) {
 			return true;
 		}
@@ -78,7 +78,7 @@ class Permission {
 		});
 	}
 
-	public function isAdmin(Room $room, ?string $uid) {
+	public function isAdmin(Room $room, ?string $uid): bool {
 		return $this->hasPermission($room, $uid, function (RoomShare $share) {
 			return $share->hasAdminPermission();
 		});

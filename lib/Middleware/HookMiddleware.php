@@ -23,6 +23,9 @@ class HookMiddleware extends Middleware {
 		$this->crypto = $crypto;
 	}
 
+	/**
+	 * @return void
+	 */
 	public function beforeController($controller, $methodName) {
 		if (!($controller instanceof HookController)) {
 			return;
