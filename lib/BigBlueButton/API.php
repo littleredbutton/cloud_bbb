@@ -94,7 +94,7 @@ class API {
 	/**
 	 * Create meeting room.
 	 *
-	 * @return int creation time
+	 * @return float|int creation time
 	 */
 	public function createMeeting(Room $room, Presentation $presentation = null) {
 		$bbb = $this->getServer();
@@ -145,6 +145,7 @@ class API {
 		}
 
 		if ($presentation !== null && $presentation->isValid()) {
+			/** @psalm-suppress InvalidArgument */
 			$createMeetingParams->addPresentation($presentation->getUrl(), null, $presentation->getFilename());
 		}
 

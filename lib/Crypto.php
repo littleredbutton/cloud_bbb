@@ -14,7 +14,10 @@ class Crypto {
 		$this->crypto = $crypto;
 	}
 
-	public function calculateHMAC(string $message): string {
+	/**
+	 * @return false|string
+	 */
+	public function calculateHMAC(string $message) {
 		if ($message === null) {
 			throw new \InvalidArgumentException();
 		}

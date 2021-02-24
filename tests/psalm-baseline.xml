@@ -7,26 +7,6 @@
       <code>\OCA\Circles\Model\Member</code>
     </UndefinedClass>
   </file>
-  <file src="lib/Controller/RoomController.php">
-    <NullArgument occurrences="1">
-      <code>null</code>
-    </NullArgument>
-  </file>
-  <file src="lib/Controller/ServerController.php">
-    <InvalidArgument occurrences="1">
-      <code>$success</code>
-    </InvalidArgument>
-  </file>
-  <file src="lib/NoPermissionResponse.php">
-    <MissingDependency occurrences="1">
-      <code>Template</code>
-    </MissingDependency>
-  </file>
-  <file src="lib/NotFoundResponse.php">
-    <MissingDependency occurrences="1">
-      <code>Template</code>
-    </MissingDependency>
-  </file>
   <file src="lib/Service/RestrictionService.php">
     <InvalidReturnType occurrences="3">
       <code>Restriction</code>
