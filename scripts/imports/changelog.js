@@ -148,4 +148,4 @@ function getChangelogEntry(version) {
 	});
 }
 
-exports.default = {generateChangelog, editChangeLog, hasChangeLogEntry, getChangelogEntry};
+module.exports = {generateChangelog, editChangeLog, hasChangeLogEntry, getChangelogEntry};
