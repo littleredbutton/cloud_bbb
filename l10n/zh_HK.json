@@ -79,7 +79,7 @@
     "Room name" : "聊天室名稱",
     "Create" : "建立",
     "Open recording" : "開啟錄製",
-    "Copy to clipboard" : "複製到剪貼簿",
+    "Copy to clipboard" : "複製到剪貼板",
     "Save as file" : "另存為檔案",
     "_%n participant_::_%n participants_" : ["%n 個參與者"],
     "Delete" : "刪除",
