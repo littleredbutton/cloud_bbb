@@ -72,9 +72,9 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 			</td>
 
 			<td className="remove icon-col">
-				{restriction.groupId && <a className="icon icon-delete icon-visible"
-					onClick={deleteRow as any}
-					title={t('bbb', 'Delete')} />}
+				<button disabled={!restriction.groupId} className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>
+					<span className="icon icon-delete icon-visible"></span>
+				</button>
 			</td>
 		</tr>
 	);

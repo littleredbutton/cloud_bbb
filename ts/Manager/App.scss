@@ -91,7 +91,8 @@ pre {
   }
 }
 
-#bbb-react-root {
+#bbb-react-root,
+#bbb-restrictions {
   #bbb-warning,
   #bbb-success {
     margin: 3em;
@@ -118,11 +119,11 @@ pre {
     line-height: 0;
     display: inline-block;
 
-    .icon {
+    &:not(button:disabled) .icon {
       opacity: 0.5;
     }
 
-    &:hover {
+    &:not(button:disabled):hover {
       background-color: var(--color-background-dark);
 
       .icon {
