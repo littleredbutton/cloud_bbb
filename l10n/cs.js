@@ -27,7 +27,7 @@ OC.L10N.register(
     "Show room manager in app navigation instead of settings page." : "Správu aplikací zobrazovat v ovládacích prvcích pro pohyb po aplikaci namísto na stránce nastavení.",
     "Community" : "Komunita",
     "Are you enjoying this app? Give something back to the open source community." : "Líbí se vám tato aplikace? Přispějte něčím naoplátku open source komunitě.",
-    "Checkout the contributor guide" : "Koukněte do příručky přispěvatelů",
+    "Checkout the contributor guide" : "Nahlédněte do příručky pro přispěvatele",
     "URL Shortener" : "Zkracovač URL",
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "Pokud chcete používat kratší url, můžete níže zadat předávající proxy.",
     "URL shortener" : "Zkracovač URL",

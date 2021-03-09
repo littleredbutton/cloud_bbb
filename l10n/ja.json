@@ -6,6 +6,8 @@
     "{user} shared the room %s with you." : "{user}があなたとルーム%sを共有しました。",
     "You unshared the room %s with {shareWith}." : "{shareWith}とのルーム%s共有を解除しました。",
     "{user} unshared the room %s with you." : "{user}があなたとのルーム%s共有を解除しました。",
+    "You started a meeting in the \"%s\" room." : "ルーム \"%s\" でミーティングを開始しました。",
+    "The meeting in room \"%s\" has ended." : "ルーム \"%s\" でのミーティングは終了しました。",
     "API URL or secret not configured. Please contact your administrator." : "APIのURLまたはシークレットが設定されていません。管理者にお問い合わせください。",
     "BigBlueButton Integration" : "BigBlueButton統合",
     "BigBlueButton integration for Nextcloud" : "Nextcould向けBigBlueButton統合",
