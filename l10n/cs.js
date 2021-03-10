@@ -43,7 +43,7 @@ OC.L10N.register(
     "Have an account? Log in." : "Máte uživatelský účet? Přihlaste se.",
     "Hello %s" : "Zdravím %s",
     "Name, group …" : "Jméno, skupina…",
-    "Group" : "Group",
+    "Group" : "Skupina",
     "Searching" : "Hledá se",
     "No matches" : "Žádné výsledky",
     "Public" : "Veřejný",
