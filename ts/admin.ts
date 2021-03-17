@@ -76,7 +76,7 @@ $(() => {
 		return shortener.replace(/</g, '&lt;').replace(/\{user\}/g, `<strong>${OC.currentUser}</strong>`).replace(/\{token\}/g, '<strong>your_room_id</strong>');
 	}
 
-	async function saveAppSettings(shortener: string) {
+	async function saveShortSettings(shortener: string) {
 		await checkPasswordConfirmation();
 
 		if (shortener && shortener.indexOf('https://') !== 0) {
@@ -95,7 +95,7 @@ $(() => {
 
 		const resultElement = $(this).find('.bbb-result').empty();
 
-		saveAppSettings(this['app.shortener'].value).then(() => {
+		saveShortSettings(this['app.shortener'].value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
 
 			setTimeout(() => {
