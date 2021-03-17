@@ -120,11 +120,17 @@ $(() => {
 		});
 	});
 
+	async function saveAppSettings(name: string) {
+		await checkPasswordConfirmation();
+
+		console.log(`DAMN THIS ${name}`); //TODO REMOVE
+		OCP.AppConfig.setValue('bbb', 'app.navigation.name', name);
+	}
 
 	$('#bbb-nav-name').on('submit', function (ev) {
 		ev.preventDefault();
-
-		const resultElement = $(this).find('.bbb-result').empty();
+		
+		const resultElement = $(this).find('.app-result').empty();
 
 		saveAppSettings(this['app.navigation.name'].value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
