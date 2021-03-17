@@ -120,6 +120,32 @@ $(() => {
 		});
 	});
 
+
+	$('#bbb-nav-name').on('submit', function (ev) {
+		ev.preventDefault();
+
+		const resultElement = $(this).find('.bbb-result').empty();
+
+		saveAppSettings(this['app.navigation.name'].value).then(() => {
+			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
+
+			setTimeout(() => {
+				resultElement.empty();
+			}, 3000);
+
+			resultElement.append(successElement);
+		}).catch(err => {
+			let message = t('bbb', 'Unexpected error occurred');
+
+			const warningElement = generateWarningElement(message);
+
+			console.warn('Could not save app settings', err);
+
+			resultElement.append(warningElement);
+		});
+	});
+
+
 	$<HTMLInputElement>('#bbb-shortener [name="app.shortener"]').on('keyup', (ev) => {
 		ev.preventDefault();
 
