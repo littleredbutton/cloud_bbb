@@ -1,4 +1,4 @@
-import {api} from './Common/Api';
+import { api } from './Common/Api';
 import './Manager/App.scss';
 
 declare const OCP: any;
@@ -123,7 +123,7 @@ $(() => {
 	$<HTMLInputElement>('#bbb-shortener [name="app.shortener"]').on('keyup', (ev) => {
 		ev.preventDefault();
 
-		const {value} = ev.target;
+		const { value } = ev.target;
 
 		if (!value || value.indexOf('https://') !== 0 || value.indexOf('{token}') < 0) {
 			$('#bbb-shortener-example').text(t('bbb', 'URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used.'));
@@ -131,7 +131,7 @@ $(() => {
 			return;
 		}
 
-		const target =  window.location.origin + OC.generateUrl('apps/bbb/b/$1');
+		const target = window.location.origin + OC.generateUrl('apps/bbb/b/$1');
 		const url = (new URL(value));
 		const rewritePath = '^' + url.pathname.replace(/^\//, '').replace(/%7Buser%7D/g, '.+').replace(/%7Btoken%7D/g, '(.+)');
 
