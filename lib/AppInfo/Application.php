@@ -43,7 +43,7 @@ class Application extends App {
 		$config = $container->query(IConfig::class);
 
 		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
-			$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BigBlueButton');
+			$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BBB');
 
 			$this->registerAsNavigationEntry($name);
 		} else {
