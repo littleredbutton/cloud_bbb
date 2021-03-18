@@ -129,8 +129,8 @@ $(() => {
 
 	$('#bbb-nav-name').on('submit', function (ev) {
 		ev.preventDefault();
-		
-		const resultElement = $(this).find('.app-result').empty();
+
+		const resultElement = $(this).find('.bbb-result').empty();
 
 		saveAppSettings(this['app.navigation.name'].value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));

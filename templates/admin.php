@@ -19,18 +19,18 @@ script('bbb', 'restrictions');
             <div class="bbb-result"></div>
         </form>
 
+		<h3><?php p($l->t('Room Manager in Navigation Bar')); ?></h3>
+		<p><?php p($l->t('Enable Navigation Symbol')); ?></p>
         <p>
             <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox" value="1" <?php p($_['app.navigation']); ?> />
             <label for="bbb-app-navigation"><?php p($l->t('Show room manager in app navigation instead of settings page.')); ?></label>
         </p>
-		
-		<h3><?php p($l->t('Header Display Name')); ?></h3>
 		<p><?php p($l->t('Set the display name in the navigation bar.')); ?></p>
 		<form id="bbb-nav-name">
 			<input type="text" name="app.navigation.name" value="<?php p($_['app.navigation.name']); ?>" placeholder="<?php p($l->t('BBB')); ?>" autocomplete="off" required />
             <input type="submit" value="<?php p($l->t('Save')); ?>" />
            
-            <div class="app-result"></div>
+            <div class="bbb-result"></div>
         </form>
 		
         <h3><?php p($l->t('Community')); ?></h3>
