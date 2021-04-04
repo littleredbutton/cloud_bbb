@@ -82,7 +82,7 @@ OC.L10N.register(
     "Create" : "Créer",
     "Open recording" : "Ouvrir l'enregistrement",
     "Copy to clipboard" : "Copier dans le presse-papier",
-    "Save as file" : "Copier dans le presse-papier",
+    "Save as file" : "Enregistrer dans un fichier",
     "_%n participant_::_%n participants_" : ["%n participant","%n participants"],
     "Delete" : "Supprimer",
     "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Êtes-vous sur de vouloir supprimer \"{name}\" ? Cette opération ne peut pas être annulée.",
