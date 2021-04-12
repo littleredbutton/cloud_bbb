@@ -25,7 +25,7 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 		ev.preventDefault();
 
 		OC.dialogs.confirm(
-			t('bbb', 'Are you sure you want to delete the restrictions for group "{name}"? This operation can not be undone.', { name: restriction.groupId }),
+			t('bbb', 'Are you sure you want to delete the restrictions for group "{name}"? This operation cannot be undone.', { name: restriction.groupId }),
 			t('bbb', 'Delete restrictions for "{name}"?', { name: restriction.groupId }),
 			confirmed => {
 				if (confirmed) {
