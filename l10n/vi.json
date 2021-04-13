@@ -37,7 +37,6 @@
     "Save as file" : "Lưu dưới dạng tệp",
     "_%n participant_::_%n participants_" : ["%n người tham gia"],
     "Delete" : "Xóa",
-    "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Bạn có chắc bạn muốn xoá \"{name}\" không? Hoạt động này không thể được hoàn tác.",
     "Delete \"{name}\"?" : "Xoá \"{name}\"?",
     "Select target folder" : "Chọn thư mục mục tiêu",
     "Link stored" : "Đã lưu trữ liên kết",

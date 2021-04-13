@@ -30,7 +30,6 @@ OC.L10N.register(
     "Room name" : "Kambario pavadinimas",
     "Create" : "Sukurti",
     "Delete" : "Ištrinti",
-    "Are you sure you want to delete \"{name}\"? This operation can not be undone." : "Ar tikrai norite ištrinti \"{name}\"? Šio operacijos nebeįmanoma bus atšaukti.",
     "Delete \"{name}\"?" : "Ištrinti \"{name}\"?",
     "Error" : "Klaida",
     "Delete?" : "Ištrinti?",
