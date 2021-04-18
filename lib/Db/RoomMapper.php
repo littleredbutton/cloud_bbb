@@ -53,6 +53,20 @@ class RoomMapper extends QBMapper {
 	/**
 	 * @return array<Room>
 	 */
+	public function findByUserId(string $userId): array {
+		/* @var $qb IQueryBuilder */
+		$qb = $this->db->getQueryBuilder();
+		$qb->select('*')
+			->from($this->tableName, 'r')
+			->where($qb->expr()->eq('r.user_id', $qb->createNamedParameter($userId)));
+
+		/** @var array<Room> */
+		return $this->findEntities($qb);
+	}
+
+	/**
+	 * @return array<Room>
+	 */
 	public function findAll(string $userId, array $groupIds, array $circleIds): array {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();

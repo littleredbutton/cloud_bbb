@@ -35,7 +35,7 @@ class UserDeletedListener implements IEventListener {
 		}
 
 		$userId = $event->getUser()->getUID();
-		$rooms = $this->roomService->findAll($userId, [], []);
+		$rooms = $this->roomService->findByUserId($userId);
 
 		$this->deleteSharesByUserId($userId);
 

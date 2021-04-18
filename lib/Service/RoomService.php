@@ -66,6 +66,13 @@ class RoomService {
 		}
 	}
 
+	/**
+	 * @return array<Room>
+	 */
+	public function findByUserId(string $userId): array {
+		return $this->mapper->findByUserId($userId);
+	}
+
 	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {
 		$room = new Room();
 
