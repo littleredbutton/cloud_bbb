@@ -151,11 +151,11 @@ return 307;</pre></details>
 	});
 	$('#bbb-shortener [name="app.shortener"]').trigger('keyup');
 
-	$<HTMLInputElement>('#bbb-settings [name="app.navigation"]').on('change', (ev) => {
+	$<HTMLInputElement>('.bbb-setting[type="checkbox"]').on('change', (ev) => {
 		ev.preventDefault();
 
-		console.log('checkbox changed to', ev.target.checked);
+		console.log(`checkbox ${ev.target.name} changed to ${ev.target.checked}`);
 
-		OCP.AppConfig.setValue('bbb', 'app.navigation', ev.target.checked);
+		OCP.AppConfig.setValue('bbb', ev.target.name, ev.target.checked);
 	});
 });

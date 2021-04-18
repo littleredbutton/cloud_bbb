@@ -13,6 +13,7 @@ use OCA\BigBlueButton\Crypto;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingStartedEvent;
 use OCA\BigBlueButton\UrlHelper;
+use OCP\Defaults;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
 use OCP\IL10N;
@@ -40,13 +41,17 @@ class API {
 	/** @var UrlHelper */
 	private $urlHelper;
 
+	/** @var Defaults */
+	private $defaults;
+
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
 		Crypto $crypto,
 		IEventDispatcher $eventDispatcher,
 		IL10N $l10n,
-		UrlHelper $urlHelper
+		UrlHelper $urlHelper,
+		Defaults $defaults
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
@@ -54,6 +59,7 @@ class API {
 		$this->eventDispatcher = $eventDispatcher;
 		$this->l10n = $l10n;
 		$this->urlHelper = $urlHelper;
+		$this->defaults = $defaults;
 	}
 
 	private function getServer(): BigBlueButton {
@@ -82,6 +88,13 @@ class API {
 		$joinMeetingParams->setJoinViaHtml5(true);
 		$joinMeetingParams->setRedirect(true);
 		$joinMeetingParams->setGuest($uid === null);
+
+		if ($this->config->getAppValue('bbb', 'join.theme') === 'true') {
+			$primaryColor = $this->defaults->getColorPrimary();
+			$textColor = $this->defaults->getTextColorPrimary();
+
+			$joinMeetingParams->addUserData('bbb_custom_style', ":root{--nc-primary-color:$primaryColor;--nc-primary-text-color:$textColor;--nc-bg-color:#444;--color-primary:var(--nc-primary-color);--btn-primary-color:var(--nc-primary-text-color);--color-text:#222;--loader-bg:var(--nc-bg-color);--user-list-bg:#fff;--user-list-text:#222;--list-item-bg-hover:#f5f5f5;--item-focus-border:var(--nc-primary-color);--color-off-white:#fff;--color-gray-dark:var(--nc-bg-color);}body{background-color:var(--nc-bg-color);}.overlay--1aTlbi{background-color:var(--nc-bg-color);}.userlistPad--o5KDX{border-right: 1px solid #ededed;}.scrollStyle--Ckr4w{background: transparent;}.item--yl1AH:hover, .item--yl1AH:focus{color:--nc-primary-text-color;}#message-input:focus{box-shadow:0 0 0 1px var(--nc-primary-color);border-color:--nc-primary-color;}.active--Z1SuO2X{border-radius:5px;}");
+		}
 
 		if ($uid) {
 			$joinMeetingParams->setUserId($uid);

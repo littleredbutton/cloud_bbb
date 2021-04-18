@@ -20,8 +20,13 @@ script('bbb', 'restrictions');
         </form>
 
         <p>
-            <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox" value="1" <?php p($_['app.navigation']); ?> />
+            <input type="checkbox" name="app.navigation" id="bbb-app-navigation" class="checkbox bbb-setting" value="1" <?php p($_['app.navigation']); ?> />
             <label for="bbb-app-navigation"><?php p($l->t('Show room manager in app navigation instead of settings page.')); ?></label>
+        </p>
+
+        <p>
+            <input type="checkbox" name="join.theme" id="bbb-join-theme" class="checkbox bbb-setting" value="1" <?php p($_['join.theme']); ?> />
+            <label for="bbb-join-theme"><?php p($l->t('Use Nextcloud theme in BigBlueButton.')); ?></label>
         </p>
 
         <h3><?php p($l->t('Community')); ?></h3>
