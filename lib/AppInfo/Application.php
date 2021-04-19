@@ -16,6 +16,7 @@ use \OCA\BigBlueButton\Listener\UserDeletedListener;
 use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 use \OCP\AppFramework\App;
+use \OCP\AppFramework\QueryException;
 use \OCP\EventDispatcher\IEventDispatcher;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
@@ -52,8 +53,20 @@ class Application extends App {
 	}
 
 	private function registerAsPersonalSetting(): void {
-		/** @var ISettingsManager */
-		$settingsManager = $this->getContainer()->query(ISettingsManager::class);
+		try {
+			/** @var ISettingsManager */
+			$settingsManager = $this->getContainer()->query(ISettingsManager::class);
+		} catch (QueryException $exception) {
+			// Workaround for Nextcloud 19
+			$server = $this->getContainer()->getServer();
+
+			if (method_exists($server, 'getSettingsManager')) {
+				$settingsManager = $server->getSettingsManager();
+			} else {
+				return;
+			}
+		}
+
 
 		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}
