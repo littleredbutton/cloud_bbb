@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- add room option to disable listen only mode
+- add room option to skip audio check and video preview on first join (requires BBB server 2.3)
+- add room option to hide user list, chat area and presentation by default
+- add admin option to use Nextcloud theme colors in BBB
+
+### Fixed
+- [#130](https://github.com/sualko/cloud_bbb/issues/130) setting registration for NC 19
+- [#131](https://github.com/sualko/cloud_bbb/issues/131) delete only owned rooms from deleted user
+
+### Misc
+- add IGL as sponsor
+- fix build script
+- adapt restriction table
 
 ## 1.3.0 (2021-03-09)
 ### Added
