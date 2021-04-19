@@ -64,8 +64,10 @@ async function createRelease(appId) {
 	const version = await getVersion();
 	console.log(`I'm now building ${appId} in version ${version}.`.verbose);
 
-	await isRepoClean();
-	console.log('✔ repo is clean'.green);
+	if (isStableRelease) {
+		await isRepoClean();
+		console.log('✔ repo is clean'.green);
+	}
 
 	await execa('yarn', ['composer:install:dev']);
 	console.log('✔ composer dev dependencies installed'.green);
@@ -93,7 +95,7 @@ async function createRelease(appId) {
 async function isRepoClean() {
 	const status = await git.status();
 
-	if (status.staged.length > 0) {
+	if (status.staged.length > 1) {
 		throw 'Repo not clean. Found staged files.';
 	}
 
