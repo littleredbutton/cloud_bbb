@@ -89,6 +89,15 @@ class API {
 		$joinMeetingParams->setRedirect(true);
 		$joinMeetingParams->setGuest($uid === null);
 
+		$joinMeetingParams->addUserData('bbb_listen_only_mode', $room->getListenOnly());
+
+		$joinMeetingParams->addUserData('bbb_skip_check_audio_on_first_join', !$room->getMediaCheck()); // 2.3
+		$joinMeetingParams->addUserData('bbb_skip_video_preview_on_first_join', !$room->getMediaCheck()); // 2.3
+
+		$joinMeetingParams->addUserData('bbb_auto_swap_layout', $room->getCleanLayout());
+		$joinMeetingParams->addUserData('bbb_show_participants_on_login', !$room->getCleanLayout());
+		$joinMeetingParams->addUserData('bbb_show_public_chat_on_login', !$room->getCleanLayout());
+
 		if ($this->config->getAppValue('bbb', 'join.theme') === 'true') {
 			$primaryColor = $this->defaults->getColorPrimary();
 			$textColor = $this->defaults->getTextColorPrimary();

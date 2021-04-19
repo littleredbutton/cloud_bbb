@@ -17,6 +17,9 @@ const descriptions: { [key: string]: string } = {
 	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
 	moderatorToken: t('bbb', 'If enabled, a moderator URL is generated which allows access with moderator permission.'),
 	internalRestrictedShareWith: t('bbb', 'Only selected users and groups are allowed to access the room.'),
+	listenOnly: t('bbb', 'If disabled, a microphone is needed to join the conference.'),
+	mediaCheck: t('bbb', 'If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3).'),
+	cleanLayout: t('bbb', 'If enabled, the user list, chat area and presentation are hidden by default.'),
 };
 
 const LOGO_QR = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGnSURBVFiF7de9TxRBHMbxzxG5BonRBOGsVRJfIvGFPwFKX0tjJGqsrfwvCC0YtbJSQyT4J0hB1BhtjZFCI4FoqTRCsbO43g24e+5Q3ZNsZm9+z8zzvZns7Rw9/a0jeIx1bNZ8rYe5WzuFt7CSILj9WsFwHtooADzA7XD/DG/CgDrUwHlcDZ/ncLfdtBoCn9cUGtN8yPiWd/QVikOhfZcQ4G1oD8cA8u2oa9ljyufe3vq+HYx7ph7Avv8YO4Rx2b4uy35oKqubFWhiBl+wiJf4imn0V52smxWYxc22vn7cwwHcqjJZ1RUYi4QXNYUzKQEm/1FvYCIlwEAJz/6UAB9KeN6nBFjAp13qH2VPRjKADdkr9Uek9h3XgicZwGk8wcFI7VConUoFMIZXOLGL5ySWVHgUywI08RSDJbyDwdusE+AGjpb0wjFcrxPgSoXwXJerAnScVgo63gXAaKSv49RVBFgL7dnIwN9dAMR0LrSreUfxbfgCd3BJdix/7Q/pBn5WDPuF++G+gQu4WMjq0Ii9+WPyWeFU3K4WHsm2o+7gNTwMX7SnbW0BScCZl0uGVe8AAAAASUVORK5CYII=';
@@ -153,29 +156,64 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 				<em>{descriptions.moderatorToken}</em>
 			</div>
 
-			<h3>{t('bbb', 'Miscellaneous')}</h3>
-			<div>
+			<div className="bbb-form-element">
+				<h3>{t('bbb', 'Miscellaneous')}</h3>
 				<div>
-					<input id={`bbb-record-${room.id}`}
-						type="checkbox"
-						className="checkbox"
-						checked={room.record}
-						disabled={!restriction?.allowRecording}
-						onChange={(event) => updateProperty('record', event.target.checked)} />
-					<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
+					<div>
+						<input id={`bbb-record-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={room.record}
+							disabled={!restriction?.allowRecording}
+							onChange={(event) => updateProperty('record', event.target.checked)} />
+						<label htmlFor={`bbb-record-${room.id}`}>{t('bbb', 'Recording')}</label>
+					</div>
+					<p><em>{descriptions.recording}</em></p>
 				</div>
-				<p><em>{descriptions.recording}</em></p>
-			</div>
-			<div>
 				<div>
-					<input id={`bbb-requireModerator-${room.id}`}
-						type="checkbox"
-						className="checkbox"
-						checked={room.requireModerator}
-						onChange={(event) => updateProperty('requireModerator', event.target.checked)} />
-					<label htmlFor={`bbb-requireModerator-${room.id}`}>{t('bbb', 'Require moderator to start room')}</label>
+					<div>
+						<input id={`bbb-requireModerator-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={room.requireModerator}
+							onChange={(event) => updateProperty('requireModerator', event.target.checked)} />
+						<label htmlFor={`bbb-requireModerator-${room.id}`}>{t('bbb', 'Require moderator to start room')}</label>
+					</div>
+					<p><em>{descriptions.requireModerator}</em></p>
 				</div>
-				<p><em>{descriptions.requireModerator}</em></p>
+				<div>
+					<div>
+						<input id={`bbb-listenOnly-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={room.listenOnly}
+							onChange={(event) => updateProperty('listenOnly', event.target.checked)} />
+						<label htmlFor={`bbb-listenOnly-${room.id}`}>{t('bbb', 'Listen only option')}</label>
+					</div>
+					<p><em>{descriptions.listenOnly}</em></p>
+				</div>
+				<div>
+					<div>
+						<input id={`bbb-mediaCheck-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={!room.mediaCheck}
+							onChange={(event) => updateProperty('mediaCheck', !event.target.checked)} />
+						<label htmlFor={`bbb-mediaCheck-${room.id}`}>{t('bbb', 'Skip media check before usage')}</label>
+					</div>
+					<p><em>{descriptions.mediaCheck}</em></p>
+				</div>
+				<div>
+					<div>
+						<input id={`bbb-cleanLayout-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={room.cleanLayout}
+							onChange={(event) => updateProperty('cleanLayout', event.target.checked)} />
+						<label htmlFor={`bbb-cleanLayout-${room.id}`}>{t('bbb', 'Clean layout')}</label>
+					</div>
+					<p><em>{descriptions.cleanLayout}</em></p>
+				</div>
 			</div>
 		</Dialog>
 	);

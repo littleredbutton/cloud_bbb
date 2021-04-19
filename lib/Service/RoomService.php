@@ -102,7 +102,19 @@ class RoomService {
 	 *
 	 * @return \OCP\AppFramework\Db\Entity|null
 	 */
-	public function update(int $id, string $name, string $welcome, int $maxParticipants, bool $record, string $access, bool $everyoneIsModerator, bool $requireModerator, ?string $moderatorToken) {
+	public function update(
+		int $id,
+		string $name,
+		string $welcome,
+		int $maxParticipants,
+		bool $record,
+		string $access,
+		bool $everyoneIsModerator,
+		bool $requireModerator,
+		?string $moderatorToken,
+		bool $listenOnly,
+		bool $mediaCheck,
+		bool $cleanLayout) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -121,6 +133,9 @@ class RoomService {
 			$room->setAccess($access);
 			$room->setEveryoneIsModerator($everyoneIsModerator);
 			$room->setRequireModerator($requireModerator);
+			$room->setListenOnly($listenOnly);
+			$room->setMediaCheck($mediaCheck);
+			$room->setCleanLayout($cleanLayout);
 
 			return $this->mapper->update($room);
 		} catch (Exception $e) {

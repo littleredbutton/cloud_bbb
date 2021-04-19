@@ -39,6 +39,9 @@ export interface Room {
 	requireModerator: boolean;
 	shared: boolean;
 	moderatorToken: string;
+	listenOnly: boolean,
+	mediaCheck: boolean,
+	cleanLayout: boolean,
 }
 
 export interface RoomShare {

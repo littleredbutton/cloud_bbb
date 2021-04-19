@@ -21,6 +21,9 @@ use OCP\AppFramework\Db\Entity;
  * @method bool getRequireModerator()
  * @method bool getEveryoneIsModerator()
  * @method string getModeratorToken()
+ * @method bool getListenOnly()
+ * @method bool getMediaCheck()
+ * @method bool getCleanLayout()
  * @method void setUid(string $uid)
  * @method void setName(string $name)
  * @method void setAttendeePassword(string $pw)
@@ -34,6 +37,9 @@ use OCP\AppFramework\Db\Entity;
  * @method void setEveryoneIsModerator(bool $everyone)
  * @method void setRequireModerator(bool $require)
  * @method void setModeratorToken(string $moderatorToken)
+ * @method void setListenOnly(bool $listenOnly)
+ * @method void setMediaCheck(bool $mediaCheck)
+ * @method void setCleanLayout(bool $cleanLayout)
  */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
@@ -58,6 +64,9 @@ class Room extends Entity implements JsonSerializable {
 	public $requireModerator = false;
 	public $shared = false;
 	public $moderatorToken;
+	public $listenOnly;
+	public $mediaCheck;
+	public $cleanLayout;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
@@ -65,6 +74,9 @@ class Room extends Entity implements JsonSerializable {
 		$this->addType('everyoneIsModerator', 'boolean');
 		$this->addType('requireModerator', 'boolean');
 		$this->addType('shared', 'boolean');
+		$this->addType('listenOnly', 'boolean');
+		$this->addType('mediaCheck', 'boolean');
+		$this->addType('cleanLayout', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
@@ -82,6 +94,9 @@ class Room extends Entity implements JsonSerializable {
 			'requireModerator'    => boolval($this->requireModerator),
 			'shared'              => boolval($this->shared),
 			'moderatorToken'      => $this->moderatorToken,
+			'listenOnly'          => boolval($this->listenOnly),
+			'mediaCheck'          => boolval($this->mediaCheck),
+			'cleanLayout'         => boolval($this->cleanLayout),
 		];
 	}
 }
