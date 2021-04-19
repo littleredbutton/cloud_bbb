@@ -111,6 +111,7 @@ thankful for people and organisations who are sponsoring features or bug fixes:
 - [Graz University of Technology](https://www.tugraz.at) form action ([#47]), navigation entry ([#31]), restrictions ([#43], [#53]), circles ([#61])
 - [Arawa](https://www.arawa.fr) UX audit
 - [Niedersächsisches Landesinstitut für schulische Qualitätsentwicklung – Netzwerk Medienberatung](https://nlq.niedersachsen.de/) moderator url, UX improvements
+- [Integrierte Gesamtschule Lengede](http://www.igs-lengede.de/) theme, join options
 
 If you are looking for other ways to contribute to this project, you are welcome
 to look at our [contributor guidelines]. Every contribution is valuable :tada:.
