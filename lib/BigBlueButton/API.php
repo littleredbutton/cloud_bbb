@@ -107,7 +107,7 @@ class API {
 
 		if ($uid) {
 			$joinMeetingParams->setUserId($uid);
-			// $joinMeetingParams->setAvatarURL();
+			$joinMeetingParams->setAvatarURL($this->urlGenerator->linkToRouteAbsolute('core.avatar.getAvatar', ['userId' => $uid, 'size' => 32]));
 		}
 
 		return $this->getServer()->getJoinMeetingURL($joinMeetingParams);
