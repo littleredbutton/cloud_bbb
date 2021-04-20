@@ -86,7 +86,7 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["%n partetzipante","%n partetzipantes"],
     "Delete" : "Cantzella",
     "Delete \"{name}\"?" : "Cantzella \"{name}\"?",
-    "Select target folder" : "Seletziona cartella de arribu",
+    "Select target folder" : "Seletziona cartella de destinatzione",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "S'URL de s'istantza s'est sarvadu in \"{path}\" comente \"{filename}\".",
     "Link stored" : "Ligòngiu sarvadu",
     "URL to room could not be stored." : "No at fatu a sarvare s'URL de s'istantza.",

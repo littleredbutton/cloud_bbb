@@ -25,6 +25,7 @@ OC.L10N.register(
     "API secret" : "Tajny interfejs API",
     "Save" : "Zapisz",
     "Show room manager in app navigation instead of settings page." : "Pokaż menedżera pokoju w nawigacji aplikacji zamiast na stronie ustawień.",
+    "Use Nextcloud theme in BigBlueButton." : "Użyj motywu Nextclouda w BigBlueButton.",
     "Community" : "Społeczność",
     "Are you enjoying this app? Give something back to the open source community." : "Podoba Ci się ta aplikacja? Daj coś w zamian dla otwartoźródłowej społeczności.",
     "Checkout the contributor guide" : "Sprawdź przewodnik dla współtwórców",

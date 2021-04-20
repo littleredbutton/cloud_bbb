@@ -25,6 +25,7 @@ OC.L10N.register(
     "API secret" : "API parolası",
     "Save" : "Kaydet",
     "Show room manager in app navigation instead of settings page." : "Uygulama gezinmesinde ayarlar sayfası yerine oda yöneticisi görüntülensin.",
+    "Use Nextcloud theme in BigBlueButton." : "BigBlueButton üzerinde Nextcloud teması kullanılsın.",
     "Community" : "Topluluk",
     "Are you enjoying this app? Give something back to the open source community." : "Bu uygulamayı beğendiniz mi? Açık kaynak topluluğuna bir şeyleri geri verin.",
     "Checkout the contributor guide" : "Katılımcı rehberine bakın",

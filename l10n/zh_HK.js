@@ -25,6 +25,7 @@ OC.L10N.register(
     "API secret" : "API 密碼",
     "Save" : "儲存",
     "Show room manager in app navigation instead of settings page." : "在應用程式導覽而非設定頁面中顯示聊天室管理器。",
+    "Use Nextcloud theme in BigBlueButton." : "在 BigBlueButton 中使用 Nextcloud 主題。",
     "Community" : "社群",
     "Are you enjoying this app? Give something back to the open source community." : "你喜歡這個應用程式嗎？回饋給開源社區。 ",
     "Checkout the contributor guide" : "檢閱貢獻者指南",

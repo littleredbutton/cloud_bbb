@@ -4,6 +4,7 @@ OC.L10N.register(
     "Back to %s" : "العودة إلى %s",
     "API secret" : "API secret",
     "Save" : "حفظ",
+    "Community" : "المجتمع",
     "The name must be at least 3 characters long." : "الاسم يجب ان يكون على الاقل مكون من 3 حروف.",
     "Display name" : "الاسم المعروض",
     "Password" : "كلمة السر",
