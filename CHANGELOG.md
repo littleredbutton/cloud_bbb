@@ -5,7 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## 1.4.0 (2021-04-25)
 ### Added
+- add avatars for Nextcloud users (requires BBB server 2.3)
 - add room option to disable listen only mode
 - add room option to skip audio check and video preview on first join (requires BBB server 2.3)
 - add room option to hide user list, chat area and presentation by default
