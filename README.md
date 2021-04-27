@@ -101,6 +101,12 @@ for details.
 - Before installing, make sure your BBB is running correctly
 - If the room doesn't appear in the ... menu of files, a browser/cache reload
   might help
+- To share an audio (mp3) or video (mp4) file with your audience follow these steps (more info in [#148](https://github.com/sualko/cloud_bbb/issues/148#issuecomment-827338650)):
+  - create a public share of the exact file
+  - copy the location of the share from the share information screen into your clipboard
+  - open big blue button, press the plus icon in the lower left corner
+  - click on add external video
+  - paste the url from your clipboard and append the following string for audio `/download/file.mp3` or `/download/file.mp4` for video files
 
 ## :heart: Sponsors
 Writing such an application is a lot of work and therefore we are specially
