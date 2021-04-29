@@ -103,7 +103,7 @@
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Is restritziones non sunt pro is istantza chi ddoe sunt giai. Mancu unu bolet nàrrere chi su valore non tenet lìmites. S'optzione prus pagu restritiva est pro totu is utentes si àplicant restritziones mùltiplas.",
     "Delete restrictions for \"{name}\"?" : "Cantzellare restritziones pro \"{name}\"?",
     "Settings saved" : "Cunfiguratziones sarvadas",
-    "Unexpected error occurred" : "Ddoe at àpidu un'errore ispantosu",
+    "Unexpected error occurred" : "B'at àpidu un'errore ispantosu",
     "API URL is invalid" : "API URL no est vàlidu",
     "API secret is invalid" : "API segretu no est vàlidu",
     "URL has to start with HTTPS" : "S'URL depet cumintzare cun HTTPS",
