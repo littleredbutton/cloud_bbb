@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.4.1 (2021-04-30)
+### Fixed
+- [#147](https://github.com/sualko/cloud_bbb/issues/147) set layout params only for clean layout
+
+### Misc
+- update translations
+
 ## 1.4.0 (2021-04-25)
 ### Added
 - add avatars for Nextcloud users (requires BBB server 2.3)
