@@ -69,6 +69,7 @@
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "若啟用，將會生成主持人 URL，讓有主持人權限的人存取。",
     "Only selected users and groups are allowed to access the room." : "僅允許選定的用戶與群組存取聊天室。",
     "If disabled, a microphone is needed to join the conference." : "如果停用，則需要米高風才能加入會議。",
+    "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "如果啟用，則用戶不必在首次加入時執行迴聲呼叫和網絡攝像頭預覽（自 BBB Server 2.3 起可用）。",
     "If enabled, the user list, chat area and presentation are hidden by default." : "如果啟用，則默認情況下將隱藏用戶列表，聊天區和演示文稿。",
     "Edit \"{room}\"" : "編輯「{room}」",
     "Room URL" : "聊天室 URL",
