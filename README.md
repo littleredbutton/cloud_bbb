@@ -107,7 +107,7 @@ for details.
   - open big blue button, press the plus icon in the lower left corner
   - click on add external video
   - paste the url from your clipboard and append the following string for audio `/download?.mp3` or `/download?.mp4` for video files
-- For connecting to a ScaleLite Server use the url like https://yourscalelite.url/bigbluebutton/ without additional api/ and for secret scalelite's LOADBALANCER_SECRET  
+- To connect to a ScaleLite server, use the url like `https://yourscalelite.url/bigbluebutton/` without additional `api/` and as secret ScaleLite's `LOADBALANCER_SECRET`
 
 ## :heart: Sponsors
 Writing such an application is a lot of work and therefore we are specially
