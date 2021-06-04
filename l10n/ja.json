@@ -45,6 +45,7 @@
     "Recording" : "記録中",
     "Room name" : "会議室名",
     "Create" : "作成",
+    "Copy to clipboard" : "クリップボードにコピー",
     "_%n participant_::_%n participants_" : ["%n参加者"],
     "Delete" : "削除",
     "Delete \"{name}\"?" : "\"{name}\" を削除しますか？",
