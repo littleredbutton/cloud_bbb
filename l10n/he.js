@@ -11,6 +11,7 @@ OC.L10N.register(
     "Display name" : "שם תצוגה",
     "Password" : "ססמה",
     "Join" : "הצטרף",
+    "Have an account? Log in." : "יש לך חשבון? כדאי לך להיכנס.",
     "Hello %s" : "שלום %s",
     "Group" : "קבוצה",
     "Name" : "שם",
