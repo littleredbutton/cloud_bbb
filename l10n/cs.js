@@ -5,7 +5,7 @@ OC.L10N.register(
     "You deleted the room %s." : "Smazali jste místnost %s.",
     "{user} deleted the room %s." : "{user} smazal(a) místnost %s.",
     "You shared the room %s with {shareWith}." : "Nasdíleli jste místnost %s {shareWith}.",
-    "{user} shared the room %s with you." : "{user} vám nasdílel(a) místnosti %s.",
+    "{user} shared the room %s with you." : "{user} vám nasdílel(a) místnost %s.",
     "You unshared the room %s with {shareWith}." : "Zrušili jste sdílení místnosti %s s {shareWith}.",
     "{user} unshared the room %s with you." : "{user} vám přestal sdílet místnost %s.",
     "You started a meeting in the \"%s\" room." : "Zahájili jste schůzku v místnosti „%s“.",
