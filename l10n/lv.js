@@ -20,7 +20,7 @@ OC.L10N.register(
     "Welcome" : "Laipni lūdzam!",
     "Room name" : "Sapulču telpas nosaukums",
     "Create" : "Izveidot",
-    "_%n participant_::_%n participants_" : ["dalībnieki - %n","%n dalībnieks","%n dalībnieki"],
+    "_%n participant_::_%n participants_" : ["%n dalībnieks","%n dalībnieki"],
     "Delete" : "Dzēst",
     "Delete \"{name}\"?" : "Dzēst \"{name}\"?",
     "Select target folder" : "Izvēlaties mērķa mapi",
