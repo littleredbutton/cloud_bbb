@@ -85,6 +85,9 @@ class RoomService {
 		$room->setRecord($record);
 		$room->setAccess($access);
 		$room->setUserId($userId);
+		$room->setListenOnly(true);
+		$room->setMediaCheck(true);
+		$room->setCleanLayout(false);
 
 		if ($access === Room::ACCESS_PASSWORD) {
 			$room->setPassword($this->humanReadableRandom(8));
