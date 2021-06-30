@@ -9,7 +9,7 @@ OC.L10N.register(
     "Group" : "گروه",
     "Name" : "نام",
     "Access" : "دسترسی",
-    "Edit" : "ویرایش کردن",
+    "Edit" : "ویرایش",
     "Welcome" : "خوش آمدی",
     "Miscellaneous" : "متفرقه",
     "Create" : "ایجاد شده",
