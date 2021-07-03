@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 1.4.2 (2021-07-03)
+### Fixed
+- [#155](https://github.com/sualko/cloud_bbb/issues/155) set default values on room creation
+
+### Misc
+- update dependencies
+- fix formatting
+
 ## 1.4.1 (2021-04-30)
 ### Fixed
 - [#147](https://github.com/sualko/cloud_bbb/issues/147) set layout params only for clean layout
