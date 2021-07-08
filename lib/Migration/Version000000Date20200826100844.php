@@ -47,7 +47,7 @@ class Version000000Date20200826100844 extends SimpleMigrationStep {
 				'default' => -1,
 			]);
 			$table->addColumn('allow_recording', 'boolean', [
-				'notnull' => true,
+				'notnull' => false,
 				'default' => true,
 			]);
 

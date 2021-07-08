@@ -54,7 +54,7 @@ class Version000000Date20200416124731 extends SimpleMigrationStep {
 				'notnull' => false,
 			]);
 			$table->addColumn('record', 'boolean', [
-				'notnull' => true,
+				'notnull' => false,
 			]);
 
 			$table->setPrimaryKey(['id']);
