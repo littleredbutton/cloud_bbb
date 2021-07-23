@@ -10,6 +10,7 @@ OC.L10N.register(
     "Password" : "Senhal",
     "Join" : "Rejónher",
     "Group" : "Grop",
+    "Searching" : "Recèrca",
     "Name" : "Nom",
     "Max" : "Max",
     "Record" : "Enregistrar",
