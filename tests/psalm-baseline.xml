@@ -11,6 +11,12 @@
       <code>null</code>
     </NullArgument>
   </file>
+  <file src="lib/Controller/ServerController.php">
+    <InvalidArgument occurrences="2">
+      <code>$success</code>
+      <code>$this-&gt;server-&gt;check($url, $secret)</code>
+    </InvalidArgument>
+  </file>
   <file src="lib/NoPermissionResponse.php">
     <MissingDependency occurrences="1">
       <code>Template</code>
