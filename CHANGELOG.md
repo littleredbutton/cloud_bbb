@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- change default navigation label to BBB
+- [#171](https://github.com/sualko/cloud_bbb/issues/171) bump Nextcloud versions
+
+### Fixed
+- use official circle api
+- change boolean columns to nullable (#166)
+
+### Misc
+- remove composer.phar
+- update nc api
+- update psalm baseline
+- BREAKING [#116](https://github.com/sualko/cloud_bbb/issues/116) update php dependencies
+- update to latest nc code style
 
 ## 1.4.2 (2021-07-03)
 ### Fixed
