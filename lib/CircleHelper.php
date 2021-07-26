@@ -35,8 +35,7 @@ class CircleHelper {
 			$api = $this->getCircleAPI();
 
 			if ($api !== false) {
-				// since v0.19.x \OCA\Circles\Api\v1\Circles can be used
-				$circles = $api->listCircles(\OCA\Circles\Model\Circle::CIRCLES_ALL, '', \OCA\Circles\Model\Member::LEVEL_MEMBER);
+				$circles = $api->listCircles(\OCA\Circles\Api\v1\Circles::CIRCLES_ALL, '', \OCA\Circles\Model\Member::LEVEL_MEMBER);
 
 				foreach ($circles as $circle) {
 					$this->cache[$userId][] = $circle->getUniqueId();
