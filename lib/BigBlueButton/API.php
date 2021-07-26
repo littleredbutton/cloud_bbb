@@ -233,17 +233,17 @@ class API {
 	 */
 	private function recordToArray(Record $record): array {
 		return [
-			'id'           => $record->getRecordId(),
-			'meetingId'    => $record->getMeetingId(),
-			'name'         => $record->getName(),
-			'published'    => $record->isPublished(),
-			'state'        => $record->getState(),
-			'startTime'    => $record->getStartTime(),
+			'id' => $record->getRecordId(),
+			'meetingId' => $record->getMeetingId(),
+			'name' => $record->getName(),
+			'published' => $record->isPublished(),
+			'state' => $record->getState(),
+			'startTime' => $record->getStartTime(),
 			'participants' => $record->getParticipantCount(),
-			'type'         => $record->getPlaybackType(),
-			'length'       => $record->getPlaybackLength(),
-			'url'          => $record->getPlaybackUrl(),
-			'metas'        => $record->getMetas(),
+			'type' => $record->getPlaybackType(),
+			'length' => $record->getPlaybackLength(),
+			'url' => $record->getPlaybackUrl(),
+			'metas' => $record->getMetas(),
 		];
 	}
 

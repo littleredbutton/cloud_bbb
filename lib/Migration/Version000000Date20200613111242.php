@@ -25,14 +25,14 @@ class Version000000Date20200613111242 extends SimpleMigrationStep {
 			$table = $schema->createTable('bbb_room_shares');
 			$table->addColumn('id', 'integer', [
 				'autoincrement' => true,
-				'notnull'       => true,
+				'notnull' => true,
 			]);
 			$table->addColumn('room_id', 'integer', [
 				'notnull' => true,
 			]);
 			$table->addColumn('share_with', 'string', [
 				'notnull' => true,
-				'length'  => 200,
+				'length' => 200,
 			]);
 			$table->addColumn('share_type', 'integer', [
 				'notnull' => true,

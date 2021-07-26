@@ -25,27 +25,27 @@ class Version000000Date20200416124731 extends SimpleMigrationStep {
 			$table = $schema->createTable('bbb_rooms');
 			$table->addColumn('id', 'integer', [
 				'autoincrement' => true,
-				'notnull'       => true,
+				'notnull' => true,
 			]);
 			$table->addColumn('uid', 'string', [
 				'notnull' => true,
-				'length'  => 64
+				'length' => 64
 			]);
 			$table->addColumn('user_id', 'string', [
 				'notnull' => true,
-				'length'  => 200,
+				'length' => 200,
 			]);
 			$table->addColumn('name', 'string', [
 				'notnull' => true,
-				'length'  => 200
+				'length' => 200
 			]);
 			$table->addColumn('attendee_password', 'string', [
 				'notnull' => true,
-				'length'  => 32
+				'length' => 32
 			]);
 			$table->addColumn('moderator_password', 'string', [
 				'notnull' => true,
-				'length'  => 32
+				'length' => 32
 			]);
 			$table->addColumn('welcome', 'string', [
 				'notnull' => false,

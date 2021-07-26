@@ -25,7 +25,7 @@ class Admin implements ISettings {
 	 */
 	public function getForm() {
 		$parameters = [
-			'api.url'    => $this->config->getAppValue('bbb', 'api.url'),
+			'api.url' => $this->config->getAppValue('bbb', 'api.url'),
 			'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
 			'app.navigation' => $this->config->getAppValue('bbb', 'app.navigation') === 'true' ? 'checked' : '',
 			'join.theme' => $this->config->getAppValue('bbb', 'join.theme') === 'true' ? 'checked' : '',

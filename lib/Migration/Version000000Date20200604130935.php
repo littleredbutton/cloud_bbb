@@ -36,7 +36,7 @@ class Version000000Date20200604130935 extends SimpleMigrationStep {
 
 			if (!$table->hasColumn('password')) {
 				$table->addColumn('password', 'string', [
-					'length'  => 64,
+					'length' => 64,
 					'notnull' => false,
 				]);
 			}

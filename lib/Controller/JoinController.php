@@ -107,11 +107,11 @@ class JoinController extends Controller {
 			return new RedirectResponse($this->getLoginUrl());
 		} elseif (empty($displayname) || strlen($displayname) < 3 || ($room->access === Room::ACCESS_PASSWORD && $password !== $room->password)) {
 			$response = new TemplateResponse($this->appName, 'join', [
-				'room'             => $room->name,
+				'room' => $room->name,
 				'wrongdisplayname' => !empty($displayname) && strlen($displayname) < 3,
 				'passwordRequired' => $room->access === Room::ACCESS_PASSWORD,
-				'wrongPassword'    => $password !== $room->password && $password !== '',
-				'loginUrl'         => $this->getLoginUrl(),
+				'wrongPassword' => $password !== $room->password && $password !== '',
+				'loginUrl' => $this->getLoginUrl(),
 			], 'guest');
 
 			return $response;
@@ -133,7 +133,7 @@ class JoinController extends Controller {
 
 		return new TemplateResponse($this->appName, 'forward', [
 			'room' => $room->name,
-			'url'  => $joinUrl,
+			'url' => $joinUrl,
 		], 'guest');
 	}
 

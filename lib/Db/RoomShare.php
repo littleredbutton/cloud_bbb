@@ -43,12 +43,12 @@ class RoomShare extends Entity implements JsonSerializable {
 
 	public function jsonSerialize(): array {
 		return [
-			'id'                   => $this->id,
-			'roomId'               => $this->roomId,
-			'shareType'            => $this->shareType,
-			'shareWith'            => $this->shareWith,
+			'id' => $this->id,
+			'roomId' => $this->roomId,
+			'shareType' => $this->shareType,
+			'shareWith' => $this->shareWith,
 			'shareWithDisplayName' => $this->shareWithDisplayName,
-			'permission'           => $this->permission,
+			'permission' => $this->permission,
 		];
 	}
 

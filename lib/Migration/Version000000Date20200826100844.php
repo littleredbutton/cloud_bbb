@@ -28,11 +28,11 @@ class Version000000Date20200826100844 extends SimpleMigrationStep {
 			$table = $schema->createTable('bbb_restrictions');
 			$table->addColumn('id', 'integer', [
 				'autoincrement' => true,
-				'notnull'       => true,
+				'notnull' => true,
 			]);
 			$table->addColumn('group_id', 'string', [
 				'notnull' => true,
-				'length'  => 200,
+				'length' => 200,
 			]);
 			$table->addColumn('max_rooms', 'integer', [
 				'notnull' => false,

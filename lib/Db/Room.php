@@ -81,22 +81,22 @@ class Room extends Entity implements JsonSerializable {
 
 	public function jsonSerialize(): array {
 		return [
-			'id'                  => $this->id,
-			'uid'                 => $this->uid,
-			'userId'              => $this->userId,
-			'name'                => $this->name,
-			'welcome'             => $this->welcome,
-			'maxParticipants'     => (int) $this->maxParticipants,
-			'record'              => boolval($this->record),
-			'access'              => $this->access,
-			'password'            => $this->password,
+			'id' => $this->id,
+			'uid' => $this->uid,
+			'userId' => $this->userId,
+			'name' => $this->name,
+			'welcome' => $this->welcome,
+			'maxParticipants' => (int) $this->maxParticipants,
+			'record' => boolval($this->record),
+			'access' => $this->access,
+			'password' => $this->password,
 			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
-			'requireModerator'    => boolval($this->requireModerator),
-			'shared'              => boolval($this->shared),
-			'moderatorToken'      => $this->moderatorToken,
-			'listenOnly'          => boolval($this->listenOnly),
-			'mediaCheck'          => boolval($this->mediaCheck),
-			'cleanLayout'         => boolval($this->cleanLayout),
+			'requireModerator' => boolval($this->requireModerator),
+			'shared' => boolval($this->shared),
+			'moderatorToken' => $this->moderatorToken,
+			'listenOnly' => boolval($this->listenOnly),
+			'mediaCheck' => boolval($this->mediaCheck),
+			'cleanLayout' => boolval($this->cleanLayout),
 		];
 	}
 }

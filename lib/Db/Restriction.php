@@ -34,12 +34,12 @@ class Restriction extends Entity implements JsonSerializable {
 
 	public function jsonSerialize(): array {
 		return [
-			'id'              => $this->id,
-			'groupId'         => $this->groupId,
-			'maxRooms'        => (int) $this->maxRooms,
-			'roomTypes'       => \json_decode($this->roomTypes),
+			'id' => $this->id,
+			'groupId' => $this->groupId,
+			'maxRooms' => (int) $this->maxRooms,
+			'roomTypes' => \json_decode($this->roomTypes),
 			'maxParticipants' => (int) $this->maxParticipants,
-			'allowRecording'  => boolval($this->allowRecording),
+			'allowRecording' => boolval($this->allowRecording),
 		];
 	}
 }
