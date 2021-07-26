@@ -28,8 +28,8 @@
 		"lint:fix:style": "stylelint 'ts/**/*.scss' --fix",
 		"lint:php": "./vendor/bin/php-cs-fixer fix --dry-run",
 		"lint:fix:php": "./vendor/bin/php-cs-fixer fix",
-		"composer:install": "php composer.phar install --no-dev -o",
-		"composer:install:dev": "php composer.phar install -o",
+		"composer:install": "composer install --no-dev -o",
+		"composer:install:dev": "composer install -o",
 		"release:build": "node scripts/build-release.js",
 		"release:publish": "node scripts/publish-release.js"
 	},
