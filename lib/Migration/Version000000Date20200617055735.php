@@ -26,7 +26,7 @@ class Version000000Date20200617055735 extends SimpleMigrationStep {
 
 			if (!$table->hasColumn('everyone_is_moderator')) {
 				$table->addColumn('everyone_is_moderator', 'boolean', [
-					'notnull' => true,
+					'notnull' => false,
 					'default' => false,
 				]);
 			}

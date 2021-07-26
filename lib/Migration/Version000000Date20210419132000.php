@@ -28,21 +28,21 @@ class Version000000Date20210419132000 extends SimpleMigrationStep {
 
 			if (!$table->hasColumn('listen_only')) {
 				$table->addColumn('listen_only', 'boolean', [
-					'notnull' => true,
+					'notnull' => false,
 					'default' => true
 				]);
 			}
 
 			if (!$table->hasColumn('media_check')) {
 				$table->addColumn('media_check', 'boolean', [
-					'notnull' => true,
+					'notnull' => false,
 					'default' => true
 				]);
 			}
 
 			if (!$table->hasColumn('clean_layout')) {
 				$table->addColumn('clean_layout', 'boolean', [
-					'notnull' => true,
+					'notnull' => false,
 					'default' => false
 				]);
 			}

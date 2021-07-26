@@ -28,7 +28,7 @@ class Version000000Date20200829112301 extends SimpleMigrationStep {
 
 			if (!$table->hasColumn('require_moderator')) {
 				$table->addColumn('require_moderator', 'boolean', [
-					'notnull' => true,
+					'notnull' => false,
 					'default' => false,
 				]);
 			}
