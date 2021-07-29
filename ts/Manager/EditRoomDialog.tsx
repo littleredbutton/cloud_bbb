@@ -20,6 +20,7 @@ const descriptions: { [key: string]: string } = {
 	listenOnly: t('bbb', 'If disabled, a microphone is needed to join the conference.'),
 	mediaCheck: t('bbb', 'If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3).'),
 	cleanLayout: t('bbb', 'If enabled, the user list, chat area and presentation are hidden by default.'),
+	joinMuted: t('bbb', 'If enabled, all users will join the meeting muted.'),
 };
 
 const LOGO_QR = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGnSURBVFiF7de9TxRBHMbxzxG5BonRBOGsVRJfIvGFPwFKX0tjJGqsrfwvCC0YtbJSQyT4J0hB1BhtjZFCI4FoqTRCsbO43g24e+5Q3ZNsZm9+z8zzvZns7Rw9/a0jeIx1bNZ8rYe5WzuFt7CSILj9WsFwHtooADzA7XD/DG/CgDrUwHlcDZ/ncLfdtBoCn9cUGtN8yPiWd/QVikOhfZcQ4G1oD8cA8u2oa9ljyufe3vq+HYx7ph7Avv8YO4Rx2b4uy35oKqubFWhiBl+wiJf4imn0V52smxWYxc22vn7cwwHcqjJZ1RUYi4QXNYUzKQEm/1FvYCIlwEAJz/6UAB9KeN6nBFjAp13qH2VPRjKADdkr9Uek9h3XgicZwGk8wcFI7VConUoFMIZXOLGL5ySWVHgUywI08RSDJbyDwdusE+AGjpb0wjFcrxPgSoXwXJerAnScVgo63gXAaKSv49RVBFgL7dnIwN9dAMR0LrSreUfxbfgCd3BJdix/7Q/pBn5WDPuF++G+gQu4WMjq0Ii9+WPyWeFU3K4WHsm2o+7gNTwMX7SnbW0BScCZl0uGVe8AAAAASUVORK5CYII=';
@@ -213,6 +214,17 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						<label htmlFor={`bbb-cleanLayout-${room.id}`}>{t('bbb', 'Clean layout')}</label>
 					</div>
 					<p><em>{descriptions.cleanLayout}</em></p>
+				</div>
+				<div>
+					<div>
+						<input id={`bbb-joinMuted-${room.id}`}
+							type="checkbox"
+							className="checkbox"
+							checked={room.joinMuted}
+							onChange={(event) => updateProperty('joinMuted', event.target.checked)} />
+						<label htmlFor={`bbb-joinMuted-${room.id}`}>{t('bbb', 'Join Meeting muted')}</label>
+					</div>
+					<p><em>{descriptions.joinMuted}</em></p>
 				</div>
 			</div>
 		</Dialog>

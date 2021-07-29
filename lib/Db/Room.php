@@ -24,6 +24,7 @@ use OCP\AppFramework\Db\Entity;
  * @method bool getListenOnly()
  * @method bool getMediaCheck()
  * @method bool getCleanLayout()
+ * @method bool getJoinMuted()
  * @method void setUid(string $uid)
  * @method void setName(string $name)
  * @method void setAttendeePassword(string $pw)
@@ -40,6 +41,7 @@ use OCP\AppFramework\Db\Entity;
  * @method void setListenOnly(bool $listenOnly)
  * @method void setMediaCheck(bool $mediaCheck)
  * @method void setCleanLayout(bool $cleanLayout)
+ * @method void setJoinMuted(bool $joinMuted)
  */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
@@ -67,6 +69,7 @@ class Room extends Entity implements JsonSerializable {
 	public $listenOnly;
 	public $mediaCheck;
 	public $cleanLayout;
+	public $joinMuted;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
@@ -77,6 +80,7 @@ class Room extends Entity implements JsonSerializable {
 		$this->addType('listenOnly', 'boolean');
 		$this->addType('mediaCheck', 'boolean');
 		$this->addType('cleanLayout', 'boolean');
+		$this->addType('joinMuted', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
@@ -97,6 +101,7 @@ class Room extends Entity implements JsonSerializable {
 			'listenOnly' => boolval($this->listenOnly),
 			'mediaCheck' => boolval($this->mediaCheck),
 			'cleanLayout' => boolval($this->cleanLayout),
+			'joinMuted' => boolval($this->joinMuted),
 		];
 	}
 }

@@ -117,7 +117,8 @@ class RoomService {
 		?string $moderatorToken,
 		bool $listenOnly,
 		bool $mediaCheck,
-		bool $cleanLayout) {
+		bool $cleanLayout,
+		bool $joinMuted) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -139,6 +140,7 @@ class RoomService {
 			$room->setListenOnly($listenOnly);
 			$room->setMediaCheck($mediaCheck);
 			$room->setCleanLayout($cleanLayout);
+			$room->setJoinMuted($joinMuted);
 
 			return $this->mapper->update($room);
 		} catch (Exception $e) {
