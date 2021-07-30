@@ -222,7 +222,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							className="checkbox"
 							checked={room.joinMuted}
 							onChange={(event) => updateProperty('joinMuted', event.target.checked)} />
-						<label htmlFor={`bbb-joinMuted-${room.id}`}>{t('bbb', 'Join Meeting muted')}</label>
+						<label htmlFor={`bbb-joinMuted-${room.id}`}>{t('bbb', 'Join meeting muted')}</label>
 					</div>
 					<p><em>{descriptions.joinMuted}</em></p>
 				</div>
