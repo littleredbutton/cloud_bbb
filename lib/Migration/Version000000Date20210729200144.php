@@ -30,7 +30,7 @@ class Version000000Date20210729200144 extends SimpleMigrationStep {
 			if (!$table->hasColumn('join_muted')) {
 				$table->addColumn('join_muted', 'boolean', [
 					'notnull' => false,
-					'default' => true
+					'default' => false
 				]);
 			}
 		
