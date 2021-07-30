@@ -148,6 +148,7 @@ class API {
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
 		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
+		$createMeetingParams->setMuteOnStart($room->getJoinMuted());
 
 		$mac = $this->crypto->calculateHMAC($room->uid);
 
