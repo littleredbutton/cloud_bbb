@@ -27,7 +27,7 @@ const RecordingsNumber: React.FC<RecordingsNumberProps> = ({ recordings, showRec
 	if (recordings.length > 0) {
 		return (
 			<a onClick={() => setShowRecordings(!showRecordings)}>
-				{recordings.length} <span className='sort_arrow'>{showRecordings ? '▼' : '▲'}</span>
+				<span className='sort_arrow'>{showRecordings ? '▾' : '▸'}</span> {recordings.length}
 			</a>
 		);
 	}
