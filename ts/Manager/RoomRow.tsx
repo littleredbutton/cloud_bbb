@@ -235,7 +235,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td colSpan={11}>
 					<table>
 						<tbody>
-							{recordings?.map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}
+							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}
 						</tbody>
 					</table>
 				</td>
