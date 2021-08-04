@@ -131,7 +131,7 @@ class API {
 		}
 
 		if (!$response->success()) {
-			throw new \Exception('Can not create meeting');
+			throw new \Exception('Can not create meeting: ' . $response->getMessage());
 		}
 
 		if ($response->getMessageKey() !== 'duplicateWarning') {
