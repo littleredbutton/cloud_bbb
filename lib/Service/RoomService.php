@@ -94,7 +94,7 @@ class RoomService {
 		$room->setAccess($access);
 		$room->setUserId($userId);
 		$room->setListenOnly(true);
-		$room->setMediaCheck($media);
+		$room->setMediaCheck($mediaCheck);
 		$room->setCleanLayout(false);
 		$room->setJoinMuted(false);
 
