@@ -33,8 +33,8 @@ script('bbb', 'restrictions');
         <p><?php p($l->t('Below you can change some default values, which are used to create a new room.')); ?></p>
 
         <p>
-            <input type="checkbox" name="join.defaultMedia" id="bbb-join-defaultMedia" class="checkbox bbb-setting" value="1" <?php p($_['join.defaultMedia']); ?> />
-            <label for="bbb-join-defaultMedia"><?php p($l->t('Skip media check before usage')); ?></label>
+            <input type="checkbox" name="join.mediaCheck" id="bbb-join-mediaCheck" class="checkbox bbb-setting" value="1" <?php p($_['join.mediaCheck']); ?> />
+            <label for="bbb-join-mediaCheck"><?php p($l->t('Skip media check before usage')); ?></label>
         </p>
 
         <h3><?php p($l->t('Community')); ?></h3>

@@ -82,11 +82,7 @@ class RoomService {
 	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {
 		$room = new Room();
 
-		if($this->config->getAppValue('bbb', 'join.defaultMedia') === 'true') {
-			$media = false;
-		} else {
-			$media = true;
-		}
+		$mediaCheck = $this->config->getAppValue('bbb', 'join.mediaCheck') !== 'true';
 
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
 		$room->setName($name);
