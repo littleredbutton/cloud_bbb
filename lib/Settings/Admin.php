@@ -30,6 +30,7 @@ class Admin implements ISettings {
 			'app.navigation' => $this->config->getAppValue('bbb', 'app.navigation') === 'true' ? 'checked' : '',
 			'join.theme' => $this->config->getAppValue('bbb', 'join.theme') === 'true' ? 'checked' : '',
 			'app.shortener' => $this->config->getAppValue('bbb', 'app.shortener'),
+			'join.defaultMedia' => $this->config->getAppValue('bbb', 'join.defaultMedia') === 'true' ? 'checked' : '',
 		];
 
 		return new TemplateResponse('bbb', 'admin', $parameters);
