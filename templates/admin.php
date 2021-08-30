@@ -34,7 +34,7 @@ script('bbb', 'restrictions');
 
         <p>
             <input type="checkbox" name="join.mediaCheck" id="bbb-join-mediaCheck" class="checkbox bbb-setting" value="1" <?php p($_['join.mediaCheck']); ?> />
-            <label for="bbb-join-mediaCheck"><?php p($l->t('Skip media check before usage')); ?></label>
+            <label for="bbb-join-mediaCheck"><?php p($l->t('Perform media check before usage')); ?></label>
         </p>
 
         <h3><?php p($l->t('Community')); ?></h3>
