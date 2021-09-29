@@ -33,7 +33,7 @@ OC.L10N.register(
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "Si quieres usar urls más cortas, puedes introducir un proxy de redirección a continuación.",
     "URL shortener" : "Acortador de URLs",
     "Restrictions" : "Restricciones",
-    "You will be forwarded to the room in the next few seconds." : "Serás redireccionado a la sala en los próximos segudos.",
+    "You will be forwarded to the room in the next few seconds." : "Serás redireccionado a la sala en los próximos segundos.",
     "Let's go!" : "¡Vamos!",
     "Please enter your name!" : "¡Por favor, introduzca su nombre!",
     "The name must be at least 3 characters long." : "El nombre debe contener al menos 3 caracteres.",
