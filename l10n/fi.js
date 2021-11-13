@@ -18,6 +18,7 @@ OC.L10N.register(
     "Community" : "Yhteisö",
     "URL Shortener" : "Osoitteenlyhentäjä",
     "URL shortener" : "Osoitteenlyhentäjä",
+    "Restrictions" : "Rajoitukset",
     "You will be forwarded to the room in the next few seconds." : "Sinut ohjataan huoneeseen muutaman sekunnin kuluttua.",
     "Let's go!" : "Mennään!",
     "Please enter your name!" : "Kirjoita nimesi!",
@@ -51,6 +52,7 @@ OC.L10N.register(
     "Welcome" : "Tervetuloa",
     "Participant limit" : "Osallistujaraja",
     "Miscellaneous" : "Sekalaiset",
+    "Join meeting muted" : "Liity kokoukseen mykistettynä",
     "Room name" : "Huoneen nimi",
     "Create" : "Luo",
     "Copy to clipboard" : "Kopioi leikepöydälle",
@@ -75,6 +77,7 @@ OC.L10N.register(
     "Settings saved" : "Asetukset tallennettu",
     "Unexpected error occurred" : "Tapahtui odottamaton virhe",
     "API URL is invalid" : "Rajapinnan URL on virheellinen",
-    "API secret is invalid" : "Rajapinnan salaisuus on virheellinen"
+    "API secret is invalid" : "Rajapinnan salaisuus on virheellinen",
+    "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä"
 },
 "nplurals=2; plural=(n != 1);");
