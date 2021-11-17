@@ -12,19 +12,25 @@ use OCA\BigBlueButton\Event\RoomDeletedEvent;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
+use OCP\IConfig;
 
 class RoomService {
 
 	/** @var RoomMapper */
 	private $mapper;
 
+	/** @var IConfig */
+	private $config;
+
 	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
 	public function __construct(
 		RoomMapper $mapper,
+		IConfig $config,
 		IEventDispatcher $eventDispatcher) {
 		$this->mapper = $mapper;
+		$this->config = $config;
 		$this->eventDispatcher = $eventDispatcher;
 	}
 
@@ -76,6 +82,8 @@ class RoomService {
 	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {
 		$room = new Room();
 
+		$mediaCheck = $this->config->getAppValue('bbb', 'join.mediaCheck') === 'true';
+
 		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
 		$room->setName($name);
 		$room->setWelcome($welcome);
@@ -86,7 +94,7 @@ class RoomService {
 		$room->setAccess($access);
 		$room->setUserId($userId);
 		$room->setListenOnly(true);
-		$room->setMediaCheck(true);
+		$room->setMediaCheck($mediaCheck);
 		$room->setCleanLayout(false);
 		$room->setJoinMuted(false);
 
