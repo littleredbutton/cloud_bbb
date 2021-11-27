@@ -28,6 +28,7 @@ OC.L10N.register(
     "Use Nextcloud theme in BigBlueButton." : "Erabili Nextclouden itxura BigBlueButton-en.",
     "Default Room Settings" : "Lehentsitako gelaren ezarpenak",
     "Below you can change some default values, which are used to create a new room." : "Azpian balio lehenetsi batzuk aldatu ditzakezu, gela berri bat sortzeko erabiltzen direnak.",
+    "Perform media check before usage" : "Egiaztatu multimedia erabili aurretik",
     "Community" : "Komunitatea",
     "Are you enjoying this app? Give something back to the open source community." : "Gustatzen al zaizu aplikazioa? Itzuli zerbait kode irekiko komunitateari.",
     "Checkout the contributor guide" : "Eskuratu kolaboratzailearen gida",
