@@ -9,14 +9,17 @@ use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use BigBlueButton\Parameters\JoinMeetingParameters;
+use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Crypto;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingStartedEvent;
 use OCA\BigBlueButton\UrlHelper;
+use OCP\App\IAppManager;
 use OCP\Defaults;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
 use OCP\IL10N;
+use OCP\IRequest;
 use OCP\IURLGenerator;
 
 class API {
@@ -44,6 +47,12 @@ class API {
 	/** @var Defaults */
 	private $defaults;
 
+	/** @var IAppManager */
+	private $appManager;
+
+	/** @var IRequest */
+	private $request;
+
 	public function __construct(
 		IConfig $config,
 		IURLGenerator $urlGenerator,
@@ -51,7 +60,9 @@ class API {
 		IEventDispatcher $eventDispatcher,
 		IL10N $l10n,
 		UrlHelper $urlHelper,
-		Defaults $defaults
+		Defaults $defaults,
+		IAppManager $appManager,
+		IRequest $request
 	) {
 		$this->config = $config;
 		$this->urlGenerator = $urlGenerator;
@@ -60,6 +71,8 @@ class API {
 		$this->l10n = $l10n;
 		$this->urlHelper = $urlHelper;
 		$this->defaults = $defaults;
+		$this->appManager = $appManager;
+		$this->request = $request;
 	}
 
 	private function getServer(): BigBlueButton {
@@ -149,6 +162,10 @@ class API {
 		$createMeetingParams->setAllowStartStopRecording($room->record);
 		$createMeetingParams->setLogoutUrl($this->urlGenerator->getBaseUrl());
 		$createMeetingParams->setMuteOnStart($room->getJoinMuted());
+
+		$createMeetingParams->addMeta('bbb-origin-version', $this->appManager->getAppVersion(Application::ID));
+		$createMeetingParams->addMeta('bbb-origin', \method_exists($this->defaults, 'getProductName') ? $this->defaults->getProductName() : 'Nextcloud');
+		$createMeetingParams->addMeta('bbb-origin-server-name', $this->request->getServerHost());
 
 		$mac = $this->crypto->calculateHMAC($room->uid);
 
