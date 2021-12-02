@@ -22,7 +22,7 @@ Developer wanted! If you have time it would be awesome if you could help to enha
 
 *This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*
     ]]></description>
-    <version>2.0.0</version>
+    <version>2.1.0-beta.1</version>
     <licence>agpl</licence>
     <author mail="klaus@jsxc.org">Klaus Herberth</author>
     <namespace>BigBlueButton</namespace>
