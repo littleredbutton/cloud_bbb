@@ -9,7 +9,7 @@ class Presentation {
 
 	public function __construct(string $url, string $filename) {
 		$this->url = $url;
-		$this->filename = $filename;
+		$this->filename = preg_replace('/[^\x20-\x7E]+/','#', $filename);
 	}
 
 	public function getUrl(): string {
