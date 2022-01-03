@@ -29,6 +29,8 @@ OC.L10N.register(
     "Miscellaneous" : "Įvairūs",
     "Room name" : "Kambario pavadinimas",
     "Create" : "Sukurti",
+    "Copy to clipboard" : "Kopijuoti į iškarpinę",
+    "Save as file" : "Įrašyti kaip failą",
     "Delete" : "Ištrinti",
     "Delete \"{name}\"?" : "Ištrinti \"{name}\"?",
     "Error" : "Klaida",
