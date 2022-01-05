@@ -13,6 +13,7 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
+use OCP\Security\ISecureRandom;
 
 class RoomService {
 
@@ -25,13 +26,18 @@ class RoomService {
 	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
+	/** @var ISecureRandom */
+	private $random;
+
 	public function __construct(
 		RoomMapper $mapper,
 		IConfig $config,
-		IEventDispatcher $eventDispatcher) {
+		IEventDispatcher $eventDispatcher,
+		ISecureRandom $random) {
 		$this->mapper = $mapper;
 		$this->config = $config;
 		$this->eventDispatcher = $eventDispatcher;
+		$this->random = $random;
 	}
 
 	public function findAll(string $userId, array $groupIds, array $circleIds): array {
@@ -84,12 +90,12 @@ class RoomService {
 
 		$mediaCheck = $this->config->getAppValue('bbb', 'join.mediaCheck', 'true') === 'true';
 
-		$room->setUid(\OC::$server->getSecureRandom()->generate(16, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
+		$room->setUid($this->humanReadableRandom(16));
 		$room->setName($name);
 		$room->setWelcome($welcome);
 		$room->setMaxParticipants(\max($maxParticipants, 0));
-		$room->setAttendeePassword(\OC::$server->getSecureRandom()->generate(32, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
-		$room->setModeratorPassword(\OC::$server->getSecureRandom()->generate(32, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE));
+		$room->setAttendeePassword($this->humanReadableRandom(32));
+		$room->setModeratorPassword($this->humanReadableRandom(32));
 		$room->setRecord($record);
 		$room->setAccess($access);
 		$room->setUserId($userId);
@@ -178,6 +184,6 @@ class RoomService {
 	 * @param int $length
 	 */
 	private function humanReadableRandom(int $length) {
-		return \OC::$server->getSecureRandom()->generate($length, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE);
+		return $this->random->generate($length, \OCP\Security\ISecureRandom::CHAR_HUMAN_READABLE);
 	}
 }
