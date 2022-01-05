@@ -2,6 +2,7 @@
 
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\AvatarRepository;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
@@ -20,6 +21,9 @@ class HookController extends Controller {
 	/** @var RoomService */
 	private $service;
 
+	/** @var AvatarRepository */
+	private $avatarRepository;
+
 	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
@@ -27,11 +31,13 @@ class HookController extends Controller {
 		string $appName,
 		IRequest $request,
 		RoomService $service,
+		AvatarRepository $avatarRepository,
 		IEventDispatcher $eventDispatcher
 	) {
 		parent::__construct($appName, $request);
 
 		$this->service = $service;
+		$this->avatarRepository = $avatarRepository;
 		$this->eventDispatcher = $eventDispatcher;
 	}
 
@@ -55,8 +61,11 @@ class HookController extends Controller {
 	 */
 	public function meetingEnded($recordingmarks = false): void {
 		$recordingmarks = \boolval($recordingmarks);
+		$room = $this->getRoom();
 
-		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($this->getRoom(), $recordingmarks));
+		$this->avatarRepository->clearRoom($room->uid);
+
+		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($room, $recordingmarks));
 	}
 
 	/**

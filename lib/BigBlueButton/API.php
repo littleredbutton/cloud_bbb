@@ -10,6 +10,7 @@ use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 use OCA\BigBlueButton\AppInfo\Application;
+use OCA\BigBlueButton\AvatarRepository;
 use OCA\BigBlueButton\Crypto;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingStartedEvent;
@@ -50,6 +51,9 @@ class API {
 	/** @var IAppManager */
 	private $appManager;
 
+	/** @var AvatarRepository */
+	private $avatarRepository;
+
 	/** @var IRequest */
 	private $request;
 
@@ -62,6 +66,7 @@ class API {
 		UrlHelper $urlHelper,
 		Defaults $defaults,
 		IAppManager $appManager,
+		AvatarRepository $avatarRepository,
 		IRequest $request
 	) {
 		$this->config = $config;
@@ -72,6 +77,7 @@ class API {
 		$this->urlHelper = $urlHelper;
 		$this->defaults = $defaults;
 		$this->appManager = $appManager;
+		$this->avatarRepository = $avatarRepository;
 		$this->request = $request;
 	}
 
@@ -121,8 +127,10 @@ class API {
 		}
 
 		if ($uid) {
-			$joinMeetingParams->setUserId($uid);
-			$joinMeetingParams->setAvatarURL($this->urlGenerator->linkToRouteAbsolute('core.avatar.getAvatar', ['userId' => $uid, 'size' => 32]));
+			$avatarUrl = $this->avatarRepository->getAvatarUrl($room, $uid);
+
+			$joinMeetingParams->setUserID($uid);
+			$joinMeetingParams->setAvatarURL($avatarUrl);
 		}
 
 		return $this->getServer()->getJoinMeetingURL($joinMeetingParams);

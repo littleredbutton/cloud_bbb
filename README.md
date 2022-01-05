@@ -76,6 +76,40 @@ Key                   | Description
 `api.url`             | URL to your BBB server. Should start with `https://`
 `api.secret`          | Secret of your BBB server
 `app.shortener`       | Value of your shortener service. Should start with `https://` and contain `{token}`.
+`avatar.path`         | Absolute path to an optional avatar cache directory.
+`avatar.url`          | URL which serves `avatar.path` to be used as avatar cache.
+
+### Avatar cache (v2.2+)
+The generation of avatars puts a high load on your Nextcloud instance, since the
+number of requests increases squarely to the number of participants in a room.
+To mitigate this situation, this app provides an optional avatar file cache. To
+activate the cache `avatar.path` and `avatar.url` have to be configured.
+`avatar.path` must provide an absolute path (e.g. `/srv/bbb-avatar-cache/`) to a
+directory which is writable by the PHP user. `avatar.url` must contain the url
+which serves all files from `avatar.path`. To bypass browser connection limits
+we recommend to setup a dedicated host.
+
+Example Apache configuration for a dedicated host with `avatar.path = /srv/bbb-avatar-cache/`
+and `avatar.url = https://avatar-cache.your-nextcloud.com/`:
+
+```
+<VirtualHost *:443>
+        ServerName avatar-cache.your-nextcloud.com
+
+        Header always set Strict-Transport-Security "max-age=15768000;"
+
+        DocumentRoot /srv/bbb-avatar-cache
+        <Directory /srv/bbb-avatar-cache>
+                Options -FollowSymLinks -Indexes
+        </Directory>
+
+        SSLEngine On
+        # SSL config...
+</VirtualHost>
+```
+
+For additional security, we recommend to disable directory listing, symlinks and
+any language interpreter such as php for the cache directory.
 
 
 ## :bowtie: User guide
