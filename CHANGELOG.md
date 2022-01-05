@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- add optional avatar cache
+- add command to clear avatar cache
+
+### Fixed
+- use injection for random generator
+
+### Misc
+- remove deprecated api calls
+- enable app for unit tests
 
 ## 2.1.0 (2021-12-08)
 ### Added
