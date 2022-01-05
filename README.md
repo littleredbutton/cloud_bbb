@@ -111,6 +111,10 @@ and `avatar.url = https://avatar-cache.your-nextcloud.com/`:
 For additional security, we recommend to disable directory listing, symlinks and
 any language interpreter such as php for the cache directory.
 
+Cached avatars are usually deleted as soon as the meeting ends. In cases the BBB
+server shuts down unexpected, we provide the `bbb:clear-avatar-cache` occ
+command (example use: `./occ bbb:clear-avatar-cache`).
+
 
 ## :bowtie: User guide
 
