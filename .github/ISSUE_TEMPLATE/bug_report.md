@@ -40,6 +40,7 @@ If applicable, add screenshots to help explain your problem.
  - BigBlueButton version [e.g. 2.2.9]
  - Is your BigBlueButton instance working with Greenligh? yes/no
  - Did you enter your BBB API url and secret? yes/no
+ - Are you using a load balancer, like Scalelite? yes/no
 
 **Nextcloud log:**
 <!-- Are there any errors in your Nextcloud log related to this app? -->
