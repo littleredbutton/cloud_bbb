@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
+    "Let's go!" : "Då kör vi!",
     "Display name" : "Visningsnamn",
     "Password" : "Lösenord",
     "Join" : "Gå med",
