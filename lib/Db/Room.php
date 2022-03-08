@@ -47,10 +47,11 @@ class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
 	public const ACCESS_PASSWORD = 'password';
 	public const ACCESS_WAITING_ROOM = 'waiting_room';
+	public const ACCESS_WAITING_ROOM_ALL = 'waiting_room_all';
 	public const ACCESS_INTERNAL = 'internal';
 	public const ACCESS_INTERNAL_RESTRICTED = 'internal_restricted';
 
-	public const ACCESS = [self::ACCESS_PUBLIC, self::ACCESS_PASSWORD, self::ACCESS_WAITING_ROOM, self::ACCESS_INTERNAL, self::ACCESS_INTERNAL_RESTRICTED];
+	public const ACCESS = [self::ACCESS_PUBLIC, self::ACCESS_PASSWORD, self::ACCESS_WAITING_ROOM, self::ACCESS_WAITING_ROOM_ALL, self::ACCESS_INTERNAL, self::ACCESS_INTERNAL_RESTRICTED];
 
 	public $uid;
 	public $name;

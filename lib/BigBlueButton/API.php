@@ -106,7 +106,9 @@ class API {
 		$joinMeetingParams->setCreateTime(sprintf("%.0f", $creationTime));
 		$joinMeetingParams->setJoinViaHtml5(true);
 		$joinMeetingParams->setRedirect(true);
-		$joinMeetingParams->setGuest($uid === null);
+
+		// set the guest parameter for everyone but moderators to send all users to the waiting room if setting is selected
+		$joinMeetingParams->setGuest((($room->access === Room::ACCESS_WAITING_ROOM_ALL) && !$isModerator) || $uid === null);
 
 		$joinMeetingParams->addUserData('bbb_listen_only_mode', $room->getListenOnly());
 
@@ -199,7 +201,7 @@ class API {
 			$createMeetingParams->addPresentation($presentation->getUrl(), null, $presentation->getFilename());
 		}
 
-		if ($room->access === Room::ACCESS_WAITING_ROOM) {
+		if ($room->access === Room::ACCESS_WAITING_ROOM || $room->access === Room::ACCESS_WAITING_ROOM_ALL) {
 			$createMeetingParams->setGuestPolicyAskModerator();
 		}
 
