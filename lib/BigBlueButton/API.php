@@ -174,6 +174,10 @@ class API {
 		$createMeetingParams->addMeta('bbb-origin-version', $this->appManager->getAppVersion(Application::ID));
 		$createMeetingParams->addMeta('bbb-origin', \method_exists($this->defaults, 'getProductName') ? $this->defaults->getProductName() : 'Nextcloud');
 		$createMeetingParams->addMeta('bbb-origin-server-name', $this->request->getServerHost());
+		
+		if (!empty($this->config->getAppValue('bbb', 'api.meta_analytics-callback-url')) {
+		      $createMeetingParams->addMeta('analytics-callback-url', \urlencode($this->config->getAppValue('bbb', 'api.meta_analytics-callback-url')));
+		}
 
 		$mac = $this->crypto->calculateHMAC($room->uid);
 
