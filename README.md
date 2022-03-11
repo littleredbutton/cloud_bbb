@@ -78,7 +78,13 @@ Key                               | Description
 `app.shortener`                   | Value of your shortener service. Should start with `https://` and contain `{token}`.
 `avatar.path`                     | Absolute path to an optional avatar cache directory.
 `avatar.url`                      | URL which serves `avatar.path` to be used as avatar cache.
-`api.meta_analytics-callback-url` | URL which gets called after meetings ends to generate statistics.
+
+
+Extra parameter not setable in web interface
+
+Key                               | Description
+--------------------------------- | ----------------------------------------------------------------------------------------------------------------
+`api.meta_analytics-callback-url` |  URL which gets called after meetings ends to generate statistics. See https://github.com/betagouv/bbb-analytics
 
 ### Avatar cache (v2.2+)
 The generation of avatars puts a high load on your Nextcloud instance, since the
