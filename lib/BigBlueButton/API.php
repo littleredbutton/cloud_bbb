@@ -176,7 +176,8 @@ class API {
 		$createMeetingParams->addMeta('bbb-origin-server-name', $this->request->getServerHost());
 		
 		if (!empty($this->config->getAppValue('bbb', 'api.meta_analytics-callback-url'))) {
-		      $createMeetingParams->addMeta('analytics-callback-url', $this->config->getAppValue('bbb', 'api.meta_analytics-callback-url'));
+			$createMeetingParams->addMeta('analytics-callback-url', $this->config->getAppValue('bbb', 'api.meta_analytics-callback-url'));
+			$createMeetingParams->setMeetingKeepEvents(true);
 		}
 
 		$mac = $this->crypto->calculateHMAC($room->uid);
