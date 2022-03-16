@@ -12,6 +12,7 @@ export enum Access {
 	Public = 'public',
 	Password = 'password',
 	WaitingRoom = 'waiting_room',
+	WaitingRoomAll = 'waiting_room_all',
 	Internal = 'internal',
 	InternalRestricted = 'internal_restricted',
 }
