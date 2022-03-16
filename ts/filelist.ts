@@ -21,7 +21,11 @@ const mimeTypes = [
 ];
 
 async function createDirectShare(fileId: number): Promise<string> {
-	const url = generateOcsUrl('apps/dav/api/v1', 1) + 'direct';
+	const url = generateOcsUrl('apps/dav/api/v1/', undefined, {
+		ocsVersion: 1,
+		escape: true,
+		noRewrite: true,
+	}) + 'direct';
 	const createResponse = await axios.post(url, {
 		fileId,
 	});

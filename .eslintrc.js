@@ -28,7 +28,8 @@ module.exports = {
 		'comma-dangle': ['error', 'always-multiline'],
 		'array-bracket-newline': ['error', 'consistent'],
 		'quote-props': ['error', 'as-needed'],
-		'indent': ['warn', 'tab'],
-		semi: ["error", "always"],
+		indent: ['warn', 'tab'],
+		semi: ['error', 'always'],
+		'@typescript-eslint/ban-types': 'off',
 	},
 }
