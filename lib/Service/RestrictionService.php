@@ -57,6 +57,10 @@ class RestrictionService {
 			if (!$restriction->getAllowRecording() && $r->getAllowRecording()) {
 				$restriction->setAllowRecording($r->getAllowRecording());
 			}
+
+			if (!$restriction->getallowLogoutURL() && $r->getallowLogoutURL()) {
+				$restriction->setallowLogoutURL($r->getallowLogoutURL());
+			}
 		}
 
 		$restriction->setId(0);
@@ -82,7 +86,7 @@ class RestrictionService {
 		return $this->mapper->insert($restriction);
 	}
 
-	public function update(int $id, string $groupId, int $maxRooms, array $roomTypes, int $maxParticipants, bool $allowRecording): Restriction {
+	public function update(int $id, string $groupId, int $maxRooms, array $roomTypes, int $maxParticipants, bool $allowRecording, bool $allowLogoutURL): Restriction {
 		try {
 			$restriction = $this->mapper->find($id);
 
@@ -91,6 +95,7 @@ class RestrictionService {
 			$restriction->setRoomTypes(\json_encode($roomTypes));
 			$restriction->setMaxParticipants(\max($maxParticipants, -1));
 			$restriction->setAllowRecording($allowRecording);
+			$restriction->setallowLogoutURL($allowLogoutURL);
 
 			return $this->mapper->update($restriction);
 		} catch (Exception $e) {

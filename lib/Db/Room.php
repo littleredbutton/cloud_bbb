@@ -25,6 +25,7 @@ use OCP\AppFramework\Db\Entity;
  * @method bool getMediaCheck()
  * @method bool getCleanLayout()
  * @method bool getJoinMuted()
+ * @method string getLogoutURL()
  * @method void setUid(string $uid)
  * @method void setName(string $name)
  * @method void setAttendeePassword(string $pw)
@@ -42,6 +43,7 @@ use OCP\AppFramework\Db\Entity;
  * @method void setMediaCheck(bool $mediaCheck)
  * @method void setCleanLayout(bool $cleanLayout)
  * @method void setJoinMuted(bool $joinMuted)
+ * @method void setLogoutURL(string $logoutURL)
  */
 class Room extends Entity implements JsonSerializable {
 	public const ACCESS_PUBLIC = 'public';
@@ -71,6 +73,7 @@ class Room extends Entity implements JsonSerializable {
 	public $mediaCheck;
 	public $cleanLayout;
 	public $joinMuted;
+	public $logoutURL;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
@@ -95,6 +98,7 @@ class Room extends Entity implements JsonSerializable {
 			'record' => boolval($this->record),
 			'access' => $this->access,
 			'password' => $this->password,
+			'logoutURL' => $this->logoutURL,
 			'everyoneIsModerator' => boolval($this->everyoneIsModerator),
 			'requireModerator' => boolval($this->requireModerator),
 			'shared' => boolval($this->shared),

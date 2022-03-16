@@ -24,6 +24,7 @@ export interface Restriction {
 	roomTypes: string[];
 	maxParticipants: number;
 	allowRecording: boolean;
+	allowLogoutURL: boolean;
 }
 
 export interface Room {
@@ -44,6 +45,7 @@ export interface Room {
 	mediaCheck: boolean,
 	cleanLayout: boolean,
 	joinMuted: boolean,
+	logoutURL: string,
 }
 
 export interface RoomShare {

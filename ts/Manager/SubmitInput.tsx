@@ -10,6 +10,7 @@ export interface SubmitInputProps extends InputHTMLAttributes<HTMLInputElement> 
 	name: string;
 	onSubmitValue: (value: string) => void;
 	focus?: boolean;
+	disabled?: boolean;
 }
 
 export interface SubmitInputState {
@@ -42,6 +43,7 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 				   autoFocus={this.props.focus}
 				   min={this.props.min}
 				   max={this.props.max}
+				   disabled={this.props.disabled}
 				   />
 		</form>;
 	}

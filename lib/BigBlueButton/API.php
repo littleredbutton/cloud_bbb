@@ -170,7 +170,7 @@ class API {
 		$createMeetingParams->setModeratorPW($room->moderatorPassword);
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
-		$createMeetingParams->setLogoutURL($this->urlGenerator->getBaseUrl());
+		$createMeetingParams->setLogoutURL($room->logoutURL);
 		$createMeetingParams->setMuteOnStart($room->getJoinMuted());
 
 		$createMeetingParams->addMeta('bbb-origin-version', $this->appManager->getAppVersion(Application::ID));

@@ -12,10 +12,12 @@ use OCP\AppFramework\Db\Entity;
  * @method string getRoomTypes()
  * @method int getMaxParticipants()
  * @method bool getAllowRecording()
+ * @method bool getAllowLogoutURL()
  * @method void setRoomId(string $id)
  * @method void setMaxRooms(int $number)
  * @method void setMaxParticipants(int $number)
  * @method void setAllowRecording(bool $allow)
+ * @method void setAllowLogoutURL(bool $allow)
  */
 class Restriction extends Entity implements JsonSerializable {
 	public const ALL_ID = '';
@@ -25,11 +27,13 @@ class Restriction extends Entity implements JsonSerializable {
 	protected $roomTypes = '[]';
 	protected $maxParticipants = -1;
 	protected $allowRecording = true;
+	protected $allowLogoutURL = true;
 
 	public function __construct() {
 		$this->addType('maxRooms', 'integer');
 		$this->addType('maxParticipants', 'integer');
 		$this->addType('allowRecording', 'boolean');
+		$this->addType('allowLogoutURL', 'boolean');
 	}
 
 	public function jsonSerialize(): array {
@@ -40,6 +44,7 @@ class Restriction extends Entity implements JsonSerializable {
 			'roomTypes' => \json_decode($this->roomTypes),
 			'maxParticipants' => (int) $this->maxParticipants,
 			'allowRecording' => boolval($this->allowRecording),
+			'allowLogoutURL' => boolval($this->allowLogoutURL),
 		];
 	}
 }
