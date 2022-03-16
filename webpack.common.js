@@ -1,4 +1,6 @@
-const path = require('path')
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -19,7 +21,7 @@ module.exports = {
 		],
 		waiting: [
 			path.join(__dirname, 'ts', 'waiting.ts'),
-		]
+		],
 	},
 	output: {
 		path: path.resolve(__dirname, './js'),
@@ -51,11 +53,6 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
-				test: /\.(js)$/,
-				use: 'eslint-loader',
-				enforce: 'pre',
-			},
-			{
 				test: /\.js$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/,
@@ -71,9 +68,10 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new ESLintPlugin(),
 	],
 	resolve: {
 		extensions: ['*', '.tsx', '.ts', '.js', '.scss'],
 		symlinks: false,
 	},
-}
+};
