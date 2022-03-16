@@ -175,6 +175,13 @@ class API {
 		$createMeetingParams->addMeta('bbb-origin', \method_exists($this->defaults, 'getProductName') ? $this->defaults->getProductName() : 'Nextcloud');
 		$createMeetingParams->addMeta('bbb-origin-server-name', $this->request->getServerHost());
 
+		$analyticsCallbackUrl = $this->config->getAppValue('bbb', 'api.meta_analytics-callback-url');
+		if (!empty($analyticsCallbackUrl)) {
+			// For more details: https://github.com/bigbluebutton/bigbluebutton/blob/develop/record-and-playback/core/scripts/post_events/post_events_analytics_callback.rb
+			$createMeetingParams->addMeta('analytics-callback-url', $analyticsCallbackUrl);
+			$createMeetingParams->setMeetingKeepEvents(true);
+		}
+
 		$mac = $this->crypto->calculateHMAC($room->uid);
 
 		$endMeetingUrl = $this->urlGenerator->linkToRouteAbsolute('bbb.hook.meetingEnded', ['token' => $room->uid, 'mac' => $mac]);

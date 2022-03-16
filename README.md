@@ -69,15 +69,16 @@ used configuration keys in the list below. Please beware that there will be no
 check if those values are correct. Therefore this is not the recommended way.
 The syntax to set all settings is `occ config:app:set bbb KEY --value "VALUE"`.
 
-Key                   | Description
---------------------- | ------------------------------------------------------------------------------------
-`app.navigation`      | Set to `true` to show navigation entry
-`app.navigation.name` | Defines the navigation label. Default "BigBlueButton".
-`api.url`             | URL to your BBB server. Should start with `https://`
-`api.secret`          | Secret of your BBB server
-`app.shortener`       | Value of your shortener service. Should start with `https://` and contain `{token}`.
-`avatar.path`         | Absolute path to an optional avatar cache directory.
-`avatar.url`          | URL which serves `avatar.path` to be used as avatar cache.
+Key                               | Description
+--------------------------------- | ------------------------------------------------------------------------------------
+`app.navigation`                  | Set to `true` to show navigation entry
+`app.navigation.name`             | Defines the navigation label. Default "BigBlueButton".
+`api.url`                         | URL to your BBB server. Should start with `https://`
+`api.secret`                      | Secret of your BBB server
+`api.meta_analytics-callback-url` | URL which gets called after meetings ends to generate statistics. See [bbb-analytics](https://github.com/betagouv/bbb-analytics).
+`app.shortener`                   | Value of your shortener service. Should start with `https://` and contain `{token}`.
+`avatar.path`                     | Absolute path to an optional avatar cache directory.
+`avatar.url`                      | URL which serves `avatar.path` to be used as avatar cache.
 
 ### Avatar cache (v2.2+)
 The generation of avatars puts a high load on your Nextcloud instance, since the
