@@ -187,9 +187,9 @@ const RoomRow: React.FC<Props> = (props) => {
 	return (
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
-				<td className="start icon-col">
-					<a href={api.getRoomUrl(room)} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
-						<span className="icon icon-play icon-visible"></span>
+				<td className="start">
+					<a href={api.getRoomUrl(room)} className="button primary" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
+						{room.running ? t('bbb', 'Join') : t('bbb', 'Start')}
 					</a>
 				</td>
 				<td className="share icon-col">

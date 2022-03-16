@@ -164,6 +164,21 @@ class RoomService {
 	}
 
 	/**
+	 * @return \OCP\AppFramework\Db\Entity|null
+	 */
+	public function updateRunning(int $id, bool $running) {
+		try {
+			$room = $this->mapper->find($id);
+
+			$room->setRunning($running);
+
+			return $this->mapper->update($room);
+		} catch (Exception $e) {
+			$this->handleException($e);
+		}
+	}
+
+	/**
 	 * @return Room|null
 	 */
 	public function delete(int $id) {

@@ -2,6 +2,7 @@
 
 namespace OCA\BigBlueButton\Controller;
 
+use OCA\BigBlueButton\BackgroundJob\IsRunningJob;
 use OCA\BigBlueButton\BigBlueButton\API;
 use OCA\BigBlueButton\BigBlueButton\Presentation;
 use OCA\BigBlueButton\Db\Room;
@@ -12,6 +13,7 @@ use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\BackgroundJob\IJobList;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
@@ -38,6 +40,9 @@ class JoinController extends Controller {
 	/** @var Permission */
 	private $permission;
 
+	/** @var IJobList */
+	private $jobList;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
@@ -45,7 +50,8 @@ class JoinController extends Controller {
 		IURLGenerator $urlGenerator,
 		IUserSession $userSession,
 		API $api,
-		Permission $permission
+		Permission $permission,
+		IJobList $jobList
 	) {
 		parent::__construct($appName, $request);
 
@@ -54,6 +60,7 @@ class JoinController extends Controller {
 		$this->userSession = $userSession;
 		$this->api = $api;
 		$this->permission = $permission;
+		$this->jobList = $jobList;
 	}
 
 	public function setToken(string $token): void {
@@ -129,6 +136,8 @@ class JoinController extends Controller {
 		$creationDate = $this->api->createMeeting($room, $presentation);
 		$joinUrl = $this->api->createJoinUrl($room, $creationDate, $displayname, $isModerator, $userId);
 
+		$this->markAsRunning($room);
+
 		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
 
 		return new TemplateResponse($this->appName, 'forward', [
@@ -152,5 +161,19 @@ class JoinController extends Controller {
 				['token' => $this->token]
 			),
 		]);
+	}
+
+	private function markAsRunning(Room $room) {
+		if (!$room->running) {
+			$this->service->updateRunning($room->getId(), true);
+		}
+
+		if (!$this->jobList->has(IsRunningJob::class, [
+			'id' => $room->id,
+		])) {
+			$this->jobList->add(IsRunningJob::class, [
+				'id' => $room->id,
+			]);
+		}
 	}
 }

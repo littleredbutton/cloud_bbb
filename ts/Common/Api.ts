@@ -44,6 +44,7 @@ export interface Room {
 	mediaCheck: boolean,
 	cleanLayout: boolean,
 	joinMuted: boolean,
+	running: boolean,
 }
 
 export interface RoomShare {
