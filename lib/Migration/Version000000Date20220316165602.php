@@ -28,8 +28,7 @@ class Version000000Date20220316165602 extends SimpleMigrationStep {
 
 			if (!$table->hasColumn('logout_u_r_l')) {
 				$table->addColumn('logout_u_r_l', 'string', [
-					'notnull' => false,
-					'length' => 200
+					'notnull' => false
 				]);
 			}
 		}
