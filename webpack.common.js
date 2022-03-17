@@ -59,10 +59,9 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jpg|gif|svg)$/,
-				loader: 'url-loader',
-				options: {
-					name: '[name].[ext]?[hash]',
-					limit: 8192,
+				type: 'asset',
+				generator: {
+					filename: 'static/[name][ext]?[hash]',
 				},
 			},
 		],
