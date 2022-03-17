@@ -8,6 +8,8 @@ return [
 	],
 	'routes' => [
 		['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
+		['name' => 'server#isRunning', 'url' => '/server/{roomUid}/isRunning', 'verb' => 'GET'],
+		['name' => 'server#insertDocument', 'url' => '/server/{roomUid}/insertDocument', 'verb' => 'POST'],
 		['name' => 'server#records', 'url' => '/server/{roomUid}/records', 'verb' => 'GET'],
 		['name' => 'server#check', 'url' => '/server/check', 'verb' => 'POST'],
 		['name' => 'server#version', 'url' => '/server/version', 'verb' => 'GET'],

@@ -7,6 +7,7 @@ use BigBlueButton\Core\Record;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\GetRecordingsParameters;
+use BigBlueButton\Parameters\InsertDocumentParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 use OCA\BigBlueButton\AppInfo\Application;
@@ -319,5 +320,15 @@ class API {
 		$response = $this->getServer()->isMeetingRunning($isMeetingRunningParams);
 
 		return $response->success() && $response->isRunning();
+	}
+
+	public function insertDocument(Room $room, string $url, string $filename): bool {
+		$insertDocumentParams = new InsertDocumentParameters($room->getUid());
+
+		$insertDocumentParams->addPresentation($url, $filename, null, null);
+
+		$response = $this->getServer()->insertDocument($insertDocumentParams);
+
+		return $response->success();
 	}
 }

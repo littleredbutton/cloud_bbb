@@ -1,5 +1,7 @@
 import axios from '@nextcloud/axios';
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
+import { showSuccess, showWarning, showError } from '@nextcloud/dialogs';
+import '@nextcloud/dialogs/styles/toast';
 import { api } from './Common/Api';
 
 type OC_Dialogs_Message = (content: string, title: string, dialogType: 'notice' | 'alert' | 'warn' | 'none', buttons?: number, callback?: () => void, modal?: boolean, allowHtml?: boolean) => Promise<void>;
@@ -38,8 +40,7 @@ async function createDirectShare(fileId: number): Promise<string> {
 	return createResponse.data?.ocs?.data?.url;
 }
 
-async function share(fileId: number, filename: string, roomUid: string) {
-	const shareUrl = await createDirectShare(fileId);
+async function createRoomWithFile(shareUrl: string, filename: string, roomUid: string) {
 	const joinUrl = generateUrl('/apps/bbb/b/{uid}?u={url}&filename={filename}', {
 		uid: roomUid,
 		url: shareUrl,
@@ -47,6 +48,31 @@ async function share(fileId: number, filename: string, roomUid: string) {
 	});
 
 	window.open(joinUrl, '_blank', 'noopener,noreferrer');
+}
+
+function insertDocumentToRoom(shareUrl: string, filename: string, roomUid: string) {
+	return api.insertDocument(roomUid, shareUrl, filename);
+}
+
+async function sendFile(fileId: number, filename: string, roomUid: string) {
+	const shareUrl = await createDirectShare(fileId);
+	const isRunning = await api.isRunning(roomUid);
+
+	if (isRunning) {
+		try {
+			const success = await insertDocumentToRoom(shareUrl, filename, roomUid);
+
+			if (success) {
+				showSuccess(t('bbb', 'The file "{filename}" was uploaded to your room.', { filename }));
+			} else {
+				showWarning(t('bbb', 'The file "{filename}" could not be uploaded to your room.', { filename }));
+			}
+		} catch {
+			showError(t('bbb', 'The file "{filename}" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action.', { filename }));
+		}
+	} else {
+		createRoomWithFile(shareUrl, filename, roomUid);
+	}
 }
 
 async function openDialog(fileId: number, filename: string) {
@@ -65,13 +91,16 @@ async function openDialog(fileId: number, filename: string) {
 		const row = $('<tr>');
 		const button = $('<button>');
 
+		if (!OC.debug) {
+			button.prop('disabled', room.running);
+		}
 		button.text(room.running ? t('bbb', 'Send to') : t('bbb', 'Start with'));
 		button.addClass('primary');
 		button.attr('type', 'button');
 		button.on('click', (ev) => {
 			ev.preventDefault();
 
-			share(fileId, filename, room.uid);
+			sendFile(fileId, filename, room.uid);
 
 			container.parents('.oc-dialog').find('.oc-dialog-close').trigger('click');
 		});

@@ -133,6 +133,18 @@ class Api {
 		return response.data;
 	}
 
+	public async isRunning(uid: string): Promise<boolean> {
+		const response = await axios.get(this.getUrl(`server/${uid}/isRunning`));
+
+		return response.data;
+	}
+
+	public async insertDocument(uid: string, url: string, filename: string): Promise<boolean> {
+		const response = await axios.post(this.getUrl(`server/${uid}/insertDocument`), { url, filename });
+
+		return response.data;
+	}
+
 	public getRoomUrl(room: Room, forModerator = false) {
 		const shortener = document.getElementById('bbb-root')?.getAttribute('data-shortener') || '';
 		const token = (forModerator && room.moderatorToken) ? `${room.uid}/${room.moderatorToken}` : room.uid;
@@ -258,9 +270,9 @@ class Api {
 			groups: [],
 			circles: [],
 			exact: {
-			       users: response.data.ocs.data.exact.users,
-			       groups: response.data.ocs.data.exact.groups,
-			       circles: response.data.ocs.data.exact.circles || [],
+				users: response.data.ocs.data.exact.users,
+				groups: response.data.ocs.data.exact.groups,
+				circles: response.data.ocs.data.exact.circles || [],
 			},
 		};
 	}

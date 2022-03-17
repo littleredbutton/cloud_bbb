@@ -73,6 +73,8 @@ declare namespace OC {
 	const PERMISSION_SHARE = 16;
 	const PERMISSION_ALL = 31;
 
+	const debug: boolean;
+
 	const currentUser: string;
 
 	function getCurrentUser(): {uid: string; displayName: string}
