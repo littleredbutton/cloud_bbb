@@ -23,19 +23,29 @@ class Version000000Date20220316165602 extends SimpleMigrationStep {
 	public function changeSchema(IOutput $output, Closure $schemaClosure, array $options): ?ISchemaWrapper {
 		$schema = $schemaClosure();
 
-		if ($schema->hasTable('bbb_restrictions')) {
-			$table = $schema->getTable('bbb_restrictions');
-
-			if (!$table->hasColumn('allow_logout_u_r_l')) {
-				$table->addColumn('allow_logout_u_r_l', 'boolean', [
-					'notnull' => false,
-					'default' => false
-				]);
-			}
-
-			return $schema;
+		if (!$schema->hasTable('bbb_restrictions') && !$schema->hasTable('bbb_rooms')) {
+			return null;
 		}
 
-		return null;
+		$table = $schema->getTable('bbb_restrictions');
+
+		if (!$table->hasColumn('allow_logout_u_r_l')) {
+			$table->addColumn('allow_logout_u_r_l', 'boolean', [
+				'notnull' => false,
+				'default' => false
+			]);
+		}
+
+		$table = $schema->getTable('bbb_rooms');
+
+		if (!$table->hasColumn('logout_u_r_l')) {
+			$table->addColumn('logout_u_r_l', 'string', [
+				'notnull' => false,
+				'length' => 200
+			]);
+		}
+
+		return $schema;
+
 	}
 }
