@@ -58,8 +58,8 @@ class RestrictionService {
 				$restriction->setAllowRecording($r->getAllowRecording());
 			}
 
-			if (!$restriction->getallowLogoutURL() && $r->getallowLogoutURL()) {
-				$restriction->setallowLogoutURL($r->getallowLogoutURL());
+			if (!$restriction->getAllowLogoutURL() && $r->getAllowLogoutURL()) {
+				$restriction->setAllowLogoutURL($r->getAllowLogoutURL());
 			}
 		}
 
@@ -95,7 +95,7 @@ class RestrictionService {
 			$restriction->setRoomTypes(\json_encode($roomTypes));
 			$restriction->setMaxParticipants(\max($maxParticipants, -1));
 			$restriction->setAllowRecording($allowRecording);
-			$restriction->setallowLogoutURL($allowLogoutURL);
+			$restriction->setAllowLogoutURL($allowLogoutURL);
 
 			return $this->mapper->update($restriction);
 		} catch (Exception $e) {

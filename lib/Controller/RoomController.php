@@ -138,7 +138,7 @@ class RoomController extends Controller {
 			return new DataResponse(['message' => 'Not allowed to enable recordings.'], Http::STATUS_BAD_REQUEST);
 		}
 
-		if (!$restriction->getallowLogoutURL() && $logoutURL !== $room->getlogoutURL()) {
+		if (!$restriction->getAllowLogoutURL() && $logoutURL !== $room->getLogoutURL()) {
 			return new DataResponse(['message' => 'Not allowed to enable custom logout URLs'], Https::STATUS_BAD_REQUEST);
 		}
 
