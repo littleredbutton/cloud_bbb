@@ -5,7 +5,7 @@ import {
 } from 'react';
 
 export interface SubmitInputProps extends InputHTMLAttributes<HTMLInputElement> {
-	type?: 'text' | 'number';
+	type?: 'text' | 'number' | 'url';
 	initialValue?: string;
 	name: string;
 	onSubmitValue: (value: string) => void;

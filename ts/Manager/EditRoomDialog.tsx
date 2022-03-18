@@ -76,14 +76,14 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 		);
 	}
 
-	function inputElementRestricted(label: string, field: string, type: 'text' | 'number' = 'text', restricted: boolean) {
+	function inputElementRestricted(label: string, field: string, type: 'text' | 'number' | 'url' = 'text', restricted: boolean) {
 		return (
 			<div className="bbb-form-element">
 				<label htmlFor={`bbb-${field}`}>
 					<h3>{label}</h3>
 				</label>
 
-				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} disabled={restricted} />
+				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} disabled={restricted}/>
 				{descriptions[field] && <em>{descriptions[field]}</em>}
 			</div>
 		);
@@ -137,7 +137,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 				updateProperty('access', value);
 			})}
 
-			{inputElementRestricted(t('bbb', 'Custom redirect after meeting'), 'logoutURL', 'text', !restriction?.allowLogoutURL)}
+			{inputElementRestricted(t('bbb', 'Custom redirect after meeting'), 'logoutURL', 'url', !restriction?.allowLogoutURL)}
 
 			{room.access === Access.InternalRestricted && <div className="bbb-form-element bbb-form-shareWith">
 				<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />
