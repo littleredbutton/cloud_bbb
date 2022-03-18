@@ -8,7 +8,6 @@ use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomMapper;
 use OCA\BigBlueButton\Event\RoomCreatedEvent;
 
-use OCP\IURLGenerator;
 use OCA\BigBlueButton\Event\RoomDeletedEvent;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
@@ -17,9 +16,6 @@ use OCP\IConfig;
 use OCP\Security\ISecureRandom;
 
 class RoomService {
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
 
 	/** @var RoomMapper */
 	private $mapper;
@@ -34,12 +30,10 @@ class RoomService {
 	private $random;
 
 	public function __construct(
-		IURLGenerator $urlGenerator,
 		RoomMapper $mapper,
 		IConfig $config,
 		IEventDispatcher $eventDispatcher,
 		ISecureRandom $random) {
-		$this->urlGenerator = $urlGenerator;
 		$this->mapper = $mapper;
 		$this->config = $config;
 		$this->eventDispatcher = $eventDispatcher;
@@ -109,7 +103,7 @@ class RoomService {
 		$room->setMediaCheck($mediaCheck);
 		$room->setCleanLayout(false);
 		$room->setJoinMuted(false);
-		$room->setLogoutURL($this->urlGenerator->getBaseUrl());
+		$room->setLogoutURL('');
 
 		if ($access === Room::ACCESS_PASSWORD) {
 			$room->setPassword($this->humanReadableRandom(8));
