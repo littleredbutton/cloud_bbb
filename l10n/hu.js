@@ -53,6 +53,7 @@ OC.L10N.register(
     "Public" : "Nyilvános",
     "Internal + Password protection for guests" : "Belső + Jelszavas védelem a vendégeknek",
     "Internal + Waiting room for guests" : "Belső + Váró a vendégeknek",
+    "Waiting room for all users" : "Váróterem minden felhasználó számára",
     "Internal" : "Belső",
     "Internal restricted" : "Belső, korlátozott",
     "Name" : "Név",
@@ -128,6 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "Az URL-nek HTTPS-sel kell kezdődnie",
     "URL has to contain the {token} placeholder" : "Az URL-nek tartalmaznia kell a(z) {token} helykitöltőt",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Az URL-nek https://-sel kell kezdődnie, és tartalmaznia kell a következőt: {token}. Továbbá a(z) {user} helykitöltő is használható.",
+    "Send file to BBB" : "Fájl küldése a BBB-re",
+    "Start" : "Kezdés",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Kérjük, válassza ki azt a szobát, amelyben használni kívánja a(z) \"[filename}\" fájlt.",
+    "No rooms available!" : "Nincs elérhető szoba!",
+    "Send to BBB" : "Küldés a BBB-re",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["A szoba még nincs nyitva. Próbálja újra %n másodperc múlva. Kis türelmet.","A szoba még nincs nyitva. Próbálja újra %n másodperc múlva. Kis türelmet."]
 },
 "nplurals=2; plural=(n != 1);");

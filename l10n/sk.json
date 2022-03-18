@@ -51,6 +51,7 @@
     "Public" : "Verejné",
     "Internal + Password protection for guests" : "Interné + ochrana heslom pre hostí",
     "Internal + Waiting room for guests" : "Interné + Čakáreň pre hostí",
+    "Waiting room for all users" : "Čakáreň pre všetkých užívateľov",
     "Internal" : "Interné",
     "Internal restricted" : "Vnútorné obmedzené",
     "Name" : "Názov",
@@ -126,6 +127,11 @@
     "URL has to start with HTTPS" : "URL by mala začínať na HTTPS",
     "URL has to contain the {token} placeholder" : "URL by malo obsahovať {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL musí začínať na https:// a obsahovať {token}. Dodatočne môže byť použitý {user}.",
+    "Send file to BBB" : "Pridať súbor do BBB",
+    "Start" : "Začať",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Vyberte miestnosť, v ktorej chcete použiť súbor \"{filename}\".",
+    "No rooms available!" : "Žiadne miestnosti nie sú voľné!",
+    "Send to BBB" : "Odoslať do BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekundu. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte."]
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"
 }

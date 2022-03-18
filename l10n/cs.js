@@ -53,6 +53,7 @@ OC.L10N.register(
     "Public" : "Veřejný",
     "Internal + Password protection for guests" : "Vnitřní + Heslo pro hosty",
     "Internal + Waiting room for guests" : "Vnitřní + Čekárna pro hosty",
+    "Waiting room for all users" : "Čekárna pro všechny uživatele",
     "Internal" : "Vnitřní",
     "Internal restricted" : "Omezeno na vnitřní",
     "Name" : "Název",
@@ -128,6 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "Je třeba, aby URL začínalo na HTTPS",
     "URL has to contain the {token} placeholder" : "Je třeba, aby URL obsahovalo zástupné vyjádření {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Je třeba, aby URL začínalo na https:// a obsahovalo {token}. Dále je možné použít také zástupné vyjádření {user}.",
+    "Send file to BBB" : "Odeslat soubor do BBB",
+    "Start" : "Spustit",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Vyberte místnost ve které chcete použít soubor „{filename}“.",
+    "No rooms available!" : "Nejsou k dispozici žádné místnosti!",
+    "Send to BBB" : "Odeslat do BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Tato místnost ještě není otevřená. Bude opětovně vyzkoušeno za %n sekundu. Čekejte prosím.","Tato místnost ještě není otevřená. Bude opětovně vyzkoušeno za %n sekundy. Čekejte prosím.","Tato místnost ještě není otevřená. Bude opětovně vyzkoušeno za %n sekund. Čekejte prosím.","Tato místnost ještě není otevřená. Bude opětovně vyzkoušeno za %n sekundy Čekejte prosím."]
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

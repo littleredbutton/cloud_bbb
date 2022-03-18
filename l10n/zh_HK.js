@@ -53,6 +53,7 @@ OC.L10N.register(
     "Public" : "公開",
     "Internal + Password protection for guests" : "內部 + 訪客密碼保護",
     "Internal + Waiting room for guests" : "內部 + 訪客內部聊天室",
+    "Waiting room for all users" : "所有用戶的等候室",
     "Internal" : "內部",
     "Internal restricted" : "內部限制",
     "Name" : "名稱",
@@ -128,6 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URL 必須以 HTTPS 開頭",
     "URL has to contain the {token} placeholder" : "URL 必須包含 {token} 佔位字串",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL 必須以 https:// 開頭，並包含 {token}。此外，還可以使用 {user} 佔位字串。",
+    "Send file to BBB" : "傳送檔案到 BBB",
+    "Start" : "開始",
+    "Please select the room in which you like to use the file \"{filename}\"." : "請選擇您想在其中使用檔案檔案“{filename}”的房間。",
+    "No rooms available!" : "無可用聊天室！",
+    "Send to BBB" : "傳送至 BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["此聊天室尚未開放。我們將會在%n秒內重試。請稍候。"]
 },
 "nplurals=1; plural=0;");
