@@ -1,9 +1,9 @@
 { "translations": {
     "You created the room %s." : "Δημιουργήσατε το δωμάτιο %s.",
     "You deleted the room %s." : "Διαγράψατε το δωμάτιο %s.",
-    "{user} deleted the room %s." : "Ο {user} διέγραψε το δωμάτιο %s.",
+    "{user} deleted the room %s." : "Ο/η {user} διέγραψε το δωμάτιο %s.",
     "You shared the room %s with {shareWith}." : "Διαμοιραστήκατε το δωμάτιο %s με τον {shareWith}.",
-    "{user} shared the room %s with you." : "Ο {user} διαμοιράστηκε το δωμάτιο %s με εσάς.",
+    "{user} shared the room %s with you." : "Ο/η {user} διαμοιράστηκε το δωμάτιο %s με εσάς.",
     "You unshared the room %s with {shareWith}." : "Αναιρέσατε τον διαμοιρασμό του δωματίου %s με τον {shareWith}.",
     "{user} unshared the room %s with you." : "Ο {user} αναίρεσε τον διαμοιρασμό του δωματίου %s με εσάς.",
     "You started a meeting in the \"%s\" room." : "Ξεκινήσατε μια συνάντηση στο δωμάτιο «%s».",

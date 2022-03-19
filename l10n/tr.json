@@ -51,6 +51,7 @@
     "Public" : "Herkese açık",
     "Internal + Password protection for guests" : "Konuklar için İç + Parola koruması",
     "Internal + Waiting room for guests" : "Konuklar için İç + Parola koruması",
+    "Waiting room for all users" : "Tüm kullanıcılar için bekleme odası",
     "Internal" : "İç",
     "Internal restricted" : "İç kullanımla kısıtlı",
     "Name" : "Ad",
@@ -126,6 +127,11 @@
     "URL has to start with HTTPS" : "Adres HTTPS ile başlamalıdır",
     "URL has to contain the {token} placeholder" : "Adreste {token} yer belirteci bulunmalıdır",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Adres https:// ile başlamalı ve {token} yer belirtecini içermelidir. Ek olarak {user} yer belirteci kullanılabilir.",
+    "Send file to BBB" : "Dosyayı BBB üzerine gönder",
+    "Start" : "Başlat",
+    "Please select the room in which you like to use the file \"{filename}\"." : "\"{filename}\" dosyasını kullanmak istediğiniz odayı seçin.",
+    "No rooms available!" : "Kullanılabilecek bir oda yok!",
+    "Send to BBB" : "BBB üzerine gönder",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Bu oda henüz açılmamış. %n saniye sonra yeniden deneyeceğiz. Lütfen bekleyin.","Bu oda henüz açılmamış. %n saniye sonra yeniden deneyeceğiz. Lütfen bekleyin."]
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
