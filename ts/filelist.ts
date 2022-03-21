@@ -3,6 +3,7 @@ import { generateOcsUrl, generateUrl } from '@nextcloud/router';
 import { showSuccess, showWarning, showError } from '@nextcloud/dialogs';
 import '@nextcloud/dialogs/styles/toast';
 import { api } from './Common/Api';
+import './filelist.scss';
 
 type OC_Dialogs_Message = (content: string, title: string, dialogType: 'notice' | 'alert' | 'warn' | 'none', buttons?: number, callback?: () => void, modal?: boolean, allowHtml?: boolean) => Promise<void>;
 type ExtendedDialogs = typeof OC.dialogs & { message: OC_Dialogs_Message };
@@ -95,14 +96,17 @@ async function openDialog(fileId: number, filename: string) {
 			button.prop('disabled', room.running);
 		}
 		button.text(room.running ? t('bbb', 'Send to') : t('bbb', 'Start with'));
-		button.addClass('primary');
+		button.addClass(room.running ? 'success' : 'primary');
 		button.attr('type', 'button');
 		button.on('click', (ev) => {
 			ev.preventDefault();
 
-			sendFile(fileId, filename, room.uid);
+			table.find('button').prop('disabled', true);
+			$(ev.target).addClass('icon-loading-small');
 
-			container.parents('.oc-dialog').find('.oc-dialog-close').trigger('click');
+			sendFile(fileId, filename, room.uid).then(() => {
+				container.parents('.oc-dialog').find('.oc-dialog-close').trigger('click');
+			});
 		});
 
 		row.append($('<td>').append(button));
