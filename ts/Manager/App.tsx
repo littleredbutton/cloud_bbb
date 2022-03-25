@@ -43,7 +43,7 @@ const App: React.FC<Props> = () => {
 	const [orderBy, setOrderBy] = useState<SortKey>('name');
 	const [sortOrder, setSortOrder] = useState(SortOrder.ASC);
 
-	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} />);
+	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} cloneRoom={cloneRoom}/>);
 
 	useEffect(() => {
 		Promise.all([
@@ -105,19 +105,43 @@ const App: React.FC<Props> = () => {
 
 	function updateRoom(room: Room) {
 		return api.updateRoom(room).then(updatedRoom => {
-			setRooms(rooms.map(room => {
-				if (room.id === updatedRoom.id) {
-					return updatedRoom;
-				}
 
-				return room;
-			}));
+			if (!rooms.find(room => room.id === updatedRoom.id)) {
+				setRooms(rooms.concat([updatedRoom]));
+			} else {
+				setRooms(rooms.map(room => {
+					if (room.id === updatedRoom.id) {
+						return updatedRoom;
+					}
+
+					return room;
+				}));
+			}
 		});
 	}
 
 	function deleteRoom(id: number) {
 		api.deleteRoom(id).then(deletedRoom => {
 			setRooms(rooms.filter(room => room.id !== deletedRoom.id));
+		});
+	}
+
+	function cloneRoom(room: Room) {
+
+		if (room.moderatorToken !== null) {
+			room.moderatorToken = 'true';
+		}
+
+		return api.createRoom(room.name, room.access, room.maxParticipants).then(newRoom => {
+			api.getRoomShares(room.id).then(shares => shares.forEach(share => {
+				api.createRoomShare(newRoom.id, share.shareType, share.shareWith, share.permission);
+			}));
+
+			updateRoom({
+				...room,
+				uid: newRoom.uid,
+				id: newRoom.id,
+			});
 		});
 	}
 
@@ -149,6 +173,7 @@ const App: React.FC<Props> = () => {
 						<th>
 							{t('bbb', 'Recordings')}
 						</th>
+						<th />
 						<th />
 						<th />
 					</tr>
