@@ -43,7 +43,7 @@ const App: React.FC<Props> = () => {
 	const [orderBy, setOrderBy] = useState<SortKey>('name');
 	const [sortOrder, setSortOrder] = useState(SortOrder.ASC);
 
-	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} />);
+	const rows = rooms.sort(sortRooms(orderBy, sortOrder)).map(room => <RoomRow room={room} restriction={restriction} key={room.id} updateRoom={updateRoom} deleteRoom={deleteRoom} cloneRoom={cloneRoom}/>);
 
 	useEffect(() => {
 		Promise.all([
@@ -121,6 +121,25 @@ const App: React.FC<Props> = () => {
 		});
 	}
 
+	function cloneRoom(room: Room) {
+
+		let access = Access.Public;
+
+		const disabledRoomTypes = restriction?.roomTypes || [];
+		if (disabledRoomTypes.length > 0 && disabledRoomTypes.indexOf(access) > -1) {
+			access = Object.values(Access).filter(a => disabledRoomTypes.indexOf(a) < 0)[0] as Access;
+		}
+
+		const maxParticipants = restriction?.maxParticipants || 0;
+
+		return api.createRoom(room.name, access, maxParticipants).then(newRoom => {
+			room.uid = newRoom.uid;
+			room.id = newRoom.id;
+			setRooms(rooms.concat([room]));
+			updateRoom(room);
+		});
+	}
+
 	const maxRooms = restriction?.maxRooms || 0;
 	const quota = maxRooms < 0 ? t('bbb', 'unlimited') : rooms.filter(room => room.userId === OC.currentUser).length + ' / ' + maxRooms;
 
@@ -149,6 +168,7 @@ const App: React.FC<Props> = () => {
 						<th>
 							{t('bbb', 'Recordings')}
 						</th>
+						<th />
 						<th />
 						<th />
 					</tr>
