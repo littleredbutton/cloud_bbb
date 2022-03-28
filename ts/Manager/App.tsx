@@ -105,13 +105,18 @@ const App: React.FC<Props> = () => {
 
 	function updateRoom(room: Room) {
 		return api.updateRoom(room).then(updatedRoom => {
-			setRooms(rooms.map(room => {
-				if (room.id === updatedRoom.id) {
-					return updatedRoom;
-				}
 
-				return room;
-			}));
+			if (!rooms.find(room => room.id == updatedRoom.id)) {
+				setRooms(rooms.concat([updatedRoom]));
+			} else {
+				setRooms(rooms.map(room => {
+					if (room.id === updatedRoom.id) {
+						return updatedRoom;
+					}
+
+					return room;
+				}));
+			}
 		});
 	}
 
@@ -122,20 +127,9 @@ const App: React.FC<Props> = () => {
 	}
 
 	function cloneRoom(room: Room) {
-
-		let access = Access.Public;
-
-		const disabledRoomTypes = restriction?.roomTypes || [];
-		if (disabledRoomTypes.length > 0 && disabledRoomTypes.indexOf(access) > -1) {
-			access = Object.values(Access).filter(a => disabledRoomTypes.indexOf(a) < 0)[0] as Access;
-		}
-
-		const maxParticipants = restriction?.maxParticipants || 0;
-
-		return api.createRoom(room.name, access, maxParticipants).then(newRoom => {
+		return api.createRoom(room.name, room.access, room.maxParticipants).then(newRoom => {
 			room.uid = newRoom.uid;
 			room.id = newRoom.id;
-			setRooms(rooms.concat([room]));
 			updateRoom(room);
 		});
 	}
