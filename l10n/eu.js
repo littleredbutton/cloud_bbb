@@ -128,6 +128,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URLak HTTPSrekin hasi behar du",
     "URL has to contain the {token} placeholder" : "URLak {token}-aren leku-marka barnean behar du",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URLak  https:// eduki behar du hasieran eta  {token}-a barnean behar du.  {user} erabiltzailearen leku-marka ere izan dezake.",
+    "Start" : "Hasi",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Gela hau ez dago irekita oraindik. Berriro saiatuko gara {sec} segundotan. Itxaron mesedez.","Gela hau ez dago irekita oraindik. Berriro saiatuko gara segundotan %n seconds. Please wait."]
 },
 "nplurals=2; plural=(n != 1);");
