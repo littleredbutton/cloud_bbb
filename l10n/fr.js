@@ -127,4 +127,4 @@ OC.L10N.register(
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL doit commencer par https:// et contenir {token}. De plus, l'espace réservé de {user} peut être utilisé.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n seconde. Veuillez patienter.","Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n secondes. Veuillez patienter."]
 },
-"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
+"nplurals=2; plural=(n > 1);");
