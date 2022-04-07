@@ -133,6 +133,10 @@ const App: React.FC<Props> = () => {
 		}
 
 		return api.createRoom(room.name, room.access, room.maxParticipants).then(newRoom => {
+			api.getRoomShares(room.id).then(shares => shares.forEach(share => {
+				api.createRoomShare(newRoom.id, share.shareType, share.shareWith, share.permission);
+			}))
+
 			room.uid = newRoom.uid;
 			room.id = newRoom.id;
 			updateRoom(room);
