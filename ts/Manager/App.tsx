@@ -127,6 +127,11 @@ const App: React.FC<Props> = () => {
 	}
 
 	function cloneRoom(room: Room) {
+
+		if (room.moderatorToken !== null) {
+			room.moderatorToken = 'true';
+		}
+
 		return api.createRoom(room.name, room.access, room.maxParticipants).then(newRoom => {
 			room.uid = newRoom.uid;
 			room.id = newRoom.id;
