@@ -106,7 +106,7 @@ const App: React.FC<Props> = () => {
 	function updateRoom(room: Room) {
 		return api.updateRoom(room).then(updatedRoom => {
 
-			if (!rooms.find(room => room.id == updatedRoom.id)) {
+			if (!rooms.find(room => room.id === updatedRoom.id)) {
 				setRooms(rooms.concat([updatedRoom]));
 			} else {
 				setRooms(rooms.map(room => {
@@ -137,9 +137,11 @@ const App: React.FC<Props> = () => {
 				api.createRoomShare(newRoom.id, share.shareType, share.shareWith, share.permission);
 			}))
 
-			room.uid = newRoom.uid;
-			room.id = newRoom.id;
-			updateRoom(room);
+			updateRoom({
+				...room,
+				uid: newRoom.uid,
+				id: newRoom.id,
+			});
 		});
 	}
 
