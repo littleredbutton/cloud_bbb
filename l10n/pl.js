@@ -61,7 +61,7 @@ OC.L10N.register(
     "Max" : "Maks.",
     "Record" : "Nagrywać",
     "Recordings" : "Nagrania",
-    "You are not permitted to create a room." : "Nie masz uprawnień do tworzenia pokoju.",
+    "You are not permitted to create a room." : "Nie masz uprawnień do utworzenia pokoju.",
     "You exceeded the maximum number of rooms." : "Przekroczono maksymalną liczbę pokoi.",
     "Room quota:" : "Limit pokoi:",
     "Edit" : "Edytuj",
