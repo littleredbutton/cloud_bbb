@@ -26,6 +26,8 @@ OC.L10N.register(
     "Save" : "Enregistrer",
     "Show room manager in app navigation instead of settings page." : "Afficher le gestionnaire de salles dans la barre de navigation plutôt que dans les paramètres.",
     "Use Nextcloud theme in BigBlueButton." : "Utiliser le thème Nextcloud dans BigBlueButton.",
+    "Default Room Settings" : "Paramètres par défaut des salles",
+    "Below you can change some default values, which are used to create a new room." : "Ci-dessous vous pouvez changer quelques valeurs par défaut qui sont utilisées lors de la création d'une salle.",
     "Community" : "Communauté",
     "Are you enjoying this app? Give something back to the open source community." : "Êtes-vous satisfait de cette application ? Faites un retour à la communauté du libre",
     "Checkout the contributor guide" : "Vérifiez le guide du contributeur",
@@ -50,6 +52,7 @@ OC.L10N.register(
     "Public" : "Publique",
     "Internal + Password protection for guests" : "Protection interne + mot de passe pour les invités",
     "Internal + Waiting room for guests" : "Interne + Salle d'attente pour les invités",
+    "Waiting room for all users" : "Salle d'attente pour tous les utilisateurs",
     "Internal" : "Interne",
     "Internal restricted" : "Internal restricted",
     "Name" : "Nom",
@@ -125,6 +128,9 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "L'URL doit débuter par HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL doit contenir l'espace réservé {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL doit commencer par https:// et contenir {token}. De plus, l'espace réservé de {user} peut être utilisé.",
+    "Start" : "Démarrer",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Veuillez sélectionner la salle dans laquelle vous voulez utiliser le fichier \"{filename}\".",
+    "No rooms available!" : "Pas de salle disponible !",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n seconde. Veuillez patienter.","Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n secondes. Veuillez patienter."]
 },
 "nplurals=2; plural=(n > 1);");
