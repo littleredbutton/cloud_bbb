@@ -53,6 +53,7 @@ OC.L10N.register(
     "Public" : "Pubblica",
     "Internal + Password protection for guests" : "Interni + Protezione con password per gli ospiti",
     "Internal + Waiting room for guests" : "Interni + Sala d'attesa per gli ospiti",
+    "Waiting room for all users" : "In attesa di tutti gli utenti",
     "Internal" : "Interni",
     "Internal restricted" : "Limitato agli interni",
     "Name" : "Nome",
@@ -128,6 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "L'URL deve iniziare con HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL deve contenere il segnaposto {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL deve iniziare con https: // e contenere {token}. Inoltre è possibile utilizzare il segnaposto {user}.",
+    "Send file to BBB" : "Invia file a BBB",
+    "Start" : "Avvia",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Seleziona la stanza in cui vorresti usare il  file \"{filename}\".",
+    "No rooms available!" : "Nessuna stanza disponibile",
+    "Send to BBB" : "Invia a BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Questa stanza non è ancora aperta. Riproveremo tra %n secondo. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi."]
 },
 "nplurals=2; plural=(n != 1);");

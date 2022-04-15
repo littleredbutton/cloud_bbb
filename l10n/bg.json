@@ -51,6 +51,7 @@
     "Public" : "Публичен",
     "Internal + Password protection for guests" : "Вътрешна + парола за гости",
     "Internal + Waiting room for guests" : "Вътрешена + Чакалня за гости",
+    "Waiting room for all users" : " Стая за изчакване за всички потребители",
     "Internal" : "Вътрешна",
     "Internal restricted" : "Вътрешна, ограничена",
     "Name" : "Име",
@@ -126,6 +127,11 @@
     "URL has to start with HTTPS" : "URL адресът трябва да започва с HTTPS",
     "URL has to contain the {token} placeholder" : "URL адресът трябва да съдържа заместителя {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL адресът трябва да започва с https:// и да съдържа {token}. Освен това може да се използва заместителят {user}.",
+    "Send file to BBB" : "Изпращане на файл към BBB",
+    "Start" : "Начало",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Моля, изберете стаята, в която искате да използвате файла \"{filename}\".",
+    "No rooms available!" : "Няма налични стаи!",
+    "Send to BBB" : "Изпращане до BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Тази стая все още не е отворена. Ще опитаме отново след %n секунди. Моля изчакайте. ","Тази стая все още не е отворена. Ще опитаме отново след %nсекунди. Моля изчакайте. "]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
