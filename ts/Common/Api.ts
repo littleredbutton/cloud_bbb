@@ -45,6 +45,8 @@ export interface Room {
 	cleanLayout: boolean,
 	joinMuted: boolean,
 	running: boolean,
+	presentationUserId: string,
+	presentationPath: string | string[]
 }
 
 export interface RoomShare {
@@ -178,7 +180,6 @@ class Api {
 
 	public async updateRoom(room: Room) {
 		const response = await axios.put(this.getUrl(`rooms/${room.id}`), room);
-
 		return response.data;
 	}
 

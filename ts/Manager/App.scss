@@ -67,6 +67,42 @@ pre {
   }
 }
 
+.bbb-presentation-input {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  width: fit-content;
+  margin-top: 10px;
+  align-content: flex-start;
+
+  .hidden {
+    display: none;
+  }
+
+  p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    button {
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      margin: 5px;
+      border-radius: 50%;
+      line-height: 0;
+      display: inline-block;
+      justify-self: flex-end;
+    }
+  }
+
+  img {
+    margin: 5px;
+    height: 32px;
+    width: auto;
+  }
+}
+
 #bbb-settings {
   #bbb-warning,
   #bbb-success {

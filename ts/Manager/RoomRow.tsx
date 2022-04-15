@@ -223,7 +223,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
 				<td className="edit icon-col">
-					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+					<EditRoom room={props.room} restriction={props.restriction} updateRoom={props.updateRoom} updateProperty={updateRoom} />
 				</td>
 				<td className="remove icon-col">
 					<button className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>

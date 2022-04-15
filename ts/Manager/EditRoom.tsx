@@ -6,9 +6,10 @@ type Props = {
 	room: Room;
 	restriction?: Restriction;
 	updateProperty: (key: string, value: string | boolean | number | null) => Promise<void>;
+	updateRoom: (Room) => Promise<void>;
 }
 
-const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {
+const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty, updateRoom }) => {
 	const [open, setOpen] = useState<boolean>(false);
 
 	return (
@@ -18,7 +19,7 @@ const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {
 				<span className="icon icon-settings-dark icon-visible"></span>
 			</button>
 
-			<EditRoomDialog room={room} restriction={restriction} updateProperty={updateProperty} open={open} setOpen={setOpen} />
+			<EditRoomDialog room={room} restriction={restriction} updateProperty={updateProperty} updateRoom={updateRoom} open={open} setOpen={setOpen} />
 		</>
 	);
 };
