@@ -206,7 +206,7 @@ class API {
 
 		if ($presentation !== null && $presentation->isValid()) {
 			/** @psalm-suppress InvalidArgument */
-			$createMeetingParams->addPresentation($presentation->getUrl(), null, $presentation->getFilename());
+			$createMeetingParams->addPresentation($presentation->generateUrl(), null, $presentation->getFilename());
 		}
 
 		if ($room->access === Room::ACCESS_WAITING_ROOM || $room->access === Room::ACCESS_WAITING_ROOM_ALL) {

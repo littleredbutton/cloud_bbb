@@ -74,6 +74,8 @@ class Room extends Entity implements JsonSerializable {
 	public $cleanLayout;
 	public $joinMuted;
 	public $running;
+	public $presentationUserId;
+	public $presentationPath;
 
 	public function __construct() {
 		$this->addType('maxParticipants', 'integer');
@@ -108,6 +110,8 @@ class Room extends Entity implements JsonSerializable {
 			'cleanLayout' => boolval($this->cleanLayout),
 			'joinMuted' => boolval($this->joinMuted),
 			'running' => boolval($this->running),
+			'presentationUserId' => $this->presentationUserId,
+			'presentationPath' => $this->presentationPath,
 		];
 	}
 }

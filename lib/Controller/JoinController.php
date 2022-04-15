@@ -14,11 +14,13 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\BackgroundJob\IJobList;
+use OCP\Files\Storage\IStorage;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
 
-class JoinController extends Controller {
+class JoinController extends Controller
+{
 	/** @var string */
 	protected $token;
 
@@ -43,6 +45,9 @@ class JoinController extends Controller {
 	/** @var IJobList */
 	private $jobList;
 
+	/** @var IStorage */
+	private $storage;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
@@ -51,7 +56,8 @@ class JoinController extends Controller {
 		IUserSession $userSession,
 		API $api,
 		Permission $permission,
-		IJobList $jobList
+		IJobList $jobList,
+		IStorage $storage
 	) {
 		parent::__construct($appName, $request);
 
@@ -61,14 +67,17 @@ class JoinController extends Controller {
 		$this->api = $api;
 		$this->permission = $permission;
 		$this->jobList = $jobList;
+		$this->storage = $storage;
 	}
 
-	public function setToken(string $token): void {
+	public function setToken(string $token): void
+	{
 		$this->token = $token;
 		$this->room = null;
 	}
 
-	public function isValidToken(): bool {
+	public function isValidToken(): bool
+	{
 		$room = $this->getRoom();
 
 		return $room !== null;
@@ -81,7 +90,8 @@ class JoinController extends Controller {
 	 *
 	 * @return RedirectResponse|TemplateResponse
 	 */
-	public function index($displayname, $u = '', $filename = '', $password = '') {
+	public function index($displayname, $u = '', $filename = '', $password = '')
+	{
 		$room = $this->getRoom();
 
 		if ($room === null) {
@@ -108,7 +118,11 @@ class JoinController extends Controller {
 			}
 
 			if ($this->permission->isAdmin($room, $userId)) {
-				$presentation = new Presentation($u, $filename);
+				$presentation = new Presentation($filename, $this->storage);
+			}
+
+			if (!$room->running && $presentation === null) {
+				$presentation = new Presentation($room->presentationPath, $this->storage);
 			}
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse($this->getLoginUrl());
@@ -138,7 +152,7 @@ class JoinController extends Controller {
 
 		$this->markAsRunning($room);
 
-		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
+		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url=' . $joinUrl]);
 
 		return new TemplateResponse($this->appName, 'forward', [
 			'room' => $room->name,
@@ -146,7 +160,8 @@ class JoinController extends Controller {
 		], 'guest');
 	}
 
-	private function getRoom(): ?Room {
+	private function getRoom(): ?Room
+	{
 		if ($this->room === null) {
 			$this->room = $this->service->findByUid($this->token);
 		}
@@ -154,7 +169,8 @@ class JoinController extends Controller {
 		return $this->room;
 	}
 
-	private function getLoginUrl(): string {
+	private function getLoginUrl(): string
+	{
 		return $this->urlGenerator->linkToRoute('core.login.showLoginForm', [
 			'redirect_url' => $this->urlGenerator->linkToRoute(
 				'bbb.join.index',
@@ -163,7 +179,8 @@ class JoinController extends Controller {
 		]);
 	}
 
-	private function markAsRunning(Room $room) {
+	private function markAsRunning(Room $room)
+	{
 		if (!$room->running) {
 			$this->service->updateRunning($room->getId(), true);
 		}

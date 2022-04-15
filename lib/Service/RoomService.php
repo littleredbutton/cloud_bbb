@@ -103,6 +103,8 @@ class RoomService {
 		$room->setMediaCheck($mediaCheck);
 		$room->setCleanLayout(false);
 		$room->setJoinMuted(false);
+		$room->setPresentationUserId('');
+		$room->setPresentationPath('');
 
 		if ($access === Room::ACCESS_PASSWORD) {
 			$room->setPassword($this->humanReadableRandom(8));
@@ -133,7 +135,9 @@ class RoomService {
 		bool $listenOnly,
 		bool $mediaCheck,
 		bool $cleanLayout,
-		bool $joinMuted) {
+		bool $joinMuted,
+		string $presentationUserId,
+		string $presentationPath) {
 		try {
 			$room = $this->mapper->find($id);
 
@@ -156,6 +160,8 @@ class RoomService {
 			$room->setMediaCheck($mediaCheck);
 			$room->setCleanLayout($cleanLayout);
 			$room->setJoinMuted($joinMuted);
+			$room->setPresentationUserId($presentationUserId);
+			$room->setPresentationPath($presentationPath);
 
 			return $this->mapper->update($room);
 		} catch (Exception $e) {
