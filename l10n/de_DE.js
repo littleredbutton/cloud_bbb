@@ -129,11 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "Die URL muss mit HTTPS beginnen",
     "URL has to contain the {token} placeholder" : "Die Adresse (URL) muss den {token} Platzhalter beinhalten",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Die Adresse (URL) muss mit https:// beginnen und muss den {token} Platzhalter beinhalten. Zusätzlich kann der {user} Platzhalter verwendet werden.",
-    "Send file to BBB" : "Datei senden an BBB",
+    "Send file to BBB" : "Datei an BBB senden",
     "Start" : "Start",
     "Please select the room in which you like to use the file \"{filename}\"." : "Bitte den Raum auswählen, in dem Sie die Datei \"{filename}\" verwenden möchten.",
     "No rooms available!" : "Keine Räume verfügbar!",
-    "Send to BBB" : "Senden an BBB",
+    "Send to BBB" : "An BBB senden",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Dieser Raum ist noch geschlossen. Neuer Versuch in %n Sekunde. Bitte warten.","Dieser Raum ist noch geschlossen. Neuer Versuch in %n Sekunden. Bitte warten."]
 },
 "nplurals=2; plural=(n != 1);");

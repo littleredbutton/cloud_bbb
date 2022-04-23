@@ -5,6 +5,10 @@ OC.L10N.register(
     "You deleted the room %s." : "Poistit huoneen %s.",
     "{user} deleted the room %s." : "{user} poisti huoneen %s.",
     "{user} shared the room %s with you." : "{user} jakoi huoneen %s kanssasi.",
+    "You started a meeting in the \"%s\" room." : "Käynnistit tapaamisen huoneessa \"%s\".",
+    "{user} started a meeting in the \"%s\" room." : "{user} käynnisti tapaamisen huoneessa \"%s\".",
+    "The meeting in room \"%s\" has ended." : "Tapaaminen huoneessa \"%s\" on päättynyt.",
+    "Recording for room \"%s\" is ready." : "Nauhoitus huoneen \"%s\" osalta on valmis.",
     "To invite someone to the meeting, send them this link: %s" : "Kutsu kokoukseen lähettämällä tämä linkki: %s",
     "API URL or secret not configured. Please contact your administrator." : "Rajapinnan URL-osoitetta tai salaisuutta ei ole määritetty. Ota yhteys ylläpitäjään.",
     "BigBlueButton Integration" : "BigBlueButton-integraatio",
@@ -55,6 +59,7 @@ OC.L10N.register(
     "Join meeting muted" : "Liity kokoukseen mykistettynä",
     "Room name" : "Huoneen nimi",
     "Create" : "Luo",
+    "Open recording" : "Avaa nauhoitus",
     "Copy to clipboard" : "Kopioi leikepöydälle",
     "Save as file" : "Tallenna tiedostona",
     "_%n participant_::_%n participants_" : ["%n osallistuja","%n osallistujaa"],
@@ -78,6 +83,7 @@ OC.L10N.register(
     "Unexpected error occurred" : "Tapahtui odottamaton virhe",
     "API URL is invalid" : "Rajapinnan URL on virheellinen",
     "API secret is invalid" : "Rajapinnan salaisuus on virheellinen",
-    "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä"
+    "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä",
+    "No rooms available!" : "Huoneita ei ole saatavilla!"
 },
 "nplurals=2; plural=(n != 1);");
