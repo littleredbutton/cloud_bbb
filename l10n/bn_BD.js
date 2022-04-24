@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "সংরক্ষণ",
     "Password" : "কূটশব্দ",
+    "Hello %s" : "হ্যালো %s",
     "Group" : "গোষ্ঠীসমূহ",
     "Name" : "নাম",
     "Edit" : "সম্পাদনা",

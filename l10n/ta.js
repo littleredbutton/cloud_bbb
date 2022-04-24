@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "சேமிக்க ",
     "Password" : "கடவுச்சொல்",
+    "Hello %s" : "வணக்கம் %s",
     "Group" : "Group",
     "Name" : "பெயர்",
     "Edit" : "தொகுக்க",

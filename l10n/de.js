@@ -130,6 +130,7 @@ OC.L10N.register(
     "URL has to contain the {token} placeholder" : "Die Adresse (URL) muss den {token} Platzhalter beinhalten",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Die Adresse (URL) muss mit https:// beginnen und muss den {token} Platzhalter beinhalten. Zusätzlich kann der {user} Platzhalter verwendet werden.",
     "Send file to BBB" : "Datei an BBB senden",
+    "Start" : "Start",
     "Please select the room in which you like to use the file \"{filename}\"." : "Bitte wähle den Raum aus, in dem Du die Datei \"{filename}\" verwenden möchtest.",
     "No rooms available!" : "Keine Räume verfügbar!",
     "Send to BBB" : "An BBB senden ",

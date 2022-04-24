@@ -4,6 +4,7 @@
     "Back to %s" : "חזרה אל %s",
     "API secret" : "סוד API",
     "Save" : "שמור",
+    "Community" : "קהילה",
     "Please enter your name!" : "נא למלא את שמך!",
     "The name must be at least 3 characters long." : "אורך השם חייב להיות למעלה מ־3 תווים.",
     "Display name" : "שם תצוגה",
@@ -12,6 +13,7 @@
     "Have an account? Log in." : "יש לך חשבון? כדאי לך להיכנס.",
     "Hello %s" : "שלום %s",
     "Group" : "קבוצה",
+    "Public" : "ציבורי",
     "Name" : "שם",
     "Access" : "גישה",
     "Max" : "מרבי",
@@ -22,6 +24,7 @@
     "Miscellaneous" : "שונות",
     "Room name" : "שם החדר",
     "Create" : "יצירה",
+    "Copy to clipboard" : "העתקה ללוח הגזירים",
     "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים","%n משתתפים"],
     "Delete" : "מחיקה",
     "Delete \"{name}\"?" : "למחוק את „{name}”?",
@@ -40,6 +43,7 @@
     "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
-    "API secret is invalid" : "סוד ה־API שגוי"
+    "API secret is invalid" : "סוד ה־API שגוי",
+    "Start" : "התחלה"
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;"
 }

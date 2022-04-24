@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
+    "Community" : "Community",
     "Let's go!" : "Då kör vi!",
     "Display name" : "Visningsnamn",
     "Password" : "Lösenord",
@@ -11,6 +12,7 @@ OC.L10N.register(
     "Group" : "Grupp",
     "Searching" : "Söker",
     "No matches" : "Inga träffar",
+    "Public" : "Offentlig",
     "Name" : "Namn",
     "Access" : "Åtkomst",
     "Edit" : "Redigera",
@@ -18,12 +20,14 @@ OC.L10N.register(
     "Miscellaneous" : "Diverse",
     "Room name" : "Rumsnamn",
     "Create" : "Skapa",
+    "Copy to clipboard" : "Kopiera till urklipp",
     "Delete" : "Ta bort",
     "Error" : "Fel",
     "Server error" : "Serverfel",
     "moderator" : "moderator",
     "Share" : "Dela",
     "Loading" : "Läser in",
-    "Settings saved" : "Inställningar sparade"
+    "Settings saved" : "Inställningar sparade",
+    "Start" : "Start"
 },
 "nplurals=2; plural=(n != 1);");

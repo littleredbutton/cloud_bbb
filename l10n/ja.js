@@ -128,6 +128,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URLはHTTPSで始まる必要があります",
     "URL has to contain the {token} placeholder" : "URLは{token}プレースホルダを含んでいる必要があります",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URLはhttps://で始まり、{token}を含む必要があります。更に {user}プレースホルダを使用することもできます。",
+    "Start" : "開始",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["この会議室はまだ開いていません。%n秒後に再アクセスしますので少しお待ちください。"]
 },
 "nplurals=1; plural=0;");

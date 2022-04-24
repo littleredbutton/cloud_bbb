@@ -6,17 +6,20 @@ OC.L10N.register(
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
+    "Public" : "Público",
     "Name" : "Nombre",
     "Access" : "Acceso",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",
     "Create" : "Crear",
+    "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Borrar",
     "Error" : "Error",
     "Server error" : "Se presentó un error en el servidor",
     "moderator" : "moderador",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "Settings saved" : "Se han guardado las configuraciones "
+    "Settings saved" : "Se han guardado las configuraciones ",
+    "Start" : "Iniciar"
 },
 "nplurals=2; plural=(n != 1);");

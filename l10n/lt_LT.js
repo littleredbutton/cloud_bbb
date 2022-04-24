@@ -10,6 +10,7 @@ OC.L10N.register(
     "Back to %s" : "Atgal į %s",
     "API URL" : "API URL",
     "Save" : "Įrašyti",
+    "Community" : "Bendruomenė",
     "You will be forwarded to the room in the next few seconds." : "Po kelių sekundžių būsite peradresuoti į kambarį.",
     "Let's go!" : "Pirmyn!",
     "Please enter your name!" : "Įveskite savo vardą!",
@@ -21,6 +22,7 @@ OC.L10N.register(
     "Hello %s" : "Sveiki, %s",
     "Name, group …" : "Vardas, grupė…",
     "Group" : "Grupė",
+    "Public" : "Viešas",
     "Name" : "Pavadinimas",
     "Access" : "Prieiga",
     "You are not permitted to create a room." : "Jums neleidžiama sukurti kambario.",
@@ -41,6 +43,7 @@ OC.L10N.register(
     "Loading" : "Įkeliama",
     "Group …" : "Grupė…",
     "Settings saved" : "Nustatymai įrašyti",
-    "Unexpected error occurred" : "Įvyko netikėta klaida"
+    "Unexpected error occurred" : "Įvyko netikėta klaida",
+    "Start" : "Pradėti"
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");

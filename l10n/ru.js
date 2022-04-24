@@ -128,6 +128,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URL должен начинаться с HTTPS",
     "URL has to contain the {token} placeholder" : "URL должен содержать заполнитель {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL должен начинаться с https:// и содержать {token}. Дополнительно может быть использован заполнитель {user}.",
+    "Start" : "Начать",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Эта комната ещё не открыта. Мы повторим попытку через %n секунду. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунды. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунд. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунд. Пожалуйста, подождите."]
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");

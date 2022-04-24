@@ -5,6 +5,7 @@ OC.L10N.register(
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrācija priekš Nextcloud",
     "API secret" : "API slepenais kods",
     "Save" : "Saglabāt",
+    "Community" : "Kopiena",
     "Please enter your name!" : "Ludzu ieraksties savu vārdu@",
     "The name must be at least 3 characters long." : "Vārdam jābūt vismaz 3 rakstzīmes garam.",
     "Display name" : "Ekrāna vārds",
@@ -12,6 +13,7 @@ OC.L10N.register(
     "Join" : "Pievienoties",
     "Hello %s" : "Sveiki, %s",
     "Group" : "Grupa",
+    "Public" : "Publiska",
     "Name" : "Vārds",
     "Max" : "Maksimāli",
     "Record" : "Ierakstīt",
@@ -20,6 +22,7 @@ OC.L10N.register(
     "Welcome" : "Laipni lūdzam!",
     "Room name" : "Sapulču telpas nosaukums",
     "Create" : "Izveidot",
+    "Copy to clipboard" : "Kopēt starpliktuvē",
     "_%n participant_::_%n participants_" : ["dalībnieki - %n","%n dalībnieks","%n dalībnieki"],
     "Delete" : "Dzēst",
     "Delete \"{name}\"?" : "Dzēst \"{name}\"?",
@@ -38,6 +41,7 @@ OC.L10N.register(
     "Loading" : "Ielādē",
     "Settings saved" : "Iestatījumi saglabāti",
     "Unexpected error occurred" : "Neparedzēta kļūda",
-    "API secret is invalid" : "API slepenais kods nav pareizs"
+    "API secret is invalid" : "API slepenais kods nav pareizs",
+    "Start" : "Sākt"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

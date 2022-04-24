@@ -4,6 +4,7 @@
     "Password" : "Нууц үг",
     "Hello %s" : "Сайн байна уу, %s",
     "Group" : "Бүлэг",
+    "Public" : "Нийтийн",
     "Name" : "Нэр",
     "Edit" : "засварлах",
     "Welcome" : "Тавтай морил",
@@ -13,6 +14,7 @@
     "Server error" : "серверийн алдаа",
     "Share" : "Түгээх",
     "Loading" : "Loading",
-    "Settings saved" : "Тохиргоо хадгалагдлаа"
+    "Settings saved" : "Тохиргоо хадгалагдлаа",
+    "Start" : "эхлэх"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

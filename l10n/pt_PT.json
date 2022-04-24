@@ -4,6 +4,7 @@
     "API URL" : "URL da API",
     "API secret" : "Segredo da API",
     "Save" : "Guardar",
+    "Community" : "Comunidade",
     "Please enter your name!" : "Por favor, insira o seu nome!",
     "The name must be at least 3 characters long." : "O nome deve ter pelo menos 2 carateres.",
     "Display name" : "Nome a exibir",
@@ -11,6 +12,7 @@
     "Join" : "Aderir",
     "Hello %s" : "Olá %s",
     "Group" : "Grupo",
+    "Public" : "Público",
     "Name" : "Nome",
     "Access" : "Acesso",
     "Max" : "Máx.",
@@ -20,6 +22,7 @@
     "Welcome" : "Bem-vindo",
     "Room name" : "Nome da sala",
     "Create" : "Criar",
+    "Copy to clipboard" : "Copiar para área de transferência",
     "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
     "Delete" : "Eliminar",
     "Delete \"{name}\"?" : "Eliminar \"{name}\"?",
@@ -31,6 +34,7 @@
     "moderator" : "moderador",
     "Share" : "Partilhar",
     "Loading" : "A carregar",
-    "Settings saved" : "Definições guardadas"
+    "Settings saved" : "Definições guardadas",
+    "Start" : "Início"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

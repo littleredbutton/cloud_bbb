@@ -4,18 +4,21 @@
     "Password" : "პაროლი",
     "Hello %s" : "გამარჯობა, %s",
     "Group" : "ჯგუფი",
+    "Public" : "ღია",
     "Name" : "სახელი",
     "Access" : "წვდომა",
     "Edit" : "ცვლილება",
     "Welcome" : "კეთილი იყოს თქვენი მობრძანება",
     "Room name" : "ოთახის სახელი",
     "Create" : "შექმნა",
+    "Copy to clipboard" : "კოპირება ბუფერში",
     "Delete" : "წაშლა",
     "Error" : "შეცდომა",
     "Server error" : "სერვერის შეცდომა",
     "moderator" : "მოდერატორი",
     "Share" : "გაზიარება",
     "Loading" : "იტვირთება",
-    "Settings saved" : "პარამეტრები შენახულია"
+    "Settings saved" : "პარამეტრები შენახულია",
+    "Start" : "დაწყება"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

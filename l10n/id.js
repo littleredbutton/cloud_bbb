@@ -10,6 +10,7 @@ OC.L10N.register(
     "API URL" : "Tautan API",
     "API secret" : "Rahasia API",
     "Save" : "Simpan",
+    "Community" : "Komunitas",
     "Let's go!" : "Ayo!",
     "Please enter your name!" : "Silakan isi nama Anda!",
     "The name must be at least 3 characters long." : "Nama setidaknya wajib memiliki panjang 3 karakter.",
@@ -18,6 +19,7 @@ OC.L10N.register(
     "Join" : "Gabung",
     "Hello %s" : "Halo %s",
     "Group" : "Grup",
+    "Public" : "Publik",
     "Name" : "Nama",
     "Max" : "Maksimum",
     "Record" : "Rekam",
@@ -45,6 +47,7 @@ OC.L10N.register(
     "Settings saved" : "Setelan tersimpan",
     "Unexpected error occurred" : "Terjadi galat tak terduga",
     "API URL is invalid" : "Tautan API invalid",
-    "API secret is invalid" : "Rahasia API invalid"
+    "API secret is invalid" : "Rahasia API invalid",
+    "Start" : "Mulai"
 },
 "nplurals=1; plural=0;");

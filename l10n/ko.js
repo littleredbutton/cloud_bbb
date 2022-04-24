@@ -3,12 +3,15 @@ OC.L10N.register(
     {
     "Back to %s" : "%s(으)로 돌아가기",
     "Save" : "저장",
+    "Community" : "커뮤니티",
     "Please enter your name!" : "이름을 입력하시오!",
     "Display name" : "표시 이름",
     "Password" : "암호",
     "Join" : "참가",
     "Hello %s" : "%s 님 안녕하세요",
     "Group" : "그룹",
+    "No matches" : "일치 항목 없음",
+    "Public" : "공개",
     "Name" : "이름",
     "Access" : "접근 권한",
     "Max" : "최대치",
@@ -17,6 +20,7 @@ OC.L10N.register(
     "Welcome" : "환영합니다",
     "Room name" : "방 번호",
     "Create" : "생성",
+    "Copy to clipboard" : "클립보드로 복사",
     "_%n participant_::_%n participants_" : ["참가자들"],
     "Delete" : "삭제",
     "Select target folder" : "지정 폴더 열기",
@@ -28,6 +32,7 @@ OC.L10N.register(
     "Loading" : "불러오는 중",
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",
-    "API URL is invalid" : "무효한 API URL"
+    "API URL is invalid" : "무효한 API URL",
+    "Start" : "시작"
 },
 "nplurals=1; plural=0;");

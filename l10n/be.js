@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "Save",
     "Password" : "Password",
+    "Hello %s" : "Прывітанне %s",
     "Group" : "Group",
     "Delete" : "Delete",
     "Error" : "Памылка",

@@ -24,6 +24,7 @@ OC.L10N.register(
     "API secret" : "Secret de l'API",
     "Save" : "Desa",
     "Show room manager in app navigation instead of settings page." : "Mostra el gestor d'habitacions a la navegació per aplicacions en lloc de la pàgina de configuració.",
+    "Community" : "Comunitat",
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "Si li agrada utilitzar urls més curts, pot introduir un intermediari de reenviament a sota.",
     "URL shortener" : "Escurçador d'URL",
     "You will be forwarded to the room in the next few seconds." : "Vostè serà reenviat a l'habitació en els propers segons.",
@@ -40,6 +41,7 @@ OC.L10N.register(
     "Group" : "Grup",
     "Searching" : "Cerca",
     "No matches" : "Cap coincidència",
+    "Public" : "Públic",
     "Name" : "Nom",
     "Access" : "Accés",
     "Max" : "Màx",
@@ -65,6 +67,7 @@ OC.L10N.register(
     "Require moderator to start room" : "Requereix moderador per començar la sala",
     "Room name" : "Nom de la sala",
     "Create" : "Crea",
+    "Copy to clipboard" : "Copia-ho al porta-papers",
     "_%n participant_::_%n participants_" : ["%n participant","%n participants"],
     "Delete" : "Eliminar",
     "Delete \"{name}\"?" : "Voleu suprimir \"{name}\"?",
@@ -95,6 +98,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "La URL ha de començar amb HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL ha de contenir el contenidor {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL ha de començar per https:// i contenir {token}. A més, es pot utilitzar el contenidor {user}.",
+    "Start" : "Inici",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segon. Si us plau esperi.","Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segons. Si us plau esperi."]
 },
 "nplurals=2; plural=(n != 1);");

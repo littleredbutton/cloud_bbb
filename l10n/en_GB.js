@@ -3,23 +3,27 @@ OC.L10N.register(
     {
     "Back to %s" : "Back to %s",
     "Save" : "Save",
+    "Community" : "Community",
     "Display name" : "Display name",
     "Password" : "Password",
     "Join" : "Join",
     "Hello %s" : "Hello %s",
     "Group" : "Group",
+    "Public" : "Public",
     "Name" : "Name",
     "Access" : "Access",
     "Edit" : "Edit",
     "Welcome" : "Welcome",
     "Room name" : "Room name",
     "Create" : "Create",
+    "Copy to clipboard" : "Copy to clipboard",
     "Delete" : "Delete",
     "Error" : "Error",
     "Server error" : "Server error",
     "moderator" : "moderator",
     "Share" : "Share",
     "Loading" : "Loading",
-    "Settings saved" : "Settings saved"
+    "Settings saved" : "Settings saved",
+    "Start" : "Start"
 },
 "nplurals=2; plural=(n != 1);");

@@ -2,22 +2,26 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Guardar",
+    "Community" : "Comunidad",
     "Display name" : "Nombre a desplegar",
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
+    "Public" : "Público",
     "Name" : "Nombre",
     "Access" : "Acceso",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",
     "Room name" : "Nombre del cuarto",
     "Create" : "Crear",
+    "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Borrar",
     "Error" : "Error",
     "Server error" : "Se presentó un error en el servidor",
     "moderator" : "moderador",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "Settings saved" : "Se han guardado las configuraciones "
+    "Settings saved" : "Se han guardado las configuraciones ",
+    "Start" : "Iniciar"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,0 +1,13 @@
+{ "translations": {
+    "Save" : "Saklamak",
+    "Community" : "Jemgyýeti",
+    "Password" : "Açarsöz",
+    "Hello %s" : "Salam%s",
+    "Name" : "Ady",
+    "Edit" : "Redaktirläň",
+    "Create" : "Dörediň",
+    "Delete" : "Pozmak",
+    "Error" : "ýalňyşlyk",
+    "Share" : "Paýlaş"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

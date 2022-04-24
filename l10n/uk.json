@@ -7,6 +7,7 @@
     "API URL" : "Посилання API",
     "API secret" : "Пароль API",
     "Save" : "Зберегти",
+    "Community" : "Спільнота",
     "Please enter your name!" : "Будь ласка, зазначте ваше ім'я!",
     "The name must be at least 3 characters long." : "Ім'я має містити щонайменше 3 символи.",
     "You have to provide the correct password to join the meeting." : "Потрібно надати дійсний пароль для приєднання до зустрічі.",
@@ -15,6 +16,10 @@
     "Join" : "Приєднатися",
     "Hello %s" : "Вітаємо %s",
     "Group" : "Група",
+    "Public" : "Публічна",
+    "Internal + Password protection for guests" : "Внутрішній із парольним захистом для гостей",
+    "Internal + Waiting room for guests" : "Внутрішній із кімнатою очікування для гостей",
+    "Internal" : "Внутрішній",
     "Name" : "Ім'я",
     "Access" : "Доступ",
     "Max" : "Щонайбільше",
@@ -50,6 +55,7 @@
     "Settings saved" : "Налаштування збережено",
     "Unexpected error occurred" : "Неочікувана помилка",
     "API URL is invalid" : "Посилання API недійсне",
-    "API secret is invalid" : "Неправильний пароль API"
+    "API secret is invalid" : "Неправильний пароль API",
+    "Start" : "Початок"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }

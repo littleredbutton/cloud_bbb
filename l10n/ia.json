@@ -3,6 +3,7 @@
     "Display name" : "Monstrar nomine",
     "Password" : "Contrasigno",
     "Group" : "Gruppo",
+    "Public" : "Public",
     "Name" : "Nomine",
     "Edit" : "Modificar",
     "Create" : "Crear",
@@ -10,6 +11,7 @@
     "Error" : "Error",
     "Share" : "Compartir",
     "Loading" : "Loading",
-    "Settings saved" : "Configurationes salveguardate"
+    "Settings saved" : "Configurationes salveguardate",
+    "Start" : "Initio"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

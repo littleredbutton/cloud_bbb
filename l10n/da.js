@@ -3,23 +3,27 @@ OC.L10N.register(
     {
     "Back to %s" : "Tilbage til %s",
     "Save" : "Gem",
+    "Community" : "Onlinefællesskab",
     "Display name" : "Vist navn",
     "Password" : "Adgangskode",
     "Join" : "Deltag",
     "Hello %s" : "Hej %s",
     "Group" : "Gruppe",
     "No matches" : "Ingen matches",
+    "Public" : "Offentlig",
     "Name" : "Navn",
     "Access" : "Adgang",
     "Edit" : "Rediger",
     "Welcome" : "Velkommen",
     "Create" : "Opret",
+    "Copy to clipboard" : "Kopier til udklipsholder",
     "Delete" : "Slet",
     "Error" : "Fejl",
     "Server error" : "Serverfejl",
     "moderator" : "moderator",
     "Share" : "Del",
     "Loading" : "Indlæser",
-    "Settings saved" : "Indstillinger gemt"
+    "Settings saved" : "Indstillinger gemt",
+    "Start" : "Start"
 },
 "nplurals=2; plural=(n != 1);");

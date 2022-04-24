@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Save" : "Sačuvaj",
+    "Community" : "Zajednica",
     "Password" : "Lozinka",
     "Hello %s" : "Здраво %s",
     "Group" : "Group",

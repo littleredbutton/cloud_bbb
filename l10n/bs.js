@@ -4,6 +4,7 @@ OC.L10N.register(
     "Save" : "Spremi",
     "Password" : "Lozinka",
     "Group" : "Grupa",
+    "Public" : "Javno",
     "Name" : "Ime",
     "Edit" : "Izmjeni",
     "Create" : "Ustvari",

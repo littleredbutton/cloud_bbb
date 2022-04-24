@@ -107,6 +107,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "Το URL πρέπει να ξεκινάει με HTTPS",
     "URL has to contain the {token} placeholder" : "Η διεύθυνση URL πρέπει να περιέχει το σύμβολο κράτησης θέσης {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Το URL πρέπει να ξεκινά με https:// και να περιέχει {token}. Επιπλέον, το σύμβολο κράτησης θέσης {user} μπορεί να χρησιμοποιηθεί.",
+    "Start" : "Έναρξη",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Αυτό το δωμάτιο δεν είναι ακόμη ανοιχτό. Θα το δοκιμάσουμε ξανά σε %n δευτερόλεπτο. Παρακαλούμε περιμένετε.","Αυτό το δωμάτιο δεν είναι ακόμη ανοιχτό. Θα το δοκιμάσουμε ξανά σε %n δευτερόλεπτα. Παρακαλούμε περιμένετε."]
 },
 "nplurals=2; plural=(n != 1);");

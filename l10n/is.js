@@ -3,23 +3,27 @@ OC.L10N.register(
     {
     "Back to %s" : "Til baka í %s",
     "Save" : "Vista",
+    "Community" : "Samfélag",
     "Display name" : "Birtingarnafn",
     "Password" : "Lykilorð",
     "Join" : "Taka þátt",
     "Hello %s" : "Halló %s",
     "Group" : "Hópur",
+    "Public" : "Opinbert",
     "Name" : "Nafn",
     "Access" : "Aðgangur",
     "Edit" : "Breyta",
     "Welcome" : "Velkomin",
     "Miscellaneous" : "Ýmislegt",
     "Create" : "Búa til",
+    "Copy to clipboard" : "Afrita á klippispjald",
     "Delete" : "Eyða",
     "Error" : "Villa",
     "Server error" : "Villa frá þjóni",
     "moderator" : "umsjónarmaður",
     "Share" : "Deila",
     "Loading" : "Hleð inn",
-    "Settings saved" : "Stillingar vistaðar"
+    "Settings saved" : "Stillingar vistaðar",
+    "Start" : "Start"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

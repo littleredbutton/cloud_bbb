@@ -5,6 +5,7 @@ OC.L10N.register(
     "Display name" : "Monstrar nomine",
     "Password" : "Contrasigno",
     "Group" : "Gruppo",
+    "Public" : "Public",
     "Name" : "Nomine",
     "Edit" : "Modificar",
     "Create" : "Crear",
@@ -12,6 +13,7 @@ OC.L10N.register(
     "Error" : "Error",
     "Share" : "Compartir",
     "Loading" : "Loading",
-    "Settings saved" : "Configurationes salveguardate"
+    "Settings saved" : "Configurationes salveguardate",
+    "Start" : "Initio"
 },
 "nplurals=2; plural=(n != 1);");

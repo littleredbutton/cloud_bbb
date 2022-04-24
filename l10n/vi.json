@@ -20,6 +20,7 @@
     "Hello %s" : "Xin chào %s",
     "Group" : "Nhóm",
     "Searching" : "Đang tìm kiếm",
+    "No matches" : "Không phù hợp",
     "Public" : "Công khai",
     "Name" : "Tên",
     "Max" : "Tối đa",
@@ -42,11 +43,13 @@
     "Link stored" : "Đã lưu trữ liên kết",
     "Error" : "Lỗi",
     "Delete?" : "Xoá?",
+    "Server error" : "Lỗi máy chủ",
     "moderator" : "Người kiểm duyệt",
     "admin" : "quản trị viên",
     "Share" : "Chia sẻ",
     "Loading" : "Đang tải",
     "Settings saved" : "Cấu hình đã được lưu",
+    "Start" : "Bắt đầu",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Phòng này chưa mở. Chúng tôi sẽ thử lại trong %n giây. Xin đợi."]
 },"pluralForm" :"nplurals=1; plural=0;"
 }

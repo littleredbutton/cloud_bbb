@@ -1,19 +1,23 @@
 { "translations": {
     "Back to %s" : "Volver a %s",
     "Save" : "Guardar",
+    "Community" : "Comunidad",
     "Display name" : "Nombre para mostrar",
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
+    "Public" : "Público",
     "Name" : "Nombre",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",
     "Create" : "Crear",
+    "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Eliminar",
     "Error" : "Error",
     "Server error" : "Se presentó un error en el servidor",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "Settings saved" : "Configuraciones guardadas"
+    "Settings saved" : "Configuraciones guardadas",
+    "Start" : "Inicio"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

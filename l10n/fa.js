@@ -7,6 +7,7 @@ OC.L10N.register(
     "The room could not be found. Maybe it was deleted?" : "اتاق پیدا نشد. شاید حذف شده است؟",
     "Save" : "ذخیره",
     "Default Room Settings" : "تنظیمات پیش‌فرض اتاق",
+    "Community" : "انجمن",
     "Display name" : "نام جهت نمایش",
     "Password" : "کلمه عبور",
     "Join" : "ملحق شدن",
@@ -21,12 +22,14 @@ OC.L10N.register(
     "Miscellaneous" : "متفرقه",
     "Recording" : "ضبط جلسه",
     "Create" : "ایجاد شده",
+    "Copy to clipboard" : "کپی کردن به حافظه موقت",
     "Delete" : "حذف",
     "Error" : "خطا",
     "Server error" : "خطای سرور",
     "Share" : "هم‌رسانی",
     "Loading" : "در حال بار گزاری",
     "Delete restrictions for \"{name}\"?" : "محدودیت‌های \"{name}\" حذف شود؟",
-    "Settings saved" : "تنظیمات ذخیره شد"
+    "Settings saved" : "تنظیمات ذخیره شد",
+    "Start" : "شروع کنید"
 },
 "nplurals=2; plural=(n > 1);");

@@ -6,15 +6,18 @@
     "Join" : "Aliĝi",
     "Hello %s" : "Saluton %s",
     "Group" : "Grupo",
+    "Public" : "Publika",
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",
     "Create" : "Krei",
+    "Copy to clipboard" : "Kopii tondejen",
     "Delete" : "Forigi",
     "Error" : "Eraro",
     "Server error" : "Eraro pri servilo",
     "Share" : "Kunhavigi",
     "Loading" : "Ŝargado",
-    "Settings saved" : "Agordoj konservitaj"
+    "Settings saved" : "Agordoj konservitaj",
+    "Start" : "Komenco"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
