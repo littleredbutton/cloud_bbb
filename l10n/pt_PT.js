@@ -22,6 +22,7 @@ OC.L10N.register(
     "Recordings" : "Gravações",
     "Edit" : "Editar",
     "Welcome" : "Bem-vindo",
+    "Miscellaneous" : "Diversos",
     "Room name" : "Nome da sala",
     "Create" : "Criar",
     "Copy to clipboard" : "Copiar para área de transferência",

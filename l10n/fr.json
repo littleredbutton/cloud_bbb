@@ -26,6 +26,7 @@
     "Use Nextcloud theme in BigBlueButton." : "Utiliser le thème Nextcloud dans BigBlueButton.",
     "Default Room Settings" : "Paramètres par défaut des salles",
     "Below you can change some default values, which are used to create a new room." : "Ci-dessous vous pouvez changer quelques valeurs par défaut qui sont utilisées lors de la création d'une salle.",
+    "Perform media check before usage" : "Effectuer une vérification des médias avant utilisation",
     "Community" : "Communauté",
     "Are you enjoying this app? Give something back to the open source community." : "Êtes-vous satisfait de cette application ? Faites un retour à la communauté du libre",
     "Checkout the contributor guide" : "Vérifiez le guide du contributeur",
@@ -126,9 +127,11 @@
     "URL has to start with HTTPS" : "L'URL doit débuter par HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL doit contenir l'espace réservé {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL doit commencer par https:// et contenir {token}. De plus, l'espace réservé de {user} peut être utilisé.",
+    "Send file to BBB" : "Envoyer le fichier vers BBB",
     "Start" : "Démarrer",
     "Please select the room in which you like to use the file \"{filename}\"." : "Veuillez sélectionner la salle dans laquelle vous voulez utiliser le fichier \"{filename}\".",
     "No rooms available!" : "Pas de salle disponible !",
+    "Send to BBB" : "Envoyer vers BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n seconde. Veuillez patienter.","Cette salle n'est pas encore ouverte. Nous allons réessayer dans %n secondes. Veuillez patienter."]
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
