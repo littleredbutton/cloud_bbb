@@ -14,7 +14,7 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\BackgroundJob\IJobList;
-use OCP\Files\Storage\IStorage;
+use OCP\Files\IRootFolder;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
@@ -45,8 +45,8 @@ class JoinController extends Controller
 	/** @var IJobList */
 	private $jobList;
 
-	/** @var IStorage */
-	private $storage;
+	/** @var IRootFolder */
+	private $iRootFolder;
 
 	public function __construct(
 		string $appName,
@@ -57,7 +57,7 @@ class JoinController extends Controller
 		API $api,
 		Permission $permission,
 		IJobList $jobList,
-		IStorage $storage
+		IRootFolder $iRootFolder
 	) {
 		parent::__construct($appName, $request);
 
@@ -67,7 +67,7 @@ class JoinController extends Controller
 		$this->api = $api;
 		$this->permission = $permission;
 		$this->jobList = $jobList;
-		$this->storage = $storage;
+		$this->iRootFolder = $iRootFolder;
 	}
 
 	public function setToken(string $token): void
@@ -117,13 +117,12 @@ class JoinController extends Controller
 				throw new NoPermissionException();
 			}
 
-			if ($this->permission->isAdmin($room, $userId)) {
-				$presentation = new Presentation($filename, $this->storage);
+			if ($this->permission->isAdmin($room, $userId) && !empty($filename)) {
+				$presentation = new Presentation($filename, $userId, $this->iRootFolder);
+			} else if (!$room->running && !empty($room->presentationPath)) {
+				$presentation = new Presentation($room->presentationPath, $room->presentationUserId, $this->iRootFolder);
 			}
-
-			if (!$room->running && $presentation === null) {
-				$presentation = new Presentation($room->presentationPath, $this->storage);
-			}
+			
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse($this->getLoginUrl());
 		} elseif (empty($displayname) || strlen($displayname) < 3 || ($room->access === Room::ACCESS_PASSWORD && $password !== $room->password)) {
