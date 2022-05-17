@@ -15,6 +15,7 @@ OC.L10N.register(
     "Public" : "Offentlig",
     "Name" : "Namn",
     "Access" : "Åtkomst",
+    "Max" : "Max",
     "Edit" : "Redigera",
     "Welcome" : "Välkommen",
     "Miscellaneous" : "Diverse",

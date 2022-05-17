@@ -130,6 +130,7 @@ OC.L10N.register(
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL moet beginnen met https:// en moet {token} bavatten. daarnaast kan de {user} aanduiding worden gebruikt.",
     "Send file to BBB" : "Verstuur bestand naar BBB",
     "Start" : "Start",
+    "No rooms available!" : "Geen kamers beschikbaar",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Deze ruimte is nog niet open. We proberen het opnieuw over %n seconde. Even geduld","Deze ruimte is nog niet open. We proberen het opnieuw over  %n seconden. Even geduld."]
 },
 "nplurals=2; plural=(n != 1);");
