@@ -10,14 +10,17 @@ use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
+use OCA\DAV\Db\DirectMapper;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\IJobList;
 use OCP\Files\IRootFolder;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
+use OCP\Security\ISecureRandom;
 
 class JoinController extends Controller
 {
@@ -48,6 +51,15 @@ class JoinController extends Controller
 	/** @var IRootFolder */
 	private $iRootFolder;
 
+	/** @var DirectMapper */
+	private $mapper;
+
+	/** @var ISecureRandom */
+	private $random;
+
+	/** @var ITimeFactory */
+	private $timeFactory;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
@@ -57,7 +69,10 @@ class JoinController extends Controller
 		API $api,
 		Permission $permission,
 		IJobList $jobList,
-		IRootFolder $iRootFolder
+		IRootFolder $iRootFolder,
+		DirectMapper $mapper,
+		ISecureRandom $random,
+		ITimeFactory $timeFactory
 	) {
 		parent::__construct($appName, $request);
 
@@ -68,6 +83,9 @@ class JoinController extends Controller
 		$this->permission = $permission;
 		$this->jobList = $jobList;
 		$this->iRootFolder = $iRootFolder;
+		$this->mapper = $mapper;
+		$this->random = $random;
+		$this->timeFactory = $timeFactory;
 	}
 
 	public function setToken(string $token): void
@@ -118,11 +136,10 @@ class JoinController extends Controller
 			}
 
 			if ($this->permission->isAdmin($room, $userId) && !empty($filename)) {
-				$presentation = new Presentation($filename, $userId, $this->iRootFolder);
+				$presentation = new Presentation($filename, $userId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
 			} else if (!$room->running && !empty($room->presentationPath)) {
-				$presentation = new Presentation($room->presentationPath, $room->presentationUserId, $this->iRootFolder);
+				$presentation = new Presentation($room->presentationPath, $room->presentationUserId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
 			}
-			
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse($this->getLoginUrl());
 		} elseif (empty($displayname) || strlen($displayname) < 3 || ($room->access === Room::ACCESS_PASSWORD && $password !== $room->password)) {
