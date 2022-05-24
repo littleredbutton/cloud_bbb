@@ -14,6 +14,7 @@ use OCP\IRequest;
 use OCP\IUserManager;
 
 class RoomController extends Controller {
+	use Errors;
 	/** @var RoomService */
 	private $service;
 
@@ -31,8 +32,6 @@ class RoomController extends Controller {
 
 	/** @var string */
 	private $userId;
-
-	use Errors;
 
 	public function __construct(
 		$appName,
@@ -119,7 +118,9 @@ class RoomController extends Controller {
 		bool $listenOnly,
 		bool $mediaCheck,
 		bool $cleanLayout,
-		bool $joinMuted
+		bool $joinMuted,
+		string $presentationUserId,
+		string $presentationPath
 	): DataResponse {
 		$room = $this->service->find($id);
 
@@ -142,8 +143,20 @@ class RoomController extends Controller {
 			return new DataResponse(['message' => 'Access type not allowed.'], Http::STATUS_BAD_REQUEST);
 		}
 
-		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted) {
-			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted);
+		if ($presentationUserId != '' && $presentationUserId != $room->getPresentationUserId()) {
+			return new DataResponse(['message' => 'Not allowed to change to another user.'], Http::STATUS_BAD_REQUEST);
+		}
+
+		if ($presentationUserId === '') {
+			$presentationUserId = $this->userId;
+		}
+
+		if ($presentationUserId != $this->userId && $presentationPath != $room->getPresentationPath()) {
+			return new DataResponse(['message' => 'Not allowed to choose path of another user.'], Http::STATUS_BAD_REQUEST);
+		}
+
+		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted, $presentationUserId, $presentationPath) {
+			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted, $presentationUserId, $presentationPath);
 		});
 	}
 

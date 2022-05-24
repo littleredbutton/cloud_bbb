@@ -6,6 +6,7 @@ import Dialog from './Dialog';
 import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
 import { AccessOptions } from '../Common/Translation';
+import SharedPresentationInput from './SharedPresentationInput';
 
 const descriptions: { [key: string]: string } = {
 	name: t('bbb', 'Descriptive name of this room.'),
@@ -29,11 +30,12 @@ type Props = {
 	room: Room;
 	restriction?: Restriction;
 	updateProperty: (key: string, value: string | boolean | number | null) => Promise<void>;
+	updateRoom: (Room) => Promise<void>;
 	open: boolean;
 	setOpen: (open: boolean) => void;
 }
 
-const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, open, setOpen }) => {
+const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, open, setOpen, updateRoom }) => {
 	const [shares, setShares] = useState<RoomShare[]>();
 
 	const maxParticipantsLimit = (restriction?.maxParticipants || 0) < 0 ? undefined : restriction?.maxParticipants;
@@ -225,6 +227,12 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						<label htmlFor={`bbb-joinMuted-${room.id}`}>{t('bbb', 'Join meeting muted')}</label>
 					</div>
 					<p><em>{descriptions.joinMuted}</em></p>
+				</div>
+				<div>
+					<div>
+						<label htmlFor={`bbb-presentation-${room.id}`}>{t('bbb', 'Default Presentation')}</label>
+						<SharedPresentationInput id={`bbb-presentation-${room.id}`} room={room} updateRoom={updateRoom}/>
+					</div>
 				</div>
 			</div>
 		</Dialog>

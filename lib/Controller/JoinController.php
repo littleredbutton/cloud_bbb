@@ -10,13 +10,17 @@ use OCA\BigBlueButton\NoPermissionException;
 use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
+use OCA\DAV\Db\DirectMapper;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\IJobList;
+use OCP\Files\IRootFolder;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUserSession;
+use OCP\Security\ISecureRandom;
 
 class JoinController extends Controller {
 	/** @var string */
@@ -43,6 +47,18 @@ class JoinController extends Controller {
 	/** @var IJobList */
 	private $jobList;
 
+	/** @var IRootFolder */
+	private $iRootFolder;
+
+	/** @var DirectMapper */
+	private $mapper;
+
+	/** @var ISecureRandom */
+	private $random;
+
+	/** @var ITimeFactory */
+	private $timeFactory;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
@@ -51,7 +67,11 @@ class JoinController extends Controller {
 		IUserSession $userSession,
 		API $api,
 		Permission $permission,
-		IJobList $jobList
+		IJobList $jobList,
+		IRootFolder $iRootFolder,
+		DirectMapper $mapper,
+		ISecureRandom $random,
+		ITimeFactory $timeFactory
 	) {
 		parent::__construct($appName, $request);
 
@@ -61,6 +81,10 @@ class JoinController extends Controller {
 		$this->api = $api;
 		$this->permission = $permission;
 		$this->jobList = $jobList;
+		$this->iRootFolder = $iRootFolder;
+		$this->mapper = $mapper;
+		$this->random = $random;
+		$this->timeFactory = $timeFactory;
 	}
 
 	public function setToken(string $token): void {
@@ -107,8 +131,10 @@ class JoinController extends Controller {
 				throw new NoPermissionException();
 			}
 
-			if ($this->permission->isAdmin($room, $userId)) {
-				$presentation = new Presentation($u, $filename);
+			if ($this->permission->isAdmin($room, $userId) && !empty($filename)) {
+				$presentation = new Presentation($filename, $userId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
+			} elseif (!$room->running && !empty($room->presentationPath)) {
+				$presentation = new Presentation($room->presentationPath, $room->presentationUserId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
 			}
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
 			return new RedirectResponse($this->getLoginUrl());
@@ -138,7 +164,7 @@ class JoinController extends Controller {
 
 		$this->markAsRunning($room);
 
-		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url='.$joinUrl]);
+		\OCP\Util::addHeader('meta', ['http-equiv' => 'refresh', 'content' => '3;url=' . $joinUrl]);
 
 		return new TemplateResponse($this->appName, 'forward', [
 			'room' => $room->name,
