@@ -22,8 +22,7 @@ use OCP\IURLGenerator;
 use OCP\IUserSession;
 use OCP\Security\ISecureRandom;
 
-class JoinController extends Controller
-{
+class JoinController extends Controller {
 	/** @var string */
 	protected $token;
 
@@ -88,14 +87,12 @@ class JoinController extends Controller
 		$this->timeFactory = $timeFactory;
 	}
 
-	public function setToken(string $token): void
-	{
+	public function setToken(string $token): void {
 		$this->token = $token;
 		$this->room = null;
 	}
 
-	public function isValidToken(): bool
-	{
+	public function isValidToken(): bool {
 		$room = $this->getRoom();
 
 		return $room !== null;
@@ -108,8 +105,7 @@ class JoinController extends Controller
 	 *
 	 * @return RedirectResponse|TemplateResponse
 	 */
-	public function index($displayname, $u = '', $filename = '', $password = '')
-	{
+	public function index($displayname, $u = '', $filename = '', $password = '') {
 		$room = $this->getRoom();
 
 		if ($room === null) {
@@ -137,7 +133,7 @@ class JoinController extends Controller
 
 			if ($this->permission->isAdmin($room, $userId) && !empty($filename)) {
 				$presentation = new Presentation($filename, $userId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
-			} else if (!$room->running && !empty($room->presentationPath)) {
+			} elseif (!$room->running && !empty($room->presentationPath)) {
 				$presentation = new Presentation($room->presentationPath, $room->presentationUserId, $this->iRootFolder, $this->mapper, $this->random, $this->timeFactory, $this->urlGenerator);
 			}
 		} elseif ($room->access === Room::ACCESS_INTERNAL || $room->access === Room::ACCESS_INTERNAL_RESTRICTED) {
@@ -176,8 +172,7 @@ class JoinController extends Controller
 		], 'guest');
 	}
 
-	private function getRoom(): ?Room
-	{
+	private function getRoom(): ?Room {
 		if ($this->room === null) {
 			$this->room = $this->service->findByUid($this->token);
 		}
@@ -185,8 +180,7 @@ class JoinController extends Controller
 		return $this->room;
 	}
 
-	private function getLoginUrl(): string
-	{
+	private function getLoginUrl(): string {
 		return $this->urlGenerator->linkToRoute('core.login.showLoginForm', [
 			'redirect_url' => $this->urlGenerator->linkToRoute(
 				'bbb.join.index',
@@ -195,8 +189,7 @@ class JoinController extends Controller
 		]);
 	}
 
-	private function markAsRunning(Room $room)
-	{
+	private function markAsRunning(Room $room) {
 		if (!$room->running) {
 			$this->service->updateRunning($room->getId(), true);
 		}

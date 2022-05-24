@@ -8,12 +8,10 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Files\IRootFolder;
 use OCP\Files\File;
 use OCP\Files\Folder;
-use OCP\Files\Storage\IStorage;
 use OCP\IURLGenerator;
 use OCP\Security\ISecureRandom;
 
-class Presentation
-{
+class Presentation {
 	private $url;
 	private $userId;
 
@@ -53,8 +51,7 @@ class Presentation
 		$this->urlGenerator = $urlGenerator;
 	}
 
-	public function generateUrl()
-	{
+	public function generateUrl() {
 		$direct = new Direct();
 		$direct->setUserId($this->userId);
 		$direct->setFileId($this->file->getId());
@@ -70,18 +67,15 @@ class Presentation
 		return $url;
 	}
 
-	public function getUrl(): string
-	{
+	public function getUrl(): string {
 		return $this->url;
 	}
 
-	public function getFilename(): string
-	{
+	public function getFilename(): string {
 		return $this->file->getName();
 	}
 
-	public function isValid(): bool
-	{
+	public function isValid(): bool {
 		return !empty($this->file->getContent());
 	}
 }

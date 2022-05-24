@@ -16,7 +16,6 @@ use OCP\IConfig;
 use OCP\Security\ISecureRandom;
 
 class RoomService {
-
 	/** @var RoomMapper */
 	private $mapper;
 
@@ -33,7 +32,8 @@ class RoomService {
 		RoomMapper $mapper,
 		IConfig $config,
 		IEventDispatcher $eventDispatcher,
-		ISecureRandom $random) {
+		ISecureRandom $random
+	) {
 		$this->mapper = $mapper;
 		$this->config = $config;
 		$this->eventDispatcher = $eventDispatcher;
@@ -137,7 +137,8 @@ class RoomService {
 		bool $cleanLayout,
 		bool $joinMuted,
 		string $presentationUserId,
-		string $presentationPath) {
+		string $presentationPath
+	) {
 		try {
 			$room = $this->mapper->find($id);
 

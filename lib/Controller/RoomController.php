@@ -13,8 +13,8 @@ use OCP\IGroupManager;
 use OCP\IRequest;
 use OCP\IUserManager;
 
-class RoomController extends Controller
-{
+class RoomController extends Controller {
+	use Errors;
 	/** @var RoomService */
 	private $service;
 
@@ -32,8 +32,6 @@ class RoomController extends Controller
 
 	/** @var string */
 	private $userId;
-
-	use Errors;
 
 	public function __construct(
 		$appName,
@@ -57,8 +55,7 @@ class RoomController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function index(): DataResponse
-	{
+	public function index(): DataResponse {
 		$user = $this->userManager->get($this->userId);
 		$groupIds = $this->groupManager->getUserGroupIds($user);
 		$circleIds = $this->circleHelper->getCircleIds($this->userId);
@@ -166,8 +163,7 @@ class RoomController extends Controller
 	/**
 	 * @NoAdminRequired
 	 */
-	public function destroy(int $id): DataResponse
-	{
+	public function destroy(int $id): DataResponse {
 		$room = $this->service->find($id);
 
 		if (!$this->permission->isAdmin($room, $this->userId)) {
