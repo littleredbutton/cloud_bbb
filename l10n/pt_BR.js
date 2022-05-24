@@ -96,7 +96,7 @@ OC.L10N.register(
     "Open recording" : "Abrir gravação",
     "Copy to clipboard" : "Copiar para a área de transferência",
     "Save as file" : "Salvar como arquivo",
-    "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
+    "_%n participant_::_%n participants_" : ["%n participante","%n participantes","%n participantes"],
     "Delete" : "Excluir",
     "Are you sure you want to delete \"{name}\"? This operation cannot be undone." : "Deseja realmente excluir \"{name}\"? Esta operação não pode ser desfeita.",
     "Delete \"{name}\"?" : "Excluir \"{name}\"?",
@@ -134,6 +134,6 @@ OC.L10N.register(
     "Please select the room in which you like to use the file \"{filename}\"." : "Por favor, selecione a sala na qual você gostaria de usar o arquivo \"{filename}\".",
     "No rooms available!" : "Não há salas disponíveis!",
     "Send to BBB" : "Enviar para BBB",
-    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala ainda não está aberta. Tentaremos novamente em %n segundo. Aguarde.","Esta sala ainda não está aberta. Tentaremos novamente em %n segundos. Aguarde."]
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala ainda não está aberta. Tentaremos novamente em %n segundo. Aguarde.","Esta sala ainda não está aberta. Tentaremos novamente em %n segundos. Aguarde.","Esta sala ainda não está aberta. Tentaremos novamente em %n segundos. Aguarde."]
 },
-"nplurals=2; plural=(n > 1);");
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

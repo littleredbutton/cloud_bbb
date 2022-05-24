@@ -96,7 +96,7 @@ OC.L10N.register(
     "Open recording" : "Apri registrazione",
     "Copy to clipboard" : "Copia negli appunti",
     "Save as file" : "Salva come file",
-    "_%n participant_::_%n participants_" : ["%n partecipante","%n partecipanti"],
+    "_%n participant_::_%n participants_" : ["%n partecipante","%n partecipanti","%n partecipanti"],
     "Delete" : "Elimina",
     "Are you sure you want to delete \"{name}\"? This operation cannot be undone." : "Vuoi veramente eliminare \"{name}\"? Questa operazione non può essere annullata.",
     "Delete \"{name}\"?" : "Vuoi eliminare \"{name}\"?",
@@ -134,6 +134,6 @@ OC.L10N.register(
     "Please select the room in which you like to use the file \"{filename}\"." : "Seleziona la stanza in cui vorresti usare il  file \"{filename}\".",
     "No rooms available!" : "Nessuna stanza disponibile",
     "Send to BBB" : "Invia a BBB",
-    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Questa stanza non è ancora aperta. Riproveremo tra %n secondo. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi."]
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Questa stanza non è ancora aperta. Riproveremo tra %n secondo. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi.","Questa stanza non è ancora aperta. Riproveremo tra %n secondi. Attendi."]
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
