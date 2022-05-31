@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password" : "Password",
     "Hello %s" : "Прывітанне %s",
     "Group" : "Group",
+    "Copy to clipboard" : "Капіяваць у буфер абмену",
     "Delete" : "Delete",
     "Error" : "Памылка",
     "Share" : "Падзяліцца",
