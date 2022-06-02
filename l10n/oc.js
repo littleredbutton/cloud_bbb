@@ -24,6 +24,7 @@ OC.L10N.register(
     "Welcome" : "Benvengut",
     "Room name" : "Nom de la sala",
     "Create" : "Crear",
+    "Copy to clipboard" : "Copiar dins lo quichapapièrs",
     "_%n participant_::_%n participants_" : ["%n participant","%n participants"],
     "Delete" : "Suprimir",
     "Delete \"{name}\"?" : "Suprimir « {name} » ?",
