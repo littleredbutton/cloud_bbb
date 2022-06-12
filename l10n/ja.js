@@ -53,6 +53,7 @@ OC.L10N.register(
     "Public" : "公開",
     "Internal + Password protection for guests" : "非公開＋ゲストにパスワード要求",
     "Internal + Waiting room for guests" : "非公開＋ゲストは待機室",
+    "Waiting room for all users" : "全てのユーザー向けの待機室",
     "Internal" : "非公開",
     "Internal restricted" : "非公開かつ参加者限定",
     "Name" : "名前",
@@ -128,7 +129,11 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URLはHTTPSで始まる必要があります",
     "URL has to contain the {token} placeholder" : "URLは{token}プレースホルダを含んでいる必要があります",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URLはhttps://で始まり、{token}を含む必要があります。更に {user}プレースホルダを使用することもできます。",
+    "Send file to BBB" : "BBBにファイルを送信",
     "Start" : "開始",
+    "Please select the room in which you like to use the file \"{filename}\"." : "ファイル\"{filename}\"を使用する予定のルームを選択してください。",
+    "No rooms available!" : "利用可能なルームがありません！",
+    "Send to BBB" : "BBBに送信",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["この会議室はまだ開いていません。%n秒後に再アクセスしますので少しお待ちください。"]
 },
 "nplurals=1; plural=0;");
