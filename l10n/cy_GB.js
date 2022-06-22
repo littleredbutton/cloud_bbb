@@ -7,6 +7,7 @@ OC.L10N.register(
     "Group" : "Grŵp",
     "Name" : "Enw",
     "Edit" : "Golygu",
+    "Miscellaneous" : "Amrywiol",
     "Create" : "Creu",
     "Delete" : "Dileu",
     "Error" : "Gwall",
