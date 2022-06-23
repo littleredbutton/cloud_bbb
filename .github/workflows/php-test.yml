@@ -16,8 +16,12 @@ jobs:
         include:
           - php-versions: '7.2'
             nextcloud-versions: 'stable20'
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable24'
           - php-versions: '8'
-            nextcloud-versions: 'stable22'
+            nextcloud-versions: ['stable22','stable24']
+          - php-versions: '8.1'
+            nextcloud: 'stable24'
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
