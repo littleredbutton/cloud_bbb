@@ -16,6 +16,7 @@
     "Miscellaneous" : "Разно",
     "Create" : "Креирај",
     "Copy to clipboard" : "Копирај во клипборд",
+    "_%n participant_::_%n participants_" : ["%n учесник","%n учесници"],
     "Delete" : "Избриши",
     "Error" : "Грешка",
     "Server error" : "Грешка на серверот",

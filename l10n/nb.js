@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Room not found" : "Rom ikke funnet",
     "Back to %s" : "Tilbake til %s",
     "Save" : "Lagre",
     "Community" : "Samfunn",
