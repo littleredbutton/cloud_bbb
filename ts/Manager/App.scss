@@ -102,6 +102,16 @@ pre {
     margin-bottom: 1em;
   }
 
+  .button.success {
+    background-color: var(--color-success);
+    border-color: var(--color-success-hover);
+    color: var(--color-primary-text);
+
+    &:hover {
+      background-color: var(--color-success-hover);
+    }
+  }
+
   .icon {
     display: inline-block;
     opacity: 0;
@@ -183,6 +193,10 @@ pre {
     &.icon-col {
       width: 42px;
       padding: 0;
+    }
+
+    &.name {
+      width: 100%;
     }
   }
 

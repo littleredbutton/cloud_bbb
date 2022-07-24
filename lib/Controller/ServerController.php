@@ -43,6 +43,44 @@ class ServerController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 */
+	public function isRunning(string $roomUid): DataResponse {
+		$room = $this->service->findByUid($roomUid);
+
+		if ($room === null) {
+			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		}
+
+		if (!$this->permission->isUser($room, $this->userId)) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		$isRunning = $this->server->isRunning($room);
+
+		return new DataResponse($isRunning);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 */
+	public function insertDocument(string $roomUid, string $url, string $filename): DataResponse {
+		$room = $this->service->findByUid($roomUid);
+
+		if ($room === null) {
+			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		}
+
+		if (!$this->permission->isModerator($room, $this->userId)) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		$success = $this->server->insertDocument($room, $url, $filename);
+
+		return new DataResponse($success);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 */
 	public function records(string $roomUid): DataResponse {
 		$room = $this->service->findByUid($roomUid);
 

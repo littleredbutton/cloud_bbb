@@ -63,6 +63,8 @@ class HookController extends Controller {
 		$recordingmarks = \boolval($recordingmarks);
 		$room = $this->getRoom();
 
+		$this->service->updateRunning($room->getId(), false);
+
 		$this->avatarRepository->clearRoom($room->uid);
 
 		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($room, $recordingmarks));

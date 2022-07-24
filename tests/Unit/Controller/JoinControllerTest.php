@@ -11,6 +11,7 @@ use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\BackgroundJob\IJobList;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 use OCP\IUser;
@@ -26,6 +27,7 @@ class JoinControllerTest extends TestCase {
 	private $api;
 	private $permission;
 	private $room;
+	private $jobList;
 
 	public function setUp(): void {
 		parent::setUp();
@@ -36,6 +38,7 @@ class JoinControllerTest extends TestCase {
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->api = $this->createMock(API::class);
 		$this->permission = $this->createMock(Permission::class);
+		$this->jobList = $this->createMock(IJobList::class);
 
 		$this->controller = new JoinController(
 			'bbb',
@@ -44,10 +47,12 @@ class JoinControllerTest extends TestCase {
 			$this->urlGenerator,
 			$this->userSession,
 			$this->api,
-			$this->permission
+			$this->permission,
+			$this->jobList
 		);
 
 		$this->room = new Room();
+		$this->room->id = 1;
 		$this->room->uid = 'uid_foo';
 		$this->room->userId = 'user_foo';
 		$this->room->access = Room::ACCESS_PUBLIC;

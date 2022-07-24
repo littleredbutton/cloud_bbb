@@ -11,6 +11,7 @@ type Props = {
 	restriction?: Restriction;
 	updateRoom: (room: Room) => Promise<void>;
 	deleteRoom: (id: number) => void;
+	cloneRoom: (room: Room) => void;
 }
 
 type RecordingsNumberProps = {
@@ -175,6 +176,10 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />;
 	}
 
+	function cloneRow() {
+		props.cloneRoom({...props.room});
+	}
+
 	const avatarUrl = OC.generateUrl('/avatar/' + encodeURIComponent(room.userId) + '/' + 24, {
 		user: room.userId,
 		size: 24,
@@ -187,9 +192,9 @@ const RoomRow: React.FC<Props> = (props) => {
 	return (
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
-				<td className="start icon-col">
-					<a href={api.getRoomUrl(room)} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
-						<span className="icon icon-play icon-visible"></span>
+				<td className="start">
+					<a href={api.getRoomUrl(room)} className={`button ${room.running ? 'success' : 'primary'}`} target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
+						{room.running ? t('bbb', 'Join') : t('bbb', 'Start')}
 					</a>
 				</td>
 				<td className="share icon-col">
@@ -224,6 +229,11 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
 				<td className="edit icon-col">
 					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+				</td>
+				<td className="clone icon-col">
+					<button className="action-item" onClick={cloneRow} title={t('bbb', 'Clone Room')}>
+						<span className="icon icon-template-add icon-visible"></span>
+					</button>
 				</td>
 				<td className="remove icon-col">
 					<button className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>

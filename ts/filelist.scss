@@ -1,0 +1,11 @@
+#bbb-file-action {
+  button.success {
+    background-color: var(--color-success);
+    border-color: var(--color-success-hover);
+    color: var(--color-primary-text);
+
+    &:hover {
+      background-color: var(--color-success-hover);
+    }
+  }
+}
