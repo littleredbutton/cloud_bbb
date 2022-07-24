@@ -47,7 +47,7 @@
 		"libxmljs": "^0.19.8",
 		"qrcode.react": "^2.0.0",
 		"react-copy-to-clipboard": "^5.0.2",
-		"simple-git": "^3.3.0"
+		"simple-git": "^3.5.0"
 	},
 	"husky": {
 		"hooks": {
