@@ -5,8 +5,7 @@ const path = require('path');
 const libxml = require('libxmljs');
 const https = require('https');
 const archiver = require('archiver');
-const execa = require('execa');
-const simpleGit = require('simple-git/promise');
+const simpleGit = require('simple-git');
 const inquirer = require('inquirer');
 const { exec } = require('child_process');
 const { generateChangelog, hasChangeLogEntry } = require('./imports/changelog');
@@ -68,6 +67,8 @@ async function createRelease(appId) {
 		await isRepoClean();
 		console.log('✔ repo is clean'.green);
 	}
+
+	const execa = (await import('execa')).execaCommand;
 
 	await execa('yarn', ['composer:install:dev']);
 	console.log('✔ composer dev dependencies installed'.green);

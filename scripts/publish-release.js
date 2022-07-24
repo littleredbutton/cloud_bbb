@@ -3,12 +3,13 @@ const colors = require('colors');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const execa = require('execa');
-const simpleGit = require('simple-git/promise');
+const simpleGit = require('simple-git');
 const inquirer = require('inquirer');
 const dotenv = require('dotenv');
 const { Octokit } = require('@octokit/rest');
 const { getChangelogEntry, hasChangeLogEntry } = require('./imports/changelog');
+
+const getExeca = async () => (await import('execa')).execaCommand;
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageInfo = require('../package.json');
@@ -63,19 +64,11 @@ async function stageAllFiles() {
 		return;
 	}
 
-	const gitProcess = execa('git', ['add', '-u']);
-
-	gitProcess.stdout.pipe(process.stdout);
-
-	return gitProcess;
+	await git.raw('add', '-u');
 }
 
-function showStagedDiff() {
-	const gitProcess = execa('git', ['diff', '--staged']);
-
-	gitProcess.stdout.pipe(process.stdout);
-
-	return gitProcess;
+async function showStagedDiff() {
+	console.log(await git.raw('diff', '--staged'));
 }
 
 async function keypress() {
@@ -141,6 +134,7 @@ async function createGithubRelease(changeLog) {
 		name: `BigBlueButton Integration ${tagName}`,
 		body: changeLog.replace(/^## [^\n]+\n/, ''),
 		prerelease: !/^\d+\.\d+\.\d+$/.test(packageInfo.version),
+		draft: true,
 	};
 
 	if (isDryRun) {
@@ -251,6 +245,8 @@ async function uploadToNextcloudStore(archiveUrl) {
 }
 
 async function run() {
+	const execa = await getExeca();
+
 	await pull();
 	console.log('✔ pulled latest changes'.green);
 
