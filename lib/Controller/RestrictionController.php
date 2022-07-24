@@ -83,7 +83,8 @@ class RestrictionController extends Controller {
 		int $maxRooms,
 		array $roomTypes,
 		int $maxParticipants,
-		bool $allowRecording
+		bool $allowRecording,
+		bool $allowLogoutURL
 	): DataResponse {
 		return $this->handleNotFound(function () use (
 			$id,
@@ -91,14 +92,16 @@ class RestrictionController extends Controller {
 			$maxRooms,
 			$roomTypes,
 			$maxParticipants,
-			$allowRecording) {
+			$allowRecording,
+			$allowLogoutURL) {
 			return $this->service->update(
 				$id,
 				$groupId,
 				$maxRooms,
 				$roomTypes,
 				$maxParticipants,
-				$allowRecording
+				$allowRecording,
+				$allowLogoutURL
 			);
 		});
 	}

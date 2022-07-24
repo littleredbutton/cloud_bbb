@@ -67,6 +67,7 @@ class RestrictionServiceTest extends TestCase {
 		$this->assertEquals(10, $updatedRestriction->getMaxRooms());
 		$this->assertEquals(15, $updatedRestriction->getMaxParticipants());
 		$this->assertEquals(false, $updatedRestriction->getAllowRecording());
+		$this->assertEqauls(false, $updatedRestriction->getAllowLogoutURL());
 
 		$this->service->delete($restriction->getId());
 	}

@@ -21,6 +21,7 @@ const descriptions: { [key: string]: string } = {
 	mediaCheck: t('bbb', 'If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3).'),
 	cleanLayout: t('bbb', 'If enabled, the user list, chat area and presentation are hidden by default.'),
 	joinMuted: t('bbb', 'If enabled, all users will join the meeting muted.'),
+	logoutURL: t('bbb', 'After the meeting ends, all users will be redirected to this URL'),
 };
 
 const LOGO_QR = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGnSURBVFiF7de9TxRBHMbxzxG5BonRBOGsVRJfIvGFPwFKX0tjJGqsrfwvCC0YtbJSQyT4J0hB1BhtjZFCI4FoqTRCsbO43g24e+5Q3ZNsZm9+z8zzvZns7Rw9/a0jeIx1bNZ8rYe5WzuFt7CSILj9WsFwHtooADzA7XD/DG/CgDrUwHlcDZ/ncLfdtBoCn9cUGtN8yPiWd/QVikOhfZcQ4G1oD8cA8u2oa9ljyufe3vq+HYx7ph7Avv8YO4Rx2b4uy35oKqubFWhiBl+wiJf4imn0V52smxWYxc22vn7cwwHcqjJZ1RUYi4QXNYUzKQEm/1FvYCIlwEAJz/6UAB9KeN6nBFjAp13qH2VPRjKADdkr9Uek9h3XgicZwGk8wcFI7VConUoFMIZXOLGL5ySWVHgUywI08RSDJbyDwdusE+AGjpb0wjFcrxPgSoXwXJerAnScVgo63gXAaKSv49RVBFgL7dnIwN9dAMR0LrSreUfxbfgCd3BJdix/7Q/pBn5WDPuF++G+gQu4WMjq0Ii9+WPyWeFU3K4WHsm2o+7gNTwMX7SnbW0BScCZl0uGVe8AAAAASUVORK5CYII=';
@@ -75,6 +76,19 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 		);
 	}
 
+	function inputElementRestricted(label: string, field: string, type: 'text' | 'number' | 'url' = 'text', restricted: boolean) {
+		return (
+			<div className="bbb-form-element">
+				<label htmlFor={`bbb-${field}`}>
+					<h3>{label}</h3>
+				</label>
+
+				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} disabled={restricted}/>
+				{descriptions[field] && <em>{descriptions[field]}</em>}
+			</div>
+		);
+	}
+
 	function selectElement(label: string, field: string, value: string, options: { [key: string]: string }, onChange: (value: string) => void) {
 		return (
 			<div className="bbb-form-element">
@@ -122,6 +136,8 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 			{selectElement(t('bbb', 'Access'), 'access', room.access, accessOptions, (value) => {
 				updateProperty('access', value);
 			})}
+
+			{inputElementRestricted(t('bbb', 'Custom redirect after meeting'), 'logoutURL', 'url', !restriction?.allowLogoutURL)}
 
 			{room.access === Access.InternalRestricted && <div className="bbb-form-element bbb-form-shareWith">
 				<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />

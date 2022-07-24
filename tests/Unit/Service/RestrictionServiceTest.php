@@ -25,11 +25,13 @@ class RestrictionServiceTest extends TestCase {
 		$restriction0->setRoomTypes(\json_encode([Room::ACCESS_INTERNAL]));
 		$restriction0->setMaxParticipants(50);
 		$restriction0->setAllowRecording(false);
+		$restriction0->setAllowLogoutURL(false);
 
 		$restriction1 = new Restriction();
 		$restriction1->setRoomTypes(\json_encode([Room::ACCESS_INTERNAL, Room::ACCESS_INTERNAL_RESTRICTED]));
 		$restriction1->setMaxRooms(10);
 		$restriction1->setMaxParticipants(100);
+		$restriction1->setAllowRecording(true);
 		$restriction1->setAllowRecording(true);
 
 		$this->mapper
@@ -48,5 +50,6 @@ class RestrictionServiceTest extends TestCase {
 		$this->assertEquals(-1, $result->getMaxRooms());
 		$this->assertEquals(100, $result->getMaxParticipants());
 		$this->assertTrue($result->getAllowRecording());
+		$this->assertTrue($result->getAllowLogoutURL());
 	}
 }

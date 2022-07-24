@@ -170,7 +170,7 @@ class API {
 		$createMeetingParams->setModeratorPW($room->moderatorPassword);
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
-		$createMeetingParams->setLogoutURL($this->urlGenerator->getBaseUrl());
+		$createMeetingParams->setLogoutURL($room->logoutURL);
 		$createMeetingParams->setMuteOnStart($room->getJoinMuted());
 
 		$createMeetingParams->addMeta('bbb-origin-version', $this->appManager->getAppVersion(Application::ID));
@@ -194,6 +194,10 @@ class API {
 
 		$invitationUrl = $this->urlHelper->linkToInvitationAbsolute($room);
 		$createMeetingParams->setModeratorOnlyMessage($this->l10n->t('To invite someone to the meeting, send them this link: %s', [$invitationUrl]));
+
+		if (!empty($room->logoutURL)) {
+			$createMeetingParams->setLogoutURL($this->urlGenerator->getBaseUrl());
+		}
 
 		if (!empty($room->welcome)) {
 			$createMeetingParams->setWelcome($room->welcome);

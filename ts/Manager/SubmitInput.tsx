@@ -5,11 +5,12 @@ import {
 } from 'react';
 
 export interface SubmitInputProps extends InputHTMLAttributes<HTMLInputElement> {
-	type?: 'text' | 'number';
+	type?: 'text' | 'number' | 'url';
 	initialValue?: string;
 	name: string;
 	onSubmitValue: (value: string) => void;
 	focus?: boolean;
+	disabled?: boolean;
 }
 
 export interface SubmitInputState {
@@ -42,6 +43,7 @@ export class SubmitInput extends Component<SubmitInputProps, SubmitInputState> {
 				   autoFocus={this.props.focus}
 				   min={this.props.min}
 				   max={this.props.max}
+				   disabled={this.props.disabled}
 				   />
 		</form>;
 	}

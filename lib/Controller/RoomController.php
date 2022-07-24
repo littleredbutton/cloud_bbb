@@ -119,7 +119,8 @@ class RoomController extends Controller {
 		bool $listenOnly,
 		bool $mediaCheck,
 		bool $cleanLayout,
-		bool $joinMuted
+		bool $joinMuted,
+		string $logoutURL
 	): DataResponse {
 		$room = $this->service->find($id);
 
@@ -137,13 +138,17 @@ class RoomController extends Controller {
 			return new DataResponse(['message' => 'Not allowed to enable recordings.'], Http::STATUS_BAD_REQUEST);
 		}
 
+		if (!$restriction->getAllowLogoutURL() && $logoutURL !== $room->getLogoutURL()) {
+			return new DataResponse(['message' => 'Not allowed to enable custom logout URLs'], Https::STATUS_BAD_REQUEST);
+		}
+
 		$disabledRoomTypes = \json_decode($restriction->getRoomTypes());
 		if ((in_array($access, $disabledRoomTypes) && $access !== $room->getAccess()) || !in_array($access, Room::ACCESS)) {
 			return new DataResponse(['message' => 'Access type not allowed.'], Http::STATUS_BAD_REQUEST);
 		}
 
-		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted) {
-			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted);
+		return $this->handleNotFound(function () use ($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted, $logoutURL) {
+			return $this->service->update($id, $name, $welcome, $maxParticipants, $record, $access, $everyoneIsModerator, $requireModerator, $moderatorToken, $listenOnly, $mediaCheck, $cleanLayout, $joinMuted, $logoutURL);
 		});
 	}
 

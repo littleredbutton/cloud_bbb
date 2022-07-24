@@ -71,7 +71,10 @@ const App: React.FC<Props> = () => {
 						<th>
 							{t('bbb', 'Recording')}
 						</th>
-						<th/>
+						<th>
+							{t('bbb', 'Custom redirect after meeting')}
+						</th>
+						<th />
 					</tr>
 				</thead>
 				<tbody>

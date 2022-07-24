@@ -71,6 +71,16 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 				<label htmlFor={`bbb-record-${restriction.id}`}></label>
 			</td>
 
+			<td className="logoutURL bbb-shrink">
+				<input
+					id={`bbb-logoutURL-${restriction.id}`}
+					type="checkbox"
+					className="checkbox"
+					checked={restriction.allowLogoutURL}
+					onChange={(event) => updateRestriction('allowLogoutURL', event.target.checked)} />
+				<label htmlFor={`bbb-logoutURL-${restriction.id}`}></label>
+			</td>
+
 			<td className="remove icon-col">
 				<button disabled={!restriction.groupId} className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>
 					<span className="icon icon-delete icon-visible"></span>
