@@ -1,7 +1,7 @@
 {
 	"name": "@sualko/cloud_bbb",
 	"description": "Nextcloud Integration for BigBlueButton",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"author": "Klaus Herberth <klaus@jsxc.org>",
 	"bugs": {
 		"url": "https://github.com/sualko/cloud_bbb/issues"
