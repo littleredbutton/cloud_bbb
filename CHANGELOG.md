@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.3.0 (2022-07-24)
+### Added
+- [#191](https://github.com/sualko/cloud_bbb/issues/191) clone rooms
+- bump Nextcloud version (min 22, max 24)
+- disable file transfer if room is running
+- [#79](https://github.com/sualko/cloud_bbb/issues/79) track room state
+- [#5](https://github.com/sualko/cloud_bbb/issues/5) use modal to send file
+- [#194](https://github.com/sualko/cloud_bbb/issues/194) add support for analytics callback url
+- [#192](https://github.com/sualko/cloud_bbb/issues/192) add access mode to send all users to lobby
+
+### Fixed
+- add feedback to send file action
+- image loader for webpack 5
+- change button color
+
 ## 2.2.0 (2022-01-17)
 ### Added
 - add optional avatar cache
