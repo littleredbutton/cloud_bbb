@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.3', '7.4']
-        nextcloud-versions: ['stable20', 'stable21', 'stable22']
+        php-versions: ['7.4', '8']
+        nextcloud-versions: ['stable22', 'stable23', 'stable24']
         include:
-          - php-versions: '7.2'
-            nextcloud-versions: 'stable20'
-          - php-versions: '8'
+          - php-versions: '7.3'
             nextcloud-versions: 'stable22'
+          - php-versions: '7.3'
+            nextcloud-versions: 'stable23'
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
@@ -37,14 +37,9 @@ jobs:
       uses: actions/checkout@master
       with:
         path: nextcloud/apps/bbb
-    - name: Fix php-parser on stable20 incompatibility with phpunit 9.3+
-      if: ${{ matrix.nextcloud-versions == 'stable20' }}
-      working-directory: nextcloud/3rdparty
-      run: composer require nikic/php-parser:4.10
-    - name: Downgrade phpunit for php7.2
-      if: ${{ matrix.php-versions == '7.2' }}
+    - name: Update test stub
       working-directory: nextcloud/apps/bbb
-      run: composer update phpunit/phpunit christophwurst/nextcloud -W
+      run: composer update christophwurst/nextcloud -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
