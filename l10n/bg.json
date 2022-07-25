@@ -128,7 +128,7 @@
     "URL has to contain the {token} placeholder" : "URL адресът трябва да съдържа заместителя {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL адресът трябва да започва с https:// и да съдържа {token}. Освен това може да се използва заместителят {user}.",
     "Send file to BBB" : "Изпращане на файл към BBB",
-    "Start" : "Начало",
+    "Send to" : "Изпращане до",
     "Please select the room in which you like to use the file \"{filename}\"." : "Моля, изберете стаята, в която искате да използвате файла \"{filename}\".",
     "No rooms available!" : "Няма налични стаи!",
     "Send to BBB" : "Изпращане до BBB",

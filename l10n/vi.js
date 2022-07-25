@@ -51,7 +51,6 @@ OC.L10N.register(
     "Share" : "Chia sẻ",
     "Loading" : "Đang tải",
     "Settings saved" : "Cấu hình đã được lưu",
-    "Start" : "Bắt đầu",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Phòng này chưa mở. Chúng tôi sẽ thử lại trong %n giây. Xin đợi."]
 },
 "nplurals=1; plural=0;");

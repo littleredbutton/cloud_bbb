@@ -30,7 +30,6 @@
     "Loading" : "불러오는 중",
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",
-    "API URL is invalid" : "무효한 API URL",
-    "Start" : "시작"
+    "API URL is invalid" : "무효한 API URL"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

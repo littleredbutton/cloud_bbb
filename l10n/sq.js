@@ -19,7 +19,6 @@ OC.L10N.register(
     "Server error" : "Gabim shërbyesi",
     "Share" : "Shpërndaje",
     "Loading" : "Duke ngarkuar",
-    "Settings saved" : "Opsjonet u Ruajtën.",
-    "Start" : "Fillo"
+    "Settings saved" : "Opsjonet u Ruajtën."
 },
 "nplurals=2; plural=(n != 1);");

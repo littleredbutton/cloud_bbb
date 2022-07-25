@@ -13,7 +13,6 @@ OC.L10N.register(
     "Error" : "Error",
     "Share" : "Compartir",
     "Loading" : "Loading",
-    "Settings saved" : "Configurationes salveguardate",
-    "Start" : "Initio"
+    "Settings saved" : "Configurationes salveguardate"
 },
 "nplurals=2; plural=(n != 1);");

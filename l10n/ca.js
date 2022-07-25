@@ -98,7 +98,6 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "La URL ha de començar amb HTTPS",
     "URL has to contain the {token} placeholder" : "L'URL ha de contenir el contenidor {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL ha de començar per https:// i contenir {token}. A més, es pot utilitzar el contenidor {user}.",
-    "Start" : "Inici",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segon. Si us plau esperi.","Aquesta habitació encara no està oberta. Ho tornarem a provar en {sec} segons. Si us plau esperi."]
 },
 "nplurals=2; plural=(n != 1);");

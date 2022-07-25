@@ -29,7 +29,6 @@ OC.L10N.register(
     "Share" : "هم‌رسانی",
     "Loading" : "در حال بار گزاری",
     "Delete restrictions for \"{name}\"?" : "محدودیت‌های \"{name}\" حذف شود؟",
-    "Settings saved" : "تنظیمات ذخیره شد",
-    "Start" : "شروع کنید"
+    "Settings saved" : "تنظیمات ذخیره شد"
 },
 "nplurals=2; plural=(n > 1);");

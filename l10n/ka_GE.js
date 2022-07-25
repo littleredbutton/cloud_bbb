@@ -20,7 +20,6 @@ OC.L10N.register(
     "moderator" : "მოდერატორი",
     "Share" : "გაზიარება",
     "Loading" : "იტვირთება",
-    "Settings saved" : "პარამეტრები შენახულია",
-    "Start" : "დაწყება"
+    "Settings saved" : "პარამეტრები შენახულია"
 },
 "nplurals=2; plural=(n!=1);");

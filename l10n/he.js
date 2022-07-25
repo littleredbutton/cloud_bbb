@@ -45,7 +45,6 @@ OC.L10N.register(
     "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
-    "API secret is invalid" : "סוד ה־API שגוי",
-    "Start" : "התחלה"
+    "API secret is invalid" : "סוד ה־API שגוי"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");

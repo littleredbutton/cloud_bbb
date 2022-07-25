@@ -26,7 +26,6 @@ OC.L10N.register(
     "Server error" : "ข้อผิดพลาดของเซิร์ฟเวอร์",
     "Share" : "แชร์",
     "Loading" : "Loading",
-    "Settings saved" : "บันทึกการตั้งค่าแล้ว",
-    "Start" : "เริ่ม"
+    "Settings saved" : "บันทึกการตั้งค่าแล้ว"
 },
 "nplurals=1; plural=0;");

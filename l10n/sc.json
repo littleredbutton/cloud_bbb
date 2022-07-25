@@ -123,7 +123,7 @@
     "URL has to start with HTTPS" : "S'URL depet cumintzare cun HTTPS",
     "URL has to contain the {token} placeholder" : "S'URL depet cuntènnere su {token} còdighe",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "S'URL depet cumintzare cun https:// e cuntènnere {token}. In prus si podet impreare su còdighe {user}.",
-    "Start" : "Cumintza",
+    "Send to" : "Imbia a",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Custa istantza no est ancora aberta. Amus a torrare a proare intre %n segundu. Aspeta.","Custa istantza no est ancora aberta. Amus a torrare a proare intre %n segundos. Aspeta."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

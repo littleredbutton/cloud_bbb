@@ -130,7 +130,7 @@ OC.L10N.register(
     "URL has to contain the {token} placeholder" : "URL должен содержать заполнитель {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL должен начинаться с https:// и содержать {token}. Дополнительно может быть использован заполнитель {user}.",
     "Send file to BBB" : "Отправить файл в BBB",
-    "Start" : "Начать",
+    "Send to" : "Отправить в",
     "Please select the room in which you like to use the file \"{filename}\"." : "Пожалуйста, выберите комнату, в которой вы хотите использовать файл \"{filename}\".",
     "No rooms available!" : "Нет свободных комнат!",
     "Send to BBB" : "Отправить в BBB",

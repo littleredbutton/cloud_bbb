@@ -16,7 +16,6 @@ OC.L10N.register(
     "Server error" : "Bedienerfout",
     "Share" : "Deel",
     "Loading" : "Laai tans..",
-    "Settings saved" : "Instellings gestoor",
-    "Start" : "Start"
+    "Settings saved" : "Instellings gestoor"
 },
 "nplurals=2; plural=(n != 1);");

@@ -16,7 +16,6 @@ OC.L10N.register(
     "Server error" : "серверийн алдаа",
     "Share" : "Түгээх",
     "Loading" : "Loading",
-    "Settings saved" : "Тохиргоо хадгалагдлаа",
-    "Start" : "эхлэх"
+    "Settings saved" : "Тохиргоо хадгалагдлаа"
 },
 "nplurals=2; plural=(n != 1);");

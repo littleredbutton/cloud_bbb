@@ -16,7 +16,6 @@ OC.L10N.register(
     "Server error" : "Fallu de sirvidor",
     "Share" : "Share",
     "Loading" : "Cargando",
-    "Settings saved" : "Axustes guardaos",
-    "Start" : "Aniciu"
+    "Settings saved" : "Axustes guardaos"
 },
 "nplurals=2; plural=(n != 1);");

@@ -123,7 +123,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URL mora počinjati s HTTPS",
     "URL has to contain the {token} placeholder" : "URL mora sadržavati privremeni {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL mora počinjati s https:// i sadržavati {token}. Također se može upotrijebiti privremeni {user}.",
-    "Start" : "Početak",
+    "Send to" : "Pošalji na",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundu. Pričekajte.","Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundi. Pričekajte.","Ova soba još nije otvorena. Pokušat ćemo ponovo za %n sekundi. Pričekajte."]
 },
 "nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;");

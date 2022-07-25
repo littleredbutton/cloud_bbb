@@ -130,7 +130,6 @@ OC.L10N.register(
     "URL has to contain the {token} placeholder" : "Az URL-nek tartalmaznia kell a(z) {token} helykitöltőt",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Az URL-nek https://-sel kell kezdődnie, és tartalmaznia kell a következőt: {token}. Továbbá a(z) {user} helykitöltő is használható.",
     "Send file to BBB" : "Fájl küldése a BBB-re",
-    "Start" : "Kezdés",
     "Please select the room in which you like to use the file \"{filename}\"." : "Válassza ki azt a szobát, amelyben a(z) „[filename}” fájlt használná.",
     "No rooms available!" : "Nincs elérhető szoba!",
     "Send to BBB" : "Küldés a BBB-re",

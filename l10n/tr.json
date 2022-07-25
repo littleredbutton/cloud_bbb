@@ -128,7 +128,7 @@
     "URL has to contain the {token} placeholder" : "Adreste {token} yer belirteci bulunmalıdır",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Adres https:// ile başlamalı ve {token} yer belirtecini içermelidir. Ek olarak {user} yer belirteci kullanılabilir.",
     "Send file to BBB" : "Dosyayı BBB üzerine gönder",
-    "Start" : "Başlat",
+    "Send to" : "Şuraya gönder",
     "Please select the room in which you like to use the file \"{filename}\"." : "\"{filename}\" dosyasını kullanmak istediğiniz odayı seçin.",
     "No rooms available!" : "Kullanılabilecek bir oda yok!",
     "Send to BBB" : "BBB üzerine gönder",

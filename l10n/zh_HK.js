@@ -130,7 +130,7 @@ OC.L10N.register(
     "URL has to contain the {token} placeholder" : "URL 必須包含 {token} 佔位字串",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL 必須以 https:// 開頭，並包含 {token}。此外，還可以使用 {user} 佔位字串。",
     "Send file to BBB" : "傳送檔案到 BBB",
-    "Start" : "開始",
+    "Send to" : "傳送到",
     "Please select the room in which you like to use the file \"{filename}\"." : "請選擇您想在其中使用檔案檔案“{filename}”的房間。",
     "No rooms available!" : "無可用聊天室！",
     "Send to BBB" : "傳送至 BBB",

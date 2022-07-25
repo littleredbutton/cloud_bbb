@@ -84,7 +84,6 @@ OC.L10N.register(
     "API URL is invalid" : "Rajapinnan URL on virheellinen",
     "API secret is invalid" : "Rajapinnan salaisuus on virheellinen",
     "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä",
-    "Start" : "Aloita",
     "No rooms available!" : "Huoneita ei ole saatavilla!"
 },
 "nplurals=2; plural=(n != 1);");

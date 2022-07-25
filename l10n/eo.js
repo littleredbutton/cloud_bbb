@@ -19,7 +19,6 @@ OC.L10N.register(
     "Server error" : "Eraro pri servilo",
     "Share" : "Kunhavigi",
     "Loading" : "Ŝargado",
-    "Settings saved" : "Agordoj konservitaj",
-    "Start" : "Komenco"
+    "Settings saved" : "Agordoj konservitaj"
 },
 "nplurals=2; plural=(n != 1);");

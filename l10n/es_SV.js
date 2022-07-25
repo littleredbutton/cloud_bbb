@@ -19,7 +19,6 @@ OC.L10N.register(
     "moderator" : "moderador",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "Settings saved" : "Se han guardado las configuraciones ",
-    "Start" : "Iniciar"
+    "Settings saved" : "Se han guardado las configuraciones "
 },
 "nplurals=2; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

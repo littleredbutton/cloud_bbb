@@ -27,7 +27,6 @@ OC.L10N.register(
     "moderator" : "moderator",
     "Share" : "Del",
     "Loading" : "Laster",
-    "Settings saved" : "Innstillinger lagret",
-    "Start" : "Start"
+    "Settings saved" : "Innstillinger lagret"
 },
 "nplurals=2; plural=(n != 1);");

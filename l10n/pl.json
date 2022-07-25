@@ -128,7 +128,7 @@
     "URL has to contain the {token} placeholder" : "Adres URL musi zawierać symbol zastępczy {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Adres URL musi zaczynać się od https:// i zawierać {token}. Dodatkowo można użyć symbolu zastępczego {user}.",
     "Send file to BBB" : "Wyślij plik do BBB",
-    "Start" : "Rozpocznij",
+    "Send to" : "Wyślij do",
     "Please select the room in which you like to use the file \"{filename}\"." : "Wybierz pokój, w którym chcesz użyć pliku \"{filename}\".",
     "No rooms available!" : "Brak dostępnych pokoi!",
     "Send to BBB" : "Wyślij do BBB",

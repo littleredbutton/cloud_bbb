@@ -23,7 +23,6 @@ OC.L10N.register(
     "moderator" : "moderator",
     "Share" : "Share",
     "Loading" : "Loading",
-    "Settings saved" : "Settings saved",
-    "Start" : "Start"
+    "Settings saved" : "Settings saved"
 },
 "nplurals=2; plural=(n != 1);");

@@ -130,7 +130,7 @@ OC.L10N.register(
     "URL has to contain the {token} placeholder" : "URLak {token}-aren leku-marka barnean behar du",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URLak  https:// eduki behar du hasieran eta  {token}-a barnean behar du.  {user} erabiltzailearen leku-marka ere izan dezake.",
     "Send file to BBB" : "Bidali fitxategia BBBra",
-    "Start" : "Hasi",
+    "Send to" : "Bidali honi:",
     "Please select the room in which you like to use the file \"{filename}\"." : "Mesedez, hautatu gela non \"{filename}\" fitxategia erabili nahi duzun.",
     "No rooms available!" : "Ez dago gelarik eskuragarri!",
     "Send to BBB" : "Bidali BBB-ra",

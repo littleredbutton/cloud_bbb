@@ -128,7 +128,7 @@
     "URL has to contain the {token} placeholder" : "L'URL deve contenere il segnaposto {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL deve iniziare con https: // e contenere {token}. Inoltre è possibile utilizzare il segnaposto {user}.",
     "Send file to BBB" : "Invia file a BBB",
-    "Start" : "Avvia",
+    "Send to" : "Invia a",
     "Please select the room in which you like to use the file \"{filename}\"." : "Seleziona la stanza in cui vorresti usare il  file \"{filename}\".",
     "No rooms available!" : "Nessuna stanza disponibile",
     "Send to BBB" : "Invia a BBB",

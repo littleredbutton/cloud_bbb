@@ -17,7 +17,6 @@ OC.L10N.register(
     "Server error" : "Serveri tõrge",
     "Share" : "Jaga",
     "Loading" : "Laadimine",
-    "Settings saved" : "Seaded salvestatud",
-    "Start" : "Algus"
+    "Settings saved" : "Seaded salvestatud"
 },
 "nplurals=2; plural=(n != 1);");

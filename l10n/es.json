@@ -128,7 +128,7 @@
     "URL has to contain the {token} placeholder" : "La URL debe contener el referente {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "La URL tiene que comenzar con https:// y contener {token}. Adicionalmente, se puede usar el referente {user}.",
     "Send file to BBB" : "Enviar a ...",
-    "Start" : "Iniciar",
+    "Send to" : "Enviar a",
     "Please select the room in which you like to use the file \"{filename}\"." : "Seleccione la sala en la que desea utilizar el archivo \"{filename}\".",
     "No rooms available!" : "No hay salas disponibles",
     "Send to BBB" : "Enviar a BBB",

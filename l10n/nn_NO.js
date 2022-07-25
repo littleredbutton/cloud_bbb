@@ -11,7 +11,6 @@ OC.L10N.register(
     "Delete" : "Ta bort",
     "Error" : "Feil",
     "Share" : "Del",
-    "Loading" : "Loading",
-    "Start" : "Start"
+    "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

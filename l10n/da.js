@@ -23,7 +23,6 @@ OC.L10N.register(
     "moderator" : "moderator",
     "Share" : "Del",
     "Loading" : "Indlæser",
-    "Settings saved" : "Indstillinger gemt",
-    "Start" : "Start"
+    "Settings saved" : "Indstillinger gemt"
 },
 "nplurals=2; plural=(n != 1);");

@@ -12,7 +12,6 @@ OC.L10N.register(
     "Delete" : "ລຶບ",
     "Error" : "ຜິດພາດ",
     "Share" : "ແບ່ງປັນ",
-    "Loading" : "ການໂຫຼດ",
-    "Start" : "ເລີ່ມຕົ້ນ"
+    "Loading" : "ການໂຫຼດ"
 },
 "nplurals=1; plural=0;");

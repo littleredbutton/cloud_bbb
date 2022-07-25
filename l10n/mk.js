@@ -25,7 +25,6 @@ OC.L10N.register(
     "moderator" : "модератор",
     "Share" : "Сподели",
     "Loading" : "Се вчитува",
-    "Settings saved" : "Параматрите се зачувани",
-    "Start" : "Почеток"
+    "Settings saved" : "Параматрите се зачувани"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

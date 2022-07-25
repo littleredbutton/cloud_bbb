@@ -47,7 +47,6 @@ OC.L10N.register(
     "Settings saved" : "Setelan tersimpan",
     "Unexpected error occurred" : "Terjadi galat tak terduga",
     "API URL is invalid" : "Tautan API invalid",
-    "API secret is invalid" : "Rahasia API invalid",
-    "Start" : "Mulai"
+    "API secret is invalid" : "Rahasia API invalid"
 },
 "nplurals=1; plural=0;");
