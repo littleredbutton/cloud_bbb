@@ -16,9 +16,12 @@ jobs:
           with:
             php-version: 7.4
             coverage: none
+        - name: Update php-cs-fixer
+          run: composer update friendsofphp/php-cs-fixer -W
         - name: Install dependencies
           run: composer i
         - name: Install dependencies
           run: composer require --dev christophwurst/nextcloud:${{ matrix.ocp-version }}
         - name: Run coding standards check
           run: composer run psalm
+
