@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.8.1@f73f2299dbc59a3e6c4d66cff4605176e728ee69">
+<files psalm-version="4.24.0@06dd975cb55d36af80f242561738f16c5f58264f">
+  <file src="lib/AppInfo/Application.php">
+    <InvalidArgument occurrences="8">
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+      <code>addServiceListener</code>
+    </InvalidArgument>
+  </file>
+  <file src="lib/BigBlueButton/API.php">
+    <UndefinedClass occurrences="1">
+      <code>InsertDocumentParameters</code>
+    </UndefinedClass>
+    <UndefinedMethod occurrences="1">
+      <code>insertDocument</code>
+    </UndefinedMethod>
+  </file>
   <file src="lib/CircleHelper.php">
     <UndefinedClass occurrences="3">
+      <code>\OCA\Circles\Api\v1\Circles</code>
       <code>\OCA\Circles\Api\v1\Circles</code>
       <code>\OCA\Circles\Model\Member</code>
     </UndefinedClass>
@@ -10,12 +31,6 @@
     <NullArgument occurrences="1">
       <code>null</code>
     </NullArgument>
-  </file>
-  <file src="lib/Controller/ServerController.php">
-    <InvalidArgument occurrences="2">
-      <code>$success</code>
-      <code>$this-&gt;server-&gt;check($url, $secret)</code>
-    </InvalidArgument>
   </file>
   <file src="lib/NoPermissionResponse.php">
     <MissingDependency occurrences="1">
