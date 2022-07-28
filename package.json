@@ -1,7 +1,7 @@
 {
 	"name": "@sualko/cloud_bbb",
 	"description": "Nextcloud Integration for BigBlueButton",
-	"version": "2.3.0",
+	"version": "2.3.1",
 	"author": "Klaus Herberth <klaus@jsxc.org>",
 	"bugs": {
 		"url": "https://github.com/sualko/cloud_bbb/issues"
@@ -28,8 +28,8 @@
 		"lint:fix:style": "stylelint 'ts/**/*.scss' --fix",
 		"lint:php": "./vendor/bin/php-cs-fixer fix --dry-run",
 		"lint:fix:php": "./vendor/bin/php-cs-fixer fix",
-		"composer:install": "composer install --no-dev -o",
-		"composer:install:dev": "composer install -o",
+		"composer:install": "composer install --no-dev",
+		"composer:install:dev": "composer install",
 		"release:build": "node scripts/build-release.js",
 		"release:publish": "node scripts/publish-release.js"
 	},
