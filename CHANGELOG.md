@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.3.1 (2022-07-28)
+### Fixed
+- broken build
+
 ## 2.3.0 (2022-07-24)
 ### Added
 - [#191](https://github.com/sualko/cloud_bbb/issues/191) clone rooms
