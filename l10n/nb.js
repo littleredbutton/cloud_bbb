@@ -5,6 +5,7 @@ OC.L10N.register(
     "Back to %s" : "Tilbake til %s",
     "Save" : "Lagre",
     "Community" : "Samfunn",
+    "Restrictions" : " Begrensninger",
     "Display name" : "Visningsnavn",
     "Password" : "Passord",
     "Join" : "Bli med",

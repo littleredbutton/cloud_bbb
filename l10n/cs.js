@@ -45,7 +45,7 @@ OC.L10N.register(
     "Password" : "Heslo",
     "Join" : "Připojit se",
     "Have an account? Log in." : "Máte uživatelský účet? Přihlaste se jím.",
-    "Hello %s" : "Zdravím %s",
+    "Hello %s" : "Dobrý den, %s",
     "Name, group …" : "Jméno, skupina…",
     "Group" : "Skupina",
     "Searching" : "Hledá se",
