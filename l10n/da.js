@@ -15,6 +15,7 @@ OC.L10N.register(
     "Access" : "Adgang",
     "Edit" : "Rediger",
     "Welcome" : "Velkommen",
+    "Miscellaneous" : "Diverse",
     "Create" : "Opret",
     "Copy to clipboard" : "Kopier til udklipsholder",
     "Delete" : "Slet",
