@@ -131,6 +131,7 @@ OC.L10N.register(
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L'URL doit commencer par https:// et contenir {token}. De plus, l'espace réservé de {user} peut être utilisé.",
     "Send file to BBB" : "Envoyer le fichier vers BBB",
     "Send to" : "Envoyer a",
+    "Start with" : "Démarrer avec",
     "Please select the room in which you like to use the file \"{filename}\"." : "Veuillez sélectionner la salle dans laquelle vous voulez utiliser le fichier \"{filename}\".",
     "No rooms available!" : "Pas de salle disponible !",
     "Send to BBB" : "Envoyer vers BBB",
