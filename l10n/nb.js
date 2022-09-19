@@ -28,6 +28,7 @@ OC.L10N.register(
     "moderator" : "moderator",
     "Share" : "Del",
     "Loading" : "Laster",
-    "Settings saved" : "Innstillinger lagret"
+    "Settings saved" : "Innstillinger lagret",
+    "Send to" : "Send til"
 },
 "nplurals=2; plural=(n != 1);");
