@@ -43,7 +43,7 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["% учасник","% учасників","% учасників","% учасників"],
     "Delete" : "Вилучити",
     "Delete \"{name}\"?" : "Вилучити \"{name}\"?",
-    "Select target folder" : "Виберіть теку призначення",
+    "Select target folder" : "Виберіть каталог призначення",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "Посилання на кімнату збережено у \"{path}\" як \"{filename}\".",
     "Link stored" : "Посилання збережено",
     "URL to room could not be stored." : "Неможливо зберегти посилання на кімнату",
