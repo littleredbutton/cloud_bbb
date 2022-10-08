@@ -100,7 +100,7 @@ OC.L10N.register(
     "Delete" : "Supprimer",
     "Are you sure you want to delete \"{name}\"? This operation cannot be undone." : "Êtes-vous sur de vouloir supprimer \"{name}\" ? Cette opération ne peut pas être annulée.",
     "Delete \"{name}\"?" : "Supprimer \"{name}\" ?",
-    "Select target folder" : "Sélectionner un répertoire de destination",
+    "Select target folder" : "Sélectionner un dossier de destination",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "L'adresse du salon de discussion a été enregistrée dans \"{path}\" comme \"{filename}\".",
     "Link stored" : "Lien stocké",
     "URL to room could not be stored." : "L'adresse du salon de discussion n'a pas pu être enregistrée.",
