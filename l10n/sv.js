@@ -28,6 +28,7 @@ OC.L10N.register(
     "moderator" : "moderator",
     "Share" : "Dela",
     "Loading" : "Läser in",
-    "Settings saved" : "Inställningar sparade"
+    "Settings saved" : "Inställningar sparade",
+    "No rooms available!" : "Inga rum tillgängliga!"
 },
 "nplurals=2; plural=(n != 1);");
