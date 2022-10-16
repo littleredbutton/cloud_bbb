@@ -13,7 +13,9 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
+use OCP\IUser;
 use OCP\Security\ISecureRandom;
+use OCP\Search\ISearchQuery;
 
 class RoomService {
 
@@ -83,6 +85,13 @@ class RoomService {
 	 */
 	public function findByUserId(string $userId): array {
 		return $this->mapper->findByUserId($userId);
+	}
+
+	/**
+	 * @return array<Room>
+	 */
+	public function search(IUser $userId, ISearchQuery $query): array {
+		return $this->mapper->search($userId->getUID(), $query->getTerm());
 	}
 
 	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {

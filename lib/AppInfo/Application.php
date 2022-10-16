@@ -15,19 +15,25 @@ use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use \OCA\BigBlueButton\Listener\UserDeletedListener;
 use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCA\BigBlueButton\Search\Provider;
 use \OCP\AppFramework\App;
 use \OCP\AppFramework\QueryException;
+use \OCP\AppFramework\Bootstrap\IBootContext;
+use \OCP\AppFramework\Bootstrap\IBootstrap;
+use \OCP\AppFramework\Bootstrap\IRegistrationContext;
 use \OCP\EventDispatcher\IEventDispatcher;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\User\Events\UserDeletedEvent;
+use \OCP\Util;
 
 if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
 }
 
-class Application extends App {
+class Application extends App implements IBootstrap {
 	public const ID = 'bbb';
+	public const ORDER = 80;
 
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::ID, $urlParams);
@@ -50,6 +56,14 @@ class Application extends App {
 		} else {
 			$this->registerAsPersonalSetting();
 		}
+
+		Util::addScript('bbb', 'filelist');
+	}
+
+	public function boot(IBootContext $context): void {}
+
+	public function register(IRegistrationContext $context): void {
+		$context->registerSearchProvider(Provider::class);
 	}
 
 	private function registerAsPersonalSetting(): void {
@@ -77,7 +91,7 @@ class Application extends App {
 		$server->getNavigationManager()->add(function () use ($server, $name) {
 			return [
 				'id' => self::ID,
-				'order' => 80,
+				'order' => self::ORDER,
 				'href' => $server->getURLGenerator()->linkToRoute('bbb.page.index'),
 				'icon' => $server->getURLGenerator()->imagePath('bbb', 'app.svg'),
 				'name' => $name,
