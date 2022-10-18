@@ -49,7 +49,7 @@ OC.L10N.register(
     "Name, group …" : "Nom, groupe, ...",
     "Group" : "Groupe",
     "Searching" : "Recherche en cours",
-    "No matches" : "Pas de résultas",
+    "No matches" : "Pas de résultats",
     "Public" : "Publique",
     "Internal + Password protection for guests" : "Protection interne + mot de passe pour les invités",
     "Internal + Waiting room for guests" : "Interne + Salle d'attente pour les invités",
