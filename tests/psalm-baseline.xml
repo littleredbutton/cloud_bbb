@@ -12,14 +12,6 @@
       <code>addServiceListener</code>
     </InvalidArgument>
   </file>
-  <file src="lib/BigBlueButton/API.php">
-    <UndefinedClass occurrences="1">
-      <code>InsertDocumentParameters</code>
-    </UndefinedClass>
-    <UndefinedMethod occurrences="1">
-      <code>insertDocument</code>
-    </UndefinedMethod>
-  </file>
   <file src="lib/CircleHelper.php">
     <UndefinedClass occurrences="3">
       <code>\OCA\Circles\Api\v1\Circles</code>
