@@ -77,17 +77,17 @@ class Provider implements IProvider {
 			$query
 		);
 
-		$results = array_map(function(Room $room) {
-			return [
-				new SearchResultEntry(
-					'',
-					$room->getName(),
-					$this->getAccess($room->getAccess()),
-					$this->urlGenerator->linkToRoute('bbb.page.index'),
-					$this->urlGenerator->imagePath('bbb', 'app-grey.svg')
-				)
-			];
-		}, $rooms);
+		$results = [];
+
+		foreach($rooms as $room) {
+			$results[] = new SearchResultEntry(
+				'',
+				$room->getName(),
+				$this->getAccess($room->getAccess()),
+				$this->urlGenerator->linkToRouteAbsolute('bbb.page.index'),
+				$this->urlGenerator->imagePath('bbb', 'app-grey.svg')
+			);
+		}
 
         return SearchResult::complete(
 			'BBB',
