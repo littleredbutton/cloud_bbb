@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3cf83d2a7bace847b7ab01cc4a3f679",
+    "content-hash": "434f3b95fbfba97b03d130cd3fb92140",
     "packages": [
         {
             "name": "littleredbutton/bigbluebutton-api-php",
@@ -300,50 +300,6 @@
                 }
             ],
             "time": "2021-03-30T17:13:30+00:00"
-        },
-        {
-            "name": "christophwurst/nextcloud",
-            "version": "v24.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ChristophWurst/nextcloud_composer.git",
-                "reference": "f032acdff1502a7323f95a6524d163290f43b446"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/f032acdff1502a7323f95a6524d163290f43b446",
-                "reference": "f032acdff1502a7323f95a6524d163290f43b446",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ~8.0 || ~8.1",
-                "psr/container": "^1.1.1",
-                "psr/event-dispatcher": "^1.0",
-                "psr/log": "^1.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "24.0.0-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "AGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christoph Wurst",
-                    "email": "christoph@winzerhof-wurst.at"
-                }
-            ],
-            "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
-            "support": {
-                "issues": "https://github.com/ChristophWurst/nextcloud_composer/issues",
-                "source": "https://github.com/ChristophWurst/nextcloud_composer/tree/v24.0.1"
-            },
-            "abandoned": "nextcloud/ocp",
-            "time": "2022-06-02T14:16:47+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -1232,6 +1188,48 @@
                 "source": "https://github.com/nextcloud/coding-standard/tree/v1.0.0"
             },
             "time": "2021-11-10T08:44:10+00:00"
+        },
+        {
+            "name": "nextcloud/ocp",
+            "version": "v24.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nextcloud-deps/ocp.git",
+                "reference": "f032acdff1502a7323f95a6524d163290f43b446"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/f032acdff1502a7323f95a6524d163290f43b446",
+                "reference": "f032acdff1502a7323f95a6524d163290f43b446",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ~8.0 || ~8.1",
+                "psr/container": "^1.1.1",
+                "psr/event-dispatcher": "^1.0",
+                "psr/log": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "24.0.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Wurst",
+                    "email": "christoph@winzerhof-wurst.at"
+                }
+            ],
+            "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
+            "support": {
+                "source": "https://github.com/nextcloud-deps/ocp/tree/v24.0.1"
+            },
+            "time": "2022-06-02T14:16:47+00:00"
         },
         {
             "name": "nikic/php-parser",

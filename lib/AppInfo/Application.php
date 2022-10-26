@@ -16,86 +16,73 @@ use \OCA\BigBlueButton\Listener\UserDeletedListener;
 use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 use \OCP\AppFramework\App;
-use \OCP\AppFramework\QueryException;
-use \OCP\EventDispatcher\IEventDispatcher;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\User\Events\UserDeletedEvent;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\INavigationManager;
+use OCP\IURLGenerator;
+use OCP\Util;
 
-if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
-	throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
-}
-
-class Application extends App {
+class Application extends App implements IBootstrap {
 	public const ID = 'bbb';
 
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::ID, $urlParams);
+	}
 
-		$container = $this->getContainer();
+	public function register(IRegistrationContext $context): void {
+		if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
+			throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
+		}
 
-		/* @var IEventDispatcher $dispatcher */
-		$dispatcher = $container->query(IEventDispatcher::class);
-		$this->registerServiceListener($dispatcher);
+		$context->registerEventListener(RoomCreatedEvent::class, RoomListener::class);
+		$context->registerEventListener(RoomDeletedEvent::class, RoomListener::class);
 
-		$container->registerMiddleWare(JoinMiddleware::class);
-		$container->registerMiddleWare(HookMiddleware::class);
+		$context->registerEventListener(RoomShareCreatedEvent::class, RoomShareListener::class);
+		$context->registerEventListener(RoomShareDeletedEvent::class, RoomShareListener::class);
 
-		$config = $container->query(IConfig::class);
+		$context->registerEventListener(MeetingStartedEvent::class, MeetingListener::class);
+		$context->registerEventListener(MeetingEndedEvent::class, MeetingListener::class);
+		$context->registerEventListener(RecordingReadyEvent::class, MeetingListener::class);
 
+		$context->registerEventListener(UserDeletedEvent::class, UserDeletedListener::class);
+
+		$context->registerMiddleware(JoinMiddleware::class);
+		$context->registerMiddleware(HookMiddleware::class);
+	}
+
+	public function boot(IBootContext $context): void {
+		$context->injectFn([$this, 'registerAdminPage']);
+
+		Util::addScript('bbb', 'filelist');
+	}
+
+	public function registerAdminPage(ISettingsManager $settingsManager, INavigationManager $navigationManager, IURLGenerator $urlGenerator, IConfig $config):void {
 		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
-			$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BBB');
-
-			$this->registerAsNavigationEntry($name);
+			$this->registerAsNavigationEntry($navigationManager, $urlGenerator, $config);
 		} else {
-			$this->registerAsPersonalSetting();
+			$this->registerAsPersonalSetting($settingsManager);
 		}
 	}
 
-	private function registerAsPersonalSetting(): void {
-		try {
-			/** @var ISettingsManager */
-			$settingsManager = $this->getContainer()->query(ISettingsManager::class);
-		} catch (QueryException $exception) {
-			// Workaround for Nextcloud 19
-			$server = $this->getContainer()->getServer();
-
-			if (method_exists($server, 'getSettingsManager')) {
-				$settingsManager = $server->getSettingsManager();
-			} else {
-				return;
-			}
-		}
-
-
+	private function registerAsPersonalSetting(ISettingsManager $settingsManager): void {
 		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
 	}
 
-	private function registerAsNavigationEntry(string $name): void {
-		$server = $this->getContainer()->getServer();
+	private function registerAsNavigationEntry(INavigationManager $navigationManager, IURLGenerator $urlGenerator, IConfig $config): void {
+		$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BBB');
 
-		$server->getNavigationManager()->add(function () use ($server, $name) {
+		$navigationManager->add(function () use ($urlGenerator, $name) {
 			return [
 				'id' => self::ID,
 				'order' => 80,
-				'href' => $server->getURLGenerator()->linkToRoute('bbb.page.index'),
-				'icon' => $server->getURLGenerator()->imagePath('bbb', 'app.svg'),
+				'href' => $urlGenerator->linkToRoute('bbb.page.index'),
+				'icon' => $urlGenerator->imagePath('bbb', 'app.svg'),
 				'name' => $name,
 			];
 		});
-	}
-
-	private function registerServiceListener(IEventDispatcher $dispatcher): void {
-		$dispatcher->addServiceListener(RoomCreatedEvent::class, RoomListener::class);
-		$dispatcher->addServiceListener(RoomDeletedEvent::class, RoomListener::class);
-
-		$dispatcher->addServiceListener(RoomShareCreatedEvent::class, RoomShareListener::class);
-		$dispatcher->addServiceListener(RoomShareDeletedEvent::class, RoomShareListener::class);
-
-		$dispatcher->addServiceListener(MeetingStartedEvent::class, MeetingListener::class);
-		$dispatcher->addServiceListener(MeetingEndedEvent::class, MeetingListener::class);
-		$dispatcher->addServiceListener(RecordingReadyEvent::class, MeetingListener::class);
-
-		$dispatcher->addServiceListener(UserDeletedEvent::class, UserDeletedListener::class);
 	}
 }
