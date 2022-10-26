@@ -12,7 +12,6 @@ use OCP\EventDispatcher\IEventListener;
 use OCP\IUserSession;
 
 class MeetingListener implements IEventListener {
-
 	/** @var IActivityManager */
 	private $activityManager;
 

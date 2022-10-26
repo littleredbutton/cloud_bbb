@@ -14,7 +14,6 @@ use OCP\EventDispatcher\IEventListener;
 use OCP\IGroupManager;
 
 class RoomShareListener implements IEventListener {
-
 	/** @var IActivityManager */
 	private $activityManager;
 

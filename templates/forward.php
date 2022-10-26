@@ -2,7 +2,7 @@
 	/** @var $_ array */
 	/** @var $l \OCP\IL10N */
 	style('core', 'guest');
-?>
+	?>
 
 	<div class="update bbb">
 		<h2><?php p($_['room']) ?></h2>

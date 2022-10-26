@@ -16,7 +16,6 @@ use OCP\IConfig;
 use OCP\Security\ISecureRandom;
 
 class RoomService {
-
 	/** @var RoomMapper */
 	private $mapper;
 
@@ -61,9 +60,9 @@ class RoomService {
 			return $this->mapper->find($id);
 
 			// in order to be able to plug in different storage backends like files
-		// for instance it is a good idea to turn storage related exceptions
-		// into service related exceptions so controllers and service users
-		// have to deal with only one type of exception
+			// for instance it is a good idea to turn storage related exceptions
+			// into service related exceptions so controllers and service users
+			// have to deal with only one type of exception
 		} catch (Exception $e) {
 			$this->handleException($e);
 		}

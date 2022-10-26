@@ -6,7 +6,6 @@ use OCA\BigBlueButton\Db\RoomShare;
 use OCP\EventDispatcher\Event;
 
 abstract class RoomShareEvent extends Event {
-
 	/** @var RoomShare */
 	private $roomShare;
 
