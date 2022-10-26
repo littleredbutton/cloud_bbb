@@ -13,7 +13,6 @@ use OCP\IGroupManager;
 use OCP\IUserManager;
 
 class Permission {
-
 	/** @var IUserManager */
 	private $userManager;
 

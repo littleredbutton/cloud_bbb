@@ -12,12 +12,7 @@ jobs:
     strategy:
       matrix:
         php-versions: ['7.4', '8']
-        nextcloud-versions: ['stable22', 'stable23', 'stable24']
-        include:
-          - php-versions: '7.3'
-            nextcloud-versions: 'stable22'
-          - php-versions: '7.3'
-            nextcloud-versions: 'stable23'
+        nextcloud-versions: ['stable23', 'stable24', 'stable25']
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
@@ -39,7 +34,7 @@ jobs:
         path: nextcloud/apps/bbb
     - name: Update test stub
       working-directory: nextcloud/apps/bbb
-      run: composer update friendsofphp/php-cs-fixer christophwurst/nextcloud -W
+      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install

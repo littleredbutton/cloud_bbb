@@ -92,9 +92,6 @@ async function openDialog(fileId: number, filename: string) {
 		const row = $('<tr>');
 		const button = $('<button>');
 
-		if (!OC.debug) {
-			button.prop('disabled', room.running);
-		}
 		button.text(room.running ? t('bbb', 'Send to') : t('bbb', 'Start with'));
 		button.addClass(room.running ? 'success' : 'primary');
 		button.attr('type', 'button');

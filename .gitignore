@@ -9,3 +9,4 @@ node_modules/
 /archives/
 .phpunit.result.cache
 .vscode/settings.json
+.php-cs-fixer.cache

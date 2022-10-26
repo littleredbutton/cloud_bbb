@@ -15,7 +15,6 @@ use OCP\IUserManager;
 use OCP\L10N\IFactory;
 
 class Provider implements IProvider {
-
 	/** @var string */
 	public const ROOM_CREATED = 'room_created';
 
