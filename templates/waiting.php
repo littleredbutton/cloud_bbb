@@ -3,7 +3,7 @@
 	/** @var $l \OCP\IL10N */
 	style('core', 'guest');
 	script('bbb', 'waiting');
-?>
+	?>
 
 <div class="update bbb">
 	<h2><?php p($_['room']); ?></h2>

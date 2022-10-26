@@ -14,7 +14,6 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
 
 class RoomShareService {
-
 	/** @var RoomShareMapper */
 	private $mapper;
 

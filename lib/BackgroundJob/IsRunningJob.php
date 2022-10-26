@@ -10,7 +10,6 @@ use OCP\BackgroundJob\IJobList;
 use OCP\BackgroundJob\TimedJob;
 
 class IsRunningJob extends TimedJob {
-
 	/** @var IJobList */
 	private $jobList;
 

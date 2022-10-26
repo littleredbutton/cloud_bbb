@@ -10,7 +10,6 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 
 class RoomListener implements IEventListener {
-
 	/** @var IActivityManager */
 	private $activityManager;
 
