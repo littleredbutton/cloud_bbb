@@ -13,7 +13,7 @@ OC.L10N.register(
     "Please enter your name!" : "Будь ласка, зазначте ваше ім'я!",
     "The name must be at least 3 characters long." : "Ім'я має містити щонайменше 3 символи.",
     "You have to provide the correct password to join the meeting." : "Потрібно надати дійсний пароль для приєднання до зустрічі.",
-    "Display name" : "Ім'я для відображення",
+    "Display name" : "Ім'я для показу",
     "Password" : "Пароль",
     "Join" : "Приєднатися",
     "Hello %s" : "Вітаємо %s",
