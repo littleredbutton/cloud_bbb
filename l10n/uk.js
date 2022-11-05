@@ -53,7 +53,7 @@ OC.L10N.register(
     "Delete?" : "Вилучити",
     "Could not delete record" : "Неможливо вилучити запис",
     "Server error" : "Помилка серверу",
-    "Share" : "Поділитися",
+    "Share" : "Спільний доступ",
     "Loading" : "Завантаження",
     "Settings saved" : "Налаштування збережено",
     "Unexpected error occurred" : "Неочікувана помилка",
