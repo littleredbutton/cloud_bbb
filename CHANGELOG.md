@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.4.0 (2022-11-10)
+### Added
+- bump Nextcloud version (min 23, max 25)
+- allow to send files to running presentation (bbb > 2.5)
+
+### Misc
+- drop tests for php 7.3
+- replace deprecated package
+- update php cs fixer
+
 ## 2.3.1 (2022-07-28)
 ### Fixed
 - broken build
