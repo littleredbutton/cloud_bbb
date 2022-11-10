@@ -134,7 +134,7 @@ async function createGithubRelease(changeLog) {
 		name: `BigBlueButton Integration ${tagName}`,
 		body: changeLog.replace(/^## [^\n]+\n/, ''),
 		prerelease: !/^\d+\.\d+\.\d+$/.test(packageInfo.version),
-		draft: true,
+		draft: false,
 	};
 
 	if (isDryRun) {
@@ -144,7 +144,7 @@ async function createGithubRelease(changeLog) {
 
 	const releaseResponse = await octokit.repos.createRelease(releaseOptions);
 
-	console.log(`Draft created, see ${releaseResponse.data.html_url}`.verbose);
+	console.log(`Release created, see ${releaseResponse.data.html_url}`.verbose);
 
 	function getMimeType(filename) {
 		if (filename.endsWith('.asc') || filename.endsWith('sig')) {
