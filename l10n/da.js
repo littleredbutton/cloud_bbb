@@ -20,6 +20,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopier til udklipsholder",
     "Delete" : "Slet",
     "Error" : "Fejl",
+    "Delete?" : "Slet?",
     "Server error" : "Serverfejl",
     "moderator" : "moderator",
     "Share" : "Del",
