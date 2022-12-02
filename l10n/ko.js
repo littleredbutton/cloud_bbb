@@ -4,6 +4,7 @@ OC.L10N.register(
     "Back to %s" : "%s(으)로 돌아가기",
     "Save" : "저장",
     "Community" : "커뮤니티",
+    "You will be forwarded to the room in the next few seconds." : "잠시 후 방으로 이동합니다.",
     "Please enter your name!" : "이름을 입력하시오!",
     "Display name" : "표시 이름",
     "Password" : "암호",
@@ -37,6 +38,7 @@ OC.L10N.register(
     "Loading" : "불러오는 중",
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",
-    "API URL is invalid" : "무효한 API URL"
+    "API URL is invalid" : "무효한 API URL",
+    "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["방이 아직 열리지 않았습니다. %n초 후에 다시 시도합니다. 잠시만 기다려주십시오."]
 },
 "nplurals=1; plural=0;");
