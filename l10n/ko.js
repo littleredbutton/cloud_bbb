@@ -39,6 +39,7 @@ OC.L10N.register(
     "Settings saved" : "설정 저장됨",
     "Unexpected error occurred" : "예상치 못한 에러가 발생했습니다",
     "API URL is invalid" : "무효한 API URL",
+    "Send to" : "에게 전송",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["방이 아직 열리지 않았습니다. %n초 후에 다시 시도합니다. 잠시만 기다려주십시오."]
 },
 "nplurals=1; plural=0;");
