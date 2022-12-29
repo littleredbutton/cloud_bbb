@@ -22,6 +22,7 @@ OC.L10N.register(
     "Room name" : "Romnavn",
     "Create" : "Ny",
     "Copy to clipboard" : "Kopiert til utklippstavlen",
+    "Save as file" : "Lagre som fil",
     "Delete" : "Slett",
     "Error" : "Feil",
     "Server error" : "Tjenerfeil",
