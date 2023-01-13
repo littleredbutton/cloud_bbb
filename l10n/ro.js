@@ -14,6 +14,7 @@ OC.L10N.register(
     "Edit" : "Editare",
     "Welcome" : "Bun venit",
     "Create" : "Creează",
+    "Copy to clipboard" : "Copiază în clipboard",
     "Delete" : "Șterge",
     "Error" : "Eroare",
     "Server error" : "Eroare server",
