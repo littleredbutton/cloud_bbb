@@ -5,6 +5,7 @@ OC.L10N.register(
     "Community" : "Tamezdagnut",
     "Password" : "Awal uffir",
     "Hello %s" : "Azul %s",
+    "Group" : "Agraw",
     "Name" : "Nom",
     "Edit" : "Ẓreg",
     "Create" : "Snulfu-d",
