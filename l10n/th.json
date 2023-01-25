@@ -1,9 +1,9 @@
 { "translations": {
-    "You created the room %s." : "คุณสร้างห้องแล้วเมื่อ %s",
-    "You deleted the room %s." : "คุณลบห้องแล้วเมื่อ %s",
-    "{user} deleted the room %s." : "{user} ลบห้องแล้วเมื่อ %s",
-    "You shared the room %s with {shareWith}." : "คุณแบ่งปันห้องกับ {shareWith} แล้วเมื่อ %s",
-    "{user} shared the room %s with you." : "{user} แบ่งปันห้องกับคุณเมื่อ %s",
+    "You created the room %s." : "คุณได้สร้างห้อง %s",
+    "You deleted the room %s." : "คุณได้ลบห้อง %s",
+    "{user} deleted the room %s." : "{user} ได้ลบห้อง %s",
+    "You shared the room %s with {shareWith}." : "คุณได้แชร์ห้อง %s กับ {shareWith}",
+    "{user} shared the room %s with you." : "{user} ได้แชร์ห้อง %s กับคุณ",
     "Room not found" : "ไม่พบห้อง",
     "The room could not be found. Maybe it was deleted?" : "ไม่พบห้อง อาจจะถูกลบไปแล้ว",
     "Back to %s" : "กลับสู่ %s",
@@ -20,10 +20,10 @@
     "Copy to clipboard" : "คัดลอกไปยังคลิปบอร์ด",
     "Delete" : "ลบ",
     "Error" : "ข้อผิดพลาด",
-    "Delete?" : "ลบ",
-    "Server error" : "ข้อผิดพลาดของเซิร์ฟเวอร์",
+    "Delete?" : "ลบหรือไม่",
+    "Server error" : "ข้อผิดพลาดเซิร์ฟเวอร์",
     "Share" : "แชร์",
-    "Loading" : "Loading",
+    "Loading" : "กำลังโหลด",
     "Settings saved" : "บันทึกการตั้งค่าแล้ว"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
