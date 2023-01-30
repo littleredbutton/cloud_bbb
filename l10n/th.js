@@ -18,6 +18,7 @@ OC.L10N.register(
     "Public" : "สาธารณะ",
     "Name" : "ชื่อ",
     "Edit" : "แก้ไข",
+    "Welcome" : "ยินดีต้อนรับ",
     "Create" : "สร้าง",
     "Copy to clipboard" : "คัดลอกไปยังคลิปบอร์ด",
     "Delete" : "ลบ",

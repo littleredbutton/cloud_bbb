@@ -27,6 +27,7 @@ OC.L10N.register(
     "Community" : "Κοινότητα",
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "Εάν θέλετε να χρησιμοποιήσετε μικρότερα URL, μπορείτε να εισαγάγετε έναν διακομιστή μεσολάβησης παρακάτω.",
     "URL shortener" : "Συντόμευση διεύθυνσης URL",
+    "Restrictions" : "Περιορισμοί",
     "You will be forwarded to the room in the next few seconds." : "Θα μεταφερθείτε στο δωμάτιο στα επόμενα δευτερόλεπτα.",
     "Let's go!" : "Ξεκινάμε!",
     "Please enter your name!" : "Παρακαλούμε εισάγετε το όνομά σας!",
