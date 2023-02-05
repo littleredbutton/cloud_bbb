@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "Պահպանել",
     "Password" : "Գաղտնաբառ",
+    "Hello %s" : "Բարև %s",
     "Group" : "Խումբ",
     "Name" : "Անուն",
     "Edit" : "մշակել",
