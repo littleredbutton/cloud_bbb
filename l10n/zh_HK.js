@@ -60,7 +60,7 @@ OC.L10N.register(
     "Access" : "存取",
     "Max" : "最大",
     "Record" : "紀錄",
-    "Recordings" : "紀錄",
+    "Recordings" : "錄製",
     "You are not permitted to create a room." : "您無權建立聊天室。",
     "You exceeded the maximum number of rooms." : "您超出了最大聊天室數量。",
     "Room quota:" : "聊天室額度：",
