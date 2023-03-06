@@ -39,7 +39,7 @@ OC.L10N.register(
     "Recording" : "Запис",
     "Room name" : "Назва кімнати",
     "Create" : "Створити",
-    "Copy to clipboard" : "Скопіювати в буфер обміну ",
+    "Copy to clipboard" : "Копіювати до буферу обміну",
     "_%n participant_::_%n participants_" : ["% учасник","% учасників","% учасників","% учасників"],
     "Delete" : "Вилучити",
     "Delete \"{name}\"?" : "Вилучити \"{name}\"?",
