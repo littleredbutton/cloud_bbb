@@ -13,6 +13,7 @@ OC.L10N.register(
     "Public" : "Offentlig",
     "Name" : "Navn",
     "Access" : "Adgang",
+    "Max" : "Maks",
     "Edit" : "Rediger",
     "Welcome" : "Velkommen",
     "Miscellaneous" : "Diverse",
