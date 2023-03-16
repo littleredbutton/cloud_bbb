@@ -29,6 +29,7 @@ OC.L10N.register(
     "Miscellaneous" : "Lain-lain",
     "Room name" : "Nama ruang",
     "Create" : "Buat",
+    "Copy to clipboard" : "Salin ke papan klip",
     "_%n participant_::_%n participants_" : ["%n partisipan"],
     "Delete" : "Hapus",
     "Delete \"{name}\"?" : "Hapus \"{nama}\"?",
