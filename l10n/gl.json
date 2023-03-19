@@ -113,7 +113,7 @@
     "API secret is invalid" : "O segredo da API é incorrecto",
     "URL has to start with HTTPS" : "O URL ten que comezar con HTTPS",
     "URL has to contain the {token} placeholder" : "O URL ten que conter o marcador de posición {token}",
-    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "A URL ten que comezar con https:// e conter {token}. Ademais pódese usar o marcador de posición de {user}.",
+    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "O URL ten que comezar con https:// e conter {token}. Ademais pódese usar o marcador de posición de {user}.",
     "Send to" : "Enviar a",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala aínda non está aberta. Tentarémolo de novo en %n segundo. Agarde.","Esta sala aínda non está aberta. Tentarémolo de novo en %n segundos. Agarde."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
