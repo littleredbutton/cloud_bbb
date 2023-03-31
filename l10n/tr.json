@@ -73,7 +73,7 @@
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Bu seçenek etkinleştirildiğinde, sorumlu yetkileri ile erişilebilecek bir sorumlu adresi oluşturulur.",
     "Only selected users and groups are allowed to access the room." : "Odaya yalnızca seçilmiş kullanıcı ve gruplar erişebilir.",
     "If disabled, a microphone is needed to join the conference." : "Bu seçenek devre dışı bırakıldığında, görüşmeye katılabilmek için bir mikrofon gerekir.",
-    "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "Bu seçenek etkinleştirildiğinde, kullanıcı ilk kez katılırken, bir yankı çağrısı ve web kamerası ön izlemesi yapması gerekmez (BBB sunucu 2.3 sürümü ve üzeri için).",
+    "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "Bu seçenek etkinleştirildiğinde, kullanıcı ilk kez katılırken, bir yankı çağrısı ve bilgisayar kamerası ön izlemesi yapması gerekmez (BBB sunucu 2.3 sürümü ve üzeri için).",
     "If enabled, the user list, chat area and presentation are hidden by default." : "Bu seçenek etkinleştirildiğinde, kullanıcı listesi, sohbet alanı ve sunum varsayılan olarak gizlenir.",
     "If enabled, all users will join the meeting muted." : "Bu seçenek etkinleştirildiğinde, tüm kullanıcılar görüşmeye sesi kapalı olarak katılır.",
     "Edit \"{room}\"" : "“{room}” düzenle",
