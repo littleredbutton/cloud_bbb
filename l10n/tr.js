@@ -55,7 +55,7 @@ OC.L10N.register(
     "Internal + Waiting room for guests" : "Konuklar için İç + Parola koruması",
     "Waiting room for all users" : "Tüm kullanıcılar için bekleme odası",
     "Internal" : "İç",
-    "Internal restricted" : "İç kullanımla kısıtlı",
+    "Internal restricted" : "İç kullanımla kısıtlanmış",
     "Name" : "Ad",
     "Access" : "Erişim",
     "Max" : "En fazla",
