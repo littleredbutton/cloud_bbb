@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "You started a meeting in the \"%s\" room." : "Ви розпочали зустріч у кімнаті \"%s\".",
+    "{user} started a meeting in the \"%s\" room." : "{user} розпочав зустріч у кімнаті \"%s\".",
     "API URL or secret not configured. Please contact your administrator." : "Не налаштовано посилання API або пароль. Будь ласка, сконтактуйте з адміністратором.",
     "BigBlueButton Integration" : "Інтеграція BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Інтеграція BigBlueButton для Nextcloud",
