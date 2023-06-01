@@ -1,7 +1,7 @@
 { "translations": {
-    "You created the room %s." : "Ustvarite sobo %s.",
-    "You deleted the room %s." : "Izbrišete sobo %s.",
-    "{user} deleted the room %s." : "{user} izbriše sobo %s.",
+    "You created the room %s." : "Ustvarite ločeno skupino %s.",
+    "You deleted the room %s." : "Izbrišete ločeno skupino %s.",
+    "{user} deleted the room %s." : "{user} izbriše ločeno skupino %s.",
     "You shared the room %s with {shareWith}." : "Omogočite uporabo sobe %s: {shareWith}.",
     "{user} shared the room %s with you." : "{user} vam omogoči souporabo sobe %s.",
     "You unshared the room %s with {shareWith}." : "Onemogočite uporabo sobe %s: {shareWith}.",
@@ -122,6 +122,7 @@
     "URL has to contain the {token} placeholder" : "Naslov URL mora vključevati vsebnik {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Naslov URL se mora začeti z https:// in mora vključevati žeton {token}. Uporabiti je mogoče tudi vsebnik {user}.",
     "Send to" : "Pošlji",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Izberite ločeno skupino, v kateri želite uporabiti datoteko »{filename}«.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundo.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundi.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekunde.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekund."]
 },"pluralForm" :"nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);"
 }
