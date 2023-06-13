@@ -66,6 +66,7 @@ OC.L10N.register(
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Όταν ενεργοποιείται, ένας σύνδεσμος συντονιστή παράγεται ο οποίος επιτρέπει την πρόσβαση με άδεια συντονιστή.",
     "Only selected users and groups are allowed to access the room." : "Επιτρέπεται η πρόσβαση στο δωμάτιο μόνο σε επιλεγμένους χρήστες και ομάδες",
     "Edit \"{room}\"" : "Επεξεργασία «{room}»",
+    "Room URL" : "URL αίθουσας",
     "Welcome" : "Καλώς ήλθατε",
     "Participant limit" : "Όριο συμμετεχόντων",
     "Every participant is moderator" : "Όλοι οι συμμετέχοντες είναι συντονιστές",
