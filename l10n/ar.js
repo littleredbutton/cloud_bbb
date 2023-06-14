@@ -18,6 +18,7 @@ OC.L10N.register(
     "Edit" : "تعديل",
     "Welcome" : "مرحباً",
     "Miscellaneous" : "متنوع",
+    "Room name" : "اسم الغرفة",
     "Create" : "إنشاء",
     "Copy to clipboard" : "نسخ الرابط",
     "Delete" : "حذف ",
