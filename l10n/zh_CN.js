@@ -35,7 +35,7 @@ OC.L10N.register(
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "如果你喜欢使用更短的 url，你可以在下面输入转发代理。",
     "URL shortener" : "URL 缩短服务 ",
     "Restrictions" : "限制",
-    "You will be forwarded to the room in the next few seconds." : "几秒钟内你就会被送进房间。",
+    "You will be forwarded to the room in the next few seconds." : "几秒钟后你将会被送进聊天室。",
     "Let's go!" : "让我们出发吧！",
     "Please enter your name!" : "请输入您的名字！",
     "The name must be at least 3 characters long." : "名称长度必须至少有3个字符。",
