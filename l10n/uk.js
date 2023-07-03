@@ -20,6 +20,7 @@ OC.L10N.register(
     "Join" : "Приєднатися",
     "Hello %s" : "Вітаємо %s",
     "Group" : "Група",
+    "Searching" : "Пошук",
     "No matches" : "Немає збігів",
     "Public" : "Публічна",
     "Internal + Password protection for guests" : "Внутрішній із парольним захистом для гостей",
