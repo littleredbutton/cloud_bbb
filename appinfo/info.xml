@@ -43,7 +43,7 @@ Developer wanted! If you have time it would be awesome if you could help to enha
         <lib>curl</lib>
         <lib>mbstring</lib>
         <lib>SimpleXML</lib>
-        <nextcloud min-version="24" max-version="26"/>
+        <nextcloud min-version="25" max-version="27"/>
     </dependencies>
     <commands>
         <command>OCA\BigBlueButton\Command\ClearAvatarCache</command>

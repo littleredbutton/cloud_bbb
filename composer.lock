@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37acdf729199a625b633edc0c4032096",
+    "content-hash": "feb9af8a85a0a6dd2511e8dfb2546e38",
     "packages": [
         {
             "name": "littleredbutton/bigbluebutton-api-php",
