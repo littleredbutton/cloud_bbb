@@ -124,7 +124,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					excluded={{userIds: sharedUserIds, groupIds: sharedGroupIds, circleIds: sharedCircleIds}}
 					shareType={[ShareType.User, ShareType.Group, ShareType.Circle]}/> :
 				<em>
-					<span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to change this option, because this room is shared with you.')}
+					<span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to share this room further, because this room is shared with you.')}
 				</em>
 			}
 		</>

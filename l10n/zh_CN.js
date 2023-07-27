@@ -113,7 +113,7 @@ OC.L10N.register(
     "admin" : "管理员",
     "Share" : "共享",
     "Loading" : "正在加载",
-    "You are not allowed to change this option, because this room is shared with you." : "你不能更改此选项，因为此房间是与你共享的。",
+    "You are not allowed to share this room further, because this room is shared with you." : "你不能更改此选项，因为此房间是与你共享的。",
     "Max. rooms" : "房间最大数目",
     "Max. participants" : "参与者最大数目",
     "Group …" : "群组 ...",

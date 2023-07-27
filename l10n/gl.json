@@ -113,7 +113,7 @@
     "admin" : "admin",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "You are not allowed to change this option, because this room is shared with you." : "Non ten permiso para cambiar esta opción, porque esta é unha sala compartida con Vde.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Non ten permiso para cambiar esta opción, porque esta é unha sala compartida con Vde.",
     "Max. rooms" : "Máx. de salas",
     "Max. participants" : "Máx. de participantes",
     "Group …" : "Grupo…",

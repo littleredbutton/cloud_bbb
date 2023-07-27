@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "admin",
     "Share" : "Partekatu",
     "Loading" : "Kargatzen",
-    "You are not allowed to change this option, because this room is shared with you." : "Ez duzu baimenik aukera hau aldatzeko, gela hau zurekin partekatua delako.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Ez duzu baimenik aukera hau aldatzeko, gela hau zurekin partekatua delako.",
     "Max. rooms" : "Gela max.",
     "Max. participants" : "Parte-hartzaile max.",
     "Group …" : "Taldea ...",

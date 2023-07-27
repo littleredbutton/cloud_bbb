@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "administrator",
     "Share" : "Udostępnij",
     "Loading" : "Wczytywanie",
-    "You are not allowed to change this option, because this room is shared with you." : "Nie możesz zmienić tej opcji, ponieważ ten pokój jest Tobie udostępniony.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Nie możesz zmienić tej opcji, ponieważ ten pokój jest Tobie udostępniony.",
     "Max. rooms" : "Maks. pokoji",
     "Max. participants" : "Maks. uczestników",
     "Group …" : "Grupa…",

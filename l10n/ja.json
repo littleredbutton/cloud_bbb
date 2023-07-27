@@ -113,7 +113,7 @@
     "admin" : "管理者",
     "Share" : "共有",
     "Loading" : "読み込み中",
-    "You are not allowed to change this option, because this room is shared with you." : "あなたはこの会議室を共有されているため、このオプションを変更する権限がありません。",
+    "You are not allowed to share this room further, because this room is shared with you." : "あなたはこの会議室を共有されているため、このオプションを変更する権限がありません。",
     "Max. rooms" : "最大会議室数",
     "Max. participants" : "最大参加者数",
     "Group …" : "グループ...",

@@ -113,7 +113,7 @@
     "admin" : "管理員",
     "Share" : "分享",
     "Loading" : "正在載入",
-    "You are not allowed to change this option, because this room is shared with you." : "您無權更改此選項，因為此聊天室是與您分享的。",
+    "You are not allowed to share this room further, because this room is shared with you." : "您無權更改此選項，因為此聊天室是與您分享的。",
     "Max. rooms" : "聊天室數上限",
     "Max. participants" : "參加人數上限",
     "Group …" : "群組……",
