@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.5.0 (2023-07-27)
+### Added
+- bump Nextcloud version (min 25, max 27)
+
+### Fixed
+- fix oversized avatar
+- fix unscrollable room list
+
 ## 2.4.0 (2022-11-10)
 ### Added
 - bump Nextcloud version (min 23, max 25)
