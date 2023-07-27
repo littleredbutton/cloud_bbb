@@ -29,7 +29,8 @@
 
 .bbb-avatar {
   border-radius: 50%;
-  width: 32px;
+  width: 2.5em;
+  vertical-align: middle;
 }
 
 .text-muted {
@@ -39,6 +40,7 @@
 #bbb-root, #bbb-app {
   width: 100%;
   background-color: var(--color-main-background);
+  overflow: auto;
 }
 
 pre {
