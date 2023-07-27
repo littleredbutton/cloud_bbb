@@ -15,6 +15,7 @@ use \OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use \OCA\BigBlueButton\Listener\UserDeletedListener;
 use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
+use \OCA\BigBlueButton\Search\Provider;
 use \OCP\AppFramework\App;
 use \OCP\IConfig;
 use \OCP\Settings\IManager as ISettingsManager;
@@ -28,6 +29,7 @@ use OCP\Util;
 
 class Application extends App implements IBootstrap {
 	public const ID = 'bbb';
+	public const ORDER = 80;
 
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::ID, $urlParams);
@@ -49,6 +51,8 @@ class Application extends App implements IBootstrap {
 		$context->registerEventListener(RecordingReadyEvent::class, MeetingListener::class);
 
 		$context->registerEventListener(UserDeletedEvent::class, UserDeletedListener::class);
+
+		$context->registerSearchProvider(Provider::class);
 
 		$context->registerMiddleware(JoinMiddleware::class);
 		$context->registerMiddleware(HookMiddleware::class);
