@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "Saxla",
     "Password" : "Şifrə",
+    "Hello %s" : "Salam %s",
     "Group" : "Qrup",
     "Name" : "Ad",
     "Edit" : "Dəyişiklik et",
@@ -10,6 +11,7 @@ OC.L10N.register(
     "Delete" : "Sil",
     "Error" : "Səhv",
     "Share" : "Paylaş",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "Settings saved" : "Parametrlər yaddaşa verildi"
 },
 "nplurals=2; plural=(n != 1);");

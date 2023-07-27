@@ -1,21 +1,13 @@
 OC.L10N.register(
     "bbb",
     {
-    "Save" : "Guardar",
-    "Display name" : "Nome",
-    "Password" : "Password",
-    "Hello %s" : "%sHola ",
-    "Group" : "Group",
+    "Let's go!" : "¡Vamos!",
+    "Password" : "Contraseña",
     "Name" : "Nome",
-    "Edit" : "Editar",
-    "Welcome" : "Afáyate",
-    "Create" : "Crear",
-    "Copy to clipboard" : "Copiar al cartafueyu",
+    "You exceeded the maximum number of rooms." : "Superesti'l númberu máximu de sales.",
+    "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
     "Delete" : "Desaniciar",
-    "Error" : "Fallu",
-    "Server error" : "Fallu de sirvidor",
-    "Share" : "Share",
-    "Loading" : "Cargando",
-    "Settings saved" : "Axustes guardaos"
+    "Error" : "Error",
+    "API secret is invalid" : "El secretu de l'API nun ye válidu"
 },
 "nplurals=2; plural=(n != 1);");

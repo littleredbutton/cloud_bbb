@@ -10,6 +10,7 @@ OC.L10N.register(
     "Group" : "Groep",
     "Name" : "Naam",
     "Edit" : "Wysig",
+    "Welcome" : "Welkom",
     "Create" : "Skep",
     "Delete" : "Skrap",
     "Error" : "Fout",
