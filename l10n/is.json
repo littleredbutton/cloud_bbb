@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Opinbert",
     "Back to %s" : "Til baka í %s",
     "Save" : "Vista",
     "Community" : "Samfélag",
@@ -7,7 +8,6 @@
     "Join" : "Taka þátt",
     "Hello %s" : "Halló %s",
     "Group" : "Hópur",
-    "Public" : "Opinbert",
     "Name" : "Nafn",
     "Access" : "Aðgangur",
     "Edit" : "Breyta",

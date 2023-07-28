@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Јавна",
     "Back to %s" : "Врати се на %s",
     "Save" : "Зачувај",
     "Community" : "Заедница",
@@ -8,7 +9,6 @@
     "Hello %s" : "Здраво %s",
     "Group" : "Група",
     "No matches" : "Нема совпаѓања",
-    "Public" : "Јавна",
     "Name" : "Име",
     "Access" : "Пристап",
     "Edit" : "Уреди",

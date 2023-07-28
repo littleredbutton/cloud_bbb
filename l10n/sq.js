@@ -1,13 +1,13 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Publik",
     "Save" : "Ruaj",
     "Community" : "Komuniteti",
     "Display name" : "Shfaq emrin",
     "Password" : "Fjalëkalim",
     "Hello %s" : "Përshëndetje %s",
     "Group" : "Grup",
-    "Public" : "Publik",
     "Name" : "Emri",
     "Edit" : "Përpuno",
     "Welcome" : "Mirëseerdhët",

@@ -1,6 +1,10 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "공개",
+    "Internal + Password protection for guests" : "내부용 + 손님 대상으로는 암호 보호 적용",
+    "Internal + Waiting room for guests" : "내부용 + 손님 대상으로는 허가제 적용",
+    "Waiting room for all users" : "모든 사용자에게 허가제 적용",
     "Back to %s" : "%s(으)로 돌아가기",
     "Save" : "저장",
     "Community" : "커뮤니티",
@@ -13,10 +17,6 @@ OC.L10N.register(
     "Hello %s" : "%s님 안녕하세요.",
     "Group" : "그룹",
     "No matches" : "일치 항목 없음",
-    "Public" : "공개",
-    "Internal + Password protection for guests" : "내부용 + 손님 대상으로는 암호 보호 적용",
-    "Internal + Waiting room for guests" : "내부용 + 손님 대상으로는 허가제 적용",
-    "Waiting room for all users" : "모든 사용자에게 허가제 적용",
     "Name" : "이름",
     "Access" : "접근 권한",
     "Max" : "최대치",

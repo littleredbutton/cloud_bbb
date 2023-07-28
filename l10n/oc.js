@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Public",
     "BigBlueButton Integration" : "Integracion BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integracion Nextcloud per BigBlueButton",
     "Back to %s" : "Tornar a %s",
@@ -15,7 +16,6 @@ OC.L10N.register(
     "Group" : "Grop",
     "Searching" : "Recèrca",
     "No matches" : "Cap de resultat correspond pas",
-    "Public" : "Public",
     "Name" : "Nom",
     "Max" : "Max",
     "Record" : "Enregistrar",

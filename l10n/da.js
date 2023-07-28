@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Offentlig",
     "Back to %s" : "Tilbage til %s",
     "Save" : "Gem",
     "Community" : "Onlinefællesskab",
@@ -10,7 +11,6 @@ OC.L10N.register(
     "Hello %s" : "Hej %s",
     "Group" : "Gruppe",
     "No matches" : "Ingen matches",
-    "Public" : "Offentlig",
     "Name" : "Navn",
     "Access" : "Adgang",
     "Max" : "Maks",

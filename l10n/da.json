@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Offentlig",
     "Back to %s" : "Tilbage til %s",
     "Save" : "Gem",
     "Community" : "Onlinefællesskab",
@@ -8,7 +9,6 @@
     "Hello %s" : "Hej %s",
     "Group" : "Gruppe",
     "No matches" : "Ingen matches",
-    "Public" : "Offentlig",
     "Name" : "Navn",
     "Access" : "Adgang",
     "Max" : "Maks",

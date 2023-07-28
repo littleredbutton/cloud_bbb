@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Public",
     "Back to %s" : "Înapoi la %s",
     "Save" : "Salvează",
     "Community" : "Comunitate",
@@ -8,7 +9,6 @@ OC.L10N.register(
     "Password" : "Parolă",
     "Hello %s" : "Salut %s",
     "Group" : "Grup",
-    "Public" : "Public",
     "Name" : "Nume",
     "Access" : "Acces",
     "Edit" : "Editare",

@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Publika",
     "Back to %s" : "Antaŭen al %s",
     "Save" : "Konservi",
     "Display name" : "Vidiga nomo",
@@ -8,7 +9,6 @@ OC.L10N.register(
     "Join" : "Aliĝi",
     "Hello %s" : "Saluton %s",
     "Group" : "Grupo",
-    "Public" : "Publika",
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",

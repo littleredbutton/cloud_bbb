@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Publiska",
     "BigBlueButton Integration" : "BigBlueButton Integrācija",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrācija priekš Nextcloud",
     "API secret" : "API slepenais kods",
@@ -13,7 +14,6 @@ OC.L10N.register(
     "Join" : "Pievienoties",
     "Hello %s" : "Sveiki, %s",
     "Group" : "Grupa",
-    "Public" : "Publiska",
     "Name" : "Vārds",
     "Max" : "Maksimāli",
     "Record" : "Ierakstīt",

@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Publiska",
     "BigBlueButton Integration" : "BigBlueButton Integrācija",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrācija priekš Nextcloud",
     "API secret" : "API slepenais kods",
@@ -11,7 +12,6 @@
     "Join" : "Pievienoties",
     "Hello %s" : "Sveiki, %s",
     "Group" : "Grupa",
-    "Public" : "Publiska",
     "Name" : "Vārds",
     "Max" : "Maksimāli",
     "Record" : "Ierakstīt",

@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Público",
     "Back to %s" : "Voltar a %s",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Obtenha o URL da API e o segredo, executando 'sudo bbb-conf --secret' no servidor BigBlueButton.",
     "API URL" : "URL da API",
@@ -14,7 +15,6 @@ OC.L10N.register(
     "Join" : "Aderir",
     "Hello %s" : "Olá %s",
     "Group" : "Grupo",
-    "Public" : "Público",
     "Name" : "Nome",
     "Access" : "Acesso",
     "Max" : "Máx.",

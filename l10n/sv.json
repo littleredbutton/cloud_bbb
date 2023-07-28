@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Offentlig",
     "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
     "Community" : "Community",
@@ -10,7 +11,6 @@
     "Group" : "Grupp",
     "Searching" : "Söker",
     "No matches" : "Inga träffar",
-    "Public" : "Offentlig",
     "Name" : "Namn",
     "Access" : "Åtkomst",
     "Max" : "Max",

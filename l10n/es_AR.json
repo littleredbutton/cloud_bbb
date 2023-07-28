@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Público",
     "Back to %s" : "Volver a %s",
     "Save" : "Guardar",
     "Community" : "Comunidad",
@@ -6,7 +7,6 @@
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
-    "Public" : "Público",
     "Name" : "Nombre",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",

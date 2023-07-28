@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Offentlig",
     "Room not found" : "Rom ikke funnet",
     "Back to %s" : "Tilbake til %s",
     "Save" : "Lagre",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "Hello %s" : "Hei %s",
     "Group" : "Gruppe",
     "No matches" : "Ingen treff",
-    "Public" : "Offentlig",
     "Name" : "Navn",
     "Access" : "Tilgang",
     "Max" : "Maks",

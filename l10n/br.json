@@ -1,4 +1,5 @@
 { "translations": {
+    "Public" : "Publik",
     "Back to %s" : "Distro da %s",
     "Save" : "Enrollañ",
     "Community" : "Kumuniezh",
@@ -8,7 +9,6 @@
     "Hello %s" : "Degemer mat %s",
     "Group" : "Stollad",
     "No matches" : "Kejadenn ebet",
-    "Public" : "Publik",
     "Name" : "Anv",
     "Edit" : "Cheñch",
     "Create" : "Krouiñ",

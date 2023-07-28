@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "ציבורי",
     "BigBlueButton Integration" : "שילוב עם BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "שילוב של BigBlueButton עם Nextcloud",
     "Back to %s" : "חזרה אל %s",
@@ -15,7 +16,6 @@ OC.L10N.register(
     "Have an account? Log in." : "יש לך חשבון? כדאי לך להיכנס.",
     "Hello %s" : "שלום %s",
     "Group" : "קבוצה",
-    "Public" : "ציבורי",
     "Name" : "שם",
     "Access" : "גישה",
     "Max" : "מרבי",

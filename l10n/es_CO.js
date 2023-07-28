@@ -1,12 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Público",
     "Save" : "Guardar",
     "Display name" : "Nombre a desplegar",
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
-    "Public" : "Público",
     "Name" : "Nombre",
     "Access" : "Acceso",
     "Edit" : "Editar",

@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "You created the room %s." : "ایجاد روم %s",
     "You deleted the room %s." : "پاک کردن روم %s",
+    "Public" : "عمومی",
     "Room not found" : "اتاق یافت نشد",
     "The room could not be found. Maybe it was deleted?" : "اتاق پیدا نشد. شاید حذف شده است؟",
     "Save" : "ذخیره",
@@ -13,7 +14,6 @@ OC.L10N.register(
     "Join" : "ملحق شدن",
     "Hello %s" : "سلام %s",
     "Group" : "گروه",
-    "Public" : "عمومی",
     "Name" : "نام",
     "Access" : "دسترسی",
     "Record" : "ضبط",

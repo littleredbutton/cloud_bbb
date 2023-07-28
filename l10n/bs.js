@@ -1,10 +1,10 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Javno",
     "Save" : "Spremi",
     "Password" : "Lozinka",
     "Group" : "Grupa",
-    "Public" : "Javno",
     "Name" : "Ime",
     "Edit" : "Izmjeni",
     "Create" : "Ustvari",

@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Јавна",
     "Back to %s" : "Врати се на %s",
     "Save" : "Зачувај",
     "Community" : "Заедница",
@@ -10,7 +11,6 @@ OC.L10N.register(
     "Hello %s" : "Здраво %s",
     "Group" : "Група",
     "No matches" : "Нема совпаѓања",
-    "Public" : "Јавна",
     "Name" : "Име",
     "Access" : "Пристап",
     "Edit" : "Уреди",

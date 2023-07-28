@@ -1,12 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Нийтийн",
     "Save" : "Хадгалах",
     "Display name" : "Харагдах нэр",
     "Password" : "Нууц үг",
     "Hello %s" : "Сайн байна уу, %s",
     "Group" : "Бүлэг",
-    "Public" : "Нийтийн",
     "Name" : "Нэр",
     "Edit" : "засварлах",
     "Welcome" : "Тавтай морил",

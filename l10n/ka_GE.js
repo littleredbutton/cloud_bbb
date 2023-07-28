@@ -1,12 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "ღია",
     "Save" : "შენახვა",
     "Display name" : "დისპლეი სახელი",
     "Password" : "პაროლი",
     "Hello %s" : "გამარჯობა, %s",
     "Group" : "ჯგუფი",
-    "Public" : "ღია",
     "Name" : "სახელი",
     "Access" : "წვდომა",
     "Edit" : "ცვლილება",

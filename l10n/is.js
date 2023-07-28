@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Opinbert",
     "Back to %s" : "Til baka í %s",
     "Save" : "Vista",
     "Community" : "Samfélag",
@@ -9,7 +10,6 @@ OC.L10N.register(
     "Join" : "Taka þátt",
     "Hello %s" : "Halló %s",
     "Group" : "Hópur",
-    "Public" : "Opinbert",
     "Name" : "Nafn",
     "Access" : "Aðgangur",
     "Edit" : "Breyta",

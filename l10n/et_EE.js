@@ -1,12 +1,12 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Avalik",
     "Save" : "Salvesta",
     "Display name" : "Kuvatav nimi",
     "Password" : "Parool",
     "Hello %s" : "Tere %s",
     "Group" : "Grupp",
-    "Public" : "Avalik",
     "Name" : "Nimi",
     "Access" : "Ligipääs",
     "Edit" : "Redigeeri",

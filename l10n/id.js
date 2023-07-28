@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Publik",
     "API URL or secret not configured. Please contact your administrator." : "Rahasia atau URL API belum dikonfigurasikan. Silakan hubungi administrator Anda.",
     "BigBlueButton Integration" : "Integrasi BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integrasi BigBlueButton untuk Nextcloud",
@@ -19,7 +20,6 @@ OC.L10N.register(
     "Join" : "Gabung",
     "Hello %s" : "Halo %s",
     "Group" : "Grup",
-    "Public" : "Publik",
     "Name" : "Nama",
     "Max" : "Maksimum",
     "Record" : "Rekam",

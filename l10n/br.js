@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Publik",
     "Back to %s" : "Distro da %s",
     "Save" : "Enrollañ",
     "Community" : "Kumuniezh",
@@ -10,7 +11,6 @@ OC.L10N.register(
     "Hello %s" : "Degemer mat %s",
     "Group" : "Stollad",
     "No matches" : "Kejadenn ebet",
-    "Public" : "Publik",
     "Name" : "Anv",
     "Edit" : "Cheñch",
     "Create" : "Krouiñ",

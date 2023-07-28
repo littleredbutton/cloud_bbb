@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "පොදු",
     "Save" : "සුරකින්න",
     "Restrictions" : "සීමා",
     "Please enter your name!" : "ඔබේ නම ඇතුලත් කරන්න!",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "Hello %s" : "ආයුබෝවන් %s",
     "Group" : "සමූහය",
     "Searching" : "සොයමින්",
-    "Public" : "පොදු",
     "Name" : "නම",
     "Max" : "උපරිම",
     "Edit" : "සංස්කරණය",

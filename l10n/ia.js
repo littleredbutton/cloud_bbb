@@ -1,11 +1,11 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Public",
     "Save" : "Salveguardar",
     "Display name" : "Monstrar nomine",
     "Password" : "Contrasigno",
     "Group" : "Gruppo",
-    "Public" : "Public",
     "Name" : "Nomine",
     "Edit" : "Modificar",
     "Create" : "Crear",
