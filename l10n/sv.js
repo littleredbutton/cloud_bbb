@@ -26,6 +26,7 @@ OC.L10N.register(
     "Error" : "Fel",
     "Server error" : "Serverfel",
     "moderator" : "moderator",
+    "admin" : "admin",
     "Share" : "Dela",
     "Loading" : "Läser in",
     "Settings saved" : "Inställningar sparade",
