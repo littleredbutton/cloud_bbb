@@ -24,6 +24,7 @@ OC.L10N.register(
     "Delete?" : "Slet?",
     "Server error" : "Serverfejl",
     "moderator" : "moderator",
+    "admin" : "admin",
     "Share" : "Del",
     "Loading" : "Indlæser",
     "Settings saved" : "Indstillinger gemt"
