@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "администратор",
     "Share" : "Сподели",
     "Loading" : "Зареждане",
-    "You are not allowed to change this option, because this room is shared with you." : "Нямате право да променяте тази опция, защото тази стая е споделена с вас.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Нямате право да променяте тази опция, защото тази стая е споделена с вас.",
     "Max. rooms" : "Макс. стаи",
     "Max. participants" : "Макс. участници ",
     "Group …" : "Група ...",

@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "správca",
     "Share" : "Sprístupňovať",
     "Loading" : "Načítava sa...",
-    "You are not allowed to change this option, because this room is shared with you." : "Túto možnosť nemôžete zmeniť, pretože táto miestnosť je s vami zdieľaná.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Túto možnosť nemôžete zmeniť, pretože táto miestnosť je s vami zdieľaná.",
     "Max. rooms" : "Maximálny počet miestností",
     "Max. participants" : "Maximálny počet účastníkov",
     "Group …" : "Skupina ...",

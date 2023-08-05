@@ -107,7 +107,7 @@
     "admin" : "skrbnik",
     "Share" : "Souporaba",
     "Loading" : "Poteka nalaganje ...",
-    "You are not allowed to change this option, because this room is shared with you." : "Za spreminjanje te možnosti nimate ustreznih dovoljenj, soba je le v souporabi.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Za spreminjanje te možnosti nimate ustreznih dovoljenj, soba je le v souporabi.",
     "Max. rooms" : "Največ sob",
     "Max. participants" : "Največ udeležencev",
     "Group …" : "Skupina ...",

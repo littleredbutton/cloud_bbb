@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "Administrator",
     "Share" : "Teilen",
     "Loading" : "Lade",
-    "You are not allowed to change this option, because this room is shared with you." : "Du bist nicht berechtigt, diese Einstellung zu ändern, da dieser Raum mit dir geteilt wurde.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Du bist nicht berechtigt, diesen Raum weiter zu teilen, da dieser Raum mit dir geteilt wurde.",
     "Max. rooms" : "Max. Räume",
     "Max. participants" : "Max. Teilnehmer",
     "Group …" : "Gruppe …",

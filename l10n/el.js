@@ -96,7 +96,7 @@ OC.L10N.register(
     "admin" : "διαχειριστής",
     "Share" : "Κοινή χρήση",
     "Loading" : "Γίνεται φόρτωση",
-    "You are not allowed to change this option, because this room is shared with you." : "Δεν επιτρέπεται να αλλάξετε αυτήν την επιλογή, επειδή αυτό το δωμάτιο είναι κοινόχρηστο μαζί σας.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Δεν επιτρέπεται να αλλάξετε αυτήν την επιλογή, επειδή αυτό το δωμάτιο είναι κοινόχρηστο μαζί σας.",
     "Max. rooms" : "Μέγιστα δωμάτια",
     "Max. participants" : "Μέγιστος αριθμός συμμετεχόντων",
     "Group …" : "Ομάδα...",

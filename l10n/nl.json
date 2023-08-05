@@ -112,7 +112,7 @@
     "admin" : "admin",
     "Share" : "Delen",
     "Loading" : "Laden",
-    "You are not allowed to change this option, because this room is shared with you." : "U mag deze optie niet wijzigen, omdat deze kamer met u wordt gedeeld.",
+    "You are not allowed to share this room further, because this room is shared with you." : "U mag deze optie niet wijzigen, omdat deze kamer met u wordt gedeeld.",
     "Max. rooms" : "Max. ruimtes",
     "Max. participants" : "Max. deelnemers",
     "Group …" : "Groep …",

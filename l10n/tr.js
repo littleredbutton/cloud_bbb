@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "yönetici",
     "Share" : "Paylaş",
     "Loading" : "Yükleniyor",
-    "You are not allowed to change this option, because this room is shared with you." : "Bu oda sizinle paylaşılmış olduğundan bu ayarı değiştiremezsiniz.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Bu oda sizinle paylaşılmış olduğundan bu ayarı değiştiremezsiniz.",
     "Max. rooms" : "En fazla oda sayısı",
     "Max. participants" : "En fazla katılımcı sayısı",
     "Group …" : "Grup …",

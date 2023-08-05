@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "admin",
     "Share" : "Share",
     "Loading" : "Loading",
-    "You are not allowed to change this option, because this room is shared with you." : "You are not allowed to change this option, because this room is shared with you.",
+    "You are not allowed to share this room further, because this room is shared with you." : "You are not allowed to share this room further, because this room is shared with you.",
     "Max. rooms" : "Max. rooms",
     "Max. participants" : "Max. participants",
     "Group …" : "Group …",

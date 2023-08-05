@@ -109,7 +109,7 @@ OC.L10N.register(
     "admin" : "admin",
     "Share" : "Dijeli",
     "Loading" : "Učitavanje",
-    "You are not allowed to change this option, because this room is shared with you." : "Ne možete mijenjati ovu mogućnost jer soba nije dijeljena s vama.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Ne možete mijenjati ovu mogućnost jer soba nije dijeljena s vama.",
     "Max. rooms" : "Maks. soba",
     "Max. participants" : "Maks. sudionika",
     "Group …" : "Grupa...",

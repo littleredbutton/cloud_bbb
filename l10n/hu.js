@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "admin",
     "Share" : "Megosztás",
     "Loading" : "Betöltés",
-    "You are not allowed to change this option, because this room is shared with you." : "Nem módosíthatja ezt a beállítást, mert a szobát megosztják Önnel.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Nem módosíthatja ezt a beállítást, mert a szobát megosztják Önnel.",
     "Max. rooms" : "Szobák legnagyobb száma",
     "Max. participants" : "Részvevők legnagyobb száma",
     "Group …" : "Csoport…",

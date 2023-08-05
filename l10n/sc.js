@@ -111,7 +111,7 @@ OC.L10N.register(
     "admin" : "amministratzione",
     "Share" : "Cumpartzi",
     "Loading" : "Carrighende",
-    "You are not allowed to change this option, because this room is shared with you." : "Non t'est permìtidu de cambiare custa optzione, ca custa istantza est cumpartzida cun tegus.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Non t'est permìtidu de cambiare custa optzione, ca custa istantza est cumpartzida cun tegus.",
     "Max. rooms" : "Màssimu de istantzas",
     "Max. participants" : "Màssimu de partetzipantes",
     "Group …" : "Grupu …",

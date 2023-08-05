@@ -115,7 +115,7 @@ OC.L10N.register(
     "admin" : "správce",
     "Share" : "Sdílet",
     "Loading" : "Načítání",
-    "You are not allowed to change this option, because this room is shared with you." : "Nemáte oprávnění měnit tuto volbu, protože tato místnost je vám jen nasdílena.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Nemáte oprávnění měnit tuto volbu, protože tato místnost je vám jen nasdílena.",
     "Max. rooms" : "Nejvýše místností",
     "Max. participants" : "Nejvýše účastníků",
     "Group …" : "Skupina…",

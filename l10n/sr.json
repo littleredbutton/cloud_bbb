@@ -113,7 +113,7 @@
     "admin" : "админ",
     "Share" : "Подели",
     "Loading" : "Учитавам",
-    "You are not allowed to change this option, because this room is shared with you." : "Није вам дозвољено да измените ову опцију јер се ова соба дели са вама.",
+    "You are not allowed to share this room further, because this room is shared with you." : "Није вам дозвољено да измените ову опцију јер се ова соба дели са вама.",
     "Max. rooms" : "Макс. бр. соба",
     "Max. participants" : "Макс. бр. учесника",
     "Group …" : "Група ...",

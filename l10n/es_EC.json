@@ -113,7 +113,7 @@
     "admin" : "admin",
     "Share" : "Compartir",
     "Loading" : "Cargando",
-    "You are not allowed to change this option, because this room is shared with you." : "No tienes permitido cambiar esta opción porque esta sala se comparte contigo.",
+    "You are not allowed to share this room further, because this room is shared with you." : "No tienes permitido cambiar esta opción porque esta sala se comparte contigo.",
     "Max. rooms" : "Máx. salas",
     "Max. participants" : "Máx. participantes",
     "Group …" : "Grupo...",
