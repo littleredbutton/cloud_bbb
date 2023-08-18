@@ -5,6 +5,7 @@ OC.L10N.register(
     "Save" : "ບັນທຶກ",
     "Community" : "ຊຸມຊົນ",
     "Password" : "ລະຫັດຜ່ານ",
+    "Hello %s" : "ສະບາຍດີ 1%s",
     "Group" : "ກຸ່ມ",
     "Name" : "ຊື່",
     "Edit" : "ແກ້ໄຂ",
