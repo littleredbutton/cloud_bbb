@@ -4,6 +4,7 @@ OC.L10N.register(
     "Save" : "Cadw",
     "Display name" : "Enw Dangos",
     "Password" : "Cyfrinair",
+    "Hello %s" : "Helo %s",
     "Group" : "Grŵp",
     "Name" : "Enw",
     "Edit" : "Golygu",
