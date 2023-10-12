@@ -125,7 +125,7 @@ OC.L10N.register(
     "Settings saved" : "Nastavenia uložené",
     "Unexpected error occurred" : "Vyskytla sa neočakávaná chyba",
     "API URL is invalid" : "URL API je neplatná",
-    "API secret is invalid" : "API tajomstvo je neplatné",
+    "API secret is invalid" : "Tajný kľúč API je neplatný",
     "URL has to start with HTTPS" : "URL by mala začínať na HTTPS",
     "URL has to contain the {token} placeholder" : "URL by malo obsahovať {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL musí začínať na https:// a obsahovať {token}. Dodatočne môže byť použitý {user}.",
