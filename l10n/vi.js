@@ -37,6 +37,7 @@ OC.L10N.register(
     "Room name" : "Tên phòng",
     "Create" : "Tạo mới",
     "Open recording" : "Mở bản ghi",
+    "Copy to clipboard" : "Sao chép vào clipboard",
     "Save as file" : "Lưu dưới dạng tệp",
     "_%n participant_::_%n participants_" : ["%n người tham gia"],
     "Delete" : "Xóa",
