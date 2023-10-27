@@ -95,6 +95,10 @@ pre {
   }
 }
 
+#bbb-react-root table tbody tr td {
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
 #bbb-react-root,
 #bbb-restrictions {
   #bbb-warning,
