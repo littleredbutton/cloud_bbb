@@ -17,6 +17,6 @@ return [
 		['name' => 'join#index', 'url' => '/b/{token}/{moderatorToken}', 'verb' => 'GET', 'defaults' => ['moderatorToken' => '']],
 		['name' => 'restriction#user', 'url' => '/restrictions/user', 'verb' => 'GET'],
 		['name' => 'hook#meetingEnded', 'url' => '/hook/ended/{token}/{mac}', 'verb' => 'GET'],
-		['name' => 'hook#recordingReady', 'url' => '/hook/recording/{token}/{mac}', 'verb' => 'GET'],
+		['name' => 'hook#recordingReady', 'url' => '/hook/recording/{token}/{mac}', 'verb' => 'POST'],
 	]
 ];
