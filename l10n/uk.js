@@ -58,6 +58,7 @@ OC.L10N.register(
     "Could not delete record" : "Неможливо вилучити запис",
     "Server error" : "Помилка серверу",
     "moderator" : "модератор",
+    "admin" : "адміністратор",
     "Share" : "Спільний доступ",
     "Loading" : "Завантаження",
     "Settings saved" : "Налаштування збережено",
