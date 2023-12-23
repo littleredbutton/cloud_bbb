@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "İctimai",
     "Save" : "Saxla",
     "Password" : "Şifrə",
     "Hello %s" : "Salam %s",
