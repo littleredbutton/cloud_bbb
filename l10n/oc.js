@@ -22,6 +22,7 @@ OC.L10N.register(
     "Recordings" : "Enregistraments",
     "Edit" : "Modificar",
     "Welcome" : "Benvengut",
+    "Recording" : "Enregistrament",
     "Room name" : "Nom de la sala",
     "Create" : "Crear",
     "Copy to clipboard" : "Copiar dins lo quichapapièrs",
