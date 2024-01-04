@@ -1,0 +1,28 @@
+OC.L10N.register(
+    "bbb",
+    {
+    "Public" : "Public",
+    "Back to %s" : "Back to %s",
+    "Save" : "Save",
+    "Community" : "Community",
+    "Display name" : "Display name",
+    "Password" : "პაროლი",
+    "Join" : "Join",
+    "Hello %s" : "Hello %s",
+    "Group" : "Group",
+    "No matches" : "No matches",
+    "Name" : "Name",
+    "Edit" : "Edit",
+    "Welcome" : "Welcome",
+    "Miscellaneous" : "Miscellaneous",
+    "Recording" : "Recording",
+    "Create" : "Create",
+    "Copy to clipboard" : "Copy to clipboard",
+    "Delete" : "Delete",
+    "Error" : "Error",
+    "moderator" : "moderator",
+    "Share" : "Share",
+    "Loading" : "Loading",
+    "Settings saved" : "Settings saved"
+},
+"nplurals=2; plural=(n!=1);");
