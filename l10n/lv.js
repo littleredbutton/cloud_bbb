@@ -20,6 +20,7 @@ OC.L10N.register(
     "Recordings" : "Ieraksta",
     "Edit" : "Rediģēt",
     "Welcome" : "Laipni lūdzam!",
+    "Miscellaneous" : "Dažādi",
     "Room name" : "Sapulču telpas nosaukums",
     "Create" : "Izveidot",
     "Copy to clipboard" : "Kopēt starpliktuvē",
