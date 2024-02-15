@@ -11,6 +11,7 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["%n participante","%n participantes"],
     "Delete" : "Desaniciar",
     "Error" : "Error",
+    "Settings saved" : "Guardóse la configuración",
     "API secret is invalid" : "El secretu de l'API ye inválidu"
 },
 "nplurals=2; plural=(n != 1);");
