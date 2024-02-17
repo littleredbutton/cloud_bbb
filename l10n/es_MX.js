@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Público",
+    "Back to %s" : "Volver a %s",
     "Save" : "Guardar",
     "Community" : "Comunidad",
     "Display name" : "Nombre a desplegar",
