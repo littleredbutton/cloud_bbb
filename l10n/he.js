@@ -27,7 +27,7 @@ OC.L10N.register(
     "Room name" : "שם החדר",
     "Create" : "יצירה",
     "Copy to clipboard" : "העתקה ללוח הגזירים",
-    "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים","%n משתתפים"],
+    "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים"],
     "Delete" : "מחיקה",
     "Delete \"{name}\"?" : "למחוק את „{name}”?",
     "Select target folder" : "בחירת תיקיית יעד",
@@ -47,4 +47,4 @@ OC.L10N.register(
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
     "API secret is invalid" : "סוד ה־API שגוי"
 },
-"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
+"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
