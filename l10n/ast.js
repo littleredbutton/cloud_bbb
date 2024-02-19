@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Save" : "Guardar",
     "Let's go!" : "¡Vamos!",
+    "Display name" : "Nome visible",
     "Password" : "Contraseña",
     "Hello %s" : "Hola, %s",
     "Name" : "Nome",

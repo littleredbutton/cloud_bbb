@@ -1,6 +1,7 @@
 { "translations": {
     "Save" : "Guardar",
     "Let's go!" : "¡Vamos!",
+    "Display name" : "Nome visible",
     "Password" : "Contraseña",
     "Hello %s" : "Hola, %s",
     "Name" : "Nome",
