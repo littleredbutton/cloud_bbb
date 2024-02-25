@@ -72,7 +72,7 @@ OC.L10N.register(
     "Only selected users and groups are allowed to access the room." : "Isceti is utentes e grupos seletzionados podent atzèdere a s'istantza.",
     "If disabled, a microphone is needed to join the conference." : "Cando disativadu, serbit unu micròfonu pro intrare in sa cunferèntzia.",
     "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "Cando ativadu, s'utente non depet atuare una mutida echo e un'anteprima de sa telecàmera a sa primu intrada (a disponimentu dae su serbidore BBB 2.3).",
-    "If enabled, the user list, chat area and presentation are hidden by default." : "Cando ativadu, sa lista de utentes, s'àrea de tzarrada e presentzatzione sunt cuados comente impostatzione predefinida.",
+    "If enabled, the user list, chat area and presentation are hidden by default." : "Cando ativadu, sa lista de utentes, s'àrea de tzarrada e presentzatzione sunt cuados comente cunfiguratzione predefinida.",
     "If enabled, all users will join the meeting muted." : "Cando ativu, totu is utentes ant a intrare in sa riunione a sa muda.",
     "Edit \"{room}\"" : "Modìfica \"{room}\"",
     "Room URL" : "URL istantza",
