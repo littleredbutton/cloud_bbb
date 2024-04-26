@@ -6,7 +6,6 @@ namespace OCA\BigBlueButton\Search;
 
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Service\RoomService;
-use OCA\BigBlueButton\Db\Room;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\IUser;
@@ -14,7 +13,6 @@ use OCP\Search\IProvider;
 use OCP\Search\ISearchQuery;
 use OCP\Search\SearchResult;
 use OCP\Search\SearchResultEntry;
-use function array_map;
 
 class Provider implements IProvider {
 	/** @var RoomService */
@@ -42,14 +40,14 @@ class Provider implements IProvider {
 
 	public function getOrder(string $route, array $routeParameters): int {
 		if (strpos($route, Application::ID . '.') === 0) {
-            return -1;
-        }
+			return -1;
+		}
 		return Application::ORDER;
 	}
 
 	private function getAccess(string $access): string {
 		switch ($access) {
-			case 'public': 
+			case 'public':
 				$translatedAccess = $this->l10n->t('Public');
 				break;
 			case 'password':
@@ -71,7 +69,7 @@ class Provider implements IProvider {
 		return $translatedAccess;
 	}
 
-    public function search(IUser $user, ISearchQuery $query): SearchResult {
+	public function search(IUser $user, ISearchQuery $query): SearchResult {
 		$rooms = $this->service->search(
 			$user,
 			$query
@@ -79,7 +77,7 @@ class Provider implements IProvider {
 
 		$results = [];
 
-		foreach($rooms as $room) {
+		foreach ($rooms as $room) {
 			$results[] = new SearchResultEntry(
 				'',
 				$room->getName(),
@@ -89,9 +87,9 @@ class Provider implements IProvider {
 			);
 		}
 
-        return SearchResult::complete(
+		return SearchResult::complete(
 			'BBB',
-            $results
+			$results
 		);
-	}	
+	}
 }
