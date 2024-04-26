@@ -110,8 +110,8 @@ class RoomMapper extends QBMapper {
 			->from($this->tableName, 'r')
 			->where($qb->expr()->eq('r.user_id', $qb->createNamedParameter($userId)))
 			->andwhere($qb->expr()->ILike('name',
-			$qb->createNamedParameter('%' . $this->db->escapeLikeParameter($query) . '%', IQueryBuilder::PARAM_STR),
-			IQueryBuilder::PARAM_STR));
+				$qb->createNamedParameter('%' . $this->db->escapeLikeParameter($query) . '%', IQueryBuilder::PARAM_STR),
+				IQueryBuilder::PARAM_STR));
 
 		/** @var array<Room> */
 		return $this->findEntities($qb);
