@@ -61,7 +61,7 @@
 		"extends @nextcloud/browserslist-config"
 	],
 	"engines": {
-		"node": ">=14.0.0"
+		"node": ">=16.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.9.0",
