@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.6.0 (2024-04-28)
+### Added
+- add Search Provider
+- bump Nextcloud version (max 28)
+
 ## 2.5.0 (2023-07-27)
 ### Added
 - bump Nextcloud version (min 25, max 27)
