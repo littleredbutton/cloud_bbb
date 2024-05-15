@@ -75,7 +75,7 @@ class RoomMapper extends QBMapper {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
 		$this->joinShares($qb)
-			->addSelect($qb->createFunction('min(case when `r`.`user_id` ='. $qb->createNamedParameter($userId).' then '.RoomShare::PERMISSION_ADMIN.' else `s`.`permission` end) as permission'))
+			->addSelect($qb->createFunction('min(case when '.$qb->expr()->eq('r.user_id', $qb->createNamedParameter($userId)).' then '.RoomShare::PERMISSION_ADMIN.' else `s`.`permission` end) as permission'))
 			->where(
 				$qb->expr()->orX(
 					$qb->expr()->eq('r.user_id', $qb->createNamedParameter($userId)),
