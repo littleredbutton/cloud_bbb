@@ -194,7 +194,11 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <span></span>;
 	}
 
+<<<<<<< HEAD
 	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
+=======
+	function edit(field: string, type: 'text' | 'number' = 'text', canEdit: boolean = true, options?) {
+>>>>>>> 63daf83 (feat: manage view of rooms for moderators and users)
 		return canEdit ?
 			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
 			:
