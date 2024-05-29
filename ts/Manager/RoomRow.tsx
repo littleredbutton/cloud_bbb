@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { api, Recording, Room, Restriction, Access } from '../Common/Api';
+import { api, Recording, Room, Restriction, Access, Permission } from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
@@ -172,8 +172,11 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <span></span>;
 	}
 
-	function edit(field: string, type: 'text' | 'number' = 'text', options?) {
-		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />;
+	function edit(field: string, type: 'text' | 'number' = 'text', canEdit: boolean = true, options?) {
+		return canEdit ?
+			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
+			:
+			<span>{room[field]}</span>;
 	}
 
 	function cloneRow() {
@@ -188,6 +191,8 @@ const RoomRow: React.FC<Props> = (props) => {
 
 	const maxParticipantsLimit = props.restriction?.maxParticipants || -1;
 	const minParticipantsLimit = (props.restriction?.maxParticipants || -1) < 1 ? 0 : 1;
+
+	const adminRoom = room.permission === null || room.permission === Permission.Admin;
 
 	return (
 		<>
@@ -210,7 +215,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					</button>
 				</td>
 				<td className="name">
-					{edit('name')}
+					{edit('name', 'text', adminRoom)}
 				</td>
 				<td className="bbb-shrink">
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
@@ -220,25 +225,40 @@ const RoomRow: React.FC<Props> = (props) => {
 					{accessToIcon(room.access)}
 				</td>
 				<td className="max-participants bbb-shrink">
-					{edit('maxParticipants', 'number', {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
+					{edit('maxParticipants', 'number', adminRoom, {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
 				</td>
+				{adminRoom &&
 				<td className="record bbb-shrink">
 					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
 					<label htmlFor={`bbb-record-${room.id}`}></label>
 				</td>
-				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
-				<td className="edit icon-col">
-					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+				}
+				{!adminRoom &&
+				<td className="record bbb-shrink">
+					<span className={"icon "+(room.record ? "icon-checkmark" : "icon-close")+" icon-visible"}></span>
+				</td>
+				}
+				<td className="bbb-shrink">
+					{adminRoom &&
+					<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />
+					}
 				</td>
 				<td className="clone icon-col">
 					<button className="action-item" onClick={cloneRow} title={t('bbb', 'Clone Room')}>
 						<span className="icon icon-template-add icon-visible"></span>
 					</button>
 				</td>
+				<td className="edit icon-col">
+					{adminRoom &&
+					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+					}
+				</td>
 				<td className="remove icon-col">
+					{adminRoom &&
 					<button className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>
 						<span className="icon icon-delete icon-visible"></span>
 					</button>
+					}
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">
