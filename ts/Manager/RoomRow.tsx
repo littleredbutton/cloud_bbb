@@ -155,6 +155,28 @@ const RoomRow: React.FC<Props> = (props) => {
 		);
 	}
 
+	function publishRecording(recording: Recording, publish: boolean) {
+		api.publishRecording(recording.id, publish).then(success=> {
+			if (recordings === null) {
+				return;
+			}
+			setRecordings(recordings.map(recordItem => {
+				if (recordItem.id === recording.id) {
+					recordItem.published = success;
+					recordItem.state = success ? 'published' : 'unpublished';
+				}
+				return recordItem;
+			}));
+		}).catch(err => {
+			console.warn('Could not modify publishing state', err);
+			OC.dialogs.info(
+				t('bbb', 'Could not modify publishing state'),
+				t('bbb', 'Server error'),
+				() => undefined,
+			);
+		});
+	}
+
 	function accessToIcon(access: string) {
 		switch(access) {
 		case Access.Public:
@@ -172,7 +194,7 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <span></span>;
 	}
 
-	function edit(field: string, type: 'text' | 'number' = 'text', canEdit: boolean = true, options?) {
+	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
 		return canEdit ?
 			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
 			:
@@ -235,11 +257,11 @@ const RoomRow: React.FC<Props> = (props) => {
 				}
 				{!adminRoom &&
 				<td className="record bbb-shrink">
-					<span className={"icon "+(room.record ? "icon-checkmark" : "icon-close")+" icon-visible"}></span>
+					<span className={'icon '+(room.record ? 'icon-checkmark' : 'icon-close')+' icon-visible'}></span>
 				</td>
 				}
 				<td className="bbb-shrink">
-					{adminRoom &&
+					{(adminRoom || true ) &&
 					<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />
 					}
 				</td>
@@ -265,7 +287,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td colSpan={11}>
 					<table>
 						<tbody>
-							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}
+							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} isAdmin={adminRoom} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} publishRecording={publishRecording} />)}
 						</tbody>
 					</table>
 				</td>

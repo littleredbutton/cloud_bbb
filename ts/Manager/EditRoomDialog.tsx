@@ -123,17 +123,18 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 				updateProperty('access', value);
 			})}
 
-			{room.access === Access.InternalRestricted && <div className="bbb-form-element bbb-form-shareWith">
-				<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />
-				<em>{descriptions.internalRestrictedShareWith}</em>
-			</div>}
-
 			<div className="bbb-form-element">
-				<label htmlFor={'bbb-moderator'}>
-					<h3>Moderator</h3>
+				<label htmlFor={'bbb-sharing'}>
+					<h3>{t('bbb', 'Sharing')}</h3>
 				</label>
 
-				{!room.everyoneIsModerator && <ShareWith permission={Permission.Moderator} room={room} shares={shares} setShares={setShares} />}
+				{<ShareWith permission={Permission.User} room={room} shares={shares} setShares={setShares} />}
+
+				{room.access === Access.InternalRestricted &&
+					<div className="bbb-form-element bbb-form-shareWith">
+						<span className="icon icon-details icon-visible"></span><em>{`${t('bbb', 'Access')} : ${descriptions.internalRestrictedShareWith}`}</em>
+					</div>
+				}
 
 				<div className="bbb-mt-1">
 					<input id={`bbb-everyoneIsModerator-${room.id}`}

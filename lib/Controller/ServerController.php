@@ -88,11 +88,17 @@ class ServerController extends Controller {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
 		}
 
-		if (!$this->permission->isAdmin($room, $this->userId)) {
+		if (!$this->permission->isUser($room, $this->userId)) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		$recordings = $this->server->getRecordings($room);
+
+		if (!$this->permission->isAdmin($room, $this->userId)) {
+			$recordings = array_filter($recordings, function ($recording) {
+				return $recording['published'];
+			});
+		}
 
 		return new DataResponse($recordings);
 	}
