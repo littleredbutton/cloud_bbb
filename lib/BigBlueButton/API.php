@@ -10,6 +10,7 @@ use BigBlueButton\Parameters\GetRecordingsParameters;
 use BigBlueButton\Parameters\InsertDocumentParameters;
 use BigBlueButton\Parameters\IsMeetingRunningParameters;
 use BigBlueButton\Parameters\JoinMeetingParameters;
+use BigBlueButton\Parameters\PublishRecordingsParameters;
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\AvatarRepository;
 use OCA\BigBlueButton\Crypto;
@@ -260,6 +261,14 @@ class API {
 		$response = $this->getServer()->deleteRecordings($deleteParams);
 
 		return $response->isDeleted();
+	}
+
+	public function publishRecording(string $recordingId, bool $published): bool {
+		$publishParams = new PublishRecordingsParameters($recordingId, $published);
+
+		$response = $this->getServer()->publishRecordings($publishParams);
+
+		return $response->isPublished();
 	}
 
 	/**

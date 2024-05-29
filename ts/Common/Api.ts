@@ -201,6 +201,14 @@ class Api {
 		return response.data;
 	}
 
+	public async publishRecording(id: string, publish: boolean,) {
+		const response = await axios.post(this.getUrl(`server/record/${id}/publish`), {
+			published: publish,
+		});
+
+		return response.data;
+	}
+
 	public async storeRecording(recording: Recording, path: string) {
 		const startDate = new Date(recording.startTime);
 		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
