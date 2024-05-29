@@ -265,9 +265,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				}
 				<td className="bbb-shrink">
-					{(adminRoom || true ) &&
-					<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />
-					}
+					{<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />}
 				</td>
 				<td className="clone icon-col">
 					<button
