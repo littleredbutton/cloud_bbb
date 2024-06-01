@@ -29,6 +29,11 @@ script('bbb', 'restrictions');
             <label for="bbb-join-theme"><?php p($l->t('Use Nextcloud theme in BigBlueButton.')); ?></label>
         </p>
 
+        <p>
+            <input type="checkbox" name="avatar.enabled" id="bbb-avatar-enabled" class="checkbox bbb-setting" value="1" <?php p($_['avatar.enabled']); ?> />
+            <label for="bbb-avatar-enabled"><?php p($l->t('Use Nextcloud avatars in BBB rooms.')); ?></label>
+        </p>
+
         <h3><?php p($l->t('Default Room Settings')); ?></h3>
         <p><?php p($l->t('Below you can change some default values, which are used to create a new room.')); ?></p>
 

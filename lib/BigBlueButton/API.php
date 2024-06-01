@@ -131,10 +131,12 @@ class API {
 		}
 
 		if ($uid) {
-			$avatarUrl = $this->avatarRepository->getAvatarUrl($room, $uid);
-
 			$joinMeetingParams->setUserID($uid);
-			$joinMeetingParams->setAvatarURL($avatarUrl);
+
+			if ($this->config->getAppValue('bbb', 'avatar.enabled', 'true') === 'true') {
+				$avatarUrl = $this->avatarRepository->getAvatarUrl($room, $uid);
+				$joinMeetingParams->setAvatarURL($avatarUrl);
+			}
 		}
 
 		return $this->getServer()->getJoinMeetingURL($joinMeetingParams);
