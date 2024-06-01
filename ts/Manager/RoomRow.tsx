@@ -198,7 +198,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					</a>
 				</td>
 				<td className="share icon-col">
-					<CopyToClipboard text={api.getRoomUrl(room)}>
+					<CopyToClipboard text={api.getRoomUrl(room)} options={{format:'text/plain'}}>
 						<button className="action-item copy-to-clipboard" title={t('bbb', 'Copy to clipboard')}>
 							<span className="icon icon-clippy icon-visible" ></span>
 						</button>

@@ -17,7 +17,7 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 				</a>
 			</td>
 			<td className="share icon-col">
-				<CopyToClipboard text={recording.url}>
+				<CopyToClipboard text={recording.url} options={{format:'text/plain'}}>
 					<button className="action-item copy-to-clipboard" title={t('bbb', 'Copy to clipboard')}>
 						<span className="icon icon-clippy icon-visible" ></span>
 					</button>
