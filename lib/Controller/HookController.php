@@ -7,6 +7,7 @@ use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
 use OCA\BigBlueButton\Service\RoomService;
+use OCP\IConfig;
 use OCP\AppFramework\Controller;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IRequest;
@@ -27,18 +28,23 @@ class HookController extends Controller {
 	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
+	/** @var IConfig */
+	private $config;
+
 	public function __construct(
 		string $appName,
 		IRequest $request,
 		RoomService $service,
 		AvatarRepository $avatarRepository,
-		IEventDispatcher $eventDispatcher
+		IEventDispatcher $eventDispatcher,
+		IConfig $config
 	) {
 		parent::__construct($appName, $request);
 
 		$this->service = $service;
 		$this->avatarRepository = $avatarRepository;
 		$this->eventDispatcher = $eventDispatcher;
+		$this->config = $config;
 	}
 
 	public function setToken(string $token): void {
@@ -65,7 +71,9 @@ class HookController extends Controller {
 
 		$this->service->updateRunning($room->getId(), false);
 
-		$this->avatarRepository->clearRoom($room->uid);
+		if ($this->config->getAppValue('bbb', 'avatar.enabled', 'true') === 'true') {
+			$this->avatarRepository->clearRoom($room->uid);
+		}		
 
 		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($room, $recordingmarks));
 	}
