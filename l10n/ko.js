@@ -44,7 +44,6 @@ OC.L10N.register(
     "Edit" : "편집",
     "Descriptive name of this room." : "이 대화방에 대한 설명",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "이 대화방의 최대 인원수를 설정합니다. 0은 무제한입니다.",
-    "Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join." : "공개: 링크를 알고 있는 모두가 참가할 수 있습니다. 암호: 손님이 암호를 입력해야 합니다. 대기실: 손님이 참가하기 전 중재자가 수락해야 합니다. 내부용: Nextcloud 사용자만 참가할 수 있습니다.",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "중재자는 모든 참가자에게 추방, 음소거, 발표자로 지정하는 등의 관리를 할 수 있습니다. 중재자 역할의 사용자는 모임을 끝내거나 기본 설정을 바꿀 수도 있습니다.",
     "If enabled, normal users have to wait until a moderator is in the room." : "활성화하면 일반 사용자들은 중재자가 들어올 때까지 기다려야 합니다.",
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "활성화되면 중재자 권한으로 접근할 수 있는 중재자 URL이 생성됩니다.",
