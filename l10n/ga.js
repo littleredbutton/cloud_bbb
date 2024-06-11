@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Poiblí",
+    "Internal" : "Inmheánach",
     "Back to %s" : "Ar ais go dtí %s",
     "Save" : "Sábháil",
     "Community" : "Pobal",
@@ -22,6 +23,7 @@ OC.L10N.register(
     "moderator" : "modhnóir",
     "Share" : "Comhroinn",
     "Loading" : "Ag lódáil",
-    "Settings saved" : "Socruithe sábháilte"
+    "Settings saved" : "Socruithe sábháilte",
+    "Send to" : "Sheoladh chuig"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

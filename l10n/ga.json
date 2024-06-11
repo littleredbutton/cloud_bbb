@@ -1,5 +1,6 @@
 { "translations": {
     "Public" : "Poiblí",
+    "Internal" : "Inmheánach",
     "Back to %s" : "Ar ais go dtí %s",
     "Save" : "Sábháil",
     "Community" : "Pobal",
@@ -20,6 +21,7 @@
     "moderator" : "modhnóir",
     "Share" : "Comhroinn",
     "Loading" : "Ag lódáil",
-    "Settings saved" : "Socruithe sábháilte"
+    "Settings saved" : "Socruithe sábháilte",
+    "Send to" : "Sheoladh chuig"
 },"pluralForm" :"nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);"
 }
