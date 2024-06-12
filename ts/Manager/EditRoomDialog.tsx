@@ -5,14 +5,14 @@ import { Access, Room, Permission, RoomShare, api, Restriction } from '../Common
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
-import { AccessOptions } from '../Common/Translation';
+import { AccessOptions, t_raw} from '../Common/Translation';
 
 const descriptions: { [key: string]: string } = {
 	name: t('bbb', 'Descriptive name of this room.'),
 	welcome: t('bbb', 'This message is shown to all users in the chat area after they joined.'),
 	maxParticipants: t('bbb', 'Sets a limit on the number of participants for this room. Zero means there is no limit.'),
 	recording: t('bbb', 'If enabled, the moderator is able to start the recording.'),
-	access: t('bbb', 'Explanation of the different concepts that constitute access options :<br>- Public: Anyone who has the link can join.- <br>Internal: Only Nextcloud users can join.- <br>Password: Only guests who have the password can join..- <br>Waiting room: A moderator must accept each guest before they can join.- <br>Restricted : Only selected users and groups can access this room.'),
+	access: t_raw('bbb', 'Explanation of the different concepts that constitute access options :<br> - Public: Anyone who has the link can join.<br> - Internal: Only Nextcloud users can join.<br> - Password: Only guests who have the password can join..<br>- Waiting room: A moderator must accept each guest before they can join.<br> - Restricted : Only selected users and groups can access this room.'),
 	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
 	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
 	moderatorToken: t('bbb', 'If enabled, a moderator URL is generated which allows access with moderator permission.'),
@@ -103,7 +103,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 	}
 
 	return (
-		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
+		<Dialog open={open} onClose={() => setOpen(false)} title={t_raw('bbb', 'Edit "{room}"', { room: room.name })}>
 			<div className="bbb-form-element">
 				<h3>{t('bbb', 'Room URL')}</h3>
 				<div className="bbb-input-container">

@@ -45,6 +45,7 @@
 		"colors": "^1.4.0",
 		"dotenv": "^16.0.0",
 		"execa": "^6.1.0",
+		"html-react-parser": "^5.1.10",
 		"libxmljs": "^0.19.8",
 		"qrcode.react": "^2.0.0",
 		"react-copy-to-clipboard": "^5.0.2",

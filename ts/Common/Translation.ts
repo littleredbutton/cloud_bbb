@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import { Access } from './Api';
 
 export const AccessOptions = {
@@ -8,3 +9,7 @@ export const AccessOptions = {
 	[Access.Internal]: t('bbb', 'Internal'),
 	[Access.InternalRestricted]: t('bbb', 'Internal restricted'),
 };
+
+export function t_raw(app: string, string: string, vars?: { [key: string]: string }, count?: number, options?: EscapeOptions){
+	return parse(t(app, string, vars, count, options));
+}
