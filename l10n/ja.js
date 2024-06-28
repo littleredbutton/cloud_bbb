@@ -69,7 +69,6 @@ OC.L10N.register(
     "This message is shown to all users in the chat area after they joined." : "このメッセージは、参加した後にチャットエリア内の全てのユーザーに表示されます。",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "この会議室の参加者数の制限を設定します。ゼロは制限がないことを意味します。",
     "If enabled, the moderator is able to start the recording." : "有効にすると、モデレーターは記録を開始することができます。",
-    "Public: Everyone knowing the link is able to join. Password: Guests have to provide a password. Waiting room: A moderator has to accept every guest before they can join. Internal: Only Nextcloud users can join." : "公開 : リンクを知っている人は誰でも参加できます。パスワード : ゲストはパスワードを提供する必要があります。待合室 : モデレーターはゲストが参加する前にすべてのゲストの入室を許可しなければなりません。内部 : Nextcloudユーザーのみが参加できます。",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "モデレーターは、キック、ミュート、プレゼンターの選択など、会議の参加者全員を管理することができます。モデレーターの役割を持つユーザーは、会議を閉じたり、デフォルトの設定を変更したりすることもできます。",
     "If enabled, normal users have to wait until a moderator is in the room." : "オンにすると、一般ユーザーは司会者が入るまで会議室に入れません。",
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "オンにすると、司会者URLが作成され、会議室に入るのに司会者の許可が必要になります。",
