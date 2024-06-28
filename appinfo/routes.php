@@ -14,6 +14,7 @@ return [
 		['name' => 'server#check', 'url' => '/server/check', 'verb' => 'POST'],
 		['name' => 'server#version', 'url' => '/server/version', 'verb' => 'GET'],
 		['name' => 'server#delete_record', 'url' => '/server/record/{recordId}', 'verb' => 'DELETE'],
+		['name' => 'server#publish_record', 'url' => '/server/record/{recordId}/publish', 'verb' => 'POST'],
 		['name' => 'join#index', 'url' => '/b/{token}/{moderatorToken}', 'verb' => 'GET', 'defaults' => ['moderatorToken' => '']],
 		['name' => 'restriction#user', 'url' => '/restrictions/user', 'verb' => 'GET'],
 		['name' => 'hook#meetingEnded', 'url' => '/hook/ended/{token}/{mac}', 'verb' => 'GET'],
