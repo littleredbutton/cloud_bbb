@@ -13,6 +13,7 @@ OC.L10N.register(
     "Access" : "Acceso",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",
+    "Miscellaneous" : "Misceláneo",
     "Room name" : "Nombre del cuarto",
     "Create" : "Crear",
     "Copy to clipboard" : "Copiar al portapapeles",
