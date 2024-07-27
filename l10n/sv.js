@@ -19,6 +19,7 @@ OC.L10N.register(
     "Edit" : "Redigera",
     "Welcome" : "Välkommen",
     "Miscellaneous" : "Diverse",
+    "Recording" : "Inspelning",
     "Room name" : "Rumsnamn",
     "Create" : "Skapa",
     "Copy to clipboard" : "Kopiera till urklipp",
