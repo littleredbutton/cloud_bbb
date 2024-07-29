@@ -1,5 +1,6 @@
 { "translations": {
     "Public" : "Offentlig",
+    "Internal" : "Intern",
     "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
     "Community" : "Community",
