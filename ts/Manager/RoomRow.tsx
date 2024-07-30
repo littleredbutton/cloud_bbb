@@ -220,7 +220,11 @@ const RoomRow: React.FC<Props> = (props) => {
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
 				<td className="start">
-					<a href={api.getRoomUrl(room)} className={`button ${room.running ? 'success' : 'primary'}`} target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
+					<a href={api.getRoomUrl(room)}
+						className={`button ${room.running ? 'success' : 'primary'}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						title={t('bbb', 'Open room')}>
 						{room.running ? t('bbb', 'Join') : t('bbb', 'Start')}
 					</a>
 				</td>
@@ -264,7 +268,10 @@ const RoomRow: React.FC<Props> = (props) => {
 				{<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />}
 				</td>
 				<td className="clone icon-col">
-					<button className="action-item" onClick={cloneRow} title={t('bbb', 'Clone Room')}>
+					<button
+						className="action-item"
+						onClick={cloneRow}
+						title={t('bbb', 'Clone room')}>
 						<span className="icon icon-template-add icon-visible"></span>
 					</button>
 				</td>
