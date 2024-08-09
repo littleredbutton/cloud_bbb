@@ -32,6 +32,7 @@ OC.L10N.register(
     "Share" : "Dela",
     "Loading" : "Läser in",
     "Settings saved" : "Inställningar sparade",
+    "Send to" : "Skicka till",
     "No rooms available!" : "Inga rum tillgängliga!"
 },
 "nplurals=2; plural=(n != 1);");
