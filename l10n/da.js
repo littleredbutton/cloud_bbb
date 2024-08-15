@@ -17,6 +17,7 @@ OC.L10N.register(
     "Edit" : "Rediger",
     "Welcome" : "Velkommen",
     "Miscellaneous" : "Diverse",
+    "Room name" : "Rumnavn",
     "Create" : "Opret",
     "Copy to clipboard" : "Kopier til udklipsholder",
     "Delete" : "Slet",
