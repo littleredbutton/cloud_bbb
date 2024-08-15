@@ -63,12 +63,12 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 
 			<td className="record bbb-shrink">
 				<input
-					id={`bbb-record-${restriction.id}`}
+					id={'bbb-record-' + restriction.id}
 					type="checkbox"
 					className="checkbox"
 					checked={restriction.allowRecording}
 					onChange={(event) => updateRestriction('allowRecording', event.target.checked)} />
-				<label htmlFor={`bbb-record-${restriction.id}`}></label>
+				<label htmlFor={'bbb-record-' + restriction.id}></label>
 			</td>
 
 			<td className="remove icon-col">
