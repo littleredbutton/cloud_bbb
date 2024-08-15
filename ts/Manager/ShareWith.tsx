@@ -101,7 +101,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					return (
 						<li key={share.id} className="bbb-shareWith__item">
 							<div className="avatardiv">
-								{avatarUrl && <img src={avatarUrl} alt={`Avatar from ${displayName}`} />}
+								{avatarUrl && <img src={avatarUrl} alt={'Avatar from ' + displayName} />}
 								{share.shareType === ShareType.Group && <span className="icon-group-white"></span>}
 								{share.shareType === ShareType.Circle && <span className="icon-circle-white"></span>}
 							</div>

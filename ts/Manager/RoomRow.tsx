@@ -221,7 +221,7 @@ const RoomRow: React.FC<Props> = (props) => {
 			<tr className={showRecordings ? 'selected-row' : ''}>
 				<td className="start">
 					<a href={api.getRoomUrl(room)}
-						className={`button ${room.running ? 'success' : 'primary'}`}
+						className={'button ' + (room.running ? 'success' : 'primary')}
 						target="_blank"
 						rel="noopener noreferrer"
 						title={t('bbb', 'Open room')}>
@@ -255,8 +255,8 @@ const RoomRow: React.FC<Props> = (props) => {
 				</td>
 				{adminRoom &&
 				<td className="record bbb-shrink">
-					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
-					<label htmlFor={`bbb-record-${room.id}`}></label>
+					<input id={'bbb-record-' + room.id} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
+					<label htmlFor={'bbb-record-' + room.id}></label>
 				</td>
 				}
 				{!adminRoom &&
