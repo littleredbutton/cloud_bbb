@@ -79,14 +79,14 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					return (
 						<li key={share.id} className="bbb-shareWith__item">
 							<div className="avatardiv">
-								{avatarUrl && <img src={avatarUrl} alt={`Avatar from ${displayName}`} />}
+								{avatarUrl && <img src={avatarUrl} alt={'Avatar from ' + displayName} />}
 								{share.shareType === ShareType.Group && <span className="icon-group-white"></span>}
 								{share.shareType === ShareType.Circle && <span className="icon-circle-white"></span>}
 							</div>
 							<div className="bbb-shareWith__item__label">
 								<h5>{displayName}
-									{(share.permission === Permission.Moderator && permission === Permission.User) && ` (${t('bbb', 'moderator')})`}
-									{(share.permission === Permission.Admin) && ` (${t('bbb', 'admin')})`}</h5>
+									{(share.permission === Permission.Moderator && permission === Permission.User) && (' (' + t('bbb', 'moderator') + ')')}
+									{(share.permission === Permission.Admin) && (' (' + t('bbb', 'admin') + ')')}</h5>
 							</div>
 							{(share.id > -1 && permission === Permission.Moderator && isOwner) && <div className="bbb-shareWith__item__action">
 								<button className="action-item"
@@ -95,7 +95,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 										toggleAdminShare(share);
 									}}
 									title={t('bbb', 'Share')}>
-									<span className={`icon icon-shared icon-visible ${share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected'}`}></span>
+									<span className={'icon icon-shared icon-visible ' + (share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected')}></span>
 								</button>
 							</div>}
 							{(share.id > -1 && isOwner) && <div className="bbb-shareWith__item__action">
