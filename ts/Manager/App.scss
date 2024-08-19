@@ -162,21 +162,21 @@ pre {
     width: 44px;
     white-space: nowrap;
 
-	input[type="checkbox"]{
+    input[type="checkbox"]{
 
-		&+label:before {
-		border-radius: 3px;
-		border-width: 2px;
-		}
+      &+label:before {
+        border-radius: 3px;
+        border-width: 2px;
+      }
 
-		&:disabled+label:before {
-			opacity: .5;
-		}
+      &:disabled+label:before {
+        opacity: .5;
+      }
 
-		&:not(input:checked):disabled+label:before {
-			background-color: transparent !important;
-		}
-	}
+      &:not(input:checked):disabled+label:before {
+        background-color: transparent !important;
+      }
+    }
   }
 
   th {
