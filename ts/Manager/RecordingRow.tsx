@@ -16,12 +16,12 @@ const RecordingRow: React.FC<Props> = ({recording, isAdmin, deleteRecording, sto
 	function checkPublished(recording: Recording, onChange: (value: boolean) => void) {
 		return (
 			<div>
-				<input id={`bbb-record-state-${recording.id}`}
+				<input id={'bbb-record-state-' + recording.id}
 					type="checkbox"
 					className="checkbox"
 					checked={recording.state === 'published'}
 					onChange={(event) =>  onChange(event.target.checked)} />
-				<label htmlFor={`bbb-record-state-${recording.id}`}>{t('bbb', 'Published')}</label>
+				<label htmlFor={'bbb-record-state-' + recording.id}>{t('bbb', 'Published')}</label>
 			</div>
 		);
 	}

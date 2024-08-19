@@ -132,7 +132,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 
 				{room.access === Access.InternalRestricted &&
 					<div className="bbb-form-element bbb-form-shareWith">
-						<span className="icon icon-details icon-visible"></span><em>{`${t('bbb', 'Access')} : ${descriptions.internalRestrictedShareWith}`}</em>
+						<span className="icon icon-details icon-visible"></span><em>{t('bbb', 'Access') + ' : ' + descriptions.internalRestrictedShareWith}</em>
 					</div>
 				}
 

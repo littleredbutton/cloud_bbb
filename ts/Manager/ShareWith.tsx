@@ -107,7 +107,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 							</div>
 							<div className="bbb-shareWith__item__label">
 								<h5>{displayName}
-									{(share.id === ROOM_OWNER_ID || !isOwner) && ` (${permissionLabel(share.permission)})`}
+									{(share.id === ROOM_OWNER_ID || !isOwner) && (' (' + permissionLabel(share.permission) + ')')}
 								</h5>
 							</div>
 							{(share.id > ROOM_OWNER_ID && isOwner) && selectPermission(share.permission, (value) => {
