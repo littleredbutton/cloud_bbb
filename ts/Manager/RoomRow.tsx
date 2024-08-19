@@ -194,15 +194,7 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <span></span>;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
-=======
 	function edit(field: string, type: 'text' | 'number' = 'text', canEdit: boolean = true, options?) {
->>>>>>> 63daf83 (feat: manage view of rooms for moderators and users)
-=======
-	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
->>>>>>> 82951e9 (feat: sharing rooms with moderators and users)
 		return canEdit ?
 			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
 			:
@@ -261,17 +253,10 @@ const RoomRow: React.FC<Props> = (props) => {
 				<td className="max-participants bbb-shrink">
 					{edit('maxParticipants', 'number', adminRoom, {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
 				</td>
-				{adminRoom &&
 				<td className="record bbb-shrink">
-					<input id={'bbb-record-' + room.id} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
+					<input id={'bbb-record-' + room.id} type="checkbox" className="checkbox" disabled={!adminRoom || !props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
 					<label htmlFor={'bbb-record-' + room.id}></label>
 				</td>
-				}
-				{!adminRoom &&
-				<td className="record bbb-shrink">
-					<span className={'icon '+(room.record ? 'icon-checkmark' : 'icon-close')+' icon-visible'}></span>
-				</td>
-				}
 				<td className="bbb-shrink">
 					{<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />}
 				</td>
