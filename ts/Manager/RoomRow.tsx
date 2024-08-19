@@ -194,7 +194,7 @@ const RoomRow: React.FC<Props> = (props) => {
 		return <span></span>;
 	}
 
-	function edit(field: string, type: 'text' | 'number' = 'text', canEdit: boolean = true, options?) {
+	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
 		return canEdit ?
 			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
 			:
@@ -261,12 +261,14 @@ const RoomRow: React.FC<Props> = (props) => {
 					{<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />}
 				</td>
 				<td className="clone icon-col">
+					{adminRoom &&
 					<button
 						className="action-item"
 						onClick={cloneRow}
 						title={t('bbb', 'Clone room')}>
 						<span className="icon icon-template-add icon-visible"></span>
 					</button>
+					}
 				</td>
 				<td className="edit icon-col">
 					{adminRoom &&
