@@ -18,6 +18,8 @@ OC.L10N.register(
     "Access" : "Åtkomst",
     "Max" : "Max",
     "Edit" : "Redigera",
+    "This message is shown to all users in the chat area after they joined." : "Detta meddelande visas för alla användare i chattområdet efter att de gått med.",
+    "If enabled, the user list, chat area and presentation are hidden by default." : "Om aktiverat är användarlistan, chattområdet och presentationen dolda som standard.",
     "Welcome" : "Välkommen",
     "Miscellaneous" : "Diverse",
     "Recording" : "Inspelning",
