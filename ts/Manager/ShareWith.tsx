@@ -2,6 +2,7 @@ import React from 'react';
 import { api, ShareWith, ShareType, RoomShare, Room, Permission } from '../Common/Api';
 import './ShareWith.scss';
 import ShareSelection from '../Common/ShareSelection';
+import { PermissionsOptions } from '../Common/Translation';
 
 type Props = {
 	room: Room;
@@ -45,9 +46,7 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		setShares((allShares ? [...allShares] : []).filter(share => share.id !== id));
 	}
 
-	async function toggleAdminShare(share: RoomShare) {
-		const newPermission = share.permission === Permission.Admin ? Permission.Moderator : Permission.Admin;
-
+	async function setSharePermission(share: RoomShare, newPermission: number) {
 		return addRoomShare(share.shareWith, share.shareType, share.shareWithDisplayName || share.shareWith, newPermission);
 	}
 
@@ -59,17 +58,40 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 		});
 	}
 
+	function ucFirst(s: string)
+	{
+		return s && s[0].toUpperCase() + s.slice(1);
+	}
+
+	function selectPermission(value: Permission, onChange: (value: number) => void) {
+
+		return (
+			<div className="bbb-form-element bbb-simple-menu">
+				<select name="permission" value={value} onChange={(event) => onChange(Number(event.target.value))}>
+					{Object.keys(PermissionsOptions).map(key => {
+						const label = PermissionsOptions[key];
+						return <option key={key} value={key}>{ucFirst(label)}</option>;
+					})}
+				</select>
+			</div>
+		);
+	}
+
+	function permissionLabel(permission: Permission) {
+		return PermissionsOptions[permission] ?? '';
+	}
+
 	function renderShares(shares: RoomShare[]) {
 		const currentUser = OC.getCurrentUser();
+		const ROOM_OWNER_ID = -1;
 		const ownShare = {
-			id: -1,
+			id: ROOM_OWNER_ID,
 			roomId: room.id,
 			shareType: ShareType.User,
 			shareWith: currentUser.uid,
 			shareWithDisplayName: currentUser.displayName,
 			permission: Permission.Admin,
 		};
-
 		return (
 			<ul className="bbb-shareWith">
 				{[ownShare, ...shares].map(share => {
@@ -85,20 +107,13 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 							</div>
 							<div className="bbb-shareWith__item__label">
 								<h5>{displayName}
-									{(share.permission === Permission.Moderator && permission === Permission.User) && (' (' + t('bbb', 'moderator') + ')')}
-									{(share.permission === Permission.Admin) && (' (' + t('bbb', 'admin') + ')')}</h5>
+									{(share.id === ROOM_OWNER_ID || !isOwner) && (' (' + permissionLabel(share.permission) + ')')}
+								</h5>
 							</div>
-							{(share.id > -1 && permission === Permission.Moderator && isOwner) && <div className="bbb-shareWith__item__action">
-								<button className="action-item"
-									onClick={ev => {
-										ev.preventDefault();
-										toggleAdminShare(share);
-									}}
-									title={t('bbb', 'Share')}>
-									<span className={'icon icon-shared icon-visible ' + (share.permission === Permission.Admin ? 'bbb-icon-selected' : 'bbb-icon-unselected')}></span>
-								</button>
-							</div>}
-							{(share.id > -1 && isOwner) && <div className="bbb-shareWith__item__action">
+							{(share.id > ROOM_OWNER_ID && isOwner) && selectPermission(share.permission, (value) => {
+								setSharePermission(share, value);
+							})}
+							{(share.id > ROOM_OWNER_ID && isOwner) && <div className="bbb-shareWith__item__action">
 								<button className="action-item"
 									onClick={ev => {ev.preventDefault(); deleteRoomShare(share.id);}}
 									title={t('bbb', 'Delete')}>
@@ -116,8 +131,6 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 
 	return (
 		<>
-			{shares ? renderShares(shares) : loading}
-
 			{isOwner ?
 				<ShareSelection
 					selectShare={(shareOption) => addRoomShare(shareOption.value.shareWith, shareOption.value.shareType, shareOption.label, permission)}
@@ -127,6 +140,8 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 					<span className="icon icon-details icon-visible"></span> {t('bbb', 'You are not allowed to change this option, because this room is shared with you.')}
 				</em>
 			}
+
+			{shares ? renderShares(shares) : loading}
 		</>
 	);
 };
