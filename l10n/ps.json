@@ -5,7 +5,6 @@
     "Hello %s" : "سلامونه %s",
     "Name" : "نوم",
     "Delete" : "ړنګول",
-    "Error" : "شسیب",
-    "Share" : "شریکول"
+    "Error" : "شسیب"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

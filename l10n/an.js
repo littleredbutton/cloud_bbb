@@ -7,7 +7,6 @@ OC.L10N.register(
     "Name" : "Nombre",
     "Create" : "Crear",
     "Delete" : "Borrar",
-    "Error" : "Error",
-    "Share" : "Compartir"
+    "Error" : "Error"
 },
 "nplurals=2; plural=(n != 1);");

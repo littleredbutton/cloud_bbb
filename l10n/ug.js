@@ -6,10 +6,10 @@ OC.L10N.register(
     "Group" : "Group",
     "Name" : "ئاتى",
     "Edit" : "تەھرىر",
+    "Sharing" : "ھەمبەھىر",
     "Create" : "قۇر",
     "Delete" : "ئۆچۈر",
     "Error" : "خاتالىق",
-    "Share" : "ھەمبەھىر",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

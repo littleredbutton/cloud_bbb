@@ -15,7 +15,6 @@ OC.L10N.register(
     "Delete" : "Skrap",
     "Error" : "Fout",
     "Server error" : "Bedienerfout",
-    "Share" : "Deel",
     "Loading" : "Laai tans..",
     "Settings saved" : "Instellings gestoor"
 },

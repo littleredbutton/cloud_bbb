@@ -11,7 +11,6 @@ OC.L10N.register(
     "Create" : "Yarat",
     "Delete" : "Sil",
     "Error" : "Səhv",
-    "Share" : "Paylaş",
     "Loading" : "Loading",
     "Settings saved" : "Parametrlər yaddaşa verildi"
 },

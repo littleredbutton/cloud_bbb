@@ -7,7 +7,6 @@ OC.L10N.register(
     "Hello %s" : "سلامونه %s",
     "Name" : "نوم",
     "Delete" : "ړنګول",
-    "Error" : "شسیب",
-    "Share" : "شریکول"
+    "Error" : "شسیب"
 },
 "nplurals=2; plural=(n != 1);");

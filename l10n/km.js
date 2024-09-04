@@ -7,10 +7,10 @@ OC.L10N.register(
     "Group" : "Group",
     "Name" : "ឈ្មោះ",
     "Edit" : "កែប្រែ",
+    "Sharing" : "ការ​ចែក​រំលែក",
     "Create" : "បង្កើត",
     "Delete" : "លុប",
     "Error" : "កំហុស",
-    "Share" : "ចែក​រំលែក",
     "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");
