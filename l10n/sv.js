@@ -36,6 +36,7 @@ OC.L10N.register(
     "Start" : "Start",
     "Loading" : "Läser in",
     "Settings saved" : "Inställningar sparade",
+    "Unexpected error occurred" : "Ett oväntat fel inträffade",
     "Send to" : "Skicka till",
     "No rooms available!" : "Inga rum tillgängliga!"
 },

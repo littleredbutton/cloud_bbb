@@ -117,7 +117,7 @@ OC.L10N.register(
     "Could not delete record" : "Aufnahme konnte nicht gelöscht werden",
     "Server error" : "Serverfehler",
     "Could not modify publishing state" : "Der Veröffentlichungsstatus konnte nicht geändert werden",
-    "Open room" : "Raum erstellen",
+    "Open room" : "Raum öffnen",
     "Start" : "Start",
     "Clone room" : "Raum duplizieren",
     "Loading" : "Lade",
