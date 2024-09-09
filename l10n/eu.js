@@ -58,6 +58,7 @@ OC.L10N.register(
     "No matches" : "Ez dago bat datorrenik",
     "admin" : "admin",
     "moderator" : "moderatzailea",
+    "user" : "erabiltzailea",
     "Name" : "Izena",
     "Access" : "Sarbidea",
     "Max" : "Maximoa",
