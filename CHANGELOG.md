@@ -6,6 +6,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.7.0 (2024-09-15)
+### Added
+- sharing rooms with moderators and users
+- manage view of rooms for moderators and users
+- videos for all users and moderators
+- sharing rooms with moderators and users
+- manage view of rooms for moderators and users
+- videos for all users and moderators
+- videos for all users and moderators
+- sharing rooms with moderators and users
+- manage view of rooms for moderators and users
+- list all shared rooms for users and moderators
+
+### Fixed
+- no clone action for non-admin
+- bug with name of shared groups
+- don't use backticks
+- add missing translations
+- use querybuilder for user comparison
+
+### Misc
+- respect tabs
+- disabled checkbox
+
 ## 2.6.0 (2024-04-28)
 ### Added
 - add Search Provider
