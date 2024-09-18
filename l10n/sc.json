@@ -63,7 +63,7 @@
     "Edit" : "Modìfica",
     "Descriptive name of this room." : "Nùmene descritivu de custa istantza.",
     "This message is shown to all users in the chat area after they joined." : "Custu messàgiu si mustrat a totu is utentes in sa tzarrada a pustis chi intrant.",
-    "Sets a limit on the number of participants for this room. Zero means there is no limit." : "Impostat unu lìmite in su mùmeru de partetzipantes in custa istantza. Zero bolet nàrrere ca non ddoe at lìmites.",
+    "Sets a limit on the number of participants for this room. Zero means there is no limit." : "Cunfigurat unu lìmite in su nùmeru de partetzipantes in custa istantza. Zero bolet nàrrere ca non ddoe at lìmites.",
     "If enabled, the moderator is able to start the recording." : "Si est ativadu, chie mòderat at a pòdere cumintzare sa registratzione.",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "Sa persone chi mòderat podet gestire totu is partetzipantes de un'addòbiu, e fintzas bogare, pònnere a sa muda o seletzionare a sa persone chi presentat. Su de moderare permitit puru de serrare un'addòbiu o mudare is cunfiguratziones predefinidas.",
     "If enabled, normal users have to wait until a moderator is in the room." : "Si est ativadu, is utentes normales depent aspetare finas a cando ddoe siat una persone moderadore in s'istantza.",
