@@ -70,13 +70,15 @@ async function createRelease(appId) {
 
 	const execa = (await import('execa')).execaCommand;
 
-	await execa('yarn', ['composer:install:dev']);
+	const composerDev = await execa('composer install');
+	console.log(composerDev.stdout, composerDev.stderr);
 	console.log('✔ composer dev dependencies installed'.green);
 
 	await execa('yarn', ['lint']);
 	console.log('✔ linters are happy'.green);
 
-	await execa('yarn', ['composer:install']);
+	const composerNoDev = await execa('composer install --no-dev');
+	console.log(composerNoDev.stdout, composerNoDev.stderr);
 	console.log('✔ composer dependencies installed'.green);
 
 	await execa('yarn', ['build']);
@@ -89,7 +91,7 @@ async function createRelease(appId) {
 	await createGPGSignature(filePath);
 	await createGPGArmorSignature(filePath);
 
-	await execa('yarn', ['composer:install:dev']);
+	await execa('composer install');
 	console.log('✔ composer dev dependencies installed'.green);
 }
 
