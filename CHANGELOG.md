@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.7.1 (2024-09-18)
+### Misc
+- fix composer install in build script
+- remove deprecated simple-git import
+
 ## 2.7.0 (2024-09-15)
 ### Added
 - sharing rooms with moderators and users
