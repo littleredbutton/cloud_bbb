@@ -9,7 +9,7 @@ OC.L10N.register(
     "Community" : "Kopiena",
     "Please enter your name!" : "Ludzu ieraksties savu vārdu@",
     "The name must be at least 3 characters long." : "Vārdam jābūt vismaz 3 rakstzīmes garam.",
-    "Display name" : "Ekrāna vārds",
+    "Display name" : "Attēlojamais vārds",
     "Password" : "Parole",
     "Join" : "Pievienoties",
     "Hello %s" : "Sveiki, %s",
