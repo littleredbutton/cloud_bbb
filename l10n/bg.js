@@ -114,6 +114,7 @@ OC.L10N.register(
     "Delete?" : "Изтриване?",
     "Could not delete record" : "Записът не можа да се изтрие",
     "Server error" : "Сървърна грешка",
+    "Start" : "Начало",
     "Loading" : "Зареждане",
     "You are not allowed to change this option, because this room is shared with you." : "Нямате право да променяте тази опция, защото тази стая е споделена с вас.",
     "Max. rooms" : "Макс. стаи",
