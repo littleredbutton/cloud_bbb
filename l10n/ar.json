@@ -29,7 +29,7 @@
     "API secret" : "كلمة السر لواجهة برمجة التطبيقات API secret",
     "Save" : "حفظ",
     "Show room manager in app navigation instead of settings page." : "عرض مدير الغرفة في صفحةتصفح التطبيق بدلأً عن صفحة الإعدادات.",
-    "Use Nextcloud theme in BigBlueButton." : "ثيمة نكست كلاود في \"بيغ بلو بوتون\" BBB",
+    "Use Nextcloud theme in BigBlueButton." : "سمة نكست كلاود في \"بيغ بلو بوتون\" BBB",
     "Default Room Settings" : "الإعدادات التلقائية للغرفة",
     "Below you can change some default values, which are used to create a new room." : "يُمكنك أدناه تعديل بعض القيم التلقائية التي تستخدم عند إنشاء غرفة جديدة.",
     "Perform media check before usage" : "قم باختيار الوسائط media قبل الاستعمال",
