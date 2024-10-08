@@ -74,15 +74,15 @@ async function createRelease(appId) {
 	console.log(composerDev.stdout, composerDev.stderr);
 	console.log('✔ composer dev dependencies installed'.green);
 
-	await execa('yarn', ['lint']);
+	await execa('yarn lint');
 	console.log('✔ linters are happy'.green);
 
 	const composerNoDev = await execa('composer install --no-dev');
 	console.log(composerNoDev.stdout, composerNoDev.stderr);
 	console.log('✔ composer dependencies installed'.green);
 
-	await execa('yarn', ['build']);
-	console.log('✔ scripts built'.green);
+	await execa('yarn build');
+	console.log('✔ webpack done'.green);
 
 	await updateChangelog();
 
