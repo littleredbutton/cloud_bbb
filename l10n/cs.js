@@ -115,6 +115,7 @@ OC.L10N.register(
     "Delete?" : "Smazat?",
     "Could not delete record" : "Záznam se nedaří smazat",
     "Server error" : "Chyba serveru",
+    "Could not modify publishing state" : "Nepodařilo se změnit stav zvěřejnění",
     "Open room" : "Otevřít místnost",
     "Start" : "Spustit",
     "Clone room" : "Klonovat místnost",
