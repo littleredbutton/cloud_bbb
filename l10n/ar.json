@@ -45,7 +45,7 @@
     "Please enter your name!" : "أدخِل اسمك من فضلك!",
     "The name must be at least 3 characters long." : "الاسم يجب ألّا يقل عن 3 حروف.",
     "You have to provide the correct password to join the meeting." : "يجب أن تُدخَل كلمة المرور الصحيحة ليمكنك المشاركة في الاجتماع.",
-    "Display name" : "الاسم المعروض",
+    "Display name" : "اسم العرض",
     "Password" : "كلمة المرور",
     "Join" : "إنضم",
     "Have an account? Log in." : "عندك حساب؟ أُدخُل.",
