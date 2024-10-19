@@ -48,7 +48,7 @@ OC.L10N.register(
     "Display name" : "显示名称",
     "Password" : "密码",
     "Join" : "加入",
-    "Have an account? Log in." : "有一个账户吗？登录。",
+    "Have an account? Log in." : "有一个账号？登录。",
     "Hello %s" : "%s 你好",
     "Name, group …" : "名称、群组 ...",
     "Group" : "群组",
