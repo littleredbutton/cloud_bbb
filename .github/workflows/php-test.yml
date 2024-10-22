@@ -15,13 +15,25 @@ jobs:
         nextcloud-versions: ['stable25', 'stable26', 'stable27', 'stable28','stable29', 'stable30']
         exclude:
           - php-versions: '7.4'
-            nextcloud-versions: ['stable26', 'stable27', 'stable28', 'stable29', 'stable30']
+            nextcloud-versions: 'stable26'
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable27'
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable28'
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable29'
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable30'
           - php-versions: '8.0'
             nextcloud-versions: 'stable30'
           - php-versions: '8.2'
             nextcloud-versions: 'stable25'
           - php-versions: '8.3'
-            nextcloud-versions: ['stable25', 'stable26', 'stable27']
+            nextcloud-versions: 'stable25'
+          - php-versions: '8.3'
+            nextcloud-versions: 'stable26'
+          - php-versions: '8.3'
+            nextcloud-versions: 'stable27'
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
