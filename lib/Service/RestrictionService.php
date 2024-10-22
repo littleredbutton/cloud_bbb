@@ -12,7 +12,15 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\IGroupManager;
 
 class RestrictionService {
-	public function __construct(private RestrictionMapper $mapper, private IGroupManager $groupManager) {
+	/** @var RestrictionMapper */
+	private $mapper;
+
+	/** @var IGroupManager */
+	private $groupManager;
+
+	public function __construct(RestrictionMapper $mapper, IGroupManager $groupManager) {
+		$this->mapper = $mapper;
+		$this->groupManager = $groupManager;
 	}
 
 	public function findAll(): array {
