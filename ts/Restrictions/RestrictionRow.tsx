@@ -23,10 +23,10 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 
 	function deleteRow(ev: MouseEvent) {
 		ev.preventDefault();
-
+		const groupName = restriction.groupName || restriction.groupId;
 		OC.dialogs.confirm(
-			t('bbb', 'Are you sure you want to delete the restrictions for group "{name}"? This operation cannot be undone.', { name: restriction.groupId }),
-			t('bbb', 'Delete restrictions for "{name}"?', { name: restriction.groupId }),
+			t('bbb', 'Are you sure you want to delete the restrictions for group "{name}"? This operation cannot be undone.', { name: groupName }),
+			t('bbb', 'Delete restrictions for "{name}"?', { name: groupName}),
 			confirmed => {
 				if (confirmed) {
 					props.deleteRestriction(restriction.id);
@@ -42,7 +42,7 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 
 	return (
 		<tr>
-			<td className="name">{restriction.groupId || t('bbb', 'All users')}</td>
+			<td className="name">{restriction.groupName || restriction.groupId || t('bbb', 'All users')}</td>
 			<td className="max-rooms bbb-shrink">
 				{edit('maxRooms', 'number')}
 			</td>
