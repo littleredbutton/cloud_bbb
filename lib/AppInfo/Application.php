@@ -56,6 +56,8 @@ class Application extends App implements IBootstrap {
 
 		$context->registerMiddleware(JoinMiddleware::class);
 		$context->registerMiddleware(HookMiddleware::class);
+
+		$context->registerCapability(Capabilities::class);
 	}
 
 	public function boot(IBootContext $context): void {
