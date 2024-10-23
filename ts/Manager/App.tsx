@@ -146,7 +146,8 @@ const App: React.FC<Props> = () => {
 	}
 
 	const maxRooms = restriction?.maxRooms || 0;
-	const quota = maxRooms < 0 ? t('bbb', 'unlimited') : rooms.filter(room => room.userId === OC.currentUser).length + ' / ' + maxRooms;
+	const ownRoomsLength = rooms.filter(room => room.userId === OC.currentUser).length;
+	const quota = maxRooms < 0 ? t('bbb', 'unlimited') : ownRoomsLength + ' / ' + maxRooms;
 
 	return (
 		<div id="bbb-react-root"
@@ -188,7 +189,7 @@ const App: React.FC<Props> = () => {
 							{!isLoaded && <span className="icon icon-loading-small icon-visible"></span>}
 						</td>
 						<td>
-							{(maxRooms > rows.length || maxRooms < 0) ?
+							{(maxRooms > ownRoomsLength || maxRooms < 0) ?
 								<NewRoomForm addRoom={addRoom} /> :
 								<p className="text-muted">{maxRooms === 0 ?
 									t('bbb', 'You are not permitted to create a room.') :

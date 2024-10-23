@@ -55,10 +55,13 @@ class Permission {
 	}
 
 	public function isAllowedToCreateRoom(string $uid): bool {
-		$numberOfCreatedRooms = count($this->roomService->findAll($uid, [], []));
 		$restriction = $this->getRestriction($uid);
+		if ($restriction->getMaxRooms() < 0) {
+			return true;
+		}
+		$numberOfCreatedRooms = count($this->roomService->findByUserId($uid));
 
-		return $restriction->getMaxRooms() < 0 || $restriction->getMaxRooms() > $numberOfCreatedRooms;
+		return $restriction->getMaxRooms() > $numberOfCreatedRooms;
 	}
 
 	public function isUser(Room $room, ?string $uid): bool {
