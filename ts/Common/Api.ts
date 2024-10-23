@@ -20,6 +20,7 @@ export enum Access {
 export interface Restriction {
 	id: number;
 	groupId: string;
+	groupName: string;
 	maxRooms: number;
 	roomTypes: string[];
 	maxParticipants: number;
