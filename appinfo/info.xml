@@ -24,7 +24,7 @@ Contributors are welcome! If you have time it would be awesome if you could help
     ]]></description>
     <version>2.7.2</version>
     <licence>agpl</licence>
-    <author homepage="https://arawa.fr/">Arawa</author>
+    <author mail="cloud_bbb@arawa.fr" homepage="https://arawa.fr/">Arawa</author>
     <author>Klaus Herberth</author>
     <namespace>BigBlueButton</namespace>
     <types>
