@@ -16,7 +16,22 @@
 
 .oc-dialog.bbb-dialog {
   max-height: calc(100% - 70px);
-  margin-top: 25px;
+  margin-top: 0;
+  padding: 4px 24px;
+}
+
+.bbb-dialog {
+
+  .oc-dialog-title {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .oc-dialog-close {
+    padding: 0;
+    top: 0;
+  }
 }
 
 .bbb-mb-1 {
