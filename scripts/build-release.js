@@ -1,4 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+/**
+ * npm run release:build [--dry-run] [--stable]
+ *
+ *  --dry-run    don't commit CHANGELOG.md
+ *  --stable     generate changelog
+ *
+ */
 const colors = require('colors');
 const fs = require('fs');
 const path = require('path');
@@ -155,6 +162,11 @@ async function commitChangeLog() {
 
 
 function createArchive(appId, fileBaseName) {
+	const archivesPath = path.normalize(__dirname + '/../archives/');
+	if (!fs.existsSync(archivesPath)){
+		fs.mkdirSync(archivesPath);
+	}
+
 	const fileName = `${fileBaseName}.tar.gz`;
 	const filePath = path.normalize(__dirname + `/../archives/${fileName}`);
 	const output = fs.createWriteStream(filePath);
