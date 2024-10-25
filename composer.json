@@ -1,12 +1,11 @@
 {
-    "name": "sualko/bigbluebutton",
+    "name": "littleredbutton/bigbluebutton",
     "description": "Nextcloud Integration for BigBlueButton",
     "type": "project",
     "license": "AGPL",
     "authors": [
         {
-            "name": "Klaus Herberth",
-            "email": "klaus@jsxc.org"
+            "name": "Klaus Herberth"
         }
     ],
     "require": {
