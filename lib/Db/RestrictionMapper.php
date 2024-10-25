@@ -7,6 +7,9 @@ use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 
+/**
+ * @template-extends QBMapper<Restriction>
+ */
 class RestrictionMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'bbb_restrictions', Restriction::class);
