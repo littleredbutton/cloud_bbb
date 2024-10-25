@@ -1,16 +1,16 @@
 {
-	"name": "@sualko/cloud_bbb",
+	"name": "@littleredbutton/cloud_bbb",
 	"description": "Nextcloud Integration for BigBlueButton",
 	"version": "2.7.2",
-	"author": "Klaus Herberth <klaus@jsxc.org>",
+	"author": "Klaus Herberth",
 	"bugs": {
-		"url": "https://github.com/sualko/cloud_bbb/issues"
+		"url": "https://github.com/littleredbutton/cloud_bbb/issues"
 	},
 	"repository": {
-		"url": "https://github.com/sualko/cloud_bbb",
+		"url": "https://github.com/littleredbutton/cloud_bbb",
 		"type": "git"
 	},
-	"homepage": "https://github.com/sualko/cloud_bbb",
+	"homepage": "https://github.com/littleredbutton/cloud_bbb",
 	"license": "agpl",
 	"private": true,
 	"scripts": {
