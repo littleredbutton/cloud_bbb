@@ -8,6 +8,9 @@ use OCP\Template;
 
 /**
  * @template-extends Response<int, array<string, mixed>>
+ *
+ * (NC < 28)
+ * @psalm-suppress TooManyTemplateParams
  */
 class NotFoundResponse extends Response {
 	public function __construct() {
