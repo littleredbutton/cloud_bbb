@@ -106,9 +106,9 @@ const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setSh
 								{share.shareType === ShareType.Circle && <span className="icon-circle-white"></span>}
 							</div>
 							<div className="bbb-shareWith__item__label">
-								<h5>{displayName}
+								<span>{displayName}
 									{(share.id === ROOM_OWNER_ID || !isOwner) && (' (' + permissionLabel(share.permission) + ')')}
-								</h5>
+								</span>
 							</div>
 							{(share.id > ROOM_OWNER_ID && isOwner) && selectPermission(share.permission, (value) => {
 								setSharePermission(share, value);

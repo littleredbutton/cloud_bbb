@@ -180,7 +180,7 @@ const RoomRow: React.FC<Props> = (props) => {
 	function accessToIcon(access: string) {
 		switch(access) {
 		case Access.Public:
-			return <span className="icon icon-visible icon-link" title={AccessOptions[access]} />;
+			return <span className="icon icon-visible icon-public" title={AccessOptions[access]} />;
 		case Access.Password:
 			return <span className="icon icon-visible icon-password" title={AccessOptions[access]} />;
 		case Access.Internal:
@@ -188,6 +188,7 @@ const RoomRow: React.FC<Props> = (props) => {
 		case Access.InternalRestricted:
 			return <span className="icon icon-visible icon-user" title={AccessOptions[access]} />;
 		case Access.WaitingRoom:
+		case Access.WaitingRoomAll:
 			return <span className="icon icon-visible icon-timezone" title={AccessOptions[access]} />;
 		}
 
