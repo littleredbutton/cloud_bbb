@@ -22,7 +22,7 @@ Contributors are welcome! If you have time it would be awesome if you could help
 
 *This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*
     ]]></description>
-    <version>2.7.2</version>
+    <version>2.7.3</version>
     <licence>agpl</licence>
     <author mail="cloud_bbb@arawa.fr" homepage="https://arawa.fr/">Arawa</author>
     <author>Klaus Herberth</author>
@@ -44,7 +44,7 @@ Contributors are welcome! If you have time it would be awesome if you could help
         <lib>curl</lib>
         <lib>mbstring</lib>
         <lib>SimpleXML</lib>
-        <nextcloud min-version="26" max-version="28"/>
+        <nextcloud min-version="26" max-version="30"/>
     </dependencies>
     <commands>
         <command>OCA\BigBlueButton\Command\ClearAvatarCache</command>
