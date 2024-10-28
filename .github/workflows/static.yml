@@ -7,6 +7,10 @@ jobs:
     strategy:
         matrix:
             ocp-version: [ "^30", "^29", '^28', '^27', '^26']
+            include:
+              - psrcontainer: "psr/container"
+              - psrcontainer: "psr/container:^1.1.2"
+                ocp-version: '^26'
     name: Nextcloud ${{ matrix.ocp-version }}
     steps:
         - name: Checkout
@@ -21,7 +25,7 @@ jobs:
         - name: Install dependencies
           run: composer i
         - name: Install dependencies
-          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} symfony/service-contracts
+          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} ${{ matrix.psrcontainer }} symfony/service-contracts
         - name: Run coding standards check
           run: composer run psalm
 
