@@ -98,7 +98,7 @@ OC.L10N.register(
     "Room name" : "اسم الغرفة",
     "Create" : "إنشاء",
     "Published" : "منشورةٌ",
-    "Open recording" : "إفتح التسجيل",
+    "Open recording" : "فتح التسجيل",
     "Copy to clipboard" : "نسخ الرابط",
     "Save as file" : "حفظ كملف",
     "_%n participant_::_%n participants_" : ["%n مشاركين","%n مشارك","%n مشاركين","%n مشاركين","%n مشاركين","%n مشاركين"],
