@@ -16,7 +16,7 @@ OC.L10N.register(
     "Public" : "Pubblica",
     "Internal + Password protection for guests" : "Interni + Protezione con password per gli ospiti",
     "Internal + Waiting room for guests" : "Interni + Sala d'attesa per gli ospiti",
-    "Waiting room for all users" : "In attesa di tutti gli utenti",
+    "Waiting room for all users" : "Tutti gli utenti in Sala d'attesa",
     "Internal" : "Interni",
     "Internal restricted" : "Limitato agli interni",
     "API URL or secret not configured. Please contact your administrator." : "URL API o segreto non configurato. Contatta il tuo amministratore.",
