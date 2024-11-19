@@ -8,12 +8,13 @@
     "Name" : "Nimi",
     "Access" : "Ligipääs",
     "Edit" : "Redigeeri",
+    "Sharing" : "Jagamine",
     "Create" : "Loo",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
     "Delete" : "Kustuta",
     "Error" : "Viga",
     "Server error" : "Serveri tõrge",
-    "Share" : "Jaga",
+    "Start" : "Algus",
     "Loading" : "Laadimine",
     "Settings saved" : "Seaded salvestatud"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

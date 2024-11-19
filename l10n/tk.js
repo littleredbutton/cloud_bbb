@@ -7,9 +7,9 @@ OC.L10N.register(
     "Hello %s" : "Salam%s",
     "Name" : "Ady",
     "Edit" : "Redaktirläň",
+    "Sharing" : "Paýlaşmak",
     "Create" : "Dörediň",
     "Delete" : "Pozmak",
-    "Error" : "ýalňyşlyk",
-    "Share" : "Paýlaş"
+    "Error" : "ýalňyşlyk"
 },
 "nplurals=2; plural=(n != 1);");

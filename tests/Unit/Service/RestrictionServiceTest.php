@@ -8,16 +8,19 @@ use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Db\RestrictionMapper;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Service\RestrictionService;
+use OCP\IGroupManager;
 use PHPUnit\Framework\TestCase;
 
 class RestrictionServiceTest extends TestCase {
 	protected $mapper;
+	protected $groupManager;
 	protected $service;
 
 	public function setUp(): void {
 		$this->mapper = $this->createMock(RestrictionMapper::class);
+		$this->groupManager = $this->createMock(IGroupManager::class);
 
-		$this->service = new RestrictionService($this->mapper);
+		$this->service = new RestrictionService($this->mapper, $this->groupManager);
 	}
 
 	public function testFindByGroupIds() {

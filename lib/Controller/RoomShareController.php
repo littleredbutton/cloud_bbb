@@ -11,6 +11,7 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 
+use OCP\IGroupManager;
 use OCP\IRequest;
 use OCP\IUserManager;
 
@@ -23,6 +24,9 @@ class RoomShareController extends Controller {
 
 	/** @var IUserManager */
 	private $userManager;
+
+	/** @var IGroupManager */
+	private $groupManager;
 
 	/** @var RoomService */
 	private $roomService;
@@ -37,6 +41,7 @@ class RoomShareController extends Controller {
 		IRequest $request,
 		RoomShareService $service,
 		IUserManager $userManager,
+		IGroupManager $groupManager,
 		RoomService $roomService,
 		CircleHelper $circleHelper,
 		$userId
@@ -44,6 +49,7 @@ class RoomShareController extends Controller {
 		parent::__construct($appName, $request);
 		$this->service = $service;
 		$this->userManager = $userManager;
+		$this->groupManager = $groupManager;
 		$this->roomService = $roomService;
 		$this->circleHelper = $circleHelper;
 		$this->userId = $userId;
@@ -90,6 +96,14 @@ class RoomShareController extends Controller {
 				}
 
 				$roomShare->setShareWithDisplayName($circle->getName());
+			} elseif ($roomShare->getShareType() === RoomShare::SHARE_TYPE_GROUP) {
+				$shareWithGroup = $this->groupManager->get($roomShare->getShareWith());
+
+				if ($shareWithGroup === null) {
+					continue;
+				}
+
+				$roomShare->setShareWithDisplayName($shareWithGroup->getDisplayName());
 			}
 
 			$shares[] = $roomShare;

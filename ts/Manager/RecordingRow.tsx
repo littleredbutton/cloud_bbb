@@ -4,11 +4,29 @@ import { Recording } from '../Common/Api';
 
 type Props = {
     recording: Recording;
+	isAdmin : boolean;
     deleteRecording: (recording: Recording) => void;
     storeRecording: (recording: Recording) => void;
+	publishRecording: (recording: Recording, publish: boolean) => void;
 }
 
-const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecording}) => {
+const RecordingRow: React.FC<Props> = ({recording, isAdmin, deleteRecording, storeRecording, publishRecording}) => {
+
+
+	function checkPublished(recording: Recording, onChange: (value: boolean) => void) {
+		return (
+			<div>
+				<input id={'bbb-record-state-' + recording.id}
+					type="checkbox"
+					className="checkbox"
+					checked={recording.state === 'published'}
+					onChange={(event) =>  onChange(event.target.checked)} />
+				<label htmlFor={'bbb-record-state-' + recording.id}>{t('bbb', 'Published')}</label>
+			</div>
+		);
+	}
+
+
 	return (
 		<tr key={recording.id}>
 			<td className="start icon-col">
@@ -40,10 +58,17 @@ const RecordingRow: React.FC<Props> = ({recording, deleteRecording, storeRecordi
 			<td>
 				{recording.type}
 			</td>
+			<td>
+				{isAdmin && checkPublished(recording, (checked) => {
+					publishRecording(recording, checked);
+				})}
+			</td>
 			<td className="remove icon-col">
-				<button className="action-item" onClick={() => deleteRecording(recording)} title={t('bbb', 'Delete')}>
-					<span className="icon icon-delete icon-visible"></span>
-				</button>
+				{isAdmin &&
+					<button className="action-item" onClick={() => deleteRecording(recording)} title={t('bbb', 'Delete')}>
+						<span className="icon icon-delete icon-visible"></span>
+					</button>
+				}
 			</td>
 		</tr>
 	);

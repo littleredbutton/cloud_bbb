@@ -250,7 +250,7 @@ async function run() {
 	await pull();
 	console.log('✔ pulled latest changes'.green);
 
-	await execa('yarn', ['composer:install:dev']);
+	await execa('yarn composer:install:dev');
 	console.log('✔ composer dev dependencies installed'.green);
 
 	await notAlreadyTagged();

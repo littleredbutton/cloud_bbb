@@ -9,10 +9,10 @@ OC.L10N.register(
     "Group" : "ກຸ່ມ",
     "Name" : "ຊື່",
     "Edit" : "ແກ້ໄຂ",
+    "Sharing" : "ການແບ່ງປັນ",
     "Create" : "ສ້າງ",
     "Delete" : "ລຶບ",
     "Error" : "ຜິດພາດ",
-    "Share" : "ແບ່ງປັນ",
     "Loading" : "ການໂຫຼດ"
 },
 "nplurals=1; plural=0;");

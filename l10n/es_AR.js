@@ -12,12 +12,12 @@ OC.L10N.register(
     "Name" : "Nombre",
     "Edit" : "Editar",
     "Welcome" : "Bienvenido",
+    "Sharing" : "Compartiendo",
     "Create" : "Crear",
     "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Eliminar",
     "Error" : "Error",
     "Server error" : "Se presentó un error en el servidor",
-    "Share" : "Compartir",
     "Loading" : "Cargando",
     "Settings saved" : "Configuraciones guardadas"
 },

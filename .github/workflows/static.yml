@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-            ocp-version: [ 'dev-stable27', 'dev-stable26', 'dev-stable25' ]
+            ocp-version: [ '^28', '^27', '^26']
     name: Nextcloud ${{ matrix.ocp-version }}
     steps:
         - name: Checkout
@@ -21,7 +21,7 @@ jobs:
         - name: Install dependencies
           run: composer i
         - name: Install dependencies
-          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} psr/container symfony/service-contracts
+          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} symfony/service-contracts
         - name: Run coding standards check
           run: composer run psalm
 

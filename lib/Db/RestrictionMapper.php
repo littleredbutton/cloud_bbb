@@ -7,6 +7,9 @@ use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 
+/**
+ * @template-extends QBMapper<Restriction>
+ */
 class RestrictionMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'bbb_restrictions', Restriction::class);
@@ -19,8 +22,9 @@ class RestrictionMapper extends QBMapper {
 	public function find(int $id): Restriction {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName)
+		$qb->select('r.*', 'g.displayname as groupName')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'groups', 'g', $qb->expr()->eq('r.group_id', 'g.gid'))
 			->where($qb->expr()->eq('id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT)));
 
 		return $this->findEntity($qb);
@@ -33,8 +37,9 @@ class RestrictionMapper extends QBMapper {
 	public function findByGroupId(string $groupId): Restriction {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName)
+		$qb->select('r.*', 'g.displayname as groupName')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'groups', 'g', $qb->expr()->eq('r.group_id', 'g.gid'))
 			->where($qb->expr()->eq('group_id', $qb->createNamedParameter($groupId)));
 
 		return $this->findEntity($qb);
@@ -46,8 +51,9 @@ class RestrictionMapper extends QBMapper {
 	public function findByGroupIds(array $groupIds): array {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName)
+		$qb->select('r.*', 'g.displayname as groupName')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'groups', 'g', $qb->expr()->eq('r.group_id', 'g.gid'))
 			->where($qb->expr()->in('group_id', $qb->createNamedParameter($groupIds, IQueryBuilder::PARAM_STR_ARRAY)));
 
 		/** @var array<Restriction> */
@@ -60,8 +66,9 @@ class RestrictionMapper extends QBMapper {
 	public function findAll(): array {
 		/* @var $qb IQueryBuilder */
 		$qb = $this->db->getQueryBuilder();
-		$qb->select('*')
-			->from($this->tableName);
+		$qb->select('r.*', 'g.displayname as groupName')
+			->from($this->tableName, 'r')
+			->leftJoin('r', 'groups', 'g', $qb->expr()->eq('r.group_id', 'g.gid'));
 
 		/** @var array<Restriction> */
 		return $this->findEntities($qb);

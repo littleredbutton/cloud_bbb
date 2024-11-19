@@ -1,12 +1,11 @@
 {
-    "name": "sualko/bigbluebutton",
+    "name": "littleredbutton/bigbluebutton",
     "description": "Nextcloud Integration for BigBlueButton",
     "type": "project",
     "license": "AGPL",
     "authors": [
         {
-            "name": "Klaus Herberth",
-            "email": "klaus@jsxc.org"
+            "name": "Klaus Herberth"
         }
     ],
     "require": {
@@ -18,7 +17,8 @@
         "nextcloud/coding-standard": "^1.0.0",
         "phpstan/phpstan": "^0.12.29",
         "nextcloud/ocp": "^25.0 || ^26.0 || ^27.0",
-        "vimeo/psalm": "^4.5"
+        "vimeo/psalm": "^5.0",
+        "psr/container": "^1.1.2"
     },
     "config": {
         "optimize-autoloader": true,

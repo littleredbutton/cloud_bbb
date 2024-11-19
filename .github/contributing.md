@@ -28,12 +28,13 @@ feature request and follow the guidelines below:
 Every code contribution is considered valuable, independent from there size and
 small changes can also be contributed directly via Github:
 
-1. Browse to the desired file via
-   [Github](https://github.com/sualko/cloud_bbb/).
+1. Browse to the desired file via [Github].
 2. Click on the :pencil2: on the top right corner of the file.
 3. Make your changes.
 4. Add a meaning full commit message, prefixed with either `fix:` or `feat:`
-   (e.g. `fix: room recordings`).
+   (e.g. `fix: room recordings`).<br/>
+*type must be one of 'l10n', 'release', 'build', 'ci', 'chore', 'docs', 'feat'
+, 'fix', 'perf', 'refactor', 'revert', 'style', 'test', 'example'*
 5. Submit your changes.
 
 If you want to contribute larger changes, we recommend the following approach
@@ -62,8 +63,7 @@ If you like to sponsor a specific feature, bug fix or the project in general you
 can also contact any maintainer of this application to support open source
 development.
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sualko)
-
-[open a new issue]: https://github.com/sualko/cloud_bbb/issues
+[Github]: https://github.com/littleredbutton/cloud_bbb/
+[open a new issue]: https://github.com/littleredbutton/cloud_bbb/issues
 [Conventional Commits]: https://www.conventionalcommits.org
-[Nextclouds Transifex]: https://www.transifex.com/nextcloud/nextcloud/
+[Nextclouds Transifex]: https://app.transifex.com/nextcloud/nextcloud/bbb/

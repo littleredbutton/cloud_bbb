@@ -4,6 +4,7 @@ OC.L10N.register(
     "Save" : "Save",
     "Password" : "Password",
     "Name" : "Name",
+    "Sharing" : "Ulashish",
     "Delete" : "Delete",
     "Error" : "Error",
     "Loading" : "Loading",
