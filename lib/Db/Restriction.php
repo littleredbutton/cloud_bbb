@@ -34,8 +34,8 @@ class Restriction extends Entity implements JsonSerializable {
 		$this->addType('allowRecording', 'boolean');
 	}
 
-	public function setGroupName(string $groupName) {
-		$this->groupName = $groupName;
+	public function setGroupName(?string $groupName) {
+		$this->groupName = $groupName ?? '';
 	}
 
 	public function jsonSerialize(): array {
