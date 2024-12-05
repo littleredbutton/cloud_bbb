@@ -7,10 +7,11 @@ OC.L10N.register(
     "Group" : "Gruppe",
     "Name" : "Namn",
     "Edit" : "Endra",
+    "Sharing" : "Deling",
     "Create" : "Lag",
+    "Published" : "Publisert",
     "Delete" : "Ta bort",
     "Error" : "Feil",
-    "Share" : "Del",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

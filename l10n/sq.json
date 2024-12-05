@@ -9,13 +9,14 @@
     "Name" : "Emri",
     "Edit" : "Përpuno",
     "Welcome" : "Mirëseerdhët",
+    "Sharing" : "Ndarje",
     "Room name" : "Emri i dhomës",
     "Create" : "Krijo",
     "Copy to clipboard" : "Kopjo në dërrasë ",
     "Delete" : "Delete",
     "Error" : "Error",
     "Server error" : "Gabim shërbyesi",
-    "Share" : "Shpërndaje",
+    "Start" : "Fillo",
     "Loading" : "Duke ngarkuar",
     "Settings saved" : "Opsjonet u Ruajtën."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

@@ -10,12 +10,13 @@
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",
+    "Sharing" : "Kunhavigo",
     "Create" : "Krei",
     "Copy to clipboard" : "Kopii tondejen",
     "Delete" : "Forigi",
     "Error" : "Eraro",
     "Server error" : "Eraro pri servilo",
-    "Share" : "Kunhavigi",
+    "Start" : "Komenco",
     "Loading" : "Ŝargado",
     "Settings saved" : "Agordoj konservitaj"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

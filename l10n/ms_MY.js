@@ -10,7 +10,6 @@ OC.L10N.register(
     "Create" : "Buat",
     "Delete" : "Padam",
     "Error" : "Ralat",
-    "Share" : "Kongsi",
     "Loading" : "Loading"
 },
 "nplurals=1; plural=0;");

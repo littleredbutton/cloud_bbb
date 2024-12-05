@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { api, Recording, Room, Restriction, Access } from '../Common/Api';
+import { api, Recording, Room, Restriction, Access, Permission } from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
@@ -155,10 +155,32 @@ const RoomRow: React.FC<Props> = (props) => {
 		);
 	}
 
+	function publishRecording(recording: Recording, publish: boolean) {
+		api.publishRecording(recording.id, publish).then(success=> {
+			if (recordings === null) {
+				return;
+			}
+			setRecordings(recordings.map(recordItem => {
+				if (recordItem.id === recording.id) {
+					recordItem.published = success;
+					recordItem.state = success ? 'published' : 'unpublished';
+				}
+				return recordItem;
+			}));
+		}).catch(err => {
+			console.warn('Could not modify publishing state', err);
+			OC.dialogs.info(
+				t('bbb', 'Could not modify publishing state'),
+				t('bbb', 'Server error'),
+				() => undefined,
+			);
+		});
+	}
+
 	function accessToIcon(access: string) {
 		switch(access) {
 		case Access.Public:
-			return <span className="icon icon-visible icon-link" title={AccessOptions[access]} />;
+			return <span className="icon icon-visible icon-public" title={AccessOptions[access]} />;
 		case Access.Password:
 			return <span className="icon icon-visible icon-password" title={AccessOptions[access]} />;
 		case Access.Internal:
@@ -166,14 +188,18 @@ const RoomRow: React.FC<Props> = (props) => {
 		case Access.InternalRestricted:
 			return <span className="icon icon-visible icon-user" title={AccessOptions[access]} />;
 		case Access.WaitingRoom:
+		case Access.WaitingRoomAll:
 			return <span className="icon icon-visible icon-timezone" title={AccessOptions[access]} />;
 		}
 
 		return <span></span>;
 	}
 
-	function edit(field: string, type: 'text' | 'number' = 'text', options?) {
-		return <EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />;
+	function edit(field: string, type: 'text' | 'number' = 'text', canEdit = true, options?) {
+		return canEdit ?
+			<EditableValue field={field} value={room[field]} setValue={updateRoom} type={type} options={options} />
+			:
+			<span>{room[field]}</span>;
 	}
 
 	function cloneRow() {
@@ -189,11 +215,17 @@ const RoomRow: React.FC<Props> = (props) => {
 	const maxParticipantsLimit = props.restriction?.maxParticipants || -1;
 	const minParticipantsLimit = (props.restriction?.maxParticipants || -1) < 1 ? 0 : 1;
 
+	const adminRoom = room.permission === null || room.permission === Permission.Admin;
+
 	return (
 		<>
 			<tr className={showRecordings ? 'selected-row' : ''}>
 				<td className="start">
-					<a href={api.getRoomUrl(room)} className={`button ${room.running ? 'success' : 'primary'}`} target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open room')}>
+					<a href={api.getRoomUrl(room)}
+						className={'button ' + (room.running ? 'success' : 'primary')}
+						target="_blank"
+						rel="noopener noreferrer"
+						title={t('bbb', 'Open room')}>
 						{room.running ? t('bbb', 'Join') : t('bbb', 'Start')}
 					</a>
 				</td>
@@ -210,7 +242,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					</button>
 				</td>
 				<td className="name">
-					{edit('name')}
+					{edit('name', 'text', adminRoom)}
 				</td>
 				<td className="bbb-shrink">
 					{room.userId !== OC.currentUser && <img src={avatarUrl} alt="Avatar" className="bbb-avatar" />}
@@ -220,32 +252,43 @@ const RoomRow: React.FC<Props> = (props) => {
 					{accessToIcon(room.access)}
 				</td>
 				<td className="max-participants bbb-shrink">
-					{edit('maxParticipants', 'number', {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
+					{edit('maxParticipants', 'number', adminRoom, {min: minParticipantsLimit, max: maxParticipantsLimit < 0 ? undefined : maxParticipantsLimit})}
 				</td>
 				<td className="record bbb-shrink">
-					<input id={`bbb-record-${room.id}`} type="checkbox" className="checkbox" disabled={!props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
-					<label htmlFor={`bbb-record-${room.id}`}></label>
+					<input id={'bbb-record-' + room.id} type="checkbox" className="checkbox" disabled={!adminRoom || !props.restriction?.allowRecording} checked={room.record} onChange={(event) => updateRoom('record', event.target.checked)} />
+					<label htmlFor={'bbb-record-' + room.id}></label>
 				</td>
-				<td className="bbb-shrink"><RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} /></td>
-				<td className="edit icon-col">
-					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+				<td className="bbb-shrink">
+					{<RecordingsNumber recordings={recordings} showRecordings={showRecordings} setShowRecordings={setShowRecordings} />}
 				</td>
 				<td className="clone icon-col">
-					<button className="action-item" onClick={cloneRow} title={t('bbb', 'Clone Room')}>
+					{adminRoom &&
+					<button
+						className="action-item"
+						onClick={cloneRow}
+						title={t('bbb', 'Clone room')}>
 						<span className="icon icon-template-add icon-visible"></span>
 					</button>
+					}
+				</td>
+				<td className="edit icon-col">
+					{adminRoom &&
+					<EditRoom room={props.room} restriction={props.restriction} updateProperty={updateRoom} />
+					}
 				</td>
 				<td className="remove icon-col">
+					{adminRoom &&
 					<button className="action-item" onClick={deleteRow as any} title={t('bbb', 'Delete')}>
 						<span className="icon icon-delete icon-visible"></span>
 					</button>
+					}
 				</td>
 			</tr>
 			{showRecordings && <tr className="recordings-row">
 				<td colSpan={11}>
 					<table>
 						<tbody>
-							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} />)}
+							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} isAdmin={adminRoom} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} publishRecording={publishRecording} />)}
 						</tbody>
 					</table>
 				</td>

@@ -1,4 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+/**
+ * npm run release:build [--dry-run] [--stable]
+ *
+ *  --dry-run    don't commit CHANGELOG.md
+ *  --stable     generate changelog
+ *
+ */
 const colors = require('colors');
 const fs = require('fs');
 const path = require('path');
@@ -70,17 +77,19 @@ async function createRelease(appId) {
 
 	const execa = (await import('execa')).execaCommand;
 
-	await execa('yarn', ['composer:install:dev']);
+	const composerDev = await execa('composer install');
+	console.log(composerDev.stdout, composerDev.stderr);
 	console.log('✔ composer dev dependencies installed'.green);
 
-	await execa('yarn', ['lint']);
+	await execa('yarn lint');
 	console.log('✔ linters are happy'.green);
 
-	await execa('yarn', ['composer:install']);
+	const composerNoDev = await execa('composer install --no-dev');
+	console.log(composerNoDev.stdout, composerNoDev.stderr);
 	console.log('✔ composer dependencies installed'.green);
 
-	await execa('yarn', ['build']);
-	console.log('✔ scripts built'.green);
+	await execa('yarn build');
+	console.log('✔ webpack done'.green);
 
 	await updateChangelog();
 
@@ -89,7 +98,7 @@ async function createRelease(appId) {
 	await createGPGSignature(filePath);
 	await createGPGArmorSignature(filePath);
 
-	await execa('yarn', ['composer:install:dev']);
+	await execa('composer install');
 	console.log('✔ composer dev dependencies installed'.green);
 }
 
@@ -153,6 +162,11 @@ async function commitChangeLog() {
 
 
 function createArchive(appId, fileBaseName) {
+	const archivesPath = path.normalize(__dirname + '/../archives/');
+	if (!fs.existsSync(archivesPath)){
+		fs.mkdirSync(archivesPath);
+	}
+
 	const fileName = `${fileBaseName}.tar.gz`;
 	const filePath = path.normalize(__dirname + `/../archives/${fileName}`);
 	const output = fs.createWriteStream(filePath);

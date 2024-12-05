@@ -83,7 +83,8 @@ class PermissionTest extends TestCase {
 
 		$this->roomService
 			->expects($this->once())
-			->method('findAll')
+			->method('findByUserId')
+			->with('foobar')
 			->willReturn([
 				$this->createRoom(1, 'foo'),
 				$this->createRoom(2, 'bar'),

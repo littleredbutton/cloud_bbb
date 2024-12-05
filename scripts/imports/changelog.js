@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs');
 const path = require('path');
-const simpleGit = require('simple-git/promise');
+const simpleGit = require('simple-git');
 const inquirer = require('inquirer');
 
 const git = simpleGit();

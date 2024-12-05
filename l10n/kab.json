@@ -8,10 +8,11 @@
     "Group" : "Agraw",
     "Name" : "Nom",
     "Edit" : "Ẓreg",
+    "Sharing" : "Beṭṭu",
     "Create" : "Snulfu-d",
+    "Published" : "Yeffeɣ-d",
     "Copy to clipboard" : "Copier dans le presse-papiers",
     "Delete" : "Kkes",
-    "Error" : "Erreur",
-    "Share" : "Bḍu"
+    "Error" : "Erreur"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -14,17 +14,18 @@
 * **Restrictions** Restrict room creation to certain groups
 * **Activities** Get an overview of your room activities
 
-Quick start guide and further information in our [readme](https://github.com/sualko/cloud_bbb).
+Quick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).
 Do you like this application? Give something back to the open source community and checkout our
-[ways to contribute](https://github.com/sualko/cloud_bbb/blob/master/.github/contributing.md).
+[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).
 
-Developer wanted! If you have time it would be awesome if you could help to enhance this application.
+Contributors are welcome! If you have time it would be awesome if you could help to enhance this application.
 
 *This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*
     ]]></description>
-    <version>2.6.0</version>
+    <version>2.7.3</version>
     <licence>agpl</licence>
-    <author mail="klaus@jsxc.org">Klaus Herberth</author>
+    <author mail="cloud_bbb@arawa.fr" homepage="https://arawa.fr/">Arawa</author>
+    <author>Klaus Herberth</author>
     <namespace>BigBlueButton</namespace>
     <types>
         <prevent_group_restriction/>
@@ -32,18 +33,18 @@ Developer wanted! If you have time it would be awesome if you could help to enha
     <category>social</category>
     <category>multimedia</category>
     <category>integration</category>
-    <website>https://github.com/sualko/cloud_bbb/</website>
-    <bugs>https://github.com/sualko/cloud_bbb/issues</bugs>
-    <repository>https://github.com/sualko/cloud_bbb/</repository>
-    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-file-browser.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-configuration2.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/sualko/cloud_bbb/master/docs/screenshot-join.png</screenshot>
+    <website>https://github.com/littleredbutton/cloud_bbb/</website>
+    <bugs>https://github.com/littleredbutton/cloud_bbb/issues</bugs>
+    <repository>https://github.com/littleredbutton/cloud_bbb/</repository>
+    <screenshot>https://raw.githubusercontent.com/littleredbutton/cloud_bbb/master/docs/screenshot-configuration.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/littleredbutton/cloud_bbb/master/docs/screenshot-configuration2.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/littleredbutton/cloud_bbb/master/docs/screenshot-join.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/littleredbutton/cloud_bbb/master/docs/screenshot-config-share.png</screenshot>
     <dependencies>
         <lib>curl</lib>
         <lib>mbstring</lib>
         <lib>SimpleXML</lib>
-        <nextcloud min-version="25" max-version="28"/>
+        <nextcloud min-version="26" max-version="30"/>
     </dependencies>
     <commands>
         <command>OCA\BigBlueButton\Command\ClearAvatarCache</command>

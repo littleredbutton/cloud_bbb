@@ -20,6 +20,7 @@ export enum Access {
 export interface Restriction {
 	id: number;
 	groupId: string;
+	groupName: string;
 	maxRooms: number;
 	roomTypes: string[];
 	maxParticipants: number;
@@ -39,6 +40,7 @@ export interface Room {
 	everyoneIsModerator: boolean;
 	requireModerator: boolean;
 	shared: boolean;
+	permission: Permission;
 	moderatorToken: string;
 	listenOnly: boolean,
 	mediaCheck: boolean,
@@ -196,6 +198,14 @@ class Api {
 
 	public async deleteRecording(id: string) {
 		const response = await axios.delete(this.getUrl(`server/record/${id}`));
+
+		return response.data;
+	}
+
+	public async publishRecording(id: string, publish: boolean,) {
+		const response = await axios.post(this.getUrl(`server/record/${id}/publish`), {
+			published: publish,
+		});
 
 		return response.data;
 	}

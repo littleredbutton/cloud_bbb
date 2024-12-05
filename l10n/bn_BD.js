@@ -7,10 +7,10 @@ OC.L10N.register(
     "Group" : "গোষ্ঠীসমূহ",
     "Name" : "নাম",
     "Edit" : "সম্পাদনা",
+    "Sharing" : "ভাগাভাগিরত",
     "Create" : "তৈরী কর",
     "Delete" : "মুছে",
     "Error" : "সমস্যা",
-    "Share" : "ভাগাভাগি কর",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

@@ -6,6 +6,8 @@
     xmlns="https://getpsalm.org/schema/config"
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
     errorBaseline="tests/psalm-baseline.xml"
+    findUnusedCode="false"
+    findUnusedBaselineEntry="false"
 >
     <projectFiles>
         <directory name="lib" />

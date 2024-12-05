@@ -9,13 +9,18 @@ use OCA\BigBlueButton\Db\RestrictionMapper;
 
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\IGroupManager;
 
 class RestrictionService {
 	/** @var RestrictionMapper */
 	private $mapper;
 
-	public function __construct(RestrictionMapper $mapper) {
+	/** @var IGroupManager */
+	private $groupManager;
+
+	public function __construct(RestrictionMapper $mapper, IGroupManager $groupManager) {
 		$this->mapper = $mapper;
+		$this->groupManager = $groupManager;
 	}
 
 	public function findAll(): array {
@@ -78,6 +83,10 @@ class RestrictionService {
 		$restriction = new Restriction();
 
 		$restriction->setGroupId($groupId);
+		$group = $this->groupManager->get($groupId);
+		if ($group) {
+			$restriction->setGroupName($group->getDisplayName());
+		}
 
 		return $this->mapper->insert($restriction);
 	}

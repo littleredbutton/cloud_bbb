@@ -62,8 +62,11 @@ clean:
 
 clean-dev:
 	rm -rf node_modules
+	git checkout composer.json
+	git checkout composer.lock
+	rm -rf vendor
 
-pack:
+pack: install-composer-deps
 	mkdir -p archive
 	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' -zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bbb/
 

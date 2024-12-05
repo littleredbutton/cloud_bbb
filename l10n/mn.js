@@ -10,11 +10,12 @@ OC.L10N.register(
     "Name" : "Нэр",
     "Edit" : "засварлах",
     "Welcome" : "Тавтай морил",
+    "Sharing" : "Түгээх",
     "Create" : "Үүсгэх",
     "Delete" : "Устгах",
     "Error" : "Алдаа",
     "Server error" : "серверийн алдаа",
-    "Share" : "Түгээх",
+    "Start" : "эхлэх",
     "Loading" : "Loading",
     "Settings saved" : "Тохиргоо хадгалагдлаа"
 },
