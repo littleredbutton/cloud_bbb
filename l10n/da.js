@@ -29,6 +29,7 @@ OC.L10N.register(
     "Delete?" : "Slet?",
     "Server error" : "Serverfejl",
     "Loading" : "Indlæser",
-    "Settings saved" : "Indstillinger gemt"
+    "Settings saved" : "Indstillinger gemt",
+    "Unexpected error occurred" : "En uventet fejl opstod"
 },
 "nplurals=2; plural=(n != 1);");
