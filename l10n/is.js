@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome" : "Velkomin",
     "Sharing" : "Deiling",
     "Miscellaneous" : "Ýmislegt",
+    "Room name" : "Heiti fundarsalar",
     "Create" : "Búa til",
     "Published" : "Útgefið",
     "Copy to clipboard" : "Afrita á klippispjald",
