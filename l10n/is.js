@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome" : "Velkomin",
     "Sharing" : "Deiling",
     "Miscellaneous" : "Ýmislegt",
+    "Room name" : "Heiti fundarsalar",
     "Create" : "Búa til",
     "Published" : "Útgefið",
     "Copy to clipboard" : "Afrita á klippispjald",
@@ -25,6 +26,7 @@ OC.L10N.register(
     "Server error" : "Villa frá þjóni",
     "Start" : "Byrjun",
     "Loading" : "Hleð inn",
-    "Settings saved" : "Stillingar vistaðar"
+    "Settings saved" : "Stillingar vistaðar",
+    "Unexpected error occurred" : "Óvænt villa kom upp"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

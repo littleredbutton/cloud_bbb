@@ -89,7 +89,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						return <option key={key} value={key}>{label}</option>;
 					})}
 				</select>
-				{(value === Access.Password && room.password) && <CopyToClipboard text={room.password}><input type="text" readOnly={true} className="icon-clippy" value={room.password} /></CopyToClipboard>}
+				{(value === Access.Password && room.password) && <CopyToClipboard text={room.password} options={{format:'text/plain'}}><input type="text" readOnly={true} className="icon-clippy" value={room.password} /></CopyToClipboard>}
 				{descriptions[field] && <em>{descriptions[field]}</em>}
 			</div>
 		);
