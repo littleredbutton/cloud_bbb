@@ -27,6 +27,7 @@
     "Delete?" : "Slet?",
     "Server error" : "Serverfejl",
     "Loading" : "Indlæser",
-    "Settings saved" : "Indstillinger gemt"
+    "Settings saved" : "Indstillinger gemt",
+    "Unexpected error occurred" : "En uventet fejl opstod"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

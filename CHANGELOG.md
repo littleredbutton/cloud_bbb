@@ -6,6 +6,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.7.3 (2024-12-03)
+### Added
+
+- missing icon and adapt dialog style to NC30 by @smarinier in [#304](https://github.com/littleredbutton/cloud_bbb/pull/304)
+
+### Changed
+
+- readme, screenshots and project files. by @smarinier in [#300](https://github.com/littleredbutton/cloud_bbb/pull/300)
+- remove NC25 support by @smarinier in [#302](https://github.com/littleredbutton/cloud_bbb/pull/302)
+
+### Fix
+
+- max number of rooms shloud take only owned rooms in account by @smarinier in [#296](https://github.com/littleredbutton/cloud_bbb/pull/296)
+- admin interface displays groups gid instead of displayname by @smarinier in [#295](https://github.com/littleredbutton/cloud_bbb/pull/295)
+- style lint warnings and typescript compiler need upgrade by @smarinier in [#294](https://github.com/littleredbutton/cloud_bbb/pull/294)
+
+### Misc
+
+- psalm github actions by @smarinier in [#298](https://github.com/littleredbutton/cloud_bbb/pull/298)
+- update php versions for tests in github actions by @smarinier in [#297](https://github.com/littleredbutton/cloud_bbb/pull/297)
+- expose app capabilities by @smarinier in [#293](https://github.com/littleredbutton/cloud_bbb/pull/293)
+- make clean-dev and release:build by @smarinier in [#303](https://github.com/littleredbutton/cloud_bbb/pull/303)
+- psalm bump 5.0 by @smarinier in [#301](https://github.com/littleredbutton/cloud_bbb/pull/301)
+- Release/2.7.3 by @smarinier in [#307](https://github.com/littleredbutton/cloud_bbb/pull/307)
+
 ## 2.7.2 (2024-10-08)
 ### Misc
 - rebuild frontend client

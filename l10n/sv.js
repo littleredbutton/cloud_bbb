@@ -1,6 +1,10 @@
 OC.L10N.register(
     "bbb",
     {
+    "You shared the room %s with {shareWith}." : "Du delade rummet %s med {shareWith}.",
+    "{user} shared the room %s with you." : "{user} delade rummet %s med dig.",
+    "You unshared the room %s with {shareWith}." : "Du slutade dela rummet %s med {shareWith}.",
+    "{user} unshared the room %s with you." : "{user} slutade dela rummet %s med dig.",
     "Public" : "Offentlig",
     "Internal" : "Intern",
     "Back to %s" : "Tillbaka till %s",
@@ -35,6 +39,7 @@ OC.L10N.register(
     "Server error" : "Serverfel",
     "Start" : "Start",
     "Loading" : "Läser in",
+    "You are not allowed to change this option, because this room is shared with you." : "Du får inte ändra det här alternativet eftersom detta rum delas med dig.",
     "Settings saved" : "Inställningar sparade",
     "Unexpected error occurred" : "Ett oväntat fel inträffade",
     "Send to" : "Skicka till",
