@@ -5,6 +5,7 @@ namespace OCA\BigBlueButton\Activity;
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Db\Room;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCA\BigBlueButton\Event\RoomEvent;
 use OCA\BigBlueButton\Event\RoomShareCreatedEvent;
 use OCA\BigBlueButton\Event\RoomShareDeletedEvent;
 use OCA\BigBlueButton\Service\RoomService;
@@ -13,6 +14,9 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IGroupManager;
 
+/**
+ * @template-implements IEventListener<RoomEvent>
+ */
 class RoomShareListener implements IEventListener {
 	/** @var IActivityManager */
 	private $activityManager;

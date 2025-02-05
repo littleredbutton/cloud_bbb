@@ -14,8 +14,8 @@ use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
 use OCP\IUser;
-use OCP\Security\ISecureRandom;
 use OCP\Search\ISearchQuery;
+use OCP\Security\ISecureRandom;
 
 class RoomService {
 	/** @var RoomMapper */

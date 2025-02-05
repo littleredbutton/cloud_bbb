@@ -17,13 +17,14 @@
     "Name" : "ชื่อ",
     "Edit" : "แก้ไข",
     "Welcome" : "ยินดีต้อนรับ",
+    "Sharing" : "แชร์ข้อมูล",
     "Create" : "สร้าง",
+    "Published" : "เผยแพร่แล้ว",
     "Copy to clipboard" : "คัดลอกไปยังคลิปบอร์ด",
     "Delete" : "ลบ",
     "Error" : "ข้อผิดพลาด",
     "Delete?" : "ลบหรือไม่",
     "Server error" : "ข้อผิดพลาดเซิร์ฟเวอร์",
-    "Share" : "แชร์",
     "Loading" : "กำลังโหลด",
     "Settings saved" : "บันทึกการตั้งค่าแล้ว"
 },"pluralForm" :"nplurals=1; plural=0;"

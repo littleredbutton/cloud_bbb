@@ -16,7 +16,22 @@
 
 .oc-dialog.bbb-dialog {
   max-height: calc(100% - 70px);
-  margin-top: 25px;
+  margin-top: 0;
+  padding: 4px 24px;
+}
+
+.bbb-dialog {
+
+  .oc-dialog-title {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .oc-dialog-close {
+    padding: 0;
+    top: 0;
+  }
 }
 
 .bbb-mb-1 {
@@ -35,6 +50,36 @@
 
 .text-muted {
   opacity: 0.6;
+}
+
+.bbb-qrcode-container {
+  display: block;
+  height: 34px;
+  width: 34px;
+  margin: 3px;
+  position: relative;
+  cursor: zoom-in;
+
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked + canvas {
+      max-width: none;
+      max-height: none;
+      box-shadow: 0 0 10px;
+      box-shadow: 0 0 5px var(--color-box-shadow);
+      cursor: zoom-out;
+      border: 5px solid #fff;
+    }
+  }
 }
 
 #bbb-root, #bbb-app {
@@ -157,8 +202,23 @@ pre {
   .bbb-shrink {
     width: 44px;
     white-space: nowrap;
-  }
 
+    input[type="checkbox"]{
+
+      &+label:before {
+        border-radius: 3px;
+        border-width: 2px;
+      }
+
+      &:disabled+label:before {
+        opacity: .5;
+      }
+
+      &:not(input:checked):disabled+label:before {
+        background-color: transparent !important;
+      }
+    }
+  }
 
   th {
     padding: 14px 6px;
@@ -175,6 +235,7 @@ pre {
     padding: 0 6px;
     position: relative;
     display: table-cell;
+    border-bottom: 1px solid var(--color-border-dark);
 
     & > form {
       margin: -10px;
@@ -227,7 +288,7 @@ pre {
 
   tbody tr {
     td:first-child {
-      padding-left: 5px;
+      padding-left: 10px;
     }
 
     &:hover {
@@ -278,36 +339,10 @@ pre {
   }
 }
 
-.bbb-input-container {
-  display: flex;
+.bbb-simple-menu {
+  min-width: auto;
 }
 
-.bbb-qrcode-container {
-  display: block;
-  height: 34px;
-  width: 34px;
-  margin: 3px;
-  position: relative;
-  cursor: zoom-in;
-
-  canvas {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  input[type="checkbox"] {
-    display: none;
-
-    &:checked + canvas {
-      max-width: none;
-      max-height: none;
-      box-shadow: 0 0 10px;
-      box-shadow: 0 0 5px var(--color-box-shadow);
-      cursor: zoom-out;
-      border: 5px solid #fff;
-    }
-  }
+.bbb-input-container {
+  display: flex;
 }

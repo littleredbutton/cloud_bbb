@@ -78,7 +78,7 @@ const ShareSelection: React.FC<Props> = (props) => {
 					className="suggestion"
 					onMouseDown={preventOnBlurEvent}
 					onClick={() => selectShare(option)}>
-					{option.label}{option.value.shareType === ShareType.Group ? ` (${t('bbb', 'Group')})` : ''}
+					{option.label}{option.value.shareType === ShareType.Group ? ' (' + t('bbb', 'Group') + ')' : ''}
 				</li>);
 		};
 

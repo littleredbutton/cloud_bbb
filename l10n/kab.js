@@ -10,10 +10,11 @@ OC.L10N.register(
     "Group" : "Agraw",
     "Name" : "Nom",
     "Edit" : "Ẓreg",
+    "Sharing" : "Beṭṭu",
     "Create" : "Snulfu-d",
+    "Published" : "Yeffeɣ-d",
     "Copy to clipboard" : "Copier dans le presse-papiers",
     "Delete" : "Kkes",
-    "Error" : "Erreur",
-    "Share" : "Bḍu"
+    "Error" : "Erreur"
 },
 "nplurals=2; plural=(n != 1);");

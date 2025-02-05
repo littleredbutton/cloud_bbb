@@ -88,11 +88,17 @@ class ServerController extends Controller {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
 		}
 
-		if (!$this->permission->isAdmin($room, $this->userId)) {
+		if (!$this->permission->isUser($room, $this->userId)) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		$recordings = $this->server->getRecordings($room);
+
+		if (!$this->permission->isAdmin($room, $this->userId)) {
+			$recordings = array_values(array_filter($recordings, function ($recording) {
+				return $recording['published'];
+			}));
+		}
 
 		return new DataResponse($recordings);
 	}
@@ -114,6 +120,27 @@ class ServerController extends Controller {
 		}
 
 		$success = $this->server->deleteRecording($recordId);
+
+		return new DataResponse($success);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 */
+	public function publishRecord(string $recordId, bool $published): DataResponse {
+		$record = $this->server->getRecording($recordId);
+
+		$room = $this->service->findByUid($record['meetingId']);
+
+		if ($room === null) {
+			return new DataResponse(false, Http::STATUS_NOT_FOUND);
+		}
+
+		if (!$this->permission->isAdmin($room, $this->userId)) {
+			return new DataResponse(false, Http::STATUS_FORBIDDEN);
+		}
+
+		$success = $this->server->publishRecording($recordId, $published);
 
 		return new DataResponse($success);
 	}

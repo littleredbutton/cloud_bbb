@@ -20,6 +20,10 @@
       width: 32px;
       overflow: hidden;
 
+      > img {
+        max-width: 100%;
+      }
+
       .icon-group-white,
       .icon-circle-white {
         display: block;

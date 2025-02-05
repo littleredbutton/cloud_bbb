@@ -5,10 +5,14 @@ namespace OCA\BigBlueButton\Activity;
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Event\RoomCreatedEvent;
 use OCA\BigBlueButton\Event\RoomDeletedEvent;
+use OCA\BigBlueButton\Event\RoomEvent;
 use OCP\Activity\IManager as IActivityManager;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 
+/**
+ * @template-implements IEventListener<RoomEvent>
+ */
 class RoomListener implements IEventListener {
 	/** @var IActivityManager */
 	private $activityManager;

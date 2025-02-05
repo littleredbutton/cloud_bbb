@@ -14,6 +14,7 @@
     "Have an account? Log in." : "יש לך חשבון? כדאי לך להיכנס.",
     "Hello %s" : "שלום %s",
     "Group" : "קבוצה",
+    "moderator" : "מפקח/ת",
     "Name" : "שם",
     "Access" : "גישה",
     "Max" : "מרבי",
@@ -21,11 +22,12 @@
     "Recordings" : "הקלטה",
     "Edit" : "עריכה",
     "Welcome" : "ברוך בואך",
+    "Sharing" : "שיתוף",
     "Miscellaneous" : "שונות",
     "Room name" : "שם החדר",
     "Create" : "יצירה",
     "Copy to clipboard" : "העתקה ללוח הגזירים",
-    "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים","%n משתתפים"],
+    "_%n participant_::_%n participants_" : ["משתתף אחד","%n משתתפים","%n משתתפים"],
     "Delete" : "מחיקה",
     "Delete \"{name}\"?" : "למחוק את „{name}”?",
     "Select target folder" : "בחירת תיקיית יעד",
@@ -38,11 +40,10 @@
     "Delete?" : "למחוק?",
     "Could not delete record" : "לא ניתן למחוק רשומה",
     "Server error" : "שגיאת שרת",
-    "moderator" : "מפקח/ת",
-    "Share" : "שיתוף",
+    "Start" : "התחלה",
     "Loading" : "בטעינה",
     "Settings saved" : "הגדרות נשמרו",
     "Unexpected error occurred" : "אירעה שגיאה בלתי צפויה",
     "API secret is invalid" : "סוד ה־API שגוי"
-},"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;"
+},"pluralForm" :"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;"
 }

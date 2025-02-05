@@ -6,10 +6,10 @@ OC.L10N.register(
     "Group" : "Grupp",
     "Name" : "Numm",
     "Edit" : "Änneren",
+    "Sharing" : "Gedeelt",
     "Create" : "Erstellen",
     "Delete" : "Läschen",
     "Error" : "Fehler",
-    "Share" : "Deelen",
     "Loading" : "Loading"
 },
 "nplurals=2; plural=(n != 1);");

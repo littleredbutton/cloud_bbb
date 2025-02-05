@@ -35,6 +35,9 @@ class Application extends App implements IBootstrap {
 		parent::__construct(self::ID, $urlParams);
 	}
 
+	/**
+	 * @psalm-suppress InvalidArgument
+	 */
 	public function register(IRegistrationContext $context): void {
 		if ((@include_once __DIR__ . '/../../vendor/autoload.php') === false) {
 			throw new \Exception('Cannot include autoload. Did you run install dependencies using composer?');
@@ -56,6 +59,8 @@ class Application extends App implements IBootstrap {
 
 		$context->registerMiddleware(JoinMiddleware::class);
 		$context->registerMiddleware(HookMiddleware::class);
+
+		$context->registerCapability(Capabilities::class);
 	}
 
 	public function boot(IBootContext $context): void {

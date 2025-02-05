@@ -6,11 +6,15 @@ use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\MeetingStartedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
+use OCA\BigBlueButton\Event\RoomEvent;
 use OCP\Activity\IManager as IActivityManager;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IUserSession;
 
+/**
+ * @template-implements IEventListener<RoomEvent>
+ */
 class MeetingListener implements IEventListener {
 	/** @var IActivityManager */
 	private $activityManager;
