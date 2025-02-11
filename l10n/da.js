@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Offentlig",
+    "Internal" : "Intern",
     "Back to %s" : "Tilbage til %s",
     "Save" : "Gem",
     "Community" : "Onlinefællesskab",
