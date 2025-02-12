@@ -67,7 +67,7 @@
     "Room quota:" : "Raumkontingent:",
     "Edit" : "Bearbeiten",
     "Descriptive name of this room." : "Beschreibender Name dieses Raumes",
-    "This message is shown to all users in the chat area after they joined." : "Diese Nachricht wird allen Benutzern im Chat-Bereich nach ihrem Beitritt angezeigt.",
+    "This message is shown to all users in the chat area after they joined." : "Diese Nachricht wird allen Benutzern im Chatbereich nach ihrem Beitritt angezeigt.",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "Legt eine Begrenzung der Teilnehmerzahl für diesen Raum fest. Null bedeutet, dass es keine Begrenzung gibt.",
     "If enabled, the moderator is able to start the recording." : "Wenn aktiviert, kann der Moderator die Aufnahme starten.",
     "Explanation of the different concepts that constitute access options :<br>- Public: Anyone who has the link can join.- <br>Internal: Only Nextcloud users can join.- <br>Password: Only guests who have the password can join..- <br>Waiting room: A moderator must accept each guest before they can join.- <br>Restricted : Only selected users and groups can access this room." : "Erläuterung der verschiedenen Konzepte bezüglich der Zugriffsrechte:<br>- Öffentlich: Jeder, der den Link hat, kann beitreten. <br>- Intern: Nur Nextcloud-Benutzer können beitreten. <br>- Passwort: Nur Gäste, die das Passwort haben, können beitreten. <br>- Warteraum: Ein Moderator muss jeden Gast vor dem Beitreten bestätigen.<br> – Eingeschränkt: Nur ausgewählte Benutzer und Gruppen haben Zugriff auf diesen Raum.",

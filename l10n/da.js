@@ -21,6 +21,7 @@ OC.L10N.register(
     "Welcome" : "Velkommen",
     "Sharing" : "Deling",
     "Miscellaneous" : "Diverse",
+    "Recording" : "Optagelse",
     "Room name" : "Rumnavn",
     "Create" : "Opret",
     "Published" : "Udgivet",
@@ -31,6 +32,7 @@ OC.L10N.register(
     "Server error" : "Serverfejl",
     "Loading" : "Indlæser",
     "Settings saved" : "Indstillinger gemt",
-    "Unexpected error occurred" : "En uventet fejl opstod"
+    "Unexpected error occurred" : "En uventet fejl opstod",
+    "Send to" : "Send til"
 },
 "nplurals=2; plural=(n != 1);");
