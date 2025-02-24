@@ -12,7 +12,7 @@ OC.L10N.register(
     "Display name" : "Attēlojamais vārds",
     "Password" : "Parole",
     "Join" : "Pievienoties",
-    "Hello %s" : "Sveiki, %s",
+    "Hello %s" : "Sveiciens, %s!",
     "Group" : "Grupa",
     "Searching" : "Meklē",
     "moderator" : "moderators",
