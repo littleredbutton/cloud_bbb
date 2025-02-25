@@ -7,7 +7,7 @@ OC.L10N.register(
     "Save" : "Gem",
     "Community" : "Onlinefællesskab",
     "Display name" : "Vist navn",
-    "Password" : "Password",
+    "Password" : "Adgangskode",
     "Join" : "Deltag",
     "Hello %s" : "Hej %s",
     "Group" : "Gruppe",
