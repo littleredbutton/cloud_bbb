@@ -1,10 +1,15 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Ommaviy",
     "Save" : "Save",
     "Password" : "Password",
+    "Hello %s" : "Xush kelibsiz %s",
     "Name" : "Name",
+    "Edit" : "Tahrirlash",
     "Sharing" : "Ulashish",
+    "Miscellaneous" : "Turli xil",
+    "Room name" : "Xona nomi",
     "Delete" : "Delete",
     "Error" : "Error",
     "Loading" : "Loading",
