@@ -1,5 +1,6 @@
 { "translations": {
     "Public" : "Ommaviy",
+    "Back to %s" : "%sga qaytish",
     "Save" : "Save",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",

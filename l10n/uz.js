@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Ommaviy",
+    "Back to %s" : "%sga qaytish",
     "Save" : "Save",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
