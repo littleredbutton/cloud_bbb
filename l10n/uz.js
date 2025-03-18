@@ -11,6 +11,7 @@ OC.L10N.register(
     "Sharing" : "Ulashish",
     "Miscellaneous" : "Turli xil",
     "Room name" : "Xona nomi",
+    "Create" : "Yaratish",
     "Delete" : "Delete",
     "Error" : "Error",
     "Loading" : "Loading",
