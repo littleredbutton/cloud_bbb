@@ -117,7 +117,7 @@ OC.L10N.register(
     "Could not modify publishing state" : "No s'ha pogut modificar l'estat de publicació ",
     "Open room" : "Obrir sala",
     "Start" : "Inici",
-    "Clone room" : "Clona sala",
+    "Clone room" : "Clonar sala",
     "Loading" : "Carregant",
     "You are not allowed to change this option, because this room is shared with you." : "No podeu canviar aquesta opció perquè aquesta sala es comparteix amb vostè.",
     "Max. rooms" : "Màx. sales",

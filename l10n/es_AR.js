@@ -14,6 +14,7 @@ OC.L10N.register(
     "Welcome" : "Bienvenido",
     "Sharing" : "Compartiendo",
     "Create" : "Crear",
+    "Published" : "Publicado",
     "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Eliminar",
     "Error" : "Error",

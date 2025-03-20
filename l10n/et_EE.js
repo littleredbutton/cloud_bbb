@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Public" : "Avalik",
     "Save" : "Salvesta",
+    "Community" : "Kogukond",
     "Display name" : "Kuvatav nimi",
     "Password" : "Parool",
     "Hello %s" : "Tere %s",
