@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Avalik",
+    "Back to %s" : "Tagasi siia: %s",
     "Save" : "Salvesta",
     "Community" : "Kogukond",
     "Display name" : "Kuvatav nimi",
