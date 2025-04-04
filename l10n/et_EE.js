@@ -20,6 +20,7 @@ OC.L10N.register(
     "Server error" : "Serveri tõrge",
     "Start" : "Algus",
     "Loading" : "Laadimine",
-    "Settings saved" : "Seaded salvestatud"
+    "Settings saved" : "Seaded salvestatud",
+    "Unexpected error occurred" : "Tekkis ootamatu viga"
 },
 "nplurals=2; plural=(n != 1);");
