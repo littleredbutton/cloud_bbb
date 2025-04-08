@@ -28,7 +28,7 @@
     "_%n participant_::_%n participants_" : ["dalībnieki - %n","%n dalībnieks","%n dalībnieki"],
     "Delete" : "Dzēst",
     "Delete \"{name}\"?" : "Dzēst \"{name}\"?",
-    "Select target folder" : "Izvēlaties mērķa mapi",
+    "Select target folder" : "Atlasīt mērķa mapi",
     "Room URL was stored in \"{path}\" as \"{filename}\"." : "Sapulču telpas saite ir noglabāta \"{path}\" kā \"{filename}\".",
     "Link stored" : "Saite noglabāta",
     "URL to room could not be stored." : "Sapulču telpas saiti nevar noglabāt.",
