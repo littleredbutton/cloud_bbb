@@ -19,6 +19,7 @@ OC.L10N.register(
     "Create" : "Krouiñ",
     "Delete" : "Dilemel",
     "Error" : "Fazi",
+    "Delete?" : "Dilemel?",
     "Loading" : "Kargañ",
     "Settings saved" : "Stummoù enrollet"
 },
