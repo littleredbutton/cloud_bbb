@@ -77,6 +77,7 @@ Key                               | Description
 `app.shortener`                   | Value of your shortener service. Should start with `https://` and contain `{token}`.
 `avatar.path`                     | Absolute path to an optional avatar cache directory.
 `avatar.url`                      | URL which serves `avatar.path` to be used as avatar cache.
+`avatar.enabled`                  | Set to `false` if you want to disable the use of Nextcloud avatars in BBB rooms.
 
 ### Avatar cache (v2.2+)
 The generation of avatars puts a high load on your Nextcloud instance, since the
@@ -111,8 +112,8 @@ For additional security, we recommend to disable directory listing, symlinks and
 any language interpreter such as php for the cache directory.
 
 Cached avatars are usually deleted as soon as the meeting ends. In cases the BBB
-server shuts down unexpected, we provide the `bbb:clear-avatar-cache` occ
-command (example use: `./occ bbb:clear-avatar-cache`).
+server shuts down unexpected or you set `avatar.enabled` to `false` (via gui or manually) while a meeting was running, 
+we provide the `bbb:clear-avatar-cache` occ command (example use: `./occ bbb:clear-avatar-cache`).
 
 
 ## :bowtie: User guide
