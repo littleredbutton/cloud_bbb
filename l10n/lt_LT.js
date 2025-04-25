@@ -5,6 +5,7 @@ OC.L10N.register(
     "You deleted the room %s." : "Jūs ištrynėte kambarį %s.",
     "{user} deleted the room %s." : "{user} ištrynė kambarį %s.",
     "Public" : "Viešas",
+    "Internal" : "Vidinis",
     "BigBlueButton Integration" : "BigBlueButton integracija",
     "Room not found" : "Kambarys nerastas",
     "The room could not be found. Maybe it was deleted?" : "Nepavyko rasti kambario. Galbūt, jis buvo ištrintas?",
