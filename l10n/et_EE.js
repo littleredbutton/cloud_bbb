@@ -12,6 +12,7 @@ OC.L10N.register(
     "Name" : "Nimi",
     "Access" : "Ligipääs",
     "Edit" : "Redigeeri",
+    "Welcome" : "Tere tulemast",
     "Sharing" : "Jagamine",
     "Create" : "Loo",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
