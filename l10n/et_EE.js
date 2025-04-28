@@ -15,6 +15,7 @@ OC.L10N.register(
     "Welcome" : "Tere tulemast",
     "Sharing" : "Jagamine",
     "Create" : "Loo",
+    "Published" : "Avaldatud",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
     "Delete" : "Kustuta",
     "Error" : "Viga",
