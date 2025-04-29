@@ -7,6 +7,7 @@ OC.L10N.register(
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
     "Name" : "Name",
+    "Max" : "Max",
     "Edit" : "Tahrirlash",
     "Sharing" : "Ulashish",
     "Miscellaneous" : "Turli xil",
