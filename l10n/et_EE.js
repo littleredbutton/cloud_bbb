@@ -11,6 +11,7 @@ OC.L10N.register(
     "Group" : "Grupp",
     "Name" : "Nimi",
     "Access" : "Ligipääs",
+    "Max" : "Maks",
     "Edit" : "Redigeeri",
     "Welcome" : "Tere tulemast",
     "Sharing" : "Jagamine",
