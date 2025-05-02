@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Public" : "Publiska",
     "BigBlueButton Integration" : "BigBlueButton Integrācija",
-    "BigBlueButton integration for Nextcloud" : "BigBlueButton integrācija priekš Nextcloud",
+    "BigBlueButton integration for Nextcloud" : "BigBlueButton iekļaušana Nextcloud",
     "API secret" : "API slepenais kods",
     "Save" : "Saglabāt",
     "Community" : "Kopiena",
