@@ -16,6 +16,7 @@ OC.L10N.register(
     "Edit" : "Redigeeri",
     "Welcome" : "Tere tulemast",
     "Sharing" : "Jagamine",
+    "Recording" : "Salvestan",
     "Create" : "Loo",
     "Published" : "Avaldatud",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
@@ -25,6 +26,7 @@ OC.L10N.register(
     "Start" : "Algus",
     "Loading" : "Laadimine",
     "Settings saved" : "Seaded salvestatud",
-    "Unexpected error occurred" : "Tekkis ootamatu viga"
+    "Unexpected error occurred" : "Tekkis ootamatu viga",
+    "Send to" : "Saada..."
 },
 "nplurals=2; plural=(n != 1);");
