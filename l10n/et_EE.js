@@ -8,6 +8,7 @@ OC.L10N.register(
     "Community" : "Kogukond",
     "Display name" : "Kuvatav nimi",
     "Password" : "Parool",
+    "Join" : "Liitu",
     "Hello %s" : "Tere %s",
     "Group" : "Grupp",
     "Name" : "Nimi",
