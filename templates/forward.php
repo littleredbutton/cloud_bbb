@@ -1,8 +1,8 @@
 <?php
-	/** @var $_ array */
-	/** @var $l \OCP\IL10N */
-	style('core', 'guest');
-	?>
+/** @var $_ array */
+/** @var $l \OCP\IL10N */
+style('core', 'guest');
+?>
 
 	<div class="update bbb guest-box">
 		<h2><?php p($_['room']) ?></h2>
