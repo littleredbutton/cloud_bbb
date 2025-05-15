@@ -16,7 +16,7 @@
         "friendsofphp/php-cs-fixer": "^3",
         "nextcloud/coding-standard": "^1.1.0",
         "phpstan/phpstan": "^0.12.29",
-        "nextcloud/ocp": "^26.0 || ^27.0 || ^28.0 || ^29.0 || ^30.0 || ^31.0",
+        "nextcloud/ocp": "^29.0 || ^30.0 || ^31.0",
         "vimeo/psalm": "^6.10",
         "psr/container": "^1.1.2 || ^2.0.2"
     },
