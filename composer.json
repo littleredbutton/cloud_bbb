@@ -18,7 +18,7 @@
         "phpstan/phpstan": "^0.12.29",
         "nextcloud/ocp": "^29.0 || ^30.0 || ^31.0",
         "vimeo/psalm": "5.9.0",
-        "psr/container": "^1.1.2 || ^2.0.2"
+        "psr/container": "^1.1.2 || ^1.1.4 || ^2.0.2"
     },
     "config": {
         "optimize-autoloader": true,
