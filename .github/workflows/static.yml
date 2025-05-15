@@ -9,7 +9,7 @@ jobs:
             ocp-version: [ "^30", "^29"]
             include:
               - psrcontainer: "psr/container"
-              - psrcontainer: "psr/container:^2.0.2"
+              - psrcontainer: "psr/container:^1.1.4"
                 ocp-version: '^29'
     name: Nextcloud ${{ matrix.ocp-version }}
     steps:
@@ -23,9 +23,9 @@ jobs:
         - name: Update php-cs-fixer
           run: composer update friendsofphp/php-cs-fixer -W
         - name: Install dependencies
-          run: composer i
+          run: composer i -W
         - name: Install dependencies
-          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} ${{ matrix.psrcontainer }} symfony/service-contracts
+          run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} ${{ matrix.psrcontainer }} symfony/service-contracts -W
         - name: Run coding standards check
           run: composer run psalm
 
