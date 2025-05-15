@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-            ocp-version: [ "^30", "^29", '^28', '^27', '^26']
+            ocp-version: [ "^30", "^29"]
             include:
               - psrcontainer: "psr/container"
               - psrcontainer: "psr/container:^1.1.2"
-                ocp-version: '^26'
+                ocp-version: '^29'
     name: Nextcloud ${{ matrix.ocp-version }}
     steps:
         - name: Checkout
