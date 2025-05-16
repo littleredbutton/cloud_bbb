@@ -11,11 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['8.0', '8.1', '8.2']
-        nextcloud-versions: ['stable29', 'stable30']
-        exclude:
-          - php-versions: '8.0'
-            nextcloud-versions: 'stable30'
+        php-versions: ['8.1', '8.2', '8.3']
+        nextcloud-versions: ['stable29', 'stable30', 'stable31']
     name: php${{ matrix.php-versions }} on ${{ matrix.nextcloud-versions }} unit tests
     env:
       CI: true
@@ -37,7 +34,7 @@ jobs:
         path: nextcloud/apps/bbb
     - name: Update test stub
       working-directory: nextcloud/apps/bbb
-      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp phpunit/phpunit -W
+      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp phpunit/phpunit vimeo/psalm -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
