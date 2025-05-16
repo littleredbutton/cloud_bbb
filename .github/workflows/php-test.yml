@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         php-versions: ['8.0', '8.1', '8.2']
-        nextcloud-versions: ['stable26', 'stable27', 'stable28', 'stable29', 'stable30']
+        nextcloud-versions: ['stable29', 'stable30']
         exclude:
           - php-versions: '8.0'
             nextcloud-versions: 'stable30'
@@ -37,7 +37,7 @@ jobs:
         path: nextcloud/apps/bbb
     - name: Update test stub
       working-directory: nextcloud/apps/bbb
-      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp -W
+      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp phpunit/phpunit -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install

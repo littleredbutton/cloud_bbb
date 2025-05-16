@@ -41,14 +41,14 @@ lint: js-init
 	yarn run lint
 
 lint-fix: js-init
-	yarn run lint:fix
+	yarn run fix
 
 # Style linting
 stylelint: js-init
-	yarn run stylelint
+	yarn run lint:style
 
 stylelint-fix: js-init
-	yarn run stylelint:fix
+	yarn run lint:fix:style
 
 phplint:
 	./vendor/bin/php-cs-fixer fix --dry-run

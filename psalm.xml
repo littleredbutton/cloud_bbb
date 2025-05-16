@@ -11,6 +11,7 @@
 >
     <projectFiles>
         <directory name="lib" />
+        <directory name="vendor/nextcloud/ocp" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

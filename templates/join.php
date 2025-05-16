@@ -1,9 +1,9 @@
 <?php
-	/** @var $_ array */
-	/** @var $l \OCP\IL10N */
-	style('core', 'guest');
-	script('bbb', 'join');
-	?>
+/** @var $_ array */
+/** @var $l \OCP\IL10N */
+style('core', 'guest');
+script('bbb', 'join');
+?>
 <form method="get" action="?">
 	<fieldset class="warning bbb">
 		<h2><?php p($_['room']) ?></h2>
