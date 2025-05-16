@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "littleredbutton/bigbluebutton-api-php": "^4.0"
+        "littleredbutton/bigbluebutton-api-php": "^6.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5 || ^9.3",

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "777b224a8c72682eeed6022827471799",
+    "content-hash": "3cf6cefbd73e7354dc7058789adaa896",
     "packages": [
         {
             "name": "littleredbutton/bigbluebutton-api-php",
-            "version": "4.3.0",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/littleredbutton/bigbluebutton-api-php.git",
-                "reference": "ea8c6fa7676d9876b13d12be496b6f5b5a6cf4d9"
+                "reference": "7a7f832b521f101b66607789d2a7efbddf138a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/littleredbutton/bigbluebutton-api-php/zipball/ea8c6fa7676d9876b13d12be496b6f5b5a6cf4d9",
-                "reference": "ea8c6fa7676d9876b13d12be496b6f5b5a6cf4d9",
+                "url": "https://api.github.com/repos/littleredbutton/bigbluebutton-api-php/zipball/7a7f832b521f101b66607789d2a7efbddf138a31",
+                "reference": "7a7f832b521f101b66607789d2a7efbddf138a31",
                 "shasum": ""
             },
             "require": {
@@ -25,17 +25,17 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-simplexml": "*",
-                "php": ">=7.2"
+                "php": ">=8.1"
             },
             "require-dev": {
                 "nyholm/psr7": "^1.4",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.0",
-                "symfony/dotenv": "^3.4|^4.0|^5.0",
-                "symfony/http-client": "^4.4|^5.0",
-                "symfony/http-client-contracts": "^1.1|^2.0",
-                "symfony/process": "^3.4|^4.0|^5.0"
+                "psr/http-message": "^1.0 || ^2.0",
+                "symfony/dotenv": "^5.4|^6.4|^7.0",
+                "symfony/http-client": "^5.4|^6.4|^7.0",
+                "symfony/http-client-contracts": "^1.1|^2.0|^3.0",
+                "symfony/process": "^5.4|^6.4|^7.0"
             },
             "suggest": {
                 "psr/http-client-implementation": "To use the PsrHttpClientTransport.",
@@ -49,19 +49,22 @@
                 "cotor": {
                     "extensions": {
                         "phpunit/phpunit": {
-                            "fakerphp/faker": "^1.14"
+                            "fakerphp/faker": "1.20.*"
                         }
                     },
-                    "vimeo/psalm": "^4.22",
-                    "phpunit/phpunit": "^8",
+                    "vimeo/psalm": "^5.23",
+                    "rector/rector": "^1.0",
+                    "phpstan/phpstan": "^1.10",
+                    "phpunit/phpunit": "^9",
                     "friendsofphp/php-cs-fixer": "^3.3",
-                    "php-coveralls/php-coveralls": "^2.4",
                     "brainmaestro/composer-git-hooks": "^2.8"
                 },
                 "hooks": {
                     "pre-push": [
                         "tools/phpunit --testsuite=\"BigBlueButton unit test suite,BigBlueButton integration test suite\"",
-                        "tools/psalm --threads=1"
+                        "tools/psalm --threads=1",
+                        "tools/phpstan analyse",
+                        "tools/rector process --dry-run src/ tests/"
                     ],
                     "post-merge": "composer install",
                     "pre-commit": [
@@ -131,7 +134,7 @@
                 "issues": "https://github.com/littleredbutton/bigbluebutton-api-php/issues",
                 "source": "https://github.com/littleredbutton/bigbluebutton-api-php/"
             },
-            "time": "2022-06-10T18:50:51+00:00"
+            "time": "2024-10-04T18:06:51+00:00"
         }
     ],
     "packages-dev": [
@@ -4739,10 +4742,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
