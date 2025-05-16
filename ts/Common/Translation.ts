@@ -1,4 +1,6 @@
 import { Access, Permission } from './Api';
+import parse from 'html-react-parser';
+import DOMPurify from 'dompurify';
 
 export const AccessOptions = {
 	[Access.Public]: t('bbb', 'Public'),
@@ -14,3 +16,7 @@ export const PermissionsOptions = {
 	[Permission.Moderator]: t('bbb', 'moderator'),
 	[Permission.User]: t('bbb', 'user'),
 };
+
+export function html_sanitize_and_parse(str: string): string {
+	return parse(DOMPurify.sanitize(str, { USE_PROFILES: { html: true } }));
+}
