@@ -15,7 +15,7 @@
         "phpunit/phpunit": "^8.5 || ^9.3",
         "friendsofphp/php-cs-fixer": "^3",
         "nextcloud/coding-standard": "^1.1.0",
-        "phpstan/phpstan": "^0.12.29",
+        "phpstan/phpstan": "^2.1.16",
         "nextcloud/ocp": "^29.0 || ^30.0 || ^31.0",
         "vimeo/psalm": "5.9.0 || ^6.1.0",
         "psr/container": "^1.1.2 || ^1.1.4 || ^2.0.2"
