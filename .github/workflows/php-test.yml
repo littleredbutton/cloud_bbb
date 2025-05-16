@@ -34,7 +34,7 @@ jobs:
         path: nextcloud/apps/bbb
     - name: Update test stub
       working-directory: nextcloud/apps/bbb
-      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp phpunit/phpunit -W
+      run: composer update friendsofphp/php-cs-fixer nextcloud/ocp phpunit/phpunit vimeo/psalm -W
     - name: Install dependencies
       working-directory: nextcloud/apps/bbb
       run: composer install
