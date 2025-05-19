@@ -1365,23 +1365,29 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@nextcloud/auth@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@nextcloud/auth/-/auth-1.3.0.tgz#1ad94dcb001871bf725114675690ae9f4871e5d1"
-  integrity sha512-GfwRM9W7hat4psNdAt74UHEV+drEXQ53klCVp6JpON66ZLPeK5eJ1LQuiQDkpUxZpqNeaumXjiB98h5cug/uQw==
+"@nextcloud/auth@^2.3.0":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@nextcloud/auth/-/auth-2.5.1.tgz#621e637d2a7c71b9ddb432896076ec8f7b58c33f"
+  integrity sha512-cToowJmI9rvIXuWvpvHp4tKm1ZzK4tlPh4rAuEjX6Dvpq74ia52yJYGJFR2maag/i/tMl9m0diZtHgSog6GTGg==
   dependencies:
-    "@nextcloud/event-bus" "^1.1.3"
-    "@nextcloud/typings" "^0.2.2"
-    core-js "^3.6.4"
+    "@nextcloud/browser-storage" "^0.4.0"
+    "@nextcloud/event-bus" "^3.3.2"
 
-"@nextcloud/axios@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@nextcloud/axios/-/axios-1.11.0.tgz#d4cbc83bec63862529b8f76a588d701185cdf72e"
-  integrity sha512-NyaiSC2GX2CPaH/MUGGMTTTza/TW9ZqWNGWq6LJ+pLER8nqZ9BQkwJ5kXUYGo+i3cka68PO+9WhcDv4fSABpuQ==
+"@nextcloud/axios@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@nextcloud/axios/-/axios-2.5.1.tgz#de75273c9e0b5e9096ccc9b4cf1c877b1ffde16d"
+  integrity sha512-AA7BPF/rsOZWAiVxqlobGSdD67AEwjOnymZCKUIwEIBArKxYK7OQEqcILDjQwgj6G0e/Vg9Y8zTVsPZp+mlvwA==
   dependencies:
-    "@nextcloud/auth" "^1.3.0"
-    axios "^0.27.1"
-    core-js "^3.6.4"
+    "@nextcloud/auth" "^2.3.0"
+    "@nextcloud/router" "^3.0.1"
+    axios "^1.6.8"
+
+"@nextcloud/browser-storage@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@nextcloud/browser-storage/-/browser-storage-0.4.0.tgz#82b089879536c25b57e71468f9ab6027c2b55e00"
+  integrity sha512-D6XxznxCYmJ3oBCC3p0JB6GZJ2RZ9dgbB1UqtTePXrIvHUMBAeF/YkiGKYxLAVZCZb+NSNZXgAYHm/3LnIUbDg==
+  dependencies:
+    core-js "3.37.0"
 
 "@nextcloud/browserslist-config@^2.2.0":
   version "2.2.0"
@@ -1405,14 +1411,13 @@
   dependencies:
     requireindex "^1.2.0"
 
-"@nextcloud/event-bus@^1.1.3":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@nextcloud/event-bus/-/event-bus-1.3.0.tgz#d5b79f800eae99c73a6e46e7061143a1fac3be48"
-  integrity sha512-+U5MnCvfnNWvf0lvdqJg8F+Nm8wN+s9ayuBjtiEQxTAcootv7lOnlMgfreqF3l2T0Wet2uZh4JbFVUWf8l3w7g==
+"@nextcloud/event-bus@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@nextcloud/event-bus/-/event-bus-3.3.2.tgz#558ded2795423b2989e4c0d9bb8d5d9ede70cf21"
+  integrity sha512-1Qfs6i7Tz2qd1A33NpBQOt810ydHIRjhyXMFwSEkYX2yUI80lAk/sWO8HIB2Fqp+iffhyviPPcQYoytMDRyDNw==
   dependencies:
-    "@types/semver" "^7.3.5"
-    core-js "^3.11.2"
-    semver "^7.3.5"
+    "@types/semver" "^7.5.8"
+    semver "^7.6.3"
 
 "@nextcloud/files@^2.1.0":
   version "2.1.0"
@@ -1437,12 +1442,12 @@
   dependencies:
     core-js "^3.6.4"
 
-"@nextcloud/typings@^0.2.2":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@nextcloud/typings/-/typings-0.2.4.tgz#d1005c2cb3008b1ef3f048b27c6e3cbf6fc70586"
-  integrity sha512-49M8XUDQH27VIQE+13KrqSOYcyOsDUk6Yfw17jbBVtXFoDJ3YBSYYq8YaKeAM3Lz2JVbEpqQW9suAT+EyYSb6g==
+"@nextcloud/router@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@nextcloud/router/-/router-3.0.1.tgz#2d0f8f3e53ae72a2fcb4d206ccbe62afcc233a8a"
+  integrity sha512-Ci/uD3x8OKHdxSqXL6gRJ+mGJOEXjeiHjj7hqsZqVTsT7kOrCjDf0/J8z5RyLlokKZ0IpSe+hGxgi3YB7Gpw3Q==
   dependencies:
-    "@types/jquery" "2.0.54"
+    "@nextcloud/typings" "^1.7.0"
 
 "@nextcloud/typings@^1.0.0":
   version "1.3.0"
@@ -1450,6 +1455,13 @@
   integrity sha512-lxAWXobayeaAnydCWKMljJXDLXECimUf3HbTjnrjL7pslPyGyH70LHj4NZ5BmGbKeU2yjF2FTXIGji10lOryiQ==
   dependencies:
     "@types/jquery" "2.0.57"
+
+"@nextcloud/typings@^1.7.0":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@nextcloud/typings/-/typings-1.9.1.tgz#d038d360b0b7e0567d96f8d6a97b1b0f8f70de24"
+  integrity sha512-i0l/L5gKW8EACbXHVxXM6wn3sUhY2qmnL2OijppzU4dENC7/hqySMQDer7/+cJbNSNG7uHF/Z+9JmHtDfRfuGg==
+  dependencies:
+    "@types/jquery" "3.5.16"
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
@@ -1746,15 +1758,17 @@
   dependencies:
     "@types/sizzle" "*"
 
-"@types/jquery@2.0.54":
-  version "2.0.54"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.54.tgz#d7999245f77c3fab5d84e7d32b8a6c20bfd1f072"
-  integrity sha512-D/PomKwNkDfSKD13DEVQT/pq2TUjN54c6uB341fEZanIzkjfGe7UaFuuaLZbpEiS5j7Wk2MUHAZqZIoECw29lg==
-
 "@types/jquery@2.0.57":
   version "2.0.57"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.57.tgz#df4241708df642021c5c715de64207371240c6e5"
   integrity sha512-QUJ5wVL8iTZofgZjCfVnHxcMqqPPLfVfEKe8rfksMdmSmqEenpcpEBQO45VSSfng/tunwoLF+3I8rzEzVhYNLQ==
+
+"@types/jquery@3.5.16":
+  version "3.5.16"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.16.tgz#632131baf30951915b0317d48c98e9890bdf051d"
+  integrity sha512-bsI7y4ZgeMkmpG9OM710RRzDFp+w4P1RGiIt30C1mSBT+ExCleeh4HObwgArnDFELmRrOpXgSYN9VF1hj+f1lw==
+  dependencies:
+    "@types/sizzle" "*"
 
 "@types/jquery@^3.3.35":
   version "3.5.14"
@@ -1824,10 +1838,10 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
-"@types/semver@^7.3.5":
-  version "7.3.9"
-  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.3.9.tgz#152c6c20a7688c30b967ec1841d31ace569863fc"
-  integrity sha512-L/TMpyURfBkf+o/526Zb6kd/tchUP3iBDEPjqjb+U2MAJhVRxxrmr2fwpe08E7QsV7YLcpq0tUaQ9O9x97ZIxQ==
+"@types/semver@^7.5.8":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.7.0.tgz#64c441bdae033b378b6eef7d0c3d77c329b9378e"
+  integrity sha512-k107IF4+Xr7UHjwDc7Cfd6PRQfbdkiRabXGRjo07b4WyPahFBZCZ1sE+BNxYIJPPg73UkfOsVOLwqVc/6ETrIA==
 
 "@types/sizzle@*":
   version "2.3.3"
@@ -2288,13 +2302,14 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-axios@^0.27.1:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
-  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
+axios@^1.6.8:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.9.0.tgz#25534e3b72b54540077d33046f77e3b8d7081901"
+  integrity sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==
   dependencies:
-    follow-redirects "^1.14.9"
+    follow-redirects "^1.15.6"
     form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 babel-loader@^8.1.0:
   version "8.2.3"
@@ -2723,7 +2738,12 @@ core-js-compat@^3.20.2, core-js-compat@^3.21.0:
     browserslist "^4.19.1"
     semver "7.0.0"
 
-core-js@^3.11.2, core-js@^3.6.4:
+core-js@3.37.0:
+  version "3.37.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.37.0.tgz#d8dde58e91d156b2547c19d8a4efd5c7f6c426bb"
+  integrity sha512-fu5vHevQ8ZG4og+LXug8ulUtVxjOcEYvifJr7L5Bfq9GOztVqsKd9/59hUk2ZSbCrS3BqUr3EpaYGIYzq7g3Ug==
+
+core-js@^3.6.4:
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
   integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
@@ -3589,10 +3609,10 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-follow-redirects@^1.14.9:
-  version "1.15.6"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
-  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
+follow-redirects@^1.15.6:
+  version "1.15.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.9.tgz#a604fa10e443bf98ca94228d9eebcc2e8a2c8ee1"
+  integrity sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==
 
 form-data@^4.0.0:
   version "4.0.0"
@@ -5312,6 +5332,11 @@ prop-types@^15.8.1:
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+
 punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
@@ -5760,6 +5785,11 @@ semver@^6.0.0, semver@^6.1.0, semver@^6.1.1, semver@^6.1.2, semver@^6.3.0, semve
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
+
+semver@^7.6.3:
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
+  integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
 
 serialize-javascript@^6.0.0:
   version "6.0.2"
