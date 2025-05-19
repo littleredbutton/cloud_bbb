@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.8.0 (2025-05-19)
+
+### Changed
+
+- Support nextcloud 31 by @smarinier in [#338](https://github.com/littleredbutton/cloud_bbb/pull/338)
+- Changed recordingReady endpoint HTTP method to POST by @atilas88 in [#263](https://github.com/littleredbutton/cloud_bbb/pull/263)
+
+### Fix
+
+- Group displayname might be null by @smarinier in [#310](https://github.com/littleredbutton/cloud_bbb/pull/310)
+- Copy to clipboard as plain/text by @Brtbr in [#275](https://github.com/littleredbutton/cloud_bbb/pull/275)
+- Double encoded html in dialog title and translations by @smarinier in [#339](https://github.com/littleredbutton/cloud_bbb/pull/339)
+- Start button : fixed insufficient left space when hovering over a room by @Jerome-Herbinet in [#311](https://github.com/littleredbutton/cloud_bbb/pull/311)
+
 ## 2.7.3 (2024-12-03)
 ### Added
 
