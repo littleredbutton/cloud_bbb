@@ -5,14 +5,14 @@ import { Access, Room, Permission, RoomShare, api, Restriction } from '../Common
 import Dialog from './Dialog';
 import ShareWith from './ShareWith';
 import { SubmitInput } from './SubmitInput';
-import { AccessOptions } from '../Common/Translation';
+import { AccessOptions, html_sanitize_and_parse } from '../Common/Translation';
 
 const descriptions: { [key: string]: string } = {
 	name: t('bbb', 'Descriptive name of this room.'),
 	welcome: t('bbb', 'This message is shown to all users in the chat area after they joined.'),
 	maxParticipants: t('bbb', 'Sets a limit on the number of participants for this room. Zero means there is no limit.'),
 	recording: t('bbb', 'If enabled, the moderator is able to start the recording.'),
-	access: t('bbb', 'Explanation of the different concepts that constitute access options :<br>- Public: Anyone who has the link can join.- <br>Internal: Only Nextcloud users can join.- <br>Password: Only guests who have the password can join..- <br>Waiting room: A moderator must accept each guest before they can join.- <br>Restricted : Only selected users and groups can access this room.'),
+	access: t('bbb', 'Explanation of the different concepts that constitute access options :<br> - Public: Anyone who has the link can join.<br> - Internal: Only Nextcloud users can join.<br> - Password: Only guests who have the password can join.<br> - Waiting room: A moderator must accept each guest before they can join.<br> - Restricted : Only selected users and groups can access this room.'),
 	moderator: t('bbb', 'A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings.'),
 	requireModerator: t('bbb', 'If enabled, normal users have to wait until a moderator is in the room.'),
 	moderatorToken: t('bbb', 'If enabled, a moderator URL is generated which allows access with moderator permission.'),
@@ -70,7 +70,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 				</label>
 
 				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} min={minParticipantsLimit} max={maxParticipantsLimit} />
-				{descriptions[field] && <em>{descriptions[field]}</em>}
+				{descriptions[field] && <em>{html_sanitize_and_parse(descriptions[field])}</em>}
 			</div>
 		);
 	}
@@ -90,7 +90,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 					})}
 				</select>
 				{(value === Access.Password && room.password) && <CopyToClipboard text={room.password} options={{format:'text/plain'}}><input type="text" readOnly={true} className="icon-clippy" value={room.password} /></CopyToClipboard>}
-				{descriptions[field] && <em>{descriptions[field]}</em>}
+				{descriptions[field] && <em>{html_sanitize_and_parse(descriptions[field])}</em>}
 			</div>
 		);
 	}
@@ -103,7 +103,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 	}
 
 	return (
-		<Dialog open={open} onClose={() => setOpen(false)} title={t('bbb', 'Edit "{room}"', { room: room.name })}>
+		<Dialog open={open} onClose={() => setOpen(false)} title={html_sanitize_and_parse(t('bbb', 'Edit "{room}"', { room: room.name }))}>
 			<div className="bbb-form-element">
 				<h3>{t('bbb', 'Room URL')}</h3>
 				<div className="bbb-input-container">
@@ -132,7 +132,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 
 				{room.access === Access.InternalRestricted &&
 					<div className="bbb-form-element bbb-form-shareWith">
-						<span className="icon icon-details icon-visible"></span><em>{t('bbb', 'Access') + ' : ' + descriptions.internalRestrictedShareWith}</em>
+						<span className="icon icon-details icon-visible"></span><em>{t('bbb', 'Access') + ' : ' + html_sanitize_and_parse(descriptions.internalRestrictedShareWith)}</em>
 					</div>
 				}
 
@@ -144,7 +144,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 						onChange={(event) => updateProperty('everyoneIsModerator', event.target.checked)} />
 					<label htmlFor={'bbb-everyoneIsModerator-' + room.id}>{t('bbb', 'Every participant is moderator')}</label>
 				</div>
-				<em>{descriptions.moderator}</em>
+				<em>{html_sanitize_and_parse(descriptions.moderator)}</em>
 
 				<div className="bbb-mt-1">
 					<input id={'bbb-moderatorToken-' + room.id}
@@ -155,7 +155,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 					<label htmlFor={'bbb-moderatorToken-' + room.id}>{t('bbb', 'Moderator access via URL')}</label>
 				</div>
 				{!!room.moderatorToken && <CopyToClipboard text={api.getRoomUrl(room, true)}><input type="text" readOnly={true} className="icon-clippy" value={api.getRoomUrl(room, true)} /></CopyToClipboard>}
-				<em>{descriptions.moderatorToken}</em>
+				<em>{html_sanitize_and_parse(descriptions.moderatorToken)}</em>
 			</div>
 
 			<div className="bbb-form-element">
@@ -170,7 +170,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('record', event.target.checked)} />
 						<label htmlFor={'bbb-record-' + room.id}>{t('bbb', 'Recording')}</label>
 					</div>
-					<p><em>{descriptions.recording}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.recording)}</em></p>
 				</div>
 				<div>
 					<div>
@@ -181,7 +181,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('requireModerator', event.target.checked)} />
 						<label htmlFor={'bbb-requireModerator-' + room.id}>{t('bbb', 'Require moderator to start room')}</label>
 					</div>
-					<p><em>{descriptions.requireModerator}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.requireModerator)}</em></p>
 				</div>
 				<div>
 					<div>
@@ -192,7 +192,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('listenOnly', event.target.checked)} />
 						<label htmlFor={'bbb-listenOnly-' + room.id}>{t('bbb', 'Listen only option')}</label>
 					</div>
-					<p><em>{descriptions.listenOnly}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.listenOnly)}</em></p>
 				</div>
 				<div>
 					<div>
@@ -203,7 +203,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('mediaCheck', !event.target.checked)} />
 						<label htmlFor={'bbb-mediaCheck-' + room.id}>{t('bbb', 'Skip media check before usage')}</label>
 					</div>
-					<p><em>{descriptions.mediaCheck}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.mediaCheck)}</em></p>
 				</div>
 				<div>
 					<div>
@@ -214,7 +214,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('cleanLayout', event.target.checked)} />
 						<label htmlFor={'bbb-cleanLayout-' + room.id}>{t('bbb', 'Clean layout')}</label>
 					</div>
-					<p><em>{descriptions.cleanLayout}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.cleanLayout)}</em></p>
 				</div>
 				<div>
 					<div>
@@ -225,7 +225,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 							onChange={(event) => updateProperty('joinMuted', event.target.checked)} />
 						<label htmlFor={'bbb-joinMuted-' + room.id}>{t('bbb', 'Join meeting muted')}</label>
 					</div>
-					<p><em>{descriptions.joinMuted}</em></p>
+					<p><em>{html_sanitize_and_parse(descriptions.joinMuted)}</em></p>
 				</div>
 			</div>
 		</Dialog>
