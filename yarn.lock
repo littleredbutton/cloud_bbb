@@ -1524,10 +1524,10 @@
     axios "^0.27.1"
     core-js "^3.6.4"
 
-"@nextcloud/browserslist-config@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nextcloud/browserslist-config/-/browserslist-config-2.2.0.tgz#85c2b9363b4aa98ea534576b9f9094cc0afa8f78"
-  integrity sha512-kC42RQW5rZjZZsRaEjVlIQpp6aW/yxm+zZdETnrRQnUzcPwBgF4wO4makfGT63Ckd+LkgUW+geesPiPRqxFVew==
+"@nextcloud/browserslist-config@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@nextcloud/browserslist-config/-/browserslist-config-3.0.1.tgz#d05a06920e80a8187806b3f2f3abe26308debc9f"
+  integrity sha512-GZTxL5fsDgmFoot/qnRurjHCuHjSfOg+A6t4+P2TySXua2Q1Ex0lecZYlSnRuOR/W5BGOZ06ITTA/hbkSh1Ypg==
 
 "@nextcloud/dialogs@^3.1.2":
   version "3.1.2"
