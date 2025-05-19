@@ -87,7 +87,7 @@
 		"dotenv-cli": "^8.0.0",
 		"eslint": "^8.11.0",
 		"eslint-config-standard": "^17.0",
-		"eslint-import-resolver-webpack": "^0.13.2",
+		"eslint-import-resolver-webpack": "^0.13.10",
 		"eslint-plugin-import": "^2.20.2",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-promise": "^6.6.0",
