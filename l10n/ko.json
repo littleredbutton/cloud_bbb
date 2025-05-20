@@ -68,7 +68,6 @@
     "This message is shown to all users in the chat area after they joined." : "이 메시지는 채팅에 참여한 모든 사용자에게 표시됩니다.",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "이 대화방의 최대 인원수를 설정합니다. 0은 무제한입니다.",
     "If enabled, the moderator is able to start the recording." : "활성화되면 진행자는 녹화를 시작할 수 있습니다.",
-    "Explanation of the different concepts that constitute access options :<br>- Public: Anyone who has the link can join.- <br>Internal: Only Nextcloud users can join.- <br>Password: Only guests who have the password can join..- <br>Waiting room: A moderator must accept each guest before they can join.- <br>Restricted : Only selected users and groups can access this room." : "액세스 옵션을 구성하는 다양한 개념에 대한 설명:<br>- 공개 : 링크가 있는 사람이라면 누구나 참여할 수 있습니다.-<br>내부 : Nextcloud 사용자만 가입 가능합니다.-<br>비밀번호 : 비밀번호를 가지고 있는 게스트만 입장이 가능합니다.-<br>대기실: 각 게스트가 입장하기 전에 진행자의 수락이 필요합니다.-<br>제한됨 : 허용된 사용자 및 그룹만 이 방에 접근할 수 있습니다.",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "중재자는 모든 참가자에게 추방, 음소거, 발표자로 지정하는 등의 관리를 할 수 있습니다. 중재자 역할의 사용자는 모임을 끝내거나 기본 설정을 바꿀 수도 있습니다.",
     "If enabled, normal users have to wait until a moderator is in the room." : "활성화하면 일반 사용자들은 중재자가 들어올 때까지 기다려야 합니다.",
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "활성화되면 중재자 권한으로 접근할 수 있는 중재자 URL이 생성됩니다.",

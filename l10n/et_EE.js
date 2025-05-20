@@ -26,6 +26,7 @@ OC.L10N.register(
     "Published" : "Avaldatud",
     "Copy to clipboard" : "Kopeeri lõikepuhvrisse",
     "Delete" : "Kustuta",
+    "Delete \"{name}\"?" : "Kas kustutame „{name}“ kausta?",
     "Error" : "Viga",
     "Server error" : "Serveri tõrge",
     "Start" : "Algus",

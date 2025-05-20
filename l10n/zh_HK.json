@@ -70,7 +70,6 @@
     "This message is shown to all users in the chat area after they joined." : "所有用戶於加入聊天區後都將看到此訊息。",
     "Sets a limit on the number of participants for this room. Zero means there is no limit." : "設定此聊天室的參與者數量限制。零代表無限制。",
     "If enabled, the moderator is able to start the recording." : "若啟用，主持人可以開始錄製。",
-    "Explanation of the different concepts that constitute access options :<br>- Public: Anyone who has the link can join.- <br>Internal: Only Nextcloud users can join.- <br>Password: Only guests who have the password can join..- <br>Waiting room: A moderator must accept each guest before they can join.- <br>Restricted : Only selected users and groups can access this room." : "構成存取選項的不同概念的解釋：<br>- 公開：任何知道連結的人都可以加入。<br>- 內部：只有 Nextcloud 使用者可以加入。<br>- 密碼：只有擁有密碼的客人才能加入。<br>- 等候室：主持人必須接受每位客人才能加入。<br>- 受限：只有選定的使用者和群組可以存取此房間。",
     "A moderator is able to manage all participants in a meeting including kicking, muting or selecting a presenter. Users with the role moderator are also able to close a meeting or change the default settings." : "主持人可以管理會面中的所有參與者，包含踢除、靜音或選擇演講者。具有主持人角色的用戶還可以關閉會議或變更預設的設定。",
     "If enabled, normal users have to wait until a moderator is in the room." : "若啟用，一般用戶必須等待主持人進入聊天室。",
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "若啟用，將會生成主持人 URL，讓有主持人權限的人存取。",
