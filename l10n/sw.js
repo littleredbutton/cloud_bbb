@@ -8,6 +8,7 @@ OC.L10N.register(
     "Sharing" : "inashirikisha",
     "Miscellaneous" : "Mbalimbali",
     "Room name" : "Jina la chumba",
+    "Create" : "Tengeneza",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
     "Delete" : "Futa"
 },
