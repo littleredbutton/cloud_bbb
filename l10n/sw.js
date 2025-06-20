@@ -1,7 +1,9 @@
 OC.L10N.register(
     "bbb",
     {
+    "Back to %s" : "Rudi kwenye %s",
     "Save" : "Hifadhi",
+    "Password" : "Nenosiri",
     "Group" : "Kundi",
     "Name" : "Jina",
     "Edit" : "Hariri",
@@ -10,6 +12,7 @@ OC.L10N.register(
     "Room name" : "Jina la chumba",
     "Create" : "Tengeneza",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
-    "Delete" : "Futa"
+    "Delete" : "Futa",
+    "Error" : "Hitilafu"
 },
 "nplurals=2; plural=(n != 1);");
