@@ -4,6 +4,7 @@ OC.L10N.register(
     "Back to %s" : "Rudi kwenye %s",
     "Save" : "Hifadhi",
     "Password" : "Nenosiri",
+    "Hello %s" : "Halo %s",
     "Group" : "Kundi",
     "Name" : "Jina",
     "Edit" : "Hariri",
