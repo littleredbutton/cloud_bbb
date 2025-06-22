@@ -7,6 +7,7 @@ OC.L10N.register(
     "Hello %s" : "Halo %s",
     "Group" : "Kundi",
     "Name" : "Jina",
+    "Max" : "Kiwango cha juu",
     "Edit" : "Hariri",
     "Sharing" : "inashirikisha",
     "Miscellaneous" : "Mbalimbali",
