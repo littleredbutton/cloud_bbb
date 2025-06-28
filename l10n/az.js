@@ -14,6 +14,7 @@ OC.L10N.register(
     "Delete" : "Sil",
     "Error" : "Səhv",
     "Loading" : "Loading",
+    "All" : "Hamısı",
     "Settings saved" : "Parametrlər yaddaşa verildi"
 },
 "nplurals=2; plural=(n != 1);");

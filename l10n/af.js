@@ -17,6 +17,8 @@ OC.L10N.register(
     "Error" : "Fout",
     "Start" : "Begin",
     "Loading" : "Laai tans..",
+    "Group name" : "Groepnaam",
+    "All" : "Alle",
     "Settings saved" : "Instellings gestoor"
 },
 "nplurals=2; plural=(n != 1);");
