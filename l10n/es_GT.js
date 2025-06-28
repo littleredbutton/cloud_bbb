@@ -8,6 +8,7 @@ OC.L10N.register(
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
     "moderator" : "moderador",
+    "Server error" : "Se presentó un error en el servidor",
     "Name" : "Nombre",
     "Access" : "Acceso",
     "Edit" : "Editar",
@@ -17,9 +18,10 @@ OC.L10N.register(
     "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Borrar",
     "Error" : "Error",
-    "Server error" : "Se presentó un error en el servidor",
     "Start" : "Inicio",
     "Loading" : "Cargando",
+    "Group name" : "Nombre del grupo",
+    "All" : "Todos",
     "Settings saved" : "Se han guardado las configuraciones "
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

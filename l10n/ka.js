@@ -25,6 +25,9 @@ OC.L10N.register(
     "Error" : "Error",
     "Start" : "Start",
     "Loading" : "Loading",
+    "Group name" : "Group name",
+    "All users" : "All users",
+    "All" : "All",
     "Settings saved" : "Settings saved"
 },
 "nplurals=2; plural=(n!=1);");

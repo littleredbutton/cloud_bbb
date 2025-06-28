@@ -10,6 +10,7 @@ OC.L10N.register(
     "Hello %s" : "Salut %s",
     "Group" : "Grup",
     "No matches" : "Nicio potrivire",
+    "Server error" : "Eroare server",
     "Name" : "Nume",
     "Access" : "Acces",
     "Edit" : "Editare",
@@ -21,8 +22,9 @@ OC.L10N.register(
     "Copy to clipboard" : "Copiază în clipboard",
     "Delete" : "Șterge",
     "Error" : "Eroare",
-    "Server error" : "Eroare server",
     "Loading" : "Loading",
+    "Group name" : "Numele grupului",
+    "All" : "Toate ",
     "Settings saved" : "Setările au fost salvate"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

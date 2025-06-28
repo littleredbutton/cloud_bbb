@@ -16,6 +16,7 @@ OC.L10N.register(
     "Password" : "รหัสผ่าน",
     "Hello %s" : "สวัสดี %s",
     "Group" : "กลุ่ม",
+    "Server error" : "ข้อผิดพลาดเซิร์ฟเวอร์",
     "Name" : "ชื่อ",
     "Edit" : "แก้ไข",
     "Welcome" : "ยินดีต้อนรับ",
@@ -26,8 +27,9 @@ OC.L10N.register(
     "Delete" : "ลบ",
     "Error" : "ข้อผิดพลาด",
     "Delete?" : "ลบหรือไม่",
-    "Server error" : "ข้อผิดพลาดเซิร์ฟเวอร์",
     "Loading" : "กำลังโหลด",
+    "Group name" : "ชื่อกลุ่ม",
+    "All" : "ทั้งหมด",
     "Settings saved" : "บันทึกการตั้งค่าแล้ว"
 },
 "nplurals=1; plural=0;");

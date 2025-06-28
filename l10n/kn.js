@@ -10,6 +10,7 @@ OC.L10N.register(
     "Create" : "ಸೃಷ್ಟಿಸಿ",
     "Delete" : "﻿ಅಳಿಸಿ",
     "Error" : "﻿ತಪ್ಪಾಗಿದೆ",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "All" : "﻿ಎಲ್ಲಾ"
 },
 "nplurals=2; plural=(n > 1);");

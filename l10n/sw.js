@@ -15,6 +15,7 @@ OC.L10N.register(
     "Create" : "Tengeneza",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
     "Delete" : "Futa",
-    "Error" : "Hitilafu"
+    "Error" : "Hitilafu",
+    "All" : "Zote"
 },
 "nplurals=2; plural=(n != 1);");

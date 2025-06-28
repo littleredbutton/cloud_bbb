@@ -12,6 +12,8 @@
     "Error" : "Error",
     "Start" : "Initio",
     "Loading" : "Loading",
+    "Group name" : "Nomine del gruppo",
+    "All" : "Tote",
     "Settings saved" : "Configurationes salveguardate"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

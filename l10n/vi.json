@@ -24,6 +24,7 @@
     "No matches" : "Không phù hợp",
     "admin" : "quản trị viên",
     "moderator" : "Người kiểm duyệt",
+    "Server error" : "Lỗi máy chủ",
     "Name" : "Tên",
     "Max" : "Tối đa",
     "Record" : "Ghi lại",
@@ -48,9 +49,10 @@
     "Link stored" : "Đã lưu trữ liên kết",
     "Error" : "Lỗi",
     "Delete?" : "Xoá?",
-    "Server error" : "Lỗi máy chủ",
     "Start" : "Bắt đầu",
     "Loading" : "Đang tải",
+    "Group name" : "Tên nhóm",
+    "All" : "Tất cả",
     "Settings saved" : "Cấu hình đã được lưu",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Phòng này chưa mở. Chúng tôi sẽ thử lại trong %n giây. Xin đợi."]
 },"pluralForm" :"nplurals=1; plural=0;"

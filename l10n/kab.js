@@ -15,6 +15,7 @@ OC.L10N.register(
     "Published" : "Yeffeɣ-d",
     "Copy to clipboard" : "Copier dans le presse-papiers",
     "Delete" : "Kkes",
-    "Error" : "Erreur"
+    "Error" : "Erreur",
+    "All" : "Akk"
 },
 "nplurals=2; plural=(n != 1);");

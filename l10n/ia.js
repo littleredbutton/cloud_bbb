@@ -14,6 +14,8 @@ OC.L10N.register(
     "Error" : "Error",
     "Start" : "Initio",
     "Loading" : "Loading",
+    "Group name" : "Nomine del gruppo",
+    "All" : "Tote",
     "Settings saved" : "Configurationes salveguardate"
 },
 "nplurals=2; plural=(n != 1);");

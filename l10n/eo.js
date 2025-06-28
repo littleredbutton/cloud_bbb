@@ -9,6 +9,7 @@ OC.L10N.register(
     "Join" : "Aliĝi",
     "Hello %s" : "Saluton %s",
     "Group" : "Grupo",
+    "Server error" : "Eraro pri servilo",
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",
@@ -17,9 +18,10 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopii tondejen",
     "Delete" : "Forigi",
     "Error" : "Eraro",
-    "Server error" : "Eraro pri servilo",
     "Start" : "Komenco",
     "Loading" : "Ŝargado",
+    "Group name" : "Gruponomo",
+    "All" : "Ĉiuj",
     "Settings saved" : "Agordoj konservitaj"
 },
 "nplurals=2; plural=(n != 1);");

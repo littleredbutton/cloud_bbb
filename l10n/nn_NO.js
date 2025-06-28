@@ -12,6 +12,8 @@ OC.L10N.register(
     "Published" : "Publisert",
     "Delete" : "Ta bort",
     "Error" : "Feil",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "Group name" : "Gruppenamn",
+    "All" : "Alle"
 },
 "nplurals=2; plural=(n != 1);");

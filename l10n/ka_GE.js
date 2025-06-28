@@ -8,6 +8,7 @@ OC.L10N.register(
     "Hello %s" : "გამარჯობა, %s",
     "Group" : "ჯგუფი",
     "moderator" : "მოდერატორი",
+    "Server error" : "სერვერის შეცდომა",
     "Name" : "სახელი",
     "Access" : "წვდომა",
     "Edit" : "ცვლილება",
@@ -18,8 +19,9 @@ OC.L10N.register(
     "Copy to clipboard" : "კოპირება ბუფერში",
     "Delete" : "წაშლა",
     "Error" : "შეცდომა",
-    "Server error" : "სერვერის შეცდომა",
     "Loading" : "იტვირთება",
+    "Group name" : "ჯგუფის სახელი",
+    "All" : "ყველა",
     "Settings saved" : "პარამეტრები შენახულია"
 },
 "nplurals=2; plural=(n!=1);");

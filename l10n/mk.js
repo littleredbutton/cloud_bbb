@@ -12,6 +12,8 @@ OC.L10N.register(
     "Group" : "Група",
     "No matches" : "Нема совпаѓања",
     "moderator" : "модератор",
+    "Server error" : "Грешка на серверот",
+    "unlimited" : "неограничено",
     "Name" : "Име",
     "Access" : "Пристап",
     "Edit" : "Уреди",
@@ -24,8 +26,10 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["%n учесник","%n учесници"],
     "Delete" : "Избриши",
     "Error" : "Грешка",
-    "Server error" : "Грешка на серверот",
     "Loading" : "Се вчитува",
+    "Group name" : "Име на група",
+    "All users" : "Сите корисници",
+    "All" : "Сите",
     "Settings saved" : "Параматрите се зачувани"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

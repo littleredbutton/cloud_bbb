@@ -10,6 +10,8 @@ OC.L10N.register(
     "Create" : "Erstellen",
     "Delete" : "Läschen",
     "Error" : "Fehler",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "Group name" : "Gruppe Numm",
+    "All" : "All"
 },
 "nplurals=2; plural=(n != 1);");

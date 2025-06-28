@@ -7,6 +7,7 @@ OC.L10N.register(
     "Password" : "Нууц үг",
     "Hello %s" : "Сайн байна уу, %s",
     "Group" : "Бүлэг",
+    "Server error" : "серверийн алдаа",
     "Name" : "Нэр",
     "Edit" : "засварлах",
     "Welcome" : "Тавтай морил",
@@ -14,9 +15,10 @@ OC.L10N.register(
     "Create" : "Үүсгэх",
     "Delete" : "Устгах",
     "Error" : "Алдаа",
-    "Server error" : "серверийн алдаа",
     "Start" : "эхлэх",
     "Loading" : "Loading",
+    "Group name" : "Бүлгийн нэр",
+    "All" : "бүх",
     "Settings saved" : "Тохиргоо хадгалагдлаа"
 },
 "nplurals=2; plural=(n != 1);");

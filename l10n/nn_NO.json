@@ -10,6 +10,8 @@
     "Published" : "Publisert",
     "Delete" : "Ta bort",
     "Error" : "Feil",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "Group name" : "Gruppenamn",
+    "All" : "Alle"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

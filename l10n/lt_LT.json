@@ -23,6 +23,7 @@
     "Name, group …" : "Vardas, grupė…",
     "Group" : "Grupė",
     "moderator" : "moderatorius",
+    "Server error" : "Serverio klaida",
     "Name" : "Pavadinimas",
     "Access" : "Prieiga",
     "You are not permitted to create a room." : "Jums neleidžiama sukurti kambario.",
@@ -39,10 +40,12 @@
     "Delete \"{name}\"?" : "Ištrinti \"{name}\"?",
     "Error" : "Klaida",
     "Delete?" : "Ištrinti?",
-    "Server error" : "Serverio klaida",
     "Start" : "Pradėti",
     "Loading" : "Įkeliama",
+    "Group name" : "Grupės pavadinimas",
     "Group …" : "Grupė…",
+    "All users" : "Visi naudotojai",
+    "All" : "Visos",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"

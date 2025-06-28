@@ -8,6 +8,7 @@ OC.L10N.register(
     "Password" : "Fjalëkalim",
     "Hello %s" : "Përshëndetje %s",
     "Group" : "Grup",
+    "Server error" : "Gabim shërbyesi",
     "Name" : "Emri",
     "Edit" : "Përpuno",
     "Welcome" : "Mirëseerdhët",
@@ -17,9 +18,10 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopjo në dërrasë ",
     "Delete" : "Delete",
     "Error" : "Error",
-    "Server error" : "Gabim shërbyesi",
     "Start" : "Fillo",
     "Loading" : "Duke ngarkuar",
+    "Group name" : "Emër grupi",
+    "All" : "Të gjithë",
     "Settings saved" : "Opsjonet u Ruajtën."
 },
 "nplurals=2; plural=(n != 1);");

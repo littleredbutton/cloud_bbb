@@ -16,6 +16,7 @@ OC.L10N.register(
     "Delete" : "Delete",
     "Error" : "Error",
     "Loading" : "Loading",
+    "All" : "Barchasi",
     "Settings saved" : "Settings saved"
 },
 "nplurals=1; plural=0;");

@@ -9,6 +9,8 @@
     "Hello %s" : "Halló %s",
     "Group" : "Hópur",
     "moderator" : "umsjónarmaður",
+    "Server error" : "Villa frá þjóni",
+    "unlimited" : "ótakmarkað",
     "Name" : "Nafn",
     "Access" : "Aðgangur",
     "Edit" : "Breyta",
@@ -21,9 +23,11 @@
     "Copy to clipboard" : "Afrita á klippispjald",
     "Delete" : "Eyða",
     "Error" : "Villa",
-    "Server error" : "Villa frá þjóni",
     "Start" : "Byrjun",
     "Loading" : "Hleð inn",
+    "Group name" : "Heiti hóps",
+    "All users" : "Allir notendur",
+    "All" : "Allt",
     "Settings saved" : "Stillingar vistaðar",
     "Unexpected error occurred" : "Óvænt villa kom upp"
 },"pluralForm" :"nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);"

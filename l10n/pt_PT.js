@@ -16,6 +16,7 @@ OC.L10N.register(
     "Hello %s" : "Olá %s",
     "Group" : "Grupo",
     "moderator" : "moderador",
+    "Server error" : "Erro do servidor",
     "Name" : "Nome",
     "Access" : "Acesso",
     "Max" : "Máx.",
@@ -36,9 +37,10 @@ OC.L10N.register(
     "Link stored" : "Hiperligação guardada",
     "URL to room could not be stored." : "Não foi possível guardar o URL para a sala.",
     "Error" : "Erro",
-    "Server error" : "Erro do servidor",
     "Start" : "Início",
     "Loading" : "A carregar",
+    "Group name" : "Nome do grupo",
+    "All" : "Todos",
     "Settings saved" : "Definições guardadas"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

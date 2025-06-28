@@ -11,6 +11,7 @@ OC.L10N.register(
     "Create" : "បង្កើត",
     "Delete" : "លុប",
     "Error" : "កំហុស",
-    "Loading" : "Loading"
+    "Loading" : "Loading",
+    "All" : "ទាំងអស់"
 },
 "nplurals=1; plural=0;");
