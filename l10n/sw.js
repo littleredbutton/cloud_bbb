@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Internal" : "Ndani",
     "Back to %s" : "Rudi kwenye %s",
     "Save" : "Hifadhi",
     "Password" : "Nenosiri",
