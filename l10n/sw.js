@@ -12,11 +12,14 @@ OC.L10N.register(
     "Edit" : "Hariri",
     "Sharing" : "inashirikisha",
     "Miscellaneous" : "Mbalimbali",
+    "Recording" : "Inarekodi",
     "Room name" : "Jina la chumba",
     "Create" : "Tengeneza",
+    "Published" : "Published",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
     "Delete" : "Futa",
     "Error" : "Hitilafu",
-    "All" : "Zote"
+    "All" : "Zote",
+    "Send to" : "Tuma kwa"
 },
 "nplurals=2; plural=(n != 1);");

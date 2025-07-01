@@ -139,6 +139,7 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "L'URL doit débuter par HTTPS",
     "URL has to contain the {token} placeholder" : "L’URL doit contenir le paramètre {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "L’URL doit commencer par https:// et contenir {token}. De plus, le paramètre {user} peut être utilisé.",
+    "Example configuration for Apache and Nginx" : "Exemple de configuration pour Apache et Nginx",
     "The file \"{filename}\" was uploaded to your room." : "Le fichier \"{filename}\" a été téléversé dans votre salle.",
     "The file \"{filename}\" could not be uploaded to your room." : "Le fichier \"{filename}\" n'a pas pu être téléversé dans votre salle.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "Le fichier « {filename} » n’a pas pu être téléversé dans votre salle. Votre serveur BigBlueButton ne prend peut-être pas en charge cette action.",
