@@ -13,13 +13,11 @@ OC.L10N.register(
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",
-    "Sharing" : "Kunhavigo",
     "Create" : "Krei",
     "Copy to clipboard" : "Kopii tondejen",
     "Delete" : "Forigi",
     "Error" : "Eraro",
     "Start" : "Komenco",
-    "Loading" : "Ŝargado",
     "Group name" : "Gruponomo",
     "All" : "Ĉiuj",
     "Settings saved" : "Agordoj konservitaj"

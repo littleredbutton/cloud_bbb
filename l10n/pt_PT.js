@@ -23,8 +23,6 @@ OC.L10N.register(
     "Record" : "Gravar",
     "Recordings" : "Gravações",
     "Edit" : "Editar",
-    "Welcome" : "Bem-vindo",
-    "Sharing" : "Partilha",
     "Miscellaneous" : "Diversos",
     "Room name" : "Nome da sala",
     "Create" : "Criar",
@@ -38,7 +36,6 @@ OC.L10N.register(
     "URL to room could not be stored." : "Não foi possível guardar o URL para a sala.",
     "Error" : "Erro",
     "Start" : "Início",
-    "Loading" : "A carregar",
     "Group name" : "Nome do grupo",
     "All" : "Todos",
     "Settings saved" : "Definições guardadas"

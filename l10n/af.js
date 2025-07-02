@@ -11,12 +11,10 @@ OC.L10N.register(
     "Server error" : "Bedienerfout",
     "Name" : "Naam",
     "Edit" : "Wysig",
-    "Welcome" : "Welkom",
     "Create" : "Skep",
     "Delete" : "Skrap",
     "Error" : "Fout",
     "Start" : "Begin",
-    "Loading" : "Laai tans..",
     "Group name" : "Groepnaam",
     "All" : "Alle",
     "Settings saved" : "Instellings gestoor"

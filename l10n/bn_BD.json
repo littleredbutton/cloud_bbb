@@ -5,10 +5,10 @@
     "Group" : "গোষ্ঠীসমূহ",
     "Name" : "নাম",
     "Edit" : "সম্পাদনা",
-    "Sharing" : "ভাগাভাগিরত",
     "Create" : "তৈরী কর",
     "Delete" : "মুছে",
     "Error" : "সমস্যা",
-    "Loading" : "Loading"
+    "Group name" : "গ্রুপের নাম",
+    "All" : "সবাই"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

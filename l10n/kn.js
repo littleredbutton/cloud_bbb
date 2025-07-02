@@ -6,11 +6,9 @@ OC.L10N.register(
     "Group" : "﻿ಗುಂಪು",
     "Name" : "﻿ಹೆಸರು",
     "Edit" : "ಸಂಪಾದಿಸು",
-    "Sharing" : "﻿ಹಂಚಿಕೆ",
     "Create" : "ಸೃಷ್ಟಿಸಿ",
     "Delete" : "﻿ಅಳಿಸಿ",
     "Error" : "﻿ತಪ್ಪಾಗಿದೆ",
-    "Loading" : "Loading",
     "All" : "﻿ಎಲ್ಲಾ"
 },
 "nplurals=2; plural=(n > 1);");

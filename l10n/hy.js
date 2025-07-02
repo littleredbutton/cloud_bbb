@@ -9,7 +9,6 @@ OC.L10N.register(
     "Edit" : "մշակել",
     "Create" : "Ստեղծել",
     "Delete" : "հեռացնել",
-    "Error" : "Սխալ",
-    "Loading" : "Loading"
+    "Error" : "Սխալ"
 },
 "nplurals=2; plural=(n != 1);");

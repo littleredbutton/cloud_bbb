@@ -10,7 +10,6 @@ OC.L10N.register(
     "Name" : "Jina",
     "Max" : "Kiwango cha juu",
     "Edit" : "Hariri",
-    "Sharing" : "inashirikisha",
     "Miscellaneous" : "Mbalimbali",
     "Recording" : "Inarekodi",
     "Room name" : "Jina la chumba",

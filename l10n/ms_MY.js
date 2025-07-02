@@ -9,7 +9,6 @@ OC.L10N.register(
     "Edit" : "Sunting",
     "Create" : "Buat",
     "Delete" : "Padam",
-    "Error" : "Ralat",
-    "Loading" : "Loading"
+    "Error" : "Ralat"
 },
 "nplurals=1; plural=0;");
