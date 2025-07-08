@@ -2,6 +2,7 @@
     "Internal" : "Ndani",
     "Back to %s" : "Rudi kwenye %s",
     "Save" : "Hifadhi",
+    "Community" : "Jamii",
     "Password" : "Nenosiri",
     "Hello %s" : "Halo %s",
     "Group" : "Kundi",
@@ -17,6 +18,7 @@
     "Delete" : "Futa",
     "Error" : "Hitilafu",
     "All" : "Zote",
+    "Settings saved" : "Settings saved",
     "Send to" : "Tuma kwa"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

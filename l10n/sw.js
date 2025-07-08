@@ -4,6 +4,7 @@ OC.L10N.register(
     "Internal" : "Ndani",
     "Back to %s" : "Rudi kwenye %s",
     "Save" : "Hifadhi",
+    "Community" : "Jamii",
     "Password" : "Nenosiri",
     "Hello %s" : "Halo %s",
     "Group" : "Kundi",
@@ -19,6 +20,7 @@ OC.L10N.register(
     "Delete" : "Futa",
     "Error" : "Hitilafu",
     "All" : "Zote",
+    "Settings saved" : "Settings saved",
     "Send to" : "Tuma kwa"
 },
 "nplurals=2; plural=(n != 1);");
