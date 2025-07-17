@@ -18,6 +18,7 @@ OC.L10N.register(
     "Access" : "Пристап",
     "Edit" : "Уреди",
     "Miscellaneous" : "Разно",
+    "Room name" : "Име на соба",
     "Create" : "Креирај",
     "Published" : "Објавено",
     "Copy to clipboard" : "Копирај во клипборд",
