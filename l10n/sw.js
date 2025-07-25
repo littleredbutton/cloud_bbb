@@ -19,6 +19,7 @@ OC.L10N.register(
     "Published" : "Published",
     "Copy to clipboard" : "Nakili kwenye ubao wa kunakili",
     "Delete" : "Futa",
+    "Delete \"{name}\"?" : "Delete \"{name}\"?",
     "Error" : "Hitilafu",
     "All" : "Zote",
     "Settings saved" : "Settings saved",

@@ -1,7 +1,7 @@
 { "translations": {
     "Public" : "Ommaviy",
     "Back to %s" : "%sga qaytish",
-    "Save" : "Save",
+    "Save" : "Saqlash",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
     "Name" : "Name",
@@ -10,8 +10,8 @@
     "Miscellaneous" : "Turli xil",
     "Room name" : "Xona nomi",
     "Create" : "Yaratish",
-    "Delete" : "Delete",
-    "Error" : "Error",
+    "Delete" : "O'chirish",
+    "Error" : "Xatolik",
     "All" : "Barchasi",
     "Settings saved" : "Settings saved"
 },"pluralForm" :"nplurals=1; plural=0;"

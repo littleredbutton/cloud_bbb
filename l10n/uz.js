@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Public" : "Ommaviy",
     "Back to %s" : "%sga qaytish",
-    "Save" : "Save",
+    "Save" : "Saqlash",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
     "Name" : "Name",
@@ -12,8 +12,8 @@ OC.L10N.register(
     "Miscellaneous" : "Turli xil",
     "Room name" : "Xona nomi",
     "Create" : "Yaratish",
-    "Delete" : "Delete",
-    "Error" : "Error",
+    "Delete" : "O'chirish",
+    "Error" : "Xatolik",
     "All" : "Barchasi",
     "Settings saved" : "Settings saved"
 },
