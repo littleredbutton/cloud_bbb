@@ -7,6 +7,7 @@ OC.L10N.register(
     "Hello %s" : "Прывітанне %s",
     "Group" : "Група",
     "Name" : "Назва",
+    "Edit" : "Рэдагаваць",
     "Create" : "Стварыць",
     "Copy to clipboard" : "Капіяваць у буфер абмену",
     "Delete" : "Выдаліць",
