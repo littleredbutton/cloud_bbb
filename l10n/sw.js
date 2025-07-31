@@ -23,6 +23,7 @@ OC.L10N.register(
     "Error" : "Hitilafu",
     "All" : "Zote",
     "Settings saved" : "Settings saved",
+    "Unexpected error occurred" : "Unexpected error occurred",
     "Send to" : "Tuma kwa"
 },
 "nplurals=2; plural=(n != 1);");
