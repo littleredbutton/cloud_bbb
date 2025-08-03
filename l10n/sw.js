@@ -21,6 +21,7 @@ OC.L10N.register(
     "Delete" : "Futa",
     "Delete \"{name}\"?" : "Delete \"{name}\"?",
     "Error" : "Hitilafu",
+    "Start" : "Start",
     "All" : "Zote",
     "Settings saved" : "Settings saved",
     "Unexpected error occurred" : "Unexpected error occurred",
