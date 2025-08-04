@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "You created the room %s." : "Tu izveidoji istabu %s.",
     "Public" : "Publiska",
     "BigBlueButton Integration" : "BigBlueButton Integrācija",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton iekļaušana Nextcloud",
