@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Back to %s" : "Назад да %s",
     "Save" : "Захаваць",
+    "Community" : "Супольнасць",
     "Password" : "Пароль",
     "Hello %s" : "Прывітанне %s",
     "Group" : "Група",
