@@ -15,7 +15,7 @@ OC.L10N.register(
     "Join" : "Pievienoties",
     "Hello %s" : "Sveiciens, %s!",
     "Group" : "Grupa",
-    "moderator" : "moderators",
+    "moderator" : "satura pārraudzītājs",
     "Server error" : "Servera kļūda",
     "Name" : "Vārds",
     "Max" : "Vislielākais",

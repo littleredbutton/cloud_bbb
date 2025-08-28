@@ -18,6 +18,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Капіяваць у буфер абмену",
     "Delete" : "Выдаліць",
     "Error" : "Памылка",
+    "Start" : "Запусціць",
     "Group name" : "Назва групы",
     "All" : "Усе",
     "Settings saved" : "Налады захаваны"
