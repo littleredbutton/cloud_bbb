@@ -1,7 +1,9 @@
 OC.L10N.register(
     "bbb",
     {
+    "Public" : "Azayaz",
     "Room not found" : "Ur tettwaf ara texxamt",
+    "Back to %s" : "Uɣal ar %s",
     "Save" : "Sekles",
     "Community" : "Tamezdagnut",
     "Password" : "Awal uffir",
