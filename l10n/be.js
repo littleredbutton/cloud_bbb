@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "You unshared the room %s with {shareWith}." : "Вы скасавалі абагульванне пакоя %s з {shareWith}.",
+    "{user} unshared the room %s with you." : "{user} скасаваў(-ла) абагульванне пакоя %s з вамі.",
     "Back to %s" : "Назад да %s",
     "API URL" : "URL-адрас API",
     "Save" : "Захаваць",
