@@ -47,7 +47,7 @@ OC.L10N.register(
     "Name" : "Navn",
     "Access" : "Adgang",
     "Max" : "Maks",
-    "Edit" : "Rediger",
+    "Edit" : "Redigér",
     "Miscellaneous" : "Diverse",
     "Recording" : "Optagelse",
     "Room name" : "Rumnavn",
