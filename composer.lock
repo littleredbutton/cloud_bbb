@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01bfe0189cc07e34a823d5373d78bd26",
+    "content-hash": "785f98931af867608f275b90bad6e652",
     "packages": [
         {
             "name": "littleredbutton/bigbluebutton-api-php",
@@ -1077,16 +1077,16 @@
         },
         {
             "name": "nextcloud/ocp",
-            "version": "v31.0.5",
+            "version": "v31.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "a6103c4f1f65ef53dded3af4b8f2fdfcb51beb56"
+                "reference": "77679c75abf21dfc48a75fd282dea09b09ac096c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/a6103c4f1f65ef53dded3af4b8f2fdfcb51beb56",
-                "reference": "a6103c4f1f65ef53dded3af4b8f2fdfcb51beb56",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/77679c75abf21dfc48a75fd282dea09b09ac096c",
+                "reference": "77679c75abf21dfc48a75fd282dea09b09ac096c",
                 "shasum": ""
             },
             "require": {
@@ -1119,9 +1119,9 @@
             "description": "Composer package containing Nextcloud's public OCP API and the unstable NCU API",
             "support": {
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
-                "source": "https://github.com/nextcloud-deps/ocp/tree/v31.0.5"
+                "source": "https://github.com/nextcloud-deps/ocp/tree/v31.0.7"
             },
-            "time": "2025-05-07T00:51:25+00:00"
+            "time": "2025-07-04T00:53:40+00:00"
         },
         {
             "name": "nikic/php-parser",
