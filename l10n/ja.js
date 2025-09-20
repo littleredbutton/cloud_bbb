@@ -56,6 +56,7 @@ OC.L10N.register(
     "No matches" : "一致なし",
     "admin" : "管理者",
     "moderator" : "モデレータ",
+    "user" : "ユーザー",
     "Server error" : "サーバーエラー",
     "unlimited" : "無制限",
     "Name" : "名前",
