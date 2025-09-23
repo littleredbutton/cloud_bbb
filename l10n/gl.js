@@ -90,7 +90,7 @@ OC.L10N.register(
     "Listen only option" : "Opción de só escoitar",
     "Skip media check before usage" : "Omitir a comprobación de medios antes do uso",
     "Clean layout" : "Disposición limpa",
-    "Join meeting muted" : "Unirse á xuntanza enmudecido",
+    "Join meeting muted" : "Unirse á xuntanza silenciado",
     "Room name" : "Nome da sala",
     "Create" : "Crear",
     "Published" : "Publicado",

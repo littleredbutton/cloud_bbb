@@ -19,6 +19,7 @@ OC.L10N.register(
     "Edit" : "Рэдагаваць",
     "Recording" : "Запіс",
     "Create" : "Стварыць",
+    "Published" : "Апублікавана",
     "Copy to clipboard" : "Капіяваць у буфер абмену",
     "Delete" : "Выдаліць",
     "Delete \"{name}\"?" : "Выдаліць \"{name}\"?",
@@ -27,6 +28,8 @@ OC.L10N.register(
     "Group name" : "Назва групы",
     "All" : "Усе",
     "Settings saved" : "Налады захаваны",
+    "URL has to contain the {token} placeholder" : "URL-адрас павінен утрымліваць запаўняльнік {token}",
+    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL-адрас павінен пачынацца з https:// і ўтрымліваць {token}. Акрамя таго, можна выкарыстоўваць запаўняльнік {user}.",
     "Send to" : "Адправіць"
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");
