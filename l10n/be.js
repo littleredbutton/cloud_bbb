@@ -9,6 +9,7 @@ OC.L10N.register(
     "Save" : "Захаваць",
     "Community" : "Супольнасць",
     "Please enter your name!" : "Увядзіце сваё імя!",
+    "Display name" : "Імя для паказу",
     "Password" : "Пароль",
     "Join" : "Далучыцца",
     "Hello %s" : "Прывітанне %s",
