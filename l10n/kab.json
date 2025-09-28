@@ -6,15 +6,16 @@
     "Community" : "Tamezdagnut",
     "Password" : "Awal uffir",
     "Join" : "Semlil",
-    "Hello %s" : "Azul %s",
+    "Hello %s" : "Azul a %s",
     "Group" : "Agraw",
     "Name" : "Nom",
     "Edit" : "Ẓreg",
     "Create" : "Snulfu-d",
     "Published" : "Yeffeɣ-d",
-    "Copy to clipboard" : "Copier dans le presse-papiers",
+    "Copy to clipboard" : "Nɣel-it ar tecfawit",
     "Delete" : "Kkes",
-    "Error" : "Erreur",
+    "Error" : "Tuccḍa",
+    "All users" : "Akk iseqdacen",
     "All" : "Akk"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
