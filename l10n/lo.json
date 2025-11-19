@@ -1,16 +1,31 @@
 { "translations": {
+    "Public" : "Public",
+    "Internal" : "Internal",
     "Back to %s" : "ຫຼັງ%s",
     "Save" : "ບັນທຶກ",
     "Community" : "ຊຸມຊົນ",
+    "Display name" : "Display name",
     "Password" : "ລະຫັດຜ່ານ",
+    "Join" : "Join",
     "Hello %s" : "ສະບາຍດີ 1%s",
     "Group" : "ກຸ່ມ",
+    "moderator" : "moderator",
     "Name" : "ຊື່",
     "Access" : "ການເຂົ້າເຖິງ",
     "Edit" : "ແກ້ໄຂ",
+    "Miscellaneous" : "Miscellaneous",
+    "Recording" : "Recording",
+    "Room name" : "Room name",
     "Create" : "ສ້າງ",
+    "Published" : "Published",
     "Copy to clipboard" : "ສຳເນົາໃສ່ຄລິບບອດ",
     "Delete" : "ລຶບ",
-    "Error" : "ຜິດພາດ"
+    "Delete \"{name}\"?" : "Delete \"{name}\"?",
+    "Error" : "ຜິດພາດ",
+    "Group name" : "Group name",
+    "All" : "All",
+    "Settings saved" : "Settings saved",
+    "Unexpected error occurred" : "Unexpected error occurred",
+    "Send to" : "Send to"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
