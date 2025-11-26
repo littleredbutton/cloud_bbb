@@ -55,6 +55,7 @@ OC.L10N.register(
     "No matches" : "无匹配项",
     "admin" : "管理员",
     "moderator" : "主持人",
+    "user" : "用户",
     "Server error" : "服务器错误",
     "unlimited" : "无限制",
     "Name" : "名称",
