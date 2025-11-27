@@ -17,6 +17,7 @@ OC.L10N.register(
     "Group" : "Grupo",
     "moderator" : "moderador",
     "Server error" : "Erro do servidor",
+    "unlimited" : "Ilimitado",
     "Name" : "Nome",
     "Access" : "Acesso",
     "Max" : "Máx.",
