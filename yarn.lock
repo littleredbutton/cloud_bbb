@@ -1731,10 +1731,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
-"@types/inquirer@^8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@types/inquirer/-/inquirer-8.2.0.tgz#b9566d048f5ff65159f2ed97aff45fe0f00b35ec"
-  integrity sha512-BNoMetRf3gmkpAlV5we+kxyZTle7YibdOntIZbU5pyIfMdcwy784KfeZDAcuyMznkh5OLa17RVXZOGA5LTlkgQ==
+"@types/inquirer@^9.0.8":
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/@types/inquirer/-/inquirer-9.0.8.tgz#09d39cc6435ab7b0597f527ff5e2d6ccdf6b14be"
+  integrity sha512-CgPD5kFGWsb8HJ5K7rfWlifao87m4ph8uioU7OTncJevmE/VLIqAAjfQtko578JZg7/f69K4FgqYym3gNr7DeA==
   dependencies:
     "@types/through" "*"
     rxjs "^7.2.0"
