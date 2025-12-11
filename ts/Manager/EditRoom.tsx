@@ -8,7 +8,7 @@ type Props = {
 	updateProperty: (key: string, value: string | boolean | number | null) => Promise<void>;
 }
 
-const EditRoom: React.FC<Props> = ({ room, restriction, updateProperty }) => {
+const EditRoom = ({ room, restriction, updateProperty }: Props): JSX.Element => {
 	const [open, setOpen] = useState<boolean>(false);
 
 	return (

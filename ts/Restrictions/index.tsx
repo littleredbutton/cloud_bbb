@@ -2,11 +2,14 @@
 
 import App from './App';
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
 
 // Enable React devtools
 window['React'] = React;
 
 $(document).ready(() => {
-	ReactDom.render( <App/>, document.getElementById('bbb-restrictions'));
+	const root = document.getElementById('bbb-restrictions');
+	if (root) {
+		render(<App /> as any, root);
+	}
 });

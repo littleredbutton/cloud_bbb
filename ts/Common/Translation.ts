@@ -18,5 +18,5 @@ export const PermissionsOptions = {
 };
 
 export function html_sanitize_and_parse(str: string): string {
-	return parse(DOMPurify.sanitize(str, { USE_PROFILES: { html: true } }));
+	return parse(DOMPurify.sanitize(str, { USE_PROFILES: { html: true } })) as string;
 }

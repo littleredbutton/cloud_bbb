@@ -91,7 +91,7 @@ class RestrictionService {
 		return $this->mapper->insert($restriction);
 	}
 
-	public function update(int $id, string $groupId, int $maxRooms, array $roomTypes, int $maxParticipants, bool $allowRecording): Restriction {
+	public function update(int $id, string $groupId, int $maxRooms, array $roomTypes, int $maxParticipants, bool $allowRecording): Restriction | null {
 		try {
 			$restriction = $this->mapper->find($id);
 
@@ -104,10 +104,11 @@ class RestrictionService {
 			return $this->mapper->update($restriction);
 		} catch (Exception $e) {
 			$this->handleException($e);
+			return null;
 		}
 	}
 
-	public function delete(int $id): Restriction {
+	public function delete(int $id): Restriction | null {
 		try {
 			$restriction = $this->mapper->find($id);
 			$this->mapper->delete($restriction);
@@ -115,6 +116,7 @@ class RestrictionService {
 			return $restriction;
 		} catch (Exception $e) {
 			$this->handleException($e);
+			return null;
 		}
 	}
 

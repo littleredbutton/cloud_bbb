@@ -67,7 +67,7 @@ class HookController extends Controller {
 
 		$this->avatarRepository->clearRoom($room->uid);
 
-		$this->eventDispatcher->dispatch(MeetingEndedEvent::class, new MeetingEndedEvent($room, $recordingmarks));
+		$this->eventDispatcher->dispatchTyped(new MeetingEndedEvent($room, $recordingmarks));
 	}
 
 	/**
@@ -78,7 +78,7 @@ class HookController extends Controller {
 	 * @return void
 	 */
 	public function recordingReady(): void {
-		$this->eventDispatcher->dispatch(RecordingReadyEvent::class, new RecordingReadyEvent($this->getRoom()));
+		$this->eventDispatcher->dispatchTyped(new RecordingReadyEvent($this->getRoom()));
 	}
 
 	private function getRoom(): ?Room {

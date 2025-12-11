@@ -3,10 +3,16 @@ import React from 'react';
 type Props = {
     open: boolean;
     onClose?: () => void;
-    title: string;
+	title: string;
+	children: React.ReactNode;
 }
 
-const Dialog: React.FC<Props> = ({open, title, children, onClose = () => undefined}) => {
+const Dialog = ({
+	open,
+	title,
+	children,
+	onClose = () => undefined,
+}: Props): JSX.Element => {
 
 	if (!open) {
 		return <></>;

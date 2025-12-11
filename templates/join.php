@@ -2,7 +2,7 @@
 /** @var $_ array */
 /** @var $l \OCP\IL10N */
 style('core', 'guest');
-script('bbb', 'join');
+\OCP\Util::addScript('bbb', 'bbb-join');
 ?>
 <form method="get" action="?">
 	<fieldset class="warning bbb">

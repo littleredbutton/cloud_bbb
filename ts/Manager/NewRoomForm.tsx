@@ -4,7 +4,7 @@ type Props = {
 	addRoom: (name: string) => Promise<void>;
 }
 
-const NewRoomForm: React.FC<Props> = (props) => {
+const NewRoomForm = (props: Props): JSX.Element => {
 	const [name, setName] = useState<string>('');
 	const [processing, setProcessing] = useState<boolean>(false);
 	const [error, setError] = useState<string>('');

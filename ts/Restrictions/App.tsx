@@ -4,16 +4,12 @@ import { api, Restriction, ShareType } from '../Common/Api';
 import RestrictionRow from './RestrictionRow';
 import ShareSelection from '../Common/ShareSelection';
 
-type Props = {
-
-}
-
-const App: React.FC<Props> = () => {
+const App = (): JSX.Element => {
 	const [areRestrictionsLoaded, setRestrictionsLoaded] = useState(false);
 	const [error, setError] = useState<string>('');
 	const [restrictions, setRestrictions] = useState<Restriction[]>([]);
 
-	const rows = restrictions.sort((a, b) => a.groupId.localeCompare(b.groupId)).map(restriction => <RestrictionRow key={restriction.id} restriction={restriction} updateRestriction={updateRestriction} deleteRestriction={deleteRestriction} />);
+	const rows = restrictions.sort((a: Restriction, b: Restriction) => a.groupId.localeCompare(b.groupId)).map(restriction => <RestrictionRow key={restriction.id} restriction={restriction} updateRestriction={updateRestriction} deleteRestriction={deleteRestriction} />);
 
 	useEffect(() => {
 		api.getRestrictions().then(restrictions => {
@@ -35,7 +31,7 @@ const App: React.FC<Props> = () => {
 
 	function updateRestriction(restriction: Restriction) {
 		return api.updateRestriction(restriction).then(updatedRestriction => {
-			setRestrictions(restrictions.map(restriction => {
+			setRestrictions(restrictions.map((restriction: Restriction) => {
 				if (restriction.id === updatedRestriction.id || restriction.groupId === updatedRestriction.groupId) {
 					return updatedRestriction;
 				}
@@ -86,7 +82,7 @@ const App: React.FC<Props> = () => {
 									placeholder={t('bbb', 'Group …')}
 									selectShare={(share) => addRestriction(share.value.shareWith)}
 									shareType={[ShareType.Group]}
-									excluded={{groupIds: restrictions.map(restriction => restriction.groupId)}} /> }
+									excluded={{groupIds: restrictions.map((restriction: Restriction) => restriction.groupId)}} /> }
 							{error && <><span className="icon icon-error icon-visible"></span> {error}</>}
 						</td>
 						<td colSpan={4} />

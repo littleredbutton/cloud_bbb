@@ -13,7 +13,7 @@ type Props = {
 	placeholder?: string;
 }
 
-const ShareSelection: React.FC<Props> = (props) => {
+const ShareSelection = (props: Props): JSX.Element => {
 	const [search, setSearch] = useState<string>('');
 	const [hasFocus, setFocus] = useState<boolean>(false);
 	const [showSearchResults, setShowSearchResults] = useState<boolean>(false);

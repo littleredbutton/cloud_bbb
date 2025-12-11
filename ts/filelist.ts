@@ -1,7 +1,6 @@
 import axios from '@nextcloud/axios';
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
 import { showSuccess, showWarning, showError } from '@nextcloud/dialogs';
-import '@nextcloud/dialogs/styles/toast';
 import { api } from './Common/Api';
 import './filelist.scss';
 
@@ -80,7 +79,9 @@ async function openDialog(fileId: number, filename: string) {
 	const initContent = '<div id="bbb-file-action"><span className="icon icon-loading-small icon-visible"></span></div>';
 	const title = t('bbb', 'Send file to BBB');
 
-	await (OC.dialogs as ExtendedDialogs).message(initContent, title, 'none', -1, undefined, true, true);
+	const exDialogs = OC.dialogs as ExtendedDialogs;
+
+	await exDialogs.message(initContent, title, 'none', -1, undefined, true, true);
 
 	const rooms = await api.getRooms();
 

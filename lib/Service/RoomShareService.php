@@ -52,7 +52,7 @@ class RoomShareService {
 		}
 	}
 
-	public function create(int $roomId, int $shareType, string $shareWith, int $permission): RoomShare {
+	public function create(int $roomId, int $shareType, string $shareWith, int $permission): RoomShare | null {
 		try {
 			$roomShare = $this->mapper->findByRoomAndEntity($roomId, $shareWith, $shareType);
 
@@ -67,13 +67,13 @@ class RoomShareService {
 
 			$createdRoomShare = $this->mapper->insert($roomShare);
 
-			$this->eventDispatcher->dispatch(RoomShareCreatedEvent::class, new RoomShareCreatedEvent($createdRoomShare));
+			$this->eventDispatcher->dispatchTyped(new RoomShareCreatedEvent($createdRoomShare));
 
 			return $createdRoomShare;
 		}
 	}
 
-	public function update(int $id, int $roomId, int $shareType, string $shareWith, int $permission): RoomShare {
+	public function update(int $id, int $roomId, int $shareType, string $shareWith, int $permission): RoomShare | null {
 		try {
 			$roomShare = $this->mapper->find($id);
 
@@ -85,19 +85,21 @@ class RoomShareService {
 			return $this->mapper->update($roomShare);
 		} catch (Exception $e) {
 			$this->handleException($e);
+			return null;
 		}
 	}
 
-	public function delete(int $id): RoomShare {
+	public function delete(int $id): RoomShare | null {
 		try {
 			$roomShare = $this->mapper->find($id);
 			$this->mapper->delete($roomShare);
 
-			$this->eventDispatcher->dispatch(RoomShareDeletedEvent::class, new RoomShareDeletedEvent($roomShare));
+			$this->eventDispatcher->dispatchTyped(new RoomShareDeletedEvent($roomShare));
 
 			return $roomShare;
 		} catch (Exception $e) {
 			$this->handleException($e);
+			return null;
 		}
 	}
 }

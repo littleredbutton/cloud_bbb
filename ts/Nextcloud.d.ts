@@ -113,3 +113,7 @@ declare module 'NC' {
 		};
 	}
 }
+
+declare const OC: any;
+declare const OCP: any;
+declare const OCA: any;

@@ -1,7 +1,5 @@
-import {api} from './Common/Api';
+import { api } from './Common/Api';
 import './Manager/App.scss';
-
-declare const OCP: any;
 
 $(() => {
 	function generateWarningElement(message: string) {
@@ -23,14 +21,10 @@ $(() => {
 	}
 
 	function checkPasswordConfirmation() {
-		return new Promise<void>(resolve => {
-			if (OC.PasswordConfirmation && OC.PasswordConfirmation.requiresPasswordConfirmation()) {
-				OC.PasswordConfirmation.requirePasswordConfirmation(() => resolve());
-
-				return;
-			}
-
-			resolve();
+		return new Promise<void>((resolve: () => void) => {
+			OC.PasswordConfirmation?.requiresPasswordConfirmation()
+				? OC.PasswordConfirmation.requirePasswordConfirmation(() => resolve())
+				: resolve();
 		});
 	}
 
@@ -49,7 +43,14 @@ $(() => {
 
 		const resultElement = $(this).find('.bbb-result').empty();
 
-		saveApiSettings(this['api.url'].value, this['api.secret'].value).then(() => {
+		const apiUrl = this['api.url'] as HTMLInputElement;
+		const apiSecret = this['api.secret'] as HTMLInputElement;
+
+		if (apiUrl === null || apiSecret == null) {
+			return;
+		}
+
+		saveApiSettings(apiUrl.value, apiSecret.value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
 
 			setTimeout(() => {
@@ -95,7 +96,11 @@ $(() => {
 
 		const resultElement = $(this).find('.bbb-result').empty();
 
-		saveAppSettings(this['app.shortener'].value).then(() => {
+		const shortenerInput = this['app.shortener'] as HTMLInputElement;
+		if (shortenerInput === null) {
+			return;
+		}
+		saveAppSettings(shortenerInput.value).then(() => {
 			const successElement = generateSuccessElement(t('bbb', 'Settings saved'));
 
 			setTimeout(() => {
@@ -123,7 +128,7 @@ $(() => {
 	$<HTMLInputElement>('#bbb-shortener [name="app.shortener"]').on('keyup', (ev) => {
 		ev.preventDefault();
 
-		const {value} = ev.target;
+		const {value} = ev.target as HTMLInputElement;
 
 		if (!value || value.indexOf('https://') !== 0 || value.indexOf('{token}') < 0) {
 			$('#bbb-shortener-example').text(t('bbb', 'URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used.'));
@@ -154,8 +159,10 @@ return 307;</pre></details>
 	$<HTMLInputElement>('.bbb-setting[type="checkbox"]').on('change', (ev) => {
 		ev.preventDefault();
 
-		console.log(`checkbox ${ev.target.name} changed to ${ev.target.checked}`);
+		const inputElement = ev.target as HTMLInputElement;
 
-		OCP.AppConfig.setValue('bbb', ev.target.name, ev.target.checked);
+		console.log(`checkbox ${inputElement.name} changed to ${inputElement.checked}`);
+
+		OCP.AppConfig.setValue('bbb', inputElement.name, inputElement.checked);
 	});
 });

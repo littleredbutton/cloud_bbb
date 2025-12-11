@@ -17,7 +17,7 @@ use \OCA\BigBlueButton\Middleware\HookMiddleware;
 use \OCA\BigBlueButton\Middleware\JoinMiddleware;
 use \OCA\BigBlueButton\Search\Provider;
 use \OCP\AppFramework\App;
-use \OCP\IConfig;
+use \OCP\IAppConfig;
 use \OCP\Settings\IManager as ISettingsManager;
 use \OCP\User\Events\UserDeletedEvent;
 use OCP\AppFramework\Bootstrap\IBootContext;
@@ -66,11 +66,11 @@ class Application extends App implements IBootstrap {
 	public function boot(IBootContext $context): void {
 		$context->injectFn([$this, 'registerAdminPage']);
 
-		Util::addScript('bbb', 'filelist');
+		Util::addScript('bbb', 'bbb-filelist');
 	}
 
-	public function registerAdminPage(ISettingsManager $settingsManager, INavigationManager $navigationManager, IURLGenerator $urlGenerator, IConfig $config):void {
-		if ($config->getAppValue(self::ID, 'app.navigation') === 'true') {
+	public function registerAdminPage(ISettingsManager $settingsManager, INavigationManager $navigationManager, IURLGenerator $urlGenerator, IAppConfig $config):void {
+		if ($config->getValueBool(self::ID, 'app.navigation')) {
 			$this->registerAsNavigationEntry($navigationManager, $urlGenerator, $config);
 		} else {
 			$this->registerAsPersonalSetting($settingsManager);
@@ -78,11 +78,11 @@ class Application extends App implements IBootstrap {
 	}
 
 	private function registerAsPersonalSetting(ISettingsManager $settingsManager): void {
-		$settingsManager->registerSetting(ISettingsManager::KEY_PERSONAL_SETTINGS, \OCA\BigBlueButton\Settings\Personal::class);
+		$settingsManager->registerSetting(ISettingsManager::SETTINGS_PERSONAL, \OCA\BigBlueButton\Settings\Personal::class);
 	}
 
-	private function registerAsNavigationEntry(INavigationManager $navigationManager, IURLGenerator $urlGenerator, IConfig $config): void {
-		$name = $config->getAppValue(self::ID, 'app.navigation.name', 'BBB');
+	private function registerAsNavigationEntry(INavigationManager $navigationManager, IURLGenerator $urlGenerator, IAppConfig $config): void {
+		$name = $config->getValueString(self::ID, 'app.navigation.name', 'BBB');
 
 		$navigationManager->add(function () use ($urlGenerator, $name) {
 			return [

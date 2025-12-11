@@ -20,7 +20,7 @@ type RecordingsNumberProps = {
 	setShowRecordings: (showRecordings: boolean) => void;
 }
 
-const RecordingsNumber: React.FC<RecordingsNumberProps> = ({ recordings, showRecordings, setShowRecordings }) => {
+const RecordingsNumber = ({ recordings, showRecordings, setShowRecordings }: RecordingsNumberProps): JSX.Element => {
 	if (recordings === null) {
 		return <span className="icon icon-loading-small icon-visible"></span>;
 	}
@@ -36,7 +36,7 @@ const RecordingsNumber: React.FC<RecordingsNumberProps> = ({ recordings, showRec
 	return <span>0</span>;
 };
 
-const RoomRow: React.FC<Props> = (props) => {
+const RoomRow = (props: Props): JSX.Element => {
 	const [recordings, setRecordings] = useState<Recording[] | null>(null);
 	const [showRecordings, setShowRecordings] = useState<boolean>(false);
 	const room = props.room;
@@ -74,7 +74,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					props.deleteRoom(room.id);
 				}
 			},
-			true
+			true,
 		);
 	}
 
@@ -92,7 +92,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				OC.dialogs.alert(
 					t('bbb', 'URL to room could not be stored.'),
 					t('bbb', 'Error'),
-					() => undefined
+					() => undefined,
 				);
 			});
 		}, undefined, 'httpd/unix-directory');
@@ -112,7 +112,7 @@ const RoomRow: React.FC<Props> = (props) => {
 				OC.dialogs.alert(
 					t('bbb', 'URL to presentation could not be stored.'),
 					t('bbb', 'Error'),
-					() => undefined
+					() => undefined,
 				);
 			});
 		}, undefined, 'httpd/unix-directory');
@@ -151,7 +151,7 @@ const RoomRow: React.FC<Props> = (props) => {
 					});
 				}
 			},
-			true
+			true,
 		);
 	}
 

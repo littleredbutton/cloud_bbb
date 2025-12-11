@@ -3,7 +3,7 @@
     "lib": [
       "dom",
       "es2015.promise",
-      "es6"
+      "es2017"
     ],
     "module": "ES6",
     "moduleResolution": "node",

@@ -20,73 +20,35 @@ use OCA\BigBlueButton\UrlHelper;
 use OCP\App\IAppManager;
 use OCP\Defaults;
 use OCP\EventDispatcher\IEventDispatcher;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 
 class API {
-	/** @var IConfig */
-	private $config;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
 
 	/** @var BigBlueButton|null */
 	private $server;
 
-	/** @var Crypto */
-	private $crypto;
-
-	/** @var IEventDispatcher */
-	private $eventDispatcher;
-
-	/** @var IL10N */
-	private $l10n;
-
-	/** @var UrlHelper */
-	private $urlHelper;
-
-	/** @var Defaults */
-	private $defaults;
-
-	/** @var IAppManager */
-	private $appManager;
-
-	/** @var AvatarRepository */
-	private $avatarRepository;
-
-	/** @var IRequest */
-	private $request;
-
 	public function __construct(
-		IConfig $config,
-		IURLGenerator $urlGenerator,
-		Crypto $crypto,
-		IEventDispatcher $eventDispatcher,
-		IL10N $l10n,
-		UrlHelper $urlHelper,
-		Defaults $defaults,
-		IAppManager $appManager,
-		AvatarRepository $avatarRepository,
-		IRequest $request
+		private IAppConfig $config,
+		private IURLGenerator $urlGenerator,
+		private Crypto $crypto,
+		private IEventDispatcher $eventDispatcher,
+		private IL10N $l10n,
+		private UrlHelper $urlHelper,
+		private Defaults $defaults,
+		private IAppManager $appManager,
+		private AvatarRepository $avatarRepository,
+		private IRequest $request
 	) {
-		$this->config = $config;
-		$this->urlGenerator = $urlGenerator;
-		$this->crypto = $crypto;
-		$this->eventDispatcher = $eventDispatcher;
-		$this->l10n = $l10n;
-		$this->urlHelper = $urlHelper;
-		$this->defaults = $defaults;
-		$this->appManager = $appManager;
-		$this->avatarRepository = $avatarRepository;
-		$this->request = $request;
+		$this->server = null;
 	}
 
 	private function getServer(): BigBlueButton {
 		if (!$this->server) {
-			$apiUrl = $this->config->getAppValue('bbb', 'api.url');
-			$secret = $this->config->getAppValue('bbb', 'api.secret');
+			$apiUrl = $this->config->getValueString('bbb', 'api.url');
+			$secret = $this->config->getValueString('bbb', 'api.secret');
 
 			$this->server = new BigBlueButton($apiUrl, $secret);
 		}
@@ -123,7 +85,7 @@ class API {
 			$joinMeetingParams->addUserData('bbb_show_public_chat_on_login', false);
 		}
 
-		if ($this->config->getAppValue('bbb', 'join.theme') === 'true') {
+		if ($this->config->getValueBool('bbb', 'join.theme')) {
 			$primaryColor = $this->defaults->getColorPrimary();
 			$textColor = $this->defaults->getTextColorPrimary();
 
@@ -160,7 +122,7 @@ class API {
 		}
 
 		if ($response->getMessageKey() !== 'duplicateWarning') {
-			$this->eventDispatcher->dispatch(MeetingStartedEvent::class, new MeetingStartedEvent($room));
+			$this->eventDispatcher->dispatchTyped(new MeetingStartedEvent($room));
 		}
 
 		return $response->getCreationTime();
@@ -179,7 +141,7 @@ class API {
 		$createMeetingParams->addMeta('bbb-origin', \method_exists($this->defaults, 'getProductName') ? $this->defaults->getProductName() : 'Nextcloud');
 		$createMeetingParams->addMeta('bbb-origin-server-name', $this->request->getServerHost());
 
-		$analyticsCallbackUrl = $this->config->getAppValue('bbb', 'api.meta_analytics-callback-url');
+		$analyticsCallbackUrl = $this->config->getValueString('bbb', 'api.meta_analytics-callback-url');
 		if (!empty($analyticsCallbackUrl)) {
 			// For more details: https://github.com/bigbluebutton/bigbluebutton/blob/develop/record-and-playback/core/scripts/post_events/post_events_analytics_callback.rb
 			$createMeetingParams->addMeta('analytics-callback-url', $analyticsCallbackUrl);

@@ -9,8 +9,8 @@ $(() => {
 				'bbb',
 				'This room is not open yet. We will try it again in %n second. Please wait.',
 				'This room is not open yet. We will try it again in %n seconds. Please wait.',
-				--countdown
-			)
+				--countdown,
+			),
 		);
 
 		if (countdown === 0) {

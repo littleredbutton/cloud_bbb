@@ -2,8 +2,8 @@
 /** @var $l \OCP\IL10N */
 /** @var $_ array */
 
-script('bbb', 'admin');
-script('bbb', 'restrictions');
+\OCP\Util::addScript('bbb', 'bbb', 'admin');
+\OCP\Util::addScript('bbb', 'bbb-restrictions');
 ?>
 
 <div id="bbb-settings" class="section">
