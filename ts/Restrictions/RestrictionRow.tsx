@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React from 'react';
 import { Restriction } from '../Common/Api';
 import EditableValue from '../Manager/EditableValue';
 import EditableSelection from '../Common/EditableSelection';
@@ -11,7 +11,7 @@ type Props = {
 }
 
 
-const RestrictionRoom: React.FC<Props> = (props) => {
+const RestrictionRoom = (props: Props): JSX.Element => {
 	const restriction = props.restriction;
 
 	function updateRestriction(key: string, value: string | boolean | number | string[]) {
@@ -32,7 +32,7 @@ const RestrictionRoom: React.FC<Props> = (props) => {
 					props.deleteRestriction(restriction.id);
 				}
 			},
-			true
+			true,
 		);
 	}
 

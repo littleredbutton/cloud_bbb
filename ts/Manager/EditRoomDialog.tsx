@@ -33,7 +33,7 @@ type Props = {
 	setOpen: (open: boolean) => void;
 }
 
-const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, open, setOpen }) => {
+const EditRoomDialog = ({ room, restriction, updateProperty, open, setOpen }: Props): JSX.Element => {
 	const [shares, setShares] = useState<RoomShare[]>();
 
 	const maxParticipantsLimit = (restriction?.maxParticipants || 0) < 0 ? undefined : restriction?.maxParticipants;
@@ -69,7 +69,7 @@ const EditRoomDialog: React.FC<Props> = ({ room, restriction, updateProperty, op
 					<h3>{label}</h3>
 				</label>
 
-				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={value => updateProperty(field, value)} min={minParticipantsLimit} max={maxParticipantsLimit} />
+				<SubmitInput initialValue={room[field]} type={type} name={field} onSubmitValue={(value) => updateProperty(field, value)} min={minParticipantsLimit} max={maxParticipantsLimit} />
 				{descriptions[field] && <em>{html_sanitize_and_parse(descriptions[field])}</em>}
 			</div>
 		);

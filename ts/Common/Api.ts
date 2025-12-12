@@ -118,7 +118,7 @@ class Api {
 	public async updateRestriction(restriction: Restriction) {
 		if (!restriction.id) {
 			const newRestriction = await this.createRestriction(
-				restriction.groupId
+				restriction.groupId,
 			);
 
 			restriction.id = newRestriction.id;
@@ -166,7 +166,7 @@ class Api {
 		return response.data;
 	}
 
-	public async createRoom(name: string, access: Access = Access.Public, maxParticipants = 0) {
+	public async createRoom(name: string, access: Access = Access.Public, maxParticipants = 0): Promise<Room> {
 		const response = await axios.post(this.getUrl('rooms'), {
 			name,
 			welcome: '',
@@ -175,7 +175,7 @@ class Api {
 			access,
 		});
 
-		return response.data;
+		return response.data as Room;
 	}
 
 	public async updateRoom(room: Room) {
@@ -202,7 +202,7 @@ class Api {
 		return response.data;
 	}
 
-	public async publishRecording(id: string, publish: boolean,) {
+	public async publishRecording(id: string, publish: boolean) {
 		const response = await axios.post(this.getUrl(`server/record/${id}/publish`), {
 			published: publish,
 		});

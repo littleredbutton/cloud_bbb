@@ -8,5 +8,8 @@ import ReactDom from 'react-dom';
 window['React'] = React;
 
 $(document).ready(() => {
-	ReactDom.render( <App/>, document.getElementById('bbb-root'));
+	const root = document.getElementById('bbb-root');
+	if (root) {
+		ReactDom.render( <App /> as any , root);
+	}
 });

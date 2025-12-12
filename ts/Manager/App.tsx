@@ -31,11 +31,7 @@ function sortRooms(key: SortKey, orderBy: SortOrder) {
 	};
 }
 
-type Props = {
-
-}
-
-const App: React.FC<Props> = () => {
+const App = () => {
 	const [isLoaded, setLoaded] = useState(false);
 	const [error, setError] = useState<string>('');
 	const [restriction, setRestriction] = useState<Restriction>();

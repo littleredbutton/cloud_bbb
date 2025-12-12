@@ -13,7 +13,7 @@ type EditableValueProps = {
 	};
 }
 
-const EditableValue: React.FC<EditableValueProps> = ({ setValue, field, value: currentValue, type, options }) => {
+const EditableValue = ({ setValue, field, value: currentValue, type, options }: EditableValueProps): JSX.Element => {
 	const [active, setActive] = useState<boolean>(false);
 
 	const submit = (value: string | number) => {

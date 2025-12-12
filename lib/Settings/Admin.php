@@ -3,20 +3,17 @@
 namespace OCA\BigBlueButton\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
-	/** @var IConfig */
-	private $config;
 
 	/**
 	 * Admin constructor.
 	 *
-	 * @param IConfig $config
+	 * @param IAppConfig $config
 	 */
-	public function __construct(IConfig $config) {
-		$this->config = $config;
+	public function __construct(private IAppConfig $config) {
 	}
 
 	/**
@@ -24,12 +21,12 @@ class Admin implements ISettings {
 	 */
 	public function getForm() {
 		$parameters = [
-			'api.url' => $this->config->getAppValue('bbb', 'api.url'),
-			'api.secret' => $this->config->getAppValue('bbb', 'api.secret'),
-			'app.navigation' => $this->config->getAppValue('bbb', 'app.navigation') === 'true' ? 'checked' : '',
-			'join.theme' => $this->config->getAppValue('bbb', 'join.theme') === 'true' ? 'checked' : '',
-			'app.shortener' => $this->config->getAppValue('bbb', 'app.shortener'),
-			'join.mediaCheck' => $this->config->getAppValue('bbb', 'join.mediaCheck', 'true') === 'true' ? 'checked' : '',
+			'api.url' => $this->config->getValueString('bbb', 'api.url'),
+			'api.secret' => $this->config->getValueString('bbb', 'api.secret'),
+			'app.navigation' => $this->config->getValueBool('bbb', 'app.navigation') ? 'checked' : '',
+			'join.theme' => $this->config->getValueBool('bbb', 'join.theme') ? 'checked' : '',
+			'app.shortener' => $this->config->getValueString('bbb', 'app.shortener'),
+			'join.mediaCheck' => $this->config->getValueBool('bbb', 'join.mediaCheck', true) ? 'checked' : '',
 		];
 
 		return new TemplateResponse('bbb', 'admin', $parameters);

@@ -16,7 +16,7 @@ use OCP\AppFramework\Db\Entity;
  * @method void setMaxRooms(int $number)
  * @method void setMaxParticipants(int $number)
  * @method void setAllowRecording(bool $allow)
- * @method void setGroupName(string $groupName)
+ * @method void setGroupName(?string $groupName)
  */
 class Restriction extends Entity implements JsonSerializable {
 	public const ALL_ID = '';

@@ -12,7 +12,7 @@ use OCA\BigBlueButton\Event\RoomDeletedEvent;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\EventDispatcher\IEventDispatcher;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IUser;
 use OCP\Search\ISearchQuery;
 use OCP\Security\ISecureRandom;
@@ -21,7 +21,7 @@ class RoomService {
 	/** @var RoomMapper */
 	private $mapper;
 
-	/** @var IConfig */
+	/** @var IAppConfig */
 	private $config;
 
 	/** @var IEventDispatcher */
@@ -32,7 +32,7 @@ class RoomService {
 
 	public function __construct(
 		RoomMapper $mapper,
-		IConfig $config,
+		IAppConfig $config,
 		IEventDispatcher $eventDispatcher,
 		ISecureRandom $random) {
 		$this->mapper = $mapper;
@@ -96,7 +96,7 @@ class RoomService {
 	public function create(string $name, string $welcome, int $maxParticipants, bool $record, string $access, string $userId): \OCP\AppFramework\Db\Entity {
 		$room = new Room();
 
-		$mediaCheck = $this->config->getAppValue('bbb', 'join.mediaCheck', 'true') === 'true';
+		$mediaCheck = $this->config->getValueBool('bbb', 'join.mediaCheck', true);
 
 		$room->setUid($this->humanReadableRandom(16));
 		$room->setName($name);
@@ -118,7 +118,7 @@ class RoomService {
 
 		$createdRoom = $this->mapper->insert($room);
 
-		$this->eventDispatcher->dispatch(RoomCreatedEvent::class, new RoomCreatedEvent($createdRoom));
+		$this->eventDispatcher->dispatchTyped(new RoomCreatedEvent($createdRoom));
 
 		return $createdRoom;
 	}
@@ -195,7 +195,7 @@ class RoomService {
 
 			$this->mapper->delete($room);
 
-			$this->eventDispatcher->dispatch(RoomDeletedEvent::class, new RoomDeletedEvent($room));
+			$this->eventDispatcher->dispatchTyped(new RoomDeletedEvent($room));
 
 			return $room;
 		} catch (Exception $e) {

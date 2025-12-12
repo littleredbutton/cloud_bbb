@@ -9,7 +9,7 @@ type Props = {
 	invert?: boolean;
 }
 
-const EditableSelection: React.FC<Props> = ({ setValue, field, values: currentValues, options, placeholder, invert = false }) => {
+const EditableSelection = ({ setValue, field, values: currentValues, options, placeholder, invert = false }: Props): JSX.Element => {
 	const [active, setActive] = useState<boolean>(false);
 
 	currentValues = currentValues || [];

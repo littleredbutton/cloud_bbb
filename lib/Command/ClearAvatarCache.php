@@ -25,7 +25,7 @@ class ClearAvatarCache extends Command {
 		$this->setDescription('Clear all avatars in cache');
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output) {
+	protected function execute(InputInterface $input, OutputInterface $output): int {
 		$stats = $this->avatarRepository->clearAllRooms();
 
 		$output->writeln("Removed " . $stats["files"] . " avatars in " . $stats["rooms"] . " rooms");

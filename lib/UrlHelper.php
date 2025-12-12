@@ -3,26 +3,19 @@
 namespace OCA\BigBlueButton;
 
 use OCA\BigBlueButton\Db\Room;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IURLGenerator;
 
 class UrlHelper {
-	/** @var IConfig */
-	private $config;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
 
 	public function __construct(
-		IConfig $config,
-		IURLGenerator $urlGenerator
+		private IAppConfig $config,
+		private IURLGenerator $urlGenerator
 	) {
-		$this->config = $config;
-		$this->urlGenerator = $urlGenerator;
 	}
 
 	public function linkToInvitationAbsolute(Room $room): string {
-		$url = $this->config->getAppValue('bbb', 'app.shortener', '');
+		$url = $this->config->getValueString('bbb', 'app.shortener', '');
 
 		if (empty($url) || strpos($url, 'https://') !== 0 || strpos($url, '{token}') === false) {
 			return $this->urlGenerator->linkToRouteAbsolute('bbb.join.index', ['token' => $room->getUid()]);

@@ -21,34 +21,34 @@ install-composer-deps-dev: composer.phar
 	php composer.phar install -o
 
 js-init:
-	yarn install
+	npm install
 
-yarn-update:
-	yarn update
+npm-update:
+	npm update
 
 # Building
 build-js: js-init
-	yarn run dev
+	npm run dev
 
 build-js-production: js-init
-	yarn run build
+	npm run build
 
 watch-js: js-init
-	yarn run watch
+	npm run watch
 
 # Linting
 lint: js-init
-	yarn run lint
+	npm run lint
 
 lint-fix: js-init
-	yarn run fix
+	npm run fix
 
 # Style linting
 stylelint: js-init
-	yarn run lint:style
+	npm run lint:style
 
 stylelint-fix: js-init
-	yarn run lint:fix:style
+	npm run lint:fix:style
 
 phplint:
 	./vendor/bin/php-cs-fixer fix --dry-run

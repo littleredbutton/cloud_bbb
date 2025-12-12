@@ -4,8 +4,8 @@ namespace OCA\BigBlueButton;
 
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Db\Room;
+use OCP\IAppConfig;
 use OCP\IAvatarManager;
-use OCP\IConfig;
 use OCP\IURLGenerator;
 use OCP\Security\ISecureRandom;
 
@@ -13,27 +13,11 @@ class AvatarRepository {
 	public const CONF_KEY_PATH = 'avatar.path';
 	public const CONF_KEY_URL = 'avatar.url';
 
-	/** @var IAvatarManager */
-	private $avatarManager;
-
-	/** @var ISecureRandom */
-	private $random;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
-
-	/** @var IConfig */
-	private $config;
-
 	public function __construct(
-		IAvatarManager $avatarManager,
-		IURLGenerator $urlGenerator,
-		ISecureRandom $random,
-		IConfig $config) {
-		$this->avatarManager = $avatarManager;
-		$this->urlGenerator = $urlGenerator;
-		$this->random = $random;
-		$this->config = $config;
+		private IAvatarManager $avatarManager,
+		private IURLGenerator $urlGenerator,
+		private ISecureRandom $random,
+		private IAppConfig $config) {
 	}
 
 	public function getAvatarUrl(Room $room, string $userId): string {
@@ -137,7 +121,7 @@ class AvatarRepository {
 	}
 
 	private function getRootPath(): string {
-		$path = $this->config->getAppValue(Application::ID, self::CONF_KEY_PATH);
+		$path = $this->config->getValueString(Application::ID, self::CONF_KEY_PATH);
 
 		if (empty($path)) {
 			return '';
@@ -147,7 +131,7 @@ class AvatarRepository {
 	}
 
 	private function getBaseUrl(): string {
-		$url = $this->config->getAppValue(Application::ID, self::CONF_KEY_URL);
+		$url = $this->config->getValueString(Application::ID, self::CONF_KEY_URL);
 
 		if (empty($url)) {
 			return '';

@@ -11,7 +11,7 @@ type Props = {
 	setShares: (shares: RoomShare[]) => void;
 }
 
-const ShareWith: React.FC<Props> = ({ room, permission, shares: allShares, setShares }) => {
+const ShareWith = ({ room, permission, shares: allShares, setShares }: Props): JSX.Element => {
 	const isOwner = room.userId === OC.currentUser;
 
 	const shares = (allShares && permission === Permission.Moderator) ?

@@ -24,7 +24,7 @@
     </extraFiles>
     <issueHandlers>
         <UndefinedClass>
-            <errorLevel type="suppress">
+            <errorLevel type="info">
                 <referencedClass name="OC" />
             </errorLevel>
         </UndefinedClass>
@@ -36,5 +36,6 @@
                 <referencedClass name="Doctrine\DBAL\Schema\Table" />
             </errorLevel>
         </UndefinedDocblockClass>
+        <MissingOverrideAttribute errorLevel="suppress" />
     </issueHandlers>
 </psalm>

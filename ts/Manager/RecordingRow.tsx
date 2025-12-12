@@ -10,8 +10,7 @@ type Props = {
 	publishRecording: (recording: Recording, publish: boolean) => void;
 }
 
-const RecordingRow: React.FC<Props> = ({recording, isAdmin, deleteRecording, storeRecording, publishRecording}) => {
-
+const RecordingRow = ({recording, isAdmin, deleteRecording, storeRecording, publishRecording}: Props): JSX.Element => {
 
 	function checkPublished(recording: Recording, onChange: (value: boolean) => void) {
 		return (
@@ -25,7 +24,6 @@ const RecordingRow: React.FC<Props> = ({recording, isAdmin, deleteRecording, sto
 			</div>
 		);
 	}
-
 
 	return (
 		<tr key={recording.id}>

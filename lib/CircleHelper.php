@@ -50,7 +50,7 @@ class CircleHelper {
 		if ($this->api === null) {
 			if ($this->appManager->isEnabledForUser('circles') && class_exists('\OCA\Circles\Api\v1\Circles')) {
 				$container = $this->app->getContainer();
-				$this->api = $container->query(\OCA\Circles\Api\v1\Circles::class);
+				$this->api = $container->get('OCA\Circles\Api\v1\Circles');
 			} else {
 				$this->api = false;
 			}

@@ -1,9 +1,30 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+process.env.npm_package_name = 'bbb';
+
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const webpackConfig = require('@nextcloud/webpack-vue-config')
+const webpackRules = require('@nextcloud/webpack-vue-config/rules')
 
-module.exports = {
-	entry: {
+webpackRules.RULE_TSX = {
+	test: /\.tsx?$/,
+	use: [
+		{
+			loader: 'babel-loader',
+			options: {
+				babelrc: false,
+			},
+		},
+		'ts-loader',
+	],
+};
+webpackRules.RULE_RAW = {
+	test: /\.svg$/,
+	resourceQuery: /raw/,
+	type: 'asset/source'
+};
+
+webpackConfig.entry = {
 		admin: [
 			path.join(__dirname, 'ts', 'admin.ts'),
 		],
@@ -22,55 +43,12 @@ module.exports = {
 		waiting: [
 			path.join(__dirname, 'ts', 'waiting.ts'),
 		],
-	},
-	output: {
-		path: path.resolve(__dirname, './js'),
-		publicPath: '/js/',
-		filename: '[name].js',
-		chunkFilename: 'chunks/[name]-[hash].js',
-	},
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: {
-							babelrc: false,
-							plugins: ['react-hot-loader/babel'],
-						},
-					},
-					'ts-loader',
-				],
-			},
-			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
-			},
-			{
-				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
-			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-			},
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				type: 'asset',
-				generator: {
-					filename: 'static/[name][ext]?[hash]',
-				},
-			},
-		],
-	},
-	plugins: [
-		new ESLintPlugin(),
-	],
-	resolve: {
-		extensions: ['*', '.tsx', '.ts', '.js', '.scss'],
-		symlinks: false,
-	},
-};
+	};
+
+webpackConfig.module.rules = Object.values(webpackRules);
+
+webpackConfig.plugins.push(new ESLintPlugin());
+
+webpackConfig.resolve.extensions = [...webpackConfig.resolve.extensions, '.jsx', '.ts', '.tsx'];
+
+module.exports = webpackConfig
