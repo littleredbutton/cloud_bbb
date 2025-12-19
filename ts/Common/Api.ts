@@ -212,7 +212,7 @@ class Api {
 
 	public async storeRecording(recording: Recording, path: string) {
 		const startDate = new Date(recording.startTime);
-		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString())}.url`;
+		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString().replace(/:/g, '-').substr(0,19))}.url`;
 		const url = OC.linkToRemote(`dav/files/${OC.currentUser}${path}/${filename}`);
 
 		await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
