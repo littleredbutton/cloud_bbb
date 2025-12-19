@@ -1,13 +1,17 @@
 import axios from '@nextcloud/axios';
+
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
 import { showSuccess, showWarning, showError } from '@nextcloud/dialogs';
+// import * as Files from '@nextcloud/files';
+import { FileAction, registerFileAction } from '@nextcloud/files';
 import { api } from './Common/Api';
-import './filelist.scss';
+import Vue from 'vue';
+import SendFileDialog from './views/SendFileDialog.vue';
+import iconBBBInline from '../img/app-dark.svg?raw';
 
-type OC_Dialogs_Message = (content: string, title: string, dialogType: 'notice' | 'alert' | 'warn' | 'none', buttons?: number, callback?: () => void, modal?: boolean, allowHtml?: boolean) => Promise<void>;
-type ExtendedDialogs = typeof OC.dialogs & { message: OC_Dialogs_Message };
+type NCNode = any;
 
-const mimeTypes = [
+const mimeTypes: readonly string[] = [
 	'application/pdf',
 	'application/vnd.oasis.opendocument.presentation',
 	'application/vnd.oasis.opendocument.text',
@@ -23,9 +27,7 @@ const mimeTypes = [
 	'image/png',
 	'text/plain',
 	'text/rtf',
-] as const;
-
-type MimeTypes = typeof mimeTypes[number];
+];
 
 async function createDirectShare(fileId: number): Promise<string> {
 	const url = generateOcsUrl('apps/dav/api/v1/', undefined, {
@@ -54,7 +56,7 @@ function insertDocumentToRoom(shareUrl: string, filename: string, roomUid: strin
 	return api.insertDocument(roomUid, shareUrl, filename);
 }
 
-async function sendFile(fileId: number, filename: string, roomUid: string) {
+export async function sendFileToBBB(fileId: number, filename: string, roomUid: string) {
 	const shareUrl = await createDirectShare(fileId);
 	const isRunning = await api.isRunning(roomUid);
 
@@ -75,80 +77,58 @@ async function sendFile(fileId: number, filename: string, roomUid: string) {
 	}
 }
 
-async function openDialog(fileId: number, filename: string) {
-	const initContent = '<div id="bbb-file-action"><span className="icon icon-loading-small icon-visible"></span></div>';
-	const title = t('bbb', 'Send file to BBB');
+/**
+ * Create a DOM component to mount the dialog Vue component
+ *
+ * @param fileId number
+ * @param filename string
+ */
+export function showSendFileDialog(fileId: number, filename: string	) {
+	const mount = document.createElement('div');
+	mount.id = 'bbb-widget-container';
+	document.body.appendChild(mount);
 
-	const exDialogs = OC.dialogs as ExtendedDialogs;
-
-	await exDialogs.message(initContent, title, 'none', -1, undefined, true, true);
-
-	const rooms = await api.getRooms();
-
-	const container = $('#bbb-file-action').empty();
-	const table = $('<table>').appendTo(container);
-	table.attr('style', 'margin-top: 1em; width: 100%;');
-
-	for (const room of rooms) {
-		const row = $('<tr>');
-		const button = $('<button>');
-
-		button.text(room.running ? t('bbb', 'Send to') : t('bbb', 'Start with'));
-		button.addClass(room.running ? 'success' : 'primary');
-		button.attr('type', 'button');
-		button.on('click', (ev) => {
-			ev.preventDefault();
-
-			table.find('button').prop('disabled', true);
-			$(ev.target).addClass('icon-loading-small');
-
-			sendFile(fileId, filename, room.uid).then(() => {
-				container.parents('.oc-dialog').find('.oc-dialog-close').trigger('click');
-			});
-		});
-
-		row.append($('<td>').append(button));
-		row.append($('<td>').attr('style', 'width: 100%;').text(room.name));
-		row.appendTo(table);
-	}
-
-	if (rooms.length > 0) {
-		const description = t('bbb', 'Please select the room in which you like to use the file "{filename}".', { filename });
-
-		container.append(description);
-		container.append(table);
-	} else {
-		container.append($('p').text(t('bbb', 'No rooms available!')));
-	}
-}
-
-function registerFileAction(fileActions: any, mime: MimeTypes) {
-	fileActions.registerAction({
-		name: 'bbb',
-		displayName: t('bbb', 'Send to BBB'),
-		mime,
-		permissions: OC.PERMISSION_SHARE,
-		icon: OC.imagePath('bbb', 'app-dark.svg'),
-		actionHandler: (fileName, context) => {
-			console.log('Action handler');
-
-			openDialog(context.fileInfoModel.id, fileName);
-		},
+	const vm = new Vue({
+		el: '#bbb-widget-container',
+		render: h => h(SendFileDialog, {
+			props: {
+				fileId,
+				filename,
+			},
+			on: {
+				// listen to 'close' event emitted by the dialog component, to clean up
+				close: () => {
+					vm.$destroy();
+					mount.remove();
+				},
+			},
+		}),
 	});
 }
 
-const BBBFileListPlugin = {
-	ignoreLists: [
-		'trashbin',
-	],
-
-	attach(fileList) {
-		if (this.ignoreLists.includes(fileList.id) || !OC.currentUser) {
-			return;
-		}
-
-		mimeTypes.forEach(mime => registerFileAction(fileList.fileActions, mime));
+/**
+ * Register the file action "Send to BBB"
+ */
+registerFileAction( new FileAction({
+	id: 'bbb-send-file',
+	displayName: () => {
+		return t('bbb', 'Send to BBB');
 	},
-};
+	enabled: (nodes) => {
+		// only files with the mime type allowed
+		if (!Array.isArray(nodes) || nodes.length === 0) return false;
 
-OC.Plugins.register('OCA.Files.FileList', BBBFileListPlugin);
+		return nodes.every((node): boolean | null => {
+			const mime = node.mime;
+			if (!mime) return false;
+			// enable only for allowed mime types
+			return mimeTypes.includes(mime);
+		});
+	},
+	iconSvgInline: () => iconBBBInline,
+	exec: async (node: NCNode) : Promise<boolean|null> => {
+		showSendFileDialog(node.fileid, node.displayname);
+		return null;
+	},
+	order: 20,
+}));
