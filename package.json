@@ -34,9 +34,9 @@
 		"release:publish": "node scripts/publish-release.js"
 	},
 	"dependencies": {
-		"@commitlint/cli": "^16.2.3",
+		"@commitlint/cli": "^20.2.0",
 		"@commitlint/config-conventional": "^17.8.1",
-		"@commitlint/travis-cli": "^16.2.3",
+		"@commitlint/travis-cli": "^20.2.0",
 		"@nextcloud/axios": "^2.5.1",
 		"@nextcloud/dialogs": "^6.0.1",
 		"@nextcloud/files": "^3.12.0",
@@ -49,7 +49,6 @@
 		"dotenv": "^16.0.0",
 		"execa": "^6.1.0",
 		"html-react-parser": "^5.2.5",
-		"libxmljs": "^1.0.11",
 		"qrcode.react": "^2.0.0",
 		"react-copy-to-clipboard": "^5.0.2",
 		"sass": "^1.89.0",
