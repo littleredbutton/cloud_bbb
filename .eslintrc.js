@@ -1,12 +1,15 @@
 module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
+	parser: 'vue-eslint-parser',
 	parserOptions: {
+        parser: '@typescript-eslint/parser',
 		ecmaFeatures: {
 			jsx: true, // Allows for the parsing of JSX
 		},
+        extraFileExtensions: ['.vue'],
 	},
 	plugins: [
+		'vue',
 		'@typescript-eslint',
 	],
 	settings: {
@@ -15,6 +18,7 @@ module.exports = {
 		},
 	},
 	extends: [
+        'plugin:vue/recommended',
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -31,5 +35,18 @@ module.exports = {
 		indent: ['warn', 'tab'],
 		semi: ['error', 'always'],
 		'@typescript-eslint/ban-types': 'off',
+		'vue/script-setup-uses-vars': 'error',
+		'vue/html-indent': ['warn', 'tab', {
+			attribute: 1,
+			baseIndent: 1,
+			closeBracket: 0,
+			alignAttributesVertically: true,
+			ignores: []
+		}],
+		'vue/first-attribute-linebreak': 'off',
+		'vue/max-attributes-per-line': ['warn', {
+			singleline: 5,
+			multiline: 1
+		}]
 	},
 }
