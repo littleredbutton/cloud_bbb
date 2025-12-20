@@ -21,6 +21,13 @@
     "BigBlueButton Integration" : "Ενσωμάτωση του BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Ενσωμάτωση του BigBlueButton για το Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Αυτή η εφαρμογή επιτρέπει τη δημιουργία συναντήσεων με εξωτερική εγκατάσταση του [BigBlueButton](https://bigbluebutton.org).\n\n* **Ρύθμιση δωματίου** Δημιουργήστε πολλαπλές διαμορφώσεις δωματίων με όνομα, μήνυμα υποδοχής …\n* **Κοινή χρήση συνδέσμου επισκεπτών** Μοιραστείτε το σύνδεσμο του δωματίου με όλους τους επισκέπτες σας\n* **Κοινή χρήση συνδέσμου συντονιστή** Προσκαλέστε συντονιστές στο δωμάτιο\n* **Κοινή χρήση δωματίων** Μοιραστείτε δωμάτια με μέλη, ομάδες ή κύκλους\n* **Προσαρμοσμένη παρουσίαση** Ξεκινήστε ένα δωμάτιο με επιλεγμένη παρουσίαση από τον περιηγητή αρχείων σας\n* **Διαχείριση εγγραφών** Προβολή, κοινή χρήση και διαγραφή εγγραφών για τα δωμάτιά σας\n* **Περιορισμοί** Περιορίστε τη δημιουργία δωματίων σε συγκεκριμένες ομάδες\n* **Δραστηριότητες** Λάβετε μια επισκόπηση των δραστηριοτήτων των δωματίων σας\n\nΟδηγός γρήγορης εκκίνησης και περαιτέρω πληροφορίες στο [readme](https://github.com/littleredbutton/cloud_bbb).\nΣας αρέσει αυτή η εφαρμογή; Δώστε κάτι πίσω στην κοινότητα ανοιχτού κώδικα και δείτε τους\n[τρόπους συνεισφοράς](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nΟι συνεισφέροντες είναι ευπρόσδεκτοι! Εάν έχετε χρόνο, θα ήταν υπέροχο αν μπορούσατε να βοηθήσετε στη βελτίωση αυτής της εφαρμογής.\n\n*Αυτή η εφαρμογή ενσωματώνει το BigBlueButton και δεν εγκρίνεται ή πιστοποιείται από την BigBlueButton Inc. Το BigBlueButton και το Λογότυπο BigBlueButton είναι εμπορικά σήματα της BigBlueButton Inc.*",
+    "Send to BBB" : "Αποστολή στο BBB",
+    "Loading…" : "Γίνεται φόρτωση…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Παρακαλώ επιλέξτε το δωμάτιο στο οποίο θέλετε να χρησιμοποιήσετε το αρχείο \"{filename}\".",
+    "Send to" : "Αποστολή σε",
+    "Start with" : "Έναρξη με",
+    "No rooms available!" : "Δεν υπάρχουν διαθέσιμα δωμάτια!",
+    "Close" : "Κλείσιμο",
     "Room not found" : "Το δωμάτιο δεν βρέθηκε",
     "The room could not be found. Maybe it was deleted?" : "Το δωμάτιο δεν βρέθηκε. Μήπως έχει διαγραφεί;",
     "Back to %s" : "Πίσω στο %s",
@@ -134,12 +141,6 @@
     "The file \"{filename}\" was uploaded to your room." : "Το αρχείο \"{filename}\" μεταφορτώθηκε στο δωμάτιό σας.",
     "The file \"{filename}\" could not be uploaded to your room." : "Το αρχείο \"{filename}\" δεν μπορούσε να μεταφορτωθεί στο δωμάτιό σας.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "Το αρχείο \"{filename}\" δεν μπορούσε να μεταφορτωθεί στο δωμάτιό σας. Ίσως ο διακομιστής BigBlueButton σας δεν υποστηρίζει αυτήν την ενέργεια.",
-    "Send file to BBB" : "Αποστολή αρχείου στο BBB",
-    "Send to" : "Αποστολή σε",
-    "Start with" : "Έναρξη με",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Παρακαλώ επιλέξτε το δωμάτιο στο οποίο θέλετε να χρησιμοποιήσετε το αρχείο \"{filename}\".",
-    "No rooms available!" : "Δεν υπάρχουν διαθέσιμα δωμάτια!",
-    "Send to BBB" : "Αποστολή στο BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Αυτό το δωμάτιο δεν είναι ακόμη ανοιχτό. Θα το δοκιμάσουμε ξανά σε %n δευτερόλεπτο. Παρακαλούμε περιμένετε.","Αυτό το δωμάτιο δεν είναι ακόμη ανοιχτό. Θα το δοκιμάσουμε ξανά σε %n δευτερόλεπτα. Παρακαλούμε περιμένετε."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

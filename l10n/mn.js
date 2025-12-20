@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Нийтийн",
+    "Loading…" : "уншиж байна",
     "Save" : "Хадгалах",
     "Display name" : "Харагдах нэр",
     "Password" : "Нууц үг",

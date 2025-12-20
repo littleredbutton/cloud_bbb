@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Close" : "بند ",
     "Save" : "حفظ",
     "Password" : "پاسورڈ",
     "Group" : "Group",

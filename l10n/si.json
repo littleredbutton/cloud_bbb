@@ -1,5 +1,7 @@
 { "translations": {
     "Public" : "පොදු",
+    "Loading…" : "පූරණය වෙමින්…",
+    "Close" : "වසන්න",
     "Save" : "සුරකින්න",
     "Restrictions" : "සීමා",
     "Please enter your name!" : "ඔබේ නම ඇතුලත් කරන්න!",

@@ -7,6 +7,8 @@ OC.L10N.register(
     "Public" : "Viešas",
     "Internal" : "Vidinis",
     "BigBlueButton Integration" : "BigBlueButton integracija",
+    "Loading…" : "Įkeliama…",
+    "Close" : "Užverti",
     "Room not found" : "Kambarys nerastas",
     "The room could not be found. Maybe it was deleted?" : "Nepavyko rasti kambario. Galbūt, jis buvo ištrintas?",
     "Back to %s" : "Atgal į %s",

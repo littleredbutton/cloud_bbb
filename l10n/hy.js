@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Close" : "Փակել",
     "Save" : "Պահպանել",
     "Password" : "Գաղտնաբառ",
     "Hello %s" : "Բարև %s",

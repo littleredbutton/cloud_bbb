@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Public",
+    "Loading…" : "Cargante...",
+    "Close" : "Clauder",
     "Save" : "Salveguardar",
     "Display name" : "Monstrar nomine",
     "Password" : "Contrasigno",

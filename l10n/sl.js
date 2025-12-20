@@ -21,6 +21,10 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "Naslov URL API oziroma koda povezave ni nastavljena. Stopite v stik s skrbnikom sistema.",
     "BigBlueButton Integration" : "Podpora BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Podpora Nextcloud za BigBlueButton",
+    "Loading…" : "Poteka nalaganje …",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Izberite ločeno skupino, v kateri želite uporabiti datoteko »{filename}«.",
+    "Send to" : "Pošlji",
+    "Close" : "Zapri",
     "Room not found" : "Sobe ni mogoče najti",
     "The room could not be found. Maybe it was deleted?" : "Sobe ni mogoče najti. Ali je bila morda izbrisana?",
     "Back to %s" : "Nazaj na %s",
@@ -119,8 +123,6 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "Naslov URL se mora začeti s HTTPS",
     "URL has to contain the {token} placeholder" : "Naslov URL mora vključevati vsebnik {token}",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "Naslov URL se mora začeti z https:// in mora vključevati žeton {token}. Uporabiti je mogoče tudi vsebnik {user}.",
-    "Send to" : "Pošlji",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Izberite ločeno skupino, v kateri želite uporabiti datoteko »{filename}«.",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundo.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekundi.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekunde.","Ta soba še ni odprta. Ponovno povezovanje bo izvedeno čez %n sekund."]
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");

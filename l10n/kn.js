@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
+    "Close" : "ಮುಚ್ಚು",
     "Save" : "﻿ಉಳಿಸಿ",
     "Password" : "ಗುಪ್ತ ಪದ",
     "Group" : "﻿ಗುಂಪು",

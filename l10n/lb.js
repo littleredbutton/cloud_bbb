@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Et gëtt gelueden",
+    "Close" : "Zoumaachen",
     "Save" : "Späicheren",
     "Password" : "Passwuert",
     "Group" : "Grupp",

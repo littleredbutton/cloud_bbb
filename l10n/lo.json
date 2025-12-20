@@ -21,6 +21,13 @@
     "BigBlueButton Integration" : "ການເຊື່ອມໂຍງ BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "ການເຊື່ອມໂຍງ BigBlueButton ສຳລັບ Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "ແອັບນີ້ອະນຸຍາດໃຫ້ສ້າງການປະຊຸມດ້ວຍການຕິດຕັ້ງ [BigBlueButton](https://bigbluebutton.org) ຈາກພາຍນອກ.\n\n* **ການຕັ້ງຄ່າຫ້ອງ** ສ້າງການຕັ້ງຄ່າຫ້ອງຫຼາຍໆຫ້ອງດ້ວຍຊື່, ຂໍ້ຄວາມຕ້ອນຮັບ …\n* **ແບ່ງປັນລິ້ງແຂກ** ແບ່ງປັນລິ້ງຫ້ອງກັບແຂກທຸກຄົນຂອງທ່ານ\n* **ແບ່ງປັນລິ້ງຜູ້ຄວບຄຸມ** ເຊີນຜູ້ຄວບຄຸມເຂົ້າຮ່ວມຫ້ອງ\n* **ແບ່ງປັນຫ້ອງ** ແບ່ງປັນຫ້ອງກັບສະມາຊິກ, ກຸ່ມ ຫຼື ວົງການ\n* **ການນຳສະເໜີແບບກຳນົດເອງ** ເລີ່ມຫ້ອງດ້ວຍການນຳສະເໜີທີ່ເລືອກຈາກຕົວທ່ອງໄຟລ໌ຂອງທ່ານ\n* **ຈັດການການບັນທຶກ** ເບິ່ງ, ແບ່ງປັນ ແລະ ລຶບການບັນທຶກສຳລັບຫ້ອງຂອງທ່ານ\n* **ຂໍ້ຈຳກັດ** ຈຳກັດການສ້າງຫ້ອງໃຫ້ກັບກຸ່ມທີ່ແນ່ນອນ\n* **ກິດຈະກຳ** ເບິ່ງພາບລວມຂອງກິດຈະກຳໃນຫ້ອງຂອງທ່ານ\n\nຄູ່ມືເລີ່ມຕົ້ນດ່ວນ ແລະ ຂໍ້ມູນເພີ່ມເຕີມໃນ [readme](https://github.com/littleredbutton/cloud_bbb) ຂອງພວກເຮົາ.\nທ່ານມັກແອັບພລິເຄຊັນນີ້ບໍ່? ປະກອບສ່ວນຄືນໃຫ້ກັບຊຸມຊົນໂອເພນຊອສ ແລະ ກວດສອບ\n[ວິທີການປະກອບສ່ວນ](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md) ຂອງພວກເຮົາ.\n\nຍິນດີຕ້ອນຮັບຜູ້ປະກອບສ່ວນ! ຖ້າທ່ານມີເວລາ, ມັນຈະດີຫຼາຍຖ້າທ່ານສາມາດຊ່ວຍປັບປຸງແອັບພລິເຄຊັນນີ້.\n\n*ແອັບນີ້ເຊື່ອມໂຍງກັບ BigBlueButton ແລະ ບໍ່ໄດ້ຮັບການຮັບຮອງ ຫຼື ຢັ້ງຢືນຈາກ BigBlueButton Inc. BigBlueButton ແລະ ໂລໂກ້ BigBlueButton ແມ່ນເຄື່ອງໝາຍການຄ້າຂອງ BigBlueButton Inc.*",
+    "Send to BBB" : "ສົ່ງໄປທີ່ BBB",
+    "Loading…" : "ກຳລັງໂຫຼດ…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "ກະລຸນາເລືອກຫ້ອງທີ່ທ່ານຕ້ອງການໃຊ້ໄຟລ໌ \"{filename}\".",
+    "Send to" : "ສົ່ງໄປທີ່",
+    "Start with" : "ເລີ່ມຕົ້ນດ້ວຍ",
+    "No rooms available!" : "ບໍ່ມີຫ້ອງຫວ່າງ!",
+    "Close" : "ປິດ",
     "Room not found" : "ບໍ່ພົບຫ້ອງ",
     "The room could not be found. Maybe it was deleted?" : "ບໍ່ສາມາດຊອກຫາຫ້ອງໄດ້. ບາງທີມັນອາດຈະຖືກລຶບໄປແລ້ວ?",
     "Back to %s" : "ກັບໄປທີ່ %s",
@@ -134,12 +141,6 @@
     "The file \"{filename}\" was uploaded to your room." : "ໄຟລ໌ \"{filename}\" ໄດ້ຖືກອັບໂຫຼດໄປຍັງຫ້ອງຂອງທ່ານແລ້ວ.",
     "The file \"{filename}\" could not be uploaded to your room." : "ບໍ່ສາມາດອັບໂຫຼດໄຟລ໌ \"{filename}\" ໄປຍັງຫ້ອງຂອງທ່ານໄດ້.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "ບໍ່ສາມາດອັບໂຫຼດໄຟລ໌ \"{filename}\" ໄປຍັງຫ້ອງຂອງທ່ານໄດ້. ບາງທີເຊີບເວີ BigBlueButton ຂອງທ່ານອາດບໍ່ຮອງຮັບການກະທຳນີ້.",
-    "Send file to BBB" : "ສົ່ງໄຟລ໌ໄປທີ່ BBB",
-    "Send to" : "ສົ່ງໄປທີ່",
-    "Start with" : "ເລີ່ມຕົ້ນດ້ວຍ",
-    "Please select the room in which you like to use the file \"{filename}\"." : "ກະລຸນາເລືອກຫ້ອງທີ່ທ່ານຕ້ອງການໃຊ້ໄຟລ໌ \"{filename}\".",
-    "No rooms available!" : "ບໍ່ມີຫ້ອງຫວ່າງ!",
-    "Send to BBB" : "ສົ່ງໄປທີ່ BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["ຫ້ອງນີ້ຍັງບໍ່ເປີດ. ພວກເຮົາຈະລອງໃໝ່ອີກຄັ້ງໃນ %n ວິນາທີ. ກະລຸນາລໍຖ້າ."]
 },"pluralForm" :"nplurals=1; plural=0;"
 }

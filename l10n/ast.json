@@ -9,6 +9,7 @@
     "Recording for room \"%s\" is ready." : "La grabación de la sala «%s» ta preparada.",
     "Public" : "Pública",
     "API URL or secret not configured. Please contact your administrator." : "Nun se configuró nin la URL nin el secretu de l'API. Ponte en contautu cola alministración.",
+    "No rooms available!" : "¡Nun hai nenguna sala disponible!",
     "Room not found" : "Nun s'atopó la sala",
     "The room could not be found. Maybe it was deleted?" : "Nun se pudo atopar la sala. Quiciabes la desaniciaren",
     "Back to %s" : "Volver a «%s»",
@@ -66,8 +67,6 @@
     "API secret is invalid" : "El secretu de l'API ye inválidu",
     "URL has to start with HTTPS" : "La URL tien de comenzar per HTTPS",
     "The file \"{filename}\" was uploaded to your room." : "Xubióse'l ficheru «{filename}» a la sala.",
-    "The file \"{filename}\" could not be uploaded to your room." : "Nun se pudo xubir el ficheru «{filename}» a la sala.",
-    "Send file to BBB" : "Unviar el ficheru a BBB",
-    "No rooms available!" : "¡Nun hai nenguna sala disponible!"
+    "The file \"{filename}\" could not be uploaded to your room." : "Nun se pudo xubir el ficheru «{filename}» a la sala."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

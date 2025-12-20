@@ -4,6 +4,8 @@ OC.L10N.register(
     "Public" : "ציבורי",
     "BigBlueButton Integration" : "שילוב עם BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "שילוב של BigBlueButton עם Nextcloud",
+    "Loading…" : "בטעינה…",
+    "Close" : "סגירה",
     "Back to %s" : "חזרה אל %s",
     "API secret" : "סוד API",
     "Save" : "שמור",

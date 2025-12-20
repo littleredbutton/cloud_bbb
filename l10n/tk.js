@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Ýüklenýär…",
+    "Close" : "Ýap",
     "Save" : "Saklamak",
     "Community" : "Jemgyýeti",
     "Password" : "Açarsöz",

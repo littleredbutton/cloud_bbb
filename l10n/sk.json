@@ -21,6 +21,13 @@
     "BigBlueButton Integration" : "Integrácia BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integrácia BigBlueButton pre Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Táto aplikácia umožňuje vytvárať stretnutia s externou inštaláciou [BigBlueButton] (https://bigbluebutton.org).\n\n* **Nastavenie miestnosti** Vytvorte viacero konfigurácií izieb s názvom, uvítacou správou…\n* **Zdieľať odkaz hosťa** Zdieľajte odkaz na izbu so všetkými svojimi hosťami\n* **Zdieľať odkaz moderátora** Pozvite moderátorov do miestnosti\n* **Zdieľať miestnosti** Zdieľať miestnosti s členmi, skupinami alebo kruhmi\n* **Vlastná prezentácia** Spustite miestnosť s vybranou prezentáciou z prehliadača súborov\n* **Správa nahrávok** Zobrazte, zdieľajte a odstráňte nahrávky pre svoje izby\n* **Obmedzenia** Obmedzte vytváranie miestností na určité skupiny\n* **Aktivity** Získajte prehľad o aktivitách v miestnosti\n\nSprievodca rýchlym spustením a ďalšie informácie v našom [readme](https://github.com/littleredbutton/cloud_bbb).\nPáči sa vám táto aplikácia? Vráťte niečo komunite open source a pozrite si naše\n[spôsoby prispievania](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nPrispievatelia sú vítaní! Ak máte čas, bolo by úžasné, keby ste pomohli vylepšiť túto aplikáciu.\n\n*Táto aplikácia integruje BigBlueButton a nie je schválená ani certifikovaná spoločnosťou BigBlueButton Inc. BigBlueButton a logo BigBlueButton sú ochranné známky spoločnosti BigBlueButton Inc.*",
+    "Send to BBB" : "Odoslať do BBB",
+    "Loading…" : "Nahrávam...",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Vyberte miestnosť, v ktorej chcete použiť súbor \"{filename}\".",
+    "Send to" : "Odoslať do",
+    "Start with" : "Začat s",
+    "No rooms available!" : "Žiadne miestnosti nie sú voľné!",
+    "Close" : "Zatvoriť",
     "Room not found" : "Miestnosť nenájdená",
     "The room could not be found. Maybe it was deleted?" : "Miestnosť sa nepodarilo nájsť. Možno bola odstránená?",
     "Back to %s" : "Späť na %s",
@@ -131,12 +138,6 @@
     "The file \"{filename}\" was uploaded to your room." : "Súbor „{filename}“ bol nahraný do vašej miestnosti.",
     "The file \"{filename}\" could not be uploaded to your room." : "Súbor „{filename}“ nemohol byť nahraný do vašej miestnosti.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "Súbor „{filename}“ nemohol byť nahraný do vašej miestnosti. Možno váš BigBlueButton server nepodporuje túto možnosť.",
-    "Send file to BBB" : "Pridať súbor do BBB",
-    "Send to" : "Odoslať do",
-    "Start with" : "Začat s",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Vyberte miestnosť, v ktorej chcete použiť súbor \"{filename}\".",
-    "No rooms available!" : "Žiadne miestnosti nie sú voľné!",
-    "Send to BBB" : "Odoslať do BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekundu. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte.","Táto miestnosť nie je ešte otvorená. Skúsime to znovu o %n sekúnd. Prosím čakajte."]
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"
 }

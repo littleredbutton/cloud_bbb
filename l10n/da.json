@@ -21,6 +21,9 @@
     "BigBlueButton Integration" : "BigBlueButton integration",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integration til Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Denne app giver mulighed for at oprette møder med en ekstern installation af [BigBlueButton](https://bigbluebutton.org).\n\n* **Rumopsætning** Opret multiple rumkonfigurationer med navn. velkomstbesked …\n* **Del gæstelink** Del rumlinket med alle dine gæster\n* **Del moderatorlink** Inviter moderatorer til rummet\n* **Del rum** Del rum med medlemmer, grupper eller cirkler\n* **Brugerdefineret præsentation** Start et rum med en udvalgt præsentation fra din filbrowser\n* **Styr optagelser** Vis, del og slet optagelser af dine rum\n* **Begrænsninger** Begræns rumoprettelse til visse grupper\n* **Aktiviteter** Få et overblik over dine rumaktiviteter\n\nHurtigt start guide og yderligere information i vores [readme](https://github.com/littleredbutton/cloud_bbb).\nKan du li' denne applikation? Giv noget tilbage til opensource fællesskabet og tjek vores\n[måder at bidrage på](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nBidragsydere er velkomne! Hvis du har tid, så ville det være skønt, hvis du kan hjælpe med at forbedre denne applikation.\n\n*Denne app integrerer BigBlueButton og er ikke godkendt eller certificeret af BigBlueButton Inc. BigBlueButton og BigBlueButton logoet er handelsmærker for BigBlueButton Inc.*",
+    "Loading…" : "Indlæser…",
+    "Send to" : "Send til",
+    "Close" : "Luk",
     "Room not found" : "Rum ikke fundet",
     "The room could not be found. Maybe it was deleted?" : "Rummet kunne ikke findes. Måske er det blevet slettet?",
     "Back to %s" : "Tilbage til %s",
@@ -59,7 +62,6 @@
     "All users" : "Alle brugere",
     "All" : "Alle",
     "Settings saved" : "Indstillinger gemt",
-    "Unexpected error occurred" : "En uventet fejl opstod",
-    "Send to" : "Send til"
+    "Unexpected error occurred" : "En uventet fejl opstod"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

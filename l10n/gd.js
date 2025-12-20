@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "’Ga luchdadh…",
+    "Close" : "Dùin",
     "Save" : "Sàbhail",
     "Community" : "Coimhearsnachd",
     "Password" : "Facal-faire",

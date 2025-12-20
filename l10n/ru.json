@@ -20,6 +20,13 @@
     "API URL or secret not configured. Please contact your administrator." : "API URL или секрет не настроен. Пожалуйста, свяжитесь с вашим администратором.",
     "BigBlueButton Integration" : "Интеграция BigBlueButton (\"большая голубая кнопка\")",
     "BigBlueButton integration for Nextcloud" : "Интеграция BigBlueButton (\"большая голубая кнопка\") для Nextcloud",
+    "Send to BBB" : "Отправить в BBB",
+    "Loading…" : "Загрузка…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Пожалуйста, выберите комнату, в которой вы хотите использовать файл \"{filename}\".",
+    "Send to" : "Отправить в",
+    "Start with" : "Начните с",
+    "No rooms available!" : "Нет свободных комнат!",
+    "Close" : "Закрыть",
     "Room not found" : "Комната не найдена",
     "The room could not be found. Maybe it was deleted?" : "Не удалось найти комнату. Возможно она была удалена?",
     "Back to %s" : "Вернуться к %s",
@@ -130,12 +137,6 @@
     "The file \"{filename}\" was uploaded to your room." : "Файл \"{filename}\" был загружен в вашу комнату.",
     "The file \"{filename}\" could not be uploaded to your room." : "Файл \"{filename}\" не может быть загружен в вашу комнату.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "Файл \"{filename}\" не может быть загружен в вашу комнату. Возможно, ваш сервер BigBlueButton не поддерживает это действие.",
-    "Send file to BBB" : "Отправить файл в BBB",
-    "Send to" : "Отправить в",
-    "Start with" : "Начните с",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Пожалуйста, выберите комнату, в которой вы хотите использовать файл \"{filename}\".",
-    "No rooms available!" : "Нет свободных комнат!",
-    "Send to BBB" : "Отправить в BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Эта комната ещё не открыта. Мы повторим попытку через %n секунду. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунды. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунд. Пожалуйста, подождите.","Эта комната ещё не открыта. Мы повторим попытку через %n секунд. Пожалуйста, подождите."]
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
 }

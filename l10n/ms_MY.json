@@ -1,4 +1,5 @@
 { "translations": {
+    "Close" : "Tutup",
     "Save" : "Simpan",
     "Password" : "Kata laluan",
     "Hello %s" : "Hai %s",

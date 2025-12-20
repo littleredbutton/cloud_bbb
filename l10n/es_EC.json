@@ -20,6 +20,13 @@
     "API URL or secret not configured. Please contact your administrator." : "URL de API o clave no configuradas. Por favor, contacta a tu administrador.",
     "BigBlueButton Integration" : "Integración con BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integración de BigBlueButton para Nextcloud",
+    "Send to BBB" : "Enviar a BBB",
+    "Loading…" : "Cargando",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Selecciona la sala en la que deseas usar el archivo \"{filename}\".",
+    "Send to" : "Enviar a",
+    "Start with" : "Iniciar con",
+    "No rooms available!" : "¡No hay salas disponibles!",
+    "Close" : "Cerrar",
     "Room not found" : "No se encontró la sala",
     "The room could not be found. Maybe it was deleted?" : "No se pudo encontrar la sala. ¿Quizás fue eliminada?",
     "Back to %s" : "Volver a %s",
@@ -125,12 +132,6 @@
     "The file \"{filename}\" was uploaded to your room." : "El archivo \"{filename}\" se cargó en tu sala.",
     "The file \"{filename}\" could not be uploaded to your room." : "No se pudo cargar el archivo \"{filename}\" en tu sala.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "No se pudo cargar el archivo \"{filename}\" en tu sala. Es posible que tu servidor BigBlueButton no admita esta acción.",
-    "Send file to BBB" : "Enviar archivo a BBB",
-    "Send to" : "Enviar a",
-    "Start with" : "Iniciar con",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Selecciona la sala en la que deseas usar el archivo \"{filename}\".",
-    "No rooms available!" : "¡No hay salas disponibles!",
-    "Send to BBB" : "Enviar a BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Esta sala aún no está abierta. Lo intentaremos de nuevo en %n segundo. Por favor, espera.","Esta sala aún no está abierta. Lo intentaremos de nuevo en %n segundos. Por favor, espera.","Esta sala aún no está abierta. Lo intentaremos de nuevo en %n segundos. Por favor, espera."]
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

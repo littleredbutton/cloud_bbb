@@ -21,6 +21,13 @@
     "BigBlueButton Integration" : "BigBlueButton 整合",
     "BigBlueButton integration for Nextcloud" : "Nextcloud 的 BigBlueButton 整合",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "這個應用程式允許與外部的 [BigBlueButton](https://bigbluebutton.org) 安裝創建會議。\n\n* **房間設置**：創建多個房間配置，包括名稱、歡迎信息等。\n* **分享來賓鏈接**：將房間鏈接分享給所有來賓。\n* **分享主持人鏈接**：邀請主持人進入房間。\n* **分享房間**：與成員、群組或圈子分享房間。\n* **自訂簡報**：從文件瀏覽器中選擇簡報啟動房間。\n* **管理錄音**：查看、分享和刪除房間的錄音。\n* **限制**：限制某些群組創建房間。\n* **活動**：獲取房間活動的概覽。\n\n快速入門指南和更多信息請參見我們的 [readme](https://github.com/littleredbutton/cloud_bbb)。\n\n您喜歡這個應用程式嗎？回饋開源社群，查看我們的 [貢獻方式](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md)。\n\n歡迎貢獻者！如果您有時間，請幫助我們提升這個應用程式。\n\n*此應用程式整合了 BigBlueButton，並未獲得 BigBlueButton Inc. 的認可或認證。BigBlueButton 和 BigBlueButton 標誌是 BigBlueButton Inc. 的商標。*",
+    "Send to BBB" : "傳送至 BBB",
+    "Loading…" : "加載中…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "請選擇您想在其中使用檔案檔案“{filename}”的房間。",
+    "Send to" : "傳送到",
+    "Start with" : "開始從",
+    "No rooms available!" : "無可用聊天室！",
+    "Close" : "關閉",
     "Room not found" : "找不到聊天室",
     "The room could not be found. Maybe it was deleted?" : "找不到聊天室。或許它已經被刪除了？",
     "Back to %s" : "回到 %s",
@@ -134,12 +141,6 @@
     "The file \"{filename}\" was uploaded to your room." : "檔案 “{filename}” 已上傳到您的聊天室。",
     "The file \"{filename}\" could not be uploaded to your room." : "檔案 “{filename}” 無法上傳到您的聊天室。",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "檔案 “{filename}” 無法上傳到您的聊天室。也許您的 BigBlueButton 伺服器不支持此操作。",
-    "Send file to BBB" : "傳送檔案到 BBB",
-    "Send to" : "傳送到",
-    "Start with" : "開始從",
-    "Please select the room in which you like to use the file \"{filename}\"." : "請選擇您想在其中使用檔案檔案“{filename}”的房間。",
-    "No rooms available!" : "無可用聊天室！",
-    "Send to BBB" : "傳送至 BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["此聊天室尚未開放。我們將會在%n秒內重試。請稍候。"]
 },"pluralForm" :"nplurals=1; plural=0;"
 }

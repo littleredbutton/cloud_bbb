@@ -2,6 +2,7 @@
     "You unshared the room %s with {shareWith}." : "Вы скасавалі абагульванне пакоя %s з {shareWith}.",
     "{user} unshared the room %s with you." : "{user} скасаваў(-ла) абагульванне пакоя %s з вамі.",
     "Internal" : "Унутраны",
+    "Send to" : "Адправіць",
     "Back to %s" : "Назад да %s",
     "API URL" : "URL-адрас API",
     "Save" : "Захаваць",
@@ -28,7 +29,6 @@
     "All" : "Усе",
     "Settings saved" : "Налады захаваны",
     "URL has to contain the {token} placeholder" : "URL-адрас павінен утрымліваць запаўняльнік {token}",
-    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL-адрас павінен пачынацца з https:// і ўтрымліваць {token}. Акрамя таго, можна выкарыстоўваць запаўняльнік {user}.",
-    "Send to" : "Адправіць"
+    "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL-адрас павінен пачынацца з https:// і ўтрымліваць {token}. Акрамя таго, можна выкарыстоўваць запаўняльнік {user}."
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
 }

@@ -1,5 +1,7 @@
 { "translations": {
     "Public" : "Public",
+    "Loading…" : "Cargante...",
+    "Close" : "Clauder",
     "Save" : "Salveguardar",
     "Display name" : "Monstrar nomine",
     "Password" : "Contrasigno",

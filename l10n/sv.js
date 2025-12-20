@@ -7,6 +7,10 @@ OC.L10N.register(
     "{user} unshared the room %s with you." : "{user} slutade dela rummet %s med dig.",
     "Public" : "Offentlig",
     "Internal" : "Intern",
+    "Loading…" : "Laddar...",
+    "Send to" : "Skicka till",
+    "No rooms available!" : "Inga rum tillgängliga!",
+    "Close" : "Stäng",
     "Back to %s" : "Tillbaka till %s",
     "Save" : "Spara",
     "Community" : "Community",
@@ -41,8 +45,6 @@ OC.L10N.register(
     "All users" : "Alla användare",
     "All" : "Alla",
     "Settings saved" : "Inställningar sparade",
-    "Unexpected error occurred" : "Ett oväntat fel inträffade",
-    "Send to" : "Skicka till",
-    "No rooms available!" : "Inga rum tillgängliga!"
+    "Unexpected error occurred" : "Ett oväntat fel inträffade"
 },
 "nplurals=2; plural=(n != 1);");

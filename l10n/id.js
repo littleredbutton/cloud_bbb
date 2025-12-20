@@ -5,6 +5,8 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "Rahasia atau URL API belum dikonfigurasikan. Silakan hubungi administrator Anda.",
     "BigBlueButton Integration" : "Integrasi BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integrasi BigBlueButton untuk Nextcloud",
+    "Loading…" : "Memuat…",
+    "Close" : "Tutup",
     "Room not found" : "Ruang tidak ditemukan",
     "Back to %s" : "Kembali ke %s",
     "Get your API URL and secret by executing \"sudo bbb-conf --secret\" on your BigBlueButton server." : "Dapatkan tautan API dan rahasia Anda dengan eksekusi \"sudo bbb-conf --secret pada peladen BigBlueBotton.",

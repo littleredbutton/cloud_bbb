@@ -1,5 +1,7 @@
 { "translations": {
     "Public" : "Ommaviy",
+    "Loading…" : "Yuklanmoqda...",
+    "Close" : "Yopish",
     "Back to %s" : "%sga qaytish",
     "Save" : "Saqlash",
     "Password" : "Password",

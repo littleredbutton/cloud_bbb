@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Public",
+    "Loading…" : "Loading…",
+    "Close" : "Close",
     "Back to %s" : "Back to %s",
     "Save" : "Save",
     "Community" : "Community",

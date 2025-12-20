@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "ღია",
+    "Close" : "დახურვა",
     "Save" : "შენახვა",
     "Display name" : "დისპლეი სახელი",
     "Password" : "პაროლი",

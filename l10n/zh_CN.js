@@ -21,6 +21,9 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "API URL或密钥没有配置。请联系您的管理员。",
     "BigBlueButton Integration" : "BigBlueButton集成",
     "BigBlueButton integration for Nextcloud" : "Nextcloud与BigBlueButton的集成",
+    "Loading…" : "正在加载 ...",
+    "Send to" : "发送到",
+    "Close" : "关闭",
     "Room not found" : "房间未找到",
     "The room could not be found. Maybe it was deleted?" : "房间找不到。也许它被删除了? ",
     "Back to %s" : "返回 %s",
@@ -125,7 +128,6 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "URL 必须以 HTTPS 开头",
     "URL has to contain the {token} placeholder" : "URL 必须包含 {token} 占位符",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "URL 必须以 https:// 开始，并且包含 {token}。此外，还可以使用 {user} 占位符。",
-    "Send to" : "发送到",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["这个房间还没开。我们将在 %n 秒内再试一次。请等待"]
 },
 "nplurals=1; plural=0;");

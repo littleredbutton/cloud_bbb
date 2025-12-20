@@ -18,6 +18,9 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "Rajapinnan URL-osoitetta tai salaisuutta ei ole määritetty. Ota yhteys ylläpitäjään.",
     "BigBlueButton Integration" : "BigBlueButton-integraatio",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton-integraatio Nextcloudiin",
+    "Loading…" : "Ladataan…",
+    "No rooms available!" : "Huoneita ei ole saatavilla!",
+    "Close" : "Sulje",
     "Room not found" : "Huonetta ei löytynyt",
     "The room could not be found. Maybe it was deleted?" : "Huonetta ei löytynyt. Kenties se poistettiin.",
     "Back to %s" : "Takaisin kohtaan %s",
@@ -81,7 +84,6 @@ OC.L10N.register(
     "Unexpected error occurred" : "Tapahtui odottamaton virhe",
     "API URL is invalid" : "Rajapinnan URL on virheellinen",
     "API secret is invalid" : "Rajapinnan salaisuus on virheellinen",
-    "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä",
-    "No rooms available!" : "Huoneita ei ole saatavilla!"
+    "URL has to start with HTTPS" : "URL-osoitteen tulee alkaa HTTPS:llä"
 },
 "nplurals=2; plural=(n != 1);");

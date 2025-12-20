@@ -1,5 +1,6 @@
 { "translations": {
     "Public" : "Público",
+    "Loading…" : "Cargando...",
     "Save" : "Guardar",
     "Display name" : "Nombre a desplegar",
     "Password" : "Contraseña",

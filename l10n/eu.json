@@ -20,6 +20,13 @@
     "API URL or secret not configured. Please contact your administrator." : "API URLa edo URL sekretua konfiguratu gabe. Jarri harremanetan zure administratzailearekin.",
     "BigBlueButton Integration" : "BigBlueButton integrazioa",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integrazioa Nextclouderako",
+    "Send to BBB" : "Bidali BBB-ra",
+    "Loading…" : "Kargatzen…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Mesedez, hautatu gela non \"{filename}\" fitxategia erabili nahi duzun.",
+    "Send to" : "Bidali honi:",
+    "Start with" : "Hasi honekin",
+    "No rooms available!" : "Ez dago gelarik eskuragarri!",
+    "Close" : "Itxi",
     "Room not found" : "Ez da gela aurkitu",
     "The room could not be found. Maybe it was deleted?" : "Ezin izan da gela aurkitu. Agian, ezabatua izan da?",
     "Back to %s" : "Itzuli %s(e)ra",
@@ -127,12 +134,6 @@
     "The file \"{filename}\" was uploaded to your room." : "\"{filename}\" fitxategia zure gelara igo da.",
     "The file \"{filename}\" could not be uploaded to your room." : "Ezin da \"{filename}\" fitxategia zure gelara igo.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "\"{filename}\" fitxategia ezin da zure gelara igo. Baliteke BigBlueButton zerbitzariak ez onartzea ekintza hori.",
-    "Send file to BBB" : "Bidali fitxategia BBBra",
-    "Send to" : "Bidali honi:",
-    "Start with" : "Hasi honekin",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Mesedez, hautatu gela non \"{filename}\" fitxategia erabili nahi duzun.",
-    "No rooms available!" : "Ez dago gelarik eskuragarri!",
-    "Send to BBB" : "Bidali BBB-ra",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Gela hau ez dago irekita oraindik. Berriro saiatuko gara {sec} segundotan. Itxaron mesedez.","Gela hau ez dago irekita oraindik. Berriro saiatuko gara segundotan %n seconds. Please wait."]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

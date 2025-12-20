@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Lastar...",
+    "Close" : "Lat att",
     "Save" : "Lagre",
     "Password" : "Passord",
     "Hello %s" : "Hei %s",

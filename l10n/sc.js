@@ -21,6 +21,9 @@ OC.L10N.register(
     "API URL or secret not configured. Please contact your administrator." : "API URL o segretu non cunfiguradu. Cuntata s'amministratzione tua.",
     "BigBlueButton Integration" : "Integratzione de BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integratzione de BigBlueButton pro Nextcloud",
+    "Loading…" : "Carrighende…",
+    "Send to" : "Imbia a",
+    "Close" : "Serra",
     "Room not found" : "Istantza no agatada",
     "The room could not be found. Maybe it was deleted?" : "No at fatu a agatare s'istantza. Mancari est istada cantzellada?",
     "Back to %s" : "A coa a %s",
@@ -119,7 +122,6 @@ OC.L10N.register(
     "URL has to start with HTTPS" : "S'URL depet cumintzare cun HTTPS",
     "URL has to contain the {token} placeholder" : "S'URL depet cuntènnere su {token} còdighe",
     "URL has to start with https:// and contain {token}. Additionally the {user} placeholder can be used." : "S'URL depet cumintzare cun https:// e cuntènnere {token}. In prus si podet impreare su còdighe {user}.",
-    "Send to" : "Imbia a",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Custa istantza no est ancora aberta. Amus a torrare a proare intre %n segundu. Aspeta.","Custa istantza no est ancora aberta. Amus a torrare a proare intre %n segundos. Aspeta."]
 },
 "nplurals=2; plural=(n != 1);");

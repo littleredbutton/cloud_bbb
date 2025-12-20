@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Publika",
+    "Loading…" : "Ŝargado...",
+    "Close" : "Malfermi",
     "Back to %s" : "Antaŭen al %s",
     "Save" : "Konservi",
     "Display name" : "Vidiga nomo",

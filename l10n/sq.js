@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Publik",
+    "Loading…" : "Duke u ngarkuar…",
+    "Close" : "Mbylleni",
     "Save" : "Ruaj",
     "Community" : "Komuniteti",
     "Display name" : "Shfaq emrin",

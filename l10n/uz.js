@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Ommaviy",
+    "Loading…" : "Yuklanmoqda...",
+    "Close" : "Yopish",
     "Back to %s" : "%sga qaytish",
     "Save" : "Saqlash",
     "Password" : "Password",

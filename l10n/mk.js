@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Јавна",
+    "Loading…" : "Се вчитува…",
+    "Close" : "Затвори",
     "Back to %s" : "Врати се на %s",
     "Save" : "Зачувај",
     "Community" : "Заедница",

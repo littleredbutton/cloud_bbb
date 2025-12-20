@@ -4,6 +4,8 @@ OC.L10N.register(
     "Public" : "Public",
     "BigBlueButton Integration" : "Integracion BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integracion Nextcloud per BigBlueButton",
+    "Loading…" : "Telecargament…",
+    "Close" : "Plegar",
     "Back to %s" : "Tornar a %s",
     "API secret" : "Secret API",
     "Save" : "Salvar",

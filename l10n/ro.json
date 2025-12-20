@@ -1,5 +1,7 @@
 { "translations": {
     "Public" : "Public",
+    "Loading…" : "Se încarcă...",
+    "Close" : "Închide",
     "Back to %s" : "Înapoi la %s",
     "Save" : "Salvează",
     "Community" : "Comunitate",

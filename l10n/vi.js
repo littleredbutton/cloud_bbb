@@ -8,6 +8,8 @@ OC.L10N.register(
     "Recording for room \"%s\" is ready." : "Bản ghi cho phòng \"%s\" đã sẵn sàng.",
     "To invite someone to the meeting, send them this link: %s" : "Để mời ai đó vào cuộc họp, hãy gửi cho họ liên kết này: %s",
     "Public" : "Công khai",
+    "Loading…" : "Đang tải…",
+    "Close" : "Đóng",
     "Room not found" : "Không tìm thấy phòng",
     "Back to %s" : "Quay lại %s",
     "Save" : "Lưu",

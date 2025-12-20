@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Opinbert",
+    "Loading…" : "Hleð inn…",
+    "Close" : "Loka",
     "Back to %s" : "Til baka í %s",
     "Save" : "Vista",
     "Community" : "Samfélag",

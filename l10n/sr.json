@@ -21,6 +21,13 @@
     "BigBlueButton Integration" : "BigBlueButton интеграција",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton интеграција за Nextcloud",
     "This app allows to create meetings with an external installation of [BigBlueButton](https://bigbluebutton.org).\n\n* **Room setup** Create multiple room configurations with name, welcome message …\n* **Share guest link** Share the room link with all your guests\n* **Share moderator link** Invite moderators to the room\n* **Share rooms** Share rooms with members, groups or circles\n* **Custom presentation** Start a room with a selected presentation from your file browser\n* **Manage recordings** View, share and delete recordings for your rooms\n* **Restrictions** Restrict room creation to certain groups\n* **Activities** Get an overview of your room activities\n\nQuick start guide and further information in our [readme](https://github.com/littleredbutton/cloud_bbb).\nDo you like this application? Give something back to the open source community and checkout our\n[ways to contribute](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nContributors are welcome! If you have time it would be awesome if you could help to enhance this application.\n\n*This app integrates BigBlueButton and is not endorsed or certified by BigBlueButton Inc. BigBlueButton and the BigBlueButton Logo are trademarks of BigBlueButton Inc.*" : "Ова апликација вам омогућава да креирате састанке помоћу спољне инсталације [BigBlueButton](https://bigbluebutton.org).\n\n* **Подешавање собе** Креирајте више конфигурација соба са називом, поздравном подуком …\n* **Делите линк за госта** Поделите линк на собу са свим својим гостима\n* **Делите линк модератора** Позовите модераторе у собу\n* **Делите собе** Делите собе са члановима, групама или круговима\n* **Прилагођена презентација** Покрените собу са презентацијом изабраном у вашем истраживачу фајлова\n* **Управљајте снимањима** Прегледајте, делите и бришите снимке ваших соба\n* **Ограничења** Ограничите могућност креирања соба на неке групе\n* **Активности** Примајте преглед активности у вашим собама\n\nВодич за брзи почетак и додатне информације у нашем [readme](https://github.com/littleredbutton/cloud_bbb).\nДа ли вам се допада ова апликација? Вратите нешто заједници отвореног кода и прочитајте наше\n[начине за давање доприноса](https://github.com/littleredbutton/cloud_bbb/blob/master/.github/contributing.md).\n\nДаваоци доприноса су добродошли! Ако имате слободног времена, било би одлично да нам помогнете да унапредимо ову апликацију.\n\n*Ова апликација интегрише BigBlueButton и не подржава је или је не сертификује компанија BigBlueButton Inc. BigBlueButton и BigBlueButton лого су тржишне марке компаније BigBlueButton Inc.*",
+    "Send to BBB" : "Пошаљи BBB серверу",
+    "Loading…" : "Учитавам…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Молимо вас да изаберете собу у којој бисте желели да користите фајл „{filename}”.",
+    "Send to" : "Пошаљи у",
+    "Start with" : "Почиње са",
+    "No rooms available!" : "Нема доступних соба!",
+    "Close" : "Затвори",
     "Room not found" : "Није пронађена соба",
     "The room could not be found. Maybe it was deleted?" : "Соба не може да се пронађе. Да није обрисана?",
     "Back to %s" : "Назад на %s",
@@ -134,12 +141,6 @@
     "The file \"{filename}\" was uploaded to your room." : "Фајл „{filename}” је отпремљен у вашу собу.",
     "The file \"{filename}\" could not be uploaded to your room." : "Фајл „{filename}” није могао да се отпреми у вашу собу.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "Фајл „{filename}” није могао да се отпреми у вашу собу. Можда ваш BigBlueButton сервер не подржава ову акцију.",
-    "Send file to BBB" : "Пошаљи фајл BBB серверу",
-    "Send to" : "Пошаљи у",
-    "Start with" : "Почиње са",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Молимо вас да изаберете собу у којој бисте желели да користите фајл „{filename}”.",
-    "No rooms available!" : "Нема доступних соба!",
-    "Send to BBB" : "Пошаљи BBB серверу",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["Ова соба још увек није отворена. Покушаћемо поново за %n секунду. Молимо вас да сачекате.","Ова соба још увек није отворена. Покушаћемо поново за %n секунде. Молимо вас да сачекате.","Ова соба још увек није отворена. Покушаћемо поново за %n секунди. Молимо вас да сачекате."]
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }

@@ -7,6 +7,8 @@ OC.L10N.register(
     "You shared the room %s with {shareWith}." : "คุณได้แชร์ห้อง %s กับ {shareWith}",
     "{user} shared the room %s with you." : "{user} ได้แชร์ห้อง %s กับคุณ",
     "Public" : "สาธารณะ",
+    "Loading…" : "กำลังโหลด…",
+    "Close" : "ปิด",
     "Room not found" : "ไม่พบห้อง",
     "The room could not be found. Maybe it was deleted?" : "ไม่พบห้อง อาจจะถูกลบไปแล้ว",
     "Back to %s" : "กลับสู่ %s",

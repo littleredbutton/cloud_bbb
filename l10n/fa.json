@@ -20,6 +20,13 @@
     "API URL or secret not configured. Please contact your administrator." : "API URL or secret not configured. Please contact your administrator.",
     "BigBlueButton Integration" : "BigBlueButton Integration",
     "BigBlueButton integration for Nextcloud" : "BigBlueButton integration for Nextcloud",
+    "Send to BBB" : "Send to BBB",
+    "Loading…" : "درحال بارگیری…",
+    "Please select the room in which you like to use the file \"{filename}\"." : "Please select the room in which you like to use the file \"{filename}\".",
+    "Send to" : "Send to",
+    "Start with" : "Start with",
+    "No rooms available!" : "No rooms available!",
+    "Close" : "بستن",
     "Room not found" : "اتاق یافت نشد",
     "The room could not be found. Maybe it was deleted?" : "اتاق پیدا نشد. شاید حذف شده است؟",
     "Back to %s" : "Back to %s",
@@ -126,12 +133,6 @@
     "The file \"{filename}\" was uploaded to your room." : "The file \"{filename}\" was uploaded to your room.",
     "The file \"{filename}\" could not be uploaded to your room." : "The file \"{filename}\" could not be uploaded to your room.",
     "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action." : "The file \"{filename}\" could not be uploaded to your room. Maybe your BigBlueButton server does not support this action.",
-    "Send file to BBB" : "Send file to BBB",
-    "Send to" : "Send to",
-    "Start with" : "Start with",
-    "Please select the room in which you like to use the file \"{filename}\"." : "Please select the room in which you like to use the file \"{filename}\".",
-    "No rooms available!" : "No rooms available!",
-    "Send to BBB" : "Send to BBB",
     "_This room is not open yet. We will try it again in %n second. Please wait._::_This room is not open yet. We will try it again in %n seconds. Please wait._" : ["This room is not open yet. We will try it again in %n second. Please wait.","This room is not open yet. We will try it again in %n seconds. Please wait."]
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

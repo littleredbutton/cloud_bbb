@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Yn llwytho…",
+    "Close" : "Cau",
     "Save" : "Cadw",
     "Display name" : "Enw Dangos",
     "Password" : "Cyfrinair",

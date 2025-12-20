@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Učitavam…",
+    "Close" : "Zatvori",
     "Save" : "Sačuvaj",
     "Community" : "Zajednica",
     "Password" : "Lozinka",
