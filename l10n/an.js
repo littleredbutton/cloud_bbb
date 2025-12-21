@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bbb",
     {
+    "Loading…" : "Cargando...",
+    "Close" : "Zarrar",
     "Password" : "Clau",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",

@@ -1,4 +1,6 @@
 { "translations": {
+    "Loading…" : "Cargando...",
+    "Close" : "Zarrar",
     "Password" : "Clau",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",
