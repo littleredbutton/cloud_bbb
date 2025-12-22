@@ -1,7 +1,7 @@
 {
 	"name": "@littleredbutton/cloud_bbb",
 	"description": "Nextcloud Integration for BigBlueButton",
-	"version": "2.8.0",
+	"version": "2.9.0-rc1",
 	"author": "Klaus Herberth",
 	"bugs": {
 		"url": "https://github.com/littleredbutton/cloud_bbb/issues"
