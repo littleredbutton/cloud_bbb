@@ -23,9 +23,11 @@ style('core', 'guest');
 				required minlength="3" autofocus />
 			<?php if (isset($_['passwordRequired']) && $_['passwordRequired']): ?>
 				<label for="password" class="infield"><?php p($l->t('Password')); ?></label>
-				<input type="text" name="password" id="password" class="bbb-input"
+				<input type="password" name="password" id="password" class="bbb-input"
 					placeholder="<?php p($l->t('Password')); ?>" value=""
 					required minlength="8" />
+				<input type="checkbox" name="password-visibility-toggle" id="password-visibility" class="checkbox" value=""/>
+            	<label for="password-visibility"><?php p($l->t('Show Password')); ?></label>
 				<button class="primary"><?php p($l->t('Join')); ?>
 				<div class="submit-icon icon-confirm-white"></div></button>
 			<?php else: ?>
