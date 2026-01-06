@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.9.0 (2026-01-06)
+
+### Changed
+
+- Support Nextcloud 32 by @smarinier in [#411](https://github.com/littleredbutton/cloud_bbb/pull/411)
+
+### Fix
+
+- Missing the send file feature to BBB menu by @smarinier in [#408](https://github.com/littleredbutton/cloud_bbb/pull/408)
+- Invalid characters in recording file name by @smarinier in [#409](https://github.com/littleredbutton/cloud_bbb/pull/409)
+
+
 ## 2.8.0 (2025-05-19)
 
 ### Changed
