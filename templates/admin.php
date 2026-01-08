@@ -2,7 +2,7 @@
 /** @var $l \OCP\IL10N */
 /** @var $_ array */
 
-\OCP\Util::addScript('bbb', 'bbb', 'admin');
+\OCP\Util::addScript('bbb', 'bbb-admin', 'admin');
 \OCP\Util::addScript('bbb', 'bbb-restrictions');
 ?>
 
