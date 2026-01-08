@@ -11,6 +11,8 @@ use OCA\BigBlueButton\NotFoundException;
 use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
+use OCP\AppFramework\Http\Attribute\PublicPage;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\BackgroundJob\IJobList;
@@ -75,12 +77,10 @@ class JoinController extends Controller {
 	}
 
 	/**
-	 * @PublicPage
-	 *
-	 * @NoCSRFRequired
-	 *
 	 * @return RedirectResponse|TemplateResponse
 	 */
+	#[PublicPage]
+	#[NoCSRFRequired]
 	public function index($displayname, $u = '', $filename = '', $password = '') {
 		$room = $this->getRoom();
 

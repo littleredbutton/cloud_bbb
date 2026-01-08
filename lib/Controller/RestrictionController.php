@@ -6,6 +6,7 @@ use OCA\BigBlueButton\Db\Restriction;
 use OCA\BigBlueButton\Service\RestrictionService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IGroupManager;
 use OCP\IRequest;
@@ -43,8 +44,9 @@ class RestrictionController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function user(): DataResponse {
 		$user = $this->userManager->get($this->userId);
 		$groupIds = $this->groupManager->getUserGroupIds($user);

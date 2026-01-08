@@ -8,6 +8,8 @@ use OCA\BigBlueButton\Event\MeetingEndedEvent;
 use OCA\BigBlueButton\Event\RecordingReadyEvent;
 use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
+use OCP\AppFramework\Http\Attribute\PublicPage;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IRequest;
 
@@ -53,12 +55,10 @@ class HookController extends Controller {
 	}
 
 	/**
-	 * @PublicPage
-	 *
-	 * @NoCSRFRequired
-	 *
 	 * @return void
 	 */
+	#[PublicPage]
+	#[NoCSRFRequired]
 	public function meetingEnded($recordingmarks = false): void {
 		$recordingmarks = \boolval($recordingmarks);
 		$room = $this->getRoom();
@@ -71,12 +71,10 @@ class HookController extends Controller {
 	}
 
 	/**
-	 * @PublicPage
-	 *
-	 * @NoCSRFRequired
-	 *
 	 * @return void
 	 */
+	#[PublicPage]
+	#[NoCSRFRequired]
 	public function recordingReady(): void {
 		$this->eventDispatcher->dispatchTyped(new RecordingReadyEvent($this->getRoom()));
 	}
