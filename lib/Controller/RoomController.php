@@ -8,6 +8,7 @@ use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IGroupManager;
 use OCP\IRequest;
@@ -54,8 +55,9 @@ class RoomController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function index(): DataResponse {
 		$user = $this->userManager->get($this->userId);
 		$groupIds = $this->groupManager->getUserGroupIds($user);
@@ -65,8 +67,9 @@ class RoomController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function create(
 		string $name,
 		string $welcome,
@@ -104,8 +107,9 @@ class RoomController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function update(
 		int $id,
 		string $name,
@@ -148,8 +152,9 @@ class RoomController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function destroy(int $id): DataResponse {
 		$room = $this->service->find($id);
 

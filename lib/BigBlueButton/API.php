@@ -107,7 +107,7 @@ class API {
 	 *
 	 * @return float|int creation time
 	 */
-	public function createMeeting(Room $room, Presentation $presentation = null) {
+	public function createMeeting(Room $room, ?Presentation $presentation = null) {
 		$bbb = $this->getServer();
 		$meetingParams = $this->buildMeetingParams($room, $presentation);
 
@@ -128,7 +128,7 @@ class API {
 		return $response->getCreationTime();
 	}
 
-	private function buildMeetingParams(Room $room, Presentation $presentation = null): CreateMeetingParameters {
+	private function buildMeetingParams(Room $room, ?Presentation $presentation = null): CreateMeetingParameters {
 		$createMeetingParams = new CreateMeetingParameters($room->uid, $room->name);
 		$createMeetingParams->setAttendeePW($room->attendeePassword);
 		$createMeetingParams->setModeratorPW($room->moderatorPassword);

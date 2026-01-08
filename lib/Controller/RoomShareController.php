@@ -9,6 +9,7 @@ use OCA\BigBlueButton\Service\RoomShareNotFound;
 use OCA\BigBlueButton\Service\RoomShareService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 
 use OCP\IGroupManager;
@@ -56,8 +57,9 @@ class RoomShareController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function index(): DataResponse {
 		$roomId = $this->request->getParam('id');
 
@@ -113,8 +115,9 @@ class RoomShareController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function create(
 		int $roomId,
 		int $shareType,
@@ -134,8 +137,9 @@ class RoomShareController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function update(
 		int $id,
 		int $roomId,
@@ -164,8 +168,9 @@ class RoomShareController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function destroy(int $id): DataResponse {
 		return $this->handleNotFound(function () use ($id) {
 			$roomShare = $this->service->find($id);

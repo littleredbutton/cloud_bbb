@@ -7,6 +7,7 @@ use OCA\BigBlueButton\Permission;
 use OCA\BigBlueButton\Service\RoomService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 
 use OCP\IRequest;
@@ -41,8 +42,9 @@ class ServerController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function isRunning(string $roomUid): DataResponse {
 		$room = $this->service->findByUid($roomUid);
 
@@ -60,8 +62,9 @@ class ServerController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function insertDocument(string $roomUid, string $url, string $filename): DataResponse {
 		$room = $this->service->findByUid($roomUid);
 
@@ -79,8 +82,9 @@ class ServerController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function records(string $roomUid): DataResponse {
 		$room = $this->service->findByUid($roomUid);
 
@@ -104,8 +108,9 @@ class ServerController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function deleteRecord(string $recordId): DataResponse {
 		$record = $this->server->getRecording($recordId);
 
@@ -125,8 +130,9 @@ class ServerController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function publishRecord(string $recordId, bool $published): DataResponse {
 		$record = $this->server->getRecording($recordId);
 

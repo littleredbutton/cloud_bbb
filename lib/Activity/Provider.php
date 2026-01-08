@@ -68,7 +68,7 @@ class Provider implements IProvider {
 		$this->languageFactory = $languageFactory;
 	}
 
-	public function parse($language, IEvent $event, IEvent $previousEvent = null) {
+	public function parse($language, IEvent $event, ?IEvent $previousEvent = null) {
 		if ($event->getApp() !== Application::ID) {
 			throw new \InvalidArgumentException();
 		}
