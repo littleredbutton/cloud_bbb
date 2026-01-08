@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.9.1 (2026-01-08)
+
+### Changed
+
+- v2.9.1 @smarinier [#418](https://github.com/littleredbutton/cloud_bbb/pull/418)
+
+### Fixed
+
+- Load bbb-admin javascrpit file @smarinier [#416](https://github.com/littleredbutton/cloud_bbb/pull/416)
+
 ## 2.9.0 (2026-01-06)
 
 ### Changed
