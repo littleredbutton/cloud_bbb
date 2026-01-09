@@ -2,6 +2,8 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Publik",
+    "Loading…" : "O kargañ...",
+    "Close" : "Serriñ",
     "Back to %s" : "Distro da %s",
     "Save" : "Enrollañ",
     "Community" : "Kumuniezh",

@@ -1,5 +1,7 @@
 { "translations": {
     "Public" : "Publik",
+    "Loading…" : "O kargañ...",
+    "Close" : "Serriñ",
     "Back to %s" : "Distro da %s",
     "Save" : "Enrollañ",
     "Community" : "Kumuniezh",

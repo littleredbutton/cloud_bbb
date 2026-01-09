@@ -2,6 +2,7 @@ OC.L10N.register(
     "bbb",
     {
     "Public" : "Javno",
+    "Close" : "Zatvori",
     "Save" : "Spremi",
     "Password" : "Lozinka",
     "Group" : "Grupa",
