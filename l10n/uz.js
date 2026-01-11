@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save" : "Saqlash",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
+    "Group" : "Guruh",
     "Name" : "Name",
     "Max" : "Max",
     "Edit" : "Tahrirlash",
