@@ -113,6 +113,7 @@ OC.L10N.register(
     "Are you sure you want to delete the recording from \"{startDate}\"? This operation cannot be undone." : "\"{startDate}\"의 녹음을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.",
     "Delete?" : "삭제합니까?",
     "Could not delete record" : "기록을 지울 수 없습니다.",
+    "Start" : "시작",
     "You are not allowed to change this option, because this room is shared with you." : "공유된 대화방의 설정을 변경할 수 없습니다",
     "Group name" : "그룹 이름",
     "Max. rooms" : "최대 대화방 수",
