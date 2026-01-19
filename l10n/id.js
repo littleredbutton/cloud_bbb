@@ -24,6 +24,7 @@ OC.L10N.register(
     "Group" : "Grup",
     "Server error" : "Galat peladen",
     "Name" : "Nama",
+    "Access" : "Akses",
     "Max" : "Maksimum",
     "Record" : "Rekam",
     "Recordings" : "Rekaman",
