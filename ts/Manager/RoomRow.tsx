@@ -127,7 +127,7 @@ const RoomRow = (props: Props): JSX.Element => {
 					api.deleteRecording(recording.id).then(success => {
 						if (!success) {
 							OC.dialogs.info(
-								t('bbb', 'Could not delete record'),
+								t('bbb', 'Could not delete recording'),
 								t('bbb', 'Error'),
 								() => undefined,
 							);
@@ -144,7 +144,7 @@ const RoomRow = (props: Props): JSX.Element => {
 						console.warn('Could not delete recording', err);
 
 						OC.dialogs.info(
-							t('bbb', 'Could not delete record'),
+							t('bbb', 'Could not delete recording'),
 							t('bbb', 'Server error'),
 							() => undefined,
 						);
