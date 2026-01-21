@@ -9,6 +9,7 @@ OC.L10N.register(
     "Group" : "Gruppe",
     "Name" : "Namn",
     "Edit" : "Endra",
+    "Sharing" : "Deling",
     "Create" : "Lag",
     "Published" : "Publisert",
     "Delete" : "Ta bort",

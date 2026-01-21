@@ -16,6 +16,8 @@ OC.L10N.register(
     "Name" : "Nume",
     "Access" : "Acces",
     "Edit" : "Editare",
+    "Welcome" : "Bun venit",
+    "Sharing" : "Partajare",
     "Miscellaneous" : "Diverse",
     "Create" : "Creează",
     "Published" : "Publicat",

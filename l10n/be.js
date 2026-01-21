@@ -29,6 +29,7 @@ OC.L10N.register(
     "Delete \"{name}\"?" : "Выдаліць \"{name}\"?",
     "Error" : "Памылка",
     "Start" : "Запусціць",
+    "Loading" : "Загрузка",
     "Group name" : "Назва групы",
     "All" : "Усе",
     "Settings saved" : "Налады захаваны",

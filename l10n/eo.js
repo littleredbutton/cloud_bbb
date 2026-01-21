@@ -20,6 +20,7 @@ OC.L10N.register(
     "Delete" : "Forigi",
     "Error" : "Eraro",
     "Start" : "Komenco",
+    "Loading" : "Ŝargado",
     "Group name" : "Gruponomo",
     "All" : "Ĉiuj",
     "Settings saved" : "Agordoj konservitaj"

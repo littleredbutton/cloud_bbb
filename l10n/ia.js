@@ -10,6 +10,7 @@ OC.L10N.register(
     "Group" : "Gruppo",
     "Name" : "Nomine",
     "Edit" : "Modificar",
+    "Sharing" : "Compartente",
     "Create" : "Crear",
     "Delete" : "Deler",
     "Error" : "Error",

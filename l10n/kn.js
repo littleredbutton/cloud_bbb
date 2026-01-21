@@ -7,6 +7,7 @@ OC.L10N.register(
     "Group" : "﻿ಗುಂಪು",
     "Name" : "﻿ಹೆಸರು",
     "Edit" : "ಸಂಪಾದಿಸು",
+    "Sharing" : "﻿ಹಂಚಿಕೆ",
     "Create" : "ಸೃಷ್ಟಿಸಿ",
     "Delete" : "﻿ಅಳಿಸಿ",
     "Error" : "﻿ತಪ್ಪಾಗಿದೆ",

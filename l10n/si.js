@@ -14,11 +14,14 @@ OC.L10N.register(
     "Have an account? Log in." : "ගිණුමක් තිබේද? පිවිසෙන්න.",
     "Hello %s" : "ආයුබෝවන් %s",
     "Group" : "සමූහය",
+    "Searching" : "සොයමින්",
     "Name" : "නම",
     "Max" : "උපරිම",
     "Edit" : "සංස්කරණය",
+    "Welcome" : "සාදරයෙන් පිළිගනිමු",
     "Create" : "සාදන්න",
     "Error" : "දෝෂය",
+    "Loading" : "පූරණය වෙමින්",
     "All" : "සියල්ල"
 },
 "nplurals=2; plural=(n != 1);");

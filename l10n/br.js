@@ -21,6 +21,7 @@ OC.L10N.register(
     "Delete" : "Dilemel",
     "Error" : "Fazi",
     "Delete?" : "Dilemel?",
+    "Loading" : "Kargañ",
     "All" : "Pep tra",
     "Settings saved" : "Stummoù enrollet"
 },

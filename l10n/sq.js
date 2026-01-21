@@ -13,6 +13,8 @@ OC.L10N.register(
     "Server error" : "Gabim shërbyesi",
     "Name" : "Emri",
     "Edit" : "Përpuno",
+    "Welcome" : "Mirëseerdhët",
+    "Sharing" : "Ndarje",
     "Room name" : "Emri i dhomës",
     "Create" : "Krijo",
     "Copy to clipboard" : "Kopjo në dërrasë ",

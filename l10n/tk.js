@@ -9,6 +9,7 @@ OC.L10N.register(
     "Hello %s" : "Salam%s",
     "Name" : "Ady",
     "Edit" : "Redaktirläň",
+    "Sharing" : "Paýlaşmak",
     "Create" : "Dörediň",
     "Delete" : "Pozmak",
     "Error" : "ýalňyşlyk"

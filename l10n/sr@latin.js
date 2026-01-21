@@ -10,6 +10,7 @@ OC.L10N.register(
     "Group" : "Group",
     "Name" : "Ime",
     "Edit" : "Izmeni",
+    "Welcome" : "Dobro došli",
     "Create" : "Napravi",
     "Delete" : "Obriši",
     "Error" : "Error",

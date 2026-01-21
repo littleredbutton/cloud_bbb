@@ -13,6 +13,8 @@ OC.L10N.register(
     "Name" : "სახელი",
     "Access" : "წვდომა",
     "Edit" : "ცვლილება",
+    "Welcome" : "კეთილი იყოს თქვენი მობრძანება",
+    "Sharing" : "გაზიარება",
     "Room name" : "ოთახის სახელი",
     "Create" : "შექმნა",
     "Copy to clipboard" : "კოპირება ბუფერში",

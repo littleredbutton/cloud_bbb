@@ -12,11 +12,13 @@ OC.L10N.register(
     "Name" : "Name",
     "Max" : "Max",
     "Edit" : "Tahrirlash",
+    "Sharing" : "Ulashish",
     "Miscellaneous" : "Turli xil",
     "Room name" : "Xona nomi",
     "Create" : "Yaratish",
     "Delete" : "O'chirish",
     "Error" : "Xatolik",
+    "Loading" : "Yuklanmoqda",
     "All" : "Barchasi",
     "Settings saved" : "Settings saved"
 },

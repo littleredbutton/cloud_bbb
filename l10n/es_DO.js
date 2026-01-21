@@ -14,6 +14,8 @@ OC.L10N.register(
     "Name" : "Nombre",
     "Access" : "Acceso",
     "Edit" : "Editar",
+    "Welcome" : "Bienvenido",
+    "Sharing" : "Compartiendo",
     "Create" : "Crear",
     "Copy to clipboard" : "Copiar al portapapeles",
     "Delete" : "Borrar",

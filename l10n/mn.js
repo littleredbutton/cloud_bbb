@@ -11,6 +11,8 @@ OC.L10N.register(
     "Server error" : "серверийн алдаа",
     "Name" : "Нэр",
     "Edit" : "засварлах",
+    "Welcome" : "Тавтай морил",
+    "Sharing" : "Түгээх",
     "Create" : "Үүсгэх",
     "Delete" : "Устгах",
     "Error" : "Алдаа",

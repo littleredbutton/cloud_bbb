@@ -14,6 +14,8 @@ OC.L10N.register(
     "Group" : "Agraw",
     "Name" : "Nom",
     "Edit" : "Ẓreg",
+    "Welcome" : "Ansuf",
+    "Sharing" : "Beṭṭu",
     "Create" : "Snulfu-d",
     "Published" : "Yeffeɣ-d",
     "Copy to clipboard" : "Nɣel-it ar tecfawit",

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Password" : "Facal-faire",
     "Name" : "Ainm",
     "Edit" : "Deasaich",
+    "Sharing" : "Co-roinneadh",
     "Create" : "Cruthaich",
     "Delete" : "Sguab às",
     "Error" : "Mearachd"
