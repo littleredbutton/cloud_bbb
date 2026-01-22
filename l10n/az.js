@@ -9,6 +9,7 @@ OC.L10N.register(
     "Group" : "Qrup",
     "Name" : "Ad",
     "Edit" : "Dəyişiklik et",
+    "Sharing" : "Paylaşılır",
     "Create" : "Yarat",
     "Published" : "Nəşr edilmiş",
     "Delete" : "Sil",

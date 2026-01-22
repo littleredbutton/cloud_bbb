@@ -17,6 +17,7 @@ OC.L10N.register(
     "moderator" : "habaskaer",
     "Name" : "Anv",
     "Edit" : "Cheñch",
+    "Sharing" : "Rannan",
     "Create" : "Krouiñ",
     "Delete" : "Dilemel",
     "Error" : "Fazi",

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Group" : "Grupa",
     "Name" : "Ime",
     "Edit" : "Izmjeni",
+    "Sharing" : "Dijeljenje",
     "Create" : "Ustvari",
     "Delete" : "Obriši",
     "Error" : "Greška",

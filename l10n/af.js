@@ -12,6 +12,7 @@ OC.L10N.register(
     "Server error" : "Bedienerfout",
     "Name" : "Naam",
     "Edit" : "Wysig",
+    "Welcome" : "Welkom",
     "Create" : "Skep",
     "Delete" : "Skrap",
     "Error" : "Fout",

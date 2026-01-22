@@ -21,6 +21,7 @@ OC.L10N.register(
     "Name" : "Назва",
     "Access" : "Доступ",
     "Edit" : "Рэдагаваць",
+    "Sharing" : "Абагульванне",
     "Recording" : "Запіс",
     "Create" : "Стварыць",
     "Published" : "Апублікавана",
