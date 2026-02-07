@@ -110,6 +110,7 @@ OC.L10N.register(
     "Are you sure you want to delete the recording from \"{startDate}\"? This operation cannot be undone." : "Jeste li sigurni da želite izbrisati zapis iz „{startDate}”? Ova se radnja ne može poništiti.",
     "Delete?" : "Izbrisati?",
     "Could not delete record" : "Zapis nije moguće izbrisati",
+    "Start" : "Pokreni",
     "Loading" : "Učitavanje",
     "You are not allowed to change this option, because this room is shared with you." : "Ne možete mijenjati ovu mogućnost jer soba nije dijeljena s vama.",
     "Group name" : "Naziv grupe",
