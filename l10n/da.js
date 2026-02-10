@@ -52,6 +52,7 @@ OC.L10N.register(
     "Max" : "Maks",
     "Edit" : "Redigér",
     "Welcome" : "Velkommen",
+    "Sharing" : "Deling",
     "Miscellaneous" : "Diverse",
     "Recording" : "Optagelse",
     "Room name" : "Rumnavn",

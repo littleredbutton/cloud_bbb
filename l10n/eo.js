@@ -15,6 +15,7 @@ OC.L10N.register(
     "Name" : "Nomo",
     "Access" : "Aliro",
     "Edit" : "Modifi",
+    "Sharing" : "Kunhavigo",
     "Create" : "Krei",
     "Copy to clipboard" : "Kopii tondejen",
     "Delete" : "Forigi",
