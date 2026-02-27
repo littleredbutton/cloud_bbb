@@ -65,10 +65,14 @@ export type Recording = {
 	state: 'processing' | 'processed' | 'published' | 'unpublished' | 'deleted';
 	startTime: number;
 	participants: number;
-	type: string;
-	length: number;
-	url: string;
+	formats: RecordingFormat[];
 	meta: any;
+}
+
+export type RecordingFormat = {
+	type: string
+	length: number
+	url: string
 }
 
 export interface ShareWithOption {
@@ -210,12 +214,12 @@ class Api {
 		return response.data;
 	}
 
-	public async storeRecording(recording: Recording, path: string) {
+	public async storeRecording(recording: Recording, format: RecordingFormat, path: string) {
 		const startDate = new Date(recording.startTime);
 		const filename = `${encodeURIComponent(recording.name + ' ' + startDate.toISOString().replace(/:/g, '-').substr(0,19))}.url`;
 		const url = OC.linkToRemote(`dav/files/${OC.currentUser}${path}/${filename}`);
 
-		await axios.put(url, `[InternetShortcut]\nURL=${recording.url}`);
+		await axios.put(url, `[InternetShortcut]\nURL=${format.url}`);
 
 		return filename;
 	}
