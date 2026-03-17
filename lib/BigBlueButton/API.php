@@ -80,7 +80,8 @@ class API {
 		$joinMeetingParams->addUserData('bbb_skip_video_preview_on_first_join', !$room->getMediaCheck()); // 2.3
 
 		if ($room->getCleanLayout()) {
-			$joinMeetingParams->addUserData('bbb_auto_swap_layout', true);
+			$joinMeetingParams->addUserData('bbb_auto_swap_layout', true); // 2.5 and below // ToDo: remove in the future
+			$joinMeetingParams->addUserData('bbb_hide_presentation_on_join', true); // 2.6 and up
 			$joinMeetingParams->addUserData('bbb_show_participants_on_login', false);
 			$joinMeetingParams->addUserData('bbb_show_public_chat_on_login', false);
 		}
