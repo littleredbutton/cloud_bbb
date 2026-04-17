@@ -30,6 +30,7 @@ OC.L10N.register(
     "Server error" : "Serverio klaida",
     "Name" : "Pavadinimas",
     "Access" : "Prieiga",
+    "Max" : "Max",
     "You are not permitted to create a room." : "Jums neleidžiama sukurti kambario.",
     "Edit" : "Taisyti",
     "Welcome" : "Sveiki",
