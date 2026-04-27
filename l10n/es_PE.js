@@ -4,6 +4,7 @@ OC.L10N.register(
     "Public" : "Público",
     "Close" : "Cerrar",
     "Save" : "Guardar",
+    "Community" : "Comunidad",
     "Display name" : "Nombre a desplegar",
     "Password" : "Contraseña",
     "Hello %s" : "Hola %s",
