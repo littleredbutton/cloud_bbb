@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { api, Recording, Room, Restriction, Access, Permission } from '../Common/Api';
+import {api, Recording, Room, Restriction, Access, Permission, RecordingFormat} from '../Common/Api';
 import EditRoom from './EditRoom';
 import RecordingRow from './RecordingRow';
 import EditableValue from './EditableValue';
@@ -98,9 +98,9 @@ const RoomRow = (props: Props): JSX.Element => {
 		}, undefined, 'httpd/unix-directory');
 	}
 
-	function storeRecording(recording: Recording) {
+	function storeRecording(recording: Recording, format: RecordingFormat) {
 		OC.dialogs.filepicker(t('bbb', 'Select target folder'), (path: string) => {
-			api.storeRecording(recording, path).then((filename) => {
+			api.storeRecording(recording, format, path).then((filename) => {
 				OC.dialogs.info(
 					t('bbb', 'URL to presentation was stored in "{path}" as "{filename}".', { path: path + '/', filename }),
 					t('bbb', 'Link stored'),
@@ -288,7 +288,7 @@ const RoomRow = (props: Props): JSX.Element => {
 				<td colSpan={11}>
 					<table>
 						<tbody>
-							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => <RecordingRow key={recording.id} isAdmin={adminRoom} recording={recording} deleteRecording={deleteRecording} storeRecording={storeRecording} publishRecording={publishRecording} />)}
+							{recordings?.sort((r1, r2) => r1.startTime - r2.startTime).map(recording => recording.formats.map(format => <RecordingRow key={recording.id} isAdmin={adminRoom} recording={recording} format={format} deleteRecording={deleteRecording} storeRecording={storeRecording} publishRecording={publishRecording} />))}
 						</tbody>
 					</table>
 				</td>
