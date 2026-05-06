@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-            ocp-version: [ "^31", "^30", "^29"]
+            ocp-version: [ "^33", "^32", "^31", "^30", "^29"]
     name: Nextcloud ${{ matrix.ocp-version }}
     steps:
         - name: Checkout
@@ -14,7 +14,7 @@ jobs:
         - name: Set up php
           uses: shivammathur/setup-php@master
           with:
-            php-version: 8.1
+            php-version: 8.2
             coverage: none
         - name: Update php-cs-fixer
           run: composer update friendsofphp/php-cs-fixer -W
@@ -24,4 +24,3 @@ jobs:
           run: composer require --dev nextcloud/ocp:${{ matrix.ocp-version }} symfony/service-contracts -W
         - name: Run coding standards check
           run: composer run psalm
-

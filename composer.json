@@ -2,7 +2,7 @@
     "name": "littleredbutton/bigbluebutton",
     "description": "Nextcloud Integration for BigBlueButton",
     "type": "project",
-    "license": "AGPL",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Klaus Herberth"
@@ -16,7 +16,7 @@
         "friendsofphp/php-cs-fixer": "^3",
         "nextcloud/coding-standard": "^1.1.0",
         "phpstan/phpstan": "^2.1.16",
-        "nextcloud/ocp": "^29.0 || ^30.0 || ^31.0",
+        "nextcloud/ocp": "^29.0 || ^30.0 || ^31.0 || ^32.0 || ^33.0",
         "vimeo/psalm": "^6.1.0",
         "psr/container": "^1.1.2 || ^1.1.4 || ^2.0.2"
     },
