@@ -29,6 +29,7 @@ OC.L10N.register(
     "Group" : "Grupė",
     "moderator" : "moderatorius",
     "Server error" : "Serverio klaida",
+    "unlimited" : "neribotai",
     "Name" : "Pavadinimas",
     "Access" : "Prieiga",
     "Max" : "Max",
