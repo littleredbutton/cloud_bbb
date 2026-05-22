@@ -1,7 +1,7 @@
 OC.L10N.register(
     "bbb",
     {
-    "You created the room %s." : "%s odasını eklediniz.",
+    "You created the room %s." : "%s odasını oluşturdunuz.",
     "You deleted the room %s." : "%s odasını sildiniz.",
     "{user} deleted the room %s." : "{user} %s odasını sildi.",
     "You shared the room %s with {shareWith}." : "%s odasını {shareWith} ile paylaştınız.",
@@ -107,7 +107,7 @@ OC.L10N.register(
     "Clean layout" : "Yerleşimi temizle",
     "Join meeting muted" : "Görüşmeye ses kapalı katılınsın",
     "Room name" : "Oda adı",
-    "Create" : "Ekle",
+    "Create" : "Oluştur",
     "Published" : "Yayınlanmış",
     "Open recording" : "Kaydı aç",
     "Copy to clipboard" : "Panoya kopyala",

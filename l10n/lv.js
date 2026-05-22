@@ -7,6 +7,7 @@ OC.L10N.register(
     "BigBlueButton integration for Nextcloud" : "BigBlueButton iekļaušana Nextcloud",
     "Loading…" : "Ielādē…",
     "Close" : "Aizvērt",
+    "Back to %s" : "Atgriezties %s",
     "API secret" : "API slepenais kods",
     "Save" : "Saglabāt",
     "Community" : "Kopiena",
