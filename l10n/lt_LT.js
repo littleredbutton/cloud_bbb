@@ -28,6 +28,7 @@ OC.L10N.register(
     "Hello %s" : "Sveiki, %s",
     "Name, group …" : "Vardas, grupė…",
     "Group" : "Grupė",
+    "admin" : "administratorius",
     "moderator" : "moderatorius",
     "Server error" : "Serverio klaida",
     "unlimited" : "neribotai",
