@@ -36,7 +36,7 @@ OC.L10N.register(
     "Access" : "Prieiga",
     "Max" : "Max",
     "You are not permitted to create a room." : "Jums neleidžiama sukurti kambario.",
-    "Edit" : "Taisyti",
+    "Edit" : "Redaguoti",
     "Welcome" : "Sveiki",
     "Sharing" : "Bendrinimas",
     "Miscellaneous" : "Įvairūs",
@@ -54,7 +54,7 @@ OC.L10N.register(
     "Loading" : "Įkeliama",
     "Group name" : "Grupės pavadinimas",
     "Group …" : "Grupė…",
-    "All users" : "Visi naudotojai",
+    "All users" : "Visi vartotojai",
     "All" : "Visos",
     "Settings saved" : "Nustatymai įrašyti",
     "Unexpected error occurred" : "Įvyko netikėta klaida"
