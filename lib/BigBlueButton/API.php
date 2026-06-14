@@ -4,6 +4,7 @@ namespace OCA\BigBlueButton\BigBlueButton;
 
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Core\Record;
+use BigBlueButton\Enum\Role;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;
 use BigBlueButton\Parameters\GetRecordingsParameters;
@@ -62,13 +63,10 @@ class API {
 	 * @return string join url
 	 */
 	public function createJoinUrl(Room $room, float $creationTime, string $displayname, bool $isModerator, ?string $uid = null) {
-		$password = $isModerator ? $room->moderatorPassword : $room->attendeePassword;
-
-		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $password);
+		$joinMeetingParams = new JoinMeetingParameters($room->uid, $displayname, $isModerator ? Role::MODERATOR : Role::VIEWER);
 
 		// ensure that float is not converted to a string in scientific notation
-		$joinMeetingParams->setCreateTime(sprintf("%.0f", $creationTime));
-		$joinMeetingParams->setJoinViaHtml5(true);
+		$joinMeetingParams->setCreateTime(intval(sprintf("%.0f", $creationTime)));
 		$joinMeetingParams->setRedirect(true);
 
 		// set the guest parameter for everyone but moderators to send all users to the waiting room if setting is selected
@@ -130,8 +128,6 @@ class API {
 
 	private function buildMeetingParams(Room $room, ?Presentation $presentation = null): CreateMeetingParameters {
 		$createMeetingParams = new CreateMeetingParameters($room->uid, $room->name);
-		$createMeetingParams->setAttendeePW($room->attendeePassword);
-		$createMeetingParams->setModeratorPW($room->moderatorPassword);
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
 		$createMeetingParams->setLogoutURL($this->urlGenerator->getBaseUrl());
@@ -239,6 +235,16 @@ class API {
 	 * @psalm-return array{id: string, meetingId: string, name: string, published: bool, state: string, startTime: string, participants: int, type: string, length: string, url: string, metas: array}
 	 */
 	private function recordToArray(Record $record): array {
+		$formats = [];
+
+		foreach ($record->getPlaybackFormats() as $format) {
+			$formats[] = [
+				'type' => $format->getType(),
+				'length' => $format->getLength(),
+				'url' => $format->getUrl()
+			];
+		}
+		
 		return [
 			'id' => $record->getRecordId(),
 			'meetingId' => $record->getMeetingId(),
@@ -247,10 +253,8 @@ class API {
 			'state' => $record->getState(),
 			'startTime' => $record->getStartTime(),
 			'participants' => $record->getParticipantCount(),
-			'type' => $record->getPlaybackType(),
-			'length' => $record->getPlaybackLength(),
-			'url' => $record->getPlaybackUrl(),
-			'metas' => $record->getMetas(),
+			'formats' => $formats,
+			'metas' => $record->getMetas()
 		];
 	}
 

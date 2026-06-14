@@ -1,16 +1,17 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Recording } from '../Common/Api';
+import {Recording, RecordingFormat} from '../Common/Api';
 
 type Props = {
     recording: Recording;
+	format: RecordingFormat;
 	isAdmin : boolean;
     deleteRecording: (recording: Recording) => void;
-    storeRecording: (recording: Recording) => void;
+    storeRecording: (recording: Recording, format: RecordingFormat) => void;
 	publishRecording: (recording: Recording, publish: boolean) => void;
 }
 
-const RecordingRow = ({recording, isAdmin, deleteRecording, storeRecording, publishRecording}: Props): JSX.Element => {
+const RecordingRow = ({recording, format, isAdmin, deleteRecording, storeRecording, publishRecording}: Props): JSX.Element => {
 
 	function checkPublished(recording: Recording, onChange: (value: boolean) => void) {
 		return (
@@ -28,19 +29,19 @@ const RecordingRow = ({recording, isAdmin, deleteRecording, storeRecording, publ
 	return (
 		<tr key={recording.id}>
 			<td className="start icon-col">
-				<a href={recording.url} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open recording')}>
+				<a href={format.url} className="action-item" target="_blank" rel="noopener noreferrer" title={t('bbb', 'Open recording')}>
 					<span className="icon icon-external icon-visible"></span>
 				</a>
 			</td>
 			<td className="share icon-col">
-				<CopyToClipboard text={recording.url} options={{format:'text/plain'}}>
+				<CopyToClipboard text={format.url} options={{format:'text/plain'}}>
 					<button className="action-item copy-to-clipboard" title={t('bbb', 'Copy to clipboard')}>
 						<span className="icon icon-clippy icon-visible" ></span>
 					</button>
 				</CopyToClipboard>
 			</td>
 			<td className="icon-col">
-				<button className="action-item" onClick={() => storeRecording(recording)} title={t('bbb', 'Save as file')}>
+				<button className="action-item" onClick={() => storeRecording(recording, format)} title={t('bbb', 'Save as file')}>
 					<span className="icon icon-add-shortcut icon-visible"></span>
 				</button>
 			</td>
@@ -48,13 +49,13 @@ const RecordingRow = ({recording, isAdmin, deleteRecording, storeRecording, publ
 				{(new Date(recording.startTime)).toLocaleString()}
 			</td>
 			<td>
-				{recording.length === 0 ? '< 1 min' : (recording.length + ' min')}
+				{format.length === 0 ? '< 1 min' : (format.length + ' min')}
 			</td>
 			<td>
 				{n('bbb', '%n participant', '%n participants', recording.participants)}
 			</td>
 			<td>
-				{recording.type}
+				{format.type}
 			</td>
 			<td>
 				{isAdmin && checkPublished(recording, (checked) => {
