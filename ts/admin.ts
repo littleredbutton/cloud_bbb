@@ -1,5 +1,6 @@
 import { api } from './Common/Api';
 import './Manager/App.scss';
+import $ from 'jquery';
 
 $(() => {
 	function generateWarningElement(message: string) {

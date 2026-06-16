@@ -49,6 +49,7 @@
 		"dotenv": "^16.0.0",
 		"execa": "^6.1.0",
 		"html-react-parser": "^5.2.5",
+		"jquery": "^4.0.0",
 		"qrcode.react": "^2.0.0",
 		"react-copy-to-clipboard": "^5.0.2",
 		"sass": "^1.89.0",
