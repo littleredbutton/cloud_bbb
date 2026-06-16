@@ -39,7 +39,7 @@
 		"@commitlint/travis-cli": "^20.2.0",
 		"@nextcloud/axios": "^2.5.1",
 		"@nextcloud/dialogs": "^6.0.1",
-		"@nextcloud/files": "^3.12.0",
+		"@nextcloud/files": "^4.0.0",
 		"@nextcloud/router": "^3.0.1",
 		"@nextcloud/vue": "^8.22.0",
 		"@octokit/rest": "^18.0.4",
