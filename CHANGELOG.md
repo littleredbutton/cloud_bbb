@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Fixed
 
 - Fix/support nc33 34 by @smarinier in [#429](https://github.com/littleredbutton/cloud_bbb/pull/429)
+- Fix nc33 requires @nextcloud/files 4.0.0
+- Fix nc34 remove jQuery
 
 ## 2.9.1 (2026-01-08)
 
