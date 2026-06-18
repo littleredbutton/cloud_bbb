@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Loading…" : "Cargando...",
     "Close" : "Zarrar",
+    "Save" : "Save",
     "Password" : "Clau",
     "Hello %s" : "Hola %s",
     "Group" : "Grupo",

@@ -20,6 +20,7 @@ OC.L10N.register(
     "Edit" : "සංස්කරණය",
     "Welcome" : "සාදරයෙන් පිළිගනිමු",
     "Create" : "සාදන්න",
+    "Delete" : "Delete",
     "Error" : "දෝෂය",
     "Loading" : "පූරණය වෙමින්",
     "All" : "සියල්ල"
