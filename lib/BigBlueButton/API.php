@@ -134,8 +134,10 @@ class API {
 		$createMeetingParams->setModeratorPW($room->moderatorPassword);
 		$createMeetingParams->setRecord($room->record);
 		$createMeetingParams->setAllowStartStopRecording($room->record);
-		$createMeetingParams->setLogoutURL($this->urlGenerator->getBaseUrl());
 		$createMeetingParams->setMuteOnStart($room->getJoinMuted());
+
+        $logoutUrl = $this->config->getValueString('bbb', 'app.logoutUrl', $this->urlGenerator->getBaseUrl());
+        $createMeetingParams->setLogoutURL($logoutUrl);
 
 		$createMeetingParams->addMeta('bbb-origin-version', $this->appManager->getAppVersion(Application::ID));
 		$createMeetingParams->addMeta('bbb-origin', \method_exists($this->defaults, 'getProductName') ? $this->defaults->getProductName() : 'Nextcloud');
