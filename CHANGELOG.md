@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.9.2 (2026-06-17)
+
+## Changed
+
+- Better join button contrast by @Jerome-Herbinet in [#425](https://github.com/littleredbutton/cloud_bbb/pull/425)
+
+## Fixed
+
+- Update to the latest version of [nextcloud/files](https://github.com/nextcloud-libraries/nextcloud-files) for Nextcloud 33 and remove all jQuery dependencies for Nextcloud 34 in [#429](https://github.com/littleredbutton/cloud_bbb/pull/429)
+
 ## 2.9.1 (2026-01-08)
 
 ### Changed

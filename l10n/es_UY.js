@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Public" : "Público",
     "Loading…" : "Cargando...",
+    "Close" : "Close",
     "Save" : "Guardar",
     "Display name" : "Nombre a desplegar",
     "Password" : "Contraseña",

@@ -1,4 +1,5 @@
 import './waiting.scss';
+import $ from 'jquery';
 
 $(() => {
 	let countdown = 30;

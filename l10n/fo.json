@@ -1,0 +1,11 @@
+{ "translations": {
+    "Public" : "Alment",
+    "Close" : "Close",
+    "Save" : "Save",
+    "Password" : "Loyniorð",
+    "Hello %s" : "Hey %s",
+    "Delete" : "Strika",
+    "All" : "Øll",
+    "Settings saved" : "Stillingar eru goymd"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

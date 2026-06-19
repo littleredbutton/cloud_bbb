@@ -3,7 +3,7 @@ import axios from '@nextcloud/axios';
 import { generateOcsUrl, generateUrl } from '@nextcloud/router';
 import { showSuccess, showWarning, showError } from '@nextcloud/dialogs';
 // import * as Files from '@nextcloud/files';
-import { FileAction, registerFileAction } from '@nextcloud/files';
+import { INode, IFileAction, registerFileAction } from '@nextcloud/files';
 import { api } from './Common/Api';
 import Vue from 'vue';
 import SendFileDialog from './views/SendFileDialog.vue';
@@ -109,12 +109,12 @@ export function showSendFileDialog(fileId: number, filename: string	) {
 /**
  * Register the file action "Send to BBB"
  */
-registerFileAction( new FileAction({
+const BBBFileAction: IFileAction = {
 	id: 'bbb-send-file',
 	displayName: () => {
 		return t('bbb', 'Send to BBB');
 	},
-	enabled: (nodes) => {
+	enabled: ({ nodes }) => {
 		// only files with the mime type allowed
 		if (!Array.isArray(nodes) || nodes.length === 0) return false;
 
@@ -126,9 +126,14 @@ registerFileAction( new FileAction({
 		});
 	},
 	iconSvgInline: () => iconBBBInline,
-	exec: async (node: NCNode) : Promise<boolean|null> => {
+	exec: async ({ nodes }): Promise<boolean | null> => {
+		const [ node ] : [INode | undefined] = nodes
+		if (!node || !node.fileid) {
+			return null
+		}
 		showSendFileDialog(node.fileid, node.displayname);
 		return null;
 	},
 	order: 20,
-}));
+};
+registerFileAction(BBBFileAction);
