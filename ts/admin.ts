@@ -164,6 +164,6 @@ return 307;</pre></details>
 
 		console.log(`checkbox ${inputElement.name} changed to ${inputElement.checked}`);
 
-		OCP.AppConfig.setValue('bbb', inputElement.name, inputElement.checked);
+		OCP.AppConfig.setValue('bbb', inputElement.name, inputElement.checked.toString());
 	});
 });
