@@ -75,6 +75,7 @@ Key                               | Description
 `api.secret`                      | Secret of your BBB server
 `api.meta_analytics-callback-url` | URL which gets called after meetings ends to generate statistics. See [bbb-analytics](https://github.com/betagouv/bbb-analytics).
 `app.shortener`                   | Value of your shortener service. Should start with `https://` and contain `{token}`.
+`app.logoutUrl`                   | URL which the client is redirected to after leaving the meeting.
 `avatar.path`                     | Absolute path to an optional avatar cache directory.
 `avatar.url`                      | URL which serves `avatar.path` to be used as avatar cache.
 
