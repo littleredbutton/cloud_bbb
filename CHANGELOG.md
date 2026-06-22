@@ -6,13 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.9.3 (2026-06-22)
+
+### Added
+
+- Make logoutURL configurable in [#423](https://github.com/littleredbutton/cloud_bbb/pull/423)
+
+### Fixed
+
+- Fix checkbox not working when checked in admin settings in [#432](https://github.com/littleredbutton/cloud_bbb/issues/432)
+- Apply legacy Nextcloud CSS for dialog windows in [#431](https://github.com/littleredbutton/cloud_bbb/issues/431)
+
 ## 2.9.2 (2026-06-17)
 
-## Changed
+### Changed
 
 - Better join button contrast by @Jerome-Herbinet in [#425](https://github.com/littleredbutton/cloud_bbb/pull/425)
 
-## Fixed
+### Fixed
 
 - Update to the latest version of [nextcloud/files](https://github.com/nextcloud-libraries/nextcloud-files) for Nextcloud 33 and remove all jQuery dependencies for Nextcloud 34 in [#429](https://github.com/littleredbutton/cloud_bbb/pull/429)
 
