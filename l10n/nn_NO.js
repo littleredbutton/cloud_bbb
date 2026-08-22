@@ -12,6 +12,7 @@ OC.L10N.register(
     "Sharing" : "Deling",
     "Create" : "Lag",
     "Published" : "Publisert",
+    "Copy to clipboard" : "Kopiert til utklippstavla",
     "Delete" : "Ta bort",
     "Error" : "Feil",
     "Group name" : "Gruppenamn",
