@@ -1,15 +1,23 @@
 { "translations": {
+    "Public" : "Ëffentlech",
+    "Internal" : "Intern",
     "Loading…" : "Et gëtt gelueden",
     "Close" : "Zoumaachen",
     "Save" : "Späicheren",
+    "Community" : "Communautéit",
+    "Restrictions" : "Restriktiounen",
     "Password" : "Passwuert",
     "Group" : "Grupp",
+    "admin" : "Administratioun",
+    "moderator" : "Moderator",
     "Name" : "Numm",
     "Edit" : "Änneren",
     "Sharing" : "Gedeelt",
     "Create" : "Erstellen",
+    "Published" : "Verëffentlecht",
     "Delete" : "Läschen",
     "Error" : "Fehler",
+    "Loading" : "Lued",
     "Group name" : "Gruppe Numm",
     "All" : "All"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
