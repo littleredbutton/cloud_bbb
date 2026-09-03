@@ -21,6 +21,7 @@ OC.L10N.register(
     "Error" : "Fehler",
     "Loading" : "Lued",
     "Group name" : "Gruppe Numm",
-    "All" : "All"
+    "All" : "All",
+    "Settings saved" : "Astellunge gespäichert"
 },
 "nplurals=2; plural=(n != 1);");
