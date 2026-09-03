@@ -4,6 +4,7 @@ namespace OCA\BigBlueButton\Activity;
 
 use OCA\BigBlueButton\AppInfo\Application;
 use OCA\BigBlueButton\Db\RoomShare;
+use OCP\Activity\Exceptions\UnknownActivityException;
 use OCP\Activity\IEvent;
 use OCP\Activity\IManager;
 use OCP\Activity\IProvider;
@@ -70,7 +71,7 @@ class Provider implements IProvider {
 
 	public function parse($language, IEvent $event, ?IEvent $previousEvent = null) {
 		if ($event->getApp() !== Application::ID) {
-			throw new \InvalidArgumentException();
+			throw new UnknownActivityException();
 		}
 
 		$this->l = $this->languageFactory->get(Application::ID, $language);
