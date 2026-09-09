@@ -22,6 +22,7 @@ OC.L10N.register(
     "Join" : "Gabung",
     "Hello %s" : "Halo %s",
     "Group" : "Grup",
+    "moderator" : "moderator",
     "Server error" : "Galat peladen",
     "unlimited" : "tak terbatas",
     "Name" : "Nama",
