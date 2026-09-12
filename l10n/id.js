@@ -54,6 +54,7 @@ OC.L10N.register(
     "Start" : "Mulai",
     "Loading" : "Memuat",
     "Group name" : "Nama grup",
+    "All users" : "Semua pengguna",
     "All" : "Semua",
     "Settings saved" : "Setelan tersimpan",
     "Unexpected error occurred" : "Terjadi galat tak terduga",
