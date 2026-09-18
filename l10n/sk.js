@@ -9,7 +9,7 @@ OC.L10N.register(
     "You unshared the room %s with {shareWith}." : "Zrušili ste zdieľanie miestnosti %s s {shareWith}.",
     "{user} unshared the room %s with you." : "Používateľ {user} vám zrušil zdieľanie miestnosti %s.",
     "You started a meeting in the \"%s\" room." : "Začali ste stretnutie v miestnosti \"%s\".",
-    "{user} started a meeting in the \"%s\" room." : "{user} začal stretnutie v miestnosti \"%s\".",
+    "{user} started a meeting in the \"%s\" room." : "{user} začal(a) stretnutie v miestnosti \"%s\".",
     "The meeting in room \"%s\" has ended." : "Stretnutie v miestnosti \"%s\" skončilo.",
     "Recording for room \"%s\" is ready." : "Náhravanie miestnosti \"%s\" je pripravené.",
     "To invite someone to the meeting, send them this link: %s" : "Pre pozvanie kohokoľvek na stretnutie, pošlite mu tento odkaz: %s",
