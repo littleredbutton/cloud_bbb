@@ -68,7 +68,11 @@ clean-dev:
 
 pack: install-composer-deps
 	mkdir -p archive
-	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' -zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bbb/
+	tar --exclude='./Makefile' --exclude='./webpack*' --exclude='./.*' --exclude='./ts' --exclude='./tests' --exclude='./node_modules' --exclude='./archive' \
+		--exclude='./babel.config.js' --exclude='./commitlint.config.js' --exclude='./tsconfig.json' --exclude='./declarations.d.ts' \
+		--exclude='./package.json' --exclude='./package-lock.json' --exclude='./composer.json' --exclude='./composer.lock' --exclude='./composer.phar' \
+		--exclude='./phpunit*.xml' --exclude='./psalm.xml' --exclude='./scripts' \
+		-zcvf ./archive/cloud_bbb.tar.gz . --transform s/^./bbb/
 
 # Tests
 test:
