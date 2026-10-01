@@ -65,6 +65,9 @@ class Provider implements IProvider {
 			case 'internal_restricted':
 				$translatedAccess = $this->l10n->t('Internal restricted');
 				break;
+			default:
+				$translatedAccess = '';
+				break;
 		}
 		return $translatedAccess;
 	}
