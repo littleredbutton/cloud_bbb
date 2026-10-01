@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 2.9.4 (2026-10-01)
+
+### Fixed
+
+- Throw UnknownActivityException in activity provider by @bakiburakogun in [#436](https://github.com/littleredbutton/cloud_bbb/pull/436)
+- Support nc35 by @smarinier in [#440](https://github.com/littleredbutton/cloud_bbb/pull/440)
+
 ## 2.9.3 (2026-06-22)
 
 ### Added
