@@ -29,12 +29,12 @@ class RestrictionController extends Controller {
 	use Errors;
 
 	public function __construct(
-		$appName,
+		string $appName,
 		IRequest $request,
 		RestrictionService $service,
 		IUserManager $userManager,
 		IGroupManager $groupManager,
-		$userId
+		string $userId
 	) {
 		parent::__construct($appName, $request);
 		$this->service = $service;

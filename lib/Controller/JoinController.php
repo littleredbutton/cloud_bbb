@@ -81,7 +81,7 @@ class JoinController extends Controller {
 	 */
 	#[PublicPage]
 	#[NoCSRFRequired]
-	public function index($displayname, $u = '', $filename = '', $password = '') {
+	public function index(?string $displayname = '', $u = '', $filename = '', $password = '') {
 		$room = $this->getRoom();
 
 		if ($room === null) {

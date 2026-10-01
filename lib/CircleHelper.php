@@ -6,7 +6,7 @@ use OCA\BigBlueButton\AppInfo\Application;
 use OCP\App\IAppManager;
 
 class CircleHelper {
-	private $api;
+	private $api = null;
 
 	/** @var Application */
 	private $app;

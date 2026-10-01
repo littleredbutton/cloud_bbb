@@ -241,7 +241,7 @@ class Provider implements IProvider {
 	 *
 	 * @psalm-return array{type: string, id: mixed|string, name: mixed|string}
 	 */
-	protected function getGroup($uid): array {
+	protected function getGroup(string $uid): array {
 		$group = $this->groupManager->get($uid);
 
 		if ($group !== null) {
