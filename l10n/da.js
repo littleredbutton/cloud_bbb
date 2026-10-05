@@ -64,6 +64,7 @@ OC.L10N.register(
     "Delete" : "Slet",
     "Error" : "Fejl",
     "Delete?" : "Slet?",
+    "Start" : "Start",
     "Loading" : "Indlæser",
     "Group name" : "Gruppenavn",
     "All users" : "Alle brugere",
