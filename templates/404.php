@@ -1,4 +1,7 @@
 <?php
+
+use OCP\IURLGenerator
+
 /** @var array $_ */
 /** @var \OCP\IL10N $l */
 /** @var \OCP\Defaults $theme */
@@ -7,7 +10,7 @@
 	<div class="icon-big icon-search icon-white"></div>
 	<h2><?php p($l->t('Room not found')); ?></h2>
 	<p class="infogroup"><?php p($l->t('The room could not be found. Maybe it was deleted?')); ?></p>
-	<p><a class="button primary" href="<?php p(\OCP\Server::get(\OCP\IURLGenerator::class)->linkTo('', 'index.php')) ?>">
+	<p><a class="button primary" href="<?php p(\OCP\Server::get(IURLGenerator::class)->linkTo('', 'index.php')) ?>">
 		<?php p($l->t('Back to %s', [$theme->getName()])); ?>
 	</a></p>
 </div>
