@@ -171,6 +171,21 @@ class RoomService {
 		}
 	}
 
+    /**
+	 * @return \OCP\AppFramework\Db\Entity|null
+	 */
+	public function updateUid(int $id, string $uid) {
+		try {
+			$room = $this->mapper->find($id);
+
+            $room->setUid($uid);
+
+			return $this->mapper->update($room);
+		} catch (Exception $e) {
+			$this->handleException($e);
+		}
+	}
+
 	/**
 	 * @return \OCP\AppFramework\Db\Entity|null
 	 */
