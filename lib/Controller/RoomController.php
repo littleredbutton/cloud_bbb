@@ -36,14 +36,14 @@ class RoomController extends Controller {
 	use Errors;
 
 	public function __construct(
-		$appName,
+		string $appName,
 		IRequest $request,
 		RoomService $service,
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		Permission $permission,
 		CircleHelper $circleHelper,
-		$userId
+		string $userId
 	) {
 		parent::__construct($appName, $request);
 		$this->service = $service;

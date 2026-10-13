@@ -26,19 +26,19 @@ class ServerController extends Controller {
 	private $userId;
 
 	public function __construct(
-		$appName,
+		string $appName,
 		IRequest $request,
 		RoomService $service,
 		API $server,
 		Permission $permission,
-		$UserId
+		string $userId
 	) {
 		parent::__construct($appName, $request);
 
 		$this->service = $service;
 		$this->server = $server;
 		$this->permission = $permission;
-		$this->userId = $UserId;
+		$this->userId = $userId;
 	}
 
 	/**

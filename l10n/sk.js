@@ -136,7 +136,7 @@ OC.L10N.register(
     "Max. rooms" : "Maximálny počet miestností",
     "Access options" : "Možnosti prístupu",
     "Max. participants" : "Maximálny počet účastníkov",
-    "Group …" : "Skupina ...",
+    "Group …" : "Skupina …",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Obmedzenia sa netýkajú existujúcich miestností. Mínus jedna znamená neobmedzene. Pokiaľ platí viac obmedzení, pre každého používateľa je zvolená najmenej obmedzujúca možnosť.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation cannot be undone." : "Naozaj chcete odstrániť obmedzenia pre skupinu \"{name}\"? Táto operácia sa nedá vrátiť späť.",
     "Delete restrictions for \"{name}\"?" : "Vymazať obmedzenia pre \"{name}\"?",

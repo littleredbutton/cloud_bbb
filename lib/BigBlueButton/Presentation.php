@@ -3,9 +3,9 @@
 namespace OCA\BigBlueButton\BigBlueButton;
 
 class Presentation {
-	private $url;
+	private string $url;
 
-	private $filename;
+	private string $filename;
 
 	public function __construct(string $url, string $filename) {
 		$this->url = $url;

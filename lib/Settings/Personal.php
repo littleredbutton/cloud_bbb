@@ -4,7 +4,6 @@ namespace OCA\BigBlueButton\Settings;
 
 use OCA\BigBlueButton\TemplateProvider;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
 use OCP\Settings\ISettings;
 
 class Personal implements ISettings {
@@ -14,7 +13,7 @@ class Personal implements ISettings {
 	/**
 	 * Admin constructor.
 	 *
-	 * @param IConfig $config
+	 * @param TemplateProvider $templateProvider
 	 */
 	public function __construct(TemplateProvider $templateProvider) {
 		$this->templateProvider = $templateProvider;
