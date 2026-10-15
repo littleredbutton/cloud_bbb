@@ -81,6 +81,26 @@ class ServerController extends Controller {
 		return new DataResponse($success);
 	}
 
+    /**
+	 * @return DataResponse
+	 */
+	public function updateUid(string $roomId, string $roomUid): DataResponse {
+		if ($this->service->findByUid($roomUid) !== null) {
+		    return new DataResponse(['message' => 'Uid already exists'], Http::STATUS_CONFLICT);
+		}
+
+        try {
+			if ($this->service->updateUid($roomId, $roomUid) !== false) {
+			    return new DataResponse(true);
+			}
+		} catch (\Exception $e) {
+		    return new DataResponse(false, Http::STATUS_NOT_FOUND);
+        }
+        return new DataResponse(false, Http::STATUS_NOT_FOUND);
+
+
+    }
+
 	/**
 	 * @return DataResponse
 	 */
