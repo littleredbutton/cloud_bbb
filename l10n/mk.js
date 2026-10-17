@@ -29,6 +29,7 @@ OC.L10N.register(
     "_%n participant_::_%n participants_" : ["%n учесник","%n учесници"],
     "Delete" : "Избриши",
     "Error" : "Грешка",
+    "Start" : "Старт",
     "Loading" : "Се вчитува",
     "Group name" : "Име на група",
     "All users" : "Сите корисници",
