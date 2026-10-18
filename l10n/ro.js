@@ -24,6 +24,8 @@ OC.L10N.register(
     "Copy to clipboard" : "Copiază în clipboard",
     "Delete" : "Șterge",
     "Error" : "Eroare",
+    "Start" : "Început",
+    "Loading" : "Se încarcă",
     "Group name" : "Numele grupului",
     "All" : "Toate ",
     "Settings saved" : "Setările au fost salvate"
