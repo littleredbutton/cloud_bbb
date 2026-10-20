@@ -6,7 +6,7 @@ composer=$(shell which composer 2> /dev/null)
 
 all: dev-setup lint build-js-production test
 
-build: install-composer-deps build-js
+build: install-composer-deps build-js-production
 
 # Dev env management
 dev-setup: clean clean-dev install-composer-deps-dev js-init

@@ -5,7 +5,7 @@
       "es2015.promise",
       "es2017"
     ],
-    "module": "ES6",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "target": "ES6",
     "strictNullChecks": true,
