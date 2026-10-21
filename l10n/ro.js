@@ -9,6 +9,7 @@ OC.L10N.register(
     "Community" : "Comunitate",
     "Display name" : "Nume afișat",
     "Password" : "Parolă",
+    "Join" : "Alătură-te",
     "Hello %s" : "Salut %s",
     "Group" : "Grup",
     "No matches" : "Nicio potrivire",
@@ -19,15 +20,18 @@ OC.L10N.register(
     "Welcome" : "Bun venit",
     "Sharing" : "Partajare",
     "Miscellaneous" : "Diverse",
+    "Room name" : "Numele sălii",
     "Create" : "Creează",
     "Published" : "Publicat",
     "Copy to clipboard" : "Copiază în clipboard",
     "Delete" : "Șterge",
+    "Delete \"{name}\"?" : "Ștergi „{name}”?",
     "Error" : "Eroare",
     "Start" : "Început",
     "Loading" : "Se încarcă",
     "Group name" : "Numele grupului",
     "All" : "Toate ",
-    "Settings saved" : "Setările au fost salvate"
+    "Settings saved" : "Setările au fost salvate",
+    "Unexpected error occurred" : "A apărut o eroare neașteptată"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

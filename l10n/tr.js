@@ -89,7 +89,7 @@ OC.L10N.register(
     "If enabled, a moderator URL is generated which allows access with moderator permission." : "Bu seçenek açıksa, sorumlu yetkileri ile erişilebilecek bir sorumlu adresi oluşturulur.",
     "Only selected users and groups are allowed to access the room." : "Odaya yalnızca seçilmiş kullanıcı ve gruplar erişebilir.",
     "If disabled, a microphone is needed to join the conference." : "Bu seçenek kapatıldığında, görüşmeye katılabilmek için bir mikrofon gerekir.",
-    "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "Bu seçenek açıksa, kullanıcı ilk kez katılırken, bir yankı çağrısı ve bilgisayar kamerası ön izlemesi yapması gerekmez (BBB sunucu 2.3 sürümü ve üzeri için).",
+    "If enabled, the user has not to perform an echo call and webcam preview on the first join (available since BBB server 2.3)." : "Bu seçenek açıksa, kullanıcı ilk kez katılırken, bir yankı arama ve bilgisayar kamerası ön izlemesi yapması gerekmez (BBB sunucu 2.3 sürümü ve üzeri için).",
     "If enabled, the user list, chat area and presentation are hidden by default." : "Bu seçenek açıksa, kullanıcı listesi, sohbet alanı ve sunum varsayılan olarak gizlenir.",
     "If enabled, all users will join the meeting muted." : "Bu seçenek açıksa, tüm kullanıcılar görüşmeye sesi kapalı olarak katılır.",
     "Edit \"{room}\"" : "\"{room}\" odasını düzenle",
