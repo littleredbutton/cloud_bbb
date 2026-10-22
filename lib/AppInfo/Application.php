@@ -25,6 +25,7 @@ use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
+use OCP\IUserSession;
 use OCP\Util;
 
 class Application extends App implements IBootstrap {
@@ -65,8 +66,13 @@ class Application extends App implements IBootstrap {
 
 	public function boot(IBootContext $context): void {
 		$context->injectFn([$this, 'registerAdminPage']);
+		$context->injectFn([$this, 'registerFileActionScript']);
+	}
 
-		Util::addScript('bbb', 'bbb-filelist');
+	public function registerFileActionScript(IUserSession $userSession): void {
+		if ($userSession->isLoggedIn()) {
+			Util::addScript('bbb', 'bbb-filelist');
+		}
 	}
 
 	public function registerAdminPage(ISettingsManager $settingsManager, INavigationManager $navigationManager, IURLGenerator $urlGenerator, IAppConfig $config):void {
