@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Public" : "Public",
     "Loading…" : "Se încarcă...",
+    "Send to" : "Trimite către",
     "Close" : "Închide",
     "Back to %s" : "Înapoi la %s",
     "Save" : "Salvează",
@@ -13,6 +14,7 @@ OC.L10N.register(
     "Hello %s" : "Salut %s",
     "Group" : "Grup",
     "No matches" : "Nicio potrivire",
+    "moderator" : "moderator",
     "Server error" : "Eroare server",
     "Name" : "Nume",
     "Access" : "Acces",
@@ -20,6 +22,7 @@ OC.L10N.register(
     "Welcome" : "Bun venit",
     "Sharing" : "Partajare",
     "Miscellaneous" : "Diverse",
+    "Recording" : "Se înregistrează",
     "Room name" : "Numele sălii",
     "Create" : "Creează",
     "Published" : "Publicat",

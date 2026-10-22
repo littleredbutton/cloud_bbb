@@ -1,6 +1,7 @@
 { "translations": {
     "Public" : "Public",
     "Loading…" : "Se încarcă...",
+    "Send to" : "Trimite către",
     "Close" : "Închide",
     "Back to %s" : "Înapoi la %s",
     "Save" : "Salvează",
@@ -11,6 +12,7 @@
     "Hello %s" : "Salut %s",
     "Group" : "Grup",
     "No matches" : "Nicio potrivire",
+    "moderator" : "moderator",
     "Server error" : "Eroare server",
     "Name" : "Nume",
     "Access" : "Acces",
@@ -18,6 +20,7 @@
     "Welcome" : "Bun venit",
     "Sharing" : "Partajare",
     "Miscellaneous" : "Diverse",
+    "Recording" : "Se înregistrează",
     "Room name" : "Numele sălii",
     "Create" : "Creează",
     "Published" : "Publicat",
