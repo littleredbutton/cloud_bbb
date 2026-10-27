@@ -21,6 +21,7 @@ OC.L10N.register(
     "Delete" : "Delete",
     "Error" : "Error",
     "Start" : "Fillo",
+    "Loading" : "Po ngarkohet",
     "Group name" : "Emër grupi",
     "All" : "Të gjithë",
     "Settings saved" : "Opsjonet u Ruajtën."

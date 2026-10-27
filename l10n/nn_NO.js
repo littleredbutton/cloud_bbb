@@ -4,6 +4,7 @@ OC.L10N.register(
     "Loading…" : "Lastar...",
     "Close" : "Lat att",
     "Save" : "Lagre",
+    "Display name" : "Visingsnamn",
     "Password" : "Passord",
     "Hello %s" : "Hei %s",
     "Group" : "Gruppe",
@@ -15,6 +16,7 @@ OC.L10N.register(
     "Copy to clipboard" : "Kopiert til utklippstavla",
     "Delete" : "Ta bort",
     "Error" : "Feil",
+    "Loading" : "Lastar inn",
     "Group name" : "Gruppenamn",
     "All" : "Alle"
 },

@@ -4,6 +4,7 @@ OC.L10N.register(
     "Public" : "Javno",
     "Close" : "Zatvori",
     "Save" : "Spremi",
+    "Display name" : "Prikazni naziv",
     "Password" : "Lozinka",
     "Group" : "Grupa",
     "Name" : "Ime",
@@ -12,6 +13,7 @@ OC.L10N.register(
     "Create" : "Ustvari",
     "Delete" : "Obriši",
     "Error" : "Greška",
+    "Loading" : "Učitavanje",
     "Group name" : "Naziv grupe",
     "All" : "Sve"
 },

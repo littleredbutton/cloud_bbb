@@ -5,6 +5,7 @@ OC.L10N.register(
     "Close" : "Zatvori",
     "Save" : "Sačuvaj",
     "Community" : "Zajednica",
+    "Display name" : "Ime za prikaz",
     "Password" : "Lozinka",
     "Hello %s" : "Здраво %s",
     "Group" : "Group",
@@ -14,6 +15,7 @@ OC.L10N.register(
     "Create" : "Napravi",
     "Delete" : "Obriši",
     "Error" : "Error",
+    "Loading" : "Učitavam",
     "All" : "Sve",
     "Unexpected error occurred" : "Desila se neočekivana greška"
 },

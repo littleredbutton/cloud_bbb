@@ -6,6 +6,7 @@ OC.L10N.register(
     "Close" : "Yopish",
     "Back to %s" : "%sga qaytish",
     "Save" : "Saqlash",
+    "Display name" : "Ko'rsatiladigan nom",
     "Password" : "Password",
     "Hello %s" : "Xush kelibsiz %s",
     "Group" : "Guruh",
