@@ -22,6 +22,7 @@ OC.L10N.register(
     "Welcome" : "Добредојде",
     "Sharing" : "Споделување",
     "Miscellaneous" : "Разно",
+    "Recording" : "Снимање",
     "Room name" : "Име на соба",
     "Create" : "Креирај",
     "Published" : "Објавено",
