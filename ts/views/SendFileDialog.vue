@@ -54,7 +54,7 @@ import NcLoadingIcon from '@nextcloud/vue/components/NcLoadingIcon';
 import { showError } from '@nextcloud/dialogs';
 import { translate as t } from '@nextcloud/l10n';
 import { api, Permission } from '../Common/Api';
-import { sendFileToBBB } from '../filelist';
+import { sendFileToBBB } from '../filelist-api';
 
 export default {
 	name: 'SendFileDialog',
