@@ -19,6 +19,7 @@ OC.L10N.register(
     "Name" : "Име",
     "Access" : "Пристап",
     "Edit" : "Уреди",
+    "Edit \"{room}\"" : "Уреди \"{room}\"",
     "Welcome" : "Добредојде",
     "Sharing" : "Споделување",
     "Miscellaneous" : "Разно",
