@@ -6,6 +6,7 @@ OC.L10N.register(
     "BigBlueButton Integration" : "Integrasi BigBlueButton",
     "BigBlueButton integration for Nextcloud" : "Integrasi BigBlueButton untuk Nextcloud",
     "Loading…" : "Memuat…",
+    "Send to" : "Kirim ke",
     "Close" : "Tutup",
     "Room not found" : "Ruang tidak ditemukan",
     "Back to %s" : "Kembali ke %s",
