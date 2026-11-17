@@ -139,7 +139,7 @@ OC.L10N.register(
     "Group …" : "Gruppe …",
     "Restrictions do not affect existing rooms. Minus one means the value is unlimited. The least restrictive option is chosen for every user if multiple restrictions apply." : "Beschränkungen haben keine Auswirkungen auf bestehende Räume. Minus eins bedeutet, dass der Wert unbegrenzt ist. Bei mehreren Beschränkungen wird für jeden Benutzer die am wenigsten beschränkende Option gewählt.",
     "Are you sure you want to delete the restrictions for group \"{name}\"? This operation cannot be undone." : "Möchten Sie die Beschränkungen für die Gruppe \"{name}\" wirklich löschen? Diese Operation kann nicht rückgängig gemacht werden.",
-    "Delete restrictions for \"{name}\"?" : "Beschränkungen für \"{Name}\" löschen?",
+    "Delete restrictions for \"{name}\"?" : "Beschränkungen für \"{name}\" löschen?",
     "All users" : "Alle Benutzer",
     "All" : "Alle",
     "Settings saved" : "Einstellungen gespeichert",
