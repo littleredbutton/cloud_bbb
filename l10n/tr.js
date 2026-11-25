@@ -51,7 +51,7 @@ OC.L10N.register(
     "If you like to use shorter urls, you can enter a forwarding proxy below." : "Daha kısa adresler kullanmak isterseniz aşağıya bir iletici vekil sunucu yazabilirsiniz.",
     "URL shortener" : "Adres kısaltıcı",
     "Restrictions" : "Kısıtlamalar",
-    "You will be forwarded to the room in the next few seconds." : "Bir kaç saniye içinde odaya yönlendirileceksiniz.",
+    "You will be forwarded to the room in the next few seconds." : "Birkaç saniye içinde odaya yönlendirileceksiniz.",
     "Let's go!" : "Haydi başlayalım!",
     "Please enter your name!" : "Lütfen adınızı yazın!",
     "The name must be at least 3 characters long." : "Ad en az 3 karakter uzunluğunda olmalıdır.",
